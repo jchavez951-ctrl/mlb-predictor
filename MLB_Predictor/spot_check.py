@@ -172,33 +172,47 @@ home_hitter_raw = get_detailed_roster_stats(live_teams.get(home_team, 0), home_t
 away_pitcher_df = get_detailed_roster_stats(live_teams.get(away_team, 0), away_team, "pitching")
 home_pitcher_df = get_detailed_roster_stats(live_teams.get(home_team, 0), home_team, "pitching")
 
-st.subheader("📋 Team Lineup Card Management")
-l_col1, l_col2 = st.columns(2)
-with l_col1:
-    st.markdown(f"#### {away_team}")
-    away_p_names = list(away_pitcher_df["Player"]) if not away_pitcher_df.empty else ["Unknown Starter"]
-    away_starter_sel = st.selectbox("Select Starter", away_p_names, key="a_sp")
-    away_h_names = list(away_hitter_raw["Player"]) if not away_hitter_raw.empty else ["Generic Batter"]
-    away_lineup = st.multiselect("Batting Lineup", away_h_names, default=away_h_names[:9] if len(away_h_names)>=9 else away_h_names)
-with l_col2:
-    st.markdown(f"#### {home_team}")
-    home_p_names = list(home_pitcher_df["Player"]) if not home_pitcher_df.empty else ["Unknown Starter"]
-    home_starter_sel = st.selectbox("Select Starter", home_p_names, key="h_sp")
-    home_h_names = list(home_hitter_raw["Player"]) if not home_hitter_raw.empty else ["Generic Batter"]
-    home_lineup = st.multiselect("Batting Lineup", home_h_names, default=home_h_names[:9] if len(home_h_names)>=9 else home_h_names)
+# ⭐ AUTOMATIC ROSTER FILTERING (No human input required)
+# Filters out pitchers, sorts remaining hitters by OPS, and locks in the top 9
+away_eligible_hitters = away_hitter_raw[~away_hitter_raw["Pos"].isin(["SP", "RP", "P"])]
+if not away_eligible_hitters.empty:
+    away_selected_hitters = away_eligible_hitters.sort_values(by="OPS", ascending=False).head(9).copy()
+else:
+    away_selected_hitters = away_hitter_raw.head(9).copy()
 
-away_selected_hitters = away_hitter_raw[away_hitter_raw["Player"].isin(away_lineup)].copy() if away_lineup else away_hitter_raw.head(9).copy()
-home_selected_hitters = home_hitter_raw[home_hitter_raw["Player"].isin(home_lineup)].copy() if home_lineup else home_hitter_raw.head(9).copy()
+home_eligible_hitters = home_hitter_raw[~home_hitter_raw["Pos"].isin(["SP", "RP", "P"])]
+if not home_eligible_hitters.empty:
+    home_selected_hitters = home_eligible_hitters.sort_values(by="OPS", ascending=False).head(9).copy()
+else:
+    home_selected_hitters = home_hitter_raw.head(9).copy()
 
-away_sp_row = away_pitcher_df[away_pitcher_df["Player"] == away_starter_sel]
-home_sp_row = home_pitcher_df[home_pitcher_df["Player"] == home_starter_sel]
+# Automatically select the ace (lowest ERA) as the starting pitcher
+away_starter_row = away_pitcher_df[away_pitcher_df["Pos"] == "SP"]
+if away_starter_row.empty: away_starter_row = away_pitcher_df.head(1)
+away_starter_sel = away_starter_row.sort_values(by="ERA").iloc[0]["Player"] if not away_starter_row.empty else "Unknown Starter"
 
-away_sp_era = float(away_sp_row.iloc[0]["ERA"]) if not away_sp_row.empty else 4.20
-home_sp_era = float(home_sp_row.iloc[0]["ERA"]) if not home_sp_row.empty else 4.20
-away_sp_hand = str(away_sp_row.iloc[0]["Throws"]) if not away_sp_row.empty else "R"
-home_sp_hand = str(home_sp_row.iloc[0]["Throws"]) if not home_sp_row.empty else "R"
+home_starter_row = home_pitcher_df[home_pitcher_df["Pos"] == "SP"]
+if home_starter_row.empty: home_starter_row = home_pitcher_df.head(1)
+home_starter_sel = home_starter_row.sort_values(by="ERA").iloc[0]["Player"] if not home_starter_row.empty else "Unknown Starter"
+
+away_sp_era = float(away_starter_row.iloc[0]["ERA"]) if not away_starter_row.empty else 4.20
+home_sp_era = float(home_starter_row.iloc[0]["ERA"]) if not home_starter_row.empty else 4.20
+away_sp_hand = str(away_starter_row.iloc[0]["Throws"]) if not away_starter_row.empty else "R"
+home_sp_hand = str(home_starter_row.iloc[0]["Throws"]) if not home_starter_row.empty else "R"
 
 park_data = BALLPARK_MODIFIERS.get(home_team, DEFAULT_BALLPARK)
+
+# Display Cards purely for user visualization
+st.subheader("📋 Automated Team Lineup Cards Loaded")
+l_col1, l_col2 = st.columns(2)
+with l_col1:
+    st.markdown(f"##### {away_team}")
+    st.write(f"🏟️ **Starting Pitcher:** `{away_starter_sel}`")
+    st.dataframe(away_selected_hitters[["Player", "Pos", "AVG", "OPS"]], use_container_width=True, hide_index=True)
+with l_col2:
+    st.markdown(f"##### {home_team}")
+    st.write(f"🏟️ **Starting Pitcher:** `{home_starter_sel}`")
+    st.dataframe(home_selected_hitters[["Player", "Pos", "AVG", "OPS"]], use_container_width=True, hide_index=True)
 
 # ----------------------------------------------------
 # WEATHER & SABERMETRIC ENGINE ODDS
@@ -255,12 +269,12 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             "away_box": away_box_init, "home_box": home_box_init,
             "current_away_p": f"{away_starter_sel} (SP)", "current_away_era": away_sp_era, "current_away_hand": away_sp_hand,
             "current_home_p": f"{home_starter_sel} (SP)", "current_home_era": home_sp_era, "current_home_hand": home_sp_hand,
-            "interrupted": False, "strategy_selected": False, "bullpen_call": False, "chart_data": [{"Inning": "Start", f"{away_team} Win %": 50.0}]
+            "chart_data": [{"Inning": "Start", f"{away_team} Win %": 50.0}]
         }
 
     g = st.session_state["leveraged_game_state"]
     
-    status_field = st.status("⚾ Simulating live matchups...", expanded=True)
+    status_field = st.status("⚾ Simulating live matchups autonomously...", expanded=True)
     scoreboard = st.empty()
     
     tab_view, tab_away, tab_home = st.tabs(["🏟️ Live Diamond Feed", f"📊 {away_team} Box", f"📊 {home_team} Box"])
@@ -282,46 +296,6 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
         b3 = "🟥" if runners[2] else "⬜"
         return f"<pre style='line-height:1.2; font-weight:bold;'>       [{b2}] 2nd\n       /   \\\n3rd [{b3}]     [{b1}] 1st\n       \\   /\n       [🏃] Home</pre>"
 
-    # Interrupt Manager Strategy Evaluation
-    if g.get("interrupted", False):
-        st.warning("⚠️ **HIGH LEVERAGE MOMENT: Manager Choice Demanded!**")
-        d1, d2 = st.columns(2)
-        with d1:
-            if st.button("🔴 Strategic Safety: Pitch Around Corner"):
-                g["logs"].append("📋 *Manager Strategy:* Demanded safe pitch-around mechanics.")
-                g["interrupted"] = False
-                g["strategy_selected"] = True
-                st.session_state["leveraged_game_state"] = g
-                st.rerun()
-        with d2:
-            if st.button("🟢 Deep Attack: Swing Away/Full Max Volleys"):
-                g["logs"].append("📋 *Manager Strategy:* Approved maximum swinging aggression variables.")
-                g["interrupted"] = False
-                g["strategy_selected"] = True
-                st.session_state["leveraged_game_state"] = g
-                st.rerun()
-        st.stop()
-
-    # Manual Bullpen Manager Call Prompts
-    if g.get("bullpen_call", False):
-        st.warning(f"🔄 **BULLPEN CALL NEEDED: Select Pitcher to take the mound**")
-        active_bp = home_pitcher_df if g["top_half"] else away_pitcher_df
-        bp_choices = list(active_bp["Player"]) if not active_bp.empty else ["Generic Closer"]
-        sel_reliever = st.selectbox("Choose Relief Pitcher", bp_choices)
-        if st.button("Confirm Pitching Change"):
-            rel_row = active_bp[active_bp["Player"] == sel_reliever].iloc[0]
-            if g["top_half"]:
-                g["current_home_p"], g["current_home_era"], g["current_home_hand"] = f"{rel_row['Player']} (RP)", float(rel_row['ERA']), str(rel_row['Throws'])
-                g["home_bf"] = 0
-            else:
-                g["current_away_p"], g["current_away_era"], g["current_away_hand"] = f"{rel_row['Player']} (RP)", float(rel_row['ERA']), str(rel_row['Throws'])
-                g["away_bf"] = 0
-            g["logs"].append(f"🔄 Manager visits mound: **{rel_row['Player']}** takes the ball.")
-            g["bullpen_call"] = False
-            st.session_state["leveraged_game_state"] = g
-            st.rerun()
-        st.stop()
-
     # Core Execution Engine Loops
     while g["inning"] <= 12 or (g["away_score"] == g["home_score"]):
         half_str = "Top" if g["top_half"] else "Bottom"
@@ -330,17 +304,41 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             g["bases"][1] = "Ghost Runner"
             g["logs"].append("👻 **MLB Ghost Runner Rule Active:** Automated runner placed onto 2nd base.")
 
-        # ⭐ LOCK RE-RUN LOOPS TO PREVENT INFINITE WALKOVERS
-        while g["outs"] < 3 and not g.get("bullpen_call", False) and not g.get("interrupted", False):
+        while g["outs"] < 3:
             if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
             
+            # AUTOMATED AI PITCHING CHANGE: HOME TEAM BULBPEN CALL
             if g["top_half"] and g["home_bf"] >= 15 and "SP" in g["current_home_p"]:
-                g["bullpen_call"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
-            if not g["top_half"] and g["away_bf"] >= 15 and "SP" in g["current_away_p"]:
-                g["bullpen_call"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
+                relievers = home_pitcher_df[home_pitcher_df["Player"] != home_starter_sel]
+                if not relievers.empty:
+                    best_reliever = relievers.sort_values(by="ERA", ascending=True).iloc[0]
+                    g["current_home_p"] = f"{best_reliever['Player']} (RP)"
+                    g["current_home_era"] = float(best_reliever['ERA'])
+                    g["current_home_hand"] = str(best_reliever['Throws'])
+                else:
+                    g["current_home_p"] = "Bullpen Reliever (RP)"
+                    g["current_home_era"] = 4.10
+                g["home_bf"] = 0
+                g["logs"].append(f"🔄 **AI Manager:** Hooking starter. `{g['current_home_p']}` enters from bullpen.")
 
-            if g["inning"] >= 7 and sum([1 for r in g["bases"] if r is not None]) >= 2 and g["outs"] >= 1 and not g.get("strategy_selected", False):
-                g["interrupted"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
+            # AUTOMATED AI PITCHING CHANGE: AWAY TEAM BULBPEN CALL
+            if not g["top_half"] and g["away_bf"] >= 15 and "SP" in g["current_away_p"]:
+                relievers = away_pitcher_df[away_pitcher_df["Player"] != away_starter_sel]
+                if not relievers.empty:
+                    best_reliever = relievers.sort_values(by="ERA", ascending=True).iloc[0]
+                    g["current_away_p"] = f"{best_reliever['Player']} (RP)"
+                    g["current_away_era"] = float(best_reliever['ERA'])
+                    g["current_away_hand"] = str(best_reliever['Throws'])
+                else:
+                    g["current_away_p"] = "Bullpen Reliever (RP)"
+                    g["current_away_era"] = 4.10
+                g["away_bf"] = 0
+                g["logs"].append(f"🔄 **AI Manager:** Hooking starter. `{g['current_away_p']}` enters from bullpen.")
+
+            # AUTOMATED HIGH LEVERAGE CHOICES
+            if g["inning"] >= 7 and sum([1 for r in g["bases"] if r is not None]) >= 2 and g["outs"] >= 1:
+                strategy = random.choice(["🔴 Pitch Around Corner", "🟢 Swing Away Aggressive"])
+                g["logs"].append(f"📋 **AI Manager Strategy Simulation:** Deployed `{strategy}` variables.")
 
             if g["top_half"]:
                 batter = away_selected_hitters.iloc[g["away_idx"] % len(away_selected_hitters)]
@@ -397,8 +395,8 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     else: g["home_score"] += runs
                     g["logs"].append(f"🏃 **Single!** {batter['Player']} drops a base hit.")
                     
-                    if g["top_half"]: g["current_home_era"] += 0.10
-                    else: g["current_away_era"] += 0.10
+                    if g["top_half"]: g["current_away_era"] += 0.10
+                    else: g["current_home_era"] += 0.10
             else:
                 g["outs"] += 1
                 if random.uniform(0, 1) <= 0.32:
@@ -406,8 +404,6 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     g["logs"].append(f"💨 *Strikeout!* {batter['Player']} down swinging.")
                 else:
                     g["logs"].append(f"🥎 *Out!* {batter['Player']} flies out.")
-
-            g["strategy_selected"] = False
 
             if g["top_half"]: g["away_idx"] += 1
             else: g["home_idx"] += 1
@@ -425,16 +421,14 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             df_chart = pd.DataFrame(g["chart_data"])
             graph_viz.line_chart(df_chart.set_index("Inning"))
             ticker.markdown("\n\n".join(g["logs"][-3:]))
-            time.sleep(0.05)
+            time.sleep(0.04)
 
-        # Handle moving to next half-inning only if we aren't waiting on a selection
-        if not g.get("bullpen_call", False) and not g.get("interrupted", False):
-            g["chart_data"].append({"Inning": f"{g['inning']} {half_str}", f"{away_team} Win %": clamped_prob})
-            g["outs"] = 0; g["bases"] = [None, None, None]
-            if g["top_half"]: g["top_half"] = False
-            else: g["top_half"] = True; g["inning"] += 1
+        g["chart_data"].append({"Inning": f"{g['inning']} {half_str}", f"{away_team} Win %": clamped_prob})
+        g["outs"] = 0; g["bases"] = [None, None, None]
+        if g["top_half"]: g["top_half"] = False
+        else: g["top_half"] = True; g["inning"] += 1
 
-    status_field.update(label="🏆 Framework Simulation Completed!", state="complete", expanded=False)
+    status_field.update(label="🏆 Autonomous Simulation Framework Completed!", state="complete", expanded=False)
     st.balloons()
     
     if g["home_score"] > g["away_score"]:
