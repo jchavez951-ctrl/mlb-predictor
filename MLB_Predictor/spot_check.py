@@ -5,7 +5,7 @@ import pandas as pd
 
 st.set_page_config(page_title="Live MLB Predictor", page_icon="⚾", layout="wide")
 st.title("⚾ Live MLB Matchup & Playoff Series Predictor")
-st.write("Fetching live team standings and analytics directly from the official MLB API.")
+st.write("Fetching live team standings and individual player metrics directly from the official MLB API.")
 
 # ----------------------------------------------------
 # DATA SOURCE: Fetch active MLB teams
@@ -28,15 +28,49 @@ except Exception as e:
     team_names = ["New York Mets", "Los Angeles Angels"]
 
 # ----------------------------------------------------
-# DATA FUNCTION: Fetch Live Season Stats for Teams
+# NEW DATA FUNCTION: Fetch Individual Player Stats
 # ----------------------------------------------------
+@st.cache_data(ttl=3600)
+def get_individual_player_stats(team_id):
+    """Fetches full team active roster and hydrates seasonal hitting stats for each player"""
+    players_list = []
+    try:
+        # Request roster hydrated with active seasonal hitting stats
+        url = f"https://statsapi.mlb.com/api/v1/teams/{team_id}/roster?rosterType=Active&hydrate=person(stats(group=[hitting],type=season,season=2026))"
+        res = requests.get(url).json()
+        
+        for member in res.get('roster', []):
+            person = member.get('person', {})
+            name = person.get('fullName', 'Unknown Player')
+            position = member.get('position', {}).get('abbreviation', 'N/A')
+            
+            # Navigate nested stat splits
+            stats_group = person.get('stats', [{}])[0].get('splits', [{}])
+            if stats_group and 'stat' in stats_group[0]:
+                stat = stats_group[0]['stat']
+                players_list.append({
+                    "Player": name,
+                    "Pos": position,
+                    "AVG": float(stat.get("avg", ".000")),
+                    "OPS": float(stat.get("ops", ".000")),
+                    "HR": int(stat.get("homeRuns", 0)),
+                    "RBI": int(stat.get("rbi", 0))
+                })
+    except:
+        pass
+    
+    # If API fails or returns blank array, fallback to dummy data container
+    if not players_list:
+        return pd.DataFrame(columns=["Player", "Pos", "AVG", "OPS", "HR", "RBI"])
+        
+    return pd.DataFrame(players_list).sort_values(by="OPS", ascending=False)
+
 @st.cache_data(ttl=3600)
 def get_team_season_stats(team_id):
     try:
         url = f"https://statsapi.mlb.com/api/v1/teams/{team_id}/stats?stats=season&group=hitting&season=2026"
         res = requests.get(url).json()
         splits = res.get('stats', [{}])[0].get('splits', [{}])[0].get('stat', {})
-        
         return {
             "avg": float(splits.get("avg", ".250")),
             "ops": float(splits.get("ops", ".720")),
@@ -180,6 +214,31 @@ with col2:
                 st.write(f"⚾ {log}")
 
 # ----------------------------------------------------
+# NEW INDIVIDUAL PLAYER STAT MATRIX TRACKER
+# ----------------------------------------------------
+st.markdown("---")
+st.subheader("👤 Active Rosters & Individual Player Analytics")
+st.write("Reviewing live seasonal player stats derived via real-time roster serialization.")
+
+p_col1, p_col2 = st.columns(2)
+
+with p_col1:
+    st.markdown(f"#### {away_team} Roster Leaderboard")
+    away_player_df = get_individual_player_stats(away_id) if away_id else pd.DataFrame()
+    if not away_player_df.empty:
+        st.dataframe(away_player_df.set_index("Player"), use_container_width=True)
+    else:
+        st.write("No individual hitting data logged for this team roster.")
+
+with p_col2:
+    st.markdown(f"#### {home_team} Roster Leaderboard")
+    home_player_df = get_individual_player_stats(home_id) if home_id else pd.DataFrame()
+    if not home_player_df.empty:
+        st.dataframe(home_player_df.set_index("Player"), use_container_width=True)
+    else:
+        st.write("No individual hitting data logged for this team roster.")
+
+# ----------------------------------------------------
 # RE-ENGINEERED GRAPH VISUALIZATION SECTION
 # ----------------------------------------------------
 st.markdown("---")
@@ -196,7 +255,6 @@ for t_data in all_records.values():
 
 if chart_data:
     df = pd.DataFrame(chart_data)
-    # Pivot maps explicit row indices cleanly so Streamlit is forced to draw vectors instead of tables
     chart_ready_df = df.pivot_table(index="Team", values="Win Pct")
     st.bar_chart(chart_ready_df)
 else:
