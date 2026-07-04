@@ -26,7 +26,7 @@ def record_game_result(winner, loser):
 RETRO_TEAMS = {
     "1927 New York Yankees": {
         "primary": "#0C2340", "secondary": "#C4CED4", "runs_scored": 975, "runs_allowed": 599,
-        "hitters": [
+        "hitting": [
             {"Player": "Earle Combs", "Pos": "CF", "Bats": "L", "AVG": 0.356, "OPS": 0.925, "HR": 6, "AB": 648},
             {"Player": "Mark Koenig", "Pos": "SS", "Bats": "B", "AVG": 0.285, "OPS": 0.701, "HR": 3, "AB": 626},
             {"Player": "Babe Ruth", "Pos": "RF", "Bats": "L", "AVG": 0.356, "OPS": 1.258, "HR": 60, "AB": 540},
@@ -37,7 +37,7 @@ RETRO_TEAMS = {
             {"Player": "Pat Collins", "Pos": "C", "Bats": "R", "AVG": 0.275, "OPS": 0.825, "HR": 7, "AB": 251},
             {"Player": "Ray Morehart", "Pos": "IF", "Bats": "L", "AVG": 0.256, "OPS": 0.630, "HR": 1, "AB": 195}
         ],
-        "pitchers": [
+        "pitching": [
             {"Player": "Waite Hoyt", "Pos": "SP", "Throws": "R", "ERA": 2.63, "WHIP": 1.15, "SO (K)": 86, "IP": "256.2"},
             {"Player": "Herb Pennock", "Pos": "SP", "Throws": "L", "ERA": 3.00, "WHIP": 1.21, "SO (K)": 51, "IP": "209.2"},
             {"Player": "Urban Shocker", "Pos": "SP", "Throws": "R", "ERA": 2.84, "WHIP": 1.16, "SO (K)": 35, "IP": "200.0"},
@@ -46,7 +46,7 @@ RETRO_TEAMS = {
     },
     "2004 Boston Red Sox": {
         "primary": "#BD3039", "secondary": "#0C2340", "runs_scored": 949, "runs_allowed": 768,
-        "hitters": [
+        "hitting": [
             {"Player": "Johnny Damon", "Pos": "CF", "Bats": "L", "AVG": 0.304, "OPS": 0.877, "HR": 20, "AB": 621},
             {"Player": "Mark Bellhorn", "Pos": "2B", "Bats": "B", "AVG": 0.264, "OPS": 0.801, "HR": 17, "AB": 500},
             {"Player": "Manny Ramirez", "Pos": "LF", "Bats": "R", "AVG": 0.308, "OPS": 1.009, "HR": 43, "AB": 568},
@@ -57,7 +57,7 @@ RETRO_TEAMS = {
             {"Player": "Bill Mueller", "Pos": "3B", "Bats": "B", "AVG": 0.283, "OPS": 0.795, "HR": 12, "AB": 399},
             {"Player": "Trot Nixon", "Pos": "RF", "Bats": "L", "AVG": 0.293, "OPS": 0.871, "HR": 6, "AB": 140}
         ],
-        "pitchers": [
+        "pitching": [
             {"Player": "Curt Schilling", "Pos": "SP", "Throws": "R", "ERA": 3.26, "WHIP": 1.06, "SO (K)": 203, "IP": "226.2"},
             {"Player": "Pedro Martinez", "Pos": "SP", "Throws": "R", "ERA": 3.90, "WHIP": 1.21, "SO (K)": 227, "IP": "217.0"},
             {"Player": "Tim Wakefield", "Pos": "SP", "Throws": "R", "ERA": 4.87, "WHIP": 1.34, "SO (K)": 116, "IP": "188.1"},
@@ -171,14 +171,14 @@ with l_col1:
     away_p_names = list(away_pitcher_df["Player"]) if not away_pitcher_df.empty else ["Unknown Starter"]
     away_starter_sel = st.selectbox("Select Starting Pitcher", away_p_names, key="a_sp")
     away_h_names = list(away_hitter_raw["Player"]) if not away_hitter_raw.empty else ["Generic Hitter"]
-    away_lineup = st.multiselect("Batting Roster Lineup (9)", away_h_names, default=away_h_names[:9])
+    away_lineup = st.multiselect("Batting Roster Lineup (9)", away_h_names, default=away_h_names[:9] if len(away_h_names) >= 9 else away_h_names)
 
 with l_col2:
     st.markdown(f"#### {home_team} Config")
     home_p_names = list(home_pitcher_df["Player"]) if not home_pitcher_df.empty else ["Unknown Starter"]
     home_starter_sel = st.selectbox("Select Starting Pitcher", home_p_names, key="h_sp")
     home_h_names = list(home_hitter_raw["Player"]) if not home_hitter_raw.empty else ["Generic Hitter"]
-    home_lineup = st.multiselect("Batting Roster Lineup (9)", home_h_names, default=home_h_names[:9])
+    home_lineup = st.multiselect("Batting Roster Lineup (9)", home_h_names, default=home_h_names[:9] if len(home_h_names) >= 9 else home_h_names)
 
 # Filtering Context blocks
 away_selected_hitters = away_hitter_raw[away_hitter_raw["Player"].isin(away_lineup)].copy() if away_lineup else away_hitter_raw.head(9).copy()
