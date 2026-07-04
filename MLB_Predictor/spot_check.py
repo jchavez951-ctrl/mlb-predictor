@@ -22,7 +22,7 @@ try:
     st.metric(label="Live Test Feed (BTC-USD)", value=f"${latest_price:,.2f}")
     st.success("Data download link is operational!")
 except Exception as e:
-    st.error(f"Could not connect to external data feed: {e}")import yfinance as yf
+    st.error(f"Could not connect to external data feed:)
 
 h = yf.Ticker('BTC-USD').history(period='1d')
 print('BTC spot:', h['Close'].iloc[-1])
