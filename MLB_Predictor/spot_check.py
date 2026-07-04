@@ -212,12 +212,18 @@ with m_col1:
 
 with m_col2:
     st.subheader("🎲 Simulation Controller")
-    sim_button = st.button("Launch Game Simulation Framework")
+    if "game_active" not in st.session_state:
+        st.session_state["game_active"] = False
+        
+    if st.button("Launch Game Simulation Framework"):
+        st.session_state["game_active"] = True
+        st.session_state["leveraged_game_state"] = None
+        st.session_state["final_reports"] = None
 
 # ----------------------------------------------------
 # LIVE MATRIX SIMULATION ENGINE LOOP
 # ----------------------------------------------------
-if sim_button or st.session_state["leveraged_game_state"] is not None:
+if st.session_state["game_active"] or st.session_state["leveraged_game_state"] is not None:
     if st.session_state["leveraged_game_state"] is None:
         away_box_init = {p: {"AB": 0, "H": 0, "HR": 0, "RBI": 0, "SO": 0} for p in away_selected_hitters["Player"]}
         home_box_init = {p: {"AB": 0, "H": 0, "HR": 0, "RBI": 0, "SO": 0} for p in home_selected_hitters["Player"]}
@@ -248,21 +254,25 @@ if sim_button or st.session_state["leveraged_game_state"] is not None:
         return f"<pre style='line-height:1.2; font-weight:bold;'>       [{b2}] 2nd\n       /   \\\n3rd [{b3}]     [{b1}] 1st\n       \\   /\n       [🏃] Home</pre>"
 
     # Interrupt Manager Strategy Evaluation
-    if g["interrupted"]:
+    if g.get("interrupted", False):
         st.warning("⚠️ **HIGH LEVERAGE MOMENT: Manager Choice Demanded!**")
         d1, d2 = st.columns(2)
         with d1:
             if st.button("🔴 Strategic Safety: Pitch Around Corner"):
                 g["logs"].append("📋 *Manager Strategy:* Demanded safe approach mechanics.")
-                g["interrupted"] = False; st.rerun()
+                g["interrupted"] = False
+                st.session_state["leveraged_game_state"] = g
+                st.rerun()
         with d2:
             if st.button("🟢 Deep Attack: Swing Away/Full Max Volleys"):
                 g["logs"].append("📋 *Manager Strategy:* Approved maximum swinging velocity variables.")
-                g["interrupted"] = False; st.rerun()
+                g["interrupted"] = False
+                st.session_state["leveraged_game_state"] = g
+                st.rerun()
         st.stop()
 
     # Manual Bullpen Manager Call Prompts
-    if g["bullpen_call"]:
+    if g.get("bullpen_call", False):
         st.warning(f"🔄 **BULLPEN CALL NEEDED: Select Pitcher to take the mound**")
         active_bp = home_pitcher_df if g["top_half"] else away_pitcher_df
         bp_choices = list(active_bp["Player"]) if not active_bp.empty else ["Generic Closer"]
@@ -276,14 +286,16 @@ if sim_button or st.session_state["leveraged_game_state"] is not None:
                 g["current_away_p"], g["current_away_era"], g["current_away_hand"] = f"{rel_row['Player']} (RP)", float(rel_row['ERA']), str(rel_row['Throws'])
                 g["away_bf"] = 0
             g["logs"].append(f"🔄 Manager visits mound: **{rel_row['Player']}** takes the ball.")
-            g["bullpen_call"] = False; st.rerun()
+            g["bullpen_call"] = False
+            st.session_state["leveraged_game_state"] = g
+            st.rerun()
         st.stop()
 
     # Core Execution Engine Loops
     while g["inning"] <= 12 or (g["away_score"] == g["home_score"]):
         half_str = "Top" if g["top_half"] else "Bottom"
         
-        # Modern MLB Extra Inning Ghost Runner Logic rules
+        # Modern MLB Extra Inning Ghost Runner Logic
         if g["inning"] >= 10 and g["outs"] == 0 and g["bases"] == [None, None, None]:
             g["bases"][1] = "Ghost Runner"
             g["logs"].append("👻 **MLB Ghost Runner Rule Active:** Automated runner placed onto 2nd base.")
@@ -291,14 +303,14 @@ if sim_button or st.session_state["leveraged_game_state"] is not None:
         while g["outs"] < 3:
             if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
             
-            # Trigger Manual Bullpen Pause condition when starter gets overworked
+            # Trigger Manual Bullpen Pause when pitcher is overworked (15 batters faced)
             if g["top_half"] and g["home_bf"] >= 15 and "SP" in g["current_home_p"]:
                 g["bullpen_call"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
             if not g["top_half"] and g["away_bf"] >= 15 and "SP" in g["current_away_p"]:
                 g["bullpen_call"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
 
             # Dynamic Leverage Trigger Checks
-            if g["inning"] >= 7 and sum([1 for r in g["bases"] if r is not None]) >= 2 and g["outs"] >= 1 and not g["interrupted"]:
+            if g["inning"] >= 7 and sum([1 for r in g["bases"] if r is not None]) >= 2 and g["outs"] >= 1 and not g.get("interrupted", False):
                 g["interrupted"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
 
             if g["top_half"]:
@@ -358,7 +370,7 @@ if sim_button or st.session_state["leveraged_game_state"] is not None:
             scoreboard.markdown(f"### 🏟️ LIVE SCOREBOARD: {away_team} `{g['away_score']}` vs {home_team} `{g['home_score']}` (Inning {g['inning']} - Outs: {g['outs']})")
             field_viz.markdown(print_ascii_diamond(g["bases"]), unsafe_allow_html=True)
             
-            # Dynamic Win Probability Line Chart calculator metrics
+            # Win Probability Calculation
             score_diff = g["away_score"] - g["home_score"]
             base_prob = 50.0 + (score_diff * 9.5) - ((g["inning"] if not g["top_half"] else g["inning"] - 0.5) * 0.4)
             clamped_prob = max(1.0, min(99.0, base_prob))
@@ -368,7 +380,6 @@ if sim_button or st.session_state["leveraged_game_state"] is not None:
             ticker.markdown("\n\n".join(g["logs"][-3:]))
             time.sleep(0.12)
 
-        # Append data markers at conclusion of half inning periods
         g["chart_data"].append({"Inning": f"{g['inning']} {half_str}", f"{away_team} Win %": clamped_prob})
         g["outs"] = 0; g["bases"] = [None, None, None]
         if g["top_half"]: g["top_half"] = False
@@ -384,7 +395,8 @@ if sim_button or st.session_state["leveraged_game_state"] is not None:
         record_game_result(away_team, home_team)
         st.info(f"### 🏆 {away_team} Wins! `{g['away_score']}` - `{g['home_score']}`")
 
-    # Persist data models globally for tabular extraction operations
+    # Persist and finalize reports
+    st.session_state["game_active"] = False
     st.session_state["final_reports"] = {"away": g["away_box"], "home": g["home_box"]}
     st.session_state["leveraged_game_state"] = None
 
@@ -403,7 +415,6 @@ if st.session_state["final_reports"] is not None:
     with bc1:
         st.markdown(f"#### {away_team} Final Stats")
         st.dataframe(df_a, use_container_width=True)
-        # CSV Exporter handles
         csv_a = df_a.to_csv().encode('utf-8')
         st.download_button(f"📥 Export {away_team} Box Score (CSV)", data=csv_a, file_name=f"{away_team.replace(' ', '_')}_box.csv", mime="text/csv")
     with bc2:
@@ -412,7 +423,7 @@ if st.session_state["final_reports"] is not None:
         csv_h = df_h.to_csv().encode('utf-8')
         st.download_button(f"📥 Export {home_team} Box Score (CSV)", data=csv_h, file_name=f"{home_team.replace(' ', '_')}_box.csv", mime="text/csv")
 
-# Standings display boards
+# Standings Display Boards
 st.markdown("---")
 st.subheader("🏆 Persistent Campaign Standings Leaderboard")
 if st.session_state["standings"]:
@@ -422,4 +433,4 @@ if st.session_state["standings"]:
         std_list.append({"Franchise Team Name": t, "Wins": s["W"], "Losses": s["L"], "Win Pct": f"{(s['W']/tot if tot>0 else 0):.3f}"})
     st.dataframe(pd.DataFrame(std_list).sort_values(by="Wins", ascending=False).set_index("Franchise Team Name"), use_container_width=True)
 else:
-    st.caption("No matches simulated in this current runtime session session yet.")
+    st.caption("No matches simulated in this current runtime session yet.")
