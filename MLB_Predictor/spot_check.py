@@ -156,13 +156,46 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
     return pd.DataFrame(players_list)
 
 # ----------------------------------------------------
+# LINEUP BUILDER ENGINE FUNCTION
+# ----------------------------------------------------
+def build_structured_batting_order(df_hitters):
+    """
+    Takes an active hitter roster dataframe, filters out pitching positions,
+    and intelligently sequences slots 1 through 9.
+    """
+    eligible = df_hitters[~df_hitters["Pos"].isin(["SP", "RP", "P"])]
+    if eligible.shape[0] < 9:
+        # Fallback if roster data size is tiny
+        shortage = 9 - eligible.shape[0]
+        fillers = pd.DataFrame([{"Player": f"Backup Batter {i}", "Pos": "IF", "Bats": "R", "AVG": 0.240, "OPS": 0.680, "HR": 2, "AB": 100} for i in range(shortage)])
+        eligible = pd.concat([eligible, fillers], ignore_index=True)
+        
+    # Pick the top 9 performers on the roster base
+    pool = eligible.sort_values(by="OPS", ascending=False).head(9).copy()
+    
+    # 1. Table Setters (Highest AVG players)
+    table_setters = pool.sort_values(by="AVG", ascending=False).head(2)
+    pool = pool.drop(table_setters.index)
+    
+    # 2. Power Core (Highest HR/OPS values left)
+    power_core = pool.sort_values(by="OPS", ascending=False).head(3)
+    pool = pool.drop(power_core.index)
+    
+    # 3. Bottom tier remains
+    bottom_tier = pool.sort_values(by="OPS", ascending=False)
+    
+    # Assembly chain
+    lineup_df = pd.concat([table_setters, power_core, bottom_tier], ignore_index=True)
+    lineup_df.insert(0, "Order", range(1, 10))
+    return lineup_df
+
+# ----------------------------------------------------
 # MATCHUP DESIGN SYSTEMS & SIDEBARS
 # ----------------------------------------------------
 st.sidebar.header("Matchup Setup Panel")
 away_team = st.sidebar.selectbox("Away Team (Visitor)", all_selectable_teams, index=0)
 home_team = st.sidebar.selectbox("Home Team (Host)", all_selectable_teams, index=min(1, len(all_selectable_teams)-1))
 
-# 🔄 ADDED OVERRIDE TOGGLES IN SIDEBAR TO LET YOU MANUAL OVERRIDE THE AUTOMATED PITCHERS
 st.sidebar.markdown("---")
 st.sidebar.subheader("🛠️ Pitcher Override Adjustments")
 override_away_p = st.sidebar.checkbox(f"Manually swap {away_team} Starter?")
@@ -173,7 +206,7 @@ if "leveraged_game_state" not in st.session_state:
 if "final_reports" not in st.session_state:
     st.session_state["final_reports"] = None
 
-theme_host = RETRO_TEAMS.get(home_team, TEAM_COLORS.get(home_team, {"primary": "#1E1E1E", "secondary": "#777777"}))
+theme_host = RETRO_TEAMS.get(home_team, TEAM_COLORS.get(home_team, {"primary": "#0C2340", "secondary": "#777777"}))
 st.markdown(f"<style>h1, h2, h3, h4 {{ color: {theme_host['primary']}; }} .stButton>button {{ background-color: {theme_host['primary']} !important; color: white !important; }}</style>", unsafe_allow_html=True)
 
 away_hitter_raw = get_detailed_roster_stats(live_teams.get(away_team, 0), away_team, "hitting")
@@ -181,17 +214,13 @@ home_hitter_raw = get_detailed_roster_stats(live_teams.get(home_team, 0), home_t
 away_pitcher_df = get_detailed_roster_stats(live_teams.get(away_team, 0), away_team, "pitching")
 home_pitcher_df = get_detailed_roster_stats(live_teams.get(home_team, 0), home_team, "pitching")
 
-# AUTOMATIC HITTER ROSTER FILTERING
-away_eligible_hitters = away_hitter_raw[~away_hitter_raw["Pos"].isin(["SP", "RP", "P"])]
-away_selected_hitters = away_eligible_hitters.sort_values(by="OPS", ascending=False).head(9).copy() if not away_eligible_hitters.empty else away_hitter_raw.head(9).copy()
+# ⭐ GENERATE DYNAMIC 1-9 BATTING ORDERS
+away_selected_hitters = build_structured_batting_order(away_hitter_raw)
+home_selected_hitters = build_structured_batting_order(home_hitter_raw)
 
-home_eligible_hitters = home_hitter_raw[~home_hitter_raw["Pos"].isin(["SP", "RP", "P"])]
-home_selected_hitters = home_eligible_hitters.sort_values(by="OPS", ascending=False).head(9).copy() if not home_eligible_hitters.empty else home_hitter_raw.head(9).copy()
-
-# 🔄 DYNAMIC PITCHER SELECTION ENGINE WITH USER OVERRIDE LAYER
+# PITCHER SELECTION ENGINE
 away_starters = away_pitcher_df[away_pitcher_df["Pos"].isin(["SP", "P"])]
 if away_starters.empty: away_starters = away_pitcher_df.head(1)
-
 if override_away_p:
     away_starter_sel = st.sidebar.selectbox(f"Select Custom {away_team} Starter", list(away_pitcher_df["Player"]))
     away_best_row = away_pitcher_df[away_pitcher_df["Player"] == away_starter_sel].iloc[0]
@@ -201,7 +230,6 @@ else:
 
 home_starters = home_pitcher_df[home_pitcher_df["Pos"].isin(["SP", "P"])]
 if home_starters.empty: home_starters = home_pitcher_df.head(1)
-
 if override_home_p:
     home_starter_sel = st.sidebar.selectbox(f"Select Custom {home_team} Starter", list(home_pitcher_df["Player"]))
     home_best_row = home_pitcher_df[home_pitcher_df["Player"] == home_starter_sel].iloc[0]
@@ -217,16 +245,16 @@ home_sp_hand = str(home_best_row["Throws"])
 park_data = BALLPARK_MODIFIERS.get(home_team, DEFAULT_BALLPARK)
 
 # Display Cards
-st.subheader("📋 Automated Team Lineup Cards Loaded")
+st.subheader("📋 Lineup Cards (Sorted 1-9 Batting Order)")
 l_col1, l_col2 = st.columns(2)
 with l_col1:
     st.markdown(f"##### {away_team}")
     st.write(f"🏟️ **Starting Pitcher:** `{away_starter_sel}` (ERA: {away_sp_era})")
-    st.dataframe(away_selected_hitters[["Player", "Pos", "AVG", "OPS"]], use_container_width=True, hide_index=True)
+    st.dataframe(away_selected_hitters[["Order", "Player", "Pos", "AVG", "OPS"]], use_container_width=True, hide_index=True)
 with l_col2:
     st.markdown(f"##### {home_team}")
     st.write(f"🏟️ **Starting Pitcher:** `{home_starter_sel}` (ERA: {home_sp_era})")
-    st.dataframe(home_selected_hitters[["Player", "Pos", "AVG", "OPS"]], use_container_width=True, hide_index=True)
+    st.dataframe(home_selected_hitters[["Order", "Player", "Pos", "AVG", "OPS"]], use_container_width=True, hide_index=True)
 
 # ----------------------------------------------------
 # WEATHER & SABERMETRIC ENGINE ODDS
@@ -350,13 +378,13 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                 g["logs"].append(f"🔄 **AI Manager:** Hooking starter. `{g['current_away_p']}` enters from bullpen.")
 
             if g["top_half"]:
-                batter = away_selected_hitters.iloc[g["away_idx"] % len(away_selected_hitters)]
+                batter = away_selected_hitters.iloc[g["away_idx"] % 9]
                 b_team = "away"
                 p_era = g["current_home_era"]
                 p_hand = g["current_home_hand"]
                 g["home_bf"] += 1
             else:
-                batter = home_selected_hitters.iloc[g["home_idx"] % len(home_selected_hitters)]
+                batter = home_selected_hitters.iloc[g["home_idx"] % 9]
                 b_team = "home"
                 p_era = g["current_away_era"]
                 p_hand = g["current_away_hand"]
@@ -380,7 +408,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
                     g["bases"] = [None, None, None]
-                    g["logs"].append(f"💥 **HR!** {batter['Player']} hits a `{runs}-run` shot!")
+                    g["logs"].append(f"💥 **HR!** [Slot #{batter['Order']}] {batter['Player']} hits a `{runs}-run` shot!")
                     if g["top_half"]: g["current_home_era"] += 0.45
                     else: g["current_away_era"] += 0.45
                 elif roll <= hr_chance + 0.16:
@@ -390,7 +418,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     g["bases"][2] = g["bases"][0]; g["bases"][1] = batter["Player"]; g["bases"][0] = None
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
-                    g["logs"].append(f"⚾ **Double!** {batter['Player']} lines one into the gap.")
+                    g["logs"].append(f"⚾ **Double!** [Slot #{batter['Order']}] {batter['Player']} lines one into the gap.")
                 else:
                     runs = 1 if g["bases"][2] else 0
                     g[f"{b_team}_box"][batter["Player"]]["H"] += 1
@@ -398,14 +426,14 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     g["bases"][2] = g["bases"][1]; g["bases"][1] = g["bases"][0]; g["bases"][0] = batter["Player"]
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
-                    g["logs"].append(f"🏃 **Single!** {batter['Player']} drops a base hit.")
+                    g["logs"].append(f"🏃 **Single!** [Slot #{batter['Order']}] {batter['Player']} drops a base hit.")
             else:
                 g["outs"] += 1
                 if random.uniform(0, 1) <= 0.32:
                     g[f"{b_team}_box"][batter["Player"]]["SO"] += 1
-                    g["logs"].append(f"💨 *Strikeout!* {batter['Player']} down swinging.")
+                    g["logs"].append(f"💨 *Strikeout!* [Slot #{batter['Order']}] {batter['Player']} down swinging.")
                 else:
-                    g["logs"].append(f"🥎 *Out!* {batter['Player']} flies out.")
+                    g["logs"].append(f"🥎 *Out!* [Slot #{batter['Order']}] {batter['Player']} flies out.")
 
             if g["top_half"]: g["away_idx"] += 1
             else: g["home_idx"] += 1
@@ -421,4 +449,58 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             clamped_prob = max(1.0, min(99.0, base_prob))
             
             df_chart = pd.DataFrame(g["chart_data"])
-            graph_
+            graph_viz.line_chart(df_chart.set_index("Inning"))
+            ticker.markdown("\n\n".join(g["logs"][-3:]))
+            time.sleep(0.04)
+
+        g["chart_data"].append({"Inning": f"{g['inning']} {half_str}", f"{away_team} Win %": clamped_prob})
+        g["outs"] = 0; g["bases"] = [None, None, None]
+        if g["top_half"]: g["top_half"] = False
+        else: g["top_half"] = True; g["inning"] += 1
+
+    status_field.update(label="🏆 Autonomous Simulation Framework Completed!", state="complete", expanded=False)
+    st.balloons()
+    
+    if g["home_score"] > g["away_score"]:
+        record_game_result(home_team, away_team)
+        st.success(f"### 🏆 {home_team} Wins! `{g['home_score']}` - `{g['away_score']}`")
+    else:
+        record_game_result(away_team, home_team)
+        st.info(f"### 🏆 {away_team} Wins! `{g['away_score']}` - `{g['home_score']}`")
+
+    st.session_state["game_active"] = False
+    st.session_state["final_reports"] = {"away": g["away_box"], "home": g["home_box"], "full_logs": g["logs"]}
+    st.session_state["leveraged_game_state"] = None
+
+# ----------------------------------------------------
+# NARRATIVE GAME LOG ACCORDION
+# ----------------------------------------------------
+if st.session_state["final_reports"] is not None:
+    fr = st.session_state["final_reports"]
+    if "full_logs" in fr:
+        st.markdown("---")
+        with st.expander("📜 Complete Play-by-Play Game Narrative Log", expanded=True):
+            st.text_area("Game History Transcript Tracking", value="\n".join(reversed(fr["full_logs"])), height=250)
+
+    st.markdown("---")
+    st.subheader("📊 Post-Game Box Score Ledgers")
+    
+    df_a = pd.DataFrame.from_dict(fr["away"], orient="index")
+    df_h = pd.DataFrame.from_dict(fr["home"], orient="index")
+    bc1, bc2 = st.columns(2)
+    with bc1:
+        st.markdown(f"#### {away_team} Final Stats")
+        st.dataframe(df_a, use_container_width=True)
+    with bc2:
+        st.markdown(f"#### {home_team} Final Stats")
+        st.dataframe(df_h, use_container_width=True)
+
+# Standings Display Boards
+st.markdown("---")
+st.subheader("🏆 Persistent Campaign Standings Leaderboard")
+if st.session_state["standings"]:
+    std_list = []
+    for t, s in st.session_state["standings"].items():
+        tot = s["W"] + s["L"]
+        std_list.append({"Franchise Team Name": t, "Wins": s["W"], "Losses": s["L"], "Win Pct": f"{(s['W']/tot if tot>0 else 0):.3f}"})
+    st.dataframe(pd.DataFrame(std_list).sort_values(by="Wins", ascending=False).set_index("Franchise Team Name"), use_container_width=True)
