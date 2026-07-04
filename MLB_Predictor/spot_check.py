@@ -148,7 +148,10 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
         if stat_group == "hitting":
             return pd.DataFrame([{"Player": f"Batter {i+1}", "Pos": "IF", "Bats": "R", "AVG": 0.260, "OPS": 0.750, "H": 10, "HR": 1, "RBI": 5, "BB": 3, "SO (K)": 8, "AB": 40} for i in range(9)])
         else:
-            return pd.DataFrame([{"Player": "Starter Ace", "Pos": "SP", "Throws": "R", "ERA": 3.80, "WHIP": 1.25, "SO (K)": 45, "IP": "50.0"}])
+            return pd.DataFrame([
+                {"Player": "Starter Ace", "Pos": "SP", "Throws": "R", "ERA": 3.20, "WHIP": 1.15, "SO (K)": 50, "IP": "60.0"},
+                {"Player": "Bullpen Heavy", "Pos": "RP", "Throws": "R", "ERA": 3.90, "WHIP": 1.25, "SO (K)": 20, "IP": "25.0"}
+            ])
             
     return pd.DataFrame(players_list)
 
@@ -172,46 +175,42 @@ home_hitter_raw = get_detailed_roster_stats(live_teams.get(home_team, 0), home_t
 away_pitcher_df = get_detailed_roster_stats(live_teams.get(away_team, 0), away_team, "pitching")
 home_pitcher_df = get_detailed_roster_stats(live_teams.get(home_team, 0), home_team, "pitching")
 
-# ⭐ AUTOMATIC ROSTER FILTERING (No human input required)
-# Filters out pitchers, sorts remaining hitters by OPS, and locks in the top 9
+# ⭐ AUTOMATIC HITTER ROSTER FILTERING
 away_eligible_hitters = away_hitter_raw[~away_hitter_raw["Pos"].isin(["SP", "RP", "P"])]
-if not away_eligible_hitters.empty:
-    away_selected_hitters = away_eligible_hitters.sort_values(by="OPS", ascending=False).head(9).copy()
-else:
-    away_selected_hitters = away_hitter_raw.head(9).copy()
+away_selected_hitters = away_eligible_hitters.sort_values(by="OPS", ascending=False).head(9).copy() if not away_eligible_hitters.empty else away_hitter_raw.head(9).copy()
 
 home_eligible_hitters = home_hitter_raw[~home_hitter_raw["Pos"].isin(["SP", "RP", "P"])]
-if not home_eligible_hitters.empty:
-    home_selected_hitters = home_eligible_hitters.sort_values(by="OPS", ascending=False).head(9).copy()
-else:
-    home_selected_hitters = home_hitter_raw.head(9).copy()
+home_selected_hitters = home_eligible_hitters.sort_values(by="OPS", ascending=False).head(9).copy() if not home_eligible_hitters.empty else home_hitter_raw.head(9).copy()
 
-# Automatically select the ace (lowest ERA) as the starting pitcher
-away_starter_row = away_pitcher_df[away_pitcher_df["Pos"] == "SP"]
-if away_starter_row.empty: away_starter_row = away_pitcher_df.head(1)
-away_starter_sel = away_starter_row.sort_values(by="ERA").iloc[0]["Player"] if not away_starter_row.empty else "Unknown Starter"
+# 🔄 ⭐ AUTOMATIC PITCHER ASSIGNMENT ENGINE
+# Locates players marked as SP/P, matches the absolute best ERA value, and assigns them as the dynamic starter.
+away_starters = away_pitcher_df[away_pitcher_df["Pos"].isin(["SP", "P"])]
+if away_starters.empty: away_starters = away_pitcher_df.head(1)
+away_best_row = away_starters.sort_values(by="ERA", ascending=True).iloc[0] if not away_starters.empty else {"Player": "Unknown Ace", "ERA": 4.00, "Throws": "R"}
+away_starter_sel = away_best_row["Player"]
 
-home_starter_row = home_pitcher_df[home_pitcher_df["Pos"] == "SP"]
-if home_starter_row.empty: home_starter_row = home_pitcher_df.head(1)
-home_starter_sel = home_starter_row.sort_values(by="ERA").iloc[0]["Player"] if not home_starter_row.empty else "Unknown Starter"
+home_starters = home_pitcher_df[home_pitcher_df["Pos"].isin(["SP", "P"])]
+if home_starters.empty: home_starters = home_pitcher_df.head(1)
+home_best_row = home_starters.sort_values(by="ERA", ascending=True).iloc[0] if not home_starters.empty else {"Player": "Unknown Ace", "ERA": 4.00, "Throws": "R"}
+home_starter_sel = home_best_row["Player"]
 
-away_sp_era = float(away_starter_row.iloc[0]["ERA"]) if not away_starter_row.empty else 4.20
-home_sp_era = float(home_starter_row.iloc[0]["ERA"]) if not home_starter_row.empty else 4.20
-away_sp_hand = str(away_starter_row.iloc[0]["Throws"]) if not away_starter_row.empty else "R"
-home_sp_hand = str(home_starter_row.iloc[0]["Throws"]) if not home_starter_row.empty else "R"
+away_sp_era = float(away_best_row["ERA"])
+home_sp_era = float(home_best_row["ERA"])
+away_sp_hand = str(away_best_row["Throws"])
+home_sp_hand = str(home_best_row["Throws"])
 
 park_data = BALLPARK_MODIFIERS.get(home_team, DEFAULT_BALLPARK)
 
-# Display Cards purely for user visualization
+# Display Cards
 st.subheader("📋 Automated Team Lineup Cards Loaded")
 l_col1, l_col2 = st.columns(2)
 with l_col1:
     st.markdown(f"##### {away_team}")
-    st.write(f"🏟️ **Starting Pitcher:** `{away_starter_sel}`")
+    st.write(f"🏟️ **Starting Pitcher:** `{away_starter_sel}` (ERA: {away_sp_era})")
     st.dataframe(away_selected_hitters[["Player", "Pos", "AVG", "OPS"]], use_container_width=True, hide_index=True)
 with l_col2:
     st.markdown(f"##### {home_team}")
-    st.write(f"🏟️ **Starting Pitcher:** `{home_starter_sel}`")
+    st.write(f"🏟️ **Starting Pitcher:** `{home_starter_sel}` (ERA: {home_sp_era})")
     st.dataframe(home_selected_hitters[["Player", "Pos", "AVG", "OPS"]], use_container_width=True, hide_index=True)
 
 # ----------------------------------------------------
@@ -307,7 +306,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
         while g["outs"] < 3:
             if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
             
-            # AUTOMATED AI PITCHING CHANGE: HOME TEAM BULBPEN CALL
+            # AUTOMATED AI PITCHING CHANGE: HOME TEAM BULLPEN CALL
             if g["top_half"] and g["home_bf"] >= 15 and "SP" in g["current_home_p"]:
                 relievers = home_pitcher_df[home_pitcher_df["Player"] != home_starter_sel]
                 if not relievers.empty:
@@ -321,7 +320,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                 g["home_bf"] = 0
                 g["logs"].append(f"🔄 **AI Manager:** Hooking starter. `{g['current_home_p']}` enters from bullpen.")
 
-            # AUTOMATED AI PITCHING CHANGE: AWAY TEAM BULBPEN CALL
+            # AUTOMATED AI PITCHING CHANGE: AWAY TEAM BULLPEN CALL
             if not g["top_half"] and g["away_bf"] >= 15 and "SP" in g["current_away_p"]:
                 relievers = away_pitcher_df[away_pitcher_df["Player"] != away_starter_sel]
                 if not relievers.empty:
@@ -334,11 +333,6 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     g["current_away_era"] = 4.10
                 g["away_bf"] = 0
                 g["logs"].append(f"🔄 **AI Manager:** Hooking starter. `{g['current_away_p']}` enters from bullpen.")
-
-            # AUTOMATED HIGH LEVERAGE CHOICES
-            if g["inning"] >= 7 and sum([1 for r in g["bases"] if r is not None]) >= 2 and g["outs"] >= 1:
-                strategy = random.choice(["🔴 Pitch Around Corner", "🟢 Swing Away Aggressive"])
-                g["logs"].append(f"📋 **AI Manager Strategy Simulation:** Deployed `{strategy}` variables.")
 
             if g["top_half"]:
                 batter = away_selected_hitters.iloc[g["away_idx"] % len(away_selected_hitters)]
@@ -371,8 +365,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
                     g["bases"] = [None, None, None]
-                    g["logs"].append(f"💥 **HR!** {batter['Player']} hits a `{runs}-run` shot off {g['current_home_p'] if g['top_half'] else g['current_away_p']}!")
-                    
+                    g["logs"].append(f"💥 **HR!** {batter['Player']} hits a `{runs}-run` shot!")
                     if g["top_half"]: g["current_home_era"] += 0.45
                     else: g["current_away_era"] += 0.45
                 elif roll <= hr_chance + 0.16:
@@ -383,9 +376,6 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
                     g["logs"].append(f"⚾ **Double!** {batter['Player']} lines one into the gap.")
-                    
-                    if g["top_half"]: g["current_home_era"] += 0.15
-                    else: g["current_away_era"] += 0.15
                 else:
                     runs = 1 if g["bases"][2] else 0
                     g[f"{b_team}_box"][batter["Player"]]["H"] += 1
@@ -394,9 +384,6 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
                     g["logs"].append(f"🏃 **Single!** {batter['Player']} drops a base hit.")
-                    
-                    if g["top_half"]: g["current_away_era"] += 0.10
-                    else: g["current_home_era"] += 0.10
             else:
                 g["outs"] += 1
                 if random.uniform(0, 1) <= 0.32:
@@ -447,7 +434,6 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
 # ----------------------------------------------------
 if st.session_state["final_reports"] is not None:
     fr = st.session_state["final_reports"]
-    
     if "full_logs" in fr:
         st.markdown("---")
         with st.expander("📜 Complete Play-by-Play Game Narrative Log", expanded=True):
@@ -458,18 +444,13 @@ if st.session_state["final_reports"] is not None:
     
     df_a = pd.DataFrame.from_dict(fr["away"], orient="index")
     df_h = pd.DataFrame.from_dict(fr["home"], orient="index")
-    
     bc1, bc2 = st.columns(2)
     with bc1:
         st.markdown(f"#### {away_team} Final Stats")
         st.dataframe(df_a, use_container_width=True)
-        csv_a = df_a.to_csv().encode('utf-8')
-        st.download_button(f"📥 Export {away_team} Box Score (CSV)", data=csv_a, file_name=f"{away_team.replace(' ', '_')}_box.csv", mime="text/csv")
     with bc2:
         st.markdown(f"#### {home_team} Final Stats")
         st.dataframe(df_h, use_container_width=True)
-        csv_h = df_h.to_csv().encode('utf-8')
-        st.download_button(f"📥 Export {home_team} Box Score (CSV)", data=csv_h, file_name=f"{home_team.replace(' ', '_')}_box.csv", mime="text/csv")
 
 # Standings Display Boards
 st.markdown("---")
@@ -480,5 +461,3 @@ if st.session_state["standings"]:
         tot = s["W"] + s["L"]
         std_list.append({"Franchise Team Name": t, "Wins": s["W"], "Losses": s["L"], "Win Pct": f"{(s['W']/tot if tot>0 else 0):.3f}"})
     st.dataframe(pd.DataFrame(std_list).sort_values(by="Wins", ascending=False).set_index("Franchise Team Name"), use_container_width=True)
-else:
-    st.caption("No matches simulated in this current runtime session yet.")
