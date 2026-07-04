@@ -330,7 +330,8 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             g["bases"][1] = "Ghost Runner"
             g["logs"].append("👻 **MLB Ghost Runner Rule Active:** Automated runner placed onto 2nd base.")
 
-        while g["outs"] < 3:
+        # ⭐ LOCK RE-RUN LOOPS TO PREVENT INFINITE WALKOVERS
+        while g["outs"] < 3 and not g.get("bullpen_call", False) and not g.get("interrupted", False):
             if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
             
             if g["top_half"] and g["home_bf"] >= 15 and "SP" in g["current_home_p"]:
@@ -379,7 +380,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                 elif roll <= hr_chance + 0.16:
                     runs = sum([1 for r in g["bases"][1:] if r is not None])
                     g[f"{b_team}_box"][batter["Player"]]["H"] += 1
-                    g[f"{b_team}_box"][batter["Player"]]["RBI"] += runs  # CREDITS RBIs ON DOUBLES
+                    g[f"{b_team}_box"][batter["Player"]]["RBI"] += runs
                     g["bases"][2] = g["bases"][0]; g["bases"][1] = batter["Player"]; g["bases"][0] = None
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
@@ -390,7 +391,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                 else:
                     runs = 1 if g["bases"][2] else 0
                     g[f"{b_team}_box"][batter["Player"]]["H"] += 1
-                    g[f"{b_team}_box"][batter["Player"]]["RBI"] += runs  # CREDITS RBIs ON SINGLES
+                    g[f"{b_team}_box"][batter["Player"]]["RBI"] += runs
                     g["bases"][2] = g["bases"][1]; g["bases"][1] = g["bases"][0]; g["bases"][0] = batter["Player"]
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
@@ -426,10 +427,12 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             ticker.markdown("\n\n".join(g["logs"][-3:]))
             time.sleep(0.05)
 
-        g["chart_data"].append({"Inning": f"{g['inning']} {half_str}", f"{away_team} Win %": clamped_prob})
-        g["outs"] = 0; g["bases"] = [None, None, None]
-        if g["top_half"]: g["top_half"] = False
-        else: g["top_half"] = True; g["inning"] += 1
+        # Handle moving to next half-inning only if we aren't waiting on a selection
+        if not g.get("bullpen_call", False) and not g.get("interrupted", False):
+            g["chart_data"].append({"Inning": f"{g['inning']} {half_str}", f"{away_team} Win %": clamped_prob})
+            g["outs"] = 0; g["bases"] = [None, None, None]
+            if g["top_half"]: g["top_half"] = False
+            else: g["top_half"] = True; g["inning"] += 1
 
     status_field.update(label="🏆 Framework Simulation Completed!", state="complete", expanded=False)
     st.balloons()
