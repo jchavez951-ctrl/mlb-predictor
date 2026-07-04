@@ -202,17 +202,9 @@ if not st.session_state["lineups_locked"]:
         st.session_state["ready_home_lineup"] = pd.DataFrame([home_hitters_pool[home_hitters_pool["Player"] == name].iloc[0].to_dict() for name in home_batters])
         st.session_state["ready_home_lineup"]["Order"] = range(1, 10)
         
-        # Build bullpen list and append fallback relief pitchers if empty
-        away_bp = away_pitcher_raw[away_pitcher_raw["Player"] != away_sp_choice].to_dict('records')
-        home_bp = home_pitcher_raw[home_pitcher_raw["Player"] != home_sp_choice].to_dict('records')
-        
-        if not away_bp:
-            away_bp = [{"Player": f"Reliever {i}", "ERA": 3.80 + (i*0.2), "Pos": "RP"} for i in range(1, 5)]
-        if not home_bp:
-            home_bp = [{"Player": f"Reliever {i}", "ERA": 3.80 + (i*0.2), "Pos": "RP"} for i in range(1, 5)]
-            
-        st.session_state["away_bullpen"] = away_bp
-        st.session_state["home_bullpen"] = home_bp
+        # Initial cleanup for bullpen rosters
+        st.session_state["away_bullpen"] = away_pitcher_raw[away_pitcher_raw["Player"] != away_sp_choice].to_dict('records')
+        st.session_state["home_bullpen"] = home_pitcher_raw[home_pitcher_raw["Player"] != home_sp_choice].to_dict('records')
         st.session_state["lineups_locked"] = True
         st.rerun()
 
@@ -253,6 +245,16 @@ else:
     # SIMULATION ENGINE CORE
     if st.session_state["game_active"] or st.session_state["leveraged_game_state"] is not None:
         if st.session_state["leveraged_game_state"] is None:
+            
+            # GUARANTEE bullpen has items inside state before starting simulation loops
+            abp = st.session_state.get("away_bullpen", [])
+            hbp = st.session_state.get("home_bullpen", [])
+            if not abp: abp = [{"Player": f"Reliever A{i}", "ERA": 4.10, "Pos": "RP"} for i in range(1, 6)]
+            if not hbp: hbp = [{"Player": f"Reliever H{i}", "ERA": 4.10, "Pos": "RP"} for i in range(1, 6)]
+            
+            st.session_state["away_bullpen"] = abp
+            st.session_state["home_bullpen"] = hbp
+
             st.session_state["leveraged_game_state"] = {
                 "inning": 1, "top_half": True, "away_score": 0, "home_score": 0,
                 "away_idx": 0, "home_idx": 0, "outs": 0,
@@ -291,14 +293,18 @@ else:
             while g["outs"] < 3:
                 if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
 
-                away_bp_pool = st.session_state.get("away_bullpen", [])
-                home_bp_pool = st.session_state.get("home_bullpen", [])
+                # Live bullpen fallback generator right here inside loop execution block
+                if not st.session_state["away_bullpen"]:
+                    st.session_state["away_bullpen"] = [{"Player": f"Reliever A{i}", "ERA": 3.95, "Pos": "RP"} for i in range(1, 6)]
+                if not st.session_state["home_bullpen"]:
+                    st.session_state["home_bullpen"] = [{"Player": f"Reliever H{i}", "ERA": 3.95, "Pos": "RP"} for i in range(1, 6)]
 
-                # Manager AI: Bullpen Deployment & Fatigue Hook Check
+                # Manager AI: Bullpen Hook Mechanics
                 if g["top_half"]:
                     g["home_p_pitches"] += random.randint(3, 6)
-                    if g["home_p_pitches"] > 85 and len(home_bp_pool) > 0:
-                        reliever = home_bp_pool.pop(0)  # Call next available reliever
+                    # Hard Hook at 85 Pitches
+                    if g["home_p_pitches"] > 85:
+                        reliever = st.session_state["home_bullpen"].pop(0)
                         g["home_p_name"] = reliever["Player"] if "RP" in reliever["Player"] else reliever["Player"] + " (RP)"
                         g["home_p_era"] = float(reliever["ERA"])
                         g["home_p_pitches"] = 0
@@ -309,8 +315,9 @@ else:
                     b_team = "away"
                 else:
                     g["away_p_pitches"] += random.randint(3, 6)
-                    if g["away_p_pitches"] > 85 and len(away_bp_pool) > 0:
-                        reliever = away_bp_pool.pop(0)  # Call next available reliever
+                    # Hard Hook at 85 Pitches
+                    if g["away_p_pitches"] > 85:
+                        reliever = st.session_state["away_bullpen"].pop(0)
                         g["away_p_name"] = reliever["Player"] if "RP" in reliever["Player"] else reliever["Player"] + " (RP)"
                         g["away_p_era"] = float(reliever["ERA"])
                         g["away_p_pitches"] = 0
@@ -320,8 +327,8 @@ else:
                     batter = home_lineup_final.iloc[g["home_idx"] % 9]
                     b_team = "home"
 
-                # Apply Fatigue Penalty to Pitcher ERA
-                fatigue_mult = 1.35 if (p_pitches > 75 and g["away_p_type"] == "SP") else 1.0
+                # Apply Fatigue Multiplier to Pitcher ERA
+                fatigue_mult = 1.35 if (p_pitches > 70 and g["away_p_type"] == "SP") else 1.0
                 effective_era = p_era * fatigue_mult
 
                 # Walk Generation Check
@@ -396,7 +403,7 @@ else:
                 if g["top_half"]: g["away_idx"] += 1
                 else: g["home_idx"] += 1
 
-                # Update Display Layout Metrics
+                # Update Layout View
                 scoreboard.markdown(f"### 🏟️ {away_team} `{g['away_score']}` @ {home_team} `{g['home_score']}` | Inning {g['inning']} ({half_str}) | Outs: {g['outs']}")
                 field_viz.markdown(print_ascii_diamond(g["bases"]), unsafe_allow_html=True)
                 
