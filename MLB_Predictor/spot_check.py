@@ -3,9 +3,9 @@ import requests
 import random
 import pandas as pd
 
-st.set_page_config(page_title="Live MLB Predictor", page_icon="⚾", layout="wide")
-st.title("⚾ Live MLB Matchup & Stat Projection Engine")
-st.write("Using live team standing data and historical player statistics to generate game outcomes and box score predictions.")
+st.set_page_config(page_title="Live MLB Master Predictor", page_icon="⚾", layout="wide")
+st.title("⚾ Live MLB Ultimate Matchup & Stat Engine")
+st.write("Streaming granular team standing metrics, active pitching depth, and hitter leaderboards from the MLB API.")
 
 # ----------------------------------------------------
 # DATA SOURCE: Fetch active MLB teams
@@ -28,13 +28,14 @@ except Exception as e:
     team_names = ["New York Mets", "Los Angeles Angels"]
 
 # ----------------------------------------------------
-# DATA FUNCTION: Fetch Individual Player Stats
+# ADVANCED DATA LOOKUPS: Granular Player Stats
 # ----------------------------------------------------
 @st.cache_data(ttl=3600)
-def get_individual_player_stats(team_id):
+def get_detailed_roster_stats(team_id, stat_group="hitting"):
+    """Fetches full team active roster and pulls either deep hitting or pitching seasonal stats."""
     players_list = []
     try:
-        url = f"https://statsapi.mlb.com/api/v1/teams/{team_id}/roster?rosterType=Active&hydrate=person(stats(group=[hitting],type=season,season=2026))"
+        url = f"https://statsapi.mlb.com/api/v1/teams/{team_id}/roster?rosterType=Active&hydrate=person(stats(group=[{stat_group}],type=season,season=2026))"
         res = requests.get(url).json()
         
         for member in res.get('roster', []):
@@ -45,22 +46,43 @@ def get_individual_player_stats(team_id):
             stats_group = person.get('stats', [{}])[0].get('splits', [{}])
             if stats_group and 'stat' in stats_group[0]:
                 stat = stats_group[0]['stat']
-                players_list.append({
-                    "Player": name,
-                    "Pos": position,
-                    "AVG": float(stat.get("avg", ".000")),
-                    "OPS": float(stat.get("ops", ".000")),
-                    "HR": int(stat.get("homeRuns", 0)),
-                    "RBI": int(stat.get("rbi", 0)),
-                    "AB": int(stat.get("atBats", 1))
-                })
+                
+                if stat_group == "hitting":
+                    players_list.append({
+                        "Player": name,
+                        "Pos": position,
+                        "AVG": float(stat.get("avg", ".000")),
+                        "OPS": float(stat.get("ops", ".000")),
+                        "H": int(stat.get("hits", 0)),
+                        "HR": int(stat.get("homeRuns", 0)),
+                        "RBI": int(stat.get("rbi", 0)),
+                        "BB": int(stat.get("baseOnBalls", 0)),
+                        "SO (K)": int(stat.get("strikeOuts", 0)),
+                        "SB": int(stat.get("stolenBases", 0)),
+                        "AB": int(stat.get("atBats", 1))
+                    })
+                elif stat_group == "pitching":
+                    players_list.append({
+                        "Player": name,
+                        "Pos": position,
+                        "ERA": float(stat.get("era", 0.00)),
+                        "WHIP": float(stat.get("whip", 0.00)),
+                        "W": int(stat.get("wins", 0)),
+                        "L": int(stat.get("losses", 0)),
+                        "SO (K)": int(stat.get("strikeOuts", 0)),
+                        "BB": int(stat.get("baseOnBalls", 0)),
+                        "SV": int(stat.get("saves", 0)),
+                        "IP": stat.get("inningsPitched", "0.0")
+                    })
     except:
         pass
-    
-    if not players_list:
-        return pd.DataFrame(columns=["Player", "Pos", "AVG", "OPS", "HR", "RBI", "AB"])
         
-    return pd.DataFrame(players_list).sort_values(by="OPS", ascending=False)
+    if not players_list:
+        return pd.DataFrame()
+        
+    df = pd.DataFrame(players_list)
+    sort_col = "OPS" if stat_group == "hitting" else "SO (K)"
+    return df.sort_values(by=sort_col, ascending=False)
 
 @st.cache_data(ttl=3600)
 def get_team_season_stats(team_id):
@@ -93,22 +115,17 @@ home_id = team_dict.get(home_team)
 away_stats = get_team_season_stats(away_id) if away_id else {"avg": 0.250, "ops": 0.720, "hr": 20}
 home_stats = get_team_season_stats(home_id) if home_id else {"avg": 0.250, "ops": 0.720, "hr": 20}
 
-# Fetch rosters for predictions
-away_player_df = get_individual_player_stats(away_id) if away_id else pd.DataFrame()
-home_player_df = get_individual_player_stats(home_id) if home_id else pd.DataFrame()
-
-# Calculate modifiers
+# Modifiers
 away_stat_modifier = (away_stats["ops"] - 0.700) * 50
 home_stat_modifier = ((home_stats["ops"] - 0.700) * 50) + 2.0
 
 st.sidebar.markdown("---")
 st.sidebar.header("Automated Stat Modifiers")
-st.sidebar.caption("Calculated from team performance metrics.")
 st.sidebar.text(f"{away_team} Modifier: {away_stat_modifier:+.2f}")
 st.sidebar.text(f"{home_team} Modifier: {home_stat_modifier:+.2f}")
 
 # ----------------------------------------------------
-# LIVE STANDINGS & PROBABILITY CALCULATION LOGIC
+# LIVE STANDINGS & PROBABILITY CALCULATION
 # ----------------------------------------------------
 @st.cache_data(ttl=3600)
 def get_all_standings_data():
@@ -128,7 +145,6 @@ def get_all_standings_data():
     return records_mapped
 
 all_records = get_all_standings_data()
-
 away_base_pct = all_records.get(away_id, {}).get("pct", 0.500) if away_id else 0.500
 home_base_pct = all_records.get(home_id, {}).get("pct", 0.500) if home_id else 0.500
 
@@ -138,47 +154,6 @@ home_strength = (home_base_pct * 100) + home_stat_modifier
 total_strength = away_strength + home_strength
 away_prob = (away_strength / total_strength) * 100
 home_prob = (home_strength / total_strength) * 100
-
-# ----------------------------------------------------
-# INDIVIDUAL STAT PROJECTION LOGIC ENGINE
-# ----------------------------------------------------
-def project_player_box_score(roster_df):
-    """Simulates realistic individual single-game stat projections based on their season profile"""
-    projections = []
-    if roster_df.empty:
-        return pd.DataFrame()
-        
-    # Pick the top 5 hitters on the roster to make a mini-box score
-    top_hitters = roster_df.head(5)
-    
-    for _, player in top_hitters.iterrows():
-        at_bats = random.choice([4, 4, 5, 3])
-        hits = 0
-        hrs = 0
-        rbis = 0
-        
-        # Simple Monte-Carlo roll per at-bat based on their real batting average
-        for _ in range(at_bats):
-            roll = random.uniform(0, 1)
-            if roll <= player["AVG"]:
-                hits += 1
-                # Check if hit is a home run based on season HR density
-                hr_chance = min(0.15, (player["HR"] / max(1, player["AB"])))
-                if random.uniform(0, 1) <= hr_chance:
-                    hrs += 1
-                    rbis += random.choice([1, 2, 3])
-                elif random.uniform(0, 1) < 0.3:
-                    rbis += random.choice([1, 2])
-                    
-        projections.append({
-            "Player": player["Player"],
-            "Pos": player["Pos"],
-            "Projected AB": at_bats,
-            "Projected Hits": hits,
-            "Projected HR": hrs,
-            "Projected RBI": rbis
-        })
-    return pd.DataFrame(projections)
 
 # ----------------------------------------------------
 # INTERFACE DISPLAY LAYOUT
@@ -201,13 +176,11 @@ with col1:
     st.markdown("### Calculated Live Win Expectancy")
     st.write(f"**{away_team}:** {away_prob:.1f}%")
     st.progress(int(away_prob))
-    
     st.write(f"**{home_team}:** {home_prob:.1f}%")
     st.progress(int(home_prob))
 
 with col2:
     st.subheader("🎲 Real-Time Simulator Engine")
-    st.write(f"Simulation Setup: **Best of {series_length} Series**" if series_length > 1 else "Simulating a Single Regular Season Game Matchup.")
     
     if st.button("Simulate Matchup Outcome"):
         if series_length == 1:
@@ -225,74 +198,61 @@ with col2:
             else:
                 st.info(f"**{away_team} secure the away upset!**")
                 st.subheader(f"Final Score: {away_team} **{win_runs}** - {lose_runs} {home_team}")
-                
-            # Render individual player predictions for single game mode
-            st.markdown("---")
-            st.markdown("### 📈 Projected Player Game Box Scores")
-            
-            p_away_box = project_player_box_score(away_player_df)
-            p_home_box = project_player_box_score(home_player_df)
-            
-            if not p_away_box.empty:
-                st.caption(f"**{away_team} Projected Stat Lines**")
-                st.dataframe(p_away_box.set_index("Player"), use_container_width=True)
-            if not p_home_box.empty:
-                st.caption(f"**{home_team} Projected Stat Lines**")
-                st.dataframe(p_home_box.set_index("Player"), use_container_width=True)
-                
         else:
-            away_wins = 0
-            home_wins = 0
+            away_wins, home_wins = 0, 0
             needed_to_win = (series_length // 2) + 1
             game_history = []
             
             while away_wins < needed_to_win and home_wins < needed_to_win:
                 game_num = away_wins + home_wins + 1
-                roll = random.uniform(0, 100)
-                g_winner = home_team if roll <= home_prob else away_team
-                if g_winner == home_team:
+                if random.uniform(0, 100) <= home_prob:
                     home_wins += 1
+                    winner_name = home_team
                 else:
                     away_wins += 1
-                game_history.append(f"Game {game_num}: Winner is {g_winner} (Series Score: {away_team} {away_wins} - {home_wins} {home_team})")
+                    winner_name = away_team
+                game_history.append(f"Game {game_num}: Winner is {winner_name} (Series Score: {away_team} {away_wins} - {home_wins} {home_team})")
             
             st.balloons()
             st.markdown("### 🏆 Series Championship Report")
-            series_winner = home_team if home_wins == needed_to_win else away_team
-            
-            if series_winner == home_team:
+            if home_wins == needed_to_win:
                 st.success(f"**{home_team} wins the series {home_wins} games to {away_wins}!**")
             else:
                 st.info(f"**{away_team} wins the series {away_wins} games to {home_wins}!**")
-                
-            st.markdown("#### Game-By-Game Breakdown:")
             for log in game_history:
                 st.write(f"⚾ {log}")
 
 # ----------------------------------------------------
-# SEASON ROSTER MATRIX TRACKER
+# LIVE ROSTER STAT TRACKER (WITH GROUP TOGGLE)
 # ----------------------------------------------------
 st.markdown("---")
-st.subheader("👤 Active Rosters & Individual Season Metrics")
-st.write("Reviewing current season stats for every active team member.")
+st.subheader("👤 Live Active Roster Stat Analytics")
+stat_view = st.radio("Select View Metric Group:", ["Hitting Performance Columns", "Pitching Performance Columns"], horizontal=True)
+
+group_key = "hitting" if "Hitting" in stat_view else "pitching"
+away_player_df = get_detailed_roster_stats(away_id, group_key) if away_id else pd.DataFrame()
+home_player_df = get_detailed_roster_stats(home_id, group_key) if home_id else pd.DataFrame()
 
 p_col1, p_col2 = st.columns(2)
 with p_col1:
-    st.markdown(f"#### {away_team} Full Roster")
+    st.markdown(f"#### {away_team} Roster Leaderboard")
     if not away_player_df.empty:
-        st.dataframe(away_player_df.drop(columns=["AB"]).set_index("Player"), use_container_width=True)
+        st.dataframe(away_player_df.set_index("Player"), use_container_width=True)
+    else:
+        st.caption("No corresponding statistics logged on the active roster tree.")
+
 with p_col2:
-    st.markdown(f"#### {home_team} Full Roster")
+    st.markdown(f"#### {home_team} Roster Leaderboard")
     if not home_player_df.empty:
-        st.dataframe(home_player_df.drop(columns=["AB"]).set_index("Player"), use_container_width=True)
+        st.dataframe(home_player_df.set_index("Player"), use_container_width=True)
+    else:
+        st.caption("No corresponding statistics logged on the active roster tree.")
 
 # ----------------------------------------------------
 # GRAPH VISUALIZATION SECTION
 # ----------------------------------------------------
 st.markdown("---")
 st.subheader("📈 Divisional Context Chart Tracker")
-st.write("See how your selected teams compare against rival win percentages inside their respective divisions.")
-
 away_div = all_records.get(away_id, {}).get("division")
 home_div = all_records.get(home_id, {}).get("division")
 
