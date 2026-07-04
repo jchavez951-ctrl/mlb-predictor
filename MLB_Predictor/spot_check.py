@@ -243,7 +243,6 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
     status_field = st.status("⚾ Simulating live matchups...", expanded=True)
     scoreboard = st.empty()
     
-    # NEW FEATURE: Interactive Tab Modules (Live Game View vs Live Box Scores)
     tab_view, tab_away, tab_home = st.tabs(["🏟️ Live Diamond Feed", f"📊 {away_team} Box", f"📊 {home_team} Box"])
     
     with tab_view:
@@ -315,13 +314,11 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
         while g["outs"] < 3:
             if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
             
-            # Trigger Manual Bullpen Pause when pitcher is overworked (15 batters faced)
             if g["top_half"] and g["home_bf"] >= 15 and "SP" in g["current_home_p"]:
                 g["bullpen_call"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
             if not g["top_half"] and g["away_bf"] >= 15 and "SP" in g["current_away_p"]:
                 g["bullpen_call"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
 
-            # Dynamic Leverage Trigger Checks (only check if strategy hasn't been chosen for this batter)
             if g["inning"] >= 7 and sum([1 for r in g["bases"] if r is not None]) >= 2 and g["outs"] >= 1 and not g.get("strategy_selected", False):
                 g["interrupted"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
 
@@ -358,7 +355,6 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     g["bases"] = [None, None, None]
                     g["logs"].append(f"💥 **HR!** {batter['Player']} hits a `{runs}-run` shot off {g['current_home_p'] if g['top_half'] else g['current_away_p']}!")
                     
-                    # NEW FEATURE: Fatigue Penalty applied to current Pitcher upon giving up a Run
                     if g["top_half"]: g["current_home_era"] += 0.45
                     else: g["current_away_era"] += 0.45
                 elif roll <= hr_chance + 0.16:
@@ -389,21 +385,17 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                 else:
                     g["logs"].append(f"🥎 *Out!* {batter['Player']} flies out.")
 
-            # Reset the strategy selection flag because the batter has completed their turn
             g["strategy_selected"] = False
 
             if g["top_half"]: g["away_idx"] += 1
             else: g["home_idx"] += 1
 
-            # UI Frame Updates
             scoreboard.markdown(f"### 🏟️ LIVE SCOREBOARD: {away_team} `{g['away_score']}` vs {home_team} `{g['home_score']}` (Inning {g['inning']} - Outs: {g['outs']})")
             field_viz.markdown(print_ascii_diamond(g["bases"]), unsafe_allow_html=True)
             
-            # Render live tracking dataframes instantly into box tabs while the simulation runs
             away_box_display.dataframe(pd.DataFrame.from_dict(g["away_box"], orient="index"), use_container_width=True)
             home_box_display.dataframe(pd.DataFrame.from_dict(g["home_box"], orient="index"), use_container_width=True)
             
-            # Win Probability Calculation
             score_diff = g["away_score"] - g["home_score"]
             base_prob = 50.0 + (score_diff * 9.5) - ((g["inning"] if not g["top_half"] else g["inning"] - 0.5) * 0.4)
             clamped_prob = max(1.0, min(99.0, base_prob))
@@ -411,7 +403,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             df_chart = pd.DataFrame(g["chart_data"])
             graph_viz.line_chart(df_chart.set_index("Inning"))
             ticker.markdown("\n\n".join(g["logs"][-3:]))
-            time.sleep(0.12)
+            time.sleep(0.05)
 
         g["chart_data"].append({"Inning": f"{g['inning']} {half_str}", f"{away_team} Win %": clamped_prob})
         g["outs"] = 0; g["bases"] = [None, None, None]
@@ -428,19 +420,25 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
         record_game_result(away_team, home_team)
         st.info(f"### 🏆 {away_team} Wins! `{g['away_score']}` - `{g['home_score']}`")
 
-    # Persist and finalize reports
     st.session_state["game_active"] = False
-    st.session_state["final_reports"] = {"away": g["away_box"], "home": g["home_box"]}
+    st.session_state["final_reports"] = {"away": g["away_box"], "home": g["home_box"], "full_logs": g["logs"]}
     st.session_state["leveraged_game_state"] = None
 
 # ----------------------------------------------------
-# BOX SCORES & SPREADSHEET CSV EXPORTERS
+# NEW UPGRADE: NARRATIVE GAME LOG ACCORDION
 # ----------------------------------------------------
 if st.session_state["final_reports"] is not None:
+    fr = st.session_state["final_reports"]
+    
+    if "full_logs" in fr:
+        st.markdown("---")
+        with st.expander("📜 Complete Play-by-Play Game Narrative Log", expanded=True):
+            # Reverse logs so the absolute newest critical plays show at the top of the feed
+            st.text_area("Game History Transcript Tracking", value="\n".join(reversed(fr["full_logs"])), height=250)
+
     st.markdown("---")
     st.subheader("📊 Post-Game Box Score Ledgers")
     
-    fr = st.session_state["final_reports"]
     df_a = pd.DataFrame.from_dict(fr["away"], orient="index")
     df_h = pd.DataFrame.from_dict(fr["home"], orient="index")
     
