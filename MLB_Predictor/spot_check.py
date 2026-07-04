@@ -379,6 +379,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                 elif roll <= hr_chance + 0.16:
                     runs = sum([1 for r in g["bases"][1:] if r is not None])
                     g[f"{b_team}_box"][batter["Player"]]["H"] += 1
+                    g[f"{b_team}_box"][batter["Player"]]["RBI"] += runs  # CREDITS RBIs ON DOUBLES
                     g["bases"][2] = g["bases"][0]; g["bases"][1] = batter["Player"]; g["bases"][0] = None
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
@@ -389,6 +390,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                 else:
                     runs = 1 if g["bases"][2] else 0
                     g[f"{b_team}_box"][batter["Player"]]["H"] += 1
+                    g[f"{b_team}_box"][batter["Player"]]["RBI"] += runs  # CREDITS RBIs ON SINGLES
                     g["bases"][2] = g["bases"][1]; g["bases"][1] = g["bases"][0]; g["bases"][0] = batter["Player"]
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
