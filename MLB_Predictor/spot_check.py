@@ -242,10 +242,20 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
     
     status_field = st.status("⚾ Simulating live matchups...", expanded=True)
     scoreboard = st.empty()
-    c_left, c_right = st.columns([1, 1])
-    with c_left: field_viz = st.empty()
-    with c_right: graph_viz = st.empty()
-    ticker = st.empty()
+    
+    # NEW FEATURE: Interactive Tab Modules (Live Game View vs Live Box Scores)
+    tab_view, tab_away, tab_home = st.tabs(["🏟️ Live Diamond Feed", f"📊 {away_team} Box", f"📊 {home_team} Box"])
+    
+    with tab_view:
+        c_left, c_right = st.columns([1, 1])
+        with c_left: field_viz = st.empty()
+        with c_right: graph_viz = st.empty()
+        ticker = st.empty()
+        
+    with tab_away:
+        away_box_display = st.empty()
+    with tab_home:
+        home_box_display = st.empty()
 
     def print_ascii_diamond(runners):
         b1 = "🟥" if runners[0] else "⬜"
@@ -261,14 +271,14 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             if st.button("🔴 Strategic Safety: Pitch Around Corner"):
                 g["logs"].append("📋 *Manager Strategy:* Demanded safe pitch-around mechanics.")
                 g["interrupted"] = False
-                g["strategy_selected"] = True  # Flag that the event was resolved
+                g["strategy_selected"] = True
                 st.session_state["leveraged_game_state"] = g
                 st.rerun()
         with d2:
             if st.button("🟢 Deep Attack: Swing Away/Full Max Volleys"):
                 g["logs"].append("📋 *Manager Strategy:* Approved maximum swinging aggression variables.")
                 g["interrupted"] = False
-                g["strategy_selected"] = True  # Flag that the event was resolved
+                g["strategy_selected"] = True
                 st.session_state["leveraged_game_state"] = g
                 st.rerun()
         st.stop()
@@ -317,13 +327,15 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
 
             if g["top_half"]:
                 batter = away_selected_hitters.iloc[g["away_idx"] % len(away_selected_hitters)]
-                b_team, p_era, p_hand = "away", g["current_home_era"], g["current_home_hand"]
+                b_team = "away"
+                p_era = g["current_home_era"]
+                p_hand = g["current_home_hand"]
                 g["home_bf"] += 1
             else:
                 batter = home_selected_hitters.iloc[g["home_idx"] % len(home_selected_hitters)]
-                b_team, p_era, p_hand = "home", g["current_away_p" if "SP" not in g["current_away_p"] else "current_away_era"], g["current_away_hand"]
-                # Safeguard matching variable types
+                b_team = "home"
                 p_era = g["current_away_era"]
+                p_hand = g["current_away_hand"]
                 g["away_bf"] += 1
 
             plat_mult = 1.05 if batter["Bats"] != p_hand else 0.95
@@ -345,6 +357,10 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     else: g["home_score"] += runs
                     g["bases"] = [None, None, None]
                     g["logs"].append(f"💥 **HR!** {batter['Player']} hits a `{runs}-run` shot off {g['current_home_p'] if g['top_half'] else g['current_away_p']}!")
+                    
+                    # NEW FEATURE: Fatigue Penalty applied to current Pitcher upon giving up a Run
+                    if g["top_half"]: g["current_home_era"] += 0.45
+                    else: g["current_away_era"] += 0.45
                 elif roll <= hr_chance + 0.16:
                     runs = sum([1 for r in g["bases"][1:] if r is not None])
                     g[f"{b_team}_box"][batter["Player"]]["H"] += 1
@@ -352,6 +368,9 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
                     g["logs"].append(f"⚾ **Double!** {batter['Player']} lines one into the gap.")
+                    
+                    if g["top_half"]: g["current_home_era"] += 0.15
+                    else: g["current_away_era"] += 0.15
                 else:
                     runs = 1 if g["bases"][2] else 0
                     g[f"{b_team}_box"][batter["Player"]]["H"] += 1
@@ -359,6 +378,9 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     if g["top_half"]: g["away_score"] += runs
                     else: g["home_score"] += runs
                     g["logs"].append(f"🏃 **Single!** {batter['Player']} drops a base hit.")
+                    
+                    if g["top_half"]: g["current_home_era"] += 0.10
+                    else: g["current_away_era"] += 0.10
             else:
                 g["outs"] += 1
                 if random.uniform(0, 1) <= 0.32:
@@ -376,6 +398,10 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             # UI Frame Updates
             scoreboard.markdown(f"### 🏟️ LIVE SCOREBOARD: {away_team} `{g['away_score']}` vs {home_team} `{g['home_score']}` (Inning {g['inning']} - Outs: {g['outs']})")
             field_viz.markdown(print_ascii_diamond(g["bases"]), unsafe_allow_html=True)
+            
+            # Render live tracking dataframes instantly into box tabs while the simulation runs
+            away_box_display.dataframe(pd.DataFrame.from_dict(g["away_box"], orient="index"), use_container_width=True)
+            home_box_display.dataframe(pd.DataFrame.from_dict(g["home_box"], orient="index"), use_container_width=True)
             
             # Win Probability Calculation
             score_diff = g["away_score"] - g["home_score"]
