@@ -84,22 +84,35 @@ BALLPARK_MODIFIERS = {
 DEFAULT_BALLPARK = {"run_mult": 1.00, "hr_mult": 1.00, "desc": "Standard neutral environment active"}
 
 # ----------------------------------------------------
-# LIVE MLB REST API CACHE ENGINE
+# OPTIMIZED LIVE MLB REST API CACHE ENGINE
 # ----------------------------------------------------
 @st.cache_data(ttl=3600)
 def get_mlb_teams():
     url = "https://statsapi.mlb.com/api/v1/teams?sportId=1"
-    res = requests.get(url).json()
-    teams = {}
-    for team in res.get('teams', []):
-        if team.get('active', False) and team['name'] in TEAM_COLORS:
-            teams[team['name']] = team['id']
-    return dict(sorted(teams.items()))
+    try:
+        res = requests.get(url, timeout=5).json()
+        teams = {}
+        for team in res.get('teams', []):
+            if team.get('active', True):
+                teams[team['name']] = team['id']
+        return dict(sorted(teams.items()))
+    except:
+        fallback_teams = [
+            "Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox",
+            "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Guardians",
+            "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals",
+            "Los Angeles Angels", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers",
+            "Minnesota Twins", "New York Mets", "New York Yankees", "Oakland Athletics",
+            "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "San Francisco Giants",
+            "Seattle Mariners", "St. Louis Cardinals", "Tampa Bay Rays", "Texas Rangers",
+            "Toronto Blue Jays", "Washington Nationals"
+        ]
+        return {team: i for i, team in enumerate(fallback_teams)}
 
 try: live_teams = get_mlb_teams()
 except: live_teams = {}
 
-all_selectable_teams = sorted(list(live_teams.keys()) + list(RETRO_TEAMS.keys()))
+all_selectable_teams = sorted(list(set(list(live_teams.keys()) + list(RETRO_TEAMS.keys()))))
 
 @st.cache_data(ttl=3600)
 def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
@@ -107,7 +120,7 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
     players_list = []
     try:
         url = f"https://statsapi.mlb.com/api/v1/teams/{team_id}/roster?rosterType=Active&hydrate=person(stats(group=[{stat_group}],type=season,season=2026))"
-        res = requests.get(url).json()
+        res = requests.get(url, timeout=5).json()
         for member in res.get('roster', []):
             person = member.get('person', {})
             name = person.get('fullName', 'Unknown Player')
@@ -130,6 +143,13 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
                         "SO (K)": int(stat.get("strikeOuts", 0)), "IP": stat.get("inningsPitched", "0.0")
                     })
     except: pass
+    
+    if not players_list:
+        if stat_group == "hitting":
+            return pd.DataFrame([{"Player": f"Batter {i+1}", "Pos": "IF", "Bats": "R", "AVG": 0.260, "OPS": 0.750, "H": 10, "HR": 1, "RBI": 5, "BB": 3, "SO (K)": 8, "AB": 40} for i in range(9)])
+        else:
+            return pd.DataFrame([{"Player": "Starter Ace", "Pos": "SP", "Throws": "R", "ERA": 3.80, "WHIP": 1.25, "SO (K)": 45, "IP": "50.0"}])
+            
     return pd.DataFrame(players_list)
 
 # ----------------------------------------------------
@@ -147,10 +167,10 @@ if "final_reports" not in st.session_state:
 theme_host = RETRO_TEAMS.get(home_team, TEAM_COLORS.get(home_team, {"primary": "#1E1E1E", "secondary": "#777777"}))
 st.markdown(f"<style>h1, h2, h3, h4 {{ color: {theme_host['primary']}; }} .stButton>button {{ background-color: {theme_host['primary']} !important; color: white !important; }}</style>", unsafe_allow_html=True)
 
-away_hitter_raw = get_detailed_roster_stats(live_teams.get(away_team), away_team, "hitting")
-home_hitter_raw = get_detailed_roster_stats(live_teams.get(home_team), home_team, "hitting")
-away_pitcher_df = get_detailed_roster_stats(live_teams.get(away_team), away_team, "pitching")
-home_pitcher_df = get_detailed_roster_stats(live_teams.get(home_team), home_team, "pitching")
+away_hitter_raw = get_detailed_roster_stats(live_teams.get(away_team, 0), away_team, "hitting")
+home_hitter_raw = get_detailed_roster_stats(live_teams.get(home_team, 0), home_team, "hitting")
+away_pitcher_df = get_detailed_roster_stats(live_teams.get(away_team, 0), away_team, "pitching")
+home_pitcher_df = get_detailed_roster_stats(live_teams.get(home_team, 0), home_team, "pitching")
 
 st.subheader("📋 Team Lineup Card Management")
 l_col1, l_col2 = st.columns(2)
@@ -306,7 +326,6 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
     while g["inning"] <= 12 or (g["away_score"] == g["home_score"]):
         half_str = "Top" if g["top_half"] else "Bottom"
         
-        # Modern MLB Extra Inning Ghost Runner Logic
         if g["inning"] >= 10 and g["outs"] == 0 and g["bases"] == [None, None, None]:
             g["bases"][1] = "Ghost Runner"
             g["logs"].append("👻 **MLB Ghost Runner Rule Active:** Automated runner placed onto 2nd base.")
@@ -425,7 +444,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
     st.session_state["leveraged_game_state"] = None
 
 # ----------------------------------------------------
-# NEW UPGRADE: NARRATIVE GAME LOG ACCORDION
+# NARRATIVE GAME LOG ACCORDION
 # ----------------------------------------------------
 if st.session_state["final_reports"] is not None:
     fr = st.session_state["final_reports"]
@@ -433,7 +452,6 @@ if st.session_state["final_reports"] is not None:
     if "full_logs" in fr:
         st.markdown("---")
         with st.expander("📜 Complete Play-by-Play Game Narrative Log", expanded=True):
-            # Reverse logs so the absolute newest critical plays show at the top of the feed
             st.text_area("Game History Transcript Tracking", value="\n".join(reversed(fr["full_logs"])), height=250)
 
     st.markdown("---")
