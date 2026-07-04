@@ -15,7 +15,6 @@ def get_mlb_teams():
     response = requests.get(url).json()
     teams = {}
     for team in response.get('teams', []):
-        # Only pull actual major league teams
         if team.get('active', False):
             teams[team['name']] = team['id']
     return dict(sorted(teams.items()))
@@ -34,7 +33,6 @@ st.sidebar.header("Matchup Setup")
 away_team = st.sidebar.selectbox("Away Team (Visitor)", team_names, index=min(18, len(team_names)-1))
 home_team = st.sidebar.selectbox("Home Team (Host)", team_names, index=min(13, len(team_names)-1))
 
-# Sidebar custom configuration modifiers
 st.sidebar.markdown("---")
 st.sidebar.header("Advanced Analytics Overrides")
 away_modifier = st.sidebar.slider(f"{away_team} Rest/Form Modifier", -10, 10, 0)
@@ -45,7 +43,6 @@ home_modifier = st.sidebar.slider(f"{home_team} Rest/Form Modifier", -10, 10, 2)
 # ----------------------------------------------------
 @st.cache_data(ttl=3600)
 def get_team_win_pct(team_id):
-    # Pulls current season standings details
     url = f"https://statsapi.mlb.com/api/v1/standings?lgId=103,104&season=2026"
     try:
         res = requests.get(url).json()
@@ -55,20 +52,18 @@ def get_team_win_pct(team_id):
                     return float(team_record.get('winningPercentage', '.500'))
     except:
         pass
-    return 0.500  # Default even split fallback if season hasn't populated standings yet
+    return 0.500  # Default fallback
 
-# Fetch historical/live strength data points based on selections
 away_id = team_dict.get(away_team)
 home_id = team_dict.get(home_team)
 
 away_base_pct = get_team_win_pct(away_id) if away_id else 0.500
 home_base_pct = get_team_win_pct(home_id) if home_id else 0.500
 
-# Convert win percentages to a 100-point scale strength factor
+# Convert win percentages to strength factors
 away_strength = (away_base_pct * 100) + away_modifier
 home_strength = (home_base_pct * 100) + home_modifier
 
-# Compute analytical probability split
 total_strength = away_strength + home_strength
 away_prob = (away_strength / total_strength) * 100
 home_prob = (home_strength / total_strength) * 100
