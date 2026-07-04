@@ -173,10 +173,8 @@ if not st.session_state["lineups_locked"]:
     
     with col_a:
         st.markdown(f"### 📋 {away_team} Lineup Card")
-        # Pitcher selection drop
         away_sp_choice = st.selectbox(f"Choose Starting Pitcher ({away_team})", list(away_pitcher_raw["Player"]))
         
-        # 1-9 Batting selections
         away_batters = []
         default_top_away = away_hitters_pool.sort_values(by="OPS", ascending=False).head(9)["Player"].tolist()
         for slot in range(1, 10):
@@ -186,10 +184,8 @@ if not st.session_state["lineups_locked"]:
             
     with col_h:
         st.markdown(f"### 📋 {home_team} Lineup Card")
-        # Pitcher selection drop
         home_sp_choice = st.selectbox(f"Choose Starting Pitcher ({home_team})", list(home_pitcher_raw["Player"]))
         
-        # 1-9 Batting selections
         home_batters = []
         default_top_home = home_hitters_pool.sort_values(by="OPS", ascending=False).head(9)["Player"].tolist()
         for slot in range(1, 10):
@@ -199,11 +195,9 @@ if not st.session_state["lineups_locked"]:
 
     st.markdown("---")
     if st.button("🔒 Lock Rosters & Lineups", use_container_width=True):
-        # Build finalized objects into session memory
         a_sp_row = away_pitcher_raw[away_pitcher_raw["Player"] == away_sp_choice].iloc[0]
         h_sp_row = home_pitcher_raw[home_pitcher_raw["Player"] == home_sp_choice].iloc[0]
         
-        # Build 1-9 Lineup tracking metrics
         a_lineup = []
         for index, name in enumerate(away_batters):
             p_row = away_hitters_pool[away_hitters_pool["Player"] == name].iloc[0].to_dict()
@@ -220,33 +214,29 @@ if not st.session_state["lineups_locked"]:
         st.session_state["ready_home_sp"] = h_sp_row.to_dict()
         st.session_state["ready_away_lineup"] = pd.DataFrame(a_lineup)
         st.session_state["ready_home_lineup"] = pd.DataFrame(h_lineup)
-        st.session_state["away_bullpen_pool"] = home_pitcher_raw[home_pitcher_raw["Player"] != away_sp_choice]
-        st.session_state["home_bullpen_pool"] = home_pitcher_raw[home_pitcher_raw["Player"] != home_sp_choice]
         st.session_state["lineups_locked"] = True
-        st.sidebar.success("Lineups Secured!")
         st.rerun()
 
 else:
     # ----------------------------------------------------
-# MATCH ENVIRONMENT ACTIVE SIMULATION RUNNER
-# ----------------------------------------------------
+    # MATCH ENVIRONMENT ACTIVE SIMULATION RUNNER
+    # ----------------------------------------------------
     st.sidebar.button("🔓 Unlock & Reset Lineups", on_click=lambda: st.session_state.update({"lineups_locked": False, "game_active": False, "leveraged_game_state": None}))
     
-    # Extract persistent variables
     away_lineup_final = st.session_state["ready_away_lineup"]
     home_lineup_final = st.session_state["ready_home_lineup"]
     away_pitcher_active = st.session_state["ready_away_sp"]
     home_pitcher_active = st.session_state["ready_home_sp"]
     
-    st.subheader("🏟️ Matchup Active: Lineup Cards Locked & Loaded")
+    st.subheader("🏟 Honor Roll: Lineups Locked & Programmed")
     disp_l, disp_r = st.columns(2)
     with disp_l:
         st.markdown(f"##### {away_team}")
-        st.write(f"🥎 **Starting Pitcher:** `{away_pitcher_active['Player']}` (ERA: {away_pitcher_active['ERA']} | Throws: {away_pitcher_active['Throws']})")
+        st.write(f"🥎 **Starting Pitcher:** `{away_pitcher_active['Player']}` (ERA: {away_pitcher_active['ERA']})")
         st.dataframe(away_lineup_final[["Order", "Player", "Pos", "AVG", "OPS"]], use_container_width=True, hide_index=True)
     with disp_r:
         st.markdown(f"##### {home_team}")
-        st.write(f"🥎 **Starting Pitcher:** `{home_pitcher_active['Player']}` (ERA: {home_pitcher_active['ERA']} | Throws: {home_pitcher_active['Throws']})")
+        st.write(f"🥎 **Starting Pitcher:** `{home_pitcher_active['Player']}` (ERA: {home_pitcher_active['ERA']})")
         st.dataframe(home_lineup_final[["Order", "Player", "Pos", "AVG", "OPS"]], use_container_width=True, hide_index=True)
 
     st.markdown("---")
@@ -254,9 +244,9 @@ else:
     with m_col1:
         st.subheader("☀️ Weather Verification")
         if "weather" not in st.session_state:
-            st.session_state["weather"] = {"temp": 72, "speed": 5, "dir": "Neutral", "mult": 1.0}
+            st.session_state["weather"] = {"temp": 75, "speed": 4, "dir": "Out to Right Field 🚀", "mult": 1.04}
         w = st.session_state["weather"]
-        st.write(f"🌡️ **Game Environment Temp:** `{w['temp']}°F` | 💨 **Wind:** `{w['speed']} MPH {w['dir']}`")
+        st.write(f"🌡️ **Game Temperature:** `{w['temp']}°F` | 💨 **Wind:** `{w['speed']} MPH {w['dir']}`")
     with m_col2:
         st.subheader("🎲 Action Deck")
         if st.button("Launch Locked Game Simulation Framework", type="primary"):
@@ -269,8 +259,8 @@ else:
         if st.session_state["leveraged_game_state"] is None:
             st.session_state["leveraged_game_state"] = {
                 "inning": 1, "top_half": True, "away_score": 0, "home_score": 0,
-                "away_idx": 0, "home_idx": 0, "away_bf": 0, "home_bf": 0, "outs": 0,
-                "bases": [None, None, None], "logs": ["🏟️ Play Ball! Lineups Locked By User Request."],
+                "away_idx": 0, "home_idx": 0, "outs": 0,
+                "bases": [None, None, None], "logs": ["🏟️ Play Ball! Lineups locked."],
                 "away_box": {p: {"AB": 0, "H": 0, "HR": 0, "RBI": 0, "SO": 0} for p in away_lineup_final["Player"]},
                 "home_box": {p: {"AB": 0, "H": 0, "HR": 0, "RBI": 0, "SO": 0} for p in home_lineup_final["Player"]},
                 "current_away_p": f"{away_pitcher_active['Player']} (SP)", "current_away_era": float(away_pitcher_active['ERA']), "current_away_hand": str(away_pitcher_active['Throws']),
@@ -279,10 +269,10 @@ else:
             }
 
         g = st.session_state["leveraged_game_state"]
-        status_field = st.status("Simulating absolute live pitches across customized batting charts...", expanded=True)
+        status_field = st.status("Simulating full live data boards...", expanded=True)
         scoreboard = st.empty()
         
-        tab_view, tab_away, tab_home = st.tabs(["🏟️ Diamond Tracker", f"📊 {away_team} Stats", f"📊 {home_team} Stats"])
+        tab_view, tab_away, tab_home = st.tabs(["🏟️ Diamond Tracker", f"📊 {away_team} Box Score", f"📊 {home_team} Box Score"])
         with tab_view:
             f_col, g_col = st.columns([1, 1])
             with f_col: field_viz = st.empty()
@@ -314,27 +304,24 @@ else:
                     b_team = "away"
                     p_era = g["current_home_era"]
                     p_hand = g["current_home_hand"]
-                    g["home_bf"] += 1
                 else:
                     batter = home_lineup_final.iloc[g["home_idx"] % 9]
                     b_team = "home"
                     p_era = g["current_away_era"]
                     p_hand = g["current_away_hand"]
-                    g["away_bf"] += 1
 
-                # Sabermetric Pitch Formulation Calculations
                 plat_mult = 1.05 if batter["Bats"] != p_hand else 0.95
-                hit_p = batter["AVG"] * park_data["run_mult"] * plat_mult * (p_era / 4.2)
+                hit_p = batter["AVG"] * park_data["run_mult"] * plat_mult * (p_era / 4.1)
                 
-                if batter["Player"] not in g[f"{b_team}_box"]:
-                    g[f"{b_team}_box"][batter["Player"]] = {"AB": 0, "H": 0, "HR": 0, "RBI": 0, "SO": 0}
                 g[f"{b_team}_box"][batter["Player"]]["AB"] += 1
 
-                # Outcome Wheel Roll
+                # Matchup Simulation
                 if random.uniform(0, 1.0) <= hit_p:
-                    hr_chance = (batter["HR"] / max(1, batter["AB"])) * park_data["hr_mult"]
+                    hr_chance = (batter["HR"] / max(1, batter["AB"])) * park_data["hr_mult"] * w["mult"]
                     roll = random.uniform(0, 1)
+                    
                     if roll <= hr_chance:
+                        # HOME RUN LOGIC
                         runs = 1 + sum([1 for r in g["bases"] if r is not None])
                         g[f"{b_team}_box"][batter["Player"]]["HR"] += 1
                         g[f"{b_team}_box"][batter["Player"]]["H"] += 1
@@ -342,23 +329,43 @@ else:
                         if g["top_half"]: g["away_score"] += runs
                         else: g["home_score"] += runs
                         g["bases"] = [None, None, None]
-                        g["logs"].append(f"💥 **HR!** Slot #{batter['Order']} ({batter['Player']}) crushes a {runs}-run blast!")
-                    else:
+                        g["logs"].append(f"💥 **HR!** Slot #{batter['Order']} ({batter['Player']}) hits a `{runs}-run` bomb!")
+                    elif roll <= hr_chance + 0.18:
+                        # DOUBLE LOGIC
+                        runs = sum([1 for r in g["bases"][1:] if r is not None])
                         g[f"{b_team}_box"][batter["Player"]]["H"] += 1
-                        g["bases"][0] = batter["Player"]
-                        g["logs"].append(f"🏃 **Single!** Slot #{batter['Order']} ({batter['Player']}) drops a clean base hit.")
+                        g[f"{b_team}_box"][batter["Player"]]["RBI"] += runs
+                        if g["top_half"]: g["away_score"] += runs
+                        else: g["home_score"] += runs
+                        g["bases"][2] = g["bases"][0]; g["bases"][1] = batter["Player"]; g["bases"][0] = None
+                        g["logs"].append(f"⚾ **Double!** Slot #{batter['Order']} ({batter['Player']}) cracks one down the line.")
+                    else:
+                        # SINGLE LOGIC
+                        runs = 1 if g["bases"][2] else 0
+                        g[f"{b_team}_box"][batter["Player"]]["H"] += 1
+                        g[f"{b_team}_box"][batter["Player"]]["RBI"] += runs
+                        if g["top_half"]: g["away_score"] += runs
+                        else: g["home_score"] += runs
+                        g["bases"][2] = g["bases"][1]; g["bases"][1] = g["bases"][0]; g["bases"][0] = batter["Player"]
+                        g["logs"].append(f"🏃 **Single!** Slot #{batter['Order']} ({batter['Player']}) knocks a base hit.")
                 else:
+                    # OUT LOGIC
                     g["outs"] += 1
-                    g["logs"].append(f"🥎 *Out!* Slot #{batter['Order']} ({batter['Player']}) retires at first.")
+                    if random.uniform(0, 1) <= 0.28:
+                        g[f"{b_team}_box"][batter["Player"]]["SO"] += 1
+                        g["logs"].append(f"💨 *Strikeout!* Slot #{batter['Order']} ({batter['Player']}) strikes out looking.")
+                    else:
+                        g["logs"].append(f"🥎 *Out!* Slot #{batter['Order']} ({batter['Player']}) flies out.")
 
                 if g["top_half"]: g["away_idx"] += 1
                 else: g["home_idx"] += 1
 
-                # Display updates
+                # Update UI elements
                 scoreboard.markdown(f"### 🏟️ {away_team} `{g['away_score']}` @ {home_team} `{g['home_score']}` | Inning {g['inning']} ({half_str}) | Outs: {g['outs']}")
                 field_viz.markdown(print_ascii_diamond(g["bases"]), unsafe_allow_html=True)
                 ticker.markdown("\n\n".join(g["logs"][-3:]))
                 
+                # Render comprehensive box scores
                 away_box_display.dataframe(pd.DataFrame.from_dict(g["away_box"], orient="index"), use_container_width=True)
                 home_box_display.dataframe(pd.DataFrame.from_dict(g["home_box"], orient="index"), use_container_width=True)
                 time.sleep(0.04)
@@ -367,10 +374,14 @@ else:
             if g["top_half"]: g["top_half"] = False
             else: g["top_half"] = True; g["inning"] += 1
 
-        status_field.update(label="🏆 Framework Simulation Concluded Successfully!", state="complete")
-        if g["home_score"] > g["away_score"]: st.success(f"### 🏆 {home_team} Wins!")
-        else: st.info(f"### 🏆 {away_team} Wins!")
-        
+        status_field.update(label="🏆 Campaign Game Simulation Finalized!", state="complete")
+        if g["home_score"] > g["away_score"]: 
+            st.success(f"### 🏆 {home_team} Wins! {g['home_score']} - {g['away_score']}")
+            record_game_result(home_team, away_team)
+        else: 
+            st.info(f"### 🏆 {away_team} Wins! {g['away_score']} - {g['home_score']}")
+            record_game_result(away_team, home_team)
+            
         st.session_state["game_active"] = False
         st.session_state["final_reports"] = {"away": g["away_box"], "home": g["home_box"]}
         st.session_state["leveraged_game_state"] = None
