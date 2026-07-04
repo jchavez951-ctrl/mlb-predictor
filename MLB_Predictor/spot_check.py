@@ -202,8 +202,17 @@ if not st.session_state["lineups_locked"]:
         st.session_state["ready_home_lineup"] = pd.DataFrame([home_hitters_pool[home_hitters_pool["Player"] == name].iloc[0].to_dict() for name in home_batters])
         st.session_state["ready_home_lineup"]["Order"] = range(1, 10)
         
-        st.session_state["away_bullpen"] = away_pitcher_raw[away_pitcher_raw["Player"] != away_sp_choice].to_dict('records')
-        st.session_state["home_bullpen"] = home_pitcher_raw[home_pitcher_raw["Player"] != home_sp_choice].to_dict('records')
+        # Build bullpen list and append fallback relief pitchers if empty
+        away_bp = away_pitcher_raw[away_pitcher_raw["Player"] != away_sp_choice].to_dict('records')
+        home_bp = home_pitcher_raw[home_pitcher_raw["Player"] != home_sp_choice].to_dict('records')
+        
+        if not away_bp:
+            away_bp = [{"Player": f"Reliever {i}", "ERA": 3.80 + (i*0.2), "Pos": "RP"} for i in range(1, 5)]
+        if not home_bp:
+            home_bp = [{"Player": f"Reliever {i}", "ERA": 3.80 + (i*0.2), "Pos": "RP"} for i in range(1, 5)]
+            
+        st.session_state["away_bullpen"] = away_bp
+        st.session_state["home_bullpen"] = home_bp
         st.session_state["lineups_locked"] = True
         st.rerun()
 
@@ -282,16 +291,15 @@ else:
             while g["outs"] < 3:
                 if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
 
-                # Safe Bullpen Checks using .get() to completely prevent KeyErrors
                 away_bp_pool = st.session_state.get("away_bullpen", [])
                 home_bp_pool = st.session_state.get("home_bullpen", [])
 
-                # Manager AI: Bullpen Deployment & Fatigue Math
+                # Manager AI: Bullpen Deployment & Fatigue Hook Check
                 if g["top_half"]:
                     g["home_p_pitches"] += random.randint(3, 6)
-                    if g["home_p_pitches"] > 90 and g["home_p_type"] == "SP" and len(home_bp_pool) > 0:
-                        reliever = random.choice(home_bp_pool)
-                        g["home_p_name"] = reliever["Player"] + " (RP)"
+                    if g["home_p_pitches"] > 85 and len(home_bp_pool) > 0:
+                        reliever = home_bp_pool.pop(0)  # Call next available reliever
+                        g["home_p_name"] = reliever["Player"] if "RP" in reliever["Player"] else reliever["Player"] + " (RP)"
                         g["home_p_era"] = float(reliever["ERA"])
                         g["home_p_pitches"] = 0
                         g["home_p_type"] = "RP"
@@ -301,9 +309,9 @@ else:
                     b_team = "away"
                 else:
                     g["away_p_pitches"] += random.randint(3, 6)
-                    if g["away_p_pitches"] > 90 and g["away_p_type"] == "SP" and len(away_bp_pool) > 0:
-                        reliever = random.choice(away_bp_pool)
-                        g["away_p_name"] = reliever["Player"] + " (RP)"
+                    if g["away_p_pitches"] > 85 and len(away_bp_pool) > 0:
+                        reliever = away_bp_pool.pop(0)  # Call next available reliever
+                        g["away_p_name"] = reliever["Player"] if "RP" in reliever["Player"] else reliever["Player"] + " (RP)"
                         g["away_p_era"] = float(reliever["ERA"])
                         g["away_p_pitches"] = 0
                         g["away_p_type"] = "RP"
@@ -312,16 +320,15 @@ else:
                     batter = home_lineup_final.iloc[g["home_idx"] % 9]
                     b_team = "home"
 
-                # Apply Fatigue Multiplier to Pitcher ERA
-                fatigue_mult = 1.25 if p_pitches > 85 else 1.0
+                # Apply Fatigue Penalty to Pitcher ERA
+                fatigue_mult = 1.35 if (p_pitches > 75 and g["away_p_type"] == "SP") else 1.0
                 effective_era = p_era * fatigue_mult
 
-                # 1. BB / OBP Checklist
+                # Walk Generation Check
                 bb_chance = 0.08 * (effective_era / 4.0)
                 if random.uniform(0, 1) < bb_chance:
                     g[f"{b_team}_box"][batter["Player"]]["BB"] += 1
                     g["logs"].append(f"🟢 **Walk!** {batter['Player']} works a full-count base on balls.")
-                    # Base progression for walk
                     if g["bases"][0]:
                         if g["bases"][1]:
                             if g["bases"][2]:
@@ -332,7 +339,6 @@ else:
                         g["bases"][1] = g["bases"][0]
                     g["bases"][0] = batter["Player"]
                 else:
-                    # Player actually registers an official At-Bat
                     g[f"{b_team}_box"][batter["Player"]]["AB"] += 1
                     hit_p = batter["AVG"] * park_data["run_mult"] * (effective_era / 4.1)
 
@@ -350,9 +356,8 @@ else:
                             g["bases"] = [None, None, None]
                             g["logs"].append(f"💥 **HR!** {batter['Player']} absolute moonshot! `{runs}-run` home run!")
                         elif roll <= hr_chance + 0.22:
-                            # Accurate Double Progression Matrix
                             runs = sum([1 for r in g["bases"][1:] if r is not None])
-                            if g["bases"][0] and random.uniform(0, 1) < 0.45: # 45% runner from 1st scores
+                            if g["bases"][0] and random.uniform(0, 1) < 0.45:
                                 runs += 1
                                 g["bases"][0] = None
                             g[f"{b_team}_box"][batter["Player"]]["H"] += 1
@@ -362,10 +367,9 @@ else:
                             g["bases"][2] = g["bases"][0]; g["bases"][1] = batter["Player"]; g["bases"][0] = None
                             g["logs"].append(f"⚾ **Double!** {batter['Player']} rips a bullet into the gap.")
                         else:
-                            # Accurate Single Progression Matrix
                             runs = 1 if g["bases"][2] else 0
                             g["bases"][2] = None
-                            if g["bases"][1] and random.uniform(0, 1) < 0.60: # 60% runner from 2nd scores on single
+                            if g["bases"][1] and random.uniform(0, 1) < 0.60:
                                 runs += 1
                                 g["bases"][1] = None
                             g[f"{b_team}_box"][batter["Player"]]["H"] += 1
@@ -380,7 +384,6 @@ else:
                             g[f"{b_team}_box"][batter["Player"]]["SO"] += 1
                             g["logs"].append(f"💨 *Strikeout!* {batter['Player']} chasing high heat.")
                         else:
-                            # Sac Fly Check
                             if g["outs"] < 3 and g["bases"][2] and random.uniform(0, 1) < 0.10:
                                 if g["top_half"]: g["away_score"] += 1
                                 else: g["home_score"] += 1
@@ -393,7 +396,7 @@ else:
                 if g["top_half"]: g["away_idx"] += 1
                 else: g["home_idx"] += 1
 
-                # Update Display Cards
+                # Update Display Layout Metrics
                 scoreboard.markdown(f"### 🏟️ {away_team} `{g['away_score']}` @ {home_team} `{g['home_score']}` | Inning {g['inning']} ({half_str}) | Outs: {g['outs']}")
                 field_viz.markdown(print_ascii_diamond(g["bases"]), unsafe_allow_html=True)
                 
