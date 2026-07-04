@@ -19,6 +19,10 @@ if "leveraged_game_state" not in st.session_state:
     st.session_state["leveraged_game_state"] = None
 if "game_active" not in st.session_state:
     st.session_state["game_active"] = False
+if "away_bullpen" not in st.session_state:
+    st.session_state["away_bullpen"] = []
+if "home_bullpen" not in st.session_state:
+    st.session_state["home_bullpen"] = []
 
 def record_game_result(winner, loser):
     if winner not in st.session_state["standings"]: st.session_state["standings"][winner] = {"W": 0, "L": 0}
@@ -278,11 +282,15 @@ else:
             while g["outs"] < 3:
                 if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
 
+                # Safe Bullpen Checks using .get() to completely prevent KeyErrors
+                away_bp_pool = st.session_state.get("away_bullpen", [])
+                home_bp_pool = st.session_state.get("home_bullpen", [])
+
                 # Manager AI: Bullpen Deployment & Fatigue Math
                 if g["top_half"]:
                     g["home_p_pitches"] += random.randint(3, 6)
-                    if g["home_p_pitches"] > 90 and g["home_p_type"] == "SP" and len(st.session_state["home_bullpen"]) > 0:
-                        reliever = random.choice(st.session_state["home_bullpen"])
+                    if g["home_p_pitches"] > 90 and g["home_p_type"] == "SP" and len(home_bp_pool) > 0:
+                        reliever = random.choice(home_bp_pool)
                         g["home_p_name"] = reliever["Player"] + " (RP)"
                         g["home_p_era"] = float(reliever["ERA"])
                         g["home_p_pitches"] = 0
@@ -293,8 +301,8 @@ else:
                     b_team = "away"
                 else:
                     g["away_p_pitches"] += random.randint(3, 6)
-                    if g["away_p_pitches"] > 90 and g["away_p_type"] == "SP" and len(st.session_state["away_bullpen"]) > 0:
-                        reliever = random.choice(st.session_state["away_bullpen"])
+                    if g["away_p_pitches"] > 90 and g["away_p_type"] == "SP" and len(away_bp_pool) > 0:
+                        reliever = random.choice(away_bp_pool)
                         g["away_p_name"] = reliever["Player"] + " (RP)"
                         g["away_p_era"] = float(reliever["ERA"])
                         g["away_p_pitches"] = 0
