@@ -228,18 +228,16 @@ with m_col2:
 if sim_button or st.session_state["leveraged_game_state"] is not None:
     # Initialize game matrices if fresh launch
     if st.session_state["leveraged_game_state"] is None:
-        # Create DataFrames to track box scores
-        away_box = pd.DataFrame(index=away_selected_hitters["Player"], columns=["AB","H","HR","RBI","SO"])
-        away_box.fill(0, inplace=True)
-        home_box = pd.DataFrame(index=home_selected_hitters["Player"], columns=["AB","H","HR","RBI","SO"])
-        home_box.fill(0, inplace=True)
+        # Build pristine clean dictionary line data frameworks to avoid pandas attribute missing functions
+        away_box_init = {p: {"AB": 0, "H": 0, "HR": 0, "RBI": 0, "SO": 0} for p in away_selected_hitters["Player"]}
+        home_box_init = {p: {"AB": 0, "H": 0, "HR": 0, "RBI": 0, "SO": 0} for p in home_selected_hitters["Player"]}
         
         st.session_state["leveraged_game_state"] = {
             "inning": 1, "top_half": True, "away_score": 0, "home_score": 0,
             "away_idx": 0, "home_idx": 0, "away_bf": 0, "home_bf": 0, "outs": 0,
             "bases": [None, None, None], "logs": ["🏟️ Umpire signals play ball!"],
-            "away_box": away_box.to_dict(orient="index"),
-            "home_box": home_box.to_dict(orient="index"),
+            "away_box": away_box_init,
+            "home_box": home_box_init,
             "current_away_p": f"{away_starter_sel} (SP)", "current_away_era": away_sp_era, "current_away_hand": away_sp_hand,
             "current_home_p": f"{home_starter_sel} (SP)", "current_home_era": home_sp_era, "current_home_hand": home_sp_hand,
             "interrupted": False
@@ -299,9 +297,11 @@ if sim_button or st.session_state["leveraged_game_state"] is not None:
 
             # Active Roster selection
             if g["top_half"]:
+                if g["away_idx"] % len(away_selected_hitters) >= len(away_selected_hitters): g["away_idx"] = 0
                 batter = away_selected_hitters.iloc[g["away_idx"] % len(away_selected_hitters)]
                 b_team, p_era, p_hand = "away", g["current_home_era"], g["current_home_hand"]
             else:
+                if g["home_idx"] % len(home_selected_hitters) >= len(home_selected_hitters): g["home_idx"] = 0
                 batter = home_selected_hitters.iloc[g["home_idx"] % len(home_selected_hitters)]
                 b_team, p_era, p_hand = "home", g["current_away_era"], g["current_away_hand"]
 
@@ -309,6 +309,10 @@ if sim_button or st.session_state["leveraged_game_state"] is not None:
             plat_mult = 1.05 if batter["Bats"] != p_hand else 0.95
             hit_p = batter["AVG"] * park_data["run_mult"] * plat_mult * (p_era / 4.1)
             
+            # Populate safety keys dynamically if fallback lists are injected
+            if batter["Player"] not in g[f"{b_team}_box"]:
+                g[f"{b_team}_box"][batter["Player"]] = {"AB": 0, "H": 0, "HR": 0, "RBI": 0, "SO": 0}
+                
             g[f"{b_team}_box"][batter["Player"]]["AB"] += 1
 
             if random.uniform(0, 1.05) <= hit_p:
@@ -358,8 +362,7 @@ if sim_button or st.session_state["leveraged_game_state"] is not None:
         # Clear Inning Status markers
         g["outs"] = 0
         g["bases"] = [None, None, None]
-        if g["top_half"]:
-            g["top_half"] = False
+        if g["top_half"]: g["top_half"] = False
         else:
             g["top_half"] = True
             g["inning"] += 1
