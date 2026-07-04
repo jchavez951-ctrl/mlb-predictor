@@ -189,3 +189,119 @@ with col1:
     st.subheader("📊 Live Data Analysis Breakdown")
     st.metric(label=f"{away_team} Base Strength Index", value=f"{away_strength:.1f}", delta=f"Base Pct: {away_base_pct:.3f}")
     st.metric(label=f"{home_team} Base Strength Index", value=f"{home_strength:.1f}", delta=f"Base Pct: {home_base_pct:.3f}")
+    
+    st.markdown("### Team Season Stat Metrics")
+    stat_df = pd.DataFrame({
+        "Metric": ["Batting Avg (.AVG)", "On-Base + Slugging (.OPS)", "Total Home Runs (HR)"],
+        away_team: [f"{away_stats['avg']:.3f}", f"{away_stats['ops']:.3f}", away_stats['hr']],
+        home_team: [f"{home_stats['avg']:.3f}", f"{home_stats['ops']:.3f}", home_stats['hr']]
+    })
+    st.table(stat_df)
+
+    st.markdown("### Calculated Live Win Expectancy")
+    st.write(f"**{away_team}:** {away_prob:.1f}%")
+    st.progress(int(away_prob))
+    
+    st.write(f"**{home_team}:** {home_prob:.1f}%")
+    st.progress(int(home_prob))
+
+with col2:
+    st.subheader("🎲 Real-Time Simulator Engine")
+    st.write(f"Simulation Setup: **Best of {series_length} Series**" if series_length > 1 else "Simulating a Single Regular Season Game Matchup.")
+    
+    if st.button("Simulate Matchup Outcome"):
+        if series_length == 1:
+            roll = random.uniform(0, 100)
+            winner = home_team if roll <= home_prob else away_team
+            win_runs = random.randint(3, 8)
+            lose_runs = random.randint(0, max(0, win_runs - 1))
+            if win_runs == lose_runs: win_runs += 1
+                
+            st.balloons()
+            st.markdown("### 🏆 Simulated Boxscore Winner")
+            if winner == home_team:
+                st.success(f"**{home_team} take the victory at home!**")
+                st.subheader(f"Final Score: {home_team} **{win_runs}** - {lose_runs} {away_team}")
+            else:
+                st.info(f"**{away_team} secure the away upset!**")
+                st.subheader(f"Final Score: {away_team} **{win_runs}** - {lose_runs} {home_team}")
+                
+            # Render individual player predictions for single game mode
+            st.markdown("---")
+            st.markdown("### 📈 Projected Player Game Box Scores")
+            
+            p_away_box = project_player_box_score(away_player_df)
+            p_home_box = project_player_box_score(home_player_df)
+            
+            if not p_away_box.empty:
+                st.caption(f"**{away_team} Projected Stat Lines**")
+                st.dataframe(p_away_box.set_index("Player"), use_container_width=True)
+            if not p_home_box.empty:
+                st.caption(f"**{home_team} Projected Stat Lines**")
+                st.dataframe(p_home_box.set_index("Player"), use_container_width=True)
+                
+        else:
+            away_wins = 0
+            home_wins = 0
+            needed_to_win = (series_length // 2) + 1
+            game_history = []
+            
+            while away_wins < needed_to_win and home_wins < needed_to_win:
+                game_num = away_wins + home_wins + 1
+                roll = random.uniform(0, 100)
+                g_winner = home_team if roll <= home_prob else away_team
+                if g_winner == home_team:
+                    home_wins += 1
+                else:
+                    away_wins += 1
+                game_history.append(f"Game {game_num}: Winner is {g_winner} (Series Score: {away_team} {away_wins} - {home_wins} {home_team})")
+            
+            st.balloons()
+            st.markdown("### 🏆 Series Championship Report")
+            series_winner = home_team if home_wins == needed_to_win else away_team
+            
+            if series_winner == home_team:
+                st.success(f"**{home_team} wins the series {home_wins} games to {away_wins}!**")
+            else:
+                st.info(f"**{away_team} wins the series {away_wins} games to {home_wins}!**")
+                
+            st.markdown("#### Game-By-Game Breakdown:")
+            for log in game_history:
+                st.write(f"⚾ {log}")
+
+# ----------------------------------------------------
+# SEASON ROSTER MATRIX TRACKER
+# ----------------------------------------------------
+st.markdown("---")
+st.subheader("👤 Active Rosters & Individual Season Metrics")
+st.write("Reviewing current season stats for every active team member.")
+
+p_col1, p_col2 = st.columns(2)
+with p_col1:
+    st.markdown(f"#### {away_team} Full Roster")
+    if not away_player_df.empty:
+        st.dataframe(away_player_df.drop(columns=["AB"]).set_index("Player"), use_container_width=True)
+with p_col2:
+    st.markdown(f"#### {home_team} Full Roster")
+    if not home_player_df.empty:
+        st.dataframe(home_player_df.drop(columns=["AB"]).set_index("Player"), use_container_width=True)
+
+# ----------------------------------------------------
+# GRAPH VISUALIZATION SECTION
+# ----------------------------------------------------
+st.markdown("---")
+st.subheader("📈 Divisional Context Chart Tracker")
+st.write("See how your selected teams compare against rival win percentages inside their respective divisions.")
+
+away_div = all_records.get(away_id, {}).get("division")
+home_div = all_records.get(home_id, {}).get("division")
+
+chart_data = []
+for t_data in all_records.values():
+    if t_data["division"] in [away_div, home_div]:
+        chart_data.append({"Team": t_data["name"], "Win Pct": t_data["pct"]})
+
+if chart_data:
+    df = pd.DataFrame(chart_data)
+    chart_ready_df = df.pivot_table(index="Team", values="Win Pct")
+    st.bar_chart(chart_ready_df)
