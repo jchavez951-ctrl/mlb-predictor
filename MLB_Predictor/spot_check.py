@@ -58,7 +58,6 @@ except Exception as e:
 
 @st.cache_data(ttl=1800)
 def get_todays_schedule():
-    """Fetches real-world games scheduled for today's calendar date via MLB API"""
     try:
         url = "https://statsapi.mlb.com/api/v1/schedule?sportId=1"
         res = requests.get(url).json()
@@ -110,16 +109,6 @@ def get_detailed_roster_stats(team_id, stat_group="hitting"):
     if not players_list: return pd.DataFrame()
     df = pd.DataFrame(players_list)
     return df.sort_values(by="OPS" if stat_group == "hitting" else "SO (K)", ascending=False)
-
-@st.cache_data(ttl=3600)
-def get_team_season_stats(team_id):
-    try:
-        url = f"https://statsapi.mlb.com/api/v1/teams/{team_id}/stats?stats=season&group=hitting&season=2026"
-        res = requests.get(url).json()
-        splits = res.get('stats', [{}])[0].get('splits', [{}])[0].get('stat', {})
-        return {"avg": float(splits.get("avg", ".250")), "ops": float(splits.get("ops", ".720"))}
-    except:
-        return {"avg": 0.250, "ops": 0.720}
 
 # ----------------------------------------------------
 # MATCHUP INPUT SETUP (SIDEBAR)
@@ -176,5 +165,131 @@ with l_col2:
 away_selected_hitters = away_hitter_raw[away_hitter_raw["Player"].isin(away_lineup)] if away_lineup else away_hitter_raw.head(9)
 home_selected_hitters = home_hitter_raw[home_hitter_raw["Player"].isin(home_lineup)] if home_lineup else home_hitter_raw.head(9)
 
+# ---- FIXED LINE 179-180 TYPO ----
 away_sp_row = away_pitcher_df[away_pitcher_df["Player"] == away_starter_sel]
-home_sp_row = home
+home_sp_row = home_pitcher_df[home_pitcher_df["Player"] == home_starter_sel]
+
+away_sp_era = float(away_sp_row.iloc[0]["ERA"]) if not away_sp_row.empty else 4.20
+home_sp_era = float(home_sp_row.iloc[0]["ERA"]) if not home_sp_row.empty else 4.20
+away_sp_hand = str(away_sp_row.iloc[0]["Throws"]) if not away_sp_row.empty else "R"
+home_sp_hand = str(home_sp_row.iloc[0]["Throws"]) if not home_sp_row.empty else "R"
+
+# Calculate Live Multi-Variable Weight Modifiers
+park_data = BALLPARK_MODIFIERS.get(home_team, DEFAULT_BALLPARK)
+away_lineup_ops = away_selected_hitters["OPS"].mean() if not away_selected_hitters.empty else 0.720
+home_lineup_ops = home_selected_hitters["OPS"].mean() if not home_selected_hitters.empty else 0.720
+
+away_modifier = ((away_lineup_ops - 0.700) * 60) + (4.30 - home_sp_era) * 4
+home_modifier = ((home_lineup_ops - 0.700) * 60) + (4.30 - away_sp_era) * 4 + 2.2
+
+# Probability Balance Logic
+away_prob = max(10, min(90, 50 + away_modifier - home_modifier))
+home_prob = 100 - away_prob
+
+# ----------------------------------------------------
+# VISUAL MAIN DASHBOARD LAYOUT
+# ----------------------------------------------------
+st.markdown("---")
+m_col1, m_col2 = st.columns(2)
+
+with m_col1:
+    st.subheader("📊 Matchup Analytics & Venue Profile")
+    st.info(f"🏟️ **Ballpark Context:** {park_data['desc']}")
+    
+    st.write(f"💨 **{away_team} SP:** {away_starter_sel} (ERA: `{away_sp_era:.2f}`, Throws: `{away_sp_hand}`)")
+    st.write(f"🏠 **{home_team} SP:** {home_starter_sel} (ERA: `{home_sp_era:.2f}`, Throws: `{home_sp_hand}`)")
+    
+    st.markdown("### Match Win Expectancy Engine")
+    st.write(f"**{away_team}:** {away_prob:.1f}%")
+    st.progress(int(away_prob))
+    st.write(f"**{home_team}:** {home_prob:.1f}%")
+    st.progress(int(home_prob))
+
+with m_col2:
+    st.subheader("🎲 Game Simulation Engine")
+    
+    if st.button("Simulate Matchup Outcome"):
+        def sim_hr_logs(hitters_df, opp_pitcher_hand):
+            logs = []
+            if hitters_df.empty: return logs
+            for _, player in hitters_df.iterrows():
+                for _ in range(random.choice([4, 5])):
+                    plat_bonus = 1.05 if player["Bats"] != opp_pitcher_hand else 0.95
+                    if random.uniform(0, 1) <= (player["AVG"] * park_data["run_mult"] * plat_bonus):
+                        hr_chance = (player["HR"] / max(1, player["AB"])) * park_data["hr_mult"] * plat_bonus
+                        if random.uniform(0, 1) <= min(0.25, hr_chance):
+                            logs.append(player["Player"])
+            return logs
+
+        if series_length == 1:
+            winner = home_team if random.uniform(0, 100) <= home_prob else away_team
+            w_score = random.randint(max(1, int(3*park_data["run_mult"])), max(4, int(8*park_data["run_mult"])))
+            l_score = random.randint(0, max(0, w_score - 1))
+            if w_score == l_score: w_score += 1
+            
+            st.balloons()
+            st.markdown(f"### 🏆 Result: {winner} wins!")
+            if winner == home_team: st.success(f"Final: {home_team} **{w_score}** - {l_score} {away_team}")
+            else: st.info(f"Final: {away_team} **{w_score}** - {l_score} {home_team}")
+            
+            st.markdown("#### 💥 Home Run Highlights")
+            a_hrs = sim_hr_logs(away_selected_hitters, home_sp_hand)
+            with_team_a = [f"🚀 **{p}** ({away_team})" for p in a_hrs]
+            h_hrs = sim_hr_logs(home_selected_hitters, away_sp_hand)
+            with_team_h = [f"🚀 **{p}** ({home_team})" for p in h_hrs]
+            
+            total_hr_list = with_team_a + with_team_h
+            if total_hr_list:
+                for line in total_hr_list: st.write(line)
+            else: st.write("No longballs recorded in this simulation.")
+        else:
+            away_wins, home_wins, game_num = 0, 0, 1
+            series_hrs = []
+            while away_wins < (series_length//2+1) and home_wins < (series_length//2+1):
+                g_win = home_team if random.uniform(0, 100) <= home_prob else away_team
+                if g_win == home_team: home_wins += 1
+                else: away_wins += 1
+                
+                a_hrs = sim_hr_logs(away_selected_hitters, home_sp_hand)
+                h_hrs = sim_hr_logs(home_selected_hitters, away_sp_hand)
+                for p in a_hrs: series_hrs.append(f"Game {game_num}: 🚀 **{p}** ({away_team})")
+                for p in h_hrs: series_hrs.append(f"Game {game_num}: 🚀 **{p}** ({home_team})")
+                game_num += 1
+                
+            st.balloons()
+            if home_wins > away_wins: st.success(f"🏆 **{home_team} wins series {home_wins} to {away_wins}!**")
+            else: st.info(f"🏆 **{away_team} wins series {away_wins} to {home_wins}!**")
+            
+            st.markdown("#### 💥 Series Home Run Log (Top 8 entries)")
+            if series_hrs:
+                for log in series_hrs[:8]: st.write(log)
+            else: st.write("No longballs launched across the series stretch.")
+
+# ----------------------------------------------------
+# LIVE DAILY MLB SCHEDULE COMPONENT
+# ----------------------------------------------------
+st.markdown("---")
+st.subheader("📅 Real-World MLB Schedule Lookup Tracker")
+schedule_data = get_todays_schedule()
+if schedule_data:
+    sched_df = pd.DataFrame(schedule_data)
+    st.dataframe(sched_df.set_index("away"), use_container_width=True)
+else:
+    st.write("No active games or scheduling logs currently returned from the MLB server data grids today.")
+
+# ----------------------------------------------------
+# ACTIVE TEAM ROSTER METRIC MATRIX VIEWPORTS
+# ----------------------------------------------------
+st.markdown("---")
+st.subheader("👤 Active Selected Squad Statistics")
+stat_view = st.radio("Toggle Metric Layout Grid View:", ["Hitting Performance Columns", "Pitching Performance Columns"], horizontal=True)
+
+p_col1, p_col2 = st.columns(2)
+with p_col1:
+    st.markdown(f"#### {away_team} Strategy Ledger")
+    if "Hitting" in stat_view: st.dataframe(away_selected_hitters.set_index("Player"), use_container_width=True)
+    else: st.dataframe(away_pitcher_df.set_index("Player"), use_container_width=True)
+with p_col2:
+    st.markdown(f"#### {home_team} Strategy Ledger")
+    if "Hitting" in stat_view: st.dataframe(home_selected_hitters.set_index("Player"), use_container_width=True)
+    else: st.dataframe(home_pitcher_df.set_index("Player"), use_container_width=True)
