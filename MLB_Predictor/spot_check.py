@@ -5,7 +5,7 @@ import pandas as pd
 
 st.set_page_config(page_title="Live MLB Master Predictor", page_icon="⚾", layout="wide")
 st.title("⚾ Live MLB Ultimate Matchup & Stat Engine")
-st.write("Streaming granular team standing metrics, active pitching depth, and hitter leaderboards from the MLB API.")
+st.write("Streaming granular team standing metrics, active pitching depth, and home run projection tracking.")
 
 # ----------------------------------------------------
 # DATA SOURCE: Fetch active MLB teams
@@ -32,7 +32,6 @@ except Exception as e:
 # ----------------------------------------------------
 @st.cache_data(ttl=3600)
 def get_detailed_roster_stats(team_id, stat_group="hitting"):
-    """Fetches full team active roster and pulls either deep hitting or pitching seasonal stats."""
     players_list = []
     try:
         url = f"https://statsapi.mlb.com/api/v1/teams/{team_id}/roster?rosterType=Active&hydrate=person(stats(group=[{stat_group}],type=season,season=2026))"
@@ -155,6 +154,37 @@ total_strength = away_strength + home_strength
 away_prob = (away_strength / total_strength) * 100
 home_prob = (home_strength / total_strength) * 100
 
+# Fetch Hitting datasets for simulations
+away_hitter_df = get_detailed_roster_stats(away_id, "hitting") if away_id else pd.DataFrame()
+home_hitter_df = get_detailed_roster_stats(home_id, "hitting") if home_id else pd.DataFrame()
+
+# ----------------------------------------------------
+# ADVANCED GAME SIMULATION LOGIC (WITH PROJECTIONS)
+# ----------------------------------------------------
+def simulate_game_with_box_score(away_df, home_df, home_has_advantage):
+    """Simulates a game and returns text-logs of players who hit a home run."""
+    hr_hitters = []
+    
+    # Process away team hitting
+    if not away_df.empty:
+        for _, player in away_df.head(9).iterrows(): # Look at starting lineup
+            for _ in range(random.choice([4, 5])): # At bats
+                if random.uniform(0, 1) <= player["AVG"]: # It's a hit
+                    hr_chance = min(0.18, (player["HR"] / max(1, player["AB"])))
+                    if random.uniform(0, 1) <= hr_chance:
+                        hr_hitters.append(f"🚀 **{player['Player']}** ({away_team})")
+                        
+    # Process home team hitting
+    if not home_df.empty:
+        for _, player in home_df.head(9).iterrows():
+            for _ in range(random.choice([4, 5])):
+                if random.uniform(0, 1) <= player["AVG"]:
+                    hr_chance = min(0.18, (player["HR"] / max(1, player["AB"])))
+                    if random.uniform(0, 1) <= hr_chance:
+                        hr_hitters.append(f"🚀 **{player['Player']}** ({home_team})")
+                        
+    return hr_hitters
+
 # ----------------------------------------------------
 # INTERFACE DISPLAY LAYOUT
 # ----------------------------------------------------
@@ -198,10 +228,20 @@ with col2:
             else:
                 st.info(f"**{away_team} secure the away upset!**")
                 st.subheader(f"Final Score: {away_team} **{win_runs}** - {lose_runs} {home_team}")
+                
+            # Run HR Sim
+            hrs_logged = simulate_game_with_box_score(away_hitter_df, home_hitter_df, winner == home_team)
+            st.markdown("#### 💥 Simulated Home Run Highlights")
+            if hrs_logged:
+                for log in hrs_logged:
+                    st.write(log)
+            else:
+                st.write("Pitcher's duel! No home runs simulated in this matchup.")
         else:
             away_wins, home_wins = 0, 0
             needed_to_win = (series_length // 2) + 1
             game_history = []
+            all_series_hrs = []
             
             while away_wins < needed_to_win and home_wins < needed_to_win:
                 game_num = away_wins + home_wins + 1
@@ -212,6 +252,11 @@ with col2:
                     away_wins += 1
                     winner_name = away_team
                 game_history.append(f"Game {game_num}: Winner is {winner_name} (Series Score: {away_team} {away_wins} - {home_wins} {home_team})")
+                
+                # Check for series HRs
+                game_hrs = simulate_game_with_box_score(away_hitter_df, home_hitter_df, winner_name == home_team)
+                for h in game_hrs:
+                    all_series_hrs.append(f"Game {game_num}: {h}")
             
             st.balloons()
             st.markdown("### 🏆 Series Championship Report")
@@ -219,8 +264,17 @@ with col2:
                 st.success(f"**{home_team} wins the series {home_wins} games to {away_wins}!**")
             else:
                 st.info(f"**{away_team} wins the series {away_wins} games to {home_wins}!**")
+                
+            st.markdown("#### Game-By-Game Breakdown:")
             for log in game_history:
                 st.write(f"⚾ {log}")
+                
+            st.markdown("#### 💥 Series Home Run Logs")
+            if all_series_hrs:
+                for entry in all_series_hrs[:10]: # Cap to top 10 logs
+                    st.write(entry)
+            else:
+                st.write("No home runs were hit across this series.")
 
 # ----------------------------------------------------
 # LIVE ROSTER STAT TRACKER (WITH GROUP TOGGLE)
@@ -238,15 +292,10 @@ with p_col1:
     st.markdown(f"#### {away_team} Roster Leaderboard")
     if not away_player_df.empty:
         st.dataframe(away_player_df.set_index("Player"), use_container_width=True)
-    else:
-        st.caption("No corresponding statistics logged on the active roster tree.")
-
 with p_col2:
     st.markdown(f"#### {home_team} Roster Leaderboard")
     if not home_player_df.empty:
         st.dataframe(home_player_df.set_index("Player"), use_container_width=True)
-    else:
-        st.caption("No corresponding statistics logged on the active roster tree.")
 
 # ----------------------------------------------------
 # GRAPH VISUALIZATION SECTION
