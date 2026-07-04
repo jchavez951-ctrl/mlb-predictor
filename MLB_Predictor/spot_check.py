@@ -235,7 +235,7 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             "away_box": away_box_init, "home_box": home_box_init,
             "current_away_p": f"{away_starter_sel} (SP)", "current_away_era": away_sp_era, "current_away_hand": away_sp_hand,
             "current_home_p": f"{home_starter_sel} (SP)", "current_home_era": home_sp_era, "current_home_hand": home_sp_hand,
-            "interrupted": False, "bullpen_call": False, "chart_data": [{"Inning": "Start", f"{away_team} Win %": 50.0}]
+            "interrupted": False, "strategy_selected": False, "bullpen_call": False, "chart_data": [{"Inning": "Start", f"{away_team} Win %": 50.0}]
         }
 
     g = st.session_state["leveraged_game_state"]
@@ -259,14 +259,16 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
         d1, d2 = st.columns(2)
         with d1:
             if st.button("🔴 Strategic Safety: Pitch Around Corner"):
-                g["logs"].append("📋 *Manager Strategy:* Demanded safe approach mechanics.")
+                g["logs"].append("📋 *Manager Strategy:* Demanded safe pitch-around mechanics.")
                 g["interrupted"] = False
+                g["strategy_selected"] = True  # Flag that the event was resolved
                 st.session_state["leveraged_game_state"] = g
                 st.rerun()
         with d2:
             if st.button("🟢 Deep Attack: Swing Away/Full Max Volleys"):
-                g["logs"].append("📋 *Manager Strategy:* Approved maximum swinging velocity variables.")
+                g["logs"].append("📋 *Manager Strategy:* Approved maximum swinging aggression variables.")
                 g["interrupted"] = False
+                g["strategy_selected"] = True  # Flag that the event was resolved
                 st.session_state["leveraged_game_state"] = g
                 st.rerun()
         st.stop()
@@ -309,8 +311,8 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
             if not g["top_half"] and g["away_bf"] >= 15 and "SP" in g["current_away_p"]:
                 g["bullpen_call"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
 
-            # Dynamic Leverage Trigger Checks
-            if g["inning"] >= 7 and sum([1 for r in g["bases"] if r is not None]) >= 2 and g["outs"] >= 1 and not g.get("interrupted", False):
+            # Dynamic Leverage Trigger Checks (only check if strategy hasn't been chosen for this batter)
+            if g["inning"] >= 7 and sum([1 for r in g["bases"] if r is not None]) >= 2 and g["outs"] >= 1 and not g.get("strategy_selected", False):
                 g["interrupted"] = True; st.session_state["leveraged_game_state"] = g; st.rerun()
 
             if g["top_half"]:
@@ -319,7 +321,9 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                 g["home_bf"] += 1
             else:
                 batter = home_selected_hitters.iloc[g["home_idx"] % len(home_selected_hitters)]
-                b_team, p_era, p_hand = "home", g["current_away_era"], g["current_away_hand"]
+                b_team, p_era, p_hand = "home", g["current_away_p" if "SP" not in g["current_away_p"] else "current_away_era"], g["current_away_hand"]
+                # Safeguard matching variable types
+                p_era = g["current_away_era"]
                 g["away_bf"] += 1
 
             plat_mult = 1.05 if batter["Bats"] != p_hand else 0.95
@@ -362,6 +366,9 @@ if st.session_state["game_active"] or st.session_state["leveraged_game_state"] i
                     g["logs"].append(f"💨 *Strikeout!* {batter['Player']} down swinging.")
                 else:
                     g["logs"].append(f"🥎 *Out!* {batter['Player']} flies out.")
+
+            # Reset the strategy selection flag because the batter has completed their turn
+            g["strategy_selected"] = False
 
             if g["top_half"]: g["away_idx"] += 1
             else: g["home_idx"] += 1
