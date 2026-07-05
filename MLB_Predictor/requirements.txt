@@ -1,3 +1,5 @@
-yfinance
+streamlit
+pandas
 requests
+numpy
 matplotlib
