@@ -214,18 +214,20 @@ else:
     if sim_mode == "Multi-Game Postseason Series Simulator":
         series_length = st.selectbox("Series Format Scale", [3, 5, 7], index=1)
 
-    # SHARED CORE BASEBALL LOGIC FUNCTION WITH VEGAS MATRIX TRACKING DEFINED
+    # SHARED CORE BASEBALL LOGIC FUNCTION WITH VEGAS PITCHER TRACKING DEFINED
     def run_baseball_engine_iteration(g, weather_mult, park_data, home_team, away_team):
-        if not st.session_state["away_bullpen"]:
-            st.session_state["away_bullpen"] = [{"Player": f"Reliever A{i}", "ERA": 3.65 + (i*0.1), "Throws": random.choice(["R","L"]), "Pos": "RP"} for i in range(1, 6)]
-        if not st.session_state["home_bullpen"]:
-            st.session_state["home_bullpen"] = [{"Player": f"Reliever H{i}", "ERA": 3.65 + (i*0.1), "Throws": random.choice(["R","L"]), "Pos": "RP"} for i in range(1, 6)]
+        # FIX: Ensure bullpen array has defensive padding if real API lists are empty
+        if not g["away_bullpen_list"]:
+            g["away_bullpen_list"] = [{"Player": f"Reliever A{i}", "ERA": 3.65 + (i*0.1), "Throws": random.choice(["R","L"]), "Pos": "RP"} for i in range(1, 6)]
+        if not g["home_bullpen_list"]:
+            g["home_bullpen_list"] = [{"Player": f"Reliever H{i}", "ERA": 3.65 + (i*0.1), "Throws": random.choice(["R","L"]), "Pos": "RP"} for i in range(1, 6)]
 
         if g["top_half"]:
             g["home_p_pitches"] += random.randint(3, 6)
             is_high_leverage_closer_situation = (g["inning"] >= 9 and 1 <= (g["away_score"] - g["home_score"]) <= 3)
+            # FIX: Pull dynamically from localized engine tracker list instead of missing global state
             if (g["home_p_pitches"] > 85 or is_high_leverage_closer_situation) and g["home_p_type"] == "SP":
-                reliever = st.session_state["home_bullpen"].pop(0)
+                reliever = g["home_bullpen_list"].pop(0)
                 g["home_p_name"] = reliever["Player"]
                 g["home_p_era"] = float(reliever["ERA"])
                 g["home_p_throws"] = reliever.get("Throws", "R")
@@ -238,7 +240,7 @@ else:
             g["away_p_pitches"] += random.randint(3, 6)
             is_high_leverage_closer_situation = (g["inning"] >= 9 and 1 <= (g["home_score"] - g["away_score"]) <= 3)
             if (g["away_p_pitches"] > 85 or is_high_leverage_closer_situation) and g["away_p_type"] == "SP":
-                reliever = st.session_state["away_bullpen"].pop(0)
+                reliever = g["away_bullpen_list"].pop(0)
                 g["away_p_name"] = reliever["Player"]
                 g["away_p_era"] = float(reliever["ERA"])
                 g["away_p_throws"] = reliever.get("Throws", "R")
@@ -315,31 +317,28 @@ else:
                 else:
                     g["logs"].append(f"🥎 *Out!* {batter['Player']} retired.")
 
-        # Recalculate DraftKings Daily Fantasy metrics inside the active state vector loop
         b_stats = g[f"{b_team}_box"][batter["Player"]]
-        b_stats["DK_PTS"] = (3 * b_stats["1B"]) + (5 * b_stats["2B"]) + (10 * b_stats["HR"]) + (2 * b_stats["RBI"]) + (2 * b_stats["BB"]) #
-        b_stats["HRR_VAL"] = b_stats["H"] + b_stats["RBI"] # Hits + Runs + RBIs total tracking
+        b_stats["DK_PTS"] = (3 * b_stats["1B"]) + (5 * b_stats["2B"]) + (10 * b_stats["HR"]) + (2 * b_stats["RBI"]) + (2 * b_stats["BB"])
+        b_stats["HRR_VAL"] = b_stats["H"] + b_stats["RBI"]
 
         if g["top_half"]: g["away_idx"] += 1
         else: g["home_idx"] += 1
 
-    # HELPER GENERATOR: Creates the styled Heatmap matrix structure corresponding to image.png
+    # FIXED: Re-engineered styling engine to resolve Streamlit Arrow rendering crash
     def render_vegas_projection_matrix(box_data, title):
-        st.markdown(f"### 🔮 {title} Vegas Analytics Grid (Referencing image.png mapping)")
+        st.markdown(f"### 🔮 {title} Vegas Analytics Grid")
         rows = []
         for p_name, s in box_data.items():
-            # Create a mock prop line profile matching image.png parameters
             hrr_line = 1.5 if s.get("HR", 0) == 0 else 2.5
             hrr_val = s.get("HRR_VAL", 0.0)
             dk_pts = s.get("DK_PTS", 0.0)
             
-            # Map analytical equations
             heat = round(60.0 + (s.get("HR", 0) * 15) + (s.get("H", 0) * 5), 2)
             chance = round(40.0 + (50.0 if hrr_val >= hrr_line else 10.0 * hrr_val), 2)
             rating = round(70.0 + dk_pts * 4, 2)
             g_rating = round(rating * 1.8, 1)
             dk_salary = s.get("DK_SALARY", random.randint(4000, 6200))
-            s["DK_SALARY"] = dk_salary # lock salary field value
+            s["DK_SALARY"] = dk_salary
             
             rows.append({
                 "PLAYER": p_name,
@@ -347,19 +346,16 @@ else:
                 "HRR LINE": hrr_line,
                 "HRR VAL": hrr_val,
                 "DK POINTS": dk_pts,
-                "DK SALARY": f"${dk_salary}",
+                "DK SALARY": dk_salary,
                 "CHANCE %": min(100.0, chance),
                 "RATING": rating,
                 "G RATING": g_rating
             })
             
         df = pd.DataFrame(rows)
-        # Apply explicit conditional cell color scales mimicking the visual aesthetics of image.png
-        st.dataframe(
-            df.style.background_gradient(cmap="RdYlGn", subset=["HEAT", "HRR VAL", "CHANCE %", "RATING", "G RATING"]),
-            use_container_width=True,
-            hide_index=True
-        )
+        # FIX: Directly render style context layer to bypass standard Arrow frame marshaling crash
+        styled_df = df.style.background_gradient(cmap="RdYlGn", subset=["HEAT", "HRR VAL", "CHANCE %", "RATING", "G RATING"]).format({"DK SALARY": "${:.0f}"})
+        st.dataframe(styled_df, use_container_width=True, hide_index=True)
 
     # ----------------------------------------------------
     # MODE A: SINGLE GRAPHIC INTERACTIVE MODE
@@ -371,7 +367,6 @@ else:
 
         if st.session_state["game_active"] or st.session_state["leveraged_game_state"] is not None:
             if st.session_state["leveraged_game_state"] is None:
-                # Seed baseline profiles
                 st.session_state["leveraged_game_state"] = {
                     "inning": 1, "top_half": True, "away_score": 0, "home_score": 0,
                     "away_hits": 0, "home_hits": 0, "away_errors": 0, "home_errors": 0,
@@ -381,7 +376,9 @@ else:
                     "away_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0} for p in away_lineup_final["Player"]},
                     "home_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0} for p in home_lineup_final["Player"]},
                     "away_p_name": away_pitcher_active['Player'], "away_p_era": float(away_pitcher_active['ERA']), "away_p_pitches": 0, "away_p_type": "SP", "away_p_throws": away_pitcher_active.get("Throws", "R"),
-                    "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP", "home_p_throws": home_pitcher_active.get("Throws", "R")
+                    "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP", "home_p_throws": home_pitcher_active.get("Throws", "R"),
+                    "away_bullpen_list": list(st.session_state["away_bullpen"]),
+                    "home_bullpen_list": list(st.session_state["home_bullpen"])
                 }
 
             g = st.session_state["leveraged_game_state"]
@@ -411,7 +408,6 @@ else:
                     if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
                     run_baseball_engine_iteration(g, 1.02, park_data, home_team, away_team)
 
-                    # Dynamic HTML Scoreboard Render Loop
                     inn_headers = "".join([f"<th style='padding:6px; border:1px solid #444; width:25px;'>{i+1}</th>" for i in range(max(9, g['inning']))])
                     def build_row_cells(team_key):
                         cells = ""
@@ -449,11 +445,9 @@ else:
                     staff_viz.markdown(f"**Inning:** `{half_str} {g['inning']}` | **Outs:** `{g['outs']}`\n\n`{g['away_p_name']}` Pitches: `{g['away_p_pitches']}`\n\n`{g['home_p_name']}` Pitches: `{g['home_p_pitches']}`")
                     ticker.markdown("\n\n".join(g["logs"][-3:]))
                     
-                    # Update Box views
                     away_box_display.dataframe(pd.DataFrame.from_dict(g["away_box"], orient="index"))
                     home_box_display.dataframe(pd.DataFrame.from_dict(g["home_box"], orient="index"))
                     
-                    # Live Update Heatmap matrices matching image.png specifications
                     with tab_vegas:
                         render_vegas_projection_matrix(g["away_box"], away_team)
                         render_vegas_projection_matrix(g["home_box"], home_team)
@@ -477,7 +471,6 @@ else:
             away_series_wins, home_series_wins, game_number = 0, 0, 1
             needed_wins = (series_length // 2) + 1
             
-            # Aggregate long term tracking registers to calculate hit percentage odds
             series_away_box = {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0} for p in away_lineup_final["Player"]}
             series_home_box = {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0} for p in home_lineup_final["Player"]}
             
@@ -488,7 +481,9 @@ else:
                     "away_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0} for p in away_lineup_final["Player"]},
                     "home_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0} for p in home_lineup_final["Player"]},
                     "away_p_name": away_pitcher_active['Player'], "away_p_era": float(away_pitcher_active['ERA']), "away_p_pitches": 0, "away_p_type": "SP",
-                    "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP"
+                    "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP",
+                    "away_bullpen_list": list(st.session_state["away_bullpen"]),
+                    "home_bullpen_list": list(st.session_state["home_bullpen"])
                 }
                 park_data = BALLPARK_MODIFIERS.get(home_team, DEFAULT_BALLPARK)
                 
@@ -500,7 +495,6 @@ else:
                     bg["top_half"] = not bg["top_half"]
                     if bg["top_half"]: bg["inning"] += 1
                 
-                # Combine values over the series run
                 for p in series_away_box:
                     for key in ["H","RBI","DK_PTS","HRR_VAL"]: series_away_box[p][key] += bg["away_box"][p][key]
                 for p in series_home_box:
@@ -510,7 +504,6 @@ else:
                 else: away_series_wins += 1
                 game_number += 1
             
-            # Post-series normalized projection matrix outputs
             st.info(f"### Playoffs Series Concluded. Displaying Series Projections Grid")
             render_vegas_projection_matrix(series_away_box, f"{away_team} Accumulated Series Stats")
             render_vegas_projection_matrix(series_home_box, f"{home_team} Accumulated Series Stats")
