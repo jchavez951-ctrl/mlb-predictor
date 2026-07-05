@@ -69,21 +69,24 @@ RETRO_TEAMS = {
 }
 
 TEAM_COLORS = {
-    "New York Mets": {"primary": "#002D72", "secondary": "#FF5910", "runs_scored": 725, "runs_allowed": 710},
-    "Los Angeles Angels": {"primary": "#BA0021", "secondary": "#003263", "runs_scored": 690, "runs_allowed": 760},
-    "New York Yankees": {"primary": "#0C2340", "secondary": "#C4CED4", "runs_scored": 815, "runs_allowed": 705},
-    "Boston Red Sox": {"primary": "#BD3039", "secondary": "#0C2340", "runs_scored": 780, "runs_allowed": 740},
-    "Los Angeles Dodgers": {"primary": "#005A9C", "secondary": "#A5ACAF", "runs_scored": 840, "runs_allowed": 680},
-    "Chicago Cubs": {"primary": "#0E3386", "secondary": "#CC3433", "runs_scored": 730, "runs_allowed": 720},
-    "San Francisco Giants": {"primary": "#FD5A1E", "secondary": "#27251F", "runs_scored": 695, "runs_allowed": 735},
-    "San Diego Padres": {"primary": "#2F241D", "secondary": "#FFC425", "runs_scored": 770, "runs_allowed": 700}
+    "New York Mets": {"primary": "#002D72", "secondary": "#FF5910"},
+    "Los Angeles Angels": {"primary": "#BA0021", "secondary": "#003263"},
+    "New York Yankees": {"primary": "#0C2340", "secondary": "#C4CED4"},
+    "Boston Red Sox": {"primary": "#BD3039", "secondary": "#0C2340"},
+    "Los Angeles Dodgers": {"primary": "#005A9C", "secondary": "#A5ACAF"},
+    "Chicago Cubs": {"primary": "#0E3386", "secondary": "#CC3433"},
+    "San Francisco Giants": {"primary": "#FD5A1E", "secondary": "#27251F"},
+    "San Diego Padres": {"primary": "#2F241D", "secondary": "#FFC425"},
+    "Detroit Tigers": {"primary": "#0C2340", "secondary": "#FA4616"},
+    "Texas Rangers": {"primary": "#003274", "secondary": "#C0111F"}
 }
 
 BALLPARK_MODIFIERS = {
-    "San Diego Padres": {"run_mult": 0.93, "hr_mult": 0.85, "desc": "Petco Park - Coastal deep dimensions limit scoring"},
-    "Los Angeles Dodgers": {"run_mult": 1.02, "hr_mult": 1.08, "desc": "Dodger Stadium - Neutral setup favoring power carries"},
+    "San Diego Padres": {"run_mult": 0.93, "hr_mult": 0.85, "desc": "Petco Park - Coastal dimensions limit scoring"},
+    "Los Angeles Dodgers": {"run_mult": 1.02, "hr_mult": 1.08, "desc": "Dodger Stadium - Favors power carries"},
     "1927 New York Yankees": {"run_mult": 1.05, "hr_mult": 1.02, "desc": "Yankee Stadium I - Short right field tracking lines"},
-    "2004 Boston Red Sox": {"run_mult": 1.08, "hr_mult": 1.02, "desc": "Fenway Park - Green Monster wall factors"}
+    "2004 Boston Red Sox": {"run_mult": 1.08, "hr_mult": 1.02, "desc": "Fenway Park - Green Monster wall factors"},
+    "Texas Rangers": {"run_mult": 1.04, "hr_mult": 1.06, "desc": "Globe Life Field - Variable roof thermodynamics"}
 }
 DEFAULT_BALLPARK = {"run_mult": 1.00, "hr_mult": 1.00, "desc": "Standard neutral environment active"}
 
@@ -97,7 +100,7 @@ def get_mlb_teams():
             if team.get('active', True): teams[team['name']] = team['id']
         return dict(sorted(teams.items()))
     except:
-        return {"1927 New York Yankees": 1, "2004 Boston Red Sox": 2, "New York Yankees": 3, "Boston Red Sox": 4, "Los Angeles Dodgers": 5, "San Diego Padres": 6}
+        return {"1927 New York Yankees": 1, "2004 Boston Red Sox": 2, "Detroit Tigers": 3, "Texas Rangers": 4}
 
 live_teams = get_mlb_teams()
 all_selectable_teams = sorted(list(set(list(live_teams.keys()) + list(RETRO_TEAMS.keys()))))
@@ -133,15 +136,15 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
     except: pass
     if not players_list:
         if stat_group == "hitting":
-            return pd.DataFrame([{"Player": f"Player {i+1}", "Pos": "OF", "Bats": random.choice(["R","L"]), "AVG": 0.265, "OPS": 0.780, "HR": 12, "AB": 350} for i in range(12)])
+            return pd.DataFrame([{"Player": f"Batter {i+1}", "Pos": "OF", "Bats": random.choice(["R","L"]), "AVG": 0.260, "OPS": 0.750, "HR": random.randint(0,20), "AB": 300} for i in range(12)])
         else:
-            return pd.DataFrame([{"Player": f"Pitcher {i+1}", "Pos": random.choice(["SP","RP"]), "Throws": random.choice(["R","L"]), "ERA": 3.80, "WHIP": 1.25, "SO (K)": 85, "IP": "90.0"} for i in range(7)])
+            return pd.DataFrame([{"Player": f"Pitcher {i+1}", "Pos": random.choice(["SP","RP"]), "Throws": random.choice(["R","L"]), "ERA": 4.10, "WHIP": 1.28, "SO (K)": 70, "IP": "80.0"} for i in range(7)])
     return pd.DataFrame(players_list)
 
 # ----------------------------------------------------
 # MATCHUP PANEL INTERFACE
 # ----------------------------------------------------
-st.sidebar.header("⚾ Custom Franchise Matchup")
+st.sidebar.header("⚾ Franchise Matchup Selector")
 away_team = st.sidebar.selectbox("Away Team (Visitor)", all_selectable_teams, index=0, disabled=st.session_state["lineups_locked"])
 home_team = st.sidebar.selectbox("Home Team (Host)", all_selectable_teams, index=min(1, len(all_selectable_teams)-1), disabled=st.session_state["lineups_locked"])
 
@@ -149,7 +152,7 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("🕹️ Simulation Controllers")
 sim_speed = st.sidebar.slider("Engine Frame Delay (Seconds)", 0.00, 0.40, 0.03, step=0.01)
 
-theme_host = RETRO_TEAMS.get(home_team, TEAM_COLORS.get(home_team, {"primary": "#002D72", "secondary": "#FF5910"}))
+theme_host = RETRO_TEAMS.get(home_team, TEAM_COLORS.get(home_team, {"primary": "#003274", "secondary": "#C0111F"}))
 st.markdown(f"<style>h1, h2, h3, h4 {{ color: {theme_host['primary']}; }} .stButton>button {{ background-color: {theme_host['primary']} !important; color: white !important; }}</style>", unsafe_allow_html=True)
 
 away_hitter_raw = get_detailed_roster_stats(live_teams.get(away_team, 0), away_team, "hitting")
@@ -164,7 +167,7 @@ home_hitters_pool = home_hitter_raw[~home_hitter_raw["Pos"].isin(["SP", "RP", "P
 # VISUAL MANAGERS CORNER: LINEUP EDITOR
 # ----------------------------------------------------
 if not st.session_state["lineups_locked"]:
-    st.subheader("🛠️ Strategy Room: Customize Batting Orders & Starting Pitchers")
+    st.subheader("🛠️ Strategy Room: Customize Orders & Pitchers")
     col_a, col_h = st.columns(2)
     with col_a:
         st.markdown(f"### 📋 {away_team}")
@@ -200,7 +203,7 @@ if not st.session_state["lineups_locked"]:
         st.rerun()
 
 else:
-    st.sidebar.button("🔓 Unlock & Reset Configurations", on_click=lambda: st.session_state.update({"lineups_locked": False, "game_active": False, "leveraged_game_state": None}))
+    st.sidebar.button("🔓 Unlock & Reset Lineups", on_click=lambda: st.session_state.update({"lineups_locked": False, "game_active": False, "leveraged_game_state": None}))
     
     away_lineup_final = st.session_state["ready_away_lineup"]
     home_lineup_final = st.session_state["ready_home_lineup"]
@@ -214,25 +217,26 @@ else:
     if sim_mode == "Multi-Game Postseason Series Simulator":
         series_length = st.selectbox("Series Format Scale", [3, 5, 7], index=1)
 
-    # SHARED CORE BASEBALL LOGIC FUNCTION WITH VEGAS PITCHER TRACKING DEFINED
+    # ----------------------------------------------------
+    # CORE SIMULATION ENGINE VECTOR
+    # ----------------------------------------------------
     def run_baseball_engine_iteration(g, weather_mult, park_data, home_team, away_team):
-        # FIX: Ensure bullpen array has defensive padding if real API lists are empty
-        if not g["away_bullpen_list"]:
-            g["away_bullpen_list"] = [{"Player": f"Reliever A{i}", "ERA": 3.65 + (i*0.1), "Throws": random.choice(["R","L"]), "Pos": "RP"} for i in range(1, 6)]
-        if not g["home_bullpen_list"]:
-            g["home_bullpen_list"] = [{"Player": f"Reliever H{i}", "ERA": 3.65 + (i*0.1), "Throws": random.choice(["R","L"]), "Pos": "RP"} for i in range(1, 6)]
+        if not g.get("away_bullpen_list"):
+            g["away_bullpen_list"] = [{"Player": f"Reliever A{i}", "ERA": 4.00, "Throws": "R", "Pos": "RP"} for i in range(5)]
+        if not g.get("home_bullpen_list"):
+            g["home_bullpen_list"] = [{"Player": f"Reliever H{i}", "ERA": 4.00, "Throws": "R", "Pos": "RP"} for i in range(5)]
 
         if g["top_half"]:
             g["home_p_pitches"] += random.randint(3, 6)
             is_high_leverage_closer_situation = (g["inning"] >= 9 and 1 <= (g["away_score"] - g["home_score"]) <= 3)
-            # FIX: Pull dynamically from localized engine tracker list instead of missing global state
             if (g["home_p_pitches"] > 85 or is_high_leverage_closer_situation) and g["home_p_type"] == "SP":
-                reliever = g["home_bullpen_list"].pop(0)
-                g["home_p_name"] = reliever["Player"]
-                g["home_p_era"] = float(reliever["ERA"])
-                g["home_p_throws"] = reliever.get("Throws", "R")
-                g["home_p_pitches"] = 0
-                g["home_p_type"] = "RP"
+                if len(g["home_bullpen_list"]) > 0:
+                    reliever = g["home_bullpen_list"].pop(0)
+                    g["home_p_name"] = reliever["Player"]
+                    g["home_p_era"] = float(reliever["ERA"])
+                    g["home_p_throws"] = reliever.get("Throws", "R")
+                    g["home_p_pitches"] = 0
+                    g["home_p_type"] = "RP"
             p_name, p_era, p_pitches, p_throws = g["home_p_name"], g["home_p_era"], g["home_p_pitches"], g.get("home_p_throws", "R")
             batter = away_lineup_final.iloc[g["away_idx"] % 9]
             b_team, opp_team = "away", "home"
@@ -240,12 +244,13 @@ else:
             g["away_p_pitches"] += random.randint(3, 6)
             is_high_leverage_closer_situation = (g["inning"] >= 9 and 1 <= (g["home_score"] - g["away_score"]) <= 3)
             if (g["away_p_pitches"] > 85 or is_high_leverage_closer_situation) and g["away_p_type"] == "SP":
-                reliever = g["away_bullpen_list"].pop(0)
-                g["away_p_name"] = reliever["Player"]
-                g["away_p_era"] = float(reliever["ERA"])
-                g["away_p_throws"] = reliever.get("Throws", "R")
-                g["away_p_pitches"] = 0
-                g["away_p_type"] = "RP"
+                if len(g["away_bullpen_list"]) > 0:
+                    reliever = g["away_bullpen_list"].pop(0)
+                    g["away_p_name"] = reliever["Player"]
+                    g["away_p_era"] = float(reliever["ERA"])
+                    g["away_p_throws"] = reliever.get("Throws", "R")
+                    g["away_p_pitches"] = 0
+                    g["away_p_type"] = "RP"
             p_name, p_era, p_pitches, p_throws = g["away_p_name"], g["away_p_era"], g["away_p_pitches"], g.get("away_p_throws", "R")
             batter = home_lineup_final.iloc[g["home_idx"] % 9]
             b_team, opp_team = "home", "away"
@@ -256,12 +261,12 @@ else:
         elif b_bats == "R" and p_throws == "R": platoon_modifier = 0.94
         elif (b_bats == "L" and p_throws == "R") or (b_bats == "R" and p_throws == "L"): platoon_modifier = 1.08
 
-        effective_era = p_era * (1.30 if (p_pitches > 75 and g[f"{opp_team}_p_type"] == "SP") else 1.0)
+        effective_era = p_era * (1.25 if (p_pitches > 80 and g[f"{opp_team}_p_type"] == "SP") else 1.0)
         
         bb_chance = 0.08 * (effective_era / 4.0)
         if random.uniform(0, 1) < bb_chance:
             g[f"{b_team}_box"][batter["Player"]]["BB"] += 1
-            g["logs"].append(f"🟢 **Walk!** {batter['Player']} displays selective eye.")
+            g["logs"].append(f"🟢 **Walk!** {batter['Player']} draws a walk.")
             if g["bases"][0]:
                 if g["bases"][1]:
                     if g["bases"][2]:
@@ -288,7 +293,7 @@ else:
                     g[f"{b_team}_score"] += runs
                     g["line_score"][b_team][g["inning"]-1] = g["line_score"][b_team].get(g["inning"]-1, 0) + runs
                     g["bases"] = [None, None, None]
-                    g["logs"].append(f"💥 **CRUSHED!** {batter['Player']} hits a `{runs}-run` Home Run!")
+                    g["logs"].append(f"💥 **HR!** {batter['Player']} hits a `{runs}-run` home run!")
                 elif roll <= hr_chance + 0.22:
                     runs = sum([1 for r in g["bases"][1:] if r is not None])
                     if g["bases"][0] and random.uniform(0, 1) < 0.50: runs += 1; g["bases"][0] = None
@@ -298,7 +303,7 @@ else:
                     g[f"{b_team}_score"] += runs
                     g["line_score"][b_team][g["inning"]-1] = g["line_score"][b_team].get(g["inning"]-1, 0) + runs
                     g["bases"][2] = g["bases"][0]; g["bases"][1] = batter["Player"]; g["bases"][0] = None
-                    g["logs"].append(f"⚾ **Double!** {batter['Player']} down the line.")
+                    g["logs"].append(f"⚾ **Double!** {batter['Player']} hits a double.")
                 else:
                     runs = 1 if g["bases"][2] else 0
                     g["bases"][2] = None
@@ -309,13 +314,13 @@ else:
                     g[f"{b_team}_score"] += runs
                     g["line_score"][b_team][g["inning"]-1] = g["line_score"][b_team].get(g["inning"]-1, 0) + runs
                     g["bases"][2] = g["bases"][1]; g["bases"][1] = g["bases"][0]; g["bases"][0] = batter["Player"]
-                    g["logs"].append(f"🏃 **Base Hit!** {batter['Player']} with a single.")
+                    g["logs"].append(f"🏃 **Base Hit!** {batter['Player']} hits a single.")
             else:
                 g["outs"] += 1
                 if random.uniform(0, 1) <= 0.24:
-                    g["logs"].append(f"💨 *Strikeout!* {batter['Player']} swings and misses.")
+                    g["logs"].append(f"💨 *Strikeout!* {batter['Player']} strikes out.")
                 else:
-                    g["logs"].append(f"🥎 *Out!* {batter['Player']} retired.")
+                    g["logs"].append(f"🥎 *Out!* {batter['Player']} grounds out.")
 
         b_stats = g[f"{b_team}_box"][batter["Player"]]
         b_stats["DK_PTS"] = (3 * b_stats["1B"]) + (5 * b_stats["2B"]) + (10 * b_stats["HR"]) + (2 * b_stats["RBI"]) + (2 * b_stats["BB"])
@@ -324,9 +329,10 @@ else:
         if g["top_half"]: g["away_idx"] += 1
         else: g["home_idx"] += 1
 
-    # FIXED: Re-engineered styling engine to resolve Streamlit Arrow rendering crash
-    def render_vegas_projection_matrix(box_data, title):
-        st.markdown(f"### 🔮 {title} Vegas Analytics Grid")
+    # ----------------------------------------------------
+    # SECURED SAFELY FORMATTED MULTI-TAB DISPLAY ENGINE
+    # ----------------------------------------------------
+    def render_vegas_projection_matrix(box_data, title, placeholder_obj=None):
         rows = []
         for p_name, s in box_data.items():
             hrr_line = 1.5 if s.get("HR", 0) == 0 else 2.5
@@ -346,16 +352,27 @@ else:
                 "HRR LINE": hrr_line,
                 "HRR VAL": hrr_val,
                 "DK POINTS": dk_pts,
-                "DK SALARY": dk_salary,
+                "DK SALARY": f"${dk_salary}",
                 "CHANCE %": min(100.0, chance),
                 "RATING": rating,
                 "G RATING": g_rating
             })
             
         df = pd.DataFrame(rows)
-        # FIX: Directly render style context layer to bypass standard Arrow frame marshaling crash
-        styled_df = df.style.background_gradient(cmap="RdYlGn", subset=["HEAT", "HRR VAL", "CHANCE %", "RATING", "G RATING"]).format({"DK SALARY": "${:.0f}"})
-        st.dataframe(styled_df, use_container_width=True, hide_index=True)
+        display_df = df.copy()
+
+        # SAFE RENDER PROTECTION LAYER: Fall back to clean dataframes if matplotlib is missing or errors
+        try:
+            styled_df = display_df.style.background_gradient(cmap="RdYlGn", subset=["HEAT", "HRR VAL", "CHANCE %", "RATING", "G RATING"])
+            if placeholder_obj:
+                placeholder_obj.dataframe(styled_df, use_container_width=True, hide_index=True)
+            else:
+                st.dataframe(styled_df, use_container_width=True, hide_index=True)
+        except Exception:
+            if placeholder_obj:
+                placeholder_obj.dataframe(display_df, use_container_width=True, hide_index=True)
+            else:
+                st.dataframe(display_df, use_container_width=True, hide_index=True)
 
     # ----------------------------------------------------
     # MODE A: SINGLE GRAPHIC INTERACTIVE MODE
@@ -384,14 +401,16 @@ else:
             g = st.session_state["leveraged_game_state"]
             line_score_placeholder = st.empty()
             
-            tab_view, tab_vegas, tab_away, tab_home = st.tabs(["🏟️ Live Diamond Tracker", "🔮 image.png Vegas Matrix", f"📊 {away_team} Box", f"📊 {home_team} Box"])
+            tab_view, tab_vegas, tab_away, tab_home = st.tabs(["🏟️ Live Diamond Tracker", "🔮 Vegas Matrix", f"📊 {away_team} Box", f"📊 {home_team} Box"])
             with tab_view:
                 f_col, g_col = st.columns([1, 1])
                 with f_col: field_viz = st.empty()
                 with g_col: staff_viz = st.empty()
                 ticker = st.empty()
             with tab_vegas:
+                st.markdown(f"#### {away_team} Vegas Projections")
                 vegas_away_placeholder = st.empty()
+                st.markdown(f"#### {home_team} Vegas Projections")
                 vegas_home_placeholder = st.empty()
             with tab_away: away_box_display = st.empty()
             with tab_home: home_box_display = st.empty()
@@ -448,9 +467,8 @@ else:
                     away_box_display.dataframe(pd.DataFrame.from_dict(g["away_box"], orient="index"))
                     home_box_display.dataframe(pd.DataFrame.from_dict(g["home_box"], orient="index"))
                     
-                    with tab_vegas:
-                        render_vegas_projection_matrix(g["away_box"], away_team)
-                        render_vegas_projection_matrix(g["home_box"], home_team)
+                    render_vegas_projection_matrix(g["away_box"], away_team, vegas_away_placeholder)
+                    render_vegas_projection_matrix(g["home_box"], home_team, vegas_home_placeholder)
 
                     if sim_speed > 0: time.sleep(sim_speed)
 
@@ -458,7 +476,7 @@ else:
                 g["top_half"] = not g["top_half"]
                 if g["top_half"]: g["inning"] += 1
 
-            st.success(f"### 🏆 Final Whistle Game Over Summary Analysis Executed.")
+            st.success(f"### 🏆 Game Complete.")
             st.session_state["game_active"] = False
             st.session_state["leveraged_game_state"] = None
 
@@ -496,14 +514,14 @@ else:
                     if bg["top_half"]: bg["inning"] += 1
                 
                 for p in series_away_box:
-                    for key in ["H","RBI","DK_PTS","HRR_VAL"]: series_away_box[p][key] += bg["away_box"][p][key]
+                    for key in ["AB","H","1B","2B","HR","RBI","BB","DK_PTS","HRR_VAL"]: series_away_box[p][key] += bg["away_box"][p][key]
                 for p in series_home_box:
-                    for key in ["H","RBI","DK_PTS","HRR_VAL"]: series_home_box[p][key] += bg["home_box"][p][key]
+                    for key in ["AB","H","1B","2B","HR","RBI","BB","DK_PTS","HRR_VAL"]: series_home_box[p][key] += bg["home_box"][p][key]
 
                 if bg["home_score"] > bg["away_score"]: home_series_wins += 1
                 else: away_series_wins += 1
                 game_number += 1
             
-            st.info(f"### Playoffs Series Concluded. Displaying Series Projections Grid")
-            render_vegas_projection_matrix(series_away_box, f"{away_team} Accumulated Series Stats")
-            render_vegas_projection_matrix(series_home_box, f"{home_team} Accumulated Series Stats")
+            st.info(f"### Playoff Series Concluded! {away_team}: {away_series_wins} Wins | {home_team}: {home_series_wins} Wins")
+            render_vegas_projection_matrix(series_away_box, f"{away_team} Accumulated Stats")
+            render_vegas_projection_matrix(series_home_box, f"{home_team} Accumulated Stats")
