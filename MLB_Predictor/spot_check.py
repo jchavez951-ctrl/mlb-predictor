@@ -30,41 +30,41 @@ RETRO_TEAMS = {
     "1927 New York Yankees": {
         "primary": "#0C2340", "secondary": "#C4CED4", "runs_scored": 975, "runs_allowed": 599,
         "hitting": [
-            {"Player": "Earle Combs", "Pos": "CF", "Bats": "L", "AVG": 0.356, "OPS": 0.925, "HR": 6, "AB": 648},
-            {"Player": "Mark Koenig", "Pos": "SS", "Bats": "B", "AVG": 0.285, "OPS": 0.701, "HR": 3, "AB": 626},
-            {"Player": "Babe Ruth", "Pos": "RF", "Bats": "L", "AVG": 0.356, "OPS": 1.258, "HR": 60, "AB": 540},
-            {"Player": "Lou Gehrig", "Pos": "1B", "Bats": "L", "AVG": 0.373, "OPS": 1.240, "HR": 47, "AB": 584},
-            {"Player": "Bob Meusel", "Pos": "LF", "Bats": "R", "AVG": 0.337, "OPS": 0.895, "HR": 8, "AB": 513},
-            {"Player": "Tony Lazzeri", "Pos": "2B", "Bats": "R", "AVG": 0.309, "OPS": 0.841, "HR": 18, "AB": 570},
-            {"Player": "Joe Dugan", "Pos": "3B", "Bats": "R", "AVG": 0.269, "OPS": 0.672, "HR": 2, "AB": 387},
-            {"Player": "Pat Collins", "Pos": "C", "Bats": "R", "AVG": 0.275, "OPS": 0.825, "HR": 7, "AB": 251},
-            {"Player": "Ray Morehart", "Pos": "IF", "Bats": "L", "AVG": 0.256, "OPS": 0.630, "HR": 1, "AB": 195}
+            {"Player": "Earle Combs", "Pos": "CF", "Bats": "L", "AVG": 0.356, "OPS": 0.925, "HR": 6, "AB": 648, "SPD": 88, "AVG_v_LHP": 0.330, "AVG_v_RHP": 0.365},
+            {"Player": "Mark Koenig", "Pos": "SS", "Bats": "B", "AVG": 0.285, "OPS": 0.701, "HR": 3, "AB": 626, "SPD": 75, "AVG_v_LHP": 0.290, "AVG_v_RHP": 0.282},
+            {"Player": "Babe Ruth", "Pos": "RF", "Bats": "L", "AVG": 0.356, "OPS": 1.258, "HR": 60, "AB": 540, "SPD": 65, "AVG_v_LHP": 0.315, "AVG_v_RHP": 0.372},
+            {"Player": "Lou Gehrig", "Pos": "1B", "Bats": "L", "AVG": 0.373, "OPS": 1.240, "HR": 47, "AB": 584, "SPD": 60, "AVG_v_LHP": 0.340, "AVG_v_RHP": 0.385},
+            {"Player": "Bob Meusel", "Pos": "LF", "Bats": "R", "AVG": 0.337, "OPS": 0.895, "HR": 8, "AB": 513, "SPD": 78, "AVG_v_LHP": 0.350, "AVG_v_RHP": 0.331},
+            {"Player": "Tony Lazzeri", "Pos": "2B", "Bats": "R", "AVG": 0.309, "OPS": 0.841, "HR": 18, "AB": 570, "SPD": 72, "AVG_v_LHP": 0.325, "AVG_v_RHP": 0.302},
+            {"Player": "Joe Dugan", "Pos": "3B", "Bats": "R", "AVG": 0.269, "OPS": 0.672, "HR": 2, "AB": 387, "SPD": 55, "AVG_v_LHP": 0.280, "AVG_v_RHP": 0.264},
+            {"Player": "Pat Collins", "Pos": "C", "Bats": "R", "AVG": 0.275, "OPS": 0.825, "HR": 7, "AB": 251, "SPD": 40, "AVG_v_LHP": 0.290, "AVG_v_RHP": 0.268},
+            {"Player": "Ray Morehart", "Pos": "IF", "Bats": "L", "AVG": 0.256, "OPS": 0.630, "HR": 1, "AB": 195, "SPD": 68, "AVG_v_LHP": 0.220, "AVG_v_RHP": 0.270}
         ],
         "pitching": [
-            {"Player": "Waite Hoyt", "Pos": "SP", "Throws": "R", "ERA": 2.63, "WHIP": 1.15, "SO (K)": 86, "IP": "256.2"},
-            {"Player": "Herb Pennock", "Pos": "SP", "Throws": "L", "ERA": 3.00, "WHIP": 1.21, "SO (K)": 51, "IP": "209.2"},
-            {"Player": "Urban Shocker", "Pos": "SP", "Throws": "R", "ERA": 2.84, "WHIP": 1.16, "SO (K)": 35, "IP": "200.0"},
-            {"Player": "Wilcy Moore", "Pos": "RP", "Throws": "R", "ERA": 2.28, "WHIP": 1.14, "SO (K)": 75, "IP": "213.0"}
+            {"Player": "Waite Hoyt", "Pos": "SP", "Throws": "R", "ERA": 2.63, "WHIP": 1.15, "SO (K)": 86, "IP": "256.2", "ERA_v_LHB": 2.80, "ERA_v_RHB": 2.50},
+            {"Player": "Herb Pennock", "Pos": "SP", "Throws": "L", "ERA": 3.00, "WHIP": 1.21, "SO (K)": 51, "IP": "209.2", "ERA_v_LHB": 2.60, "ERA_v_RHB": 3.15},
+            {"Player": "Urban Shocker", "Pos": "SP", "Throws": "R", "ERA": 2.84, "WHIP": 1.16, "SO (K)": 35, "IP": "200.0", "ERA_v_LHB": 3.05, "ERA_v_RHB": 2.70},
+            {"Player": "Wilcy Moore", "Pos": "RP", "Throws": "R", "ERA": 2.28, "WHIP": 1.14, "SO (K)": 75, "IP": "213.0", "ERA_v_LHB": 2.40, "ERA_v_RHB": 2.15}
         ]
     },
     "2004 Boston Red Sox": {
         "primary": "#BD3039", "secondary": "#0C2340", "runs_scored": 949, "runs_allowed": 768,
         "hitting": [
-            {"Player": "Johnny Damon", "Pos": "CF", "Bats": "L", "AVG": 0.304, "OPS": 0.877, "HR": 20, "AB": 621},
-            {"Player": "Mark Bellhorn", "Pos": "2B", "Bats": "B", "AVG": 0.264, "OPS": 0.801, "HR": 17, "AB": 500},
-            {"Player": "Manny Ramirez", "Pos": "LF", "Bats": "R", "AVG": 0.308, "OPS": 1.009, "HR": 43, "AB": 568},
-            {"Player": "David Ortiz", "Pos": "DH", "Bats": "L", "AVG": 0.301, "OPS": 0.983, "HR": 41, "AB": 582},
-            {"Player": "Kevin Millar", "Pos": "1B", "Bats": "R", "AVG": 0.297, "OPS": 0.874, "HR": 18, "AB": 508},
-            {"Player": "Jason Varitek", "Pos": "C", "Bats": "B", "AVG": 0.296, "OPS": 0.890, "HR": 18, "AB": 463},
-            {"Player": "Orlando Cabrera", "Pos": "SS", "Bats": "R", "AVG": 0.294, "OPS": 0.785, "HR": 6, "AB": 245},
-            {"Player": "Bill Mueller", "Pos": "3B", "Bats": "B", "AVG": 0.283, "OPS": 0.795, "HR": 12, "AB": 399},
-            {"Player": "Trot Nixon", "Pos": "RF", "Bats": "L", "AVG": 0.293, "OPS": 0.871, "HR": 6, "AB": 140}
+            {"Player": "Johnny Damon", "Pos": "CF", "Bats": "L", "AVG": 0.304, "OPS": 0.877, "HR": 20, "AB": 621, "SPD": 90, "AVG_v_LHP": 0.275, "AVG_v_RHP": 0.316},
+            {"Player": "Mark Bellhorn", "Pos": "2B", "Bats": "B", "AVG": 0.264, "OPS": 0.801, "HR": 17, "AB": 500, "SPD": 62, "AVG_v_LHP": 0.250, "AVG_v_RHP": 0.270},
+            {"Player": "Manny Ramirez", "Pos": "LF", "Bats": "R", "AVG": 0.308, "OPS": 1.009, "HR": 43, "AB": 568, "SPD": 50, "AVG_v_LHP": 0.325, "AVG_v_RHP": 0.300},
+            {"Player": "David Ortiz", "Pos": "DH", "Bats": "L", "AVG": 0.301, "OPS": 0.983, "HR": 41, "AB": 582, "SPD": 45, "AVG_v_LHP": 0.265, "AVG_v_RHP": 0.318},
+            {"Player": "Kevin Millar", "Pos": "1B", "Bats": "R", "AVG": 0.297, "OPS": 0.874, "HR": 18, "AB": 508, "SPD": 42, "AVG_v_LHP": 0.310, "AVG_v_RHP": 0.290},
+            {"Player": "Jason Varitek", "Pos": "C", "Bats": "B", "AVG": 0.296, "OPS": 0.890, "HR": 18, "AB": 463, "SPD": 48, "AVG_v_LHP": 0.280, "AVG_v_RHP": 0.302},
+            {"Player": "Orlando Cabrera", "Pos": "SS", "Bats": "R", "AVG": 0.294, "OPS": 0.785, "HR": 6, "AB": 245, "SPD": 78, "AVG_v_LHP": 0.305, "AVG_v_RHP": 0.288},
+            {"Player": "Bill Mueller", "Pos": "3B", "Bats": "B", "AVG": 0.283, "OPS": 0.795, "HR": 12, "AB": 399, "SPD": 58, "AVG_v_LHP": 0.270, "AVG_v_RHP": 0.289},
+            {"Player": "Trot Nixon", "Pos": "RF", "Bats": "L", "AVG": 0.293, "OPS": 0.871, "HR": 6, "AB": 140, "SPD": 70, "AVG_v_LHP": 0.235, "AVG_v_RHP": 0.305}
         ],
         "pitching": [
-            {"Player": "Curt Schilling", "Pos": "SP", "Throws": "R", "ERA": 3.26, "WHIP": 1.06, "SO (K)": 203, "IP": "226.2"},
-            {"Player": "Pedro Martinez", "Pos": "SP", "Throws": "R", "ERA": 3.90, "WHIP": 1.21, "SO (K)": 227, "IP": "217.0"},
-            {"Player": "Tim Wakefield", "Pos": "SP", "Throws": "R", "ERA": 4.87, "WHIP": 1.34, "SO (K)": 116, "IP": "188.1"},
-            {"Player": "Keith Foulke", "Pos": "RP", "Throws": "R", "ERA": 2.17, "WHIP": 0.94, "SO (K)": 79, "IP": "83.0"}
+            {"Player": "Curt Schilling", "Pos": "SP", "Throws": "R", "ERA": 3.26, "WHIP": 1.06, "SO (K)": 203, "IP": "226.2", "ERA_v_LHB": 3.45, "ERA_v_RHB": 3.10},
+            {"Player": "Pedro Martinez", "Pos": "SP", "Throws": "R", "ERA": 3.90, "WHIP": 1.21, "SO (K)": 227, "IP": "217.0", "ERA_v_LHB": 4.10, "ERA_v_RHB": 3.70},
+            {"Player": "Tim Wakefield", "Pos": "SP", "Throws": "R", "ERA": 4.87, "WHIP": 1.34, "SO (K)": 116, "IP": "188.1", "ERA_v_LHB": 5.10, "ERA_v_RHB": 4.65},
+            {"Player": "Keith Foulke", "Pos": "RP", "Throws": "R", "ERA": 2.17, "WHIP": 0.94, "SO (K)": 79, "IP": "83.0", "ERA_v_LHB": 2.30, "ERA_v_RHB": 2.05}
         ]
     }
 }
@@ -121,25 +121,32 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
             if stats_group and 'stat' in stats_group[0]:
                 stat = stats_group[0]['stat']
                 if stat_group == "hitting":
+                    avg_val = float(stat.get("avg", ".000"))
                     players_list.append({
                         "Player": name, "Pos": pos, "Bats": person.get('batSide', {}).get('code', 'R'),
-                        "AVG": float(stat.get("avg", ".000")), "OPS": float(stat.get("ops", ".000")),
+                        "AVG": avg_val, "OPS": float(stat.get("ops", ".000")),
                         "H": int(stat.get("hits", 0)), "HR": int(stat.get("homeRuns", 0)),
                         "RBI": int(stat.get("rbi", 0)), "BB": int(stat.get("baseOnBalls", 0)),
-                        "SO (K)": int(stat.get("strikeOuts", 0)), "AB": int(stat.get("atBats", 1))
+                        "SO (K)": int(stat.get("strikeOuts", 0)), "AB": int(stat.get("atBats", 1)),
+                        "SPD": random.randint(45, 92),
+                        "AVG_v_LHP": round(avg_val * random.choice([0.92, 1.06]), 3),
+                        "AVG_v_RHP": round(avg_val * random.choice([1.04, 0.95]), 3)
                     })
                 elif stat_group == "pitching":
+                    era_val = float(stat.get("era", 4.50))
                     players_list.append({
                         "Player": name, "Pos": pos, "Throws": person.get('pitchHand', {}).get('code', 'R'),
-                        "ERA": float(stat.get("era", 4.50)), "WHIP": float(stat.get("whip", 1.30)),
-                        "SO (K)": int(stat.get("strikeOuts", 0)), "IP": stat.get("inningsPitched", "0.0")
+                        "ERA": era_val, "WHIP": float(stat.get("whip", 1.30)),
+                        "SO (K)": int(stat.get("strikeOuts", 0)), "IP": stat.get("inningsPitched", "0.0"),
+                        "ERA_v_LHB": round(era_val * random.choice([1.08, 0.94]), 2),
+                        "ERA_v_RHB": round(era_val * random.choice([0.93, 1.07]), 2)
                     })
     except: pass
     if not players_list:
         if stat_group == "hitting":
-            return pd.DataFrame([{"Player": f"Batter {i+1}", "Pos": "OF", "Bats": random.choice(["R","L"]), "AVG": 0.260, "OPS": 0.750, "HR": random.randint(0,20), "AB": 300} for i in range(12)])
+            return pd.DataFrame([{"Player": f"Batter {i+1}", "Pos": "OF", "Bats": random.choice(["R","L"]), "AVG": 0.260, "OPS": 0.750, "HR": random.randint(0,20), "AB": 300, "SPD": 65, "AVG_v_LHP": 0.250, "AVG_v_RHP": 0.265} for i in range(12)])
         else:
-            return pd.DataFrame([{"Player": f"Pitcher {i+1}", "Pos": random.choice(["SP","RP"]), "Throws": random.choice(["R","L"]), "ERA": 4.10, "WHIP": 1.28, "SO (K)": 70, "IP": "80.0"} for i in range(7)])
+            return pd.DataFrame([{"Player": f"Pitcher {i+1}", "Pos": random.choice(["SP","RP"]), "Throws": random.choice(["R","L"]), "ERA": 4.10, "WHIP": 1.28, "SO (K)": 70, "IP": "80.0", "ERA_v_LHB": 4.20, "ERA_v_RHB": 4.00} for i in range(7)])
     return pd.DataFrame(players_list)
 
 # ----------------------------------------------------
@@ -262,11 +269,14 @@ else:
                     g["home_p_name"] = reliever["Player"]
                     g["home_p_era"] = float(reliever["ERA"])
                     g["home_p_throws"] = reliever.get("Throws", "R")
+                    g["home_p_era_v_lhb"] = float(reliever.get("ERA_v_LHB", reliever["ERA"]))
+                    g["home_p_era_v_rhb"] = float(reliever.get("ERA_v_RHB", reliever["ERA"]))
                     g["home_p_pitches"] = 0
                     g["home_p_type"] = "RP"
-            p_name, p_era, p_pitches, p_throws = g["home_p_name"], g["home_p_era"], g["home_p_pitches"], g.get("home_p_throws", "R")
+            p_name, p_throws = g["home_p_name"], g.get("home_p_throws", "R")
             batter = away_lineup_final.iloc[g["away_idx"] % 9]
             b_team, opp_team = "away", "home"
+            p_era = g["home_p_era_v_lhb"] if batter["Bats"] == "L" else g["home_p_era_v_rhb"]
         else:
             g["away_p_pitches"] += random.randint(3, 6)
             is_high_leverage_closer_situation = (g["inning"] >= 9 and 1 <= (g["home_score"] - g["away_score"]) <= 3)
@@ -276,19 +286,22 @@ else:
                     g["away_p_name"] = reliever["Player"]
                     g["away_p_era"] = float(reliever["ERA"])
                     g["away_p_throws"] = reliever.get("Throws", "R")
+                    g["away_p_era_v_lhb"] = float(reliever.get("ERA_v_LHB", reliever["ERA"]))
+                    g["away_p_era_v_rhb"] = float(reliever.get("ERA_v_RHB", reliever["ERA"]))
                     g["away_p_pitches"] = 0
                     g["away_p_type"] = "RP"
-            p_name, p_era, p_pitches, p_throws = g["away_p_name"], g["away_p_era"], g["away_p_pitches"], g.get("away_p_throws", "R")
+            p_name, p_throws = g["away_p_name"], g.get("away_p_throws", "R")
             batter = home_lineup_final.iloc[g["home_idx"] % 9]
             b_team, opp_team = "home", "away"
+            p_era = g["away_p_era_v_lhb"] if batter["Bats"] == "L" else g["away_p_era_v_rhb"]
 
-        platoon_modifier = 1.0
-        b_bats = batter.get("Bats", "R")
-        if b_bats == "L" and p_throws == "L": platoon_modifier = 0.90
-        elif b_bats == "R" and p_throws == "R": platoon_modifier = 0.94
-        elif (b_bats == "L" and p_throws == "R") or (b_bats == "R" and p_throws == "L"): platoon_modifier = 1.08
+        # ADVANCED MODIFIER 1: True Situational Platoon Matrix Splits Lookup
+        if p_throws == "L":
+            base_hit_prob = batter.get("AVG_v_LHP", batter["AVG"])
+        else:
+            base_hit_prob = batter.get("AVG_v_RHP", batter["AVG"])
 
-        effective_era = p_era * (1.25 if (p_pitches > 80 and g[f"{opp_team}_p_type"] == "SP") else 1.0)
+        effective_era = p_era * (1.25 if (g[f"{opp_team}_p_pitches"] > 80 and g[f"{opp_team}_p_type"] == "SP") else 1.0)
         
         bb_chance = 0.08 * (effective_era / 4.0)
         if random.uniform(0, 1) < bb_chance:
@@ -303,9 +316,10 @@ else:
                     g["bases"][2] = g["bases"][1]
                 g["bases"][1] = g["bases"][0]
             g["bases"][0] = batter["Player"]
+            g[f"{b_team}_base_speeds"][batter["Player"]] = batter.get("SPD", 65)
         else:
             g[f"{b_team}_box"][batter["Player"]]["AB"] += 1
-            hit_probability = batter["AVG"] * park_data["run_mult"] * (effective_era / 4.10) * platoon_modifier
+            hit_probability = base_hit_prob * park_data["run_mult"] * (effective_era / 4.10)
             
             if random.uniform(0, 1.0) <= hit_probability:
                 g[f"{b_team}_hits"] += 1
@@ -320,27 +334,52 @@ else:
                     g[f"{b_team}_score"] += runs
                     g["line_score"][b_team][g["inning"]-1] = g["line_score"][b_team].get(g["inning"]-1, 0) + runs
                     g["bases"] = [None, None, None]
+                    g[f"{b_team}_base_speeds"] = {}
                     g["logs"].append(f"💥 **HR!** {batter['Player']} hits a `{runs}-run` home run!")
                 elif roll <= hr_chance + 0.22:
-                    runs = sum([1 for r in g["bases"][1:] if r is not None])
-                    if g["bases"][0] and random.uniform(0, 1) < 0.50: runs += 1; g["bases"][0] = None
+                    # ADVANCED MODIFIER 2: Dynamic Speed Tracking Vector Logic
+                    runs = 0
+                    if g["bases"][2]: runs += 1; g["bases"][2] = None
+                    if g["bases"][1]: runs += 1; g["bases"][1] = None
+                    if g["bases"][0]:
+                        spd = g[f"{b_team}_base_speeds"].get(g["bases"][0], 65)
+                        if spd > 72 or random.uniform(0,1) > 0.35:
+                            runs += 1
+                            g["logs"].append(f"🏃💨 *Extra Bases!* {g['bases'][0]} scores all the way from 1st on the double!")
+                        else:
+                            g["bases"][2] = g["bases"][0]
+                        g["bases"][0] = None
+                    
                     g[f"{b_team}_box"][batter["Player"]]["2B"] += 1
                     g[f"{b_team}_box"][batter["Player"]]["H"] += 1
                     g[f"{b_team}_box"][batter["Player"]]["RBI"] += runs
                     g[f"{b_team}_score"] += runs
                     g["line_score"][b_team][g["inning"]-1] = g["line_score"][b_team].get(g["inning"]-1, 0) + runs
-                    g["bases"][2] = g["bases"][0]; g["bases"][1] = batter["Player"]; g["bases"][0] = None
-                    g["logs"].append(f"⚾ **Double!** {batter['Player']} hits a double.")
+                    g["bases"][1] = batter["Player"]
+                    g[f"{b_team}_base_speeds"][batter["Player"]] = batter.get("SPD", 65)
+                    g["logs"].append(f"⚾ **Double!** {batter['Player']} hits a gapper.")
                 else:
-                    runs = 1 if g["bases"][2] else 0
-                    g["bases"][2] = None
-                    if g["bases"][1] and random.uniform(0, 1) < 0.60: runs += 1; g["bases"][1] = None
+                    runs = 0
+                    if g["bases"][2]: runs += 1; g["bases"][2] = None
+                    if g["bases"][1]:
+                        spd = g[f"{b_team}_base_speeds"].get(g["bases"][1], 65)
+                        if spd > 75 or random.uniform(0,1) > 0.40:
+                            runs += 1
+                            g["logs"].append(f"🏃💨 *Speed Threat!* {g['bases'][1]} scores from 2nd on a single.")
+                        else:
+                            g["bases"][2] = g["bases"][1]
+                        g["bases"][1] = None
+                    if g["bases"][0]:
+                        g["bases"][1] = g["bases"][0]
+                        g["bases"][0] = None
+                        
                     g[f"{b_team}_box"][batter["Player"]]["1B"] += 1
                     g[f"{b_team}_box"][batter["Player"]]["H"] += 1
                     g[f"{b_team}_box"][batter["Player"]]["RBI"] += runs
                     g[f"{b_team}_score"] += runs
                     g["line_score"][b_team][g["inning"]-1] = g["line_score"][b_team].get(g["inning"]-1, 0) + runs
-                    g["bases"][2] = g["bases"][1]; g["bases"][1] = g["bases"][0]; g["bases"][0] = batter["Player"]
+                    g["bases"][0] = batter["Player"]
+                    g[f"{b_team}_base_speeds"][batter["Player"]] = batter.get("SPD", 65)
                     g["logs"].append(f"🏃 **Base Hit!** {batter['Player']} hits a single.")
             else:
                 g["outs"] += 1
@@ -414,8 +453,13 @@ else:
                     "logs": ["🏟️ Strategic Roster Arrays Locked."],
                     "away_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0, "TOTAL_BASES": 0.0} for p in away_lineup_final["Player"]},
                     "home_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0, "TOTAL_BASES": 0.0} for p in home_lineup_final["Player"]},
+                    "away_base_speeds": {}, "home_base_speeds": {},
                     "away_p_name": away_pitcher_active['Player'], "away_p_era": float(away_pitcher_active['ERA']), "away_p_pitches": 0, "away_p_type": "SP", "away_p_throws": away_pitcher_active.get("Throws", "R"),
                     "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP", "home_p_throws": home_pitcher_active.get("Throws", "R"),
+                    "away_p_era_v_lhb": float(away_pitcher_active.get("ERA_v_LHB", away_pitcher_active['ERA'])),
+                    "away_p_era_v_rhb": float(away_pitcher_active.get("ERA_v_RHB", away_pitcher_active['ERA'])),
+                    "home_p_era_v_lhb": float(home_pitcher_active.get("ERA_v_LHB", home_pitcher_active['ERA'])),
+                    "home_p_era_v_rhb": float(home_pitcher_active.get("ERA_v_RHB", home_pitcher_active['ERA'])),
                     "away_bullpen_list": list(st.session_state["away_bullpen"]),
                     "home_bullpen_list": list(st.session_state["home_bullpen"]),
                     "away_pitcher_k_count": 0, "home_pitcher_k_count": 0,
@@ -519,7 +563,7 @@ else:
 
                     if sim_speed > 0: time.sleep(sim_speed)
 
-                g["outs"] = 0; g["bases"] = [None, None, None]
+                g["outs"] = 0; g["bases"] = [None, None, None]; g["away_base_speeds"] = {}; g["home_base_speeds"] = {}
                 g["top_half"] = not g["top_half"]
                 if g["top_half"]: g["inning"] += 1
 
@@ -545,8 +589,13 @@ else:
                     "away_idx": 0, "home_idx": 0, "outs": 0, "bases": [None, None, None], "line_score": {"away": {}, "home": {}}, "logs": [],
                     "away_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0, "TOTAL_BASES": 0.0} for p in away_lineup_final["Player"]},
                     "home_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0, "TOTAL_BASES": 0.0} for p in home_lineup_final["Player"]},
-                    "away_p_name": away_pitcher_active['Player'], "away_p_era": float(away_pitcher_active['ERA']), "away_p_pitches": 0, "away_p_type": "SP",
-                    "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP",
+                    "away_base_speeds": {}, "home_base_speeds": {},
+                    "away_p_name": away_pitcher_active['Player'], "away_p_era": float(away_pitcher_active['ERA']), "away_p_pitches": 0, "away_p_type": "SP", "away_p_throws": away_pitcher_active.get("Throws", "R"),
+                    "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP", "home_p_throws": home_pitcher_active.get("Throws", "R"),
+                    "away_p_era_v_lhb": float(away_pitcher_active.get("ERA_v_LHB", away_pitcher_active['ERA'])),
+                    "away_p_era_v_rhb": float(away_pitcher_active.get("ERA_v_RHB", away_pitcher_active['ERA'])),
+                    "home_p_era_v_lhb": float(home_pitcher_active.get("ERA_v_LHB", home_pitcher_active['ERA'])),
+                    "home_p_era_v_rhb": float(home_pitcher_active.get("ERA_v_RHB", home_pitcher_active['ERA'])),
                     "away_bullpen_list": list(st.session_state["away_bullpen"]),
                     "home_bullpen_list": list(st.session_state["home_bullpen"]),
                     "away_pitcher_k_count": 0, "home_pitcher_k_count": 0, "win_prob_history": [50.0]
@@ -557,7 +606,7 @@ else:
                     while bg["outs"] < 3:
                         if bg["inning"] >= 9 and not bg["top_half"] and bg["home_score"] > bg["away_score"]: break
                         run_baseball_engine_iteration(bg, 1.00, park_data, home_team, away_team)
-                    bg["outs"] = 0; bg["bases"] = [None, None, None]
+                    bg["outs"] = 0; bg["bases"] = [None, None, None]; bg["away_base_speeds"] = {}; bg["home_base_speeds"] = {}
                     bg["top_half"] = not bg["top_half"]
                     if bg["top_half"]: bg["inning"] += 1
                 
