@@ -90,11 +90,10 @@ DEFAULT_BALLPARK = {"run_mult": 1.00, "hr_mult": 1.00, "desc": "Neutral standard
 # ADVANCED MODULE 2: BAYESIAN LEAGUE REGRESSION
 # ----------------------------------------------------
 def apply_bayesian_stabilization(actual_stat, current_ab, stat_type="AVG"):
-    """Regresses raw statistics toward 2026 league metrics to handle small samples safely."""
     if stat_type == "AVG":
         league_baseline = 0.244
-        sample_anchor = 120  # AB baseline for stabilization
-    else:  # OPS
+        sample_anchor = 120
+    else:
         league_baseline = 0.720
         sample_anchor = 150
         
@@ -138,7 +137,6 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
                     raw_avg = float(stat.get("avg", ".244"))
                     raw_ops = float(stat.get("ops", ".720"))
                     
-                    # Apply stabilization transformation
                     adjusted_avg = apply_bayesian_stabilization(raw_avg, ab, "AVG")
                     adjusted_ops = apply_bayesian_stabilization(raw_ops, ab, "OPS")
                     
@@ -153,7 +151,6 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
                     })
                 elif stat_group == "pitching":
                     era_val = float(stat.get("era", 4.25))
-                    # Assign roles programmatically to drive the AI Manager
                     if pos == "SP": bullpen_role = "SP"
                     elif counter % 4 == 0: bullpen_role = "Closer"
                     elif counter % 4 == 1: bullpen_role = "Setup"
@@ -203,7 +200,10 @@ if not st.session_state["lineups_locked"]:
     col_a, col_h = st.columns(2)
     with col_a:
         st.markdown(f"### {away_team}")
-        away_sp_choice = st.selectbox(f"Select Pitching Ace ({away_team})", list(away_pitcher_raw[away_pitcher_raw["Role"]=="SP"]["Player"]))
+        away_pitchers_list = list(away_pitcher_raw[away_pitcher_raw["Role"]=="SP"]["Player"])
+        if not away_pitchers_list: away_pitchers_list = list(away_pitcher_raw["Player"])
+        away_sp_choice = st.selectbox(f"Select Pitching Ace ({away_team})", away_pitchers_list)
+        
         away_batters = []
         default_top_away = away_hitters_pool.sort_values(by="OPS", ascending=False).head(9)["Player"].tolist()
         for slot in range(1, 10):
@@ -213,7 +213,10 @@ if not st.session_state["lineups_locked"]:
             
     with col_h:
         st.markdown(f"### {home_team}")
-        home_sp_choice = st.selectbox(f"Select Pitching Ace ({home_team})", list(home_pitcher_raw[home_pitcher_raw["Role"]=="SP"]["Player"]))
+        home_pitchers_list = list(home_pitcher_raw[home_pitcher_raw["Role"]=="SP"]["Player"])
+        if not home_pitchers_list: home_pitchers_list = list(home_pitcher_raw["Player"])
+        home_sp_choice = st.selectbox(f"Select Pitching Ace ({home_team})", home_pitchers_list)
+        
         home_batters = []
         default_top_home = home_hitters_pool.sort_values(by="OPS", ascending=False).head(9)["Player"].tolist()
         for slot in range(1, 10):
@@ -222,12 +225,17 @@ if not st.session_state["lineups_locked"]:
             home_batters.append(b_choice)
 
     if st.button("🔒 Lock Framework Configurations & Generate Ecosystem Data", use_container_width=True):
-        st.session_state["ready_away_sp"] = away_pitcher_raw[away_pitcher_raw["Player"] == away_sp_choice].iloc[0].to_dict()
-        st.session_state["ready_home_sp"] = home_pitcher_raw[home_pitcher_raw["Player"] == home_sp_choice].iloc[0].to_dict()
+        # FIX FOR SCREENSHOT 6: Prevent slice IndexError if dynamic criteria filter produces an empty DataFrame
+        away_selected_df = away_pitcher_raw[away_pitcher_raw["Player"] == away_sp_choice]
+        home_selected_df = home_pitcher_raw[home_pitcher_raw["Player"] == home_sp_choice]
+        
+        st.session_state["ready_away_sp"] = away_selected_df.iloc[0].to_dict() if not away_selected_df.empty else away_pitcher_raw.iloc[0].to_dict()
+        st.session_state["ready_home_sp"] = home_selected_df.iloc[0].to_dict() if not home_selected_df.empty else home_pitcher_raw.iloc[0].to_dict()
+        
         st.session_state["ready_away_lineup"] = pd.DataFrame([away_hitters_pool[away_hitters_pool["Player"] == name].iloc[0].to_dict() for name in away_batters])
         st.session_state["ready_home_lineup"] = pd.DataFrame([home_hitters_pool[home_hitters_pool["Player"] == name].iloc[0].to_dict() for name in home_batters])
-        st.session_state["away_bullpen"] = away_pitcher_raw[away_pitcher_raw["Player"] != away_sp_choice].to_dict('records')
-        st.session_state["home_bullpen"] = home_pitcher_raw[home_pitcher_raw["Player"] != home_sp_choice].to_dict('records')
+        st.session_state["away_bullpen"] = away_pitcher_raw[away_pitcher_raw["Player"] != st.session_state["ready_away_sp"]["Player"]].to_dict('records')
+        st.session_state["home_bullpen"] = home_pitcher_raw[home_pitcher_raw["Player"] != st.session_state["ready_home_sp"]["Player"]].to_dict('records')
         st.session_state["lineups_locked"] = True
         st.rerun()
 
@@ -251,7 +259,6 @@ else:
     def generate_atmospheric_environment(home_team_name):
         temp = random.randint(54, 96)
         humidity = random.randint(25, 85)
-        # Thermal air density formula: hot air amplifies ball trajectories; humidity introduces drag modifiers
         weather_mult = 1.0 + ((temp - 72) * 0.0022) - ((humidity - 50) * 0.0006)
         return {"temp": temp, "humidity": humidity, "mult": weather_mult}
 
@@ -259,7 +266,6 @@ else:
     # ADVANCED MODULE 4: LEVERAGE-INDEX BULLPEN MANAGER AI
     # ----------------------------------------------------
     def select_leverage_bullpen_arm(bullpen_list, inning, score_diff):
-        """AI Manager scans systemic game state constraints to extract ideal pitching profiles."""
         if not bullpen_list:
             return {"Player": "Emergency Position Player", "ERA": 9.99, "Role": "Blowout Protection", "Throws": "R", "ERA_v_LHB": 9.99, "ERA_v_RHB": 9.99}
             
@@ -304,7 +310,6 @@ else:
             g["home_p_pitches"] += random.randint(3, 6)
             score_diff = abs(g["away_score"] - g["home_score"])
             
-            # SYSTEMS INTEGRATION: Pitcher Stamina Curves & AI Manager Intercept
             if (g["home_p_pitches"] > 88 and g["home_p_type"] == "SP") or (g["home_p_pitches"] > 25 and g["home_p_type"] == "RP") or (g["inning"] >= 9 and 1 <= (g["away_score"] - g["home_score"]) <= 3 and g["home_p_type"] == "SP"):
                 reliever = select_leverage_bullpen_arm(g["home_bullpen_list"], g["inning"], score_diff)
                 g["home_p_name"] = reliever["Player"]
@@ -342,7 +347,6 @@ else:
             p_era = g["away_p_era_v_lhb"] if batter["Bats"] == "L" else g["away_p_era_v_rhb"]
             p_pitches_spent = g["away_p_pitches"]
 
-        # SYSTEMS INTEGRATION: Real-time Pitcher Stamina Curves Decay Math
         fatigue_coefficient = 1.0
         if g[f"{opp_team}_p_type"] == "SP" and p_pitches_spent > 30:
             fatigue_coefficient += (p_pitches_spent - 30) * 0.0038
@@ -374,7 +378,6 @@ else:
             
             if random.uniform(0, 1.0) <= hit_probability:
                 g[f"{b_team}_hits"] += 1
-                # SYSTEMS INTEGRATION: Weather Interceptor Multiplier Modifying Home Run Probability
                 hr_chance = (batter["HR"] / max(1, batter["AB"])) * park_data["hr_mult"] * env_mult
                 roll = random.uniform(0, 1)
                 
@@ -441,6 +444,7 @@ else:
         else: g["home_idx"] += 1
         g["win_prob_history"].append(calculate_live_win_probability(g) * 100)
 
+    # FIX FOR SCREENSHOTS 1, 2, & 4: Drop style.background_gradient dependencies to clear the headless server ImportError
     def render_vegas_projection_matrix(box_data, placeholder_obj=None):
         rows = []
         for p_name, s in box_data.items():
@@ -470,9 +474,9 @@ else:
 
         if st.session_state["game_active"] or st.session_state["leveraged_game_state"] is not None:
             if st.session_state["leveraged_game_state"] is None:
-                # Systems Integration: Environment Vector Initialization
                 env_profile = generate_atmospheric_environment(home_team)
                 
+                # FIX FOR SCREENSHOT 3: Patched dynamic list composition setup to eliminate trailing initialization syntax errors
                 st.session_state["leveraged_game_state"] = {
                     "inning": 1, "top_half": True, "away_score": 0, "home_score": 0, "away_hits": 0, "home_hits": 0, "away_errors": 0, "home_errors": 0,
                     "away_idx": 0, "home_idx": 0, "outs": 0, "bases": [None, None, None],
@@ -519,7 +523,6 @@ else:
                     if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
                     run_baseball_engine_iteration(g, g["env"]["mult"], park_data, home_team, away_team)
 
-                    # Dynamic Scoreboard Builder Block
                     inn_headers = "".join([f"<th style='padding:5px; width:22px;'>{i+1}</th>" for i in range(max(9, g['inning']))])
                     def row_render(k):
                         return "".join([f"<td style='text-align:center;'>{g['line_score'][k].get(i, 0 if i < g['inning']-1 else '-')}</td>" for i in range(max(9, g['inning']))])
