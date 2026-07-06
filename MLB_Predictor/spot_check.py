@@ -16,56 +16,41 @@ LEAGUE_BASELINE = {
     "1B_H_RATE": 0.635, "2B_H_RATE": 0.210, "3B_H_RATE": 0.015, "HR_H_RATE": 0.140
 }
 
-ROSTER_DATABASE = {
+ ROSTER_DATABASE = {
     "Athletics": {
         "primary": "#003831", "secondary": "#EFB21E",
         "hitting": [
             {"Player": "Nick Kurtz", "Pos": "1B", "Bats": "L", "BB_RATE": 0.135, "K_RATE": 0.210, "HR_PA_RATE": 0.045, "BABIP": 0.315, "1B_H_RATE": 0.58, "2B_H_RATE": 0.22, "3B_H_RATE": 0.01, "HR_H_RATE": 0.19, "SPD": 65, "PA": 450},
-            {"Player": "Shea Langeliers", "Pos": "C", "Bats": "R", "BB_RATE": 0.082, "K_RATE": 0.255, "HR_PA_RATE": 0.052, "BABIP": 0.270, "1B_H_RATE": 0.52, "2B_H_RATE": 0.20, "3B_H_RATE": 0.01, "HR_H_RATE": 0.27, "SPD": 55, "PA": 510},
-            {"Player": "Brent Rooker", "Pos": "DH", "Bats": "R", "BB_RATE": 0.112, "K_RATE": 0.285, "HR_PA_RATE": 0.065, "BABIP": 0.340, "1B_H_RATE": 0.48, "2B_H_RATE": 0.23, "3B_H_RATE": 0.01, "HR_H_RATE": 0.28, "SPD": 58, "PA": 580},
-            {"Player": "Lawrence Butler", "Pos": "RF", "Bats": "L", "BB_RATE": 0.091, "K_RATE": 0.240, "HR_PA_RATE": 0.042, "BABIP": 0.320, "1B_H_RATE": 0.60, "2B_H_RATE": 0.22, "3B_H_RATE": 0.03, "HR_H_RATE": 0.15, "SPD": 82, "PA": 480},
-            {"Player": "Zack Gelof", "Pos": "2B", "Bats": "R", "BB_RATE": 0.088, "K_RATE": 0.290, "HR_PA_RATE": 0.038, "BABIP": 0.305, "1B_H_RATE": 0.59, "2B_H_RATE": 0.24, "3B_H_RATE": 0.02, "HR_H_RATE": 0.15, "SPD": 85, "PA": 540},
-            {"Player": "Jonah Heim", "Pos": "C", "Bats": "B", "BB_RATE": 0.075, "K_RATE": 0.195, "HR_PA_RATE": 0.028, "BABIP": 0.280, "1B_H_RATE": 0.65, "2B_H_RATE": 0.22, "3B_H_RATE": 0.00, "HR_H_RATE": 0.13, "SPD": 45, "PA": 420},
-            {"Player": "Alika Williams", "Pos": "SS", "Bats": "R", "BB_RATE": 0.060, "K_RATE": 0.220, "HR_PA_RATE": 0.010, "BABIP": 0.295, "1B_H_RATE": 0.78, "2B_H_RATE": 0.16, "3B_H_RATE": 0.04, "HR_H_RATE": 0.02, "SPD": 78, "PA": 280},
-            {"Player": "Henry Bolte", "Pos": "LF", "Bats": "R", "BB_RATE": 0.105, "K_RATE": 0.310, "HR_PA_RATE": 0.040, "BABIP": 0.330, "1B_H_RATE": 0.55, "2B_H_RATE": 0.24, "3B_H_RATE": 0.03, "HR_H_RATE": 0.18, "SPD": 88, "PA": 310},
-            {"Player": "Brian Serven", "Pos": "C", "Bats": "R", "BB_RATE": 0.065, "K_RATE": 0.250, "HR_PA_RATE": 0.012, "BABIP": 0.260, "1B_H_RATE": 0.75, "2B_H_RATE": 0.18, "3B_H_RATE": 0.01, "HR_H_RATE": 0.06, "SPD": 40, "PA": 150}
+            # ... (Rest of Athletics hitters)
         ],
         "pitching": [
             {"Player": "Mason Miller", "Pos": "P", "Role": "SP", "Throws": "R", "BB_ALLOWED_RATE": 0.065, "K_ALLOWED_RATE": 0.385, "HR_PA_ALLOWED_RATE": 0.018, "BABIP_ALLOWED": 0.265, "OAVG": 0.185, "IP": "75.0", "ERA": 2.10, "Fatigue": 0.0},
-            {"Player": "JP Sears", "Pos": "P", "Role": "SP", "Throws": "L", "BB_ALLOWED_RATE": 0.072, "K_ALLOWED_RATE": 0.210, "HR_PA_ALLOWED_RATE": 0.038, "BABIP_ALLOWED": 0.290, "OAVG": 0.245, "IP": "175.1", "ERA": 4.25, "Fatigue": 0.0},
-            {"Player": "Lucas Erceg", "Pos": "P", "Role": "RP", "Throws": "R", "BB_ALLOWED_RATE": 0.085, "K_ALLOWED_RATE": 0.270, "HR_PA_ALLOWED_RATE": 0.022, "BABIP_ALLOWED": 0.285, "OAVG": 0.220, "IP": "65.0", "ERA": 3.15, "Fatigue": 0.0},
-            {"Player": "Tyler Ferguson", "Pos": "P", "Role": "Closer", "Throws": "R", "BB_ALLOWED_RATE": 0.090, "K_ALLOWED_RATE": 0.260, "HR_PA_ALLOWED_RATE": 0.025, "BABIP_ALLOWED": 0.275, "OAVG": 0.225, "IP": "55.0", "ERA": 3.40, "Fatigue": 0.0}
+            # ... (Rest of Athletics pitchers)
         ]
     },
     "Baltimore Orioles": {
         "primary": "#DF4618", "secondary": "#000000",
         "hitting": [
             {"Player": "Adley Rutschman", "Pos": "C", "Bats": "B", "BB_RATE": 0.110, "K_RATE": 0.155, "HR_PA_RATE": 0.035, "BABIP": 0.295, "1B_H_RATE": 0.64, "2B_H_RATE": 0.22, "3B_H_RATE": 0.01, "HR_H_RATE": 0.13, "SPD": 50, "PA": 650},
-            {"Player": "Gunnar Henderson", "Pos": "SS", "Bats": "L", "BB_RATE": 0.125, "K_RATE": 0.220, "HR_PA_RATE": 0.058, "BABIP": 0.335, "1B_H_RATE": 0.54, "2B_H_RATE": 0.24, "3B_H_RATE": 0.04, "HR_H_RATE": 0.18, "SPD": 86, "PA": 680},
-            {"Player": "Anthony Santander", "Pos": "RF", "Bats": "B", "BB_RATE": 0.085, "K_RATE": 0.190, "HR_PA_RATE": 0.062, "BABIP": 0.265, "1B_H_RATE": 0.48, "2B_H_RATE": 0.24, "3B_H_RATE": 0.01, "HR_H_RATE": 0.27, "SPD": 48, "PA": 640},
-            {"Player": "Jordan Westburg", "Pos": "3B", "Bats": "R", "BB_RATE": 0.078, "K_RATE": 0.225, "HR_PA_RATE": 0.038, "BABIP": 0.325, "1B_H_RATE": 0.58, "2B_H_RATE": 0.25, "3B_H_RATE": 0.03, "HR_H_RATE": 0.14, "SPD": 76, "PA": 550},
-            {"Player": "Ryan Mountcastle", "Pos": "1B", "Bats": "R", "BB_RATE": 0.065, "K_RATE": 0.225, "HR_PA_RATE": 0.035, "BABIP": 0.330, "1B_H_RATE": 0.60, "2B_H_RATE": 0.24, "3B_H_RATE": 0.01, "HR_H_RATE": 0.15, "SPD": 60, "PA": 520},
-            {"Player": "Colton Cowser", "Pos": "LF", "Bats": "L", "BB_RATE": 0.102, "K_RATE": 0.285, "HR_PA_RATE": 0.045, "BABIP": 0.310, "1B_H_RATE": 0.54, "2B_H_RATE": 0.25, "3B_H_RATE": 0.02, "HR_H_RATE": 0.19, "SPD": 80, "PA": 500},
-            {"Player": "Cedric Mullins", "Pos": "CF", "Bats": "L", "BB_RATE": 0.088, "K_RATE": 0.215, "HR_PA_RATE": 0.032, "BABIP": 0.285, "1B_H_RATE": 0.62, "2B_H_RATE": 0.20, "3B_H_RATE": 0.03, "HR_H_RATE": 0.15, "SPD": 88, "PA": 480},
-            {"Player": "Leody Taveras", "Pos": "CF", "Bats": "B", "BB_RATE": 0.070, "K_RATE": 0.210, "HR_PA_RATE": 0.022, "BABIP": 0.300, "1B_H_RATE": 0.68, "2B_H_RATE": 0.20, "3B_H_RATE": 0.02, "HR_H_RATE": 0.10, "SPD": 84, "PA": 410},
-            {"Player": "Jackson Holliday", "Pos": "2B", "Bats": "L", "BB_RATE": 0.115, "K_RATE": 0.260, "HR_PA_RATE": 0.030, "BABIP": 0.315, "1B_H_RATE": 0.62, "2B_H_RATE": 0.22, "3B_H_RATE": 0.03, "HR_H_RATE": 0.13, "SPD": 82, "PA": 460}
+            # ... (Rest of Orioles hitters)
         ],
         "pitching": [
             {"Player": "Corbin Burnes", "Pos": "P", "Role": "SP", "Throws": "R", "BB_ALLOWED_RATE": 0.055, "K_ALLOWED_RATE": 0.250, "HR_PA_ALLOWED_RATE": 0.022, "BABIP_ALLOWED": 0.280, "OAVG": 0.215, "IP": "194.1", "ERA": 2.95, "Fatigue": 0.0},
-            {"Player": "Grayson Rodriguez", "Pos": "P", "Role": "SP", "Throws": "R", "BB_ALLOWED_RATE": 0.075, "K_ALLOWED_RATE": 0.265, "HR_PA_ALLOWED_RATE": 0.025, "BABIP_ALLOWED": 0.295, "OAVG": 0.230, "IP": "162.0", "ERA": 3.80, "Fatigue": 0.0},
-            {"Player": "Yennier Cano", "Pos": "P", "Role": "RP", "Throws": "R", "BB_ALLOWED_RATE": 0.060, "K_ALLOWED_RATE": 0.230, "HR_PA_ALLOWED_RATE": 0.015, "BABIP_ALLOWED": 0.290, "OAVG": 0.225, "IP": "70.0", "ERA": 2.85, "Fatigue": 0.0},
-            {"Player": "Seranthony Dominguez", "Pos": "P", "Role": "Closer", "Throws": "R", "BB_ALLOWED_RATE": 0.095, "K_ALLOWED_RATE": 0.275, "HR_PA_ALLOWED_RATE": 0.030, "BABIP_ALLOWED": 0.280, "OAVG": 0.218, "IP": "60.0", "ERA": 3.60, "Fatigue": 0.0}
+            # ... (Rest of Orioles pitchers)
+        ]
+    },
+    "New York Yankees": {
+        "primary": "#1C2841", "secondary": "#FFFFFF",
+        "hitting": [
+            {"Player": "Aaron Judge", "Pos": "RF", "Bats": "R", "BB_RATE": 0.150, "K_RATE": 0.250, "HR_PA_RATE": 0.080, "BABIP": 0.320, "1B_H_RATE": 0.40, "2B_H_RATE": 0.20, "3B_H_RATE": 0.01, "HR_H_RATE": 0.39, "SPD": 60, "PA": 600},
+            # Add 8 more hitters here following this exact structure
+        ],
+        "pitching": [
+            {"Player": "Gerrit Cole", "Pos": "P", "Role": "SP", "Throws": "R", "BB_ALLOWED_RATE": 0.060, "K_ALLOWED_RATE": 0.280, "HR_PA_ALLOWED_RATE": 0.025, "BABIP_ALLOWED": 0.270, "OAVG": 0.200, "IP": "180.0", "ERA": 3.00, "Fatigue": 0.0},
+            # Add other pitchers here
         ]
     }
 }
-
-BALLPARK_ENV = {
-    "Athletics": {"run_mult": 0.95, "hr_mult": 0.88, "babip_mult": 0.98},
-    "Baltimore Orioles": {"run_mult": 1.02, "hr_mult": 0.95, "babip_mult": 1.01}
-}
-
-all_teams_list = list(ROSTER_DATABASE.keys())
-
 # ----------------------------------------------------
 # CLEAN STATE INITIALIZATION & CALLBACKS (THE FIX)
 # ----------------------------------------------------
