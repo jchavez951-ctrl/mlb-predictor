@@ -15,6 +15,12 @@ if "lineups_locked" not in st.session_state:
 if "monte_carlo_results" not in st.session_state:
     st.session_state["monte_carlo_results"] = None
 
+# Track previously selected teams to detect changes
+if "prev_away_team" not in st.session_state:
+    st.session_state["prev_away_team"] = None
+if "prev_home_team" not in st.session_state:
+    st.session_state["prev_home_team"] = None
+
 # Global Placeholders to definitively stop Streamlit KeyError race-conditions
 if "locked_away_sp" not in st.session_state: st.session_state["locked_away_sp"] = {}
 if "locked_home_sp" not in st.session_state: st.session_state["locked_home_sp"] = {}
@@ -109,8 +115,17 @@ def safe_extract_player(roster_dict, side, player_name, fallback_idx=0):
 # ----------------------------------------------------
 st.sidebar.header("⚾ Enterprise Simulator Panel")
 all_teams_list = list(ROSTER_DATABASE.keys())
+
+# Let user choose teams at all times
 away_selection = st.sidebar.selectbox("Away Roster Array", all_teams_list, index=0)
 home_selection = st.sidebar.selectbox("Home Roster Array", all_teams_list, index=1)
+
+# CRITICAL FIX: If user modifies either roster selection dropdown, instantly auto-unlock ecosystem state
+if st.session_state["prev_away_team"] != away_selection or st.session_state["prev_home_team"] != home_selection:
+    st.session_state["lineups_locked"] = False
+    st.session_state["monte_carlo_results"] = None
+    st.session_state["prev_away_team"] = away_selection
+    st.session_state["prev_home_team"] = home_selection
 
 st.sidebar.markdown("### ☁️ Environmental Weather Tensors")
 temperature = st.sidebar.slider("Ambient Temperature (°F)", 40, 105, 73, step=1)
@@ -329,7 +344,6 @@ else:
     env_tensors = {"temp": temperature, "elevation": stadium_alt, "wind": wind_vector}
     park_rules = BALLPARK_ENV.get(home_selection, {"run_mult": 1.0, "hr_mult": 1.0, "babip_mult": 1.0})
 
-    # CRITICAL FIX: Ensures background distributions compute immediately upon state lock
     if st.session_state["monte_carlo_results"] is None:
         with st.spinner("Executing Structural Monte Carlo Base Operations..."):
             engine = DipsMarkovEngine(st.session_state["locked_away_lineup"], st.session_state["locked_home_lineup"], st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], st.session_state["locked_away_bullpen"], st.session_state["locked_home_bullpen"], park_rules, env_tensors)
@@ -376,9 +390,6 @@ else:
 
     st.markdown("---")
     
-    # ----------------------------------------------------
-    # FIXED TAB LOGIC: PLAYER PROP ARRAYS
-    # ----------------------------------------------------
     st.markdown("### 📊 Micro-Projection Player Prop Vectors")
     
     def render_prop_matrix_view(means_data):
