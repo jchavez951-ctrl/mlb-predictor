@@ -8,7 +8,7 @@ import copy
 st.set_page_config(page_title="Ultimate MLB Analytics Platform v2", page_icon="⚾", layout="wide")
 
 # ----------------------------------------------------
-# ADVANCED BASELINE CONFIGURATIONS & HISTORICAL COHORTS
+# ADVANCED BASELINE CONFIGURATIONS & ROSTERS
 # ----------------------------------------------------
 LEAGUE_BASELINE = {
     "AVG": 0.244, "OBP": 0.315, "SLG": 0.402, "BABIP": 0.290,
@@ -64,70 +64,59 @@ BALLPARK_ENV = {
     "Baltimore Orioles": {"run_mult": 1.02, "hr_mult": 0.95, "babip_mult": 1.01}
 }
 
+all_teams_list = list(ROSTER_DATABASE.keys())
+
 # ----------------------------------------------------
-# SYSTEM STATE PERSISTENCE INITIALIZATION
+# CLEAN STATE INITIALIZATION & CALLBACKS (THE FIX)
 # ----------------------------------------------------
 if "lineups_locked" not in st.session_state:
     st.session_state["lineups_locked"] = False
 if "monte_carlo_results" not in st.session_state:
     st.session_state["monte_carlo_results"] = None
-if "away_generation_id" not in st.session_state:
-    st.session_state["away_generation_id"] = str(random.randint(1000, 9999))
-if "home_generation_id" not in st.session_state:
-    st.session_state["home_generation_id"] = str(random.randint(1000, 9999))
 
-all_teams_list = list(ROSTER_DATABASE.keys())
+# Initialize default teams if not present
+if "away_team_select" not in st.session_state:
+    st.session_state["away_team_select"] = all_teams_list[0]
+if "home_team_select" not in st.session_state:
+    st.session_state["home_team_select"] = all_teams_list[1]
 
-# Explicit tracker states to avoid callback lifecycle dropouts
-if "current_away_team" not in st.session_state:
-    st.session_state["current_away_team"] = all_teams_list[0]
-if "current_home_team" not in st.session_state:
-    st.session_state["current_home_team"] = all_teams_list[1]
+# These callbacks forcefully purge the cached player selections when a team changes
+def handle_away_change():
+    st.session_state["lineups_locked"] = False
+    st.session_state["monte_carlo_results"] = None
+    for key in list(st.session_state.keys()):
+        if key.startswith("away_batter_") or key == "away_sp":
+            del st.session_state[key]
+
+def handle_home_change():
+    st.session_state["lineups_locked"] = False
+    st.session_state["monte_carlo_results"] = None
+    for key in list(st.session_state.keys()):
+        if key.startswith("home_batter_") or key == "home_sp":
+            del st.session_state[key]
 
 def global_unlock_reset():
     st.session_state["lineups_locked"] = False
     st.session_state["monte_carlo_results"] = None
 
-# Global Placeholders to definitively stop Streamlit KeyError race-conditions
-if "locked_away_sp" not in st.session_state: st.session_state["locked_away_sp"] = {}
-if "locked_home_sp" not in st.session_state: st.session_state["locked_home_sp"] = {}
-if "locked_away_lineup" not in st.session_state: st.session_state["locked_away_lineup"] = []
-if "locked_home_lineup" not in st.session_state: st.session_state["locked_home_lineup"] = []
-if "locked_away_bullpen" not in st.session_state: st.session_state["locked_away_bullpen"] = []
-if "locked_home_bullpen" not in st.session_state: st.session_state["locked_home_bullpen"] = []
-
 # ----------------------------------------------------
-# CONTROL BOARD INTERFACE UI (REACTIVE CONFIG PATTERN)
+# CONTROL BOARD INTERFACE UI
 # ----------------------------------------------------
 st.sidebar.header("⚾ Enterprise Simulator Panel")
 
-# Render team select boxes based purely on index locations of saved tracked states
 away_selection = st.sidebar.selectbox(
     "Away Roster Array", 
     all_teams_list, 
-    index=all_teams_list.index(st.session_state["current_away_team"])
+    key="away_team_select", # Streamlit natively tracks this
+    on_change=handle_away_change # Cleans up the child widgets on change
 )
 
 home_selection = st.sidebar.selectbox(
     "Home Roster Array", 
     all_teams_list, 
-    index=all_teams_list.index(st.session_state["current_home_team"])
+    key="home_team_select", 
+    on_change=handle_home_change
 )
-
-# Inline Reactive Checkers replacing flaky on_change handles
-if away_selection != st.session_state["current_away_team"]:
-    st.session_state["current_away_team"] = away_selection
-    st.session_state["lineups_locked"] = False
-    st.session_state["monte_carlo_results"] = None
-    st.session_state["away_generation_id"] = str(random.randint(1000, 9999))
-    st.rerun()
-
-if home_selection != st.session_state["current_home_team"]:
-    st.session_state["current_home_team"] = home_selection
-    st.session_state["lineups_locked"] = False
-    st.session_state["monte_carlo_results"] = None
-    st.session_state["home_generation_id"] = str(random.randint(1000, 9999))
-    st.rerun()
 
 st.sidebar.markdown("### ☁️ Environmental Weather Tensors")
 temperature = st.sidebar.slider("Ambient Temperature (°F)", 40, 105, 73, step=1)
@@ -145,27 +134,23 @@ away_p_pool = ROSTER_DATABASE[away_selection]["pitching"]
 home_p_pool = ROSTER_DATABASE[home_selection]["pitching"]
 
 # ----------------------------------------------------
-# LOG-ODDS ALGORITHMIC MATRIX
+# UTILITIES
 # ----------------------------------------------------
 def calculate_log_odds(player_rate, pitcher_rate, league_rate):
     player_rate = max(0.001, min(0.999, player_rate))
     pitcher_rate = max(0.001, min(0.999, pitcher_rate))
     league_rate = max(0.001, min(0.999, league_rate))
-    
     odds_b = player_rate / (1.0 - player_rate)
     odds_p = pitcher_rate / (1.0 - pitcher_rate)
     odds_l = league_rate / (1.0 - league_rate)
-    
     final_odds = (odds_b * odds_p) / odds_l
     return final_odds / (1.0 + final_odds)
 
 def safe_extract_player(roster_dict, side, player_name, fallback_idx=0):
     pool = roster_dict.get(side, [])
-    if not pool:
-        return {}
+    if not pool: return {}
     matched = [p for p in pool if p["Player"] == player_name]
-    if matched:
-        return copy.deepcopy(matched[0])
+    if matched: return copy.deepcopy(matched[0])
     return copy.deepcopy(pool[min(fallback_idx, len(pool) - 1)])
 
 # ----------------------------------------------------
@@ -177,20 +162,36 @@ if not st.session_state["lineups_locked"]:
     
     with col1:
         st.markdown(f"#### {away_selection} Lineup Assets")
-        sp_choice_a = st.selectbox("Starting Pitcher Choice (Away)", [p["Player"] for p in away_p_pool if p["Role"] == "SP"], key=f"sp_away_{away_selection}_{st.session_state['away_generation_id']}")
+        sp_choice_a = st.selectbox(
+            "Starting Pitcher Choice (Away)", 
+            [p["Player"] for p in away_p_pool if p["Role"] == "SP"], 
+            key="away_sp" # Static Key
+        )
         batters_a = []
         for i in range(9):
-            default_idx = min(i, len(away_h_pool)-1)
-            b = st.selectbox(f"Away Slot {i+1} Batter", [p["Player"] for p in away_h_pool], index=default_idx, key=f"a_slot_{away_selection}_{i}_{st.session_state['away_generation_id']}")
+            b = st.selectbox(
+                f"Away Slot {i+1} Batter", 
+                [p["Player"] for p in away_h_pool], 
+                index=min(i, len(away_h_pool)-1), 
+                key=f"away_batter_{i}" # Static Key
+            )
             batters_a.append(b)
             
     with col2:
         st.markdown(f"#### {home_selection} Lineup Assets")
-        sp_choice_h = st.selectbox("Starting Pitcher Choice (Home)", [p["Player"] for p in home_p_pool if p["Role"] == "SP"], key=f"sp_home_{home_selection}_{st.session_state['home_generation_id']}")
+        sp_choice_h = st.selectbox(
+            "Starting Pitcher Choice (Home)", 
+            [p["Player"] for p in home_p_pool if p["Role"] == "SP"], 
+            key="home_sp" # Static Key
+        )
         batters_h = []
         for i in range(9):
-            default_idx = min(i, len(home_h_pool)-1)
-            b = st.selectbox(f"Home Slot {i+1} Batter", [p["Player"] for p in home_h_pool], index=default_idx, key=f"h_slot_{home_selection}_{i}_{st.session_state['home_generation_id']}")
+            b = st.selectbox(
+                f"Home Slot {i+1} Batter", 
+                [p["Player"] for p in home_h_pool], 
+                index=min(i, len(home_h_pool)-1), 
+                key=f"home_batter_{i}" # Static Key
+            )
             batters_h.append(b)
             
     if st.button("🔒 Lock Framework Configurations & Generate Ecosystem Data", use_container_width=True):
@@ -204,7 +205,6 @@ if not st.session_state["lineups_locked"]:
         st.session_state["locked_home_bullpen"] = [p for p in home_p_pool if p["Player"] != sp_choice_h]
         
         st.session_state["lineups_locked"] = True
-        st.session_state["monte_carlo_results"] = None
         st.rerun()
 else:
     st.sidebar.button("🔓 Release Lock System", on_click=global_unlock_reset, use_container_width=True)
