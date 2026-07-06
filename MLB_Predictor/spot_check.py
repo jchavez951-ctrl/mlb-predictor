@@ -174,7 +174,6 @@ if not st.session_state["lineups_locked"]:
     
     with col1:
         st.markdown(f"#### {away_selection} Lineup Assets")
-        # Unique keys incorporating the away generation string force complete structural remounting
         sp_choice_a = st.selectbox("Starting Pitcher Choice (Away)", [p["Player"] for p in away_p_pool if p["Role"] == "SP"], key=f"sp_away_{away_selection}_{st.session_state['away_generation_id']}")
         batters_a = []
         for i in range(9):
@@ -244,81 +243,4 @@ else:
                 bb_prob *= scale; k_prob *= scale; hr_prob *= scale
                 
             remainder = 1.0 - (bb_prob + k_prob + hr_prob)
-            babip_matchup = calculate_log_odds(batter["BABIP"] * platoon_mult, pitcher["BABIP_ALLOWED"] * fatigue_penalty, LEAGUE_BASELINE["BABIP"]) * self.park["babip_mult"]
-            
-            hit_in_play_prob = remainder * babip_matchup
-            out_in_play_prob = remainder - hit_in_play_prob
-            
-            return {
-                "BB": bb_prob, "K": k_prob, "HR": hr_prob,
-                "1B": hit_in_play_prob * 0.65, "2B": hit_in_play_prob * 0.21,
-                "3B": hit_in_play_prob * 0.02, "OUT": out_in_play_prob
-            }
-
-        def step_markov_24_state(self, state, outcome, runner_spd):
-            outs = state["outs"]
-            bases = list(state["bases"])
-            runs_scored = 0
-            event_log = ""
-            
-            if outcome in ["K", "OUT"]:
-                outs += 1
-                return outs, bases, 0, "Strikeout" if outcome == "K" else "Fielded Out"
-                
-            if outcome == "BB":
-                if not bases[0]: bases[0] = True
-                elif not bases[1]: bases[1] = True
-                elif not bases[2]: bases[2] = True
-                else: runs_scored += 1
-                return outs, bases, runs_scored, "Base on Balls"
-
-            if outcome == "HR":
-                runs_scored = 1 + sum(1 for b in bases if b)
-                return outs, [False, False, False], runs_scored, f"Home Run ({runs_scored} Run Shot)"
-
-            spd_factor = runner_spd / 100.0
-            if outcome == "1B":
-                new_bases = [True, False, False]
-                if bases[2]: runs_scored += 1
-                if bases[1]:
-                    if spd_factor > 0.68 or random.random() < 0.45: runs_scored += 1
-                    else: new_bases[2] = True
-                if bases[0]: new_bases[1] = True
-                bases = new_bases
-                event_log = "Single"
-            elif outcome == "2B":
-                new_bases = [False, True, False]
-                if bases[2]: runs_scored += 1
-                if bases[1]: runs_scored += 1
-                if bases[0]:
-                    if spd_factor > 0.65: runs_scored += 1
-                    else: new_bases[2] = True
-                bases = new_bases
-                event_log = "Double"
-            elif outcome == "3B":
-                runs_scored = sum(1 for b in bases if b)
-                bases = [False, False, True]
-                event_log = "Triple"
-                
-            return outs, bases, runs_scored, event_log
-
-        def run_full_game(self, tracking_mode=False):
-            g = {
-                "inning": 1, "top_half": True, "away_score": 0, "home_score": 0,
-                "away_lineup_idx": 0, "home_lineup_idx": 0,
-                "away_p": copy.deepcopy(self.away_sp), "home_p": copy.deepcopy(self.home_sp),
-                "away_pitches": 0, "home_pitches": 0,
-                "box_scores": {
-                    "away": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in self.away_lineup},
-                    "home": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in self.home_lineup}
-                },
-                "log_history": [], "win_prob_history": [50.0]
-            }
-            
-            while g["inning"] <= 9 or (g["away_score"] == g["home_score"]):
-                if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]:
-                    break
-                
-                if g["top_half"] and ((g["home_pitches"] > 95 and g["home_p"]["Role"] == "SP") or g["home_pitches"] > 30):
-                    if self.home_bp: g["home_p"] = self.home_bp.pop(0); g["home_pitches"] = 0
-                elif not g["top_half"] and ((g["away_pitches"] > 95 and g
+            babip_matchup = calculate_log_odds(batter
