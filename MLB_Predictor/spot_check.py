@@ -25,14 +25,15 @@ def reset_away_framework():
     st.session_state["lineups_locked"] = False
     st.session_state["monte_carlo_results"] = None
     st.session_state["away_generation_id"] = str(random.randint(1000, 9999))
-    st.rerun()
+    # NOTE: Explicit st.rerun() removed here because on_change triggers its own rerun.
+    # Calling it manually here aborts the widget state-save, locking the team dropdown.
 
 def reset_home_framework():
     """Forces an explicit generation update to completely wipe old widget indexes"""
     st.session_state["lineups_locked"] = False
     st.session_state["monte_carlo_results"] = None
     st.session_state["home_generation_id"] = str(random.randint(1000, 9999))
-    st.rerun()
+    # NOTE: Explicit st.rerun() removed here.
 
 def global_unlock_reset():
     """Fallback structural unlock resetting engine"""
@@ -83,7 +84,7 @@ ROSTER_DATABASE = {
             {"Player": "Adley Rutschman", "Pos": "C", "Bats": "B", "BB_RATE": 0.110, "K_RATE": 0.155, "HR_PA_RATE": 0.035, "BABIP": 0.295, "1B_H_RATE": 0.64, "2B_H_RATE": 0.22, "3B_H_RATE": 0.01, "HR_H_RATE": 0.13, "SPD": 50, "PA": 650},
             {"Player": "Gunnar Henderson", "Pos": "SS", "Bats": "L", "BB_RATE": 0.125, "K_RATE": 0.220, "HR_PA_RATE": 0.058, "BABIP": 0.335, "1B_H_RATE": 0.54, "2B_H_RATE": 0.24, "3B_H_RATE": 0.04, "HR_H_RATE": 0.18, "SPD": 86, "PA": 680},
             {"Player": "Anthony Santander", "Pos": "RF", "Bats": "B", "BB_RATE": 0.085, "K_RATE": 0.190, "HR_PA_RATE": 0.062, "BABIP": 0.265, "1B_H_RATE": 0.48, "2B_H_RATE": 0.24, "3B_H_RATE": 0.01, "HR_H_RATE": 0.27, "SPD": 48, "PA": 640},
-            {"Player": "Jordan Westburg", "Pos": "3B", "Bats": "R", "BB_RATE": 0.078, "K_RATE": 0.225, "HR_PA_RATE": 0.038, "BABIP": 0.325, "1B_H_RATE": 0.58, "25_H_RATE": 0.25, "3B_H_RATE": 0.03, "HR_H_RATE": 0.14, "SPD": 76, "PA": 550},
+            {"Player": "Jordan Westburg", "Pos": "3B", "Bats": "R", "BB_RATE": 0.078, "K_RATE": 0.225, "HR_PA_RATE": 0.038, "BABIP": 0.325, "1B_H_RATE": 0.58, "2B_H_RATE": 0.25, "3B_H_RATE": 0.03, "HR_H_RATE": 0.14, "SPD": 76, "PA": 550}, # Fixed bug layout token "25_H_RATE"
             {"Player": "Ryan Mountcastle", "Pos": "1B", "Bats": "R", "BB_RATE": 0.065, "K_RATE": 0.225, "HR_PA_RATE": 0.035, "BABIP": 0.330, "1B_H_RATE": 0.60, "2B_H_RATE": 0.24, "3B_H_RATE": 0.01, "HR_H_RATE": 0.15, "SPD": 60, "PA": 520},
             {"Player": "Colton Cowser", "Pos": "LF", "Bats": "L", "BB_RATE": 0.102, "K_RATE": 0.285, "HR_PA_RATE": 0.045, "BABIP": 0.310, "1B_H_RATE": 0.54, "2B_H_RATE": 0.25, "3B_H_RATE": 0.02, "HR_H_RATE": 0.19, "SPD": 80, "PA": 500},
             {"Player": "Cedric Mullins", "Pos": "CF", "Bats": "L", "BB_RATE": 0.088, "K_RATE": 0.215, "HR_PA_RATE": 0.032, "BABIP": 0.285, "1B_H_RATE": 0.62, "2B_H_RATE": 0.20, "3B_H_RATE": 0.03, "HR_H_RATE": 0.15, "SPD": 88, "PA": 480},
@@ -244,13 +245,11 @@ else:
                 
             remainder = 1.0 - (bb_prob + k_prob + hr_prob)
             
-            # --- PASTED BUG FIX FOR COMPLETE LINE RESOLUTION ---
             babip_matchup = calculate_log_odds(
                 batter["BABIP"] * platoon_mult, 
                 pitcher["BABIP_ALLOWED"] * fatigue_penalty, 
                 LEAGUE_BASELINE["BABIP"]
             ) * self.park["babip_mult"]
-            # ----------------------------------------------------
             
             hit_in_play_prob = remainder * babip_matchup
             out_in_play_prob = remainder - hit_in_play_prob
@@ -325,7 +324,6 @@ else:
                 if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]:
                     break
                 
-                # --- PASTED BUG FIX FOR BULLPEN INTEGRITY SUBROUTINE ---
                 if g["top_half"] and ((g["home_pitches"] > 95 and g["home_p"]["Role"] == "SP") or g["home_pitches"] > 30):
                     if self.home_bp: 
                         g["home_p"] = self.home_bp.pop(0)
@@ -334,17 +332,18 @@ else:
                     if self.away_bp: 
                         g["away_p"] = self.away_bp.pop(0)
                         g["away_pitches"] = 0
-                # --------------------------------------------------------
 
                 state = {"outs": 0, "bases": [False, False, False]}
                 while state["outs"] < 3:
                     if g["top_half"]:
-                        batter = self.away_lineup[g["away_lineup_idx"] % 9]
+                        buffer_idx = g["away_lineup_idx"] % 9
+                        batter = self.away_lineup[buffer_idx]
                         pitcher = g["home_p"]
                         g["home_pitches"] += random.randint(3, 6)
                         order_cycle = (g["away_lineup_idx"] // 9) + 1
                     else:
-                        batter = self.home_lineup[g["home_lineup_idx"] % 9]
+                        buffer_idx = g["home_lineup_idx"] % 9
+                        batter = self.home_lineup[buffer_idx]
                         pitcher = g["away_p"]
                         g["away_pitches"] += random.randint(3, 6)
                         order_cycle = (g["home_lineup_idx"] // 9) + 1
