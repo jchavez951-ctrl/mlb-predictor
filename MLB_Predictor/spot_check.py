@@ -9,7 +9,7 @@ import copy
 st.set_page_config(page_title="Ultimate MLB Analytics Platform", page_icon="⚾", layout="wide")
 
 # ----------------------------------------------------
-# SYSTEM STATE PERSISTENCE
+# SYSTEM STATE PERSISTENCE & FAULT-TOLERANT INITIALIZATION
 # ----------------------------------------------------
 if "lineups_locked" not in st.session_state:
     st.session_state["lineups_locked"] = False
@@ -17,6 +17,20 @@ if "game_active" not in st.session_state:
     st.session_state["game_active"] = False
 if "monte_carlo_results" not in st.session_state:
     st.session_state["monte_carlo_results"] = None
+
+# Global Placeholders to definitively stop Streamlit KeyError race-conditions
+if "locked_away_sp" not in st.session_state:
+    st.session_state["locked_away_sp"] = {}
+if "locked_home_sp" not in st.session_state:
+    st.session_state["locked_home_sp"] = {}
+if "locked_away_lineup" not in st.session_state:
+    st.session_state["locked_away_lineup"] = []
+if "locked_home_lineup" not in st.session_state:
+    st.session_state["locked_home_lineup"] = []
+if "locked_away_bullpen" not in st.session_state:
+    st.session_state["locked_away_bullpen"] = []
+if "locked_home_bullpen" not in st.session_state:
+    st.session_state["locked_home_bullpen"] = []
 
 # ----------------------------------------------------
 # ADVANCED BASELINE CONFIGURATIONS & HISTORICAL COHORTS
@@ -75,10 +89,9 @@ BALLPARK_ENV = {
 }
 
 # ----------------------------------------------------
-# ADVANCED MATHEMATICAL & LOOKUP FUNCTIONS
+# ADVANCED MATHEMATICAL & DEFENSIVE LOOKUP FUNCTIONS
 # ----------------------------------------------------
 def calculate_log_odds(player_rate, pitcher_rate, league_rate):
-    """ Bill James Log-Odds Matchup Equation to normalize interaction points """
     player_rate = max(0.001, min(0.999, player_rate))
     pitcher_rate = max(0.001, min(0.999, pitcher_rate))
     league_rate = max(0.001, min(0.999, league_rate))
@@ -91,11 +104,10 @@ def calculate_log_odds(player_rate, pitcher_rate, league_rate):
     return final_odds / (1.0 + final_odds)
 
 def apply_bayesian_stabilization(raw_rate, opportunities, baseline_rate, sample_weight=150):
-    """ Stabilizes sparse real-time API fields into actionable predictive data """
     return ((raw_rate * opportunities) + (baseline_rate * sample_weight)) / (opportunities + sample_weight)
 
 def safe_extract_player(df, player_name, fallback_pool):
-    """ Prevents empty DataFrame query index mutations (.iloc[0] IndexError protection) """
+    """ Absolute IndexError protection against asynchronous layout shifts """
     if df is None or df.empty:
         return fallback_pool
     matched = df[df["Player"] == player_name]
@@ -411,11 +423,11 @@ else:
     # ----------------------------------------------------
     # DATA CONVERGENCE LOOP INITIALIZATION
     # ----------------------------------------------------
-    if st.session_state["monte_carlo_results"] is None and st.session_state["lineups_locked"]:
+    # Double validation: Ensure keys are initialized and list components are not blank before parsing engine
+    if st.session_state["monte_carlo_results"] is None and st.session_state["lineups_locked"] and len(st.session_state["locked_away_lineup"]) > 0:
         with st.spinner("Executing 1,000x Background Monte Carlo Convergence Loops..."):
             park_rules = BALLPARK_ENV.get(home_selection, BALLPARK_ENV["Neutral Site"])
             
-            # Explicitly keyword-mapped initialization to eliminate syntax bracket failures
             engine = DipsMarkovEngine(
                 away_lineup=st.session_state["locked_away_lineup"],
                 home_lineup=st.session_state["locked_home_lineup"],
@@ -530,3 +542,6 @@ else:
                     time.sleep(playback_speed)
                     
             st.success(f"🏁 Interface Playback Complete. Final Score Matrix Resolved: Away {g['away_score']} - Home {g['home_score']}")
+    elif st.session_state["lineups_locked"]:
+        # Safety message in case a desynced re-run occurs prior to form submission
+        st.info("🔄 Configuration updated. Please review lineup selections above and click lock to initialize engine calculation tensors.")
