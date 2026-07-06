@@ -16,10 +16,7 @@ if "monte_carlo_results" not in st.session_state:
     st.session_state["monte_carlo_results"] = None
 
 def reset_simulation_framework():
-    """
-    State Callback Function: Forces the ecosystem to unlock and flushes 
-    the calculation cache the absolute instant a team change is selected.
-    """
+    """Definitively force-unlocks and flushes calculations on team swaps"""
     st.session_state["lineups_locked"] = False
     st.session_state["monte_carlo_results"] = None
 
@@ -51,7 +48,7 @@ ROSTER_DATABASE = {
             {"Player": "Zack Gelof", "Pos": "2B", "Bats": "R", "BB_RATE": 0.088, "K_RATE": 0.290, "HR_PA_RATE": 0.038, "BABIP": 0.305, "1B_H_RATE": 0.59, "2B_H_RATE": 0.24, "3B_H_RATE": 0.02, "HR_H_RATE": 0.15, "SPD": 85, "PA": 540},
             {"Player": "Jonah Heim", "Pos": "C", "Bats": "B", "BB_RATE": 0.075, "K_RATE": 0.195, "HR_PA_RATE": 0.028, "BABIP": 0.280, "1B_H_RATE": 0.65, "2B_H_RATE": 0.22, "3B_H_RATE": 0.00, "HR_H_RATE": 0.13, "SPD": 45, "PA": 420},
             {"Player": "Alika Williams", "Pos": "SS", "Bats": "R", "BB_RATE": 0.060, "K_RATE": 0.220, "HR_PA_RATE": 0.010, "BABIP": 0.295, "1B_H_RATE": 0.78, "2B_H_RATE": 0.16, "3B_H_RATE": 0.04, "HR_H_RATE": 0.02, "SPD": 78, "PA": 280},
-            {"Player": "Henry Bolte", "Pos": "LF", "Bats": "R", "BB_RATE": 0.105, "K_RATE": 0.310, "HR_PA_RATE": 0.040, "BABIP": 0.330, "1B_H_RATE": 0.55, "24B_H_RATE": 0.24, "3B_H_RATE": 0.03, "HR_H_RATE": 0.18, "SPD": 88, "PA": 310},
+            {"Player": "Henry Bolte", "Pos": "LF", "Bats": "R", "BB_RATE": 0.105, "K_RATE": 0.310, "HR_PA_RATE": 0.040, "BABIP": 0.330, "1B_H_RATE": 0.55, "2B_H_RATE": 0.24, "3B_H_RATE": 0.03, "HR_H_RATE": 0.18, "SPD": 88, "PA": 310},
             {"Player": "Brian Serven", "Pos": "C", "Bats": "R", "BB_RATE": 0.065, "K_RATE": 0.250, "HR_PA_RATE": 0.012, "BABIP": 0.260, "1B_H_RATE": 0.75, "2B_H_RATE": 0.18, "3B_H_RATE": 0.01, "HR_H_RATE": 0.06, "SPD": 40, "PA": 150}
         ],
         "pitching": [
@@ -89,7 +86,7 @@ BALLPARK_ENV = {
 }
 
 # ----------------------------------------------------
-# ADVANCED LOG-ODDS AND FALLBACK SAFETY HANDLERS
+# MATH COUPLING OPERATIONS
 # ----------------------------------------------------
 def calculate_log_odds(player_rate, pitcher_rate, league_rate):
     player_rate = max(0.001, min(0.999, player_rate))
@@ -113,12 +110,12 @@ def safe_extract_player(roster_dict, side, player_name, fallback_idx=0):
     return copy.deepcopy(pool[min(fallback_idx, len(pool) - 1)])
 
 # ----------------------------------------------------
-# CONTROL BOARD INTERFACE UI (WITH EXPLICIT CALLBACKS)
+# CONTROL BOARD INTERFACE UI (ISOLATED DROP-DOWNS)
 # ----------------------------------------------------
 st.sidebar.header("⚾ Enterprise Simulator Panel")
 all_teams_list = list(ROSTER_DATABASE.keys())
 
-# Added on_change callbacks & explicit keys to fix dropdown freeze locks
+# Render dropdown fields decoupled completely from structural execution logic flags
 away_selection = st.sidebar.selectbox(
     "Away Roster Array", 
     all_teams_list, 
@@ -150,6 +147,9 @@ home_h_pool = ROSTER_DATABASE[home_selection]["hitting"]
 away_p_pool = ROSTER_DATABASE[away_selection]["pitching"]
 home_p_pool = ROSTER_DATABASE[home_selection]["pitching"]
 
+# ----------------------------------------------------
+# VIEW ROUTER RENDER SEPARATION
+# ----------------------------------------------------
 if not st.session_state["lineups_locked"]:
     st.subheader("📋 Core Lineup Configuration Ingestion")
     col1, col2 = st.columns(2)
@@ -184,7 +184,7 @@ if not st.session_state["lineups_locked"]:
         st.session_state["monte_carlo_results"] = None
         st.rerun()
 else:
-    st.sidebar.button("🔓 Release Lock System", on_click=reset_simulation_framework)
+    st.sidebar.button("🔓 Release Lock System", on_click=reset_simulation_framework, use_container_width=True)
 
     # ----------------------------------------------------
     # ADVANCED QUANT MODULE: 24-STATE MARKOV SIMULATION ENGINE
