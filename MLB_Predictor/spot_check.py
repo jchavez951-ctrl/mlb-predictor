@@ -1,333 +1,441 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import scipy.linalg as la
 import random
-import copy
 import time
+import copy
 
-st.set_page_config(page_title="Quantum MLB Analytics Platform", page_icon="♾️", layout="wide")
+st.set_page_config(page_title="Ultimate MLB Analytics Platform v2", page_icon="⚾", layout="wide")
 
 # ----------------------------------------------------
-# ADVANCED MATHEMATICAL CORE MODULES
+# SYSTEM STATE PERSISTENCE & FAULT-TOLERANT INITIALIZATION
 # ----------------------------------------------------
-class QuantumPhysicsTensor:
-    """ Computes ball flight trajectories using localized atmospheric physics equations. """
-    @staticmethod
-    def calculate_air_density(temp_f, elevation_ft, humidity=0.50):
-        # Base sea-level pressure adjustments
-        p_base = 1013.25 * (1 - 2.25577e-5 * elevation_ft)**5.25588
-        temp_c = (temp_f - 32) * 5 / 9
-        temp_k = temp_c + 273.15
-        # Density of dry air (kg/m^3)
-        rho = (p_base * 100) / (287.05 * temp_k)
-        return rho / 1.225 # Normalized to standard sea level factor
+if "lineups_locked" not in st.session_state:
+    st.session_state["lineups_locked"] = False
+if "monte_carlo_results" not in st.session_state:
+    st.session_state["monte_carlo_results"] = None
 
-    @staticmethod
-    def evaluate_trajectory(exit_vel_mph, launch_angle_deg, temp_f, elevation_ft, wind_direction, wind_speed_mph):
-        rho_scalar = QuantumPhysicsTensor.calculate_air_density(temp_f, elevation_ft)
-        
-        # Approximate baseline distance using simplified drag equations
-        # Base distance for 100mph exit vel at 25 degrees under standard conditions ~ 400ft
-        base_dist = (exit_vel_mph * 4.0) * (1.0 + (launch_angle_deg - 28) * -0.005)
-        
-        # Air density corrections (thinner air = ball carries further)
-        density_delta = (1.0 - rho_scalar) * 45.0 
-        final_distance = base_dist + density_delta
-        
-        # Wind Vector Modifiers
-        if wind_direction == "Blowing Out (Boosted)":
-            final_distance += (wind_speed_mph * 2.8)
-        elif wind_direction == "Blowing In (Deadened)":
-            final_distance -= (wind_speed_mph * 3.1)
+# Global Placeholders to definitively stop Streamlit KeyError race-conditions
+if "locked_away_sp" not in st.session_state: st.session_state["locked_away_sp"] = {}
+if "locked_home_sp" not in st.session_state: st.session_state["locked_home_sp"] = {}
+if "locked_away_lineup" not in st.session_state: st.session_state["locked_away_lineup"] = []
+if "locked_home_lineup" not in st.session_state: st.session_state["locked_home_lineup"] = []
+if "locked_away_bullpen" not in st.session_state: st.session_state["locked_away_bullpen"] = []
+if "locked_home_bullpen" not in st.session_state: st.session_state["locked_home_bullpen"] = []
+
+# ----------------------------------------------------
+# ADVANCED BASELINE CONFIGURATIONS & HISTORICAL COHORTS
+# ----------------------------------------------------
+LEAGUE_BASELINE = {
+    "AVG": 0.244, "OBP": 0.315, "SLG": 0.402, "BABIP": 0.290,
+    "BB_RATE": 0.085, "K_RATE": 0.225, "HR_PA_RATE": 0.030,
+    "1B_H_RATE": 0.635, "2B_H_RATE": 0.210, "3B_H_RATE": 0.015, "HR_H_RATE": 0.140
+}
+
+ROSTER_DATABASE = {
+    "Athletics": {
+        "primary": "#003831", "secondary": "#EFB21E",
+        "hitting": [
+            {"Player": "Nick Kurtz", "Pos": "1B", "Bats": "L", "BB_RATE": 0.135, "K_RATE": 0.210, "HR_PA_RATE": 0.045, "BABIP": 0.315, "1B_H_RATE": 0.58, "2B_H_RATE": 0.22, "3B_H_RATE": 0.01, "HR_H_RATE": 0.19, "SPD": 65, "PA": 450},
+            {"Player": "Shea Langeliers", "Pos": "C", "Bats": "R", "BB_RATE": 0.082, "K_RATE": 0.255, "HR_PA_RATE": 0.052, "BABIP": 0.270, "1B_H_RATE": 0.52, "2B_H_RATE": 0.20, "3B_H_RATE": 0.01, "HR_H_RATE": 0.27, "SPD": 55, "PA": 510},
+            {"Player": "Brent Rooker", "Pos": "DH", "Bats": "R", "BB_RATE": 0.112, "K_RATE": 0.285, "HR_PA_RATE": 0.065, "BABIP": 0.340, "1B_H_RATE": 0.48, "2B_H_RATE": 0.23, "3B_H_RATE": 0.01, "HR_H_RATE": 0.28, "SPD": 58, "PA": 580},
+            {"Player": "Lawrence Butler", "Pos": "RF", "Bats": "L", "BB_RATE": 0.091, "K_RATE": 0.240, "HR_PA_RATE": 0.042, "BABIP": 0.320, "1B_H_RATE": 0.60, "2B_H_RATE": 0.22, "3B_H_RATE": 0.03, "HR_H_RATE": 0.15, "SPD": 82, "PA": 480},
+            {"Player": "Zack Gelof", "Pos": "2B", "Bats": "R", "BB_RATE": 0.088, "K_RATE": 0.290, "HR_PA_RATE": 0.038, "BABIP": 0.305, "1B_H_RATE": 0.59, "2B_H_RATE": 0.24, "3B_H_RATE": 0.02, "HR_H_RATE": 0.15, "SPD": 85, "PA": 540},
+            {"Player": "Jonah Heim", "Pos": "C", "Bats": "B", "BB_RATE": 0.075, "K_RATE": 0.195, "HR_PA_RATE": 0.028, "BABIP": 0.280, "1B_H_RATE": 0.65, "2B_H_RATE": 0.22, "3B_H_RATE": 0.00, "HR_H_RATE": 0.13, "SPD": 45, "PA": 420},
+            {"Player": "Alika Williams", "Pos": "SS", "Bats": "R", "BB_RATE": 0.060, "K_RATE": 0.220, "HR_PA_RATE": 0.010, "BABIP": 0.295, "1B_H_RATE": 0.78, "2B_H_RATE": 0.16, "3B_H_RATE": 0.04, "HR_H_RATE": 0.02, "SPD": 78, "PA": 280},
+            {"Player": "Henry Bolte", "Pos": "LF", "Bats": "R", "BB_RATE": 0.105, "K_RATE": 0.310, "HR_PA_RATE": 0.040, "BABIP": 0.330, "1B_H_RATE": 0.55, "2B_H_RATE": 0.24, "3B_H_RATE": 0.03, "HR_H_RATE": 0.18, "SPD": 88, "PA": 310},
+            {"Player": "Brian Serven", "Pos": "C", "Bats": "R", "BB_RATE": 0.065, "K_RATE": 0.250, "HR_PA_RATE": 0.012, "BABIP": 0.260, "1B_H_RATE": 0.75, "2B_H_RATE": 0.18, "3B_H_RATE": 0.01, "HR_H_RATE": 0.06, "SPD": 40, "PA": 150}
+        ],
+        "pitching": [
+            {"Player": "Mason Miller", "Pos": "P", "Role": "SP", "Throws": "R", "BB_ALLOWED_RATE": 0.065, "K_ALLOWED_RATE": 0.385, "HR_PA_ALLOWED_RATE": 0.018, "BABIP_ALLOWED": 0.265, "OAVG": 0.185, "IP": "75.0", "ERA": 2.10, "Fatigue": 0.0},
+            {"Player": "JP Sears", "Pos": "P", "Role": "SP", "Throws": "L", "BB_ALLOWED_RATE": 0.072, "K_ALLOWED_RATE": 0.210, "HR_PA_ALLOWED_RATE": 0.038, "BABIP_ALLOWED": 0.290, "OAVG": 0.245, "IP": "175.1", "ERA": 4.25, "Fatigue": 0.0},
+            {"Player": "Lucas Erceg", "Pos": "P", "Role": "RP", "Throws": "R", "BB_ALLOWED_RATE": 0.085, "K_ALLOWED_RATE": 0.270, "HR_PA_ALLOWED_RATE": 0.022, "BABIP_ALLOWED": 0.285, "OAVG": 0.220, "IP": "65.0", "ERA": 3.15, "Fatigue": 0.0},
+            {"Player": "Tyler Ferguson", "Pos": "P", "Role": "Closer", "Throws": "R", "BB_ALLOWED_RATE": 0.090, "K_ALLOWED_RATE": 0.260, "HR_PA_ALLOWED_RATE": 0.025, "BABIP_ALLOWED": 0.275, "OAVG": 0.225, "IP": "55.0", "ERA": 3.40, "Fatigue": 0.0}
+        ]
+    },
+    "Baltimore Orioles": {
+        "primary": "#DF4618", "secondary": "#000000",
+        "hitting": [
+            {"Player": "Adley Rutschman", "Pos": "C", "Bats": "B", "BB_RATE": 0.110, "K_RATE": 0.155, "HR_PA_RATE": 0.035, "BABIP": 0.295, "1B_H_RATE": 0.64, "2B_H_RATE": 0.22, "3B_H_RATE": 0.01, "HR_H_RATE": 0.13, "SPD": 50, "PA": 650},
+            {"Player": "Gunnar Henderson", "Pos": "SS", "Bats": "L", "BB_RATE": 0.125, "K_RATE": 0.220, "HR_PA_RATE": 0.058, "BABIP": 0.335, "1B_H_RATE": 0.54, "2B_H_RATE": 0.24, "3B_H_RATE": 0.04, "HR_H_RATE": 0.18, "SPD": 86, "PA": 680},
+            {"Player": "Anthony Santander", "Pos": "RF", "Bats": "B", "BB_RATE": 0.085, "K_RATE": 0.190, "HR_PA_RATE": 0.062, "BABIP": 0.265, "1B_H_RATE": 0.48, "2B_H_RATE": 0.24, "3B_H_RATE": 0.01, "HR_H_RATE": 0.27, "SPD": 48, "PA": 640},
+            {"Player": "Jordan Westburg", "Pos": "3B", "Bats": "R", "BB_RATE": 0.078, "K_RATE": 0.225, "HR_PA_RATE": 0.038, "BABIP": 0.325, "1B_H_RATE": 0.58, "2B_H_RATE": 0.25, "3B_H_RATE": 0.03, "HR_H_RATE": 0.14, "SPD": 76, "PA": 550},
+            {"Player": "Ryan Mountcastle", "Pos": "1B", "Bats": "R", "BB_RATE": 0.065, "K_RATE": 0.225, "HR_PA_RATE": 0.035, "BABIP": 0.330, "1B_H_RATE": 0.60, "2B_H_RATE": 0.24, "3B_H_RATE": 0.01, "HR_H_RATE": 0.15, "SPD": 60, "PA": 520},
+            {"Player": "Colton Cowser", "Pos": "LF", "Bats": "L", "BB_RATE": 0.102, "K_RATE": 0.285, "HR_PA_RATE": 0.045, "BABIP": 0.310, "1B_H_RATE": 0.54, "2B_H_RATE": 0.25, "3B_H_RATE": 0.02, "HR_H_RATE": 0.19, "SPD": 80, "PA": 500},
+            {"Player": "Cedric Mullins", "Pos": "CF", "Bats": "L", "BB_RATE": 0.088, "K_RATE": 0.215, "HR_PA_RATE": 0.032, "BABIP": 0.285, "1B_H_RATE": 0.62, "2B_H_RATE": 0.20, "3B_H_RATE": 0.03, "HR_H_RATE": 0.15, "SPD": 88, "PA": 480},
+            {"Player": "Leody Taveras", "Pos": "CF", "Bats": "B", "BB_RATE": 0.070, "K_RATE": 0.210, "HR_PA_RATE": 0.022, "BABIP": 0.300, "1B_H_RATE": 0.68, "2B_H_RATE": 0.20, "3B_H_RATE": 0.02, "HR_H_RATE": 0.10, "SPD": 84, "PA": 410},
+            {"Player": "Jackson Holliday", "Pos": "2B", "Bats": "L", "BB_RATE": 0.115, "K_RATE": 0.260, "HR_PA_RATE": 0.030, "BABIP": 0.315, "1B_H_RATE": 0.62, "2B_H_RATE": 0.22, "3B_H_RATE": 0.03, "HR_H_RATE": 0.13, "SPD": 82, "PA": 460}
+        ],
+        "pitching": [
+            {"Player": "Corbin Burnes", "Pos": "P", "Role": "SP", "Throws": "R", "BB_ALLOWED_RATE": 0.055, "K_ALLOWED_RATE": 0.250, "HR_PA_ALLOWED_RATE": 0.022, "BABIP_ALLOWED": 0.280, "OAVG": 0.215, "IP": "194.1", "ERA": 2.95, "Fatigue": 0.0},
+            {"Player": "Grayson Rodriguez", "Pos": "P", "Role": "SP", "Throws": "R", "BB_ALLOWED_RATE": 0.075, "K_ALLOWED_RATE": 0.265, "HR_PA_ALLOWED_RATE": 0.025, "BABIP_ALLOWED": 0.295, "OAVG": 0.230, "IP": "162.0", "ERA": 3.80, "Fatigue": 0.0},
+            {"Player": "Yennier Cano", "Pos": "P", "Role": "RP", "Throws": "R", "BB_ALLOWED_RATE": 0.060, "K_ALLOWED_RATE": 0.230, "HR_PA_ALLOWED_RATE": 0.015, "BABIP_ALLOWED": 0.290, "OAVG": 0.225, "IP": "70.0", "ERA": 2.85, "Fatigue": 0.0},
+            {"Player": "Seranthony Dominguez", "Pos": "P", "Role": "Closer", "Throws": "R", "BB_ALLOWED_RATE": 0.095, "K_ALLOWED_RATE": 0.275, "HR_PA_ALLOWED_RATE": 0.030, "BABIP_ALLOWED": 0.280, "OAVG": 0.218, "IP": "60.0", "ERA": 3.60, "Fatigue": 0.0}
+        ]
+    }
+}
+
+BALLPARK_ENV = {
+    "Athletics": {"run_mult": 0.95, "hr_mult": 0.88, "babip_mult": 0.98},
+    "Baltimore Orioles": {"run_mult": 1.02, "hr_mult": 0.95, "babip_mult": 1.01}
+}
+
+# ----------------------------------------------------
+# ADVANCED LOG-ODDS AND FALLBACK SAFETY HANDLERS
+# ----------------------------------------------------
+def calculate_log_odds(player_rate, pitcher_rate, league_rate):
+    player_rate = max(0.001, min(0.999, player_rate))
+    pitcher_rate = max(0.001, min(0.999, pitcher_rate))
+    league_rate = max(0.001, min(0.999, league_rate))
+    
+    odds_b = player_rate / (1.0 - player_rate)
+    odds_p = pitcher_rate / (1.0 - pitcher_rate)
+    odds_l = league_rate / (1.0 - league_rate)
+    
+    final_odds = (odds_b * odds_p) / odds_l
+    return final_odds / (1.0 + final_odds)
+
+def safe_extract_player(roster_dict, side, player_name, fallback_idx=0):
+    pool = roster_dict.get(side, [])
+    if not pool:
+        return {}
+    matched = [p for p in pool if p["Player"] == player_name]
+    if matched:
+        return copy.deepcopy(matched[0])
+    return copy.deepcopy(pool[min(fallback_idx, len(pool) - 1)])
+
+# ----------------------------------------------------
+# CONTROL BOARD INTERFACE UI
+# ----------------------------------------------------
+st.sidebar.header("⚾ Enterprise Simulator Panel")
+all_teams_list = list(ROSTER_DATABASE.keys())
+away_selection = st.sidebar.selectbox("Away Roster Array", all_teams_list, index=0)
+home_selection = st.sidebar.selectbox("Home Roster Array", all_teams_list, index=1)
+
+st.sidebar.markdown("### ☁️ Environmental Weather Tensors")
+temperature = st.sidebar.slider("Ambient Temperature (°F)", 40, 105, 73, step=1)
+stadium_alt = st.sidebar.slider("Stadium Elevation (Feet)", 0, 5280, 400, step=100)
+wind_vector = st.sidebar.selectbox("Wind Spatial Direction", ["Calm / Neutral", "Blowing In (Deadened)", "Blowing Out (Boosted)"])
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 🏛️ Vegas Consensus Line Input")
+vegas_line_input = st.sidebar.number_input("Market Closing Moneyline (Home Team)", value=-110, step=5)
+playback_speed = st.sidebar.slider("Simulation Step Intercept Delay", 0.00, 0.50, 0.02, step=0.01)
+
+away_h_pool = ROSTER_DATABASE[away_selection]["hitting"]
+home_h_pool = ROSTER_DATABASE[home_selection]["hitting"]
+away_p_pool = ROSTER_DATABASE[away_selection]["pitching"]
+home_p_pool = ROSTER_DATABASE[home_selection]["pitching"]
+
+if not st.session_state["lineups_locked"]:
+    st.subheader("📋 Core Lineup Configuration Ingestion")
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown(f"#### {away_selection} Lineup Assets")
+        sp_choice_a = st.selectbox("Starting Pitcher Choice (Away)", [p["Player"] for p in away_p_pool if p["Role"] == "SP"])
+        batters_a = []
+        for i in range(9):
+            b = st.selectbox(f"Away Slot {i+1} Batter", [p["Player"] for p in away_h_pool], index=min(i, len(away_h_pool)-1), key=f"a_slot_key_{i}")
+            batters_a.append(b)
             
-        return max(10.0, final_distance)
-
-class BayesianCapacitor:
-    """ Tracks real-time, live-updating skill deterioration using conjugate distributions. """
-    def __init__(self, alpha_prior=24, beta_prior=76):
-        self.alpha = alpha_prior
-        self.beta = beta_prior
-        
-    def update_live_state(self, success: bool):
-        if success:
-            self.alpha += 1
-        else:
-            self.beta += 1
+    with col2:
+        st.markdown(f"#### {home_selection} Lineup Assets")
+        sp_choice_h = st.selectbox("Starting Pitcher Choice (Home)", [p["Player"] for p in home_p_pool if p["Role"] == "SP"])
+        batters_h = []
+        for i in range(9):
+            b = st.selectbox(f"Home Slot {i+1} Batter", [p["Player"] for p in home_h_pool], index=min(i, len(home_h_pool)-1), key=f"h_slot_key_{i}")
+            batters_h.append(b)
             
-    def sample_current_probability(self):
-        # Returns the expected value of the updated beta distribution
-        return self.alpha / (self.alpha + self.beta)
+    if st.button("🔒 Lock Framework Configurations & Generate Ecosystem Data", use_container_width=True):
+        st.session_state["locked_away_sp"] = safe_extract_player(ROSTER_DATABASE[away_selection], "pitching", sp_choice_a, 0)
+        st.session_state["locked_home_sp"] = safe_extract_player(ROSTER_DATABASE[home_selection], "pitching", sp_choice_h, 0)
+        
+        st.session_state["locked_away_lineup"] = [safe_extract_player(ROSTER_DATABASE[away_selection], "hitting", b, idx) for idx, b in enumerate(batters_a)]
+        st.session_state["locked_home_lineup"] = [safe_extract_player(ROSTER_DATABASE[home_selection], "hitting", b, idx) for idx, b in enumerate(batters_h)]
+        
+        st.session_state["locked_away_bullpen"] = [p for p in away_p_pool if p["Player"] != sp_choice_a]
+        st.session_state["locked_home_bullpen"] = [p for p in home_p_pool if p["Player"] != sp_choice_h]
+        
+        st.session_state["lineups_locked"] = True
+        st.session_state["monte_carlo_results"] = None
+        st.rerun()
+else:
+    st.sidebar.button("🔓 Release Lock System", on_click=lambda: st.session_state.update({"lineups_locked": False, "monte_carlo_results": None}))
 
-# ----------------------------------------------------
-# COMPREHENSIVE CONTINUOUS MARKOV CHAIN ENGINE
-# ----------------------------------------------------
-class ContinuousMarkovSimulator:
-    """ Resolves situational mechanics via complete 24-State Run-Expectancy Matrices. """
-    def __init__(self, environmental_tensors):
-        self.env = environmental_tensors
-        # Map 8 Base Configurations to Index Coordinates:
-        # 0: Empty, 1: 1B, 2: 2B, 3: 3B, 4: 1B+2B, 5: 1B+3B, 6: 2B+3B, 7: Loaded
-        self.state_map = {
-            (False, False, False): 0, (True, False, False): 1,
-            (False, True, False): 2, (False, False, True): 3,
-            (True, True, False): 4, (True, False, True): 5,
-            (False, True, True): 6, (True, True, True): 7
-        }
-        self.inv_state_map = {v: k for k, v in self.state_map.items()}
-
-    def resolve_plate_appearance(self, batter, pitcher, times_faced):
-        # 1. Plate Discipline Command Matrix Intersection
-        z_swing = batter.get("Z_Swing", 0.65)
-        o_swing = batter.get("O_Swing", 0.30)
-        zone_rate = pitcher.get("Zone_Rate", 0.48)
-        pitcher_whiff = pitcher.get("Whiff_Rate", 0.24)
-        
-        # Calculate derived pitch outcome probabilities
-        swing_prob = (zone_rate * z_swing) + ((1 - zone_rate) * o_swing)
-        contact_prob = 1.0 - (pitcher_whiff * (swing_prob))
-        
-        # 2. Bayesian Degradation Calculations
-        fatigue_penalty = max(0.70, 1.0 - (pitcher.get("Live_Pitches", 0) * 0.0025))
-        ttop_scalar = 1.05 if times_faced == 2 else (1.18 if times_faced >= 3 else 1.0)
-        
-        # 3. Micro-Outcome Probability Generation
-        bb_prob = (1.0 - zone_rate) * (1.0 - o_swing) * ttop_scalar
-        k_prob = (zone_rate * (1.0 - z_swing)) + (swing_prob * (1.0 - contact_prob))
-        k_prob *= (1.0 / fatigue_penalty)
-        
-        in_play_prob = 1.0 - (bb_prob + k_prob)
-        
-        # 4. Ball Flight Aerodynamics Resolution Engine
-        rand_ev = np.random.normal(batter.get("Avg_EV", 89.5), batter.get("Max_EV", 112.0) * 0.08)
-        rand_la = np.random.normal(batter.get("Launch_Angle", 12.0), 8.0)
-        
-        flight_distance = QuantumPhysicsTensor.evaluate_trajectory(
-            rand_ev, rand_la, self.env["temp"], self.env["elevation"], self.env["wind_dir"], self.env["wind_speed"]
-        )
-        
-        if in_play_prob < 0: in_play_prob = 0.10
-        
-        # Map distance directly to true contextual outcome thresholds
-        if flight_distance > 385: return "HR"
-        elif flight_distance > 325: return "3B" if random.random() < 0.05 else "2B"
-        elif flight_distance > 210: 
-            if rand_la < 10: return "OUT" # Ground out
-            return "1B" if random.random() < 0.320 else "OUT"
-        else:
-            return "1B" if random.random() < 0.210 else "OUT"
-
-    def transition_state(self, base_idx, outs, outcome, batter_spd):
-        bases = list(self.inv_state_map[base_idx])
-        runs = 0
-        new_outs = outs
-        
-        if outcome == "OUT":
-            new_outs += 1
-            return base_idx, new_outs, 0
-        if outcome == "BB":
-            if not bases[0]: bases[0] = True
-            elif not bases[1]: bases[1] = True
-            elif not bases[2]: bases[2] = True
-            else: runs += 1
-            return self.state_map[tuple(bases)], new_outs, runs
-        if outcome == "HR":
-            runs = 1 + sum(1 for b in bases if b)
-            return 0, new_outs, runs
+    # ----------------------------------------------------
+    # ADVANCED QUANT MODULE: 24-STATE MARKOV SIMULATION ENGINE
+    # ----------------------------------------------------
+    class DipsMarkovEngine:
+        def __init__(self, away_lineup, home_lineup, away_sp, home_sp, away_bp, home_bp, park_rules, env_tensors):
+            self.away_lineup = away_lineup
+            self.home_lineup = home_lineup
+            self.away_sp = away_sp
+            self.home_sp = home_sp
+            self.away_bp = copy.deepcopy(away_bp)
+            self.home_bp = copy.deepcopy(home_bp)
+            self.park = park_rules
+            self.env = env_tensors
             
-        # Speed-correlated dynamic base running optimizations
-        spd_mod = batter_spd / 100.0
-        if outcome == "1B":
-            new_bases = [True, False, False]
-            if bases[2]: runs += 1
-            if bases[1]:
-                if spd_mod > 0.70 or random.random() < 0.35: runs += 1
-                else: new_bases[2] = True
-            if bases[0]:
-                if spd_mod > 0.75 and not bases[1]: new_bases[2] = True
-                else: new_bases[1] = True
-            bases = new_bases
-        elif outcome == "2B":
-            new_bases = [False, True, False]
-            if bases[2]: runs += 1
-            if bases[1]: runs += 1
-            if bases[0]:
-                if spd_mod > 0.65: runs += 1
-                else: new_bases[2] = True
-            bases = new_bases
-        elif outcome == "3B":
-            runs = sum(1 for b in bases if b)
-            bases = [False, False, True]
+        def execute_matchup_vector(self, batter, pitcher, order_cycle):
+            is_platoon = (batter["Bats"] == "L" and pitcher["Throws"] == "R") or (batter["Bats"] == "R" and pitcher["Throws"] == "L")
+            platoon_mult = 1.07 if is_platoon else 0.93
             
-        return self.state_map[tuple(bases)], new_outs, runs
+            fatigue_penalty = 1.0 + (pitcher.get("Fatigue", 0.0) * 0.35)
+            ttop_mult = 1.0 + ((order_cycle - 1) * 0.06) if pitcher["Role"] == "SP" else 1.0
+            
+            temp_density_scalar = 1.0 + ((self.env["temp"] - 72) * 0.0012)
+            elevation_scalar = 1.0 + (self.env["elevation"] / 5280 * 0.05)
+            wind_scalar = 1.10 if self.env["wind"] == "Blowing Out (Boosted)" else (0.90 if self.env["wind"] == "Blowing In (Deadened)" else 1.0)
 
-# ----------------------------------------------------
-# ADVANCED ENSEMBLE SIMULATION FRAMEWORK
-# ----------------------------------------------------
-class EnterpriseMacroSimulator:
-    def __init__(self, away_lineup, home_lineup, away_pitchers, home_pitchers, env):
-        self.away_lineup = away_lineup
-        self.home_lineup = home_lineup
-        self.away_pitchers = copy.deepcopy(away_pitchers)
-        self.home_pitchers = copy.deepcopy(home_pitchers)
-        self.markov = ContinuousMarkovSimulator(env)
-
-    def execute_single_match(self):
-        g = {
-            "inning": 1, "top_half": True, "away_score": 0, "home_score": 0,
-            "away_idx": 0, "home_idx": 0, "outs": 0, "base_state_idx": 0,
-            "away_p_curr": self.away_pitchers[0], "home_p_curr": self.home_pitchers[0],
-            "away_p_idx": 0, "home_p_idx": 0, "history_logs": []
-        }
-        
-        g["away_p_curr"]["Live_Pitches"] = 0
-        g["home_p_curr"]["Live_Pitches"] = 0
-        
-        # Track times through rotation manually
-        away_facing_counter = {}
-        home_facing_counter = {}
-
-        while g["inning"] <= 9 or (g["away_score"] == g["home_score"]):
-            # Check for walk-off conditions in extra innings
-            if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]:
-                break
+            bb_prob = calculate_log_odds(batter["BB_RATE"], pitcher["BB_ALLOWED_RATE"] * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["BB_RATE"])
+            k_prob = calculate_log_odds(batter["K_RATE"], pitcher["K_ALLOWED_RATE"] * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["K_RATE"])
+            
+            hr_base = calculate_log_odds(batter["HR_PA_RATE"], pitcher["HR_PA_ALLOWED_RATE"] * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["HR_PA_RATE"])
+            hr_prob = hr_base * self.park["hr_mult"] * temp_density_scalar * elevation_scalar * wind_scalar
+            
+            sum_isolated = bb_prob + k_prob + hr_prob
+            if sum_isolated >= 0.95:
+                scale = 0.95 / sum_isolated
+                bb_prob *= scale; k_prob *= scale; hr_prob *= scale
                 
-            g["outs"] = 0
-            g["base_state_idx"] = 0 # Clear bases at start of half-inning
+            remainder = 1.0 - (bb_prob + k_prob + hr_prob)
+            babip_matchup = calculate_log_odds(batter["BABIP"] * platoon_mult, pitcher["BABIP_ALLOWED"] * fatigue_penalty, LEAGUE_BASELINE["BABIP"]) * self.park["babip_mult"]
             
-            # Leverage-Based High Performance Reliever Decision Tree
-            score_diff = abs(g["away_score"] - g["home_score"])
-            is_high_leverage = g["inning"] >= 7 and score_diff <= 2
+            hit_in_play_prob = remainder * babip_matchup
+            out_in_play_prob = remainder - hit_in_play_prob
             
-            while g["outs"] < 3:
-                if g["top_half"]:
-                    # Mid-inning pitching changes
-                    if (g["home_p_curr"]["Live_Pitches"] > 85 and g["home_p_idx"] == 0) or (g["home_p_curr"]["Live_Pitches"] > 25 and g["home_p_idx"] > 0) or (is_high_leverage and g["home_p_idx"] == 0):
-                        if g["home_p_idx"] + 1 < len(self.home_pitchers):
-                            g["home_p_idx"] += 1
-                            g["home_p_curr"] = self.home_pitchers[g["home_p_idx"]]
-                            g["home_p_curr"]["Live_Pitches"] = 0
-                            
-                    batter = self.away_lineup[g["away_idx"] % 9]
-                    pitcher = g["home_p_curr"]
-                    
-                    times_faced = away_facing_counter.get(batter["Player"], 0) + 1
-                    away_facing_counter[batter["Player"]] = times_faced
-                else:
-                    if (g["away_p_curr"]["Live_Pitches"] > 85 and g["away_p_idx"] == 0) or (g["away_p_curr"]["Live_Pitches"] > 25 and g["away_p_idx"] > 0) or (is_high_leverage and g["away_p_idx"] == 0):
-                        if g["away_p_idx"] + 1 < len(self.away_pitchers):
-                            g["away_p_idx"] += 1
-                            g["away_p_curr"] = self.away_pitchers[g["away_p_idx"]]
-                            g["away_p_curr"]["Live_Pitches"] = 0
-                            
-                    batter = self.home_lineup[g["home_idx"] % 9]
-                    pitcher = g["away_p_curr"]
-                    
-                    times_faced = home_facing_counter.get(batter["Player"], 0) + 1
-                    home_facing_counter[batter["Player"]] = times_faced
+            return {
+                "BB": bb_prob, "K": k_prob, "HR": hr_prob,
+                "1B": hit_in_play_prob * 0.65, "2B": hit_in_play_prob * 0.21,
+                "3B": hit_in_play_prob * 0.02, "OUT": out_in_play_prob
+            }
 
-                pitcher["Live_Pitches"] += random.randint(3, 6)
-                outcome = self.markov.resolve_plate_appearance(batter, pitcher, times_faced)
+        def step_markov_24_state(self, state, outcome, runner_spd):
+            outs = state["outs"]
+            bases = list(state["bases"])
+            runs_scored = 0
+            event_log = ""
+            
+            if outcome in ["K", "OUT"]:
+                outs += 1
+                return outs, bases, 0, "Strikeout" if outcome == "K" else "Fielded Out"
                 
-                g["base_state_idx"], g["outs"], runs = self.markov.transition_state(
-                    g["base_state_idx"], g["outs"], outcome, batter.get("SPD", 60)
-                )
+            if outcome == "BB":
+                if not bases[0]: bases[0] = True
+                elif not bases[1]: bases[1] = True
+                elif not bases[2]: bases[2] = True
+                else: runs_scored += 1
+                return outs, bases, runs_scored, "Base on Balls"
+
+            if outcome == "HR":
+                runs_scored = 1 + sum(1 for b in bases if b)
+                return outs, [False, False, False], runs_scored, f"Home Run ({runs_scored} Run Shot)"
+
+            spd_factor = runner_spd / 100.0
+            if outcome == "1B":
+                new_bases = [True, False, False]
+                if bases[2]: runs_scored += 1
+                if bases[1]:
+                    if spd_factor > 0.68 or random.random() < 0.45: runs_scored += 1
+                    else: new_bases[2] = True
+                if bases[0]: new_bases[1] = True
+                bases = new_bases
+                event_log = "Single"
+            elif outcome == "2B":
+                new_bases = [False, True, False]
+                if bases[2]: runs_scored += 1
+                if bases[1]: runs_scored += 1
+                if bases[0]:
+                    if spd_factor > 0.65: runs_scored += 1
+                    else: new_bases[2] = True
+                bases = new_bases
+                event_log = "Double"
+            elif outcome == "3B":
+                runs_scored = sum(1 for b in bases if b)
+                bases = [False, False, True]
+                event_log = "Triple"
                 
-                if runs > 0:
-                    if g["top_half"]: g["away_score"] += runs
-                    else: g["home_score"] += runs
-                    
-                # Break mid-inning if home team wins on a walk-off
+            return outs, bases, runs_scored, event_log
+
+        def run_full_game(self, tracking_mode=False):
+            g = {
+                "inning": 1, "top_half": True, "away_score": 0, "home_score": 0,
+                "away_lineup_idx": 0, "home_lineup_idx": 0,
+                "away_p": copy.deepcopy(self.away_sp), "home_p": copy.deepcopy(self.home_sp),
+                "away_pitches": 0, "home_pitches": 0,
+                "box_scores": {
+                    "away": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in self.away_lineup},
+                    "home": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in self.home_lineup}
+                },
+                "log_history": [], "win_prob_history": [50.0]
+            }
+            
+            while g["inning"] <= 9 or (g["away_score"] == g["home_score"]):
                 if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]:
                     break
-                    
-                if g["top_half"]: g["away_idx"] += 1
-                else: g["home_idx"] += 1
                 
-            # Flip half-innings
-            g["top_half"] = not g["top_half"]
-            if g["top_half"]: g["inning"] += 1
+                if g["top_half"] and ((g["home_pitches"] > 95 and g["home_p"]["Role"] == "SP") or g["home_pitches"] > 30):
+                    if self.home_bp: g["home_p"] = self.home_bp.pop(0); g["home_pitches"] = 0
+                elif not g["top_half"] and ((g["away_pitches"] > 95 and g["away_p"]["Role"] == "SP") or g["away_pitches"] > 30):
+                    if self.away_bp: g["away_p"] = self.away_bp.pop(0); g["away_pitches"] = 0
+
+                state = {"outs": 0, "bases": [False, False, False]}
+                while state["outs"] < 3:
+                    if g["top_half"]:
+                        batter = self.away_lineup[g["away_lineup_idx"] % 9]
+                        pitcher = g["home_p"]
+                        g["home_pitches"] += random.randint(3, 6)
+                        order_cycle = (g["away_lineup_idx"] // 9) + 1
+                    else:
+                        batter = self.home_lineup[g["home_lineup_idx"] % 9]
+                        pitcher = g["away_p"]
+                        g["away_pitches"] += random.randint(3, 6)
+                        order_cycle = (g["home_lineup_idx"] // 9) + 1
+                        
+                    prob_vector = self.execute_matchup_vector(batter, pitcher, order_cycle)
+                    outcome = random.choices(list(prob_vector.keys()), weights=list(prob_vector.values()), k=1)[0]
+                    
+                    t_key = "away" if g["top_half"] else "home"
+                    b_box = g["box_scores"][t_key][batter["Player"]]
+                    
+                    if outcome in ["1B", "2B", "3B", "HR"]:
+                        b_box["H"] += 1; b_box[outcome] += 1; b_box["AB"] += 1
+                    elif outcome == "BB": b_box["BB"] += 1
+                    elif outcome == "K": b_box["K"] += 1; b_box["AB"] += 1
+                    else: b_box["AB"] += 1
+                    
+                    state["outs"], state["bases"], runs, log_text = self.step_markov_24_state(state, outcome, batter["SPD"])
+                    if runs > 0:
+                        b_box["RBI"] += runs
+                        if g["top_half"]: g["away_score"] += runs
+                        else: g["home_score"] += runs
+                        
+                    if tracking_mode:
+                        g["log_history"].append(f"**Inning {g['inning']} ({'Top' if g['top_half'] else 'Bot'}):** `{batter['Player']}` vs `{pitcher['Player']}` ➔ **{outcome}** ({log_text}). [A:{g['away_score']} - H:{g['home_score']}]")
+                    
+                    if g["top_half"]: g["away_lineup_idx"] += 1
+                    else: g["home_lineup_idx"] += 1
+                    if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
+                        
+                g["top_half"] = not g["top_half"]
+                if g["top_half"]: g["inning"] += 1
+                
+            return g
+
+    # ----------------------------------------------------
+    # RUN ENGINE MONTE CARLO INTEGRATION
+    # ----------------------------------------------------
+    env_tensors = {"temp": temperature, "elevation": stadium_alt, "wind": wind_vector}
+    park_rules = BALLPARK_ENV.get(home_selection, {"run_mult": 1.0, "hr_mult": 1.0, "babip_mult": 1.0})
+
+    # CRITICAL FIX: Ensures background distributions compute immediately upon state lock
+    if st.session_state["monte_carlo_results"] is None:
+        with st.spinner("Executing Structural Monte Carlo Base Operations..."):
+            engine = DipsMarkovEngine(st.session_state["locked_away_lineup"], st.session_state["locked_home_lineup"], st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], st.session_state["locked_away_bullpen"], st.session_state["locked_home_bullpen"], park_rules, env_tensors)
+            home_wins = 0
+            agg_away_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in st.session_state["locked_away_lineup"]}
+            agg_home_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in st.session_state["locked_home_lineup"]}
             
-        return g["away_score"], g["home_score"]
+            iterations = 1000
+            for _ in range(iterations):
+                sim_res = engine.run_full_game(tracking_mode=False)
+                if sim_res["home_score"] > sim_res["away_score"]: home_wins += 1
+                for p in agg_away_box:
+                    for s in agg_away_box[p]: agg_away_box[p][s] += sim_res["box_scores"]["away"][p][s]
+                for p in agg_home_box:
+                    for s in agg_home_box[p]: agg_home_box[p][s] += sim_res["box_scores"]["home"][p][s]
+                    
+            for p in agg_away_box:
+                for s in agg_away_box[p]: agg_away_box[p][s] /= iterations
+            for p in agg_home_box:
+                for s in agg_home_box[p]: agg_home_box[p][s] /= iterations
+                
+            st.session_state["monte_carlo_results"] = {"home_win_prob": home_wins / iterations, "away_box_means": agg_away_box, "home_box_means": agg_home_box}
 
-# ----------------------------------------------------
-# STREAMLIT QUANT CONTROL DASHBOARD GENERATION
-# ----------------------------------------------------
-st.title("♾️ Quantum-Ensemble Baseball Simulation Engine")
-st.markdown("---")
+    # ----------------------------------------------------
+    # SPORTSBOOK & POSTSEASON INTERFACE RENDERS
+    # ----------------------------------------------------
+    mc = st.session_state["monte_carlo_results"]
+    h_prob = mc["home_win_prob"]
+    
+    def convert_prob_to_line(p):
+        if p >= 0.999: return "-10000"
+        if p <= 0.001: return "+10000"
+        return f"-{int((p/(1-p))*100)}" if p >= 0.50 else f"+{int(((1-p)/p)*100)}"
+        
+    market_implied_prob = abs(vegas_line_input)/(abs(vegas_line_input)+100) if vegas_line_input < 0 else 100/(vegas_line_input+100)
+    ev_edge = (h_prob - market_implied_prob) * 100
 
-col_a, col_b, col_c = st.columns(3)
-with col_a:
-    st.subheader("📋 Advanced Team Configurations")
-    away_name = st.text_input("Away Organization Fleet Name", "Houston Astro-Quants")
-    home_name = st.text_input("Home Organization Fleet Name", "New York Metric-Tensors")
-with col_b:
-    st.subheader("🌤️ Atmospheric Variable Injectors")
-    temp = st.slider("Thermograph Array Surface Temperature (°F)", 40, 105, 75)
-    elev = st.slider("Barometric Elevation Scalar (Feet above MSL)", 0, 5280, 800)
-with col_c:
-    st.subheader("💨 Vector Dynamics")
-    w_dir = st.selectbox("Wind Vector Path Alignment", ["Calm / Neutral", "Blowing Out (Boosted)", "Blowing In (Deadened)"])
-    w_spd = st.slider("Velocity Vector Scalar Force (MPH)", 0, 25, 8)
+    st.markdown("### 🎲 High-Convergence Sportsbook Matrix Analytics")
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Sim Projected Winner", home_selection if h_prob >= 0.5 else away_selection)
+    c2.metric("Engine Fair Line Prob", f"{round(h_prob*100, 2)}%", delta=f"Fair Line: {convert_prob_to_line(h_prob)}")
+    c3.metric("Vegas Implied Baseline", f"{round(market_implied_prob*100, 1)}%", delta=f"Input: {vegas_line_input}")
+    c4.metric("Alpha Discovered Edge", f"{round(ev_edge, 2)}% EV", delta_color="inverse" if ev_edge < 0 else "normal")
 
-# Synthetic Generation of Multi-Stratum Attribute Fields
-def construct_quantum_roster(prefix):
-    h_data = []
-    for i in range(9):
-        h_data.append({
-            "Player": f"{prefix} Slugger {i+1}", "SPD": random.randint(50, 95),
-            "Z_Swing": random.uniform(0.60, 0.72), "O_Swing": random.uniform(0.24, 0.35),
-            "Avg_EV": random.uniform(88.0, 94.5), "Max_EV": random.uniform(108.0, 116.5),
-            "Launch_Angle": random.uniform(10.0, 16.5)
-        })
-    p_data = [
-        {"Player": f"{prefix} Ace Starter", "Zone_Rate": 0.51, "Whiff_Rate": 0.26, "Role": "SP"},
-        {"Player": f"{prefix} Setup Weapon", "Zone_Rate": 0.46, "Whiff_Rate": 0.31, "Role": "RP"},
-        {"Player": f"{prefix} Closer Unit", "Zone_Rate": 0.44, "Whiff_Rate": 0.36, "Role": "CP"}
-    ]
-    return h_data, p_data
+    st.markdown("---")
+    
+    # ----------------------------------------------------
+    # FIXED TAB LOGIC: PLAYER PROP ARRAYS
+    # ----------------------------------------------------
+    st.markdown("### 📊 Micro-Projection Player Prop Vectors")
+    
+    def render_prop_matrix_view(means_data):
+        rows = []
+        for name, stats in means_data.items():
+            hits_exp = stats["H"]
+            tb_exp = stats["1B"] + (stats["2B"] * 2) + (stats["3B"] * 3) + (stats["HR"] * 4)
+            dk_exp = (hits_exp * 3) + (stats["2B"] * 2) + (stats["HR"] * 7) + (stats["RBI"] * 2) + (stats["BB"] * 2)
+            rows.append({
+                "Player Asset": name, 
+                "Projected Hits": round(hits_exp, 2), 
+                "Projected Total Bases": round(tb_exp, 2),
+                "Projected HR Rate": round(stats["HR"], 3), 
+                "Projected BB Rate": round(stats["BB"], 2),
+                "DraftKings FP Exp": round(dk_exp, 2), 
+                "Total Bases Line": 1.5,
+                "Model Suggestion": "🔥 OVER" if tb_exp > 1.45 else "❄️ UNDER"
+            })
+        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
 
-away_h, away_p = construct_quantum_roster("Away")
-home_h, home_p = construct_quantum_roster("Home")
+    t_prop_away, t_prop_home = st.tabs([f"Away Team: {away_selection}", f"Home Team: {home_selection}"])
+    with t_prop_away: 
+        render_prop_matrix_view(mc["away_box_means"])
+    with t_prop_home: 
+        render_prop_matrix_view(mc["home_box_means"])
 
-st.markdown("---")
-sim_cycles = st.number_input("Monte Carlo Convergent Interation Multiplier Depth", min_value=100, max_value=25000, value=5000, step=500)
+    st.markdown("---")
+    st.markdown("### 🏆 Best-Of-7 Postseason Series Tensor Mode")
+    if st.button("Simulate Full 7-Game World Series Run", use_container_width=True):
+        a_wins, h_wins = 0, 0
+        series_history = []
+        for game_num in range(1, 8):
+            if a_wins == 4 or h_wins == 4: break
+            s_engine = DipsMarkovEngine(st.session_state["locked_away_lineup"], st.session_state["locked_home_lineup"], st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], st.session_state["locked_away_bullpen"], st.session_state["locked_home_bullpen"], park_rules, env_tensors)
+            s_res = s_engine.run_full_game(tracking_mode=False)
+            if s_res["home_score"] > s_res["away_score"]:
+                h_wins += 1; winner = home_selection
+            else:
+                a_wins += 1; winner = away_selection
+            series_history.append(f"Game {game_num}: {away_selection} {s_res['away_score']} @ {home_selection} {s_res['home_score']} ➔ Winner: **{winner}**")
+        st.markdown(f"#### Series Resolution: **{home_selection if h_wins==4 else away_selection} Wins ({h_wins if h_wins==4 else a_wins} - {a_wins if h_wins==4 else h_wins})**")
+        for h in series_history: st.write(h)
 
-if st.button("🚀 Execute Massive Parallel Matrix Simulation Sequence", use_container_width=True):
-    env_tensor = {"temp": temp, "elevation": elev, "wind_dir": w_dir, "wind_speed": w_spd}
-    
-    macro_sim = EnterpriseMacroSimulator(away_h, home_h, away_p, home_p, env_tensor)
-    
-    away_wins = 0
-    home_wins = 0
-    total_runs_accumulated = 0
-    
-    progress_bar = st.progress(0)
-    start_time = time.time()
-    
-    # Run the raw simulation cycles
-    for cycle in range(sim_cycles):
-        a_sc, h_sc = macro_sim.execute_single_match()
-        total_runs_accumulated += (a_sc + h_sc)
-        if h_sc > a_sc:
-            home_wins += 1
-        else:
-            away_wins += 1
-            
-        if cycle % (sim_cycles // 10) == 0:
-            progress_bar.progress(cycle / sim_cycles)
-            
-    progress_bar.progress(1.0)
-    elapsed = time.time() - start_time
-    
-    home_win_pct = home_wins / sim_cycles
-    away_win_pct = away_wins / sim_cycles
-    avg_total_runs = total_runs_accumulated / sim_cycles
-    
-    # Output metrics
-    st.success(f"⚡ Framework Convergence Target Met in {round(elapsed, 3)} seconds.")
-    
-    m1, m2, m3 = st.columns(3)
-    m1.metric(f"🔮 {home_name} Expected Win Probability", f"{round(home_win_pct * 100, 2)}%")
-    m2.metric(f"🔮 {away_name} Expected Win Probability", f"{round(away_win_pct * 100, 2)}%")
-    m3.metric("🎯 Simulated Total Run Line Lineup Expectancy", f"{round(avg_total_runs, 2)} Runs")
+    st.markdown("---")
+    st.markdown("### 🏟️ Live Play-By-Play Visual Render Interface")
+    if st.button("Launch Immersive Real-Time Simulation Walkthrough Loop", type="primary", use_container_width=True):
+        active_engine = DipsMarkovEngine(st.session_state["locked_away_lineup"], st.session_state["locked_home_lineup"], st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], st.session_state["locked_away_bullpen"], st.session_state["locked_home_bullpen"], park_rules, env_tensors)
+        g = active_engine.run_full_game(tracking_mode=True)
+        log_placeholder = st.empty()
+        progress_bar = st.progress(0)
+        
+        for i, log_entry in enumerate(g["log_history"]):
+            log_placeholder.markdown(f"""
+            <div style="background-color:#0f172a; border-left: 5px solid #38bdf8; padding: 15px; border-radius: 4px; font-family: monospace;">
+                <p style="color:#f8fafc; font-size:14px; margin:0;">{log_entry}</p>
+            </div>
+            """, unsafe_allow_html=True)
+            progress_bar.progress(min(1.0, (i + 1) / len(g["log_history"])))
+            if playback_speed > 0: time.sleep(playback_speed)
+        st.success(f"🏁 Interface Playback Complete. Final Score Matrix Resolved: {away_selection} {g['away_score']} - {home_selection} {g['home_score']}")
