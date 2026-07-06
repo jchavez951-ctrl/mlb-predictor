@@ -41,10 +41,10 @@ RETRO_TEAMS = {
             {"Player": "Ray Morehart", "Pos": "IF", "Bats": "L", "AVG": 0.256, "OPS": 0.630, "HR": 1, "AB": 195, "SPD": 68, "AVG_v_LHP": 0.220, "AVG_v_RHP": 0.270}
         ],
         "pitching": [
-            {"Player": "Waite Hoyt", "Pos": "SP", "Role": "SP", "Throws": "R", "ERA": 2.63, "WHIP": 1.15, "SO (K)": 86, "IP": "256.2", "ERA_v_LHB": 2.80, "ERA_v_RHB": 2.50},
-            {"Player": "Herb Pennock", "Pos": "SP", "Role": "SP", "Throws": "L", "ERA": 3.00, "WHIP": 1.21, "SO (K)": 51, "IP": "209.2", "ERA_v_LHB": 2.60, "ERA_v_RHB": 3.15},
-            {"Player": "Urban Shocker", "Pos": "SP", "Role": "SP", "Throws": "R", "ERA": 2.84, "WHIP": 1.16, "SO (K)": 35, "IP": "200.0", "ERA_v_LHB": 3.05, "ERA_v_RHB": 2.70},
-            {"Player": "Wilcy Moore", "Pos": "RP", "Role": "Closer", "Throws": "R", "ERA": 2.28, "WHIP": 1.14, "SO (K)": 75, "IP": "213.0", "ERA_v_LHB": 2.40, "ERA_v_RHB": 2.15}
+            {"Player": "Waite Hoyt", "Pos": "SP", "Role": "SP", "Throws": "R", "ERA": 2.63, "WHIP": 1.15, "SO (K)": 86, "IP": "256.2", "ERA_v_LHB": 2.80, "ERA_v_RHB": 2.50, "OAVG": 0.222},
+            {"Player": "Herb Pennock", "Pos": "SP", "Role": "SP", "Throws": "L", "ERA": 3.00, "WHIP": 1.21, "SO (K)": 51, "IP": "209.2", "ERA_v_LHB": 2.60, "ERA_v_RHB": 3.15, "OAVG": 0.235},
+            {"Player": "Urban Shocker", "Pos": "SP", "Role": "SP", "Throws": "R", "ERA": 2.84, "WHIP": 1.16, "SO (K)": 35, "IP": "200.0", "ERA_v_LHB": 3.05, "ERA_v_RHB": 2.70, "OAVG": 0.228},
+            {"Player": "Wilcy Moore", "Pos": "RP", "Role": "Closer", "Throws": "R", "ERA": 2.28, "WHIP": 1.14, "SO (K)": 75, "IP": "213.0", "ERA_v_LHB": 2.40, "ERA_v_RHB": 2.15, "OAVG": 0.218}
         ]
     },
     "2004 Boston Red Sox": {
@@ -61,10 +61,10 @@ RETRO_TEAMS = {
             {"Player": "Trot Nixon", "Pos": "RF", "Bats": "L", "AVG": 0.293, "OPS": 0.871, "HR": 6, "AB": 140, "SPD": 70, "AVG_v_LHP": 0.235, "AVG_v_RHP": 0.305}
         ],
         "pitching": [
-            {"Player": "Curt Schilling", "Pos": "SP", "Role": "SP", "Throws": "R", "ERA": 3.26, "WHIP": 1.06, "SO (K)": 203, "IP": "226.2", "ERA_v_LHB": 3.45, "ERA_v_RHB": 3.10},
-            {"Player": "Pedro Martinez", "Pos": "SP", "Role": "SP", "Throws": "R", "ERA": 3.90, "WHIP": 1.21, "SO (K)": 227, "IP": "217.0", "ERA_v_LHB": 4.10, "ERA_v_RHB": 3.70},
-            {"Player": "Tim Wakefield", "Pos": "SP", "Role": "Long Relief", "Throws": "R", "ERA": 4.87, "WHIP": 1.34, "SO (K)": 116, "IP": "188.1", "ERA_v_LHB": 5.10, "ERA_v_RHB": 4.65},
-            {"Player": "Keith Foulke", "Pos": "RP", "Role": "Closer", "Throws": "R", "ERA": 2.17, "WHIP": 0.94, "SO (K)": 79, "IP": "83.0", "ERA_v_LHB": 2.30, "ERA_v_RHB": 2.05}
+            {"Player": "Curt Schilling", "Pos": "SP", "Role": "SP", "Throws": "R", "ERA": 3.26, "WHIP": 1.06, "SO (K)": 203, "IP": "226.2", "ERA_v_LHB": 3.45, "ERA_v_RHB": 3.10, "OAVG": 0.231},
+            {"Player": "Pedro Martinez", "Pos": "SP", "Role": "SP", "Throws": "R", "ERA": 3.90, "WHIP": 1.21, "SO (K)": 227, "IP": "217.0", "ERA_v_LHB": 4.10, "ERA_v_RHB": 3.70, "OAVG": 0.239},
+            {"Player": "Tim Wakefield", "Pos": "SP", "Role": "Long Relief", "Throws": "R", "ERA": 4.87, "WHIP": 1.34, "SO (K)": 116, "IP": "188.1", "ERA_v_LHB": 5.10, "ERA_v_RHB": 4.65, "OAVG": 0.260},
+            {"Player": "Keith Foulke", "Pos": "RP", "Role": "Closer", "Throws": "R", "ERA": 2.17, "WHIP": 0.94, "SO (K)": 79, "IP": "83.0", "ERA_v_LHB": 2.30, "ERA_v_RHB": 2.05, "OAVG": 0.198}
         ]
     }
 }
@@ -86,12 +86,14 @@ BALLPARK_MODIFIERS = {
 }
 DEFAULT_BALLPARK = {"run_mult": 1.00, "hr_mult": 1.00, "desc": "Neutral standard atmosphere allocation"}
 
+LEAGUE_BASELINE_AVG = 0.244
+
 # ----------------------------------------------------
 # ADVANCED MODULE 2: BAYESIAN LEAGUE REGRESSION
 # ----------------------------------------------------
 def apply_bayesian_stabilization(actual_stat, current_ab, stat_type="AVG"):
     if stat_type == "AVG":
-        league_baseline = 0.244
+        league_baseline = LEAGUE_BASELINE_AVG
         sample_anchor = 120
     else:
         league_baseline = 0.720
@@ -151,6 +153,7 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
                     })
                 elif stat_group == "pitching":
                     era_val = float(stat.get("era", 4.25))
+                    o_avg_val = float(stat.get("avg", ".248"))
                     if pos == "SP": bullpen_role = "SP"
                     elif counter % 4 == 0: bullpen_role = "Closer"
                     elif counter % 4 == 1: bullpen_role = "Setup"
@@ -163,7 +166,8 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
                         "ERA": era_val, "WHIP": float(stat.get("whip", 1.30)),
                         "SO (K)": int(stat.get("strikeOuts", 0)), "IP": stat.get("inningsPitched", "10.0"),
                         "ERA_v_LHB": round(era_val * random.choice([1.06, 0.94]), 2),
-                        "ERA_v_RHB": round(era_val * random.choice([0.94, 1.06]), 2)
+                        "ERA_v_RHB": round(era_val * random.choice([0.94, 1.06]), 2),
+                        "OAVG": o_avg_val
                     })
     except: pass
     if not players_list:
@@ -171,7 +175,7 @@ def get_detailed_roster_stats(team_id, team_name, stat_group="hitting"):
             return pd.DataFrame([{"Player": f"Batter {i+1}", "Pos": "OF", "Bats": random.choice(["R","L"]), "AVG": 0.250, "OPS": 0.740, "HR": random.randint(5,25), "AB": 200, "SPD": 65, "AVG_v_LHP": 0.240, "AVG_v_RHP": 0.255} for i in range(12)])
         else:
             roles = ["SP", "SP", "SP", "Middle Relief", "Setup", "Closer", "Long Relief"]
-            return pd.DataFrame([{"Player": f"Pitcher {i+1}", "Pos": "P", "Role": roles[i % len(roles)], "Throws": random.choice(["R","L"]), "ERA": 4.00, "WHIP": 1.25, "SO (K)": 60, "IP": "50.0", "ERA_v_LHB": 4.10, "ERA_v_RHB": 3.90} for i in range(7)])
+            return pd.DataFrame([{"Player": f"Pitcher {i+1}", "Pos": "P", "Role": roles[i % len(roles)], "Throws": random.choice(["R","L"]), "ERA": 4.00, "WHIP": 1.25, "SO (K)": 60, "IP": "50.0", "ERA_v_LHB": 4.10, "ERA_v_RHB": 3.90, "OAVG": 0.244} for i in range(7)])
     return pd.DataFrame(players_list)
 
 # ----------------------------------------------------
@@ -183,6 +187,10 @@ home_team = st.sidebar.selectbox("Home Roster Array", all_selectable_teams, inde
 
 st.sidebar.markdown("---")
 sim_speed = st.sidebar.slider("Simulation Step Intercept Delay", 0.00, 0.40, 0.02, step=0.01)
+
+# Dynamic Bookmaking Market Implication Variables
+st.sidebar.markdown("### 🏛️ Vegas Consensus Line Input")
+market_home_odds = st.sidebar.number_input("Market Closing Moneyline (Home Team)", min_value=-500, max_value=500, value=-110, step=5)
 
 theme_host = RETRO_TEAMS.get(home_team, TEAM_COLORS.get(home_team, {"primary": "#003274", "secondary": "#C0111F"}))
 st.markdown(f"<style>h1, h2, h3, h4 {{ color: {theme_host['primary']}; }} .stButton>button {{ background-color: {theme_host['primary']} !important; color: white !important; }}</style>", unsafe_allow_html=True)
@@ -225,7 +233,6 @@ if not st.session_state["lineups_locked"]:
             home_batters.append(b_choice)
 
     if st.button("🔒 Lock Framework Configurations & Generate Ecosystem Data", use_container_width=True):
-        # FIX FOR SCREENSHOT 6: Prevent slice IndexError if dynamic criteria filter produces an empty DataFrame
         away_selected_df = away_pitcher_raw[away_pitcher_raw["Player"] == away_sp_choice]
         home_selected_df = home_pitcher_raw[home_pitcher_raw["Player"] == home_sp_choice]
         
@@ -267,7 +274,7 @@ else:
     # ----------------------------------------------------
     def select_leverage_bullpen_arm(bullpen_list, inning, score_diff):
         if not bullpen_list:
-            return {"Player": "Emergency Position Player", "ERA": 9.99, "Role": "Blowout Protection", "Throws": "R", "ERA_v_LHB": 9.99, "ERA_v_RHB": 9.99}
+            return {"Player": "Emergency Position Player", "ERA": 9.99, "Role": "Blowout Protection", "Throws": "R", "ERA_v_LHB": 9.99, "ERA_v_RHB": 9.99, "OAVG": 0.350}
             
         if inning >= 9 and 1 <= score_diff <= 3:
             target_roles = ["Closer", "Setup"]
@@ -295,12 +302,35 @@ else:
         return max(0.01, min(0.99, base))
 
     def convert_prob_to_american_moneyline(prob):
+        if prob >= 0.999: return "-10000"
+        if prob <= 0.001: return "+10000"
         if prob >= 0.50:
             odds = int(-((prob / (1.0 - prob)) * 100))
             return f"{odds}" if odds <= -100 else "-100"
         else:
             odds = int(((1.0 - prob) / prob) * 100)
             return f"+{odds}"
+
+    def get_implied_probability(american_odds):
+        if american_odds < 0:
+            return abs(american_odds) / (abs(american_odds) + 100)
+        else:
+            return 100 / (american_odds + 100)
+
+    # ----------------------------------------------------
+    # SABERMETRIC MATRIX: BILL JAMES LOG-ODDS MATCHUP ENGINE
+    # ----------------------------------------------------
+    def calculate_log_odds_matchup(b_avg, p_oavg, lg_baseline=LEAGUE_BASELINE_AVG):
+        # Enforce mathematical boundaries on input distributions
+        b_avg = max(0.05, min(0.95, b_avg))
+        p_oavg = max(0.05, min(0.95, p_oavg))
+        
+        odds_batter = b_avg / (1.0 - b_avg)
+        odds_pitcher = p_oavg / (1.0 - p_oavg)
+        odds_league = lg_baseline / (1.0 - lg_baseline)
+        
+        matchup_odds = (odds_batter * odds_pitcher) / odds_league
+        return matchup_odds / (1.0 + matchup_odds)
 
     # ----------------------------------------------------
     # CORE UNIFIED TRACKING VECTOR SIMULATION ENGINE
@@ -318,6 +348,7 @@ else:
                 g["home_p_type"] = reliever.get("Role", "RP")
                 g["home_p_era_v_lhb"] = float(reliever.get("ERA_v_LHB", reliever["ERA"]))
                 g["home_p_era_v_rhb"] = float(reliever.get("ERA_v_RHB", reliever["ERA"]))
+                g["home_p_oavg"] = float(reliever.get("OAVG", 0.244))
                 g["home_p_pitches"] = 0
                 g["logs"].append(f"🔄 **AI Manager:** Home introduces bullpen asset `{reliever['Player']}` ({reliever.get('Role', 'RP')}) into high leverage lanes.")
                 
@@ -325,6 +356,7 @@ else:
             batter = away_lineup_final.iloc[g["away_idx"] % 9]
             b_team, opp_team = "away", "home"
             p_era = g["home_p_era_v_lhb"] if batter["Bats"] == "L" else g["home_p_era_v_rhb"]
+            p_oavg = g.get("home_p_oavg", 0.244)
             p_pitches_spent = g["home_p_pitches"]
         else:
             g["away_p_pitches"] += random.randint(3, 6)
@@ -338,6 +370,7 @@ else:
                 g["away_p_type"] = reliever.get("Role", "RP")
                 g["away_p_era_v_lhb"] = float(reliever.get("ERA_v_LHB", reliever["ERA"]))
                 g["away_p_era_v_rhb"] = float(reliever.get("ERA_v_RHB", reliever["ERA"]))
+                g["away_p_oavg"] = float(reliever.get("OAVG", 0.244))
                 g["away_p_pitches"] = 0
                 g["logs"].append(f"🔄 **AI Manager:** Away calls upon bullpen asset `{reliever['Player']}` ({reliever.get('Role', 'RP')}) to suppress run distribution curves.")
                 
@@ -345,6 +378,7 @@ else:
             batter = home_lineup_final.iloc[g["home_idx"] % 9]
             b_team, opp_team = "home", "away"
             p_era = g["away_p_era_v_lhb"] if batter["Bats"] == "L" else g["away_p_era_v_rhb"]
+            p_oavg = g.get("away_p_oavg", 0.244)
             p_pitches_spent = g["away_p_pitches"]
 
         fatigue_coefficient = 1.0
@@ -353,12 +387,12 @@ else:
         elif g[f"{opp_team}_p_type"] != "SP" and p_pitches_spent > 12:
             fatigue_coefficient += (p_pitches_spent - 12) * 0.0092
             
-        effective_era = p_era * fatigue_coefficient
+        effective_oavg = p_oavg * fatigue_coefficient
         
         if p_throws == "L": base_hit_prob = batter.get("AVG_v_LHP", batter["AVG"])
         else: base_hit_prob = batter.get("AVG_v_RHP", batter["AVG"])
 
-        bb_chance = 0.082 * (effective_era / 4.0)
+        bb_chance = 0.082 * (p_era * fatigue_coefficient / 4.0)
         if random.uniform(0, 1) < bb_chance:
             g[f"{b_team}_box"][batter["Player"]]["BB"] += 1
             g["logs"].append(f"🟢 **Walk!** {batter['Player']} structural walk transaction executed.")
@@ -374,9 +408,12 @@ else:
             g[f"{b_team}_base_speeds"][batter["Player"]] = batter.get("SPD", 65)
         else:
             g[f"{b_team}_box"][batter["Player"]]["AB"] += 1
-            hit_probability = base_hit_prob * park_data["run_mult"] * (effective_era / 4.15)
             
-            if random.uniform(0, 1.0) <= hit_probability:
+            # IMPLEMENTATION OF LOG-ODDS ALGORITHM
+            sabermetric_hit_prob = calculate_log_odds_matchup(base_hit_prob, effective_oavg)
+            final_hit_probability = sabermetric_hit_prob * park_data["run_mult"]
+            
+            if random.uniform(0, 1.0) <= final_hit_probability:
                 g[f"{b_team}_hits"] += 1
                 hr_chance = (batter["HR"] / max(1, batter["AB"])) * park_data["hr_mult"] * env_mult
                 roll = random.uniform(0, 1)
@@ -444,7 +481,6 @@ else:
         else: g["home_idx"] += 1
         g["win_prob_history"].append(calculate_live_win_probability(g) * 100)
 
-    # FIX FOR SCREENSHOTS 1, 2, & 4: Drop style.background_gradient dependencies to clear the headless server ImportError
     def render_vegas_projection_matrix(box_data, placeholder_obj=None):
         rows = []
         for p_name, s in box_data.items():
@@ -476,7 +512,6 @@ else:
             if st.session_state["leveraged_game_state"] is None:
                 env_profile = generate_atmospheric_environment(home_team)
                 
-                # FIX FOR SCREENSHOT 3: Patched dynamic list composition setup to eliminate trailing initialization syntax errors
                 st.session_state["leveraged_game_state"] = {
                     "inning": 1, "top_half": True, "away_score": 0, "home_score": 0, "away_hits": 0, "home_hits": 0, "away_errors": 0, "home_errors": 0,
                     "away_idx": 0, "home_idx": 0, "outs": 0, "bases": [None, None, None],
@@ -485,8 +520,8 @@ else:
                     "away_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0, "TOTAL_BASES": 0.0} for p in away_lineup_final["Player"]},
                     "home_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0, "TOTAL_BASES": 0.0} for p in home_lineup_final["Player"]},
                     "away_base_speeds": {}, "home_base_speeds": {}, "env": env_profile,
-                    "away_p_name": away_pitcher_active['Player'], "away_p_era": float(away_pitcher_active['ERA']), "away_p_pitches": 0, "away_p_type": "SP", "away_p_throws": away_pitcher_active.get("Throws", "R"),
-                    "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP", "home_p_throws": home_pitcher_active.get("Throws", "R"),
+                    "away_p_name": away_pitcher_active['Player'], "away_p_era": float(away_pitcher_active['ERA']), "away_p_pitches": 0, "away_p_type": "SP", "away_p_throws": away_pitcher_active.get("Throws", "R"), "away_p_oavg": float(away_pitcher_active.get("OAVG", 0.244)),
+                    "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP", "home_p_throws": home_pitcher_active.get("Throws", "R"), "home_p_oavg": float(home_pitcher_active.get("OAVG", 0.244)),
                     "away_p_era_v_lhb": float(away_pitcher_active.get("ERA_v_LHB", away_pitcher_active['ERA'])), "away_p_era_v_rhb": float(away_pitcher_active.get("ERA_v_RHB", away_pitcher_active['ERA'])),
                     "home_p_era_v_lhb": float(home_pitcher_active.get("ERA_v_LHB", home_pitcher_active['ERA'])), "home_p_era_v_rhb": float(home_pitcher_active.get("ERA_v_RHB", home_pitcher_active['ERA'])),
                     "away_bullpen_list": list(st.session_state["away_bullpen"]), "home_bullpen_list": list(st.session_state["home_bullpen"]),
@@ -548,9 +583,22 @@ else:
                     away_box_display.dataframe(pd.DataFrame.from_dict(g["away_box"], orient="index"))
                     home_box_display.dataframe(pd.DataFrame.from_dict(g["home_box"], orient="index"))
                     
+                    # QUANTITATIVE EV ENGINE CALCULATION MATRIX
                     current_h_prob = g["win_prob_history"][-1] / 100.0
+                    market_implied_home_prob = get_implied_probability(market_home_odds)
+                    expected_value_delta = (current_h_prob - market_implied_home_prob) * 100
+                    
                     chart_placeholder.line_chart(pd.DataFrame(g["win_prob_history"], columns=["Home Team Win Probability %"]))
-                    odds_metrics_placeholder.markdown(f"* **{home_team} Moneyline:** `{convert_prob_to_american_moneyline(current_h_prob)}` \n* **{away_team} Moneyline:** `{convert_prob_to_american_moneyline(1.0 - current_h_prob)}` \n\nAtmosphere: `{g['env']['temp']}°F` | Density Adjuster: `{round(g['env']['mult'],2)}x`")
+                    
+                    ev_color = "green" if expected_value_delta >= 0 else "red"
+                    odds_metrics_placeholder.markdown(f"""
+                    * **{home_team} Sim ML:** `{convert_prob_to_american_moneyline(current_h_prob)}`
+                    * **{away_team} Sim ML:** `{convert_prob_to_american_moneyline(1.0 - current_h_prob)}`
+                    * **Vegas Closing Home Line:** `{market_home_odds}` (Implied: `{round(market_implied_home_prob * 100, 1)}%`)
+                    * **Discovered EV Edge Allocation:** <span style='color:{ev_color}; font-weight:bold;'>{round(expected_value_delta, 2)}% EV</span>
+                    
+                    Atmosphere: `{g['env']['temp']}°F` | Density Adjuster: `{round(g['env']['mult'],2)}x`
+                    """, unsafe_allow_html=True)
 
                     render_vegas_projection_matrix(g["away_box"], vegas_away_placeholder)
                     render_vegas_projection_matrix(g["home_box"], vegas_home_placeholder)
@@ -581,8 +629,8 @@ else:
                     "away_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0, "TOTAL_BASES": 0.0} for p in away_lineup_final["Player"]},
                     "home_box": {p: {"AB": 0, "H": 0, "1B": 0, "2B": 0, "HR": 0, "RBI": 0, "BB": 0, "DK_PTS": 0.0, "HRR_VAL": 0.0, "TOTAL_BASES": 0.0} for p in home_lineup_final["Player"]},
                     "away_base_speeds": {}, "home_base_speeds": {},
-                    "away_p_name": away_pitcher_active['Player'], "away_p_era": float(away_pitcher_active['ERA']), "away_p_pitches": 0, "away_p_type": "SP", "away_p_throws": away_pitcher_active.get("Throws", "R"),
-                    "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP", "home_p_throws": home_pitcher_active.get("Throws", "R"),
+                    "away_p_name": away_pitcher_active['Player'], "away_p_era": float(away_pitcher_active['ERA']), "away_p_pitches": 0, "away_p_type": "SP", "away_p_throws": away_pitcher_active.get("Throws", "R"), "away_p_oavg": float(away_pitcher_active.get("OAVG", 0.244)),
+                    "home_p_name": home_pitcher_active['Player'], "home_p_era": float(home_pitcher_active['ERA']), "home_p_pitches": 0, "home_p_type": "SP", "home_p_throws": home_pitcher_active.get("Throws", "R"), "home_p_oavg": float(home_pitcher_active.get("OAVG", 0.244)),
                     "away_p_era_v_lhb": float(away_pitcher_active.get("ERA_v_LHB", away_pitcher_active['ERA'])), "away_p_era_v_rhb": float(away_pitcher_active.get("ERA_v_RHB", away_pitcher_active['ERA'])),
                     "home_p_era_v_lhb": float(home_pitcher_active.get("ERA_v_LHB", home_pitcher_active['ERA'])), "home_p_era_v_rhb": float(home_pitcher_active.get("ERA_v_RHB", home_pitcher_active['ERA'])),
                     "away_bullpen_list": list(st.session_state["away_bullpen"]), "home_bullpen_list": list(st.session_state["home_bullpen"]),
