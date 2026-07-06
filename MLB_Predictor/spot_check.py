@@ -83,7 +83,7 @@ ROSTER_DATABASE = {
             {"Player": "Adley Rutschman", "Pos": "C", "Bats": "B", "BB_RATE": 0.110, "K_RATE": 0.155, "HR_PA_RATE": 0.035, "BABIP": 0.295, "1B_H_RATE": 0.64, "2B_H_RATE": 0.22, "3B_H_RATE": 0.01, "HR_H_RATE": 0.13, "SPD": 50, "PA": 650},
             {"Player": "Gunnar Henderson", "Pos": "SS", "Bats": "L", "BB_RATE": 0.125, "K_RATE": 0.220, "HR_PA_RATE": 0.058, "BABIP": 0.335, "1B_H_RATE": 0.54, "2B_H_RATE": 0.24, "3B_H_RATE": 0.04, "HR_H_RATE": 0.18, "SPD": 86, "PA": 680},
             {"Player": "Anthony Santander", "Pos": "RF", "Bats": "B", "BB_RATE": 0.085, "K_RATE": 0.190, "HR_PA_RATE": 0.062, "BABIP": 0.265, "1B_H_RATE": 0.48, "2B_H_RATE": 0.24, "3B_H_RATE": 0.01, "HR_H_RATE": 0.27, "SPD": 48, "PA": 640},
-            {"Player": "Jordan Westburg", "Pos": "3B", "Bats": "R", "BB_RATE": 0.078, "K_RATE": 0.225, "HR_PA_RATE": 0.038, "BABIP": 0.325, "1B_H_RATE": 0.58, "2B_H_RATE": 0.25, "3B_H_RATE": 0.03, "HR_H_RATE": 0.14, "SPD": 76, "PA": 550},
+            {"Player": "Jordan Westburg", "Pos": "3B", "Bats": "R", "BB_RATE": 0.078, "K_RATE": 0.225, "HR_PA_RATE": 0.038, "BABIP": 0.325, "1B_H_RATE": 0.58, "25_H_RATE": 0.25, "3B_H_RATE": 0.03, "HR_H_RATE": 0.14, "SPD": 76, "PA": 550},
             {"Player": "Ryan Mountcastle", "Pos": "1B", "Bats": "R", "BB_RATE": 0.065, "K_RATE": 0.225, "HR_PA_RATE": 0.035, "BABIP": 0.330, "1B_H_RATE": 0.60, "2B_H_RATE": 0.24, "3B_H_RATE": 0.01, "HR_H_RATE": 0.15, "SPD": 60, "PA": 520},
             {"Player": "Colton Cowser", "Pos": "LF", "Bats": "L", "BB_RATE": 0.102, "K_RATE": 0.285, "HR_PA_RATE": 0.045, "BABIP": 0.310, "1B_H_RATE": 0.54, "2B_H_RATE": 0.25, "3B_H_RATE": 0.02, "HR_H_RATE": 0.19, "SPD": 80, "PA": 500},
             {"Player": "Cedric Mullins", "Pos": "CF", "Bats": "L", "BB_RATE": 0.088, "K_RATE": 0.215, "HR_PA_RATE": 0.032, "BABIP": 0.285, "1B_H_RATE": 0.62, "2B_H_RATE": 0.20, "3B_H_RATE": 0.03, "HR_H_RATE": 0.15, "SPD": 88, "PA": 480},
@@ -243,4 +243,250 @@ else:
                 bb_prob *= scale; k_prob *= scale; hr_prob *= scale
                 
             remainder = 1.0 - (bb_prob + k_prob + hr_prob)
-            babip_matchup = calculate_log_odds(batter
+            
+            # --- PASTED BUG FIX FOR COMPLETE LINE RESOLUTION ---
+            babip_matchup = calculate_log_odds(
+                batter["BABIP"] * platoon_mult, 
+                pitcher["BABIP_ALLOWED"] * fatigue_penalty, 
+                LEAGUE_BASELINE["BABIP"]
+            ) * self.park["babip_mult"]
+            # ----------------------------------------------------
+            
+            hit_in_play_prob = remainder * babip_matchup
+            out_in_play_prob = remainder - hit_in_play_prob
+            
+            return {
+                "BB": bb_prob, "K": k_prob, "HR": hr_prob,
+                "1B": hit_in_play_prob * 0.65, "2B": hit_in_play_prob * 0.21,
+                "3B": hit_in_play_prob * 0.02, "OUT": out_in_play_prob
+            }
+
+        def step_markov_24_state(self, state, outcome, runner_spd):
+            outs = state["outs"]
+            bases = list(state["bases"])
+            runs_scored = 0
+            event_log = ""
+            
+            if outcome in ["K", "OUT"]:
+                outs += 1
+                return outs, bases, 0, "Strikeout" if outcome == "K" else "Fielded Out"
+                
+            if outcome == "BB":
+                if not bases[0]: bases[0] = True
+                elif not bases[1]: bases[1] = True
+                elif not bases[2]: bases[2] = True
+                else: runs_scored += 1
+                return outs, bases, runs_scored, "Base on Balls"
+
+            if outcome == "HR":
+                runs_scored = 1 + sum(1 for b in bases if b)
+                return outs, [False, False, False], runs_scored, f"Home Run ({runs_scored} Run Shot)"
+
+            spd_factor = runner_spd / 100.0
+            if outcome == "1B":
+                new_bases = [True, False, False]
+                if bases[2]: runs_scored += 1
+                if bases[1]:
+                    if spd_factor > 0.68 or random.random() < 0.45: runs_scored += 1
+                    else: new_bases[2] = True
+                if bases[0]: new_bases[1] = True
+                bases = new_bases
+                event_log = "Single"
+            elif outcome == "2B":
+                new_bases = [False, True, False]
+                if bases[2]: runs_scored += 1
+                if bases[1]: runs_scored += 1
+                if bases[0]:
+                    if spd_factor > 0.65: runs_scored += 1
+                    else: new_bases[2] = True
+                bases = new_bases
+                event_log = "Double"
+            elif outcome == "3B":
+                runs_scored = sum(1 for b in bases if b)
+                bases = [False, False, True]
+                event_log = "Triple"
+                
+            return outs, bases, runs_scored, event_log
+
+        def run_full_game(self, tracking_mode=False):
+            g = {
+                "inning": 1, "top_half": True, "away_score": 0, "home_score": 0,
+                "away_lineup_idx": 0, "home_lineup_idx": 0,
+                "away_p": copy.deepcopy(self.away_sp), "home_p": copy.deepcopy(self.home_sp),
+                "away_pitches": 0, "home_pitches": 0,
+                "box_scores": {
+                    "away": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in self.away_lineup},
+                    "home": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in self.home_lineup}
+                },
+                "log_history": [], "win_prob_history": [50.0]
+            }
+            
+            while g["inning"] <= 9 or (g["away_score"] == g["home_score"]):
+                if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]:
+                    break
+                
+                # --- PASTED BUG FIX FOR BULLPEN INTEGRITY SUBROUTINE ---
+                if g["top_half"] and ((g["home_pitches"] > 95 and g["home_p"]["Role"] == "SP") or g["home_pitches"] > 30):
+                    if self.home_bp: 
+                        g["home_p"] = self.home_bp.pop(0)
+                        g["home_pitches"] = 0
+                elif not g["top_half"] and ((g["away_pitches"] > 95 and g["away_p"]["Role"] == "SP") or g["away_pitches"] > 30):
+                    if self.away_bp: 
+                        g["away_p"] = self.away_bp.pop(0)
+                        g["away_pitches"] = 0
+                # --------------------------------------------------------
+
+                state = {"outs": 0, "bases": [False, False, False]}
+                while state["outs"] < 3:
+                    if g["top_half"]:
+                        batter = self.away_lineup[g["away_lineup_idx"] % 9]
+                        pitcher = g["home_p"]
+                        g["home_pitches"] += random.randint(3, 6)
+                        order_cycle = (g["away_lineup_idx"] // 9) + 1
+                    else:
+                        batter = self.home_lineup[g["home_lineup_idx"] % 9]
+                        pitcher = g["away_p"]
+                        g["away_pitches"] += random.randint(3, 6)
+                        order_cycle = (g["home_lineup_idx"] // 9) + 1
+                        
+                    prob_vector = self.execute_matchup_vector(batter, pitcher, order_cycle)
+                    outcome = random.choices(list(prob_vector.keys()), weights=list(prob_vector.values()), k=1)[0]
+                    
+                    t_key = "away" if g["top_half"] else "home"
+                    b_box = g["box_scores"][t_key][batter["Player"]]
+                    
+                    if outcome in ["1B", "2B", "3B", "HR"]:
+                        b_box["H"] += 1; b_box[outcome] += 1; b_box["AB"] += 1
+                    elif outcome == "BB": b_box["BB"] += 1
+                    elif outcome == "K": b_box["K"] += 1; b_box["AB"] += 1
+                    else: b_box["AB"] += 1
+                    
+                    state["outs"], state["bases"], runs, log_text = self.step_markov_24_state(state, outcome, batter["SPD"])
+                    if runs > 0:
+                        b_box["RBI"] += runs
+                        if g["top_half"]: g["away_score"] += runs
+                        else: g["home_score"] += runs
+                        
+                    if tracking_mode:
+                        g["log_history"].append(f"**Inning {g['inning']} ({'Top' if g['top_half'] else 'Bot'}):** `{batter['Player']}` vs `{pitcher['Player']}` ➔ **{outcome}** ({log_text}). [A:{g['away_score']} - H:{g['home_score']}]")
+                    
+                    if g["top_half"]: g["away_lineup_idx"] += 1
+                    else: g["home_lineup_idx"] += 1
+                    if g["inning"] >= 9 and not g["top_half"] and g["home_score"] > g["away_score"]: break
+                        
+                g["top_half"] = not g["top_half"]
+                if g["top_half"]: g["inning"] += 1
+                
+            return g
+
+    # ----------------------------------------------------
+    # RUN ENGINE MONTE CARLO INTEGRATION
+    # ----------------------------------------------------
+    env_tensors = {"temp": temperature, "elevation": stadium_alt, "wind": wind_vector}
+    park_rules = BALLPARK_ENV.get(home_selection, {"run_mult": 1.0, "hr_mult": 1.0, "babip_mult": 1.0})
+
+    if st.session_state["monte_carlo_results"] is None:
+        with st.spinner("Executing Structural Monte Carlo Base Operations..."):
+            engine = DipsMarkovEngine(st.session_state["locked_away_lineup"], st.session_state["locked_home_lineup"], st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], st.session_state["locked_away_bullpen"], st.session_state["locked_home_bullpen"], park_rules, env_tensors)
+            home_wins = 0
+            agg_away_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in st.session_state["locked_away_lineup"]}
+            agg_home_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in st.session_state["locked_home_lineup"]}
+            
+            iterations = 1000
+            for _ in range(iterations):
+                sim_res = engine.run_full_game(tracking_mode=False)
+                if sim_res["home_score"] > sim_res["away_score"]: home_wins += 1
+                for p in agg_away_box:
+                    for s in agg_away_box[p]: agg_away_box[p][s] += sim_res["box_scores"]["away"][p][s]
+                for p in agg_home_box:
+                    for s in agg_home_box[p]: agg_home_box[p][s] += sim_res["box_scores"]["home"][p][s]
+                    
+            for p in agg_away_box:
+                for s in agg_away_box[p]: agg_away_box[p][s] /= iterations
+            for p in agg_home_box:
+                for s in agg_home_box[p]: agg_home_box[p][s] /= iterations
+                
+            st.session_state["monte_carlo_results"] = {"home_win_prob": home_wins / iterations, "away_box_means": agg_away_box, "home_box_means": agg_home_box}
+
+    # ----------------------------------------------------
+    # SPORTSBOOK & POSTSEASON INTERFACE RENDERS
+    # ----------------------------------------------------
+    mc = st.session_state["monte_carlo_results"]
+    h_prob = mc["home_win_prob"]
+    
+    def convert_prob_to_line(p):
+        if p >= 0.999: return "-10000"
+        if p <= 0.001: return "+10000"
+        return f"-{int((p/(1-p))*100)}" if p >= 0.50 else f"+{int(((1-p)/p)*100)}"
+        
+    market_implied_prob = abs(vegas_line_input)/(abs(vegas_line_input)+100) if vegas_line_input < 0 else 100/(vegas_line_input+100)
+    ev_edge = (h_prob - market_implied_prob) * 100
+
+    st.markdown("### 🎲 High-Convergence Sportsbook Matrix Analytics")
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Sim Projected Winner", home_selection if h_prob >= 0.5 else away_selection)
+    c2.metric("Engine Fair Line Prob", f"{round(h_prob*100, 2)}%", delta=f"Fair Line: {convert_prob_to_line(h_prob)}")
+    c3.metric("Vegas Implied Baseline", f"{round(market_implied_prob*100, 1)}%", delta=f"Input: {vegas_line_input}")
+    c4.metric("Alpha Discovered Edge", f"{round(ev_edge, 2)}% EV", delta_color="inverse" if ev_edge < 0 else "normal")
+
+    st.markdown("---")
+    st.markdown("### 📊 Micro-Projection Player Prop Vectors")
+    
+    def render_prop_matrix_view(means_data):
+        rows = []
+        for name, stats in means_data.items():
+            hits_exp = stats["H"]
+            tb_exp = stats["1B"] + (stats["2B"] * 2) + (stats["3B"] * 3) + (stats["HR"] * 4)
+            dk_exp = (hits_exp * 3) + (stats["2B"] * 2) + (stats["HR"] * 7) + (stats["RBI"] * 2) + (stats["BB"] * 2)
+            rows.append({
+                "Player Asset": name, 
+                "Projected Hits": round(hits_exp, 2), 
+                "Projected Total Bases": round(tb_exp, 2),
+                "Projected HR Rate": round(stats["HR"], 3), 
+                "Projected BB Rate": round(stats["BB"], 2),
+                "DraftKings FP Exp": round(dk_exp, 2), 
+                "Total Bases Line": 1.5,
+                "Model Suggestion": "🔥 OVER" if tb_exp > 1.45 else "❄️ UNDER"
+            })
+        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+
+    t_prop_away, t_prop_home = st.tabs([f"Away Team: {away_selection}", f"Home Team: {home_selection}"])
+    with t_prop_away: 
+        render_prop_matrix_view(mc["away_box_means"])
+    with t_prop_home: 
+        render_prop_matrix_view(mc["home_box_means"])
+
+    st.markdown("---")
+    st.markdown("### 🏆 Best-Of-7 Postseason Series Tensor Mode")
+    if st.button("Simulate Full 7-Game World Series Run", use_container_width=True):
+        a_wins, h_wins = 0, 0
+        series_history = []
+        for game_num in range(1, 8):
+            if a_wins == 4 or h_wins == 4: break
+            s_engine = DipsMarkovEngine(st.session_state["locked_away_lineup"], st.session_state["locked_home_lineup"], st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], st.session_state["locked_away_bullpen"], st.session_state["locked_home_bullpen"], park_rules, env_tensors)
+            s_res = s_engine.run_full_game(tracking_mode=False)
+            if s_res["home_score"] > s_res["away_score"]:
+                h_wins += 1; winner = home_selection
+            else:
+                a_wins += 1; winner = away_selection
+            series_history.append(f"Game {game_num}: {away_selection} {s_res['away_score']} @ {home_selection} {s_res['home_score']} ➔ Winner: **{winner}**")
+        st.markdown(f"#### Series Resolution: **{home_selection if h_wins==4 else away_selection} Wins ({h_wins if h_wins==4 else a_wins} - {a_wins if h_wins==4 else h_wins})**")
+        for h in series_history: st.write(h)
+
+    st.markdown("---")
+    st.markdown("### 🏟️ Live Play-By-Play Visual Render Interface")
+    if st.button("Launch Immersive Real-Time Simulation Walkthrough Loop", type="primary", use_container_width=True):
+        active_engine = DipsMarkovEngine(st.session_state["locked_away_lineup"], st.session_state["locked_home_lineup"], st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], st.session_state["locked_away_bullpen"], st.session_state["locked_home_bullpen"], park_rules, env_tensors)
+        g = active_engine.run_full_game(tracking_mode=True)
+        log_placeholder = st.empty()
+        progress_bar = st.progress(0)
+        
+        for i, log_entry in enumerate(g["log_history"]):
+            log_placeholder.markdown(f"""
+            <div style="background-color:#0f172a; border-left: 5px solid #38bdf8; padding: 15px; border-radius: 4px; font-family: monospace;">
+                <p style="color:#f8fafc; font-size:14px; margin:0;">{log_entry}</p>
+            </div>
+            """, unsafe_allow_html=True)
+            progress_bar.progress(min(1.0, (i + 1) / len(g["log_history"])))
+            if playback_speed > 0: time.sleep(playback_speed)
+        st.success(f"🏁 Interface Playback Complete. Final Score Matrix Resolved: {away_selection} {g['away_score']} - {home_selection} {g['home_score']}")
