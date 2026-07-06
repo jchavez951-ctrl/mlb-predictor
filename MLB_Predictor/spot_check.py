@@ -86,7 +86,7 @@ BALLPARK_ENV = {
 }
 
 # ----------------------------------------------------
-# MATH COUPLING OPERATIONS
+# ADVANCED LOG-ODDS ANALYSIS
 # ----------------------------------------------------
 def calculate_log_odds(player_rate, pitcher_rate, league_rate):
     player_rate = max(0.001, min(0.999, player_rate))
@@ -110,12 +110,11 @@ def safe_extract_player(roster_dict, side, player_name, fallback_idx=0):
     return copy.deepcopy(pool[min(fallback_idx, len(pool) - 1)])
 
 # ----------------------------------------------------
-# CONTROL BOARD INTERFACE UI (ISOLATED DROP-DOWNS)
+# CONTROL BOARD INTERFACE UI
 # ----------------------------------------------------
 st.sidebar.header("⚾ Enterprise Simulator Panel")
 all_teams_list = list(ROSTER_DATABASE.keys())
 
-# Render dropdown fields decoupled completely from structural execution logic flags
 away_selection = st.sidebar.selectbox(
     "Away Roster Array", 
     all_teams_list, 
@@ -156,18 +155,19 @@ if not st.session_state["lineups_locked"]:
     
     with col1:
         st.markdown(f"#### {away_selection} Lineup Assets")
-        sp_choice_a = st.selectbox("Starting Pitcher Choice (Away)", [p["Player"] for p in away_p_pool if p["Role"] == "SP"])
+        # CRITICAL FIX: Appending chosen team to keys to reset states natively
+        sp_choice_a = st.selectbox("Starting Pitcher Choice (Away)", [p["Player"] for p in away_p_pool if p["Role"] == "SP"], key=f"sp_away_{away_selection}")
         batters_a = []
         for i in range(9):
-            b = st.selectbox(f"Away Slot {i+1} Batter", [p["Player"] for p in away_h_pool], index=min(i, len(away_h_pool)-1), key=f"a_slot_key_{i}")
+            b = st.selectbox(f"Away Slot {i+1} Batter", [p["Player"] for p in away_h_pool], index=min(i, len(away_h_pool)-1), key=f"a_slot_{away_selection}_{i}")
             batters_a.append(b)
             
     with col2:
         st.markdown(f"#### {home_selection} Lineup Assets")
-        sp_choice_h = st.selectbox("Starting Pitcher Choice (Home)", [p["Player"] for p in home_p_pool if p["Role"] == "SP"])
+        sp_choice_h = st.selectbox("Starting Pitcher Choice (Home)", [p["Player"] for p in home_p_pool if p["Role"] == "SP"], key=f"sp_home_{home_selection}")
         batters_h = []
         for i in range(9):
-            b = st.selectbox(f"Home Slot {i+1} Batter", [p["Player"] for p in home_h_pool], index=min(i, len(home_h_pool)-1), key=f"h_slot_key_{i}")
+            b = st.selectbox(f"Home Slot {i+1} Batter", [p["Player"] for p in home_h_pool], index=min(i, len(home_h_pool)-1), key=f"h_slot_{home_selection}_{i}")
             batters_h.append(b)
             
     if st.button("🔒 Lock Framework Configurations & Generate Ecosystem Data", use_container_width=True):
@@ -397,7 +397,6 @@ else:
     c4.metric("Alpha Discovered Edge", f"{round(ev_edge, 2)}% EV", delta_color="inverse" if ev_edge < 0 else "normal")
 
     st.markdown("---")
-    
     st.markdown("### 📊 Micro-Projection Player Prop Vectors")
     
     def render_prop_matrix_view(means_data):
