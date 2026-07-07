@@ -802,62 +802,79 @@ else:
                 "3B": hit_in_play_prob * 0.02, "OUT": out_in_play_prob
             }
 
-        def step_markov_24_state(self, state, outcome, runner_spd):
+        def step_markov_24_state(self, state, outcome, batter_name, runner_spd):
+            # Bases now store the PLAYER NAME occupying each base (or None if empty),
+            # instead of a bare boolean, so runs scored can be credited to the correct batter.
             outs = state["outs"]
             bases = list(state["bases"])
-            runs_scored = 0
+            scored_runners = []
             event_log = ""
             
             if outcome in ["K", "OUT"]:
                 outs += 1
-                return outs, bases, 0, "Strikeout" if outcome == "K" else "Fielded Lineout/Groundout"
+                return outs, bases, scored_runners, "Strikeout" if outcome == "K" else "Fielded Lineout/Groundout"
                 
             if outcome == "BB":
-                if not bases[0]: bases[0] = True
-                elif not bases[1]: bases[1] = True
-                elif not bases[2]: bases[2] = True
-                else: runs_scored += 1
-                return outs, bases, runs_scored, "Base on Balls"
+                # Proper force-advancement logic on a walk
+                if bases[0] is not None and bases[1] is not None and bases[2] is not None:
+                    scored_runners.append(bases[2])
+                    bases = [batter_name, bases[0], bases[1]]
+                elif bases[0] is not None and bases[1] is not None:
+                    bases = [batter_name, bases[0], bases[1]]
+                elif bases[0] is not None:
+                    bases = [batter_name, bases[0], bases[2]]
+                else:
+                    bases = [batter_name, bases[1], bases[2]]
+                return outs, bases, scored_runners, "Base on Balls"
 
             if outcome == "HR":
-                runs_scored = 1 + sum(1 for b in bases if b)
-                return outs, [False, False, False], runs_scored, f"Home Run ({runs_scored} Run Shot)"
+                scored_runners = [b for b in bases if b is not None] + [batter_name]
+                return outs, [None, None, None], scored_runners, f"Home Run ({len(scored_runners)} Run Shot)"
 
             spd_factor = runner_spd / 100.0
             if outcome == "1B":
-                new_bases = [True, False, False]
-                if bases[2]: runs_scored += 1
-                if bases[1]:
-                    if spd_factor > 0.68 or random.random() < 0.45: runs_scored += 1
-                    else: new_bases[2] = True
-                if bases[0]: new_bases[1] = True
+                new_bases = [batter_name, None, None]
+                if bases[2] is not None: scored_runners.append(bases[2])
+                if bases[1] is not None:
+                    if spd_factor > 0.68 or random.random() < 0.45: scored_runners.append(bases[1])
+                    else: new_bases[2] = bases[1]
+                if bases[0] is not None: new_bases[1] = bases[0]
                 bases = new_bases
                 event_log = "Base Hit Single"
             elif outcome == "2B":
-                new_bases = [False, True, False]
-                if bases[2]: runs_scored += 1
-                if bases[1]: runs_scored += 1
-                if bases[0]:
-                    if spd_factor > 0.65: runs_scored += 1
-                    else: new_bases[2] = True
+                new_bases = [None, batter_name, None]
+                if bases[2] is not None: scored_runners.append(bases[2])
+                if bases[1] is not None: scored_runners.append(bases[1])
+                if bases[0] is not None:
+                    if spd_factor > 0.65: scored_runners.append(bases[0])
+                    else: new_bases[2] = bases[0]
                 bases = new_bases
                 event_log = "Double down the baseline"
             elif outcome == "3B":
-                runs_scored = sum(1 for b in bases if b)
-                bases = [False, False, True]
+                scored_runners = [b for b in bases if b is not None]
+                bases = [None, None, batter_name]
                 event_log = "Triple deep into the gap"
                 
-            return outs, bases, runs_scored, event_log
+            return outs, bases, scored_runners, event_log
 
         def run_full_game(self, tracking_mode=False):
+            # IMPORTANT: bullpens are copied fresh here so repeated calls (e.g. across a
+            # 1000x Monte Carlo loop) don't permanently drain self.away_bp/self.home_bp.
+            local_away_bp = copy.deepcopy(self.away_bp)
+            local_home_bp = copy.deepcopy(self.home_bp)
+            all_away_pitchers = [self.away_sp] + local_away_bp
+            all_home_pitchers = [self.home_sp] + local_home_bp
+
             g = {
                 "inning": 1, "top_half": True, "away_score": 0, "home_score": 0,
                 "away_lineup_idx": 0, "home_lineup_idx": 0,
                 "away_p": copy.deepcopy(self.away_sp), "home_p": copy.deepcopy(self.home_sp),
                 "away_pitches": 0, "home_pitches": 0,
                 "box_scores": {
-                    "away": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in self.away_lineup},
-                    "home": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in self.home_lineup}
+                    "away": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0} for p in self.away_lineup},
+                    "home": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0} for p in self.home_lineup},
+                    "away_pitching": {p["Player"]: {"K":0,"BB":0,"H":0,"ER":0,"Outs":0} for p in all_away_pitchers},
+                    "home_pitching": {p["Player"]: {"K":0,"BB":0,"H":0,"ER":0,"Outs":0} for p in all_home_pitchers}
                 },
                 "log_history": [], "win_prob_history": [50.0]
             }
@@ -869,11 +886,11 @@ else:
                 
                 # Dynamic AI Bullpen Hook Logic
                 if g["top_half"] and ((g["home_pitches"] > 95 and g["home_p"]["Role"] == "SP") or g["home_pitches"] > 30):
-                    if self.home_bp: g["home_p"] = self.home_bp.pop(0); g["home_pitches"] = 0
+                    if local_home_bp: g["home_p"] = local_home_bp.pop(0); g["home_pitches"] = 0
                 elif not g["top_half"] and ((g["away_pitches"] > 95 and g["away_p"]["Role"] == "SP") or g["away_pitches"] > 30):
-                    if self.away_bp: g["away_p"] = self.away_bp.pop(0); g["away_pitches"] = 0
+                    if local_away_bp: g["away_p"] = local_away_bp.pop(0); g["away_pitches"] = 0
 
-                state = {"outs": 0, "bases": [False, False, False]}
+                state = {"outs": 0, "bases": [None, None, None]}
                 while state["outs"] < 3:
                     if g["top_half"]:
                         batter = self.away_lineup[g["away_lineup_idx"] % 9]
@@ -890,17 +907,30 @@ else:
                     outcome = random.choices(list(prob_vector.keys()), weights=list(prob_vector.values()), k=1)[0]
                     
                     t_key = "away" if g["top_half"] else "home"
+                    pitch_key = "home_pitching" if g["top_half"] else "away_pitching"
                     b_box = g["box_scores"][t_key][batter["Player"]]
+                    p_box = g["box_scores"][pitch_key][pitcher["Player"]]
                     
                     if outcome in ["1B", "2B", "3B", "HR"]:
                         b_box["H"] += 1; b_box[outcome] += 1; b_box["AB"] += 1
-                    elif outcome == "BB": b_box["BB"] += 1
-                    elif outcome == "K": b_box["K"] += 1; b_box["AB"] += 1
-                    else: b_box["AB"] += 1
+                        p_box["H"] += 1
+                    elif outcome == "BB":
+                        b_box["BB"] += 1; p_box["BB"] += 1
+                    elif outcome == "K":
+                        b_box["K"] += 1; b_box["AB"] += 1
+                        p_box["K"] += 1; p_box["Outs"] += 1
+                    else:
+                        b_box["AB"] += 1
+                        p_box["Outs"] += 1
                     
-                    state["outs"], state["bases"], runs, log_text = self.step_markov_24_state(state, outcome, batter["SPD"])
+                    state["outs"], state["bases"], scored_runners, log_text = self.step_markov_24_state(state, outcome, batter["Player"], batter["SPD"])
+                    runs = len(scored_runners)
                     if runs > 0:
                         b_box["RBI"] += runs
+                        p_box["ER"] += runs
+                        for runner_name in scored_runners:
+                            if runner_name in g["box_scores"][t_key]:
+                                g["box_scores"][t_key][runner_name]["R"] += 1
                         if g["top_half"]: g["away_score"] += runs
                         else: g["home_score"] += runs
                         
@@ -926,8 +956,12 @@ else:
         with st.spinner("Executing 1,000x Structural Monte Carlo Base Operations..."):
             engine = DipsMarkovEngine(st.session_state["locked_away_lineup"], st.session_state["locked_home_lineup"], st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], st.session_state["locked_away_bullpen"], st.session_state["locked_home_bullpen"], park_rules, env_tensors)
             home_wins = 0
-            agg_away_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in st.session_state["locked_away_lineup"]}
-            agg_home_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0} for p in st.session_state["locked_home_lineup"]}
+            agg_away_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0} for p in st.session_state["locked_away_lineup"]}
+            agg_home_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0} for p in st.session_state["locked_home_lineup"]}
+            away_pitcher_pool = [st.session_state["locked_away_sp"]] + st.session_state["locked_away_bullpen"]
+            home_pitcher_pool = [st.session_state["locked_home_sp"]] + st.session_state["locked_home_bullpen"]
+            agg_away_pitch = {p["Player"]: {"K":0,"BB":0,"H":0,"ER":0,"Outs":0} for p in away_pitcher_pool}
+            agg_home_pitch = {p["Player"]: {"K":0,"BB":0,"H":0,"ER":0,"Outs":0} for p in home_pitcher_pool}
             
             iterations = 1000
             for _ in range(iterations):
@@ -937,13 +971,29 @@ else:
                     for s in agg_away_box[p]: agg_away_box[p][s] += sim_res["box_scores"]["away"][p][s]
                 for p in agg_home_box:
                     for s in agg_home_box[p]: agg_home_box[p][s] += sim_res["box_scores"]["home"][p][s]
+                for p in agg_away_pitch:
+                    for s in agg_away_pitch[p]: agg_away_pitch[p][s] += sim_res["box_scores"]["away_pitching"][p][s]
+                for p in agg_home_pitch:
+                    for s in agg_home_pitch[p]: agg_home_pitch[p][s] += sim_res["box_scores"]["home_pitching"][p][s]
                     
             for p in agg_away_box:
                 for s in agg_away_box[p]: agg_away_box[p][s] /= iterations
             for p in agg_home_box:
                 for s in agg_home_box[p]: agg_home_box[p][s] /= iterations
+            for p in agg_away_pitch:
+                for s in agg_away_pitch[p]: agg_away_pitch[p][s] /= iterations
+            for p in agg_home_pitch:
+                for s in agg_home_pitch[p]: agg_home_pitch[p][s] /= iterations
                 
-            st.session_state["monte_carlo_results"] = {"home_win_prob": home_wins / iterations, "away_box_means": agg_away_box, "home_box_means": agg_home_box}
+            away_role_map = {p["Player"]: p["Role"] for p in away_pitcher_pool}
+            home_role_map = {p["Player"]: p["Role"] for p in home_pitcher_pool}
+                
+            st.session_state["monte_carlo_results"] = {
+                "home_win_prob": home_wins / iterations,
+                "away_box_means": agg_away_box, "home_box_means": agg_home_box,
+                "away_pitch_means": agg_away_pitch, "home_pitch_means": agg_home_pitch,
+                "away_role_map": away_role_map, "home_role_map": home_role_map
+            }
 
     # ----------------------------------------------------
     # SPORTSBOOK & POSTSEASON INTERFACE RENDERS
@@ -984,23 +1034,57 @@ else:
         for h in series_history: st.write(h)
 
     st.markdown("---")
-    def render_prop_matrix_view(means_data):
+    def render_hitting_prop_matrix_view(means_data):
+        # Standard PrizePicks/DK-style lines by market. Edge = projection minus the line.
+        H_LINE, HR_LINE, RBI_LINE, R_LINE, TB_LINE = 1.5, 0.5, 0.5, 0.5, 1.5
         rows = []
         for name, stats in means_data.items():
             hits_exp = stats["H"]
+            hr_exp = stats["HR"]
+            rbi_exp = stats["RBI"]
+            r_exp = stats["R"]
             tb_exp = stats["1B"] + (stats["2B"] * 2) + (stats["3B"] * 3) + (stats["HR"] * 4)
-            dk_exp = (hits_exp * 3) + (stats["2B"] * 2) + (stats["HR"] * 7) + (stats["RBI"] * 2) + (stats["BB"] * 2)
+            dk_exp = (hits_exp * 3) + (stats["2B"] * 2) + (stats["HR"] * 7) + (stats["RBI"] * 2) + (stats["BB"] * 2) + (r_exp * 2)
             rows.append({
-                "Player Asset": name, "Projected Hits": round(hits_exp, 2), "Projected Total Bases": round(tb_exp, 2),
-                "Projected HR Rate": round(stats["HR"], 3), "Projected BB Rate": round(stats["BB"], 2),
-                "DraftKings FP Exp": round(dk_exp, 2), "Total Bases Line": 1.5,
-                "Model Suggestion": "🔥 OVER VALUE" if tb_exp > 1.35 else "❄️ UNDER VALUE"
+                "Player Asset": name,
+                "Proj Hits": round(hits_exp, 2), "Hits Line": H_LINE, "Hits Edge": round(hits_exp - H_LINE, 2), "Hits Call": "🔥 OVER" if hits_exp > H_LINE else "❄️ UNDER",
+                "Proj HR": round(hr_exp, 2), "HR Line": HR_LINE, "HR Call": "🔥 OVER" if hr_exp > HR_LINE else "❄️ UNDER",
+                "Proj RBI": round(rbi_exp, 2), "RBI Line": RBI_LINE, "RBI Call": "🔥 OVER" if rbi_exp > RBI_LINE else "❄️ UNDER",
+                "Proj Runs": round(r_exp, 2), "Runs Line": R_LINE, "Runs Call": "🔥 OVER" if r_exp > R_LINE else "❄️ UNDER",
+                "Proj TB": round(tb_exp, 2), "TB Line": TB_LINE, "TB Call": "🔥 OVER" if tb_exp > TB_LINE else "❄️ UNDER",
+                "DraftKings FP Exp": round(dk_exp, 2)
             })
         st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
 
-    t_prop_away, t_prop_home = st.tabs([f"📊 {away_selection} Prop Vectors", f"📊 {home_selection} Prop Vectors"])
-    with t_prop_away: render_prop_matrix_view(mc["away_box_means"])
-    with t_prop_home: render_prop_matrix_view(mc["home_box_means"])
+    def render_pitching_prop_matrix_view(means_data, role_map):
+        rows = []
+        for name, stats in means_data.items():
+            role = role_map.get(name, "RP")
+            ip_exp = stats["Outs"] / 3.0
+            k_exp = stats["K"]
+            # Standard-shaped K lines: starters get a full-game line, bullpen arms get a short-relief line
+            k_line = 4.5 if role == "SP" else 0.5
+            rows.append({
+                "Pitcher": name, "Role": role,
+                "Proj IP": round(ip_exp, 2),
+                "Proj K": round(k_exp, 2), "K Line": k_line, "K Edge": round(k_exp - k_line, 2),
+                "K Call": "🔥 OVER" if k_exp > k_line else "❄️ UNDER",
+                "Proj BB Allowed": round(stats["BB"], 2),
+                "Proj H Allowed": round(stats["H"], 2),
+                "Proj ER": round(stats["ER"], 2)
+            })
+        # Show starters first, then bullpen in appearance order
+        rows.sort(key=lambda r: 0 if r["Role"] == "SP" else 1)
+        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+
+    t_prop_away, t_prop_home, t_pitch_away, t_pitch_home = st.tabs([
+        f"📊 {away_selection} Hitting Props", f"📊 {home_selection} Hitting Props",
+        f"⚾ {away_selection} Pitching Props", f"⚾ {home_selection} Pitching Props"
+    ])
+    with t_prop_away: render_hitting_prop_matrix_view(mc["away_box_means"])
+    with t_prop_home: render_hitting_prop_matrix_view(mc["home_box_means"])
+    with t_pitch_away: render_pitching_prop_matrix_view(mc["away_pitch_means"], mc["away_role_map"])
+    with t_pitch_home: render_pitching_prop_matrix_view(mc["home_pitch_means"], mc["home_role_map"])
 
     st.markdown("### 🏟️ Live Play-By-Play Visual Render Interface")
     if st.button("Launch Immersive Real-Time Simulation Walkthrough Loop", type="primary", use_container_width=True):
