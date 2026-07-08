@@ -149,7 +149,7 @@ ROSTER_DATABASE = {
             {"Player": "Marcell Ozuna", "Pos": "DH", "Bats": "R", "BB_RATE": 0.1, "K_RATE": 0.245, "HR_PA_RATE": 0.05, "BABIP": 0.29, "1B_H_RATE": 0.46, "2B_H_RATE": 0.24, "3B_H_RATE": 0.0, "HR_H_RATE": 0.3, "SPD": 30, "PA": 560},
             {"Player": "Michael Harris II", "Pos": "CF", "Bats": "L", "BB_RATE": 0.055, "K_RATE": 0.185, "HR_PA_RATE": 0.03, "BABIP": 0.3, "1B_H_RATE": 0.58, "2B_H_RATE": 0.24, "3B_H_RATE": 0.03, "HR_H_RATE": 0.15, "SPD": 80, "PA": 540},
             {"Player": "Orlando Arcia", "Pos": "SS", "Bats": "R", "BB_RATE": 0.05, "K_RATE": 0.17, "HR_PA_RATE": 0.022, "BABIP": 0.27, "1B_H_RATE": 0.62, "2B_H_RATE": 0.22, "3B_H_RATE": 0.01, "HR_H_RATE": 0.15, "SPD": 58, "PA": 460},
-            {"Player": "Jarred Kelenic", "Pos": "LF", "Bats": "L", "BB_RATE": 0.085, "K_RATE": 0.26, "HR_PA_RATE": 0.036, "BABIP": 0.29, "1B_H_RATE": 0.52, "2B_H_RATE": 0.26, "3B_H_RATE": 0.02, "HR_H_RATE": 0.2, "SPD": 62, "PA": 400},
+            {"Player": "Mike Yastrzemski", "Pos": "LF", "Bats": "L", "BB_RATE": 0.1, "K_RATE": 0.215, "HR_PA_RATE": 0.03, "BABIP": 0.28, "1B_H_RATE": 0.52, "2B_H_RATE": 0.27, "3B_H_RATE": 0.01, "HR_H_RATE": 0.2, "SPD": 45, "PA": 420},
         ],
         "pitching": [
             {"Player": "Chris Sale", "Pos": "P", "Role": "SP", "Throws": "L", "BB_ALLOWED_RATE": 0.055, "K_ALLOWED_RATE": 0.31, "HR_PA_ALLOWED_RATE": 0.024, "BABIP_ALLOWED": 0.28, "OAVG": 0.21, "IP": "175.0", "ERA": 2.85, "Fatigue": 0.0},
@@ -434,7 +434,7 @@ ROSTER_DATABASE = {
             {"Player": "Patrick Bailey", "Pos": "C", "Bats": "B", "BB_RATE": 0.07, "K_RATE": 0.185, "HR_PA_RATE": 0.018, "BABIP": 0.28, "1B_H_RATE": 0.6, "2B_H_RATE": 0.24, "3B_H_RATE": 0.01, "HR_H_RATE": 0.15, "SPD": 40, "PA": 460},
             {"Player": "LaMonte Wade Jr.", "Pos": "1B", "Bats": "L", "BB_RATE": 0.12, "K_RATE": 0.195, "HR_PA_RATE": 0.025, "BABIP": 0.28, "1B_H_RATE": 0.56, "2B_H_RATE": 0.26, "3B_H_RATE": 0.01, "HR_H_RATE": 0.17, "SPD": 45, "PA": 440},
             {"Player": "Tyler Fitzgerald", "Pos": "2B", "Bats": "R", "BB_RATE": 0.06, "K_RATE": 0.23, "HR_PA_RATE": 0.025, "BABIP": 0.3, "1B_H_RATE": 0.56, "2B_H_RATE": 0.24, "3B_H_RATE": 0.03, "HR_H_RATE": 0.17, "SPD": 78, "PA": 480},
-            {"Player": "Mike Yastrzemski", "Pos": "LF", "Bats": "L", "BB_RATE": 0.1, "K_RATE": 0.215, "HR_PA_RATE": 0.03, "BABIP": 0.28, "1B_H_RATE": 0.52, "2B_H_RATE": 0.27, "3B_H_RATE": 0.01, "HR_H_RATE": 0.2, "SPD": 50, "PA": 460},
+            {"Player": "Drew Gilbert", "Pos": "LF", "Bats": "L", "BB_RATE": 0.075, "K_RATE": 0.24, "HR_PA_RATE": 0.022, "BABIP": 0.30, "1B_H_RATE": 0.54, "2B_H_RATE": 0.26, "3B_H_RATE": 0.02, "HR_H_RATE": 0.18, "SPD": 62, "PA": 380},
             {"Player": "Rafael Devers", "Pos": "DH", "Bats": "L", "BB_RATE": 0.105, "K_RATE": 0.22, "HR_PA_RATE": 0.042, "BABIP": 0.3, "1B_H_RATE": 0.48, "2B_H_RATE": 0.27, "3B_H_RATE": 0.01, "HR_H_RATE": 0.24, "SPD": 40, "PA": 620},
         ],
         "pitching": [
@@ -613,7 +613,7 @@ ROSTER_DATABASE = {
             {"Player": "Kazuma Okamoto", "Pos": "3B", "Bats": "R", "BB_RATE": 0.075, "K_RATE": 0.195, "HR_PA_RATE": 0.032, "BABIP": 0.28, "1B_H_RATE": 0.52, "2B_H_RATE": 0.26, "3B_H_RATE": 0.01, "HR_H_RATE": 0.21, "SPD": 40, "PA": 480},
             {"Player": "George Springer", "Pos": "DH", "Bats": "R", "BB_RATE": 0.11, "K_RATE": 0.195, "HR_PA_RATE": 0.032, "BABIP": 0.28, "1B_H_RATE": 0.5, "2B_H_RATE": 0.28, "3B_H_RATE": 0.01, "HR_H_RATE": 0.21, "SPD": 55, "PA": 570},
             {"Player": "Alejandro Kirk", "Pos": "C", "Bats": "R", "BB_RATE": 0.09, "K_RATE": 0.125, "HR_PA_RATE": 0.018, "BABIP": 0.29, "1B_H_RATE": 0.62, "2B_H_RATE": 0.24, "3B_H_RATE": 0.0, "HR_H_RATE": 0.14, "SPD": 30, "PA": 500},
-            {"Player": "Daulton Varsho", "Pos": "CF", "Bats": "L", "BB_RATE": 0.08, "K_RATE": 0.24, "HR_PA_RATE": 0.03, "BABIP": 0.29, "1B_H_RATE": 0.52, "2B_H_RATE": 0.25, "3B_H_RATE": 0.03, "HR_H_RATE": 0.2, "SPD": 72, "PA": 540},
+            {"Player": "Nathan Lukes", "Pos": "CF", "Bats": "L", "BB_RATE": 0.075, "K_RATE": 0.14, "HR_PA_RATE": 0.018, "BABIP": 0.30, "1B_H_RATE": 0.62, "2B_H_RATE": 0.24, "3B_H_RATE": 0.02, "HR_H_RATE": 0.12, "SPD": 55, "PA": 350},
             {"Player": "Ernie Clement", "Pos": "2B", "Bats": "R", "BB_RATE": 0.035, "K_RATE": 0.11, "HR_PA_RATE": 0.012, "BABIP": 0.29, "1B_H_RATE": 0.68, "2B_H_RATE": 0.2, "3B_H_RATE": 0.02, "HR_H_RATE": 0.1, "SPD": 55, "PA": 500},
             {"Player": "Andres Gimenez", "Pos": "SS", "Bats": "L", "BB_RATE": 0.06, "K_RATE": 0.175, "HR_PA_RATE": 0.018, "BABIP": 0.29, "1B_H_RATE": 0.6, "2B_H_RATE": 0.24, "3B_H_RATE": 0.02, "HR_H_RATE": 0.14, "SPD": 68, "PA": 520},
             {"Player": "Addison Barger", "Pos": "RF", "Bats": "L", "BB_RATE": 0.07, "K_RATE": 0.245, "HR_PA_RATE": 0.032, "BABIP": 0.3, "1B_H_RATE": 0.5, "2B_H_RATE": 0.26, "3B_H_RATE": 0.02, "HR_H_RATE": 0.22, "SPD": 55, "PA": 460},
@@ -1064,9 +1064,16 @@ else:
                     break # Home team walk-off rule safety block
                 
                 # Dynamic AI Bullpen Hook Logic
-                if g["top_half"] and ((g["home_pitches"] > 95 and g["home_p"]["Role"] == "SP") or g["home_pitches"] > 30):
+                # Starters get pulled after ~95 pitches; relief/closer arms get a quicker ~30-pitch hook.
+                if g["top_half"] and (
+                    (g["home_p"]["Role"] == "SP" and g["home_pitches"] > 95) or
+                    (g["home_p"]["Role"] != "SP" and g["home_pitches"] > 30)
+                ):
                     if local_home_bp: g["home_p"] = local_home_bp.pop(0); g["home_pitches"] = 0
-                elif not g["top_half"] and ((g["away_pitches"] > 95 and g["away_p"]["Role"] == "SP") or g["away_pitches"] > 30):
+                elif not g["top_half"] and (
+                    (g["away_p"]["Role"] == "SP" and g["away_pitches"] > 95) or
+                    (g["away_p"]["Role"] != "SP" and g["away_pitches"] > 30)
+                ):
                     if local_away_bp: g["away_p"] = local_away_bp.pop(0); g["away_pitches"] = 0
 
                 state = {"outs": 0, "bases": [None, None, None]}
