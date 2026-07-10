@@ -1093,6 +1093,29 @@ else:
                 
             return outs, bases, scored_runners, event_log
 
+        def select_next_reliever(self, bullpen_list, own_score, opp_score, inning):
+            """Picks the next arm from the bullpen, but reserves the Closer for genuine save
+            situations (9th inning or later, leading by 1-3 runs) instead of using him in
+            roster-list order regardless of game context. This mirrors how real managers
+            actually deploy their closer -- saved for the highest-leverage spot, not just
+            whichever arm happens to be next on the depth chart."""
+            if not bullpen_list:
+                return None
+            lead = own_score - opp_score
+            is_save_situation = inning >= 9 and 1 <= lead <= 3
+
+            closer_idx = next((i for i, p in enumerate(bullpen_list) if p["Role"] == "Closer"), None)
+            if is_save_situation and closer_idx is not None:
+                return bullpen_list.pop(closer_idx)
+
+            # Not a save situation: pull a non-closer arm first, keeping the closer in reserve.
+            non_closer_idx = next((i for i, p in enumerate(bullpen_list) if p["Role"] != "Closer"), None)
+            if non_closer_idx is not None:
+                return bullpen_list.pop(non_closer_idx)
+
+            # Bullpen is down to just the closer (extras/blowout/exhausted pen) -- use him anyway.
+            return bullpen_list.pop(0)
+
         def run_full_game(self, tracking_mode=False):
             # IMPORTANT: bullpens are copied fresh here so repeated calls (e.g. across a
             # 1000x Monte Carlo loop) don't permanently drain self.away_bp/self.home_bp.
@@ -1122,16 +1145,26 @@ else:
                 
                 # Dynamic AI Bullpen Hook Logic
                 # Starters get pulled after ~95 pitches; relief/closer arms get a quicker ~30-pitch hook.
+                # Uses pitcher IDENTITY (is this the pitcher who started today's game?) rather than
+                # roster Role label -- a team's 2nd/3rd starter is still labeled "SP" in the roster
+                # data even when he's the one entering as a mid-game reliever, so checking Role alone
+                # would let him keep the lenient 95-pitch starter's threshold indefinitely and
+                # effectively never get pulled again, starving the rest of the bullpen (including
+                # the closer) of any realistic chance to appear.
+                home_is_todays_starter = g["home_p"]["Player"] == self.home_sp["Player"]
+                away_is_todays_starter = g["away_p"]["Player"] == self.away_sp["Player"]
                 if g["top_half"] and (
-                    (g["home_p"]["Role"] == "SP" and g["home_pitches"] > 95) or
-                    (g["home_p"]["Role"] != "SP" and g["home_pitches"] > 30)
+                    (home_is_todays_starter and g["home_pitches"] > 95) or
+                    (not home_is_todays_starter and g["home_pitches"] > 30)
                 ):
-                    if local_home_bp: g["home_p"] = local_home_bp.pop(0); g["home_pitches"] = 0
+                    next_p = self.select_next_reliever(local_home_bp, g["home_score"], g["away_score"], g["inning"])
+                    if next_p: g["home_p"] = next_p; g["home_pitches"] = 0
                 elif not g["top_half"] and (
-                    (g["away_p"]["Role"] == "SP" and g["away_pitches"] > 95) or
-                    (g["away_p"]["Role"] != "SP" and g["away_pitches"] > 30)
+                    (away_is_todays_starter and g["away_pitches"] > 95) or
+                    (not away_is_todays_starter and g["away_pitches"] > 30)
                 ):
-                    if local_away_bp: g["away_p"] = local_away_bp.pop(0); g["away_pitches"] = 0
+                    next_p = self.select_next_reliever(local_away_bp, g["away_score"], g["home_score"], g["inning"])
+                    if next_p: g["away_p"] = next_p; g["away_pitches"] = 0
 
                 state = {"outs": 0, "bases": [None, None, None]}
                 while state["outs"] < 3:
