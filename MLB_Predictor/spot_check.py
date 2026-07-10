@@ -1234,7 +1234,8 @@ else:
         # shape doesn't match what the current renderers expect.
         if results is None:
             return True
-        required_top_keys = {"home_win_prob", "away_box_means", "home_box_means", "away_pitch_means", "home_pitch_means", "away_role_map", "home_role_map"}
+        required_top_keys = {"home_win_prob", "away_box_means", "home_box_means", "away_pitch_means", "home_pitch_means",
+                              "away_role_map", "home_role_map", "away_box_dist", "home_box_dist", "away_pitch_dist", "home_pitch_dist"}
         if not required_top_keys.issubset(results.keys()):
             return True
         required_hit_keys = {"AB","H","1B","2B","3B","HR","BB","RBI","K","R"}
@@ -1259,6 +1260,14 @@ else:
             home_pitcher_pool = [st.session_state["locked_home_sp"]] + st.session_state["locked_home_bullpen"]
             agg_away_pitch = {p["Player"]: {"K":0,"BB":0,"H":0,"ER":0,"Outs":0} for p in away_pitcher_pool}
             agg_home_pitch = {p["Player"]: {"K":0,"BB":0,"H":0,"ER":0,"Outs":0} for p in home_pitcher_pool}
+            # Per-iteration outcome tracking (not just running sums) -- lets props report the
+            # real empirical probability of clearing a line, not just an average-vs-line
+            # comparison, which is misleading for skewed counting stats like HR (mostly 0s
+            # with occasional multi-HR games) or K (varies a lot game-to-game).
+            dist_away_box = {p["Player"]: {"H": [], "TB": [], "HR": [], "RBI": [], "R": []} for p in st.session_state["locked_away_lineup"]}
+            dist_home_box = {p["Player"]: {"H": [], "TB": [], "HR": [], "RBI": [], "R": []} for p in st.session_state["locked_home_lineup"]}
+            dist_away_pitch = {p["Player"]: {"K": []} for p in away_pitcher_pool}
+            dist_home_pitch = {p["Player"]: {"K": []} for p in home_pitcher_pool}
             
             iterations = 1000
             for _ in range(iterations):
@@ -1266,12 +1275,22 @@ else:
                 if sim_res["home_score"] > sim_res["away_score"]: home_wins += 1
                 for p in agg_away_box:
                     for s in agg_away_box[p]: agg_away_box[p][s] += sim_res["box_scores"]["away"][p][s]
+                    stats = sim_res["box_scores"]["away"][p]
+                    tb = stats["1B"] + stats["2B"]*2 + stats["3B"]*3 + stats["HR"]*4
+                    dist_away_box[p]["H"].append(stats["H"]); dist_away_box[p]["TB"].append(tb)
+                    dist_away_box[p]["HR"].append(stats["HR"]); dist_away_box[p]["RBI"].append(stats["RBI"]); dist_away_box[p]["R"].append(stats["R"])
                 for p in agg_home_box:
                     for s in agg_home_box[p]: agg_home_box[p][s] += sim_res["box_scores"]["home"][p][s]
+                    stats = sim_res["box_scores"]["home"][p]
+                    tb = stats["1B"] + stats["2B"]*2 + stats["3B"]*3 + stats["HR"]*4
+                    dist_home_box[p]["H"].append(stats["H"]); dist_home_box[p]["TB"].append(tb)
+                    dist_home_box[p]["HR"].append(stats["HR"]); dist_home_box[p]["RBI"].append(stats["RBI"]); dist_home_box[p]["R"].append(stats["R"])
                 for p in agg_away_pitch:
                     for s in agg_away_pitch[p]: agg_away_pitch[p][s] += sim_res["box_scores"]["away_pitching"][p][s]
+                    dist_away_pitch[p]["K"].append(sim_res["box_scores"]["away_pitching"][p]["K"])
                 for p in agg_home_pitch:
                     for s in agg_home_pitch[p]: agg_home_pitch[p][s] += sim_res["box_scores"]["home_pitching"][p][s]
+                    dist_home_pitch[p]["K"].append(sim_res["box_scores"]["home_pitching"][p]["K"])
                     
             for p in agg_away_box:
                 for s in agg_away_box[p]: agg_away_box[p][s] /= iterations
@@ -1289,7 +1308,9 @@ else:
                 "home_win_prob": home_wins / iterations,
                 "away_box_means": agg_away_box, "home_box_means": agg_home_box,
                 "away_pitch_means": agg_away_pitch, "home_pitch_means": agg_home_pitch,
-                "away_role_map": away_role_map, "home_role_map": home_role_map
+                "away_role_map": away_role_map, "home_role_map": home_role_map,
+                "away_box_dist": dist_away_box, "home_box_dist": dist_home_box,
+                "away_pitch_dist": dist_away_pitch, "home_pitch_dist": dist_home_pitch,
             }
 
     # ----------------------------------------------------
@@ -1313,6 +1334,26 @@ else:
     c3.metric("Vegas Implied Baseline", f"{round(market_implied_prob*100, 1)}%", delta=f"Input: {vegas_line_input}")
     c4.metric("Alpha Discovered Edge", f"{round(ev_edge, 2)}% EV", delta_color="inverse" if ev_edge < 0 else "normal")
 
+    # Kelly criterion stake sizing -- given the model's win probability and the moneyline price
+    # entered above, this computes the mathematically "optimal" fraction of a bankroll to risk.
+    # This is a standard staking formula, not financial advice -- full Kelly is also famously
+    # aggressive/volatile in practice, which is why many bettors use a fraction of it (shown below).
+    def kelly_fraction(model_prob, american_odds):
+        decimal_odds = 1 + (100 / abs(american_odds)) if american_odds < 0 else 1 + (american_odds / 100)
+        b = decimal_odds - 1
+        return (b * model_prob - (1 - model_prob)) / b
+
+    home_kelly = kelly_fraction(h_prob, vegas_line_input)
+    st.markdown("#### 💰 Kelly Stake Sizing (Home Line, at the price entered above)")
+    k1, k2, k3 = st.columns(3)
+    k1.metric("Full Kelly Stake", f"{max(0, home_kelly)*100:.1f}% of bankroll")
+    k2.metric("Half Kelly (common in practice)", f"{max(0, home_kelly)*50:.1f}% of bankroll")
+    k3.metric("Quarter Kelly (conservative)", f"{max(0, home_kelly)*25:.1f}% of bankroll")
+    if home_kelly <= 0:
+        st.caption("Kelly stake is 0% -- at this price, the model doesn't see a positive edge on the home side, so the formula says not to bet it.")
+    else:
+        st.caption("This is a mathematical staking formula based on your inputs, not financial advice -- Kelly assumes your model probability is accurate, which it isn't guaranteed to be, and full Kelly stakes are volatile even when the edge is real. Many bettors use half or quarter Kelly for that reason.")
+
     st.markdown("---")
     st.markdown("### 🏆 Best-Of-7 Postseason Series Tensor Mode")
     if st.button("Simulate Full 7-Game World Series Run", use_container_width=True):
@@ -1331,9 +1372,12 @@ else:
         for h in series_history: st.write(h)
 
     st.markdown("---")
-    def render_hitting_prop_matrix_view(means_data):
+    def render_hitting_prop_matrix_view(means_data, dist_data):
         # Standard PrizePicks/DK-style lines by market. Edge = projection minus the line.
         H_LINE, HR_LINE, RBI_LINE, R_LINE, TB_LINE = 1.5, 0.5, 0.5, 0.5, 1.5
+        def prob_over(values, line):
+            if not values: return 0.5
+            return sum(1 for v in values if v > line) / len(values)
         rows = []
         for name, stats in means_data.items():
             hits_exp = stats.get("H", 0)
@@ -1342,18 +1386,28 @@ else:
             r_exp = stats.get("R", 0)
             tb_exp = stats.get("1B", 0) + (stats.get("2B", 0) * 2) + (stats.get("3B", 0) * 3) + (stats.get("HR", 0) * 4)
             dk_exp = (hits_exp * 3) + (stats.get("2B", 0) * 2) + (stats.get("HR", 0) * 7) + (stats.get("RBI", 0) * 2) + (stats.get("BB", 0) * 2) + (r_exp * 2)
+            d = dist_data.get(name, {})
+            h_p = prob_over(d.get("H", []), H_LINE)
+            hr_p = prob_over(d.get("HR", []), HR_LINE)
+            rbi_p = prob_over(d.get("RBI", []), RBI_LINE)
+            r_p = prob_over(d.get("R", []), R_LINE)
+            tb_p = prob_over(d.get("TB", []), TB_LINE)
             rows.append({
                 "Player Asset": name,
-                "Proj Hits": round(hits_exp, 2), "Hits Line": H_LINE, "Hits Edge": round(hits_exp - H_LINE, 2), "Hits Call": "🔥 OVER" if hits_exp > H_LINE else "❄️ UNDER",
-                "Proj HR": round(hr_exp, 2), "HR Line": HR_LINE, "HR Call": "🔥 OVER" if hr_exp > HR_LINE else "❄️ UNDER",
-                "Proj RBI": round(rbi_exp, 2), "RBI Line": RBI_LINE, "RBI Call": "🔥 OVER" if rbi_exp > RBI_LINE else "❄️ UNDER",
-                "Proj Runs": round(r_exp, 2), "Runs Line": R_LINE, "Runs Call": "🔥 OVER" if r_exp > R_LINE else "❄️ UNDER",
-                "Proj TB": round(tb_exp, 2), "TB Line": TB_LINE, "TB Call": "🔥 OVER" if tb_exp > TB_LINE else "❄️ UNDER",
+                "Proj Hits": round(hits_exp, 2), "Hits Line": H_LINE, "Hits Over%": f"{h_p*100:.0f}%",
+                "Proj HR": round(hr_exp, 2), "HR Line": HR_LINE, "HR Over%": f"{hr_p*100:.0f}%",
+                "Proj RBI": round(rbi_exp, 2), "RBI Line": RBI_LINE, "RBI Over%": f"{rbi_p*100:.0f}%",
+                "Proj Runs": round(r_exp, 2), "Runs Line": R_LINE, "Runs Over%": f"{r_p*100:.0f}%",
+                "Proj TB": round(tb_exp, 2), "TB Line": TB_LINE, "TB Over%": f"{tb_p*100:.0f}%",
                 "DraftKings FP Exp": round(dk_exp, 2)
             })
         st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+        st.caption("Over% = share of the 1,000 simulated games where the player actually cleared the line -- a truer read than comparing the average alone, since HR/RBI/Runs are lumpy stats (mostly 0s with occasional multi-event games) that an average can understate or overstate.")
 
-    def render_pitching_prop_matrix_view(means_data, role_map):
+    def render_pitching_prop_matrix_view(means_data, role_map, dist_data):
+        def prob_over(values, line):
+            if not values: return 0.5
+            return sum(1 for v in values if v > line) / len(values)
         rows = []
         for name, stats in means_data.items():
             role = role_map.get(name, "RP")
@@ -1361,11 +1415,11 @@ else:
             k_exp = stats.get("K", 0)
             # Standard-shaped K lines: starters get a full-game line, bullpen arms get a short-relief line
             k_line = 4.5 if role == "SP" else 0.5
+            k_p = prob_over(dist_data.get(name, {}).get("K", []), k_line)
             rows.append({
                 "Pitcher": name, "Role": role,
                 "Proj IP": round(ip_exp, 2),
-                "Proj K": round(k_exp, 2), "K Line": k_line, "K Edge": round(k_exp - k_line, 2),
-                "K Call": "🔥 OVER" if k_exp > k_line else "❄️ UNDER",
+                "Proj K": round(k_exp, 2), "K Line": k_line, "K Over%": f"{k_p*100:.0f}%",
                 "Proj BB Allowed": round(stats.get("BB", 0), 2),
                 "Proj H Allowed": round(stats.get("H", 0), 2),
                 "Proj ER": round(stats.get("ER", 0), 2)
@@ -1373,15 +1427,16 @@ else:
         # Show starters first, then bullpen in appearance order
         rows.sort(key=lambda r: 0 if r["Role"] == "SP" else 1)
         st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+        st.caption("K Over% = share of the 1,000 simulated games where the pitcher actually cleared the strikeout line.")
 
     t_prop_away, t_prop_home, t_pitch_away, t_pitch_home = st.tabs([
         f"📊 {away_selection} Hitting Props", f"📊 {home_selection} Hitting Props",
         f"⚾ {away_selection} Pitching Props", f"⚾ {home_selection} Pitching Props"
     ])
-    with t_prop_away: render_hitting_prop_matrix_view(mc["away_box_means"])
-    with t_prop_home: render_hitting_prop_matrix_view(mc["home_box_means"])
-    with t_pitch_away: render_pitching_prop_matrix_view(mc["away_pitch_means"], mc["away_role_map"])
-    with t_pitch_home: render_pitching_prop_matrix_view(mc["home_pitch_means"], mc["home_role_map"])
+    with t_prop_away: render_hitting_prop_matrix_view(mc["away_box_means"], mc["away_box_dist"])
+    with t_prop_home: render_hitting_prop_matrix_view(mc["home_box_means"], mc["home_box_dist"])
+    with t_pitch_away: render_pitching_prop_matrix_view(mc["away_pitch_means"], mc["away_role_map"], mc["away_pitch_dist"])
+    with t_pitch_home: render_pitching_prop_matrix_view(mc["home_pitch_means"], mc["home_role_map"], mc["home_pitch_dist"])
 
     st.markdown("### 🏟️ Live Play-By-Play Visual Render Interface")
     if st.button("Launch Immersive Real-Time Simulation Walkthrough Loop", type="primary", use_container_width=True):
