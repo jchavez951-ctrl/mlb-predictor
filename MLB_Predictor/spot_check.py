@@ -976,6 +976,11 @@ else:
             platoon_mult = 1.07 if is_platoon else 0.93
             
             fatigue_penalty = 1.0 + (pitcher.get("Fatigue", 0.0) * 0.35)
+            # Fatigue affects strikeouts in the OPPOSITE direction from walks/hard-contact: a
+            # tiring pitcher loses command (more walks) and velocity/movement (more hard
+            # contact/HR), but also loses swing-and-miss sharpness, so strikeouts should
+            # decline, not rise, as fatigue increases.
+            k_fatigue_penalty = 1.0 - (pitcher.get("Fatigue", 0.0) * 0.20)
             ttop_mult = 1.0 + ((order_cycle - 1) * 0.06) if pitcher["Role"] == "SP" else 1.0
             
             # Dynamic Environmental Atmosphere Scalers
@@ -1004,7 +1009,7 @@ else:
             p_babip = regress_to_mean(pitcher["BABIP_ALLOWED"], pitcher_bf, LEAGUE_BASELINE["BABIP"], PITCHER_STABILIZATION_BF["BABIP_ALLOWED"])
 
             bb_prob = calculate_log_odds(b_bb_rate, p_bb_rate * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["BB_RATE"])
-            k_prob = calculate_log_odds(b_k_rate, p_k_rate * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["K_RATE"])
+            k_prob = calculate_log_odds(b_k_rate, p_k_rate * ttop_mult * k_fatigue_penalty, LEAGUE_BASELINE["K_RATE"])
             
             hr_base = calculate_log_odds(b_hr_rate, p_hr_rate * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["HR_PA_RATE"])
             hr_prob = hr_base * self.park["hr_mult"] * temp_density_scalar * elevation_scalar * wind_scalar
@@ -1173,11 +1178,18 @@ else:
                         pitcher = g["home_p"]
                         g["home_pitches"] += random.randint(3, 6)
                         order_cycle = (g["away_lineup_idx"] // 9) + 1
+                        # In-game fatigue: ramps up as this pitcher's pitch count THIS OUTING
+                        # rises (resets to 0 whenever a new pitcher enters, since home_pitches
+                        # itself resets on a pitching change). No effect for the first ~25
+                        # pitches, then climbs -- by 95 pitches (roughly a starter's typical
+                        # pull threshold) a pitcher is meaningfully more hittable than fresh.
+                        pitcher["Fatigue"] = max(0.0, (g["home_pitches"] - 25) / 100.0)
                     else:
                         batter = self.home_lineup[g["home_lineup_idx"] % 9]
                         pitcher = g["away_p"]
                         g["away_pitches"] += random.randint(3, 6)
                         order_cycle = (g["home_lineup_idx"] // 9) + 1
+                        pitcher["Fatigue"] = max(0.0, (g["away_pitches"] - 25) / 100.0)
                         
                     prob_vector = self.execute_matchup_vector(batter, pitcher, order_cycle)
                     outcome = random.choices(list(prob_vector.keys()), weights=list(prob_vector.values()), k=1)[0]
