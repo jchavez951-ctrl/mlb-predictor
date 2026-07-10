@@ -863,6 +863,31 @@ def calculate_log_odds(player_rate, pitcher_rate, league_rate):
     final_odds = (odds_b * odds_p) / odds_l
     return final_odds / (1.0 + final_odds)
 
+# ----------------------------------------------------
+# SMALL-SAMPLE REGRESSION (STABILIZATION)
+# ----------------------------------------------------
+# Real player rate stats are noisy in small samples -- a hitter with 250 PA and a hot streak
+# isn't actually a true-talent .320 hitter, he just hasn't faced enough pitches for luck to
+# average out. These stabilization points (PA/BF needed for a stat to be ~50% reliable) come
+# from Russell Carleton's widely-cited sabermetric research. Below that many PA/BF, a stat is
+# shrunk substantially toward the league average; above it, the observed rate is trusted more.
+BATTER_STABILIZATION_PA = {
+    "K_RATE": 60, "BB_RATE": 120, "HR_PA_RATE": 170, "BABIP": 820,
+}
+# Pitcher rates are noisier than batter rates at the same sample size (this is itself a
+# well-established sabermetric finding), so pitcher stabilization points are set higher --
+# especially BABIP and HR/9, which are famously luck-driven over anything less than a full season.
+PITCHER_STABILIZATION_BF = {
+    "K_ALLOWED_RATE": 70, "BB_ALLOWED_RATE": 170, "HR_PA_ALLOWED_RATE": 1200, "BABIP_ALLOWED": 2000,
+}
+
+def regress_to_mean(observed_rate, sample_size, league_rate, stabilization_point):
+    """Shrinks an observed rate toward the league average in proportion to how small the
+    sample is relative to the stat's stabilization point. sample_size=0 returns the league
+    average; sample_size >> stabilization_point returns close to the observed rate."""
+    sample_size = max(0.0, sample_size)
+    return (sample_size * observed_rate + stabilization_point * league_rate) / (sample_size + stabilization_point)
+
 def safe_extract_player(roster_dict, side, player_name, fallback_idx=0):
     """ Absolute defense framework against out-of-bounds positional slice indexing """
     pool = roster_dict.get(side, [])
@@ -958,10 +983,30 @@ else:
             elevation_scalar = 1.0 + (self.env["elevation"] / 5280 * 0.05)
             wind_scalar = 1.10 if self.env["wind"] == "Blowing Out (Boosted)" else (0.90 if self.env["wind"] == "Blowing In (Deadened)" else 1.0)
 
-            bb_prob = calculate_log_odds(batter["BB_RATE"], pitcher["BB_ALLOWED_RATE"] * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["BB_RATE"])
-            k_prob = calculate_log_odds(batter["K_RATE"], pitcher["K_ALLOWED_RATE"] * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["K_RATE"])
+            # Regress small-sample rates toward league average before using them. A player with
+            # 250 PA or a pitcher with 40 IP has a much noisier "true" rate than a full-season
+            # regular -- this keeps depth players/rookies/injury fill-ins from producing
+            # wildly overconfident projections just because of a hot or cold small sample.
+            batter_pa = batter.get("PA", 300)
+            b_bb_rate = regress_to_mean(batter["BB_RATE"], batter_pa, LEAGUE_BASELINE["BB_RATE"], BATTER_STABILIZATION_PA["BB_RATE"])
+            b_k_rate = regress_to_mean(batter["K_RATE"], batter_pa, LEAGUE_BASELINE["K_RATE"], BATTER_STABILIZATION_PA["K_RATE"])
+            b_hr_rate = regress_to_mean(batter["HR_PA_RATE"], batter_pa, LEAGUE_BASELINE["HR_PA_RATE"], BATTER_STABILIZATION_PA["HR_PA_RATE"])
+            b_babip = regress_to_mean(batter["BABIP"], batter_pa, LEAGUE_BASELINE["BABIP"], BATTER_STABILIZATION_PA["BABIP"])
+
+            try:
+                pitcher_ip = float(pitcher.get("IP", "100.0"))
+            except (TypeError, ValueError):
+                pitcher_ip = 100.0
+            pitcher_bf = pitcher_ip * 4.3  # ~4.3 batters faced per inning pitched, league-average
+            p_bb_rate = regress_to_mean(pitcher["BB_ALLOWED_RATE"], pitcher_bf, LEAGUE_BASELINE["BB_RATE"], PITCHER_STABILIZATION_BF["BB_ALLOWED_RATE"])
+            p_k_rate = regress_to_mean(pitcher["K_ALLOWED_RATE"], pitcher_bf, LEAGUE_BASELINE["K_RATE"], PITCHER_STABILIZATION_BF["K_ALLOWED_RATE"])
+            p_hr_rate = regress_to_mean(pitcher["HR_PA_ALLOWED_RATE"], pitcher_bf, LEAGUE_BASELINE["HR_PA_RATE"], PITCHER_STABILIZATION_BF["HR_PA_ALLOWED_RATE"])
+            p_babip = regress_to_mean(pitcher["BABIP_ALLOWED"], pitcher_bf, LEAGUE_BASELINE["BABIP"], PITCHER_STABILIZATION_BF["BABIP_ALLOWED"])
+
+            bb_prob = calculate_log_odds(b_bb_rate, p_bb_rate * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["BB_RATE"])
+            k_prob = calculate_log_odds(b_k_rate, p_k_rate * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["K_RATE"])
             
-            hr_base = calculate_log_odds(batter["HR_PA_RATE"], pitcher["HR_PA_ALLOWED_RATE"] * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["HR_PA_RATE"])
+            hr_base = calculate_log_odds(b_hr_rate, p_hr_rate * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["HR_PA_RATE"])
             hr_prob = hr_base * self.park["hr_mult"] * temp_density_scalar * elevation_scalar * wind_scalar
             
             sum_isolated = bb_prob + k_prob + hr_prob
@@ -970,7 +1015,7 @@ else:
                 bb_prob *= scale; k_prob *= scale; hr_prob *= scale
                 
             remainder = 1.0 - (bb_prob + k_prob + hr_prob)
-            babip_matchup = calculate_log_odds(batter["BABIP"] * platoon_mult, pitcher["BABIP_ALLOWED"] * fatigue_penalty, LEAGUE_BASELINE["BABIP"]) * self.park["babip_mult"]
+            babip_matchup = calculate_log_odds(b_babip * platoon_mult, p_babip * fatigue_penalty, LEAGUE_BASELINE["BABIP"]) * self.park["babip_mult"]
             
             hit_in_play_prob = remainder * babip_matchup
             out_in_play_prob = remainder - hit_in_play_prob
