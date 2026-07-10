@@ -975,10 +975,22 @@ else:
             hit_in_play_prob = remainder * babip_matchup
             out_in_play_prob = remainder - hit_in_play_prob
             
+            # Park run_mult scales extra-base-hit frequency (doubles/triples) -- this is the
+            # mechanism by which park dimensions/altitude drive run-scoring beyond what's
+            # already captured by hr_mult (home runs) and babip_mult (overall hit rate).
+            # Coors Field's huge outfield, for example, inflates doubles/triples independent
+            # of home run or overall-hit rate; a small park does the opposite.
+            run_mult = self.park.get("run_mult", 1.0)
+            base_1b, base_2b, base_3b = 0.65, 0.21, 0.02
+            adj_2b = base_2b * run_mult
+            adj_3b = base_3b * run_mult
+            adj_1b = base_1b - (adj_2b - base_2b) - (adj_3b - base_3b)
+            adj_1b = max(0.0, adj_1b)
+            
             return {
                 "BB": bb_prob, "K": k_prob, "HR": hr_prob,
-                "1B": hit_in_play_prob * 0.65, "2B": hit_in_play_prob * 0.21,
-                "3B": hit_in_play_prob * 0.02, "OUT": out_in_play_prob
+                "1B": hit_in_play_prob * adj_1b, "2B": hit_in_play_prob * adj_2b,
+                "3B": hit_in_play_prob * adj_3b, "OUT": out_in_play_prob
             }
 
         def step_markov_24_state(self, state, outcome, batter_name, runner_spd):
