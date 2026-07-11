@@ -1078,6 +1078,24 @@ else:
             event_log = ""
             
             if outcome in ["K", "OUT"]:
+                # Fielding error check goes FIRST, before any out is recorded -- a real
+                # reached-on-error isn't an out at all (the batter reaches safely, existing
+                # runners force-advance exactly like a walk), so this has to be resolved before
+                # the outs+=1 below. Errors were previously entirely unmodeled: every batted-ball
+                # out was assumed clean, when in reality roughly 1.5-2% of them aren't.
+                if outcome == "OUT" and random.random() < 0.018:
+                    bases = list(bases)
+                    if bases[0] is not None and bases[1] is not None and bases[2] is not None:
+                        scored_runners.append(bases[2])
+                        bases = [batter_name, bases[0], bases[1]]
+                    elif bases[0] is not None and bases[1] is not None:
+                        bases = [batter_name, bases[0], bases[1]]
+                    elif bases[0] is not None:
+                        bases = [batter_name, bases[0], bases[2]]
+                    else:
+                        bases = [batter_name, bases[1], bases[2]]
+                    return outs, bases, scored_runners, "Reached on Error"
+
                 prior_outs = outs  # outs BEFORE this play, needed for both the sac-fly and DP rules below
                 outs += 1
                 # A runner on third with fewer than 2 outs scores on a real fraction of batted-ball
@@ -1302,11 +1320,23 @@ else:
                     elif outcome == "K":
                         b_box["K"] += 1; b_box["AB"] += 1
                         p_box["K"] += 1; p_box["Outs"] += 1
-                    else:
-                        b_box["AB"] += 1
-                        p_box["Outs"] += 1
+                    # outcome == "OUT" crediting is deferred below, since we don't yet know
+                    # whether it resolves as a genuine out, a double play (2 outs), or a
+                    # reached-on-error (0 outs) until step_markov_24_state runs.
                     
+                    prior_state_outs = state["outs"]
                     state["outs"], state["bases"], scored_runners, log_text = self.step_markov_24_state(state, outcome, batter["Player"], batter["SPD"])
+
+                    if outcome == "OUT":
+                        # A reached-on-error still counts as an at-bat (correctly lowers batting
+                        # average) but doesn't charge the pitcher an out. A double play charges
+                        # the pitcher TWO outs, not one -- using the actual outs delta here
+                        # (rather than assuming every "OUT" outcome is worth exactly one out)
+                        # keeps this correct automatically for both cases instead of needing a
+                        # separate hardcoded rule per sub-event.
+                        b_box["AB"] += 1
+                        p_box["Outs"] += (state["outs"] - prior_state_outs)
+
                     runs = len(scored_runners)
                     if runs > 0:
                         b_box["RBI"] += runs
