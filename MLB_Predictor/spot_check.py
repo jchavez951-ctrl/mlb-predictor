@@ -1213,7 +1213,22 @@ else:
                     next_p = self.select_next_reliever(local_away_bp, g["away_score"], g["home_score"], g["inning"])
                     if next_p: g["away_p"] = next_p; g["away_pitches"] = 0
 
-                state = {"outs": 0, "bases": [None, None, None]}
+                # Manfred Runner rule: since 2020, every half-inning from the 10th onward
+                # starts with a runner automatically placed on second base (representing the
+                # player who would have made the last out, i.e. the batter one slot ahead of
+                # this half-inning's leadoff hitter in the order). This was previously
+                # unmodeled -- extra innings were simulated identically to a normal 9th, which
+                # meaningfully understates how much easier it is to score in real extra innings.
+                if g["inning"] >= 10:
+                    if g["top_half"]:
+                        ghost_idx = (g["away_lineup_idx"] - 1) % 9
+                        ghost_name = self.away_lineup[ghost_idx]["Player"]
+                    else:
+                        ghost_idx = (g["home_lineup_idx"] - 1) % 9
+                        ghost_name = self.home_lineup[ghost_idx]["Player"]
+                    state = {"outs": 0, "bases": [None, ghost_name, None]}
+                else:
+                    state = {"outs": 0, "bases": [None, None, None]}
                 while state["outs"] < 3:
                     if g["top_half"]:
                         batter = self.away_lineup[g["away_lineup_idx"] % 9]
