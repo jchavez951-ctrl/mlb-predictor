@@ -1078,7 +1078,7 @@ else:
             event_log = ""
             
             if outcome in ["K", "OUT"]:
-                prior_outs = outs  # outs BEFORE this play, needed for the sac-fly-can't-be-the-3rd-out rule
+                prior_outs = outs  # outs BEFORE this play, needed for both the sac-fly and DP rules below
                 outs += 1
                 # A runner on third with fewer than 2 outs scores on a real fraction of batted-ball
                 # outs (the classic sacrifice fly, plus productive groundouts) -- this was previously
@@ -1092,6 +1092,17 @@ else:
                         scored_runners.append(bases[2])
                         bases[2] = None
                         return outs, bases, scored_runners, "Sacrifice Fly"
+                # Double play: a runner on first with fewer than 2 outs is sometimes erased by a
+                # ground ball, at roughly the real MLB GIDP rate for this situation. This only
+                # applies once the sac-fly check above has already been tried and didn't fire
+                # (a single batted ball is either a fly ball or a ground ball, not both, so these
+                # two checks are mutually exclusive in practice even though they're sequential here).
+                if outcome == "OUT" and prior_outs < 2 and bases[0] is not None:
+                    if random.random() < 0.12:
+                        outs += 1  # the second out -- the lead runner, in addition to the batter
+                        bases = list(bases)
+                        bases[0] = None
+                        return outs, bases, scored_runners, "Double Play"
                 return outs, bases, scored_runners, "Strikeout" if outcome == "K" else "Fielded Lineout/Groundout"
                 
             if outcome == "BB":
