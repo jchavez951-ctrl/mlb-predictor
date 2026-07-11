@@ -1177,8 +1177,8 @@ else:
                 "away_p": self.away_sp.copy(), "home_p": self.home_sp.copy(),
                 "away_pitches": 0, "home_pitches": 0,
                 "box_scores": {
-                    "away": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0} for p in self.away_lineup},
-                    "home": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0} for p in self.home_lineup},
+                    "away": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0,"SB":0} for p in self.away_lineup},
+                    "home": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0,"SB":0} for p in self.home_lineup},
                     "away_pitching": {p["Player"]: {"K":0,"BB":0,"H":0,"ER":0,"Outs":0} for p in all_away_pitchers},
                     "home_pitching": {p["Player"]: {"K":0,"BB":0,"H":0,"ER":0,"Outs":0} for p in all_home_pitchers}
                 },
@@ -1233,11 +1233,38 @@ else:
                         order_cycle = (g["home_lineup_idx"] // 9) + 1
                         pitcher["Fatigue"] = max(0.0, (g["away_pitches"] - 25) / 100.0)
                         
+                    t_key = "away" if g["top_half"] else "home"
+                    pitch_key = "home_pitching" if g["top_half"] else "away_pitching"
+
+                    # Stolen base sub-event: fires before this plate appearance resolves, when
+                    # there's a real attempt opportunity (runner on first, second base open).
+                    # Scaled by the RUNNER's own speed (SPD), not the current batter's -- this
+                    # was previously not modeled or tracked at all despite SB being a standard
+                    # prop market. Deliberately limited to 1st-to-2nd, which is the large
+                    # majority of real MLB stolen base attempts; 2nd-to-3rd is rarer and adds
+                    # complexity for comparatively little accuracy gain.
+                    if state["bases"][0] is not None and state["bases"][1] is None:
+                        batting_lineup = self.away_lineup if g["top_half"] else self.home_lineup
+                        runner_name = state["bases"][0]
+                        runner = next((p for p in batting_lineup if p["Player"] == runner_name), None)
+                        if runner is not None:
+                            spd = runner.get("SPD", 50)
+                            attempt_prob = 0.05 + (spd / 100.0) * 0.15
+                            if random.random() < attempt_prob:
+                                success_prob = 0.65 + (spd / 100.0) * 0.25
+                                if random.random() < success_prob:
+                                    state["bases"][0] = None
+                                    state["bases"][1] = runner_name
+                                    g["box_scores"][t_key][runner_name]["SB"] += 1
+                                else:
+                                    state["bases"][0] = None
+                                    state["outs"] += 1
+                                    if state["outs"] >= 3:
+                                        break  # caught stealing was the 3rd out, inning over
+
                     prob_vector = self.execute_matchup_vector(batter, pitcher, order_cycle)
                     outcome = random.choices(list(prob_vector.keys()), weights=list(prob_vector.values()), k=1)[0]
                     
-                    t_key = "away" if g["top_half"] else "home"
-                    pitch_key = "home_pitching" if g["top_half"] else "away_pitching"
                     b_box = g["box_scores"][t_key][batter["Player"]]
                     p_box = g["box_scores"][pitch_key][pitcher["Player"]]
                     
@@ -1292,7 +1319,7 @@ else:
                               "away_role_map", "home_role_map", "away_box_dist", "home_box_dist", "away_pitch_dist", "home_pitch_dist"}
         if not required_top_keys.issubset(results.keys()):
             return True
-        required_hit_keys = {"AB","H","1B","2B","3B","HR","BB","RBI","K","R"}
+        required_hit_keys = {"AB","H","1B","2B","3B","HR","BB","RBI","K","R","SB"}
         for box in (results["away_box_means"], results["home_box_means"]):
             for stats in box.values():
                 if not required_hit_keys.issubset(stats.keys()):
@@ -1308,8 +1335,8 @@ else:
         with st.spinner("Executing 1,000x Structural Monte Carlo Base Operations..."):
             engine = DipsMarkovEngine(st.session_state["locked_away_lineup"], st.session_state["locked_home_lineup"], st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], st.session_state["locked_away_bullpen"], st.session_state["locked_home_bullpen"], park_rules, env_tensors)
             home_wins = 0
-            agg_away_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0} for p in st.session_state["locked_away_lineup"]}
-            agg_home_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0} for p in st.session_state["locked_home_lineup"]}
+            agg_away_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0,"SB":0} for p in st.session_state["locked_away_lineup"]}
+            agg_home_box = {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0,"SB":0} for p in st.session_state["locked_home_lineup"]}
             away_pitcher_pool = [st.session_state["locked_away_sp"]] + st.session_state["locked_away_bullpen"]
             home_pitcher_pool = [st.session_state["locked_home_sp"]] + st.session_state["locked_home_bullpen"]
             agg_away_pitch = {p["Player"]: {"K":0,"BB":0,"H":0,"ER":0,"Outs":0} for p in away_pitcher_pool}
@@ -1318,8 +1345,8 @@ else:
             # real empirical probability of clearing a line, not just an average-vs-line
             # comparison, which is misleading for skewed counting stats like HR (mostly 0s
             # with occasional multi-HR games) or K (varies a lot game-to-game).
-            dist_away_box = {p["Player"]: {"H": [], "TB": [], "HR": [], "RBI": [], "R": []} for p in st.session_state["locked_away_lineup"]}
-            dist_home_box = {p["Player"]: {"H": [], "TB": [], "HR": [], "RBI": [], "R": []} for p in st.session_state["locked_home_lineup"]}
+            dist_away_box = {p["Player"]: {"H": [], "TB": [], "HR": [], "RBI": [], "R": [], "SB": []} for p in st.session_state["locked_away_lineup"]}
+            dist_home_box = {p["Player"]: {"H": [], "TB": [], "HR": [], "RBI": [], "R": [], "SB": []} for p in st.session_state["locked_home_lineup"]}
             dist_away_pitch = {p["Player"]: {"K": []} for p in away_pitcher_pool}
             dist_home_pitch = {p["Player"]: {"K": []} for p in home_pitcher_pool}
             
@@ -1333,12 +1360,14 @@ else:
                     tb = stats["1B"] + stats["2B"]*2 + stats["3B"]*3 + stats["HR"]*4
                     dist_away_box[p]["H"].append(stats["H"]); dist_away_box[p]["TB"].append(tb)
                     dist_away_box[p]["HR"].append(stats["HR"]); dist_away_box[p]["RBI"].append(stats["RBI"]); dist_away_box[p]["R"].append(stats["R"])
+                    dist_away_box[p]["SB"].append(stats["SB"])
                 for p in agg_home_box:
                     for s in agg_home_box[p]: agg_home_box[p][s] += sim_res["box_scores"]["home"][p][s]
                     stats = sim_res["box_scores"]["home"][p]
                     tb = stats["1B"] + stats["2B"]*2 + stats["3B"]*3 + stats["HR"]*4
                     dist_home_box[p]["H"].append(stats["H"]); dist_home_box[p]["TB"].append(tb)
                     dist_home_box[p]["HR"].append(stats["HR"]); dist_home_box[p]["RBI"].append(stats["RBI"]); dist_home_box[p]["R"].append(stats["R"])
+                    dist_home_box[p]["SB"].append(stats["SB"])
                 for p in agg_away_pitch:
                     for s in agg_away_pitch[p]: agg_away_pitch[p][s] += sim_res["box_scores"]["away_pitching"][p][s]
                     dist_away_pitch[p]["K"].append(sim_res["box_scores"]["away_pitching"][p]["K"])
@@ -1428,7 +1457,7 @@ else:
     st.markdown("---")
     def render_hitting_prop_matrix_view(means_data, dist_data):
         # Standard PrizePicks/DK-style lines by market. Edge = projection minus the line.
-        H_LINE, HR_LINE, RBI_LINE, R_LINE, TB_LINE = 1.5, 0.5, 0.5, 0.5, 1.5
+        H_LINE, HR_LINE, RBI_LINE, R_LINE, TB_LINE, SB_LINE = 1.5, 0.5, 0.5, 0.5, 1.5, 0.5
         def prob_over(values, line):
             if not values: return 0.5
             return sum(1 for v in values if v > line) / len(values)
@@ -1438,20 +1467,23 @@ else:
             hr_exp = stats.get("HR", 0)
             rbi_exp = stats.get("RBI", 0)
             r_exp = stats.get("R", 0)
+            sb_exp = stats.get("SB", 0)
             tb_exp = stats.get("1B", 0) + (stats.get("2B", 0) * 2) + (stats.get("3B", 0) * 3) + (stats.get("HR", 0) * 4)
-            dk_exp = (hits_exp * 3) + (stats.get("2B", 0) * 2) + (stats.get("HR", 0) * 7) + (stats.get("RBI", 0) * 2) + (stats.get("BB", 0) * 2) + (r_exp * 2)
+            dk_exp = (hits_exp * 3) + (stats.get("2B", 0) * 2) + (stats.get("HR", 0) * 7) + (stats.get("RBI", 0) * 2) + (stats.get("BB", 0) * 2) + (r_exp * 2) + (sb_exp * 5)
             d = dist_data.get(name, {})
             h_p = prob_over(d.get("H", []), H_LINE)
             hr_p = prob_over(d.get("HR", []), HR_LINE)
             rbi_p = prob_over(d.get("RBI", []), RBI_LINE)
             r_p = prob_over(d.get("R", []), R_LINE)
             tb_p = prob_over(d.get("TB", []), TB_LINE)
+            sb_p = prob_over(d.get("SB", []), SB_LINE)
             rows.append({
                 "Player Asset": name,
                 "Proj Hits": round(hits_exp, 2), "Hits Line": H_LINE, "Hits Over%": f"{h_p*100:.0f}%",
                 "Proj HR": round(hr_exp, 2), "HR Line": HR_LINE, "HR Over%": f"{hr_p*100:.0f}%",
                 "Proj RBI": round(rbi_exp, 2), "RBI Line": RBI_LINE, "RBI Over%": f"{rbi_p*100:.0f}%",
                 "Proj Runs": round(r_exp, 2), "Runs Line": R_LINE, "Runs Over%": f"{r_p*100:.0f}%",
+                "Proj SB": round(sb_exp, 2), "SB Line": SB_LINE, "SB Over%": f"{sb_p*100:.0f}%",
                 "Proj TB": round(tb_exp, 2), "TB Line": TB_LINE, "TB Over%": f"{tb_p*100:.0f}%",
                 "DraftKings FP Exp": round(dk_exp, 2)
             })
