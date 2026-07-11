@@ -1078,7 +1078,20 @@ else:
             event_log = ""
             
             if outcome in ["K", "OUT"]:
+                prior_outs = outs  # outs BEFORE this play, needed for the sac-fly-can't-be-the-3rd-out rule
                 outs += 1
+                # A runner on third with fewer than 2 outs scores on a real fraction of batted-ball
+                # outs (the classic sacrifice fly, plus productive groundouts) -- this was previously
+                # unmodeled entirely, meaning outs never advanced or scored a runner no matter the
+                # situation. Strikeouts never allow this (nobody's put the ball in play), and per the
+                # actual sac-fly rule, the run does NOT count if this out is the third out of the inning
+                # (the batted-ball out happens before the runner can legally tag and score).
+                if outcome == "OUT" and prior_outs < 2 and bases[2] is not None:
+                    if random.random() < 0.45:
+                        bases = list(bases)
+                        scored_runners.append(bases[2])
+                        bases[2] = None
+                        return outs, bases, scored_runners, "Sacrifice Fly"
                 return outs, bases, scored_runners, "Strikeout" if outcome == "K" else "Fielded Lineout/Groundout"
                 
             if outcome == "BB":
