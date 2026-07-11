@@ -1057,7 +1057,14 @@ else:
             # Coors Field's huge outfield, for example, inflates doubles/triples independent
             # of home run or overall-hit rate; a small park does the opposite.
             run_mult = self.park.get("run_mult", 1.0)
-            base_1b, base_2b, base_3b = 0.65, 0.21, 0.02
+            # NOTE: these three base fractions must sum to 1.0 -- they represent the full
+            # breakdown of hit_in_play_prob into singles/doubles/triples. A previous version of
+            # this formula used 0.65/0.21/0.02, which only summed to 0.88: 12% of the
+            # probability that a ball in play should be a hit was silently vanishing from the
+            # outcome weights every at-bat instead of being credited to any hit type, quietly
+            # suppressing the league-wide hit and run-scoring rate. Normalized here (same
+            # 65:21:2 ratio between 1B/2B/3B, now summing to exactly 1.0).
+            base_1b, base_2b, base_3b = 0.65/0.88, 0.21/0.88, 0.02/0.88
             adj_2b = base_2b * run_mult
             adj_3b = base_3b * run_mult
             adj_1b = base_1b - (adj_2b - base_2b) - (adj_3b - base_3b)
