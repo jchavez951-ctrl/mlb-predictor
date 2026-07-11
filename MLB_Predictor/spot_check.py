@@ -895,8 +895,8 @@ def safe_extract_player(roster_dict, side, player_name, fallback_idx=0):
         return {}
     matched = [p for p in pool if p["Player"] == player_name]
     if matched:
-        return copy.deepcopy(matched[0])
-    return copy.deepcopy(pool[min(fallback_idx, len(pool) - 1)])
+        return matched[0].copy()
+    return pool[min(fallback_idx, len(pool) - 1)].copy()
 
 # ----------------------------------------------------
 # CONTROL BOARD INTERFACE UI
@@ -966,11 +966,44 @@ else:
             self.home_lineup = home_lineup
             self.away_sp = away_sp
             self.home_sp = home_sp
-            self.away_bp = copy.deepcopy(away_bp)
-            self.home_bp = copy.deepcopy(home_bp)
+            self.away_bp = [p.copy() for p in away_bp]
+            self.home_bp = [p.copy() for p in home_bp]
             self.park = park_rules
             self.env = env_tensors
-            
+            # Precompute each player's small-sample-regressed rates ONCE here rather than
+            # recalculating the same regression math on every single at-bat. These rates only
+            # depend on a player's static season totals (PA for hitters, IP for pitchers),
+            # never on in-game state, so across 1000 Monte Carlo iterations x ~35 at-bats per
+            # game this was previously identical redundant work done tens of thousands of times.
+            for batter in self.away_lineup + self.home_lineup:
+                self._cache_batter_rates(batter)
+            for pitcher in [self.away_sp, self.home_sp] + self.away_bp + self.home_bp:
+                self._cache_pitcher_rates(pitcher)
+
+        @staticmethod
+        def _cache_batter_rates(batter):
+            if "_reg_bb" in batter:
+                return  # already cached (e.g. shared lineup dict reused across engine instances)
+            pa = batter.get("PA", 300)
+            batter["_reg_bb"] = regress_to_mean(batter["BB_RATE"], pa, LEAGUE_BASELINE["BB_RATE"], BATTER_STABILIZATION_PA["BB_RATE"])
+            batter["_reg_k"] = regress_to_mean(batter["K_RATE"], pa, LEAGUE_BASELINE["K_RATE"], BATTER_STABILIZATION_PA["K_RATE"])
+            batter["_reg_hr"] = regress_to_mean(batter["HR_PA_RATE"], pa, LEAGUE_BASELINE["HR_PA_RATE"], BATTER_STABILIZATION_PA["HR_PA_RATE"])
+            batter["_reg_babip"] = regress_to_mean(batter["BABIP"], pa, LEAGUE_BASELINE["BABIP"], BATTER_STABILIZATION_PA["BABIP"])
+
+        @staticmethod
+        def _cache_pitcher_rates(pitcher):
+            if "_reg_bb" in pitcher:
+                return
+            try:
+                ip = float(pitcher.get("IP", "100.0"))
+            except (TypeError, ValueError):
+                ip = 100.0
+            bf = ip * 4.3  # ~4.3 batters faced per inning pitched, league-average
+            pitcher["_reg_bb"] = regress_to_mean(pitcher["BB_ALLOWED_RATE"], bf, LEAGUE_BASELINE["BB_RATE"], PITCHER_STABILIZATION_BF["BB_ALLOWED_RATE"])
+            pitcher["_reg_k"] = regress_to_mean(pitcher["K_ALLOWED_RATE"], bf, LEAGUE_BASELINE["K_RATE"], PITCHER_STABILIZATION_BF["K_ALLOWED_RATE"])
+            pitcher["_reg_hr"] = regress_to_mean(pitcher["HR_PA_ALLOWED_RATE"], bf, LEAGUE_BASELINE["HR_PA_RATE"], PITCHER_STABILIZATION_BF["HR_PA_ALLOWED_RATE"])
+            pitcher["_reg_babip"] = regress_to_mean(pitcher["BABIP_ALLOWED"], bf, LEAGUE_BASELINE["BABIP"], PITCHER_STABILIZATION_BF["BABIP_ALLOWED"])
+
         def execute_matchup_vector(self, batter, pitcher, order_cycle):
             is_platoon = (batter["Bats"] == "L" and pitcher["Throws"] == "R") or (batter["Bats"] == "R" and pitcher["Throws"] == "L")
             platoon_mult = 1.07 if is_platoon else 0.93
@@ -988,25 +1021,18 @@ else:
             elevation_scalar = 1.0 + (self.env["elevation"] / 5280 * 0.05)
             wind_scalar = 1.10 if self.env["wind"] == "Blowing Out (Boosted)" else (0.90 if self.env["wind"] == "Blowing In (Deadened)" else 1.0)
 
-            # Regress small-sample rates toward league average before using them. A player with
-            # 250 PA or a pitcher with 40 IP has a much noisier "true" rate than a full-season
-            # regular -- this keeps depth players/rookies/injury fill-ins from producing
-            # wildly overconfident projections just because of a hot or cold small sample.
-            batter_pa = batter.get("PA", 300)
-            b_bb_rate = regress_to_mean(batter["BB_RATE"], batter_pa, LEAGUE_BASELINE["BB_RATE"], BATTER_STABILIZATION_PA["BB_RATE"])
-            b_k_rate = regress_to_mean(batter["K_RATE"], batter_pa, LEAGUE_BASELINE["K_RATE"], BATTER_STABILIZATION_PA["K_RATE"])
-            b_hr_rate = regress_to_mean(batter["HR_PA_RATE"], batter_pa, LEAGUE_BASELINE["HR_PA_RATE"], BATTER_STABILIZATION_PA["HR_PA_RATE"])
-            b_babip = regress_to_mean(batter["BABIP"], batter_pa, LEAGUE_BASELINE["BABIP"], BATTER_STABILIZATION_PA["BABIP"])
+            # Small-sample-regressed rates were precomputed once in __init__ (see
+            # _cache_batter_rates/_cache_pitcher_rates) rather than recalculated here every
+            # at-bat -- same result, far less redundant work across 1000 iterations.
+            b_bb_rate = batter["_reg_bb"]
+            b_k_rate = batter["_reg_k"]
+            b_hr_rate = batter["_reg_hr"]
+            b_babip = batter["_reg_babip"]
 
-            try:
-                pitcher_ip = float(pitcher.get("IP", "100.0"))
-            except (TypeError, ValueError):
-                pitcher_ip = 100.0
-            pitcher_bf = pitcher_ip * 4.3  # ~4.3 batters faced per inning pitched, league-average
-            p_bb_rate = regress_to_mean(pitcher["BB_ALLOWED_RATE"], pitcher_bf, LEAGUE_BASELINE["BB_RATE"], PITCHER_STABILIZATION_BF["BB_ALLOWED_RATE"])
-            p_k_rate = regress_to_mean(pitcher["K_ALLOWED_RATE"], pitcher_bf, LEAGUE_BASELINE["K_RATE"], PITCHER_STABILIZATION_BF["K_ALLOWED_RATE"])
-            p_hr_rate = regress_to_mean(pitcher["HR_PA_ALLOWED_RATE"], pitcher_bf, LEAGUE_BASELINE["HR_PA_RATE"], PITCHER_STABILIZATION_BF["HR_PA_ALLOWED_RATE"])
-            p_babip = regress_to_mean(pitcher["BABIP_ALLOWED"], pitcher_bf, LEAGUE_BASELINE["BABIP"], PITCHER_STABILIZATION_BF["BABIP_ALLOWED"])
+            p_bb_rate = pitcher["_reg_bb"]
+            p_k_rate = pitcher["_reg_k"]
+            p_hr_rate = pitcher["_reg_hr"]
+            p_babip = pitcher["_reg_babip"]
 
             bb_prob = calculate_log_odds(b_bb_rate, p_bb_rate * ttop_mult * fatigue_penalty, LEAGUE_BASELINE["BB_RATE"])
             k_prob = calculate_log_odds(b_k_rate, p_k_rate * ttop_mult * k_fatigue_penalty, LEAGUE_BASELINE["K_RATE"])
@@ -1124,15 +1150,18 @@ else:
         def run_full_game(self, tracking_mode=False):
             # IMPORTANT: bullpens are copied fresh here so repeated calls (e.g. across a
             # 1000x Monte Carlo loop) don't permanently drain self.away_bp/self.home_bp.
-            local_away_bp = copy.deepcopy(self.away_bp)
-            local_home_bp = copy.deepcopy(self.home_bp)
+            # Shallow .copy() is safe and much faster than deepcopy here: every pitcher dict
+            # only holds flat primitive values (str/float/int), no nested mutable structures,
+            # so there's nothing for a deep copy to protect that a shallow copy doesn't already.
+            local_away_bp = [p.copy() for p in self.away_bp]
+            local_home_bp = [p.copy() for p in self.home_bp]
             all_away_pitchers = [self.away_sp] + local_away_bp
             all_home_pitchers = [self.home_sp] + local_home_bp
 
             g = {
                 "inning": 1, "top_half": True, "away_score": 0, "home_score": 0,
                 "away_lineup_idx": 0, "home_lineup_idx": 0,
-                "away_p": copy.deepcopy(self.away_sp), "home_p": copy.deepcopy(self.home_sp),
+                "away_p": self.away_sp.copy(), "home_p": self.home_sp.copy(),
                 "away_pitches": 0, "home_pitches": 0,
                 "box_scores": {
                     "away": {p["Player"]: {"AB":0,"H":0,"1B":0,"2B":0,"3B":0,"HR":0,"BB":0,"RBI":0,"K":0,"R":0} for p in self.away_lineup},
