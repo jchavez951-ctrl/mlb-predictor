@@ -33,7 +33,7 @@ LEAGUE_BASELINE = {
 }
 
 # Unified player data matrices with built-in advanced sabermetric metrics
-ROSTER_DATABASE = {
+ROSTER_DATABASE_FALLBACK = {
     "Athletics": {
         "primary": "#003831", "secondary": "#EFB21E",
         "hitting": [
@@ -815,7 +815,41 @@ ROSTER_DATABASE = {
         ]
     },
 }
+
+# ----------------------------------------------------
+# LIVE ROSTER DATA LOADER
+# ----------------------------------------------------
+# Prefers a nightly-refreshed roster_data.json (see refresh_rosters.py) over
+# the hardcoded ROSTER_DATABASE_FALLBACK above, so the app reflects current
+# rosters/rates automatically instead of only updating when someone manually
+# edits this file. Falls back safely to the hardcoded data if the JSON file
+# is missing, malformed, or doesn't look like a complete 30-team dataset --
+# this app should never crash or run empty just because a nightly refresh
+# hiccuped or hasn't run yet.
+import json as _json
+import os as _os
+
+def _load_roster_database():
+    json_path = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "roster_data.json")
+    try:
+        with open(json_path, "r") as f:
+            data = _json.load(f)
+        if not isinstance(data, dict) or len(data) < 30:
+            raise ValueError(f"roster_data.json has {len(data) if isinstance(data, dict) else 'invalid'} teams, expected 30")
+        for team, roster in data.items():
+            if not roster.get("hitting") or not roster.get("pitching"):
+                raise ValueError(f"{team} is missing hitting or pitching data in roster_data.json")
+        return data
+    except FileNotFoundError:
+        return ROSTER_DATABASE_FALLBACK
+    except Exception as e:
+        print(f"[roster loader] Falling back to hardcoded roster data -- roster_data.json problem: {e}")
+        return ROSTER_DATABASE_FALLBACK
+
+ROSTER_DATABASE = _load_roster_database()
+
 BALLPARK_ENV = {
+
     "Athletics": {"run_mult": 0.95, "hr_mult": 0.88, "babip_mult": 0.98},
     "Baltimore Orioles": {"run_mult": 1.02, "hr_mult": 0.95, "babip_mult": 1.01},
     "New York Yankees": {"run_mult": 1.05, "hr_mult": 1.12, "babip_mult": 1.00},
