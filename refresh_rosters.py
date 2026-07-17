@@ -1,3 +1,13 @@
+"""
+refresh_rosters.py
+
+Nightly refresh script for the MLB prop simulator's roster data. Designed to
+run inside GitHub Actions (see .github/workflows/refresh_rosters.yml) rather
+than on PythonAnywhere -- Actions runners have unrestricted internet access
+and already have git write access to this repo, so no proxy allowlist issues
+and no personal access token needed.
+"""
+
 import json
 import time
 import sys
@@ -200,8 +210,22 @@ def refresh_team(team_name, team_id):
     roster = get_40man_roster(team_id)
     hitting, pitching = [], []
 
+    # Statuses that mean "not actually available right now" -- these were
+    # already being fetched from the API but never actually checked, which
+    # is exactly why injured players with a lot of accumulated season
+    # innings/plate-appearances (from before they got hurt) could still
+    # out-rank healthy active players in the selection below.
+    UNAVAILABLE_KEYWORDS = ["injured", "suspended", "restricted", "bereavement", "family medical", "non-roster"]
+
+    def is_available(player):
+        status = player.get("status", "").lower()
+        return not any(kw in status for kw in UNAVAILABLE_KEYWORDS)
+
     for player in roster:
         if not player["id"] or not player["name"]:
+            continue
+        if not is_available(player):
+            print(f"  Skipping {player['name']} (status: {player['status']})")
             continue
         time.sleep(0.1)
 
