@@ -153,20 +153,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Zac Gallen",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.07,
-        "K_ALLOWED_RATE": 0.139,
-        "HR_PA_ALLOWED_RATE": 0.041,
-        "BABIP_ALLOWED": 0.315,
-        "OAVG": 0.298,
-        "IP": "98.0",
-        "ERA": 6.34,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Merrill Kelly",
         "Pos": "P",
         "Role": "SP",
@@ -181,31 +167,31 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Ryne Nelson",
+        "Player": "Jose Cabrera",
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.062,
-        "K_ALLOWED_RATE": 0.175,
-        "HR_PA_ALLOWED_RATE": 0.051,
-        "BABIP_ALLOWED": 0.249,
-        "OAVG": 0.243,
-        "IP": "83.3",
-        "ERA": 4.97,
+        "BB_ALLOWED_RATE": 0.086,
+        "K_ALLOWED_RATE": 0.148,
+        "HR_PA_ALLOWED_RATE": 0.037,
+        "BABIP_ALLOWED": 0.288,
+        "OAVG": 0.27,
+        "IP": "17.7",
+        "ERA": 5.6,
         "Fatigue": 0.0
       },
       {
-        "Player": "Michael Soroka",
+        "Player": "Mitch Bratt",
         "Pos": "P",
         "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.051,
-        "K_ALLOWED_RATE": 0.237,
-        "HR_PA_ALLOWED_RATE": 0.018,
-        "BABIP_ALLOWED": 0.286,
-        "OAVG": 0.228,
-        "IP": "82.0",
-        "ERA": 3.07,
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.179,
+        "K_ALLOWED_RATE": 0.107,
+        "HR_PA_ALLOWED_RATE": 0.036,
+        "BABIP_ALLOWED": 0.211,
+        "OAVG": 0.217,
+        "IP": "6.0",
+        "ERA": 6.0,
         "Fatigue": 0.0
       },
       {
@@ -373,36 +359,6 @@
         "PA": 319
       },
       {
-        "Player": "Mike Yastrzemski",
-        "Pos": "LF",
-        "Bats": "L",
-        "BB_RATE": 0.103,
-        "K_RATE": 0.233,
-        "HR_PA_RATE": 0.023,
-        "BABIP": 0.288,
-        "1B_H_RATE": 0.66,
-        "2B_H_RATE": 0.21,
-        "3B_H_RATE": 0.02,
-        "HR_H_RATE": 0.11,
-        "SPD": 55,
-        "PA": 262
-      },
-      {
-        "Player": "Ronald Acu\u00f1a Jr.",
-        "Pos": "RF",
-        "Bats": "R",
-        "BB_RATE": 0.148,
-        "K_RATE": 0.22,
-        "HR_PA_RATE": 0.03,
-        "BABIP": 0.309,
-        "1B_H_RATE": 0.63,
-        "2B_H_RATE": 0.2,
-        "3B_H_RATE": 0.02,
-        "HR_H_RATE": 0.14,
-        "SPD": 55,
-        "PA": 236
-      },
-      {
         "Player": "Dominic Smith",
         "Pos": "DH",
         "Bats": "L",
@@ -416,6 +372,36 @@
         "HR_H_RATE": 0.11,
         "SPD": 55,
         "PA": 233
+      },
+      {
+        "Player": "Jorge Mateo",
+        "Pos": "SS",
+        "Bats": "R",
+        "BB_RATE": 0.06,
+        "K_RATE": 0.306,
+        "HR_PA_RATE": 0.03,
+        "BABIP": 0.321,
+        "1B_H_RATE": 0.7,
+        "2B_H_RATE": 0.17,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.13,
+        "SPD": 55,
+        "PA": 134
+      },
+      {
+        "Player": "Eli White",
+        "Pos": "RF",
+        "Bats": "R",
+        "BB_RATE": 0.064,
+        "K_RATE": 0.216,
+        "HR_PA_RATE": 0.032,
+        "BABIP": 0.262,
+        "1B_H_RATE": 0.62,
+        "2B_H_RATE": 0.19,
+        "3B_H_RATE": 0.04,
+        "HR_H_RATE": 0.15,
+        "SPD": 55,
+        "PA": 125
       }
     ],
     "pitching": [
@@ -462,20 +448,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Mart\u00edn P\u00e9rez",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.096,
-        "K_ALLOWED_RATE": 0.186,
-        "HR_PA_ALLOWED_RATE": 0.03,
-        "BABIP_ALLOWED": 0.24,
-        "OAVG": 0.216,
-        "IP": "81.3",
-        "ERA": 3.54,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "JR Ritchie",
         "Pos": "P",
         "Role": "SP",
@@ -487,6 +459,20 @@
         "OAVG": 0.21,
         "IP": "49.3",
         "ERA": 4.38,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Hurston Waldrep",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.179,
+        "K_ALLOWED_RATE": 0.161,
+        "HR_PA_ALLOWED_RATE": 0.054,
+        "BABIP_ALLOWED": 0.294,
+        "OAVG": 0.283,
+        "IP": "10.7",
+        "ERA": 8.44,
         "Fatigue": 0.0
       },
       {
@@ -654,21 +640,6 @@
         "PA": 275
       },
       {
-        "Player": "Blaze Alexander",
-        "Pos": "3B",
-        "Bats": "R",
-        "BB_RATE": 0.065,
-        "K_RATE": 0.22,
-        "HR_PA_RATE": 0.016,
-        "BABIP": 0.399,
-        "1B_H_RATE": 0.74,
-        "2B_H_RATE": 0.17,
-        "3B_H_RATE": 0.03,
-        "HR_H_RATE": 0.06,
-        "SPD": 55,
-        "PA": 246
-      },
-      {
         "Player": "Coby Mayo",
         "Pos": "3B",
         "Bats": "R",
@@ -697,6 +668,21 @@
         "HR_H_RATE": 0.19,
         "SPD": 55,
         "PA": 231
+      },
+      {
+        "Player": "Jeremiah Jackson",
+        "Pos": "2B",
+        "Bats": "R",
+        "BB_RATE": 0.019,
+        "K_RATE": 0.198,
+        "HR_PA_RATE": 0.033,
+        "BABIP": 0.288,
+        "1B_H_RATE": 0.67,
+        "2B_H_RATE": 0.19,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.13,
+        "SPD": 55,
+        "PA": 212
       }
     ],
     "pitching": [
@@ -757,31 +743,17 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Chris Bassitt",
+        "Player": "Trey Gibson",
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.084,
-        "K_ALLOWED_RATE": 0.142,
-        "HR_PA_ALLOWED_RATE": 0.023,
-        "BABIP_ALLOWED": 0.327,
-        "OAVG": 0.293,
-        "IP": "56.3",
-        "ERA": 5.27,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Ryan Helsley",
-        "Pos": "P",
-        "Role": "Closer",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.132,
-        "K_ALLOWED_RATE": 0.309,
-        "HR_PA_ALLOWED_RATE": 0.044,
-        "BABIP_ALLOWED": 0.286,
-        "OAVG": 0.22,
-        "IP": "15.3",
-        "ERA": 4.11,
+        "BB_ALLOWED_RATE": 0.155,
+        "K_ALLOWED_RATE": 0.186,
+        "HR_PA_ALLOWED_RATE": 0.043,
+        "BABIP_ALLOWED": 0.313,
+        "OAVG": 0.279,
+        "IP": "33.0",
+        "ERA": 7.36,
         "Fatigue": 0.0
       },
       {
@@ -839,6 +811,20 @@
         "IP": "37.3",
         "ERA": 5.06,
         "Fatigue": 0.0
+      },
+      {
+        "Player": "Yennier Cano",
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.063,
+        "K_ALLOWED_RATE": 0.22,
+        "HR_PA_ALLOWED_RATE": 0.008,
+        "BABIP_ALLOWED": 0.267,
+        "OAVG": 0.21,
+        "IP": "31.0",
+        "ERA": 2.32,
+        "Fatigue": 0.0
       }
     ]
   },
@@ -849,15 +835,15 @@
         "Pos": "RF",
         "Bats": "L",
         "BB_RATE": 0.099,
-        "K_RATE": 0.208,
+        "K_RATE": 0.207,
         "HR_PA_RATE": 0.027,
-        "BABIP": 0.31,
+        "BABIP": 0.313,
         "1B_H_RATE": 0.63,
         "2B_H_RATE": 0.22,
         "3B_H_RATE": 0.03,
         "HR_H_RATE": 0.12,
         "SPD": 55,
-        "PA": 404
+        "PA": 405
       },
       {
         "Player": "Jarren Duran",
@@ -879,15 +865,15 @@
         "Pos": "CF",
         "Bats": "R",
         "BB_RATE": 0.048,
-        "K_RATE": 0.199,
-        "HR_PA_RATE": 0.022,
-        "BABIP": 0.337,
+        "K_RATE": 0.198,
+        "HR_PA_RATE": 0.021,
+        "BABIP": 0.336,
         "1B_H_RATE": 0.65,
         "2B_H_RATE": 0.24,
         "3B_H_RATE": 0.03,
         "HR_H_RATE": 0.08,
         "SPD": 55,
-        "PA": 372
+        "PA": 373
       },
       {
         "Player": "Willson Contreras",
@@ -908,46 +894,31 @@
         "Player": "Caleb Durbin",
         "Pos": "3B",
         "Bats": "R",
-        "BB_RATE": 0.069,
+        "BB_RATE": 0.068,
         "K_RATE": 0.137,
         "HR_PA_RATE": 0.028,
-        "BABIP": 0.247,
-        "1B_H_RATE": 0.58,
-        "2B_H_RATE": 0.27,
+        "BABIP": 0.25,
+        "1B_H_RATE": 0.59,
+        "2B_H_RATE": 0.26,
         "3B_H_RATE": 0.01,
         "HR_H_RATE": 0.13,
         "SPD": 55,
-        "PA": 321
-      },
-      {
-        "Player": "Marcelo Mayer",
-        "Pos": "2B",
-        "Bats": "L",
-        "BB_RATE": 0.07,
-        "K_RATE": 0.193,
-        "HR_PA_RATE": 0.013,
-        "BABIP": 0.266,
-        "1B_H_RATE": 0.71,
-        "2B_H_RATE": 0.22,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.07,
-        "SPD": 55,
-        "PA": 228
+        "PA": 322
       },
       {
         "Player": "Masataka Yoshida",
         "Pos": "DH",
         "Bats": "L",
-        "BB_RATE": 0.093,
+        "BB_RATE": 0.092,
         "K_RATE": 0.117,
-        "HR_PA_RATE": 0.02,
-        "BABIP": 0.299,
+        "HR_PA_RATE": 0.019,
+        "BABIP": 0.297,
         "1B_H_RATE": 0.68,
         "2B_H_RATE": 0.22,
         "3B_H_RATE": 0.02,
         "HR_H_RATE": 0.08,
         "SPD": 55,
-        "PA": 205
+        "PA": 206
       },
       {
         "Player": "Carlos Narv\u00e1ez",
@@ -965,19 +936,34 @@
         "PA": 178
       },
       {
-        "Player": "Trevor Story",
+        "Player": "Andruw Monasterio",
         "Pos": "SS",
         "Bats": "R",
-        "BB_RATE": 0.045,
-        "K_RATE": 0.324,
-        "HR_PA_RATE": 0.017,
-        "BABIP": 0.295,
-        "1B_H_RATE": 0.71,
-        "2B_H_RATE": 0.21,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.09,
+        "BB_RATE": 0.065,
+        "K_RATE": 0.225,
+        "HR_PA_RATE": 0.03,
+        "BABIP": 0.272,
+        "1B_H_RATE": 0.5,
+        "2B_H_RATE": 0.33,
+        "3B_H_RATE": 0.03,
+        "HR_H_RATE": 0.14,
         "SPD": 55,
-        "PA": 176
+        "PA": 169
+      },
+      {
+        "Player": "Connor Wong",
+        "Pos": "C",
+        "Bats": "R",
+        "BB_RATE": 0.104,
+        "K_RATE": 0.209,
+        "HR_PA_RATE": 0.007,
+        "BABIP": 0.378,
+        "1B_H_RATE": 0.72,
+        "2B_H_RATE": 0.25,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.03,
+        "SPD": 55,
+        "PA": 134
       }
     ],
     "pitching": [
@@ -993,34 +979,6 @@
         "OAVG": 0.226,
         "IP": "95.7",
         "ERA": 2.54,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Connelly Early",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.087,
-        "K_ALLOWED_RATE": 0.238,
-        "HR_PA_ALLOWED_RATE": 0.038,
-        "BABIP_ALLOWED": 0.266,
-        "OAVG": 0.228,
-        "IP": "91.7",
-        "ERA": 3.44,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Ranger Suarez",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.069,
-        "K_ALLOWED_RATE": 0.258,
-        "HR_PA_ALLOWED_RATE": 0.013,
-        "BABIP_ALLOWED": 0.302,
-        "OAVG": 0.229,
-        "IP": "91.3",
-        "ERA": 3.15,
         "Fatigue": 0.0
       },
       {
@@ -1049,6 +1007,34 @@
         "OAVG": 0.294,
         "IP": "65.3",
         "ERA": 6.06,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Jake Bennett",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.044,
+        "K_ALLOWED_RATE": 0.187,
+        "HR_PA_ALLOWED_RATE": 0.015,
+        "BABIP_ALLOWED": 0.229,
+        "OAVG": 0.196,
+        "IP": "53.7",
+        "ERA": 2.35,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Patrick Sandoval",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.053,
+        "K_ALLOWED_RATE": 0.263,
+        "HR_PA_ALLOWED_RATE": 0.0,
+        "BABIP_ALLOWED": 0.385,
+        "OAVG": 0.278,
+        "IP": "4.3",
+        "ERA": 2.08,
         "Fatigue": 0.0
       },
       {
@@ -1305,31 +1291,31 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Edward Cabrera",
+        "Player": "Javier Assad",
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.094,
-        "K_ALLOWED_RATE": 0.21,
-        "HR_PA_ALLOWED_RATE": 0.045,
-        "BABIP_ALLOWED": 0.289,
-        "OAVG": 0.257,
-        "IP": "72.3",
-        "ERA": 5.1,
+        "BB_ALLOWED_RATE": 0.061,
+        "K_ALLOWED_RATE": 0.152,
+        "HR_PA_ALLOWED_RATE": 0.049,
+        "BABIP_ALLOWED": 0.233,
+        "OAVG": 0.236,
+        "IP": "61.3",
+        "ERA": 4.11,
         "Fatigue": 0.0
       },
       {
-        "Player": "Jameson Taillon",
+        "Player": "Matthew Boyd",
         "Pos": "P",
         "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.08,
-        "K_ALLOWED_RATE": 0.206,
-        "HR_PA_ALLOWED_RATE": 0.07,
-        "BABIP_ALLOWED": 0.243,
-        "OAVG": 0.246,
-        "IP": "67.7",
-        "ERA": 5.19,
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.066,
+        "K_ALLOWED_RATE": 0.24,
+        "HR_PA_ALLOWED_RATE": 0.026,
+        "BABIP_ALLOWED": 0.313,
+        "OAVG": 0.251,
+        "IP": "46.0",
+        "ERA": 4.5,
         "Fatigue": 0.0
       },
       {
@@ -1344,34 +1330,6 @@
         "OAVG": 0.23,
         "IP": "41.3",
         "ERA": 3.05,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Ben Brown",
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.072,
-        "K_ALLOWED_RATE": 0.245,
-        "HR_PA_ALLOWED_RATE": 0.008,
-        "BABIP_ALLOWED": 0.24,
-        "OAVG": 0.183,
-        "IP": "68.0",
-        "ERA": 1.85,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Hoby Milner",
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.06,
-        "K_ALLOWED_RATE": 0.121,
-        "HR_PA_ALLOWED_RATE": 0.027,
-        "BABIP_ALLOWED": 0.254,
-        "OAVG": 0.243,
-        "IP": "35.7",
-        "ERA": 3.53,
         "Fatigue": 0.0
       },
       {
@@ -1400,6 +1358,34 @@
         "OAVG": 0.19,
         "IP": "29.0",
         "ERA": 2.48,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Caleb Thielbar",
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.109,
+        "K_ALLOWED_RATE": 0.294,
+        "HR_PA_ALLOWED_RATE": 0.059,
+        "BABIP_ALLOWED": 0.25,
+        "OAVG": 0.217,
+        "IP": "27.7",
+        "ERA": 4.23,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Drew Pomeranz",
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.102,
+        "K_ALLOWED_RATE": 0.134,
+        "HR_PA_ALLOWED_RATE": 0.055,
+        "BABIP_ALLOWED": 0.267,
+        "OAVG": 0.272,
+        "IP": "27.7",
+        "ERA": 5.53,
         "Fatigue": 0.0
       }
     ]
@@ -1733,21 +1719,6 @@
         "PA": 340
       },
       {
-        "Player": "Matt McLain",
-        "Pos": "2B",
-        "Bats": "R",
-        "BB_RATE": 0.117,
-        "K_RATE": 0.269,
-        "HR_PA_RATE": 0.026,
-        "BABIP": 0.243,
-        "1B_H_RATE": 0.59,
-        "2B_H_RATE": 0.25,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.16,
-        "SPD": 55,
-        "PA": 309
-      },
-      {
         "Player": "JJ Bleday",
         "Pos": "LF",
         "Bats": "L",
@@ -1821,6 +1792,21 @@
         "HR_H_RATE": 0.09,
         "SPD": 55,
         "PA": 214
+      },
+      {
+        "Player": "Dane Myers",
+        "Pos": "CF",
+        "Bats": "R",
+        "BB_RATE": 0.124,
+        "K_RATE": 0.255,
+        "HR_PA_RATE": 0.022,
+        "BABIP": 0.342,
+        "1B_H_RATE": 0.7,
+        "2B_H_RATE": 0.2,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.1,
+        "SPD": 55,
+        "PA": 137
       }
     ],
     "pitching": [
@@ -1881,17 +1867,17 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Nick Lodolo",
+        "Player": "Hunter Greene",
         "Pos": "P",
         "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.097,
-        "K_ALLOWED_RATE": 0.179,
-        "HR_PA_ALLOWED_RATE": 0.032,
-        "BABIP_ALLOWED": 0.29,
-        "OAVG": 0.258,
-        "IP": "62.7",
-        "ERA": 4.6,
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.111,
+        "K_ALLOWED_RATE": 0.422,
+        "HR_PA_ALLOWED_RATE": 0.022,
+        "BABIP_ALLOWED": 0.45,
+        "OAVG": 0.25,
+        "IP": "10.3",
+        "ERA": 6.97,
         "Fatigue": 0.0
       },
       {
@@ -2014,21 +2000,6 @@
         "PA": 333
       },
       {
-        "Player": "Jos\u00e9 Ram\u00edrez",
-        "Pos": "3B",
-        "Bats": "S",
-        "BB_RATE": 0.131,
-        "K_RATE": 0.14,
-        "HR_PA_RATE": 0.032,
-        "BABIP": 0.252,
-        "1B_H_RATE": 0.56,
-        "2B_H_RATE": 0.28,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.16,
-        "SPD": 55,
-        "PA": 314
-      },
-      {
         "Player": "Kyle Manzardo",
         "Pos": "1B",
         "Bats": "L",
@@ -2089,19 +2060,34 @@
         "PA": 261
       },
       {
-        "Player": "Angel Mart\u00ednez",
-        "Pos": "LF",
+        "Player": "Patrick Bailey",
+        "Pos": "C",
         "Bats": "S",
-        "BB_RATE": 0.029,
-        "K_RATE": 0.218,
-        "HR_PA_RATE": 0.045,
-        "BABIP": 0.265,
-        "1B_H_RATE": 0.57,
-        "2B_H_RATE": 0.2,
-        "3B_H_RATE": 0.02,
-        "HR_H_RATE": 0.2,
+        "BB_RATE": 0.067,
+        "K_RATE": 0.258,
+        "HR_PA_RATE": 0.015,
+        "BABIP": 0.24,
+        "1B_H_RATE": 0.73,
+        "2B_H_RATE": 0.15,
+        "3B_H_RATE": 0.03,
+        "HR_H_RATE": 0.09,
         "SPD": 55,
-        "PA": 243
+        "PA": 194
+      },
+      {
+        "Player": "David Fry",
+        "Pos": "RF",
+        "Bats": "R",
+        "BB_RATE": 0.141,
+        "K_RATE": 0.309,
+        "HR_PA_RATE": 0.04,
+        "BABIP": 0.263,
+        "1B_H_RATE": 0.62,
+        "2B_H_RATE": 0.15,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.23,
+        "SPD": 55,
+        "PA": 149
       }
     ],
     "pitching": [
@@ -2218,20 +2204,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Tim Herrin",
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.137,
-        "K_ALLOWED_RATE": 0.194,
-        "HR_PA_ALLOWED_RATE": 0.029,
-        "BABIP_ALLOWED": 0.213,
-        "OAVG": 0.192,
-        "IP": "32.3",
-        "ERA": 3.06,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Hunter Gaddis",
         "Pos": "P",
         "Role": "RP",
@@ -2243,6 +2215,20 @@
         "OAVG": 0.254,
         "IP": "30.7",
         "ERA": 2.64,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Shawn Armstrong",
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.124,
+        "K_ALLOWED_RATE": 0.217,
+        "HR_PA_ALLOWED_RATE": 0.031,
+        "BABIP_ALLOWED": 0.259,
+        "OAVG": 0.221,
+        "IP": "29.7",
+        "ERA": 4.55,
         "Fatigue": 0.0
       }
     ]
@@ -2415,20 +2401,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Tomoyuki Sugano",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.064,
-        "K_ALLOWED_RATE": 0.134,
-        "HR_PA_ALLOWED_RATE": 0.045,
-        "BABIP_ALLOWED": 0.266,
-        "OAVG": 0.263,
-        "IP": "84.3",
-        "ERA": 4.8,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Ryan Feltner",
         "Pos": "P",
         "Role": "SP",
@@ -2443,17 +2415,17 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Jose Quintana",
+        "Player": "Sean Sullivan",
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
-        "BB_ALLOWED_RATE": 0.094,
-        "K_ALLOWED_RATE": 0.11,
-        "HR_PA_ALLOWED_RATE": 0.033,
-        "BABIP_ALLOWED": 0.283,
-        "OAVG": 0.274,
-        "IP": "41.0",
-        "ERA": 5.27,
+        "BB_ALLOWED_RATE": 0.096,
+        "K_ALLOWED_RATE": 0.14,
+        "HR_PA_ALLOWED_RATE": 0.044,
+        "BABIP_ALLOWED": 0.354,
+        "OAVG": 0.33,
+        "IP": "22.3",
+        "ERA": 8.87,
         "Fatigue": 0.0
       },
       {
@@ -2513,17 +2485,17 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Chase Dollander",
+        "Player": "Juan Mejia",
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.095,
-        "K_ALLOWED_RATE": 0.249,
-        "HR_PA_ALLOWED_RATE": 0.032,
-        "BABIP_ALLOWED": 0.28,
-        "OAVG": 0.228,
-        "IP": "44.0",
-        "ERA": 3.89,
+        "BB_ALLOWED_RATE": 0.115,
+        "K_ALLOWED_RATE": 0.23,
+        "HR_PA_ALLOWED_RATE": 0.021,
+        "BABIP_ALLOWED": 0.331,
+        "OAVG": 0.26,
+        "IP": "42.3",
+        "ERA": 5.74,
         "Fatigue": 0.0
       }
     ]
@@ -2651,36 +2623,22 @@
         "PA": 231
       },
       {
-        "Player": "Gleyber Torres",
+        "Player": "Hao-Yu Lee",
         "Pos": "2B",
         "Bats": "R",
-        "BB_RATE": 0.153,
-        "K_RATE": 0.174,
-        "HR_PA_RATE": 0.021,
-        "BABIP": 0.333,
-        "1B_H_RATE": 0.77,
-        "2B_H_RATE": 0.14,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.09,
+        "BB_RATE": 0.045,
+        "K_RATE": 0.261,
+        "HR_PA_RATE": 0.025,
+        "BABIP": 0.327,
+        "1B_H_RATE": 0.71,
+        "2B_H_RATE": 0.16,
+        "3B_H_RATE": 0.03,
+        "HR_H_RATE": 0.11,
         "SPD": 55,
-        "PA": 190
+        "PA": 157
       }
     ],
     "pitching": [
-      {
-        "Player": "Framber Valdez",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.077,
-        "K_ALLOWED_RATE": 0.186,
-        "HR_PA_ALLOWED_RATE": 0.023,
-        "BABIP_ALLOWED": 0.284,
-        "OAVG": 0.245,
-        "IP": "107.7",
-        "ERA": 4.1,
-        "Fatigue": 0.0
-      },
       {
         "Player": "Keider Montero",
         "Pos": "P",
@@ -2735,6 +2693,20 @@
         "OAVG": 0.213,
         "IP": "75.7",
         "ERA": 3.09,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Troy Melton",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.058,
+        "K_ALLOWED_RATE": 0.217,
+        "HR_PA_ALLOWED_RATE": 0.037,
+        "BABIP_ALLOWED": 0.169,
+        "OAVG": 0.163,
+        "IP": "49.3",
+        "ERA": 1.82,
         "Fatigue": 0.0
       },
       {
@@ -2887,21 +2859,6 @@
         "PA": 317
       },
       {
-        "Player": "Brice Matthews",
-        "Pos": "CF",
-        "Bats": "R",
-        "BB_RATE": 0.066,
-        "K_RATE": 0.314,
-        "HR_PA_RATE": 0.031,
-        "BABIP": 0.262,
-        "1B_H_RATE": 0.68,
-        "2B_H_RATE": 0.12,
-        "3B_H_RATE": 0.02,
-        "HR_H_RATE": 0.17,
-        "SPD": 55,
-        "PA": 226
-      },
-      {
         "Player": "Jeremy Pe\u00f1a",
         "Pos": "SS",
         "Bats": "R",
@@ -2945,23 +2902,24 @@
         "HR_H_RATE": 0.15,
         "SPD": 55,
         "PA": 174
+      },
+      {
+        "Player": "Jake Meyers",
+        "Pos": "CF",
+        "Bats": "R",
+        "BB_RATE": 0.068,
+        "K_RATE": 0.203,
+        "HR_PA_RATE": 0.02,
+        "BABIP": 0.243,
+        "1B_H_RATE": 0.68,
+        "2B_H_RATE": 0.21,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.11,
+        "SPD": 55,
+        "PA": 148
       }
     ],
     "pitching": [
-      {
-        "Player": "Mike Burrows",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.083,
-        "K_ALLOWED_RATE": 0.177,
-        "HR_PA_ALLOWED_RATE": 0.05,
-        "BABIP_ALLOWED": 0.312,
-        "OAVG": 0.289,
-        "IP": "94.7",
-        "ERA": 5.99,
-        "Fatigue": 0.0
-      },
       {
         "Player": "Peter Lambert",
         "Pos": "P",
@@ -3016,6 +2974,20 @@
         "OAVG": 0.206,
         "IP": "35.3",
         "ERA": 3.57,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Cristian Javier",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.19,
+        "K_ALLOWED_RATE": 0.152,
+        "HR_PA_ALLOWED_RATE": 0.038,
+        "BABIP_ALLOWED": 0.347,
+        "OAVG": 0.312,
+        "IP": "15.3",
+        "ERA": 9.98,
         "Fatigue": 0.0
       },
       {
@@ -3183,21 +3155,6 @@
         "PA": 299
       },
       {
-        "Player": "Maikel Garcia",
-        "Pos": "3B",
-        "Bats": "R",
-        "BB_RATE": 0.082,
-        "K_RATE": 0.153,
-        "HR_PA_RATE": 0.01,
-        "BABIP": 0.305,
-        "1B_H_RATE": 0.69,
-        "2B_H_RATE": 0.24,
-        "3B_H_RATE": 0.03,
-        "HR_H_RATE": 0.04,
-        "SPD": 55,
-        "PA": 294
-      },
-      {
         "Player": "Lane Thomas",
         "Pos": "CF",
         "Bats": "R",
@@ -3226,6 +3183,21 @@
         "HR_H_RATE": 0.12,
         "SPD": 55,
         "PA": 246
+      },
+      {
+        "Player": "Nick Loftin",
+        "Pos": "3B",
+        "Bats": "R",
+        "BB_RATE": 0.102,
+        "K_RATE": 0.127,
+        "HR_PA_RATE": 0.02,
+        "BABIP": 0.269,
+        "1B_H_RATE": 0.53,
+        "2B_H_RATE": 0.35,
+        "3B_H_RATE": 0.02,
+        "HR_H_RATE": 0.09,
+        "SPD": 55,
+        "PA": 205
       }
     ],
     "pitching": [
@@ -3269,34 +3241,6 @@
         "OAVG": 0.266,
         "IP": "95.7",
         "ERA": 4.89,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Stephen Kolek",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.054,
-        "K_ALLOWED_RATE": 0.152,
-        "HR_PA_ALLOWED_RATE": 0.036,
-        "BABIP_ALLOWED": 0.276,
-        "OAVG": 0.259,
-        "IP": "54.0",
-        "ERA": 4.5,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Kris Bubic",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.126,
-        "K_ALLOWED_RATE": 0.246,
-        "HR_PA_ALLOWED_RATE": 0.019,
-        "BABIP_ALLOWED": 0.254,
-        "OAVG": 0.199,
-        "IP": "50.3",
-        "ERA": 4.11,
         "Fatigue": 0.0
       },
       {
@@ -3553,20 +3497,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Jack Kochanowicz",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.122,
-        "K_ALLOWED_RATE": 0.159,
-        "HR_PA_ALLOWED_RATE": 0.024,
-        "BABIP_ALLOWED": 0.282,
-        "OAVG": 0.25,
-        "IP": "64.0",
-        "ERA": 6.19,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Sam Aldegheri",
         "Pos": "P",
         "Role": "SP",
@@ -3578,6 +3508,20 @@
         "OAVG": 0.231,
         "IP": "33.7",
         "ERA": 5.08,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Ryan Johnson",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.087,
+        "K_ALLOWED_RATE": 0.168,
+        "HR_PA_ALLOWED_RATE": 0.06,
+        "BABIP_ALLOWED": 0.275,
+        "OAVG": 0.272,
+        "IP": "33.3",
+        "ERA": 6.75,
         "Fatigue": 0.0
       },
       {
@@ -4011,21 +3955,6 @@
         "PA": 305
       },
       {
-        "Player": "Owen Caissie",
-        "Pos": "RF",
-        "Bats": "L",
-        "BB_RATE": 0.073,
-        "K_RATE": 0.39,
-        "HR_PA_RATE": 0.049,
-        "BABIP": 0.364,
-        "1B_H_RATE": 0.54,
-        "2B_H_RATE": 0.23,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.23,
-        "SPD": 55,
-        "PA": 246
-      },
-      {
         "Player": "Javier Sanoja",
         "Pos": "3B",
         "Bats": "R",
@@ -4069,6 +3998,21 @@
         "HR_H_RATE": 0.27,
         "SPD": 55,
         "PA": 228
+      },
+      {
+        "Player": "Joe Mack",
+        "Pos": "C",
+        "Bats": "L",
+        "BB_RATE": 0.07,
+        "K_RATE": 0.233,
+        "HR_PA_RATE": 0.041,
+        "BABIP": 0.287,
+        "1B_H_RATE": 0.66,
+        "2B_H_RATE": 0.16,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.18,
+        "SPD": 55,
+        "PA": 172
       }
     ],
     "pitching": [
@@ -4199,17 +4143,17 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "John King",
+        "Player": "Calvin Faucher",
         "Pos": "P",
         "Role": "RP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.067,
-        "K_ALLOWED_RATE": 0.201,
-        "HR_PA_ALLOWED_RATE": 0.027,
-        "BABIP_ALLOWED": 0.152,
-        "OAVG": 0.144,
-        "IP": "40.0",
-        "ERA": 2.48,
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.151,
+        "K_ALLOWED_RATE": 0.223,
+        "HR_PA_ALLOWED_RATE": 0.0,
+        "BABIP_ALLOWED": 0.304,
+        "OAVG": 0.224,
+        "IP": "39.7",
+        "ERA": 4.31,
         "Fatigue": 0.0
       }
     ]
@@ -4337,19 +4281,19 @@
         "PA": 241
       },
       {
-        "Player": "David Hamilton",
-        "Pos": "3B",
-        "Bats": "L",
-        "BB_RATE": 0.092,
-        "K_RATE": 0.227,
-        "HR_PA_RATE": 0.013,
-        "BABIP": 0.313,
-        "1B_H_RATE": 0.78,
-        "2B_H_RATE": 0.12,
-        "3B_H_RATE": 0.04,
-        "HR_H_RATE": 0.06,
+        "Player": "Gary S\u00e1nchez",
+        "Pos": "C",
+        "Bats": "R",
+        "BB_RATE": 0.191,
+        "K_RATE": 0.174,
+        "HR_PA_RATE": 0.045,
+        "BABIP": 0.225,
+        "1B_H_RATE": 0.55,
+        "2B_H_RATE": 0.16,
+        "3B_H_RATE": 0.03,
+        "HR_H_RATE": 0.26,
         "SPD": 55,
-        "PA": 238
+        "PA": 178
       }
     ],
     "pitching": [
@@ -4365,20 +4309,6 @@
         "OAVG": 0.144,
         "IP": "111.0",
         "ERA": 1.62,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Kyle Harrison",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.059,
-        "K_ALLOWED_RATE": 0.296,
-        "HR_PA_ALLOWED_RATE": 0.029,
-        "BABIP_ALLOWED": 0.286,
-        "OAVG": 0.218,
-        "IP": "83.7",
-        "ERA": 3.01,
         "Fatigue": 0.0
       },
       {
@@ -4410,17 +4340,31 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Brandon Woodruff",
+        "Player": "Lance McCullers Jr.",
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.057,
-        "K_ALLOWED_RATE": 0.27,
-        "HR_PA_ALLOWED_RATE": 0.029,
-        "BABIP_ALLOWED": 0.205,
-        "OAVG": 0.171,
-        "IP": "45.3",
-        "ERA": 2.98,
+        "BB_ALLOWED_RATE": 0.128,
+        "K_ALLOWED_RATE": 0.25,
+        "HR_PA_ALLOWED_RATE": 0.041,
+        "BABIP_ALLOWED": 0.31,
+        "OAVG": 0.253,
+        "IP": "39.3",
+        "ERA": 6.86,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Logan Henderson",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.063,
+        "K_ALLOWED_RATE": 0.306,
+        "HR_PA_ALLOWED_RATE": 0.018,
+        "BABIP_ALLOWED": 0.279,
+        "OAVG": 0.202,
+        "IP": "28.3",
+        "ERA": 3.18,
         "Fatigue": 0.0
       },
       {
@@ -4543,21 +4487,6 @@
         "PA": 355
       },
       {
-        "Player": "Byron Buxton",
-        "Pos": "CF",
-        "Bats": "R",
-        "BB_RATE": 0.069,
-        "K_RATE": 0.248,
-        "HR_PA_RATE": 0.075,
-        "BABIP": 0.293,
-        "1B_H_RATE": 0.49,
-        "2B_H_RATE": 0.19,
-        "3B_H_RATE": 0.01,
-        "HR_H_RATE": 0.3,
-        "SPD": 55,
-        "PA": 335
-      },
-      {
         "Player": "Kody Clemens",
         "Pos": "1B",
         "Bats": "L",
@@ -4631,6 +4560,21 @@
         "HR_H_RATE": 0.2,
         "SPD": 55,
         "PA": 256
+      },
+      {
+        "Player": "Tristan Gray",
+        "Pos": "SS",
+        "Bats": "L",
+        "BB_RATE": 0.05,
+        "K_RATE": 0.311,
+        "HR_PA_RATE": 0.022,
+        "BABIP": 0.33,
+        "1B_H_RATE": 0.77,
+        "2B_H_RATE": 0.13,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.1,
+        "SPD": 55,
+        "PA": 180
       }
     ],
     "pitching": [
@@ -4691,17 +4635,17 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Connor Prielipp",
+        "Player": "Mike Paredes",
         "Pos": "P",
         "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.085,
-        "K_ALLOWED_RATE": 0.241,
-        "HR_PA_ALLOWED_RATE": 0.027,
-        "BABIP_ALLOWED": 0.305,
-        "OAVG": 0.245,
-        "IP": "66.7",
-        "ERA": 5.0,
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.086,
+        "K_ALLOWED_RATE": 0.117,
+        "HR_PA_ALLOWED_RATE": 0.047,
+        "BABIP_ALLOWED": 0.219,
+        "OAVG": 0.231,
+        "IP": "29.3",
+        "ERA": 4.6,
         "Fatigue": 0.0
       },
       {
@@ -4747,20 +4691,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Anthony Banda",
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.096,
-        "K_ALLOWED_RATE": 0.212,
-        "HR_PA_ALLOWED_RATE": 0.019,
-        "BABIP_ALLOWED": 0.267,
-        "OAVG": 0.22,
-        "IP": "34.3",
-        "ERA": 4.46,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Tommy Nance",
         "Pos": "P",
         "Role": "RP",
@@ -4772,6 +4702,20 @@
         "OAVG": 0.237,
         "IP": "34.0",
         "ERA": 3.97,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Taylor Rogers",
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.091,
+        "K_ALLOWED_RATE": 0.195,
+        "HR_PA_ALLOWED_RATE": 0.019,
+        "BABIP_ALLOWED": 0.355,
+        "OAVG": 0.293,
+        "IP": "33.7",
+        "ERA": 5.61,
         "Fatigue": 0.0
       }
     ]
@@ -4854,21 +4798,6 @@
         "PA": 318
       },
       {
-        "Player": "Mark Vientos",
-        "Pos": "1B",
-        "Bats": "R",
-        "BB_RATE": 0.047,
-        "K_RATE": 0.24,
-        "HR_PA_RATE": 0.043,
-        "BABIP": 0.236,
-        "1B_H_RATE": 0.6,
-        "2B_H_RATE": 0.18,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.22,
-        "SPD": 55,
-        "PA": 254
-      },
-      {
         "Player": "Francisco Alvarez",
         "Pos": "C",
         "Bats": "R",
@@ -4912,6 +4841,21 @@
         "HR_H_RATE": 0.06,
         "SPD": 55,
         "PA": 178
+      },
+      {
+        "Player": "Francisco Lindor",
+        "Pos": "SS",
+        "Bats": "S",
+        "BB_RATE": 0.091,
+        "K_RATE": 0.154,
+        "HR_PA_RATE": 0.029,
+        "BABIP": 0.224,
+        "1B_H_RATE": 0.67,
+        "2B_H_RATE": 0.09,
+        "3B_H_RATE": 0.09,
+        "HR_H_RATE": 0.15,
+        "SPD": 55,
+        "PA": 175
       }
     ],
     "pitching": [
@@ -4958,20 +4902,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Clay Holmes",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.084,
-        "K_ALLOWED_RATE": 0.209,
-        "HR_PA_ALLOWED_RATE": 0.014,
-        "BABIP_ALLOWED": 0.248,
-        "OAVG": 0.203,
-        "IP": "52.7",
-        "ERA": 2.39,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Kodai Senga",
         "Pos": "P",
         "Role": "SP",
@@ -4983,6 +4913,20 @@
         "OAVG": 0.268,
         "IP": "39.3",
         "ERA": 8.69,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Zach Thornton",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.075,
+        "K_ALLOWED_RATE": 0.224,
+        "HR_PA_ALLOWED_RATE": 0.015,
+        "BABIP_ALLOWED": 0.217,
+        "OAVG": 0.177,
+        "IP": "17.3",
+        "ERA": 2.6,
         "Fatigue": 0.0
       },
       {
@@ -5150,21 +5094,6 @@
         "PA": 262
       },
       {
-        "Player": "Aaron Judge",
-        "Pos": "RF",
-        "Bats": "R",
-        "BB_RATE": 0.161,
-        "K_RATE": 0.276,
-        "HR_PA_RATE": 0.065,
-        "BABIP": 0.288,
-        "1B_H_RATE": 0.49,
-        "2B_H_RATE": 0.19,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.32,
-        "SPD": 55,
-        "PA": 261
-      },
-      {
         "Player": "Ryan McMahon",
         "Pos": "3B",
         "Bats": "L",
@@ -5193,6 +5122,21 @@
         "HR_H_RATE": 0.2,
         "SPD": 55,
         "PA": 220
+      },
+      {
+        "Player": "Amed Rosario",
+        "Pos": "3B",
+        "Bats": "R",
+        "BB_RATE": 0.067,
+        "K_RATE": 0.242,
+        "HR_PA_RATE": 0.055,
+        "BABIP": 0.265,
+        "1B_H_RATE": 0.61,
+        "2B_H_RATE": 0.11,
+        "3B_H_RATE": 0.03,
+        "HR_H_RATE": 0.25,
+        "SPD": 55,
+        "PA": 165
       }
     ],
     "pitching": [
@@ -5239,20 +5183,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Max Fried",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.079,
-        "K_ALLOWED_RATE": 0.208,
-        "HR_PA_ALLOWED_RATE": 0.004,
-        "BABIP_ALLOWED": 0.247,
-        "OAVG": 0.195,
-        "IP": "61.7",
-        "ERA": 3.21,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Gerrit Cole",
         "Pos": "P",
         "Role": "SP",
@@ -5264,6 +5194,20 @@
         "OAVG": 0.245,
         "IP": "49.0",
         "ERA": 4.04,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Luis Gil",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.129,
+        "K_ALLOWED_RATE": 0.106,
+        "HR_PA_ALLOWED_RATE": 0.071,
+        "BABIP_ALLOWED": 0.153,
+        "OAVG": 0.203,
+        "IP": "19.3",
+        "ERA": 6.05,
         "Fatigue": 0.0
       },
       {
@@ -5341,21 +5285,6 @@
   "Athletics": {
     "hitting": [
       {
-        "Player": "Nick Kurtz",
-        "Pos": "1B",
-        "Bats": "L",
-        "BB_RATE": 0.184,
-        "K_RATE": 0.316,
-        "HR_PA_RATE": 0.049,
-        "BABIP": 0.375,
-        "1B_H_RATE": 0.6,
-        "2B_H_RATE": 0.17,
-        "3B_H_RATE": 0.01,
-        "HR_H_RATE": 0.22,
-        "SPD": 55,
-        "PA": 412
-      },
-      {
         "Player": "Shea Langeliers",
         "Pos": "C",
         "Bats": "R",
@@ -5416,21 +5345,6 @@
         "PA": 274
       },
       {
-        "Player": "Zack Gelof",
-        "Pos": "3B",
-        "Bats": "R",
-        "BB_RATE": 0.057,
-        "K_RATE": 0.251,
-        "HR_PA_RATE": 0.045,
-        "BABIP": 0.331,
-        "1B_H_RATE": 0.63,
-        "2B_H_RATE": 0.18,
-        "3B_H_RATE": 0.02,
-        "HR_H_RATE": 0.18,
-        "SPD": 55,
-        "PA": 247
-      },
-      {
         "Player": "Jacob Wilson",
         "Pos": "SS",
         "Bats": "R",
@@ -5461,19 +5375,49 @@
         "PA": 230
       },
       {
-        "Player": "Brent Rooker",
-        "Pos": "DH",
+        "Player": "Henry Bolte",
+        "Pos": "CF",
         "Bats": "R",
-        "BB_RATE": 0.094,
-        "K_RATE": 0.32,
-        "HR_PA_RATE": 0.049,
-        "BABIP": 0.248,
-        "1B_H_RATE": 0.61,
-        "2B_H_RATE": 0.11,
+        "BB_RATE": 0.074,
+        "K_RATE": 0.277,
+        "HR_PA_RATE": 0.015,
+        "BABIP": 0.368,
+        "1B_H_RATE": 0.8,
+        "2B_H_RATE": 0.13,
         "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.28,
+        "HR_H_RATE": 0.07,
         "SPD": 55,
-        "PA": 203
+        "PA": 202
+      },
+      {
+        "Player": "Jonah Heim",
+        "Pos": "C",
+        "Bats": "S",
+        "BB_RATE": 0.072,
+        "K_RATE": 0.194,
+        "HR_PA_RATE": 0.05,
+        "BABIP": 0.242,
+        "1B_H_RATE": 0.53,
+        "2B_H_RATE": 0.24,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.24,
+        "SPD": 55,
+        "PA": 180
+      },
+      {
+        "Player": "Max Muncy",
+        "Pos": "3B",
+        "Bats": "R",
+        "BB_RATE": 0.08,
+        "K_RATE": 0.331,
+        "HR_PA_RATE": 0.029,
+        "BABIP": 0.33,
+        "1B_H_RATE": 0.6,
+        "2B_H_RATE": 0.2,
+        "3B_H_RATE": 0.06,
+        "HR_H_RATE": 0.14,
+        "SPD": 55,
+        "PA": 175
       }
     ],
     "pitching": [
@@ -5506,20 +5450,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Luis Severino",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.114,
-        "K_ALLOWED_RATE": 0.24,
-        "HR_PA_ALLOWED_RATE": 0.033,
-        "BABIP_ALLOWED": 0.313,
-        "OAVG": 0.254,
-        "IP": "62.7",
-        "ERA": 4.16,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Jacob Lopez",
         "Pos": "P",
         "Role": "SP",
@@ -5545,6 +5475,20 @@
         "OAVG": 0.254,
         "IP": "48.7",
         "ERA": 3.51,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Luis Morales",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.218,
+        "K_ALLOWED_RATE": 0.127,
+        "HR_PA_ALLOWED_RATE": 0.091,
+        "BABIP_ALLOWED": 0.387,
+        "OAVG": 0.395,
+        "IP": "9.3",
+        "ERA": 14.46,
         "Fatigue": 0.0
       },
       {
@@ -5742,19 +5686,19 @@
         "PA": 260
       },
       {
-        "Player": "Adolis Garc\u00eda",
-        "Pos": "RF",
+        "Player": "Edmundo Sosa",
+        "Pos": "2B",
         "Bats": "R",
-        "BB_RATE": 0.081,
-        "K_RATE": 0.324,
-        "HR_PA_RATE": 0.027,
-        "BABIP": 0.271,
-        "1B_H_RATE": 0.64,
-        "2B_H_RATE": 0.18,
-        "3B_H_RATE": 0.02,
+        "BB_RATE": 0.031,
+        "K_RATE": 0.204,
+        "HR_PA_RATE": 0.031,
+        "BABIP": 0.248,
+        "1B_H_RATE": 0.66,
+        "2B_H_RATE": 0.16,
+        "3B_H_RATE": 0.03,
         "HR_H_RATE": 0.16,
         "SPD": 55,
-        "PA": 259
+        "PA": 162
       }
     ],
     "pitching": [
@@ -5963,36 +5907,6 @@
         "PA": 339
       },
       {
-        "Player": "Spencer Horwitz",
-        "Pos": "1B",
-        "Bats": "L",
-        "BB_RATE": 0.136,
-        "K_RATE": 0.136,
-        "HR_PA_RATE": 0.034,
-        "BABIP": 0.301,
-        "1B_H_RATE": 0.68,
-        "2B_H_RATE": 0.16,
-        "3B_H_RATE": 0.01,
-        "HR_H_RATE": 0.14,
-        "SPD": 55,
-        "PA": 295
-      },
-      {
-        "Player": "Oneil Cruz",
-        "Pos": "CF",
-        "Bats": "L",
-        "BB_RATE": 0.106,
-        "K_RATE": 0.346,
-        "HR_PA_RATE": 0.049,
-        "BABIP": 0.377,
-        "1B_H_RATE": 0.64,
-        "2B_H_RATE": 0.15,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.21,
-        "SPD": 55,
-        "PA": 283
-      },
-      {
         "Player": "Jake Mangum",
         "Pos": "CF",
         "Bats": "S",
@@ -6023,19 +5937,49 @@
         "PA": 250
       },
       {
-        "Player": "Konnor Griffin",
+        "Player": "Jared Triolo",
         "Pos": "SS",
         "Bats": "R",
-        "BB_RATE": 0.065,
-        "K_RATE": 0.263,
-        "HR_PA_RATE": 0.02,
-        "BABIP": 0.368,
+        "BB_RATE": 0.074,
+        "K_RATE": 0.223,
+        "HR_PA_RATE": 0.005,
+        "BABIP": 0.306,
         "1B_H_RATE": 0.73,
-        "2B_H_RATE": 0.16,
-        "3B_H_RATE": 0.03,
-        "HR_H_RATE": 0.08,
+        "2B_H_RATE": 0.24,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.02,
         "SPD": 55,
-        "PA": 247
+        "PA": 215
+      },
+      {
+        "Player": "Henry Davis",
+        "Pos": "C",
+        "Bats": "R",
+        "BB_RATE": 0.096,
+        "K_RATE": 0.202,
+        "HR_PA_RATE": 0.043,
+        "BABIP": 0.162,
+        "1B_H_RATE": 0.52,
+        "2B_H_RATE": 0.19,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.3,
+        "SPD": 55,
+        "PA": 188
+      },
+      {
+        "Player": "Esmerlyn Valdez",
+        "Pos": "RF",
+        "Bats": "R",
+        "BB_RATE": 0.095,
+        "K_RATE": 0.362,
+        "HR_PA_RATE": 0.095,
+        "BABIP": 0.413,
+        "1B_H_RATE": 0.41,
+        "2B_H_RATE": 0.21,
+        "3B_H_RATE": 0.03,
+        "HR_H_RATE": 0.34,
+        "SPD": 55,
+        "PA": 105
       }
     ],
     "pitching": [
@@ -6304,19 +6248,19 @@
         "PA": 211
       },
       {
-        "Player": "Ram\u00f3n Laureano",
-        "Pos": "LF",
-        "Bats": "R",
-        "BB_RATE": 0.097,
-        "K_RATE": 0.316,
-        "HR_PA_RATE": 0.034,
-        "BABIP": 0.273,
-        "1B_H_RATE": 0.59,
-        "2B_H_RATE": 0.16,
-        "3B_H_RATE": 0.05,
-        "HR_H_RATE": 0.19,
+        "Player": "Jake Cronenworth",
+        "Pos": "2B",
+        "Bats": "L",
+        "BB_RATE": 0.093,
+        "K_RATE": 0.222,
+        "HR_PA_RATE": 0.019,
+        "BABIP": 0.24,
+        "1B_H_RATE": 0.79,
+        "2B_H_RATE": 0.11,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.11,
         "SPD": 55,
-        "PA": 206
+        "PA": 162
       }
     ],
     "pitching": [
@@ -6349,20 +6293,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Randy V\u00e1squez",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.073,
-        "K_ALLOWED_RATE": 0.163,
-        "HR_PA_ALLOWED_RATE": 0.038,
-        "BABIP_ALLOWED": 0.317,
-        "OAVG": 0.289,
-        "IP": "84.0",
-        "ERA": 4.71,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Griffin Canning",
         "Pos": "P",
         "Role": "SP",
@@ -6388,6 +6318,20 @@
         "OAVG": 0.261,
         "IP": "41.7",
         "ERA": 5.18,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "JP Sears",
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.093,
+        "K_ALLOWED_RATE": 0.198,
+        "HR_PA_ALLOWED_RATE": 0.047,
+        "BABIP_ALLOWED": 0.281,
+        "OAVG": 0.256,
+        "IP": "19.7",
+        "ERA": 5.03,
         "Fatigue": 0.0
       },
       {
@@ -6419,20 +6363,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Wandy Peralta",
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.096,
-        "K_ALLOWED_RATE": 0.157,
-        "HR_PA_ALLOWED_RATE": 0.015,
-        "BABIP_ALLOWED": 0.276,
-        "OAVG": 0.24,
-        "IP": "48.3",
-        "ERA": 2.23,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Ron Marinaccio",
         "Pos": "P",
         "Role": "RP",
@@ -6458,6 +6388,20 @@
         "OAVG": 0.203,
         "IP": "40.3",
         "ERA": 2.23,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Kyle Hart",
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.08,
+        "K_ALLOWED_RATE": 0.204,
+        "HR_PA_ALLOWED_RATE": 0.029,
+        "BABIP_ALLOWED": 0.213,
+        "OAVG": 0.19,
+        "IP": "33.7",
+        "ERA": 5.08,
         "Fatigue": 0.0
       }
     ]
@@ -6525,21 +6469,6 @@
         "PA": 370
       },
       {
-        "Player": "Matt Chapman",
-        "Pos": "3B",
-        "Bats": "R",
-        "BB_RATE": 0.105,
-        "K_RATE": 0.23,
-        "HR_PA_RATE": 0.02,
-        "BABIP": 0.297,
-        "1B_H_RATE": 0.64,
-        "2B_H_RATE": 0.25,
-        "3B_H_RATE": 0.01,
-        "HR_H_RATE": 0.1,
-        "SPD": 55,
-        "PA": 352
-      },
-      {
         "Player": "Jung Hoo Lee",
         "Pos": "RF",
         "Bats": "L",
@@ -6598,6 +6527,21 @@
         "HR_H_RATE": 0.09,
         "SPD": 55,
         "PA": 216
+      },
+      {
+        "Player": "Eric Haase",
+        "Pos": "C",
+        "Bats": "R",
+        "BB_RATE": 0.071,
+        "K_RATE": 0.333,
+        "HR_PA_RATE": 0.048,
+        "BABIP": 0.19,
+        "1B_H_RATE": 0.42,
+        "2B_H_RATE": 0.25,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.33,
+        "SPD": 55,
+        "PA": 84
       }
     ],
     "pitching": [
@@ -6728,17 +6672,17 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Matt Gage",
+        "Player": "Ryan Walker",
         "Pos": "P",
         "Role": "RP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.135,
-        "K_ALLOWED_RATE": 0.175,
-        "HR_PA_ALLOWED_RATE": 0.048,
-        "BABIP_ALLOWED": 0.272,
-        "OAVG": 0.257,
-        "IP": "27.3",
-        "ERA": 5.6,
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.12,
+        "K_ALLOWED_RATE": 0.152,
+        "HR_PA_ALLOWED_RATE": 0.032,
+        "BABIP_ALLOWED": 0.333,
+        "OAVG": 0.3,
+        "IP": "26.3",
+        "ERA": 7.52,
         "Fatigue": 0.0
       }
     ]
@@ -6789,21 +6733,6 @@
         "HR_H_RATE": 0.12,
         "SPD": 55,
         "PA": 379
-      },
-      {
-        "Player": "Julio Rodr\u00edguez",
-        "Pos": "CF",
-        "Bats": "R",
-        "BB_RATE": 0.077,
-        "K_RATE": 0.209,
-        "HR_PA_RATE": 0.037,
-        "BABIP": 0.299,
-        "1B_H_RATE": 0.67,
-        "2B_H_RATE": 0.17,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.16,
-        "SPD": 55,
-        "PA": 378
       },
       {
         "Player": "J.P. Crawford",
@@ -6879,6 +6808,21 @@
         "HR_H_RATE": 0.24,
         "SPD": 55,
         "PA": 160
+      },
+      {
+        "Player": "Mitch Garver",
+        "Pos": "C",
+        "Bats": "R",
+        "BB_RATE": 0.154,
+        "K_RATE": 0.315,
+        "HR_PA_RATE": 0.031,
+        "BABIP": 0.25,
+        "1B_H_RATE": 0.7,
+        "2B_H_RATE": 0.1,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.2,
+        "SPD": 55,
+        "PA": 130
       }
     ],
     "pitching": [
@@ -6995,20 +6939,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Cooper Criswell",
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.066,
-        "K_ALLOWED_RATE": 0.19,
-        "HR_PA_ALLOWED_RATE": 0.025,
-        "BABIP_ALLOWED": 0.287,
-        "OAVG": 0.248,
-        "IP": "30.7",
-        "ERA": 3.52,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Gabe Speier",
         "Pos": "P",
         "Role": "RP",
@@ -7020,6 +6950,20 @@
         "OAVG": 0.213,
         "IP": "24.3",
         "ERA": 2.22,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Alex Hoppe",
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.093,
+        "K_ALLOWED_RATE": 0.241,
+        "HR_PA_ALLOWED_RATE": 0.009,
+        "BABIP_ALLOWED": 0.338,
+        "OAVG": 0.255,
+        "IP": "24.0",
+        "ERA": 6.38,
         "Fatigue": 0.0
       }
     ]
@@ -7312,30 +7256,30 @@
         "Pos": "3B",
         "Bats": "R",
         "BB_RATE": 0.128,
-        "K_RATE": 0.188,
-        "HR_PA_RATE": 0.068,
+        "K_RATE": 0.19,
+        "HR_PA_RATE": 0.067,
         "BABIP": 0.286,
         "1B_H_RATE": 0.58,
         "2B_H_RATE": 0.14,
         "3B_H_RATE": 0.0,
         "HR_H_RATE": 0.28,
         "SPD": 55,
-        "PA": 414
+        "PA": 415
       },
       {
         "Player": "Jonathan Aranda",
         "Pos": "1B",
         "Bats": "L",
         "BB_RATE": 0.127,
-        "K_RATE": 0.218,
+        "K_RATE": 0.217,
         "HR_PA_RATE": 0.034,
-        "BABIP": 0.364,
+        "BABIP": 0.362,
         "1B_H_RATE": 0.69,
         "2B_H_RATE": 0.17,
         "3B_H_RATE": 0.0,
         "HR_H_RATE": 0.14,
         "SPD": 55,
-        "PA": 409
+        "PA": 410
       },
       {
         "Player": "Yandy D\u00edaz",
@@ -7501,17 +7445,17 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Steven Matz",
+        "Player": "Joe Boyle",
         "Pos": "P",
         "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.083,
-        "K_ALLOWED_RATE": 0.178,
-        "HR_PA_ALLOWED_RATE": 0.048,
-        "BABIP_ALLOWED": 0.277,
-        "OAVG": 0.261,
-        "IP": "53.0",
-        "ERA": 6.28,
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.091,
+        "K_ALLOWED_RATE": 0.242,
+        "HR_PA_ALLOWED_RATE": 0.015,
+        "BABIP_ALLOWED": 0.233,
+        "OAVG": 0.183,
+        "IP": "15.7",
+        "ERA": 5.17,
         "Fatigue": 0.0
       },
       {
@@ -7679,21 +7623,6 @@
         "PA": 266
       },
       {
-        "Player": "Corey Seager",
-        "Pos": "SS",
-        "Bats": "L",
-        "BB_RATE": 0.128,
-        "K_RATE": 0.269,
-        "HR_PA_RATE": 0.046,
-        "BABIP": 0.203,
-        "1B_H_RATE": 0.53,
-        "2B_H_RATE": 0.18,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.29,
-        "SPD": 55,
-        "PA": 219
-      },
-      {
         "Player": "Wyatt Langford",
         "Pos": "LF",
         "Bats": "R",
@@ -7722,6 +7651,21 @@
         "HR_H_RATE": 0.02,
         "SPD": 55,
         "PA": 190
+      },
+      {
+        "Player": "Kyle Higashioka",
+        "Pos": "C",
+        "Bats": "R",
+        "BB_RATE": 0.096,
+        "K_RATE": 0.26,
+        "HR_PA_RATE": 0.04,
+        "BABIP": 0.264,
+        "1B_H_RATE": 0.71,
+        "2B_H_RATE": 0.09,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.2,
+        "SPD": 55,
+        "PA": 177
       }
     ],
     "pitching": [
@@ -7779,20 +7723,6 @@
         "OAVG": 0.25,
         "IP": "90.0",
         "ERA": 4.4,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Jack Leiter",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.099,
-        "K_ALLOWED_RATE": 0.234,
-        "HR_PA_ALLOWED_RATE": 0.039,
-        "BABIP_ALLOWED": 0.296,
-        "OAVG": 0.25,
-        "IP": "80.0",
-        "ERA": 5.29,
         "Fatigue": 0.0
       },
       {
@@ -7960,21 +7890,6 @@
         "PA": 293
       },
       {
-        "Player": "Jes\u00fas S\u00e1nchez",
-        "Pos": "RF",
-        "Bats": "L",
-        "BB_RATE": 0.043,
-        "K_RATE": 0.222,
-        "HR_PA_RATE": 0.03,
-        "BABIP": 0.333,
-        "1B_H_RATE": 0.64,
-        "2B_H_RATE": 0.24,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.12,
-        "SPD": 55,
-        "PA": 234
-      },
-      {
         "Player": "Nathan Lukes",
         "Pos": "RF",
         "Bats": "L",
@@ -8003,6 +7918,21 @@
         "HR_H_RATE": 0.18,
         "SPD": 55,
         "PA": 184
+      },
+      {
+        "Player": "Myles Straw",
+        "Pos": "RF",
+        "Bats": "R",
+        "BB_RATE": 0.079,
+        "K_RATE": 0.134,
+        "HR_PA_RATE": 0.018,
+        "BABIP": 0.256,
+        "1B_H_RATE": 0.74,
+        "2B_H_RATE": 0.18,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.09,
+        "SPD": 55,
+        "PA": 164
       }
     ],
     "pitching": [
@@ -8063,17 +7993,17 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Max Scherzer",
+        "Player": "Shane Bieber",
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.108,
-        "K_ALLOWED_RATE": 0.137,
-        "HR_PA_ALLOWED_RATE": 0.088,
-        "BABIP_ALLOWED": 0.265,
-        "OAVG": 0.297,
-        "IP": "22.0",
-        "ERA": 10.23,
+        "BB_ALLOWED_RATE": 0.116,
+        "K_ALLOWED_RATE": 0.151,
+        "HR_PA_ALLOWED_RATE": 0.081,
+        "BABIP_ALLOWED": 0.339,
+        "OAVG": 0.342,
+        "IP": "17.7",
+        "ERA": 7.64,
         "Fatigue": 0.0
       },
       {
@@ -8330,20 +8260,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Jake Irvin",
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.096,
-        "K_ALLOWED_RATE": 0.254,
-        "HR_PA_ALLOWED_RATE": 0.031,
-        "BABIP_ALLOWED": 0.291,
-        "OAVG": 0.233,
-        "IP": "51.7",
-        "ERA": 5.23,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Carson Palmquist",
         "Pos": "P",
         "Role": "SP",
@@ -8372,34 +8288,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Miles Mikolas",
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.05,
-        "K_ALLOWED_RATE": 0.125,
-        "HR_PA_ALLOWED_RATE": 0.05,
-        "BABIP_ALLOWED": 0.275,
-        "OAVG": 0.277,
-        "IP": "94.3",
-        "ERA": 5.53,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Brad Lord",
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.085,
-        "K_ALLOWED_RATE": 0.21,
-        "HR_PA_ALLOWED_RATE": 0.028,
-        "BABIP_ALLOWED": 0.256,
-        "OAVG": 0.22,
-        "IP": "58.0",
-        "ERA": 3.88,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Andrew Alvarez",
         "Pos": "P",
         "Role": "RP",
@@ -8414,17 +8302,45 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Mitchell Parker",
+        "Player": "PJ Poulin",
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
-        "BB_ALLOWED_RATE": 0.073,
-        "K_ALLOWED_RATE": 0.191,
+        "BB_ALLOWED_RATE": 0.137,
+        "K_ALLOWED_RATE": 0.163,
+        "HR_PA_ALLOWED_RATE": 0.026,
+        "BABIP_ALLOWED": 0.223,
+        "OAVG": 0.205,
+        "IP": "36.7",
+        "ERA": 2.7,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Justin Lawrence",
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.158,
+        "K_ALLOWED_RATE": 0.243,
         "HR_PA_ALLOWED_RATE": 0.051,
-        "BABIP_ALLOWED": 0.303,
-        "OAVG": 0.279,
-        "IP": "39.7",
-        "ERA": 6.58,
+        "BABIP_ALLOWED": 0.309,
+        "OAVG": 0.262,
+        "IP": "34.3",
+        "ERA": 7.34,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Paxton Schultz",
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.077,
+        "K_ALLOWED_RATE": 0.217,
+        "HR_PA_ALLOWED_RATE": 0.035,
+        "BABIP_ALLOWED": 0.354,
+        "OAVG": 0.295,
+        "IP": "30.7",
+        "ERA": 5.87,
         "Fatigue": 0.0
       }
     ]
