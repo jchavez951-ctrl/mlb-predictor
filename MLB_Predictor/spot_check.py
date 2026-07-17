@@ -848,7 +848,7 @@ def _load_roster_database():
 
 ROSTER_DATABASE = _load_roster_database()
 
-BALLPARK_ENV = {
+BALLPARK_ENV_FALLBACK = {
 
     "Athletics": {"run_mult": 0.95, "hr_mult": 0.88, "babip_mult": 0.98},
     "Baltimore Orioles": {"run_mult": 1.02, "hr_mult": 0.95, "babip_mult": 1.01},
@@ -881,6 +881,34 @@ BALLPARK_ENV = {
     "Minnesota Twins": {"run_mult": 0.99, "hr_mult": 0.98, "babip_mult": 0.99},
     "Los Angeles Angels": {"run_mult": 0.99, "hr_mult": 0.97, "babip_mult": 0.99}
 }
+
+# ----------------------------------------------------
+# PARK FACTOR DATA LOADER
+# ----------------------------------------------------
+# Same pattern as the roster loader above: prefers a refreshed
+# ballpark_env.json (see refresh_park_factors.py) over the hardcoded
+# BALLPARK_ENV_FALLBACK, falling back safely if the file is missing,
+# malformed, or incomplete. Unlike rosters, park factors barely change
+# year to year, so this file is only expected to be refreshed
+# occasionally (manually run), not nightly.
+def _load_ballpark_env():
+    json_path = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "ballpark_env.json")
+    try:
+        with open(json_path, "r") as f:
+            data = _json.load(f)
+        if not isinstance(data, dict) or len(data) < 30:
+            raise ValueError(f"ballpark_env.json has {len(data) if isinstance(data, dict) else 'invalid'} teams, expected 30")
+        for team, factors in data.items():
+            if not all(k in factors for k in ("run_mult", "hr_mult", "babip_mult")):
+                raise ValueError(f"{team} is missing one or more multiplier fields in ballpark_env.json")
+        return data
+    except FileNotFoundError:
+        return BALLPARK_ENV_FALLBACK
+    except Exception as e:
+        print(f"[ballpark loader] Falling back to hardcoded park factors -- ballpark_env.json problem: {e}")
+        return BALLPARK_ENV_FALLBACK
+
+BALLPARK_ENV = _load_ballpark_env()
 
 # ----------------------------------------------------
 # ADVANCED MATHEMATICAL LOG-ODDS AND FALLBACK SAFETY HANDLERS
