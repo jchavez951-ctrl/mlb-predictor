@@ -1,0 +1,39 @@
+name: Refresh Park Factors (Manual)
+
+# Deliberately manual-only -- no schedule trigger. Park factors (stadium
+# dimensions, altitude, typical wind) barely change year to year, unlike
+# rosters which need nightly refreshing. Run this from the Actions tab
+# whenever you want to check for updates (e.g. once at the start of a
+# season), not on an automated daily cadence.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run park factor refresh
+        run: python refresh_park_factors.py
+
+      - name: Commit and push updated park factors
+        run: |
+          git config user.name "park-factor-refresh-bot"
+          git config user.email "actions@github.com"
+          git add MLB_Predictor/ballpark_env.json
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Manual park factor refresh"
+          git push
