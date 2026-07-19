@@ -848,6 +848,31 @@ def _load_roster_database():
 
 ROSTER_DATABASE = _load_roster_database()
 
+# ----------------------------------------------------
+# CONTACT QUALITY DATA LOADER (OPTIONAL)
+# ----------------------------------------------------
+# Unlike rosters and park factors, this data is genuinely optional -- there's
+# no hardcoded fallback, because the app works fine without it (views that
+# use this just don't show these extra columns if it's missing). Loads
+# MLB_Predictor/contact_quality.json if present (see
+# refresh_contact_quality.py), which has real Statcast Barrel%/HardHit%/xwOBA
+# per hitter, keyed by player name to match ROSTER_DATABASE's "Player" field.
+def _load_contact_quality():
+    json_path = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "contact_quality.json")
+    try:
+        with open(json_path, "r") as f:
+            data = _json.load(f)
+        if not isinstance(data, dict):
+            return {}
+        return data
+    except FileNotFoundError:
+        return {}
+    except Exception as e:
+        print(f"[contact quality loader] Ignoring contact_quality.json -- problem reading it: {e}")
+        return {}
+
+CONTACT_QUALITY = _load_contact_quality()
+
 BALLPARK_ENV_FALLBACK = {
 
     "Athletics": {"run_mult": 0.95, "hr_mult": 0.88, "babip_mult": 0.98},
@@ -1645,10 +1670,13 @@ else:
         # HR probability -- this reuses the exact same regressed, park- and
         # weather-adjusted HR projections already computed for the per-team
         # prop tables above, just re-sorted into a single cross-team view.
-        # Note: this does NOT include Statcast contact-quality metrics like
-        # Barrel% or HardHit% -- those aren't in the current data pipeline,
-        # so this leaderboard is driven by simulated outcome probability
-        # only, not underlying batted-ball quality.
+        # When CONTACT_QUALITY has data for a player (see
+        # refresh_contact_quality.py), their real Statcast Barrel%/HardHit%/
+        # xwOBA gets shown alongside the simulated probability -- this is
+        # genuinely optional context, not baked into the underlying
+        # simulation itself, so it's fine for some/all players to show
+        # blank here if that data hasn't been refreshed or isn't available
+        # for a given player yet.
         def prob_over(values, line):
             if not values: return 0.0
             return sum(1 for v in values if v > line) / len(values)
@@ -1658,13 +1686,22 @@ else:
             for name, stats in means_data.items():
                 hr_exp = stats.get("HR", 0)
                 hr_p = prob_over(dist_data.get(name, {}).get("HR", []), 0.5)
-                rows.append({"Team": team_name, "Hitter": name, "Proj HR": round(hr_exp, 3), "HR Over 0.5%": f"{hr_p*100:.1f}%", "_sort": hr_p})
+                cq = CONTACT_QUALITY.get(name, {})
+                rows.append({
+                    "Team": team_name, "Hitter": name,
+                    "Proj HR": round(hr_exp, 3), "HR Over 0.5%": f"{hr_p*100:.1f}%",
+                    "Barrel%": cq.get("barrel_pct"), "HardHit%": cq.get("hardhit_pct"),
+                    "xwOBA": cq.get("xwoba"), "Exit Velo": cq.get("avg_exit_velo"),
+                    "_sort": hr_p,
+                })
 
         rows.sort(key=lambda r: r["_sort"], reverse=True)
         for r in rows: del r["_sort"]
 
         park_note = "hitter-friendly" if park_hr_mult > 1.03 else ("pitcher-friendly" if park_hr_mult < 0.97 else "roughly neutral")
         st.caption(f"Tonight's park HR factor: {park_hr_mult:.2f} ({park_note}) -- already baked into every projection below.")
+        if not CONTACT_QUALITY:
+            st.caption("Real Statcast contact-quality data (Barrel%/HardHit%/xwOBA) isn't loaded yet -- run refresh_contact_quality.py to add it.")
         st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
         st.caption("Ranked by HR Over 0.5% (share of the 1,000 simulated games with at least one home run). This reflects simulated outcome probability -- it does not include Statcast contact-quality data (Barrel%, HardHit%, xwOBAcon), which isn't currently part of the roster data pipeline.")
 
