@@ -1640,14 +1640,44 @@ else:
         st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
         st.caption("K Over% = share of the 1,000 simulated games where the pitcher actually cleared the strikeout line.")
 
-    t_prop_away, t_prop_home, t_pitch_away, t_pitch_home = st.tabs([
+    def render_hr_leaderboard(away_team_name, away_means, away_dist, home_team_name, home_means, home_dist, park_hr_mult):
+        # Combines both lineups into one ranked list, sorted by real simulated
+        # HR probability -- this reuses the exact same regressed, park- and
+        # weather-adjusted HR projections already computed for the per-team
+        # prop tables above, just re-sorted into a single cross-team view.
+        # Note: this does NOT include Statcast contact-quality metrics like
+        # Barrel% or HardHit% -- those aren't in the current data pipeline,
+        # so this leaderboard is driven by simulated outcome probability
+        # only, not underlying batted-ball quality.
+        def prob_over(values, line):
+            if not values: return 0.0
+            return sum(1 for v in values if v > line) / len(values)
+
+        rows = []
+        for team_name, means_data, dist_data in [(away_team_name, away_means, away_dist), (home_team_name, home_means, home_dist)]:
+            for name, stats in means_data.items():
+                hr_exp = stats.get("HR", 0)
+                hr_p = prob_over(dist_data.get(name, {}).get("HR", []), 0.5)
+                rows.append({"Team": team_name, "Hitter": name, "Proj HR": round(hr_exp, 3), "HR Over 0.5%": f"{hr_p*100:.1f}%", "_sort": hr_p})
+
+        rows.sort(key=lambda r: r["_sort"], reverse=True)
+        for r in rows: del r["_sort"]
+
+        park_note = "hitter-friendly" if park_hr_mult > 1.03 else ("pitcher-friendly" if park_hr_mult < 0.97 else "roughly neutral")
+        st.caption(f"Tonight's park HR factor: {park_hr_mult:.2f} ({park_note}) -- already baked into every projection below.")
+        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+        st.caption("Ranked by HR Over 0.5% (share of the 1,000 simulated games with at least one home run). This reflects simulated outcome probability -- it does not include Statcast contact-quality data (Barrel%, HardHit%, xwOBAcon), which isn't currently part of the roster data pipeline.")
+
+    t_prop_away, t_prop_home, t_pitch_away, t_pitch_home, t_hr_board = st.tabs([
         f"📊 {away_selection} Hitting Props", f"📊 {home_selection} Hitting Props",
-        f"⚾ {away_selection} Pitching Props", f"⚾ {home_selection} Pitching Props"
+        f"⚾ {away_selection} Pitching Props", f"⚾ {home_selection} Pitching Props",
+        "💣 HR Leaderboard"
     ])
     with t_prop_away: render_hitting_prop_matrix_view(mc["away_box_means"], mc["away_box_dist"])
     with t_prop_home: render_hitting_prop_matrix_view(mc["home_box_means"], mc["home_box_dist"])
     with t_pitch_away: render_pitching_prop_matrix_view(mc["away_pitch_means"], mc["away_role_map"], mc["away_pitch_dist"])
     with t_pitch_home: render_pitching_prop_matrix_view(mc["home_pitch_means"], mc["home_role_map"], mc["home_pitch_dist"])
+    with t_hr_board: render_hr_leaderboard(away_selection, mc["away_box_means"], mc["away_box_dist"], home_selection, mc["home_box_means"], mc["home_box_dist"], park_rules["hr_mult"])
 
     st.markdown("### 🏟️ Live Play-By-Play Visual Render Interface")
     if st.button("Launch Immersive Real-Time Simulation Walkthrough Loop", type="primary", use_container_width=True):
