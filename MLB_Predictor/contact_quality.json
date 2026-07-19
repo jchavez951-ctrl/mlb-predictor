@@ -1,0 +1,2792 @@
+{
+  "682848 Rodr\u00edguez, Endy": {
+    "barrel_pct": 46.5,
+    "hardhit_pct": 0.366,
+    "xwoba": 92.4,
+    "avg_exit_velo": null
+  },
+  "686611 Crews, Dylan": {
+    "barrel_pct": 42.4,
+    "hardhit_pct": 0.317,
+    "xwoba": 90.5,
+    "avg_exit_velo": null
+  },
+  "685133 Meckler, Wade": {
+    "barrel_pct": 32.3,
+    "hardhit_pct": 0.322,
+    "xwoba": 86.7,
+    "avg_exit_velo": null
+  },
+  "814439 Waldschmidt, Ryan": {
+    "barrel_pct": 36.0,
+    "hardhit_pct": 0.28,
+    "xwoba": 87.1,
+    "avg_exit_velo": null
+  },
+  "660688 Ruiz, Keibert": {
+    "barrel_pct": 38.9,
+    "hardhit_pct": 0.276,
+    "xwoba": 89.3,
+    "avg_exit_velo": null
+  },
+  "694514 Thompson, Sterlin": {
+    "barrel_pct": 43.8,
+    "hardhit_pct": 0.295,
+    "xwoba": 86.6,
+    "avg_exit_velo": null
+  },
+  "623168 Heineman, Tyler": {
+    "barrel_pct": 13.9,
+    "hardhit_pct": 0.24,
+    "xwoba": 81.3,
+    "avg_exit_velo": null
+  },
+  "621020 Swanson, Dansby": {
+    "barrel_pct": 42.5,
+    "hardhit_pct": 0.299,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "670764 Walls, Taylor": {
+    "barrel_pct": 21.1,
+    "hardhit_pct": 0.252,
+    "xwoba": 84.9,
+    "avg_exit_velo": null
+  },
+  "670097 Short, Zack": {
+    "barrel_pct": 20.6,
+    "hardhit_pct": 0.256,
+    "xwoba": 88.7,
+    "avg_exit_velo": null
+  },
+  "666397 Julien, Edouard": {
+    "barrel_pct": 50.7,
+    "hardhit_pct": 0.346,
+    "xwoba": 91.2,
+    "avg_exit_velo": null
+  },
+  "673237 Diaz, Yainer": {
+    "barrel_pct": 31.9,
+    "hardhit_pct": 0.289,
+    "xwoba": 87.9,
+    "avg_exit_velo": null
+  },
+  "643396 Kiner-Falefa, Isiah": {
+    "barrel_pct": 26.5,
+    "hardhit_pct": 0.312,
+    "xwoba": 82.3,
+    "avg_exit_velo": null
+  },
+  "691019 Teel, Kyle": {
+    "barrel_pct": 48.6,
+    "hardhit_pct": 0.305,
+    "xwoba": 84.0,
+    "avg_exit_velo": null
+  },
+  "668723 Vilade, Ryan": {
+    "barrel_pct": 38.1,
+    "hardhit_pct": 0.312,
+    "xwoba": 89.3,
+    "avg_exit_velo": null
+  },
+  "656305 Chapman, Matt": {
+    "barrel_pct": 35.8,
+    "hardhit_pct": 0.286,
+    "xwoba": 88.2,
+    "avg_exit_velo": null
+  },
+  "694203 Guzman, Denzer": {
+    "barrel_pct": 36.6,
+    "hardhit_pct": 0.28,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "673962 Jung, Josh": {
+    "barrel_pct": 48.0,
+    "hardhit_pct": 0.348,
+    "xwoba": 90.5,
+    "avg_exit_velo": null
+  },
+  "680728 Del Castillo, Adrian": {
+    "barrel_pct": 39.4,
+    "hardhit_pct": 0.261,
+    "xwoba": 89.2,
+    "avg_exit_velo": null
+  },
+  "805904 Cole, Zach": {
+    "barrel_pct": 50.0,
+    "hardhit_pct": 0.289,
+    "xwoba": 92.5,
+    "avg_exit_velo": null
+  },
+  "677592 Pereira, Everson": {
+    "barrel_pct": 42.6,
+    "hardhit_pct": 0.302,
+    "xwoba": 87.9,
+    "avg_exit_velo": null
+  },
+  "694192 Chourio, Jackson": {
+    "barrel_pct": 45.9,
+    "hardhit_pct": 0.331,
+    "xwoba": 92.2,
+    "avg_exit_velo": null
+  },
+  "672356 Arias, Gabriel": {
+    "barrel_pct": 49.1,
+    "hardhit_pct": 0.288,
+    "xwoba": 91.5,
+    "avg_exit_velo": null
+  },
+  "542303 Ozuna, Marcell": {
+    "barrel_pct": 38.0,
+    "hardhit_pct": 0.309,
+    "xwoba": 89.4,
+    "avg_exit_velo": null
+  },
+  "686681 Massey, Michael": {
+    "barrel_pct": 41.9,
+    "hardhit_pct": 0.309,
+    "xwoba": 90.4,
+    "avg_exit_velo": null
+  },
+  "642201 White, Eli": {
+    "barrel_pct": 33.0,
+    "hardhit_pct": 0.279,
+    "xwoba": 87.1,
+    "avg_exit_velo": null
+  },
+  "680574 McLain, Matt": {
+    "barrel_pct": 38.0,
+    "hardhit_pct": 0.317,
+    "xwoba": 88.8,
+    "avg_exit_velo": null
+  },
+  "701675 Church, Nathan": {
+    "barrel_pct": 31.8,
+    "hardhit_pct": 0.281,
+    "xwoba": 86.0,
+    "avg_exit_velo": null
+  },
+  "663698 Bart, Joey": {
+    "barrel_pct": 34.4,
+    "hardhit_pct": 0.295,
+    "xwoba": 86.1,
+    "avg_exit_velo": null
+  },
+  "680757 Kwan, Steven": {
+    "barrel_pct": 9.5,
+    "hardhit_pct": 0.316,
+    "xwoba": 83.2,
+    "avg_exit_velo": null
+  },
+  "672515 Moreno, Gabriel": {
+    "barrel_pct": 41.9,
+    "hardhit_pct": 0.372,
+    "xwoba": 89.4,
+    "avg_exit_velo": null
+  },
+  "666176 Adell, Jo": {
+    "barrel_pct": 42.8,
+    "hardhit_pct": 0.319,
+    "xwoba": 89.4,
+    "avg_exit_velo": null
+  },
+  "666160 Moniak, Mickey": {
+    "barrel_pct": 43.8,
+    "hardhit_pct": 0.311,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "807713 Shaw, Matt": {
+    "barrel_pct": 36.2,
+    "hardhit_pct": 0.301,
+    "xwoba": 86.8,
+    "avg_exit_velo": null
+  },
+  "553993 Su\u00e1rez, Eugenio": {
+    "barrel_pct": 32.0,
+    "hardhit_pct": 0.266,
+    "xwoba": 88.2,
+    "avg_exit_velo": null
+  },
+  "682657 Mart\u00ednez, Angel": {
+    "barrel_pct": 37.3,
+    "hardhit_pct": 0.306,
+    "xwoba": 88.0,
+    "avg_exit_velo": null
+  },
+  "668930 Turang, Brice": {
+    "barrel_pct": 44.3,
+    "hardhit_pct": 0.346,
+    "xwoba": 90.9,
+    "avg_exit_velo": null
+  },
+  "672724 Peraza, Oswald": {
+    "barrel_pct": 37.8,
+    "hardhit_pct": 0.282,
+    "xwoba": 87.4,
+    "avg_exit_velo": null
+  },
+  "675961 Williams, Alika": {
+    "barrel_pct": 34.5,
+    "hardhit_pct": 0.22,
+    "xwoba": 85.4,
+    "avg_exit_velo": null
+  },
+  "606466 Marte, Ketel": {
+    "barrel_pct": 45.0,
+    "hardhit_pct": 0.364,
+    "xwoba": 91.1,
+    "avg_exit_velo": null
+  },
+  "701538 Merrill, Jackson": {
+    "barrel_pct": 45.2,
+    "hardhit_pct": 0.306,
+    "xwoba": 89.4,
+    "avg_exit_velo": null
+  },
+  "663743 Fortes, Nick": {
+    "barrel_pct": 36.2,
+    "hardhit_pct": 0.27,
+    "xwoba": 85.8,
+    "avg_exit_velo": null
+  },
+  "605141 Betts, Mookie": {
+    "barrel_pct": 39.0,
+    "hardhit_pct": 0.332,
+    "xwoba": 90.5,
+    "avg_exit_velo": null
+  },
+  "545341 Grichuk, Randal": {
+    "barrel_pct": 46.7,
+    "hardhit_pct": 0.36,
+    "xwoba": 90.5,
+    "avg_exit_velo": null
+  },
+  "621566 Olson, Matt": {
+    "barrel_pct": 51.6,
+    "hardhit_pct": 0.36,
+    "xwoba": 92.8,
+    "avg_exit_velo": null
+  },
+  "699013 Valdez, Esmerlyn": {
+    "barrel_pct": 54.1,
+    "hardhit_pct": 0.355,
+    "xwoba": 92.8,
+    "avg_exit_velo": null
+  },
+  "695578 Wood, James": {
+    "barrel_pct": 60.2,
+    "hardhit_pct": 0.43,
+    "xwoba": 95.1,
+    "avg_exit_velo": null
+  },
+  "694410 Groover, LuJames": {
+    "barrel_pct": 45.9,
+    "hardhit_pct": 0.286,
+    "xwoba": 90.0,
+    "avg_exit_velo": null
+  },
+  "643289 Dub\u00f3n, Mauricio": {
+    "barrel_pct": 31.2,
+    "hardhit_pct": 0.314,
+    "xwoba": 86.4,
+    "avg_exit_velo": null
+  },
+  "683737 Busch, Michael": {
+    "barrel_pct": 40.6,
+    "hardhit_pct": 0.345,
+    "xwoba": 88.3,
+    "avg_exit_velo": null
+  },
+  "642350 Siri, Jose": {
+    "barrel_pct": 34.9,
+    "hardhit_pct": 0.316,
+    "xwoba": 86.8,
+    "avg_exit_velo": null
+  },
+  "676914 Schneider, Davis": {
+    "barrel_pct": 45.9,
+    "hardhit_pct": 0.27,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "608324 Bregman, Alex": {
+    "barrel_pct": 36.5,
+    "hardhit_pct": 0.308,
+    "xwoba": 87.9,
+    "avg_exit_velo": null
+  },
+  "608348 Kelly, Carson": {
+    "barrel_pct": 38.1,
+    "hardhit_pct": 0.327,
+    "xwoba": 88.2,
+    "avg_exit_velo": null
+  },
+  "672761 P\u00e9rez, Wenceel": {
+    "barrel_pct": 33.3,
+    "hardhit_pct": 0.272,
+    "xwoba": 87.2,
+    "avg_exit_velo": null
+  },
+  "666971 Gurriel Jr., Lourdes": {
+    "barrel_pct": 34.3,
+    "hardhit_pct": 0.277,
+    "xwoba": 87.3,
+    "avg_exit_velo": null
+  },
+  "664040 Lowe, Brandon": {
+    "barrel_pct": 45.8,
+    "hardhit_pct": 0.338,
+    "xwoba": 91.0,
+    "avg_exit_velo": null
+  },
+  "699625 Crooks, Jimmy": {
+    "barrel_pct": 53.7,
+    "hardhit_pct": 0.35,
+    "xwoba": 92.3,
+    "avg_exit_velo": null
+  },
+  "686527 Canzone, Dominic": {
+    "barrel_pct": 48.4,
+    "hardhit_pct": 0.366,
+    "xwoba": 92.8,
+    "avg_exit_velo": null
+  },
+  "663728 Raleigh, Cal": {
+    "barrel_pct": 32.1,
+    "hardhit_pct": 0.286,
+    "xwoba": 88.0,
+    "avg_exit_velo": null
+  },
+  "695734 Lile, Daylen": {
+    "barrel_pct": 35.1,
+    "hardhit_pct": 0.317,
+    "xwoba": 88.0,
+    "avg_exit_velo": null
+  },
+  "683002 Henderson, Gunnar": {
+    "barrel_pct": 43.9,
+    "hardhit_pct": 0.303,
+    "xwoba": 89.4,
+    "avg_exit_velo": null
+  },
+  "689414 Hicks, Liam": {
+    "barrel_pct": 30.0,
+    "hardhit_pct": 0.311,
+    "xwoba": 85.3,
+    "avg_exit_velo": null
+  },
+  "805779 Wilson, Jacob": {
+    "barrel_pct": 29.1,
+    "hardhit_pct": 0.289,
+    "xwoba": 84.3,
+    "avg_exit_velo": null
+  },
+  "687859 Johnston, Troy": {
+    "barrel_pct": 38.2,
+    "hardhit_pct": 0.327,
+    "xwoba": 89.6,
+    "avg_exit_velo": null
+  },
+  "701678 Lee, Hao-Yu": {
+    "barrel_pct": 35.1,
+    "hardhit_pct": 0.272,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "687221 Rushing, Dalton": {
+    "barrel_pct": 43.1,
+    "hardhit_pct": 0.335,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "694384 Schanuel, Nolan": {
+    "barrel_pct": 32.1,
+    "hardhit_pct": 0.33,
+    "xwoba": 87.2,
+    "avg_exit_velo": null
+  },
+  "694362 Dunn, Blake": {
+    "barrel_pct": 30.3,
+    "hardhit_pct": 0.278,
+    "xwoba": 89.2,
+    "avg_exit_velo": null
+  },
+  "690924 Fulford, Braxton": {
+    "barrel_pct": 28.1,
+    "hardhit_pct": 0.214,
+    "xwoba": 86.5,
+    "avg_exit_velo": null
+  },
+  "596142 S\u00e1nchez, Gary": {
+    "barrel_pct": 36.9,
+    "hardhit_pct": 0.374,
+    "xwoba": 88.6,
+    "avg_exit_velo": null
+  },
+  "593428 Bogaerts, Xander": {
+    "barrel_pct": 39.1,
+    "hardhit_pct": 0.314,
+    "xwoba": 88.0,
+    "avg_exit_velo": null
+  },
+  "543760 Semien, Marcus": {
+    "barrel_pct": 34.5,
+    "hardhit_pct": 0.313,
+    "xwoba": 86.1,
+    "avg_exit_velo": null
+  },
+  "672960 Okamoto, Kazuma": {
+    "barrel_pct": 47.4,
+    "hardhit_pct": 0.327,
+    "xwoba": 91.3,
+    "avg_exit_velo": null
+  },
+  "641555 Escarra, J.C.": {
+    "barrel_pct": 33.8,
+    "hardhit_pct": 0.258,
+    "xwoba": 89.1,
+    "avg_exit_velo": null
+  },
+  "677594 Rodr\u00edguez, Julio": {
+    "barrel_pct": 44.2,
+    "hardhit_pct": 0.348,
+    "xwoba": 90.2,
+    "avg_exit_velo": null
+  },
+  "678218 Valenzuela, Brandon": {
+    "barrel_pct": 36.1,
+    "hardhit_pct": 0.32,
+    "xwoba": 88.1,
+    "avg_exit_velo": null
+  },
+  "700250 Rice, Ben": {
+    "barrel_pct": 47.6,
+    "hardhit_pct": 0.384,
+    "xwoba": 92.2,
+    "avg_exit_velo": null
+  },
+  "571448 Arenado, Nolan": {
+    "barrel_pct": 33.1,
+    "hardhit_pct": 0.295,
+    "xwoba": 85.4,
+    "avg_exit_velo": null
+  },
+  "668901 Vientos, Mark": {
+    "barrel_pct": 43.8,
+    "hardhit_pct": 0.31,
+    "xwoba": 89.5,
+    "avg_exit_velo": null
+  },
+  "805999 Ewing, A.J.": {
+    "barrel_pct": 43.5,
+    "hardhit_pct": 0.336,
+    "xwoba": 89.7,
+    "avg_exit_velo": null
+  },
+  "668709 Bleday, JJ": {
+    "barrel_pct": 42.3,
+    "hardhit_pct": 0.366,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "691594 Sanoja, Javier": {
+    "barrel_pct": 31.6,
+    "hardhit_pct": 0.273,
+    "xwoba": 87.3,
+    "avg_exit_velo": null
+  },
+  "682997 Callihan, Tyler": {
+    "barrel_pct": 29.6,
+    "hardhit_pct": 0.281,
+    "xwoba": 84.7,
+    "avg_exit_velo": null
+  },
+  "683083 Nu\u00f1ez, Nasim": {
+    "barrel_pct": 19.9,
+    "hardhit_pct": 0.271,
+    "xwoba": 84.6,
+    "avg_exit_velo": null
+  },
+  "691720 Karros, Kyle": {
+    "barrel_pct": 43.7,
+    "hardhit_pct": 0.338,
+    "xwoba": 89.7,
+    "avg_exit_velo": null
+  },
+  "805811 Eldridge, Bryce": {
+    "barrel_pct": 54.5,
+    "hardhit_pct": 0.371,
+    "xwoba": 92.4,
+    "avg_exit_velo": null
+  },
+  "695336 Saggese, Thomas": {
+    "barrel_pct": 38.0,
+    "hardhit_pct": 0.274,
+    "xwoba": 88.8,
+    "avg_exit_velo": null
+  },
+  "670623 Paredes, Isaac": {
+    "barrel_pct": 30.2,
+    "hardhit_pct": 0.315,
+    "xwoba": 86.7,
+    "avg_exit_velo": null
+  },
+  "671739 Harris II, Michael": {
+    "barrel_pct": 51.1,
+    "hardhit_pct": 0.363,
+    "xwoba": 91.8,
+    "avg_exit_velo": null
+  },
+  "691458 Jordan, Blaze": {
+    "barrel_pct": 44.1,
+    "hardhit_pct": 0.291,
+    "xwoba": 88.7,
+    "avg_exit_velo": null
+  },
+  "593871 Polanco, Jorge": {
+    "barrel_pct": 29.0,
+    "hardhit_pct": 0.25,
+    "xwoba": 85.0,
+    "avg_exit_velo": null
+  },
+  "643217 Benintendi, Andrew": {
+    "barrel_pct": 48.5,
+    "hardhit_pct": 0.327,
+    "xwoba": 89.1,
+    "avg_exit_velo": null
+  },
+  "802139 Wetherholt, JJ": {
+    "barrel_pct": 45.6,
+    "hardhit_pct": 0.352,
+    "xwoba": 90.0,
+    "avg_exit_velo": null
+  },
+  "691011 Romo, Drew": {
+    "barrel_pct": 28.9,
+    "hardhit_pct": 0.252,
+    "xwoba": 84.5,
+    "avg_exit_velo": null
+  },
+  "607043 Nimmo, Brandon": {
+    "barrel_pct": 52.7,
+    "hardhit_pct": 0.376,
+    "xwoba": 92.6,
+    "avg_exit_velo": null
+  },
+  "691406 Caminero, Junior": {
+    "barrel_pct": 51.9,
+    "hardhit_pct": 0.375,
+    "xwoba": 93.3,
+    "avg_exit_velo": null
+  },
+  "666139 Lowe, Josh": {
+    "barrel_pct": 37.0,
+    "hardhit_pct": 0.286,
+    "xwoba": 88.9,
+    "avg_exit_velo": null
+  },
+  "696285 Young, Jacob": {
+    "barrel_pct": 36.1,
+    "hardhit_pct": 0.303,
+    "xwoba": 88.7,
+    "avg_exit_velo": null
+  },
+  "643376 Jansen, Danny": {
+    "barrel_pct": 33.3,
+    "hardhit_pct": 0.254,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "663697 India, Jonathan": {
+    "barrel_pct": 31.4,
+    "hardhit_pct": 0.284,
+    "xwoba": 85.7,
+    "avg_exit_velo": null
+  },
+  "543807 Springer, George": {
+    "barrel_pct": 39.3,
+    "hardhit_pct": 0.304,
+    "xwoba": 88.5,
+    "avg_exit_velo": null
+  },
+  "672275 Bailey, Patrick": {
+    "barrel_pct": 40.0,
+    "hardhit_pct": 0.274,
+    "xwoba": 90.4,
+    "avg_exit_velo": null
+  },
+  "808982 Lee, Jung Hoo": {
+    "barrel_pct": 29.1,
+    "hardhit_pct": 0.313,
+    "xwoba": 87.2,
+    "avg_exit_velo": null
+  },
+  "673490 Kim, Ha-Seong": {
+    "barrel_pct": 21.6,
+    "hardhit_pct": 0.212,
+    "xwoba": 85.2,
+    "avg_exit_velo": null
+  },
+  "665923 Ruiz, Esteury": {
+    "barrel_pct": 29.2,
+    "hardhit_pct": 0.316,
+    "xwoba": 85.9,
+    "avg_exit_velo": null
+  },
+  "677588 Tena, Jos\u00e9": {
+    "barrel_pct": 51.3,
+    "hardhit_pct": 0.315,
+    "xwoba": 92.1,
+    "avg_exit_velo": null
+  },
+  "671732 Butler, Lawrence": {
+    "barrel_pct": 44.4,
+    "hardhit_pct": 0.304,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "643446 McNeil, Jeff": {
+    "barrel_pct": 32.4,
+    "hardhit_pct": 0.3,
+    "xwoba": 86.4,
+    "avg_exit_velo": null
+  },
+  "606192 Hern\u00e1ndez, Teoscar": {
+    "barrel_pct": 45.9,
+    "hardhit_pct": 0.328,
+    "xwoba": 90.2,
+    "avg_exit_velo": null
+  },
+  "669016 Marsh, Brandon": {
+    "barrel_pct": 45.2,
+    "hardhit_pct": 0.318,
+    "xwoba": 89.6,
+    "avg_exit_velo": null
+  },
+  "688363 Pauley, Graham": {
+    "barrel_pct": 23.2,
+    "hardhit_pct": 0.209,
+    "xwoba": 83.9,
+    "avg_exit_velo": null
+  },
+  "677649 Duran, Ezequiel": {
+    "barrel_pct": 37.1,
+    "hardhit_pct": 0.307,
+    "xwoba": 88.5,
+    "avg_exit_velo": null
+  },
+  "683953 Bazzana, Travis": {
+    "barrel_pct": 37.2,
+    "hardhit_pct": 0.302,
+    "xwoba": 88.3,
+    "avg_exit_velo": null
+  },
+  "663611 Madrigal, Nick": {
+    "barrel_pct": 24.4,
+    "hardhit_pct": 0.298,
+    "xwoba": 88.7,
+    "avg_exit_velo": null
+  },
+  "663993 Lowe, Nathaniel": {
+    "barrel_pct": 40.7,
+    "hardhit_pct": 0.352,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "680869 Gelof, Zack": {
+    "barrel_pct": 41.3,
+    "hardhit_pct": 0.289,
+    "xwoba": 88.8,
+    "avg_exit_velo": null
+  },
+  "679822 Foscue, Justin": {
+    "barrel_pct": 42.7,
+    "hardhit_pct": 0.355,
+    "xwoba": 89.4,
+    "avg_exit_velo": null
+  },
+  "696100 Goodman, Hunter": {
+    "barrel_pct": 45.9,
+    "hardhit_pct": 0.331,
+    "xwoba": 91.1,
+    "avg_exit_velo": null
+  },
+  "678246 Vargas, Miguel": {
+    "barrel_pct": 47.0,
+    "hardhit_pct": 0.399,
+    "xwoba": 90.5,
+    "avg_exit_velo": null
+  },
+  "695600 Jensen, Carter": {
+    "barrel_pct": 43.2,
+    "hardhit_pct": 0.288,
+    "xwoba": 90.6,
+    "avg_exit_velo": null
+  },
+  "823550 Song, Sung-Mun": {
+    "barrel_pct": 22.9,
+    "hardhit_pct": 0.278,
+    "xwoba": 86.5,
+    "avg_exit_velo": null
+  },
+  "669004 Melendez, MJ": {
+    "barrel_pct": 55.6,
+    "hardhit_pct": 0.281,
+    "xwoba": 94.2,
+    "avg_exit_velo": null
+  },
+  "650333 Arraez, Luis": {
+    "barrel_pct": 21.7,
+    "hardhit_pct": 0.306,
+    "xwoba": 87.0,
+    "avg_exit_velo": null
+  },
+  "543877 V\u00e1zquez, Christian": {
+    "barrel_pct": 23.1,
+    "hardhit_pct": 0.243,
+    "xwoba": 85.9,
+    "avg_exit_velo": null
+  },
+  "676369 Vel\u00e1zquez, Nelson": {
+    "barrel_pct": 66.7,
+    "hardhit_pct": 0.394,
+    "xwoba": 94.7,
+    "avg_exit_velo": null
+  },
+  "680776 Duran, Jarren": {
+    "barrel_pct": 37.9,
+    "hardhit_pct": 0.293,
+    "xwoba": 89.4,
+    "avg_exit_velo": null
+  },
+  "687401 Ortiz, Joey": {
+    "barrel_pct": 33.9,
+    "hardhit_pct": 0.299,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "691785 Mayer, Marcelo": {
+    "barrel_pct": 36.0,
+    "hardhit_pct": 0.259,
+    "xwoba": 86.1,
+    "avg_exit_velo": null
+  },
+  "500743 Rojas, Miguel": {
+    "barrel_pct": 38.0,
+    "hardhit_pct": 0.326,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "657656 Laureano, Ram\u00f3n": {
+    "barrel_pct": 41.2,
+    "hardhit_pct": 0.312,
+    "xwoba": 88.0,
+    "avg_exit_velo": null
+  },
+  "687462 Horwitz, Spencer": {
+    "barrel_pct": 34.3,
+    "hardhit_pct": 0.339,
+    "xwoba": 86.9,
+    "avg_exit_velo": null
+  },
+  "575929 Contreras, Willson": {
+    "barrel_pct": 46.9,
+    "hardhit_pct": 0.388,
+    "xwoba": 90.5,
+    "avg_exit_velo": null
+  },
+  "665966 Narv\u00e1ez, Carlos": {
+    "barrel_pct": 38.0,
+    "hardhit_pct": 0.278,
+    "xwoba": 91.4,
+    "avg_exit_velo": null
+  },
+  "694374 Tawa, Tim": {
+    "barrel_pct": 37.0,
+    "hardhit_pct": 0.29,
+    "xwoba": 87.9,
+    "avg_exit_velo": null
+  },
+  "682985 Greene, Riley": {
+    "barrel_pct": 50.0,
+    "hardhit_pct": 0.364,
+    "xwoba": 91.5,
+    "avg_exit_velo": null
+  },
+  "694249 Carrigg, Cole": {
+    "barrel_pct": 30.1,
+    "hardhit_pct": 0.333,
+    "xwoba": 85.7,
+    "avg_exit_velo": null
+  },
+  "595978 Hedges, Austin": {
+    "barrel_pct": 32.7,
+    "hardhit_pct": 0.295,
+    "xwoba": 87.0,
+    "avg_exit_velo": null
+  },
+  "518692 Freeman, Freddie": {
+    "barrel_pct": 44.9,
+    "hardhit_pct": 0.38,
+    "xwoba": 90.5,
+    "avg_exit_velo": null
+  },
+  "694671 Langford, Wyatt": {
+    "barrel_pct": 36.6,
+    "hardhit_pct": 0.305,
+    "xwoba": 88.7,
+    "avg_exit_velo": null
+  },
+  "657136 Wong, Connor": {
+    "barrel_pct": 34.4,
+    "hardhit_pct": 0.318,
+    "xwoba": 85.6,
+    "avg_exit_velo": null
+  },
+  "686555 Collins, Isaac": {
+    "barrel_pct": 40.2,
+    "hardhit_pct": 0.31,
+    "xwoba": 88.3,
+    "avg_exit_velo": null
+  },
+  "678391 Vivas, Jorbit": {
+    "barrel_pct": 25.9,
+    "hardhit_pct": 0.298,
+    "xwoba": 83.2,
+    "avg_exit_velo": null
+  },
+  "682829 De La Cruz, Elly": {
+    "barrel_pct": 52.5,
+    "hardhit_pct": 0.364,
+    "xwoba": 94.5,
+    "avg_exit_velo": null
+  },
+  "664983 McCarthy, Jake": {
+    "barrel_pct": 25.0,
+    "hardhit_pct": 0.312,
+    "xwoba": 84.9,
+    "avg_exit_velo": null
+  },
+  "669364 Edwards, Xavier": {
+    "barrel_pct": 28.8,
+    "hardhit_pct": 0.325,
+    "xwoba": 87.0,
+    "avg_exit_velo": null
+  },
+  "680474 Schuemann, Max": {
+    "barrel_pct": 40.5,
+    "hardhit_pct": 0.338,
+    "xwoba": 88.6,
+    "avg_exit_velo": null
+  },
+  "677950 Thomas, Alek": {
+    "barrel_pct": 43.1,
+    "hardhit_pct": 0.292,
+    "xwoba": 89.9,
+    "avg_exit_velo": null
+  },
+  "672284 Kelenic, Jarred": {
+    "barrel_pct": 50.0,
+    "hardhit_pct": 0.346,
+    "xwoba": 93.8,
+    "avg_exit_velo": null
+  },
+  "666624 Morel, Christopher": {
+    "barrel_pct": 42.5,
+    "hardhit_pct": 0.22,
+    "xwoba": 88.4,
+    "avg_exit_velo": null
+  },
+  "641584 Fraley, Jake": {
+    "barrel_pct": 21.4,
+    "hardhit_pct": 0.276,
+    "xwoba": 83.9,
+    "avg_exit_velo": null
+  },
+  "678489 Barrosa, Jorge": {
+    "barrel_pct": 23.2,
+    "hardhit_pct": 0.216,
+    "xwoba": 86.7,
+    "avg_exit_velo": null
+  },
+  "669224 Wells, Austin": {
+    "barrel_pct": 44.1,
+    "hardhit_pct": 0.285,
+    "xwoba": 89.3,
+    "avg_exit_velo": null
+  },
+  "642086 Smith, Dominic": {
+    "barrel_pct": 34.9,
+    "hardhit_pct": 0.316,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "605170 Caratini, Victor": {
+    "barrel_pct": 39.3,
+    "hardhit_pct": 0.336,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "682987 Jones, Spencer": {
+    "barrel_pct": 63.2,
+    "hardhit_pct": 0.28,
+    "xwoba": 94.7,
+    "avg_exit_velo": null
+  },
+  "695506 Caglianone, Jac": {
+    "barrel_pct": 56.0,
+    "hardhit_pct": 0.356,
+    "xwoba": 93.0,
+    "avg_exit_velo": null
+  },
+  "691740 Susac, Daniel": {
+    "barrel_pct": 28.4,
+    "hardhit_pct": 0.28,
+    "xwoba": 86.4,
+    "avg_exit_velo": null
+  },
+  "665052 Conine, Griffin": {
+    "barrel_pct": 52.7,
+    "hardhit_pct": 0.396,
+    "xwoba": 89.7,
+    "avg_exit_velo": null
+  },
+  "687363 Scott II, Victor": {
+    "barrel_pct": 23.8,
+    "hardhit_pct": 0.273,
+    "xwoba": 86.7,
+    "avg_exit_velo": null
+  },
+  "656484 Gray, Tristan": {
+    "barrel_pct": 37.4,
+    "hardhit_pct": 0.266,
+    "xwoba": 88.4,
+    "avg_exit_velo": null
+  },
+  "681082 Stott, Bryson": {
+    "barrel_pct": 38.4,
+    "hardhit_pct": 0.318,
+    "xwoba": 89.1,
+    "avg_exit_velo": null
+  },
+  "571970 Muncy, Max": {
+    "barrel_pct": 44.7,
+    "hardhit_pct": 0.364,
+    "xwoba": 90.1,
+    "avg_exit_velo": null
+  },
+  "660271 Ohtani, Shohei": {
+    "barrel_pct": 52.4,
+    "hardhit_pct": 0.415,
+    "xwoba": 93.5,
+    "avg_exit_velo": null
+  },
+  "663757 Grisham, Trent": {
+    "barrel_pct": 47.4,
+    "hardhit_pct": 0.357,
+    "xwoba": 91.1,
+    "avg_exit_velo": null
+  },
+  "669699 Shewmake, Braden": {
+    "barrel_pct": 37.5,
+    "hardhit_pct": 0.298,
+    "xwoba": 89.9,
+    "avg_exit_velo": null
+  },
+  "592663 Realmuto, J.T.": {
+    "barrel_pct": 38.3,
+    "hardhit_pct": 0.316,
+    "xwoba": 89.3,
+    "avg_exit_velo": null
+  },
+  "620443 Torrens, Luis": {
+    "barrel_pct": 35.7,
+    "hardhit_pct": 0.271,
+    "xwoba": 87.6,
+    "avg_exit_velo": null
+  },
+  "678882 Rafaela, Ceddanne": {
+    "barrel_pct": 31.9,
+    "hardhit_pct": 0.285,
+    "xwoba": 86.2,
+    "avg_exit_velo": null
+  },
+  "666152 Hamilton, David": {
+    "barrel_pct": 27.7,
+    "hardhit_pct": 0.264,
+    "xwoba": 86.8,
+    "avg_exit_velo": null
+  },
+  "667472 Myers, Dane": {
+    "barrel_pct": 32.9,
+    "hardhit_pct": 0.351,
+    "xwoba": 89.9,
+    "avg_exit_velo": null
+  },
+  "681351 O'Hoppe, Logan": {
+    "barrel_pct": 37.5,
+    "hardhit_pct": 0.277,
+    "xwoba": 87.2,
+    "avg_exit_velo": null
+  },
+  "624585 Soler, Jorge": {
+    "barrel_pct": 41.7,
+    "hardhit_pct": 0.303,
+    "xwoba": 88.3,
+    "avg_exit_velo": null
+  },
+  "545361 Trout, Mike": {
+    "barrel_pct": 48.7,
+    "hardhit_pct": 0.406,
+    "xwoba": 90.7,
+    "avg_exit_velo": null
+  },
+  "677800 Abreu, Wilyer": {
+    "barrel_pct": 42.3,
+    "hardhit_pct": 0.351,
+    "xwoba": 90.2,
+    "avg_exit_velo": null
+  },
+  "641487 Crawford, J.P.": {
+    "barrel_pct": 36.2,
+    "hardhit_pct": 0.331,
+    "xwoba": 88.1,
+    "avg_exit_velo": null
+  },
+  "671289 Freeman, Tyler": {
+    "barrel_pct": 34.8,
+    "hardhit_pct": 0.316,
+    "xwoba": 87.6,
+    "avg_exit_velo": null
+  },
+  "668904 Lewis, Royce": {
+    "barrel_pct": 41.5,
+    "hardhit_pct": 0.304,
+    "xwoba": 89.1,
+    "avg_exit_velo": null
+  },
+  "621439 Buxton, Byron": {
+    "barrel_pct": 47.6,
+    "hardhit_pct": 0.351,
+    "xwoba": 90.7,
+    "avg_exit_velo": null
+  },
+  "682877 Brito, Juan": {
+    "barrel_pct": 32.4,
+    "hardhit_pct": 0.256,
+    "xwoba": 84.3,
+    "avg_exit_velo": null
+  },
+  "668952 Kreidler, Ryan": {
+    "barrel_pct": 34.6,
+    "hardhit_pct": 0.294,
+    "xwoba": 87.4,
+    "avg_exit_velo": null
+  },
+  "573262 Yastrzemski, Mike": {
+    "barrel_pct": 43.5,
+    "hardhit_pct": 0.305,
+    "xwoba": 90.4,
+    "avg_exit_velo": null
+  },
+  "682668 Acu\u00f1a, Luisangel": {
+    "barrel_pct": 39.5,
+    "hardhit_pct": 0.283,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "668670 Rogers, Jake": {
+    "barrel_pct": 39.0,
+    "hardhit_pct": 0.255,
+    "xwoba": 88.6,
+    "avg_exit_velo": null
+  },
+  "666181 Benson, Will": {
+    "barrel_pct": 37.9,
+    "hardhit_pct": 0.3,
+    "xwoba": 91.1,
+    "avg_exit_velo": null
+  },
+  "621438 Taylor, Tyrone": {
+    "barrel_pct": 32.7,
+    "hardhit_pct": 0.281,
+    "xwoba": 87.0,
+    "avg_exit_velo": null
+  },
+  "671218 Ramos, Heliot": {
+    "barrel_pct": 50.0,
+    "hardhit_pct": 0.34,
+    "xwoba": 92.5,
+    "avg_exit_velo": null
+  },
+  "676439 Feduccia, Hunter": {
+    "barrel_pct": 36.9,
+    "hardhit_pct": 0.301,
+    "xwoba": 90.6,
+    "avg_exit_velo": null
+  },
+  "664770 Lukes, Nathan": {
+    "barrel_pct": 29.1,
+    "hardhit_pct": 0.297,
+    "xwoba": 86.5,
+    "avg_exit_velo": null
+  },
+  "676391 Clement, Ernie": {
+    "barrel_pct": 22.6,
+    "hardhit_pct": 0.275,
+    "xwoba": 85.2,
+    "avg_exit_velo": null
+  },
+  "596019 Lindor, Francisco": {
+    "barrel_pct": 48.9,
+    "hardhit_pct": 0.331,
+    "xwoba": 91.9,
+    "avg_exit_velo": null
+  },
+  "543510 McCann, James": {
+    "barrel_pct": 44.2,
+    "hardhit_pct": 0.216,
+    "xwoba": 90.0,
+    "avg_exit_velo": null
+  },
+  "687957 Harris, Dustin": {
+    "barrel_pct": 15.8,
+    "hardhit_pct": 0.334,
+    "xwoba": 83.7,
+    "avg_exit_velo": null
+  },
+  "592206 Castellanos, Nick": {
+    "barrel_pct": 37.3,
+    "hardhit_pct": 0.285,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "668885 Martin, Austin": {
+    "barrel_pct": 28.3,
+    "hardhit_pct": 0.314,
+    "xwoba": 87.0,
+    "avg_exit_velo": null
+  },
+  "676724 Young, Jared": {
+    "barrel_pct": 46.4,
+    "hardhit_pct": 0.326,
+    "xwoba": 89.9,
+    "avg_exit_velo": null
+  },
+  "686217 Frelick, Sal": {
+    "barrel_pct": 27.8,
+    "hardhit_pct": 0.281,
+    "xwoba": 85.9,
+    "avg_exit_velo": null
+  },
+  "693304 Gonzales, Nick": {
+    "barrel_pct": 35.8,
+    "hardhit_pct": 0.327,
+    "xwoba": 85.7,
+    "avg_exit_velo": null
+  },
+  "622268 Walton, Donovan": {
+    "barrel_pct": 39.0,
+    "hardhit_pct": 0.328,
+    "xwoba": 88.2,
+    "avg_exit_velo": null
+  },
+  "683748 Mesa Jr., Victor": {
+    "barrel_pct": 38.0,
+    "hardhit_pct": 0.317,
+    "xwoba": 88.4,
+    "avg_exit_velo": null
+  },
+  "665489 Guerrero Jr., Vladimir": {
+    "barrel_pct": 44.8,
+    "hardhit_pct": 0.348,
+    "xwoba": 90.1,
+    "avg_exit_velo": null
+  },
+  "680777 Jeffers, Ryan": {
+    "barrel_pct": 41.2,
+    "hardhit_pct": 0.384,
+    "xwoba": 90.8,
+    "avg_exit_velo": null
+  },
+  "686780 Pag\u00e9s, Pedro": {
+    "barrel_pct": 39.1,
+    "hardhit_pct": 0.267,
+    "xwoba": 87.1,
+    "avg_exit_velo": null
+  },
+  "691023 Walker, Jordan": {
+    "barrel_pct": 50.6,
+    "hardhit_pct": 0.371,
+    "xwoba": 94.0,
+    "avg_exit_velo": null
+  },
+  "665019 Clemens, Kody": {
+    "barrel_pct": 46.6,
+    "hardhit_pct": 0.336,
+    "xwoba": 92.8,
+    "avg_exit_velo": null
+  },
+  "686475 Tolbert, Tyler": {
+    "barrel_pct": 31.1,
+    "hardhit_pct": 0.312,
+    "xwoba": 84.5,
+    "avg_exit_velo": null
+  },
+  "645302 Robles, Victor": {
+    "barrel_pct": 19.3,
+    "hardhit_pct": 0.262,
+    "xwoba": 84.6,
+    "avg_exit_velo": null
+  },
+  "663538 Hoerner, Nico": {
+    "barrel_pct": 28.0,
+    "hardhit_pct": 0.319,
+    "xwoba": 86.0,
+    "avg_exit_velo": null
+  },
+  "664056 Bader, Harrison": {
+    "barrel_pct": 41.1,
+    "hardhit_pct": 0.272,
+    "xwoba": 89.2,
+    "avg_exit_velo": null
+  },
+  "701807 Benge, Carson": {
+    "barrel_pct": 40.9,
+    "hardhit_pct": 0.345,
+    "xwoba": 89.3,
+    "avg_exit_velo": null
+  },
+  "682626 Alvarez, Francisco": {
+    "barrel_pct": 44.2,
+    "hardhit_pct": 0.336,
+    "xwoba": 90.2,
+    "avg_exit_velo": null
+  },
+  "502671 Goldschmidt, Paul": {
+    "barrel_pct": 38.7,
+    "hardhit_pct": 0.313,
+    "xwoba": 86.5,
+    "avg_exit_velo": null
+  },
+  "699393 Ram\u00edrez, Pedro": {
+    "barrel_pct": 40.4,
+    "hardhit_pct": 0.308,
+    "xwoba": 89.2,
+    "avg_exit_velo": null
+  },
+  "670770 Friedl, TJ": {
+    "barrel_pct": 28.3,
+    "hardhit_pct": 0.242,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "607208 Turner, Trea": {
+    "barrel_pct": 40.3,
+    "hardhit_pct": 0.294,
+    "xwoba": 88.6,
+    "avg_exit_velo": null
+  },
+  "806198 Pratt, Cooper": {
+    "barrel_pct": 31.3,
+    "hardhit_pct": 0.349,
+    "xwoba": 88.1,
+    "avg_exit_velo": null
+  },
+  "683011 Volpe, Anthony": {
+    "barrel_pct": 33.3,
+    "hardhit_pct": 0.296,
+    "xwoba": 87.8,
+    "avg_exit_velo": null
+  },
+  "680977 Donovan, Brendan": {
+    "barrel_pct": 32.9,
+    "hardhit_pct": 0.344,
+    "xwoba": 85.9,
+    "avg_exit_velo": null
+  },
+  "687551 Gilbert, Drew": {
+    "barrel_pct": 32.9,
+    "hardhit_pct": 0.29,
+    "xwoba": 85.8,
+    "avg_exit_velo": null
+  },
+  "650859 Rengifo, Luis": {
+    "barrel_pct": 34.9,
+    "hardhit_pct": 0.294,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "676694 Meyers, Jake": {
+    "barrel_pct": 28.0,
+    "hardhit_pct": 0.255,
+    "xwoba": 85.7,
+    "avg_exit_velo": null
+  },
+  "661388 Contreras, William": {
+    "barrel_pct": 42.8,
+    "hardhit_pct": 0.339,
+    "xwoba": 90.2,
+    "avg_exit_velo": null
+  },
+  "691718 Crow-Armstrong, Pete": {
+    "barrel_pct": 48.2,
+    "hardhit_pct": 0.359,
+    "xwoba": 90.1,
+    "avg_exit_velo": null
+  },
+  "665561 March\u00e1n, Rafael": {
+    "barrel_pct": 19.7,
+    "hardhit_pct": 0.212,
+    "xwoba": 83.2,
+    "avg_exit_velo": null
+  },
+  "669392 Taylor, Samad": {
+    "barrel_pct": 25.0,
+    "hardhit_pct": 0.326,
+    "xwoba": 85.2,
+    "avg_exit_velo": null
+  },
+  "702222 Crawford, Justin": {
+    "barrel_pct": 33.3,
+    "hardhit_pct": 0.277,
+    "xwoba": 86.7,
+    "avg_exit_velo": null
+  },
+  "650490 D\u00edaz, Yandy": {
+    "barrel_pct": 48.3,
+    "hardhit_pct": 0.368,
+    "xwoba": 91.1,
+    "avg_exit_velo": null
+  },
+  "686469 Pasquantino, Vinnie": {
+    "barrel_pct": 37.9,
+    "hardhit_pct": 0.313,
+    "xwoba": 88.5,
+    "avg_exit_velo": null
+  },
+  "683357 Caissie, Owen": {
+    "barrel_pct": 48.1,
+    "hardhit_pct": 0.309,
+    "xwoba": 91.8,
+    "avg_exit_velo": null
+  },
+  "682818 Pi\u00f1ango, Yohendrick": {
+    "barrel_pct": 45.1,
+    "hardhit_pct": 0.314,
+    "xwoba": 90.5,
+    "avg_exit_velo": null
+  },
+  "514888 Altuve, Jose": {
+    "barrel_pct": 32.9,
+    "hardhit_pct": 0.285,
+    "xwoba": 85.6,
+    "avg_exit_velo": null
+  },
+  "521692 Perez, Salvador": {
+    "barrel_pct": 42.9,
+    "hardhit_pct": 0.29,
+    "xwoba": 89.1,
+    "avg_exit_velo": null
+  },
+  "808975 Kim, Hyeseong": {
+    "barrel_pct": 25.3,
+    "hardhit_pct": 0.304,
+    "xwoba": 85.8,
+    "avg_exit_velo": null
+  },
+  "553869 D\u00edaz, Elias": {
+    "barrel_pct": 37.7,
+    "hardhit_pct": 0.292,
+    "xwoba": 86.4,
+    "avg_exit_velo": null
+  },
+  "694388 Loperfido, Joey": {
+    "barrel_pct": 35.6,
+    "hardhit_pct": 0.297,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "621043 Correa, Carlos": {
+    "barrel_pct": 41.2,
+    "hardhit_pct": 0.364,
+    "xwoba": 89.2,
+    "avg_exit_velo": null
+  },
+  "665742 Soto, Juan": {
+    "barrel_pct": 48.3,
+    "hardhit_pct": 0.427,
+    "xwoba": 92.5,
+    "avg_exit_velo": null
+  },
+  "657757 Sheets, Gavin": {
+    "barrel_pct": 40.7,
+    "hardhit_pct": 0.327,
+    "xwoba": 88.0,
+    "avg_exit_velo": null
+  },
+  "687282 Rincones Jr., Gabriel": {
+    "barrel_pct": 38.0,
+    "hardhit_pct": 0.215,
+    "xwoba": 91.0,
+    "avg_exit_velo": null
+  },
+  "669326 Teodosio, Bryce": {
+    "barrel_pct": 23.3,
+    "hardhit_pct": 0.203,
+    "xwoba": 83.5,
+    "avg_exit_velo": null
+  },
+  "609280 Andujar, Miguel": {
+    "barrel_pct": 36.0,
+    "hardhit_pct": 0.297,
+    "xwoba": 88.2,
+    "avg_exit_velo": null
+  },
+  "660710 Dur\u00e1n, Rodolfo": {
+    "barrel_pct": 30.5,
+    "hardhit_pct": 0.257,
+    "xwoba": 87.6,
+    "avg_exit_velo": null
+  },
+  "516782 Marte, Starling": {
+    "barrel_pct": 38.8,
+    "hardhit_pct": 0.309,
+    "xwoba": 89.3,
+    "avg_exit_velo": null
+  },
+  "596103 Slater, Austin": {
+    "barrel_pct": 18.2,
+    "hardhit_pct": 0.235,
+    "xwoba": 85.0,
+    "avg_exit_velo": null
+  },
+  "677587 Rocchio, Brayan": {
+    "barrel_pct": 31.7,
+    "hardhit_pct": 0.309,
+    "xwoba": 86.5,
+    "avg_exit_velo": null
+  },
+  "668227 Arozarena, Randy": {
+    "barrel_pct": 42.0,
+    "hardhit_pct": 0.352,
+    "xwoba": 91.1,
+    "avg_exit_velo": null
+  },
+  "702284 Young, Cole": {
+    "barrel_pct": 39.1,
+    "hardhit_pct": 0.333,
+    "xwoba": 88.4,
+    "avg_exit_velo": null
+  },
+  "669236 Jackson, Jeremiah": {
+    "barrel_pct": 38.6,
+    "hardhit_pct": 0.29,
+    "xwoba": 89.5,
+    "avg_exit_velo": null
+  },
+  "669134 Campusano, Luis": {
+    "barrel_pct": 48.1,
+    "hardhit_pct": 0.346,
+    "xwoba": 88.0,
+    "avg_exit_velo": null
+  },
+  "665861 Rivero, Sebasti\u00e1n": {
+    "barrel_pct": 14.3,
+    "hardhit_pct": 0.267,
+    "xwoba": 82.0,
+    "avg_exit_velo": null
+  },
+  "681393 Norby, Connor": {
+    "barrel_pct": 36.6,
+    "hardhit_pct": 0.282,
+    "xwoba": 87.0,
+    "avg_exit_velo": null
+  },
+  "702332 Durbin, Caleb": {
+    "barrel_pct": 29.3,
+    "hardhit_pct": 0.286,
+    "xwoba": 85.0,
+    "avg_exit_velo": null
+  },
+  "672580 Garcia, Maikel": {
+    "barrel_pct": 41.3,
+    "hardhit_pct": 0.316,
+    "xwoba": 90.1,
+    "avg_exit_velo": null
+  },
+  "665862 Chisholm Jr., Jazz": {
+    "barrel_pct": 41.1,
+    "hardhit_pct": 0.291,
+    "xwoba": 90.8,
+    "avg_exit_velo": null
+  },
+  "669289 Espinal, Santiago": {
+    "barrel_pct": 31.4,
+    "hardhit_pct": 0.29,
+    "xwoba": 86.2,
+    "avg_exit_velo": null
+  },
+  "642215 Wilson, Weston": {
+    "barrel_pct": 30.8,
+    "hardhit_pct": 0.263,
+    "xwoba": 86.5,
+    "avg_exit_velo": null
+  },
+  "663330 Jones, Jahmai": {
+    "barrel_pct": 43.5,
+    "hardhit_pct": 0.299,
+    "xwoba": 90.6,
+    "avg_exit_velo": null
+  },
+  "677951 Witt Jr., Bobby": {
+    "barrel_pct": 52.2,
+    "hardhit_pct": 0.386,
+    "xwoba": 92.9,
+    "avg_exit_velo": null
+  },
+  "642851 Wynns, Austin": {
+    "barrel_pct": 27.5,
+    "hardhit_pct": 0.265,
+    "xwoba": 86.0,
+    "avg_exit_velo": null
+  },
+  "807712 Keaschall, Luke": {
+    "barrel_pct": 28.2,
+    "hardhit_pct": 0.299,
+    "xwoba": 84.4,
+    "avg_exit_velo": null
+  },
+  "660821 S\u00e1nchez, Jes\u00fas": {
+    "barrel_pct": 46.7,
+    "hardhit_pct": 0.335,
+    "xwoba": 91.1,
+    "avg_exit_velo": null
+  },
+  "669394 Burger, Jake": {
+    "barrel_pct": 46.0,
+    "hardhit_pct": 0.307,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "646240 Devers, Rafael": {
+    "barrel_pct": 50.2,
+    "hardhit_pct": 0.321,
+    "xwoba": 92.2,
+    "avg_exit_velo": null
+  },
+  "641857 McMahon, Ryan": {
+    "barrel_pct": 49.6,
+    "hardhit_pct": 0.308,
+    "xwoba": 90.8,
+    "avg_exit_velo": null
+  },
+  "673548 Suzuki, Seiya": {
+    "barrel_pct": 40.5,
+    "hardhit_pct": 0.331,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "640902 Pereda, Jhonny": {
+    "barrel_pct": 46.2,
+    "hardhit_pct": 0.341,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "624641 Sosa, Edmundo": {
+    "barrel_pct": 40.5,
+    "hardhit_pct": 0.341,
+    "xwoba": 87.8,
+    "avg_exit_velo": null
+  },
+  "669707 Triolo, Jared": {
+    "barrel_pct": 36.5,
+    "hardhit_pct": 0.277,
+    "xwoba": 87.5,
+    "avg_exit_velo": null
+  },
+  "667670 Rooker, Brent": {
+    "barrel_pct": 41.9,
+    "hardhit_pct": 0.314,
+    "xwoba": 89.9,
+    "avg_exit_velo": null
+  },
+  "606115 Arcia, Orlando": {
+    "barrel_pct": 25.0,
+    "hardhit_pct": 0.245,
+    "xwoba": 86.0,
+    "avg_exit_velo": null
+  },
+  "666023 Fermin, Freddy": {
+    "barrel_pct": 25.4,
+    "hardhit_pct": 0.261,
+    "xwoba": 86.3,
+    "avg_exit_velo": null
+  },
+  "681198 Rumfield, TJ": {
+    "barrel_pct": 28.5,
+    "hardhit_pct": 0.327,
+    "xwoba": 83.9,
+    "avg_exit_velo": null
+  },
+  "694728 Matthews, Brice": {
+    "barrel_pct": 37.1,
+    "hardhit_pct": 0.26,
+    "xwoba": 86.8,
+    "avg_exit_velo": null
+  },
+  "666211 Trammell, Taylor": {
+    "barrel_pct": 34.2,
+    "hardhit_pct": 0.283,
+    "xwoba": 89.1,
+    "avg_exit_velo": null
+  },
+  "605137 Bell, Josh": {
+    "barrel_pct": 43.3,
+    "hardhit_pct": 0.33,
+    "xwoba": 90.0,
+    "avg_exit_velo": null
+  },
+  "696135 Watson, Kahlil": {
+    "barrel_pct": 30.2,
+    "hardhit_pct": 0.241,
+    "xwoba": 88.9,
+    "avg_exit_velo": null
+  },
+  "664023 Happ, Ian": {
+    "barrel_pct": 43.6,
+    "hardhit_pct": 0.319,
+    "xwoba": 89.6,
+    "avg_exit_velo": null
+  },
+  "691777 Muncy, Max": {
+    "barrel_pct": 48.5,
+    "hardhit_pct": 0.295,
+    "xwoba": 90.8,
+    "avg_exit_velo": null
+  },
+  "592626 Pederson, Joc": {
+    "barrel_pct": 49.2,
+    "hardhit_pct": 0.355,
+    "xwoba": 91.9,
+    "avg_exit_velo": null
+  },
+  "695490 Arroyo, Edwin": {
+    "barrel_pct": 25.0,
+    "hardhit_pct": 0.312,
+    "xwoba": 87.0,
+    "avg_exit_velo": null
+  },
+  "694208 Ballesteros, Mois\u00e9s": {
+    "barrel_pct": 46.7,
+    "hardhit_pct": 0.31,
+    "xwoba": 90.1,
+    "avg_exit_velo": null
+  },
+  "670541 Alvarez, Yordan": {
+    "barrel_pct": 53.1,
+    "hardhit_pct": 0.475,
+    "xwoba": 94.6,
+    "avg_exit_velo": null
+  },
+  "682663 Ram\u00edrez, Agust\u00edn": {
+    "barrel_pct": 40.7,
+    "hardhit_pct": 0.282,
+    "xwoba": 89.2,
+    "avg_exit_velo": null
+  },
+  "624431 Trevino, Jose": {
+    "barrel_pct": 32.3,
+    "hardhit_pct": 0.25,
+    "xwoba": 88.1,
+    "avg_exit_velo": null
+  },
+  "608701 Refsnyder, Rob": {
+    "barrel_pct": 33.8,
+    "hardhit_pct": 0.249,
+    "xwoba": 86.1,
+    "avg_exit_velo": null
+  },
+  "686894 Wiemer, Joey": {
+    "barrel_pct": 39.0,
+    "hardhit_pct": 0.315,
+    "xwoba": 88.8,
+    "avg_exit_velo": null
+  },
+  "592885 Yelich, Christian": {
+    "barrel_pct": 42.4,
+    "hardhit_pct": 0.299,
+    "xwoba": 89.1,
+    "avg_exit_velo": null
+  },
+  "663656 Tucker, Kyle": {
+    "barrel_pct": 39.0,
+    "hardhit_pct": 0.335,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "682998 Carroll, Corbin": {
+    "barrel_pct": 46.2,
+    "hardhit_pct": 0.344,
+    "xwoba": 91.2,
+    "avg_exit_velo": null
+  },
+  "664034 France, Ty": {
+    "barrel_pct": 48.8,
+    "hardhit_pct": 0.332,
+    "xwoba": 91.9,
+    "avg_exit_velo": null
+  },
+  "672016 Clarke, Denzel": {
+    "barrel_pct": 46.9,
+    "hardhit_pct": 0.193,
+    "xwoba": 91.9,
+    "avg_exit_velo": null
+  },
+  "680779 Davis, Henry": {
+    "barrel_pct": 40.3,
+    "hardhit_pct": 0.294,
+    "xwoba": 89.7,
+    "avg_exit_velo": null
+  },
+  "807799 Yoshida, Masataka": {
+    "barrel_pct": 38.4,
+    "hardhit_pct": 0.32,
+    "xwoba": 88.6,
+    "avg_exit_velo": null
+  },
+  "677595 Mauricio, Ronny": {
+    "barrel_pct": 34.4,
+    "hardhit_pct": 0.205,
+    "xwoba": 89.9,
+    "avg_exit_velo": null
+  },
+  "676475 Burleson, Alec": {
+    "barrel_pct": 48.5,
+    "hardhit_pct": 0.383,
+    "xwoba": 91.7,
+    "avg_exit_velo": null
+  },
+  "810938 Williamson, Ben": {
+    "barrel_pct": 33.7,
+    "hardhit_pct": 0.289,
+    "xwoba": 87.2,
+    "avg_exit_velo": null
+  },
+  "673357 Robert Jr., Luis": {
+    "barrel_pct": 42.6,
+    "hardhit_pct": 0.323,
+    "xwoba": 90.2,
+    "avg_exit_velo": null
+  },
+  "670042 Raley, Luke": {
+    "barrel_pct": 46.3,
+    "hardhit_pct": 0.347,
+    "xwoba": 90.4,
+    "avg_exit_velo": null
+  },
+  "669899 Ward, Ryan": {
+    "barrel_pct": 28.9,
+    "hardhit_pct": 0.316,
+    "xwoba": 88.5,
+    "avg_exit_velo": null
+  },
+  "645277 Albies, Ozzie": {
+    "barrel_pct": 27.3,
+    "hardhit_pct": 0.289,
+    "xwoba": 86.8,
+    "avg_exit_velo": null
+  },
+  "690993 Keith, Colt": {
+    "barrel_pct": 43.2,
+    "hardhit_pct": 0.328,
+    "xwoba": 89.3,
+    "avg_exit_velo": null
+  },
+  "665804 Amaya, Miguel": {
+    "barrel_pct": 34.3,
+    "hardhit_pct": 0.298,
+    "xwoba": 86.8,
+    "avg_exit_velo": null
+  },
+  "669397 Allen, Nick": {
+    "barrel_pct": 24.3,
+    "hardhit_pct": 0.224,
+    "xwoba": 83.7,
+    "avg_exit_velo": null
+  },
+  "690984 Halpin, Petey": {
+    "barrel_pct": 26.1,
+    "hardhit_pct": 0.238,
+    "xwoba": 85.5,
+    "avg_exit_velo": null
+  },
+  "547180 Harper, Bryce": {
+    "barrel_pct": 46.1,
+    "hardhit_pct": 0.389,
+    "xwoba": 90.1,
+    "avg_exit_velo": null
+  },
+  "606992 Haase, Eric": {
+    "barrel_pct": 28.6,
+    "hardhit_pct": 0.271,
+    "xwoba": 86.0,
+    "avg_exit_velo": null
+  },
+  "669242 Edman, Tommy": {
+    "barrel_pct": 37.5,
+    "hardhit_pct": 0.378,
+    "xwoba": 89.5,
+    "avg_exit_velo": null
+  },
+  "665161 Pe\u00f1a, Jeremy": {
+    "barrel_pct": 38.6,
+    "hardhit_pct": 0.354,
+    "xwoba": 87.5,
+    "avg_exit_velo": null
+  },
+  "691176 Dom\u00ednguez, Jasson": {
+    "barrel_pct": 40.2,
+    "hardhit_pct": 0.304,
+    "xwoba": 88.6,
+    "avg_exit_velo": null
+  },
+  "701358 Smith, Cam": {
+    "barrel_pct": 44.5,
+    "hardhit_pct": 0.335,
+    "xwoba": 89.5,
+    "avg_exit_velo": null
+  },
+  "663837 Vierling, Matt": {
+    "barrel_pct": 36.4,
+    "hardhit_pct": 0.304,
+    "xwoba": 87.8,
+    "avg_exit_velo": null
+  },
+  "592518 Machado, Manny": {
+    "barrel_pct": 43.0,
+    "hardhit_pct": 0.321,
+    "xwoba": 90.1,
+    "avg_exit_velo": null
+  },
+  "662139 Varsho, Daulton": {
+    "barrel_pct": 39.3,
+    "hardhit_pct": 0.297,
+    "xwoba": 86.2,
+    "avg_exit_velo": null
+  },
+  "681546 Outman, James": {
+    "barrel_pct": 33.8,
+    "hardhit_pct": 0.219,
+    "xwoba": 86.8,
+    "avg_exit_velo": null
+  },
+  "701398 Stewart, Sal": {
+    "barrel_pct": 40.9,
+    "hardhit_pct": 0.352,
+    "xwoba": 90.6,
+    "avg_exit_velo": null
+  },
+  "690976 Freeland, Alex": {
+    "barrel_pct": 37.4,
+    "hardhit_pct": 0.279,
+    "xwoba": 88.7,
+    "avg_exit_velo": null
+  },
+  "666310 Naylor, Bo": {
+    "barrel_pct": 42.6,
+    "hardhit_pct": 0.29,
+    "xwoba": 89.6,
+    "avg_exit_velo": null
+  },
+  "683146 Baty, Brett": {
+    "barrel_pct": 39.7,
+    "hardhit_pct": 0.307,
+    "xwoba": 89.6,
+    "avg_exit_velo": null
+  },
+  "572233 Walker, Christian": {
+    "barrel_pct": 42.4,
+    "hardhit_pct": 0.301,
+    "xwoba": 89.5,
+    "avg_exit_velo": null
+  },
+  "669477 Schmitt, Casey": {
+    "barrel_pct": 44.5,
+    "hardhit_pct": 0.361,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "663853 Gonzalez, Romy": {
+    "barrel_pct": 37.9,
+    "hardhit_pct": 0.291,
+    "xwoba": 88.2,
+    "avg_exit_velo": null
+  },
+  "676356 DeLuca, Jonny": {
+    "barrel_pct": 29.1,
+    "hardhit_pct": 0.284,
+    "xwoba": 84.8,
+    "avg_exit_velo": null
+  },
+  "656537 Hill, Derek": {
+    "barrel_pct": 34.9,
+    "hardhit_pct": 0.29,
+    "xwoba": 90.4,
+    "avg_exit_velo": null
+  },
+  "666126 Cortes, Carlos": {
+    "barrel_pct": 41.1,
+    "hardhit_pct": 0.341,
+    "xwoba": 90.0,
+    "avg_exit_velo": null
+  },
+  "678662 Tovar, Ezequiel": {
+    "barrel_pct": 32.6,
+    "hardhit_pct": 0.273,
+    "xwoba": 87.2,
+    "avg_exit_velo": null
+  },
+  "804606 Griffin, Konnor": {
+    "barrel_pct": 37.0,
+    "hardhit_pct": 0.305,
+    "xwoba": 87.8,
+    "avg_exit_velo": null
+  },
+  "656976 Smith, Pavin": {
+    "barrel_pct": 31.1,
+    "hardhit_pct": 0.255,
+    "xwoba": 86.1,
+    "avg_exit_velo": null
+  },
+  "665953 Chaparro, Andr\u00e9s": {
+    "barrel_pct": 51.2,
+    "hardhit_pct": 0.377,
+    "xwoba": 91.8,
+    "avg_exit_velo": null
+  },
+  "800050 DeLauter, Chase": {
+    "barrel_pct": 45.0,
+    "hardhit_pct": 0.344,
+    "xwoba": 90.9,
+    "avg_exit_velo": null
+  },
+  "805808 McGonigle, Kevin": {
+    "barrel_pct": 37.1,
+    "hardhit_pct": 0.361,
+    "xwoba": 88.0,
+    "avg_exit_velo": null
+  },
+  "682177 Schneemann, Daniel": {
+    "barrel_pct": 38.0,
+    "hardhit_pct": 0.288,
+    "xwoba": 88.1,
+    "avg_exit_velo": null
+  },
+  "624428 Frazier, Adam": {
+    "barrel_pct": 16.4,
+    "hardhit_pct": 0.237,
+    "xwoba": 83.5,
+    "avg_exit_velo": null
+  },
+  "641598 Garver, Mitch": {
+    "barrel_pct": 48.5,
+    "hardhit_pct": 0.306,
+    "xwoba": 90.2,
+    "avg_exit_velo": null
+  },
+  "595879 B\u00e1ez, Javier": {
+    "barrel_pct": 28.6,
+    "hardhit_pct": 0.294,
+    "xwoba": 84.7,
+    "avg_exit_velo": null
+  },
+  "678554 Mead, Curtis": {
+    "barrel_pct": 43.1,
+    "hardhit_pct": 0.362,
+    "xwoba": 88.1,
+    "avg_exit_velo": null
+  },
+  "806068 Emerson, Colt": {
+    "barrel_pct": 29.5,
+    "hardhit_pct": 0.239,
+    "xwoba": 86.2,
+    "avg_exit_velo": null
+  },
+  "642708 Rosario, Amed": {
+    "barrel_pct": 39.1,
+    "hardhit_pct": 0.313,
+    "xwoba": 90.1,
+    "avg_exit_velo": null
+  },
+  "669065 Stowers, Kyle": {
+    "barrel_pct": 53.9,
+    "hardhit_pct": 0.323,
+    "xwoba": 91.8,
+    "avg_exit_velo": null
+  },
+  "811965 Kuroda-Grauer, Joshua": {
+    "barrel_pct": 37.0,
+    "hardhit_pct": 0.32,
+    "xwoba": 88.9,
+    "avg_exit_velo": null
+  },
+  "665750 Taveras, Leody": {
+    "barrel_pct": 29.8,
+    "hardhit_pct": 0.289,
+    "xwoba": 87.3,
+    "avg_exit_velo": null
+  },
+  "679529 Torkelson, Spencer": {
+    "barrel_pct": 43.8,
+    "hardhit_pct": 0.323,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "672695 Perdomo, Geraldo": {
+    "barrel_pct": 29.9,
+    "hardhit_pct": 0.327,
+    "xwoba": 87.1,
+    "avg_exit_velo": null
+  },
+  "608070 Ram\u00edrez, Jos\u00e9": {
+    "barrel_pct": 44.2,
+    "hardhit_pct": 0.356,
+    "xwoba": 90.3,
+    "avg_exit_velo": null
+  },
+  "691788 Mack, Joe": {
+    "barrel_pct": 36.9,
+    "hardhit_pct": 0.306,
+    "xwoba": 88.5,
+    "avg_exit_velo": null
+  },
+  "668804 Reynolds, Bryan": {
+    "barrel_pct": 47.3,
+    "hardhit_pct": 0.37,
+    "xwoba": 90.9,
+    "avg_exit_velo": null
+  },
+  "672386 Kirk, Alejandro": {
+    "barrel_pct": 36.3,
+    "hardhit_pct": 0.27,
+    "xwoba": 86.2,
+    "avg_exit_velo": null
+  },
+  "802415 Simpson, Chandler": {
+    "barrel_pct": 14.3,
+    "hardhit_pct": 0.264,
+    "xwoba": 84.1,
+    "avg_exit_velo": null
+  },
+  "666182 Bichette, Bo": {
+    "barrel_pct": 43.3,
+    "hardhit_pct": 0.326,
+    "xwoba": 90.1,
+    "avg_exit_velo": null
+  },
+  "694378 Gonzalez, Jacob": {
+    "barrel_pct": 43.5,
+    "hardhit_pct": 0.322,
+    "xwoba": 88.6,
+    "avg_exit_velo": null
+  },
+  "656811 O'Hearn, Ryan": {
+    "barrel_pct": 45.6,
+    "hardhit_pct": 0.329,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "701762 Kurtz, Nick": {
+    "barrel_pct": 58.3,
+    "hardhit_pct": 0.379,
+    "xwoba": 93.6,
+    "avg_exit_velo": null
+  },
+  "596115 Story, Trevor": {
+    "barrel_pct": 41.8,
+    "hardhit_pct": 0.248,
+    "xwoba": 88.9,
+    "avg_exit_velo": null
+  },
+  "592450 Judge, Aaron": {
+    "barrel_pct": 57.3,
+    "hardhit_pct": 0.415,
+    "xwoba": 94.1,
+    "avg_exit_velo": null
+  },
+  "624424 Conforto, Michael": {
+    "barrel_pct": 46.4,
+    "hardhit_pct": 0.334,
+    "xwoba": 92.4,
+    "avg_exit_velo": null
+  },
+  "686797 Lee, Brooks": {
+    "barrel_pct": 31.7,
+    "hardhit_pct": 0.277,
+    "xwoba": 88.0,
+    "avg_exit_velo": null
+  },
+  "671277 Garc\u00eda Jr., Luis": {
+    "barrel_pct": 47.1,
+    "hardhit_pct": 0.356,
+    "xwoba": 91.9,
+    "avg_exit_velo": null
+  },
+  "686948 Baldwin, Drake": {
+    "barrel_pct": 51.4,
+    "hardhit_pct": 0.386,
+    "xwoba": 91.5,
+    "avg_exit_velo": null
+  },
+  "681481 Carpenter, Kerry": {
+    "barrel_pct": 47.1,
+    "hardhit_pct": 0.301,
+    "xwoba": 90.4,
+    "avg_exit_velo": null
+  },
+  "682674 Bericoto, Victor": {
+    "barrel_pct": 46.5,
+    "hardhit_pct": 0.289,
+    "xwoba": 88.5,
+    "avg_exit_velo": null
+  },
+  "663616 Larnach, Trevor": {
+    "barrel_pct": 34.9,
+    "hardhit_pct": 0.342,
+    "xwoba": 87.1,
+    "avg_exit_velo": null
+  },
+  "664728 Isbel, Kyle": {
+    "barrel_pct": 34.1,
+    "hardhit_pct": 0.275,
+    "xwoba": 88.6,
+    "avg_exit_velo": null
+  },
+  "641343 Bauers, Jake": {
+    "barrel_pct": 52.9,
+    "hardhit_pct": 0.361,
+    "xwoba": 92.5,
+    "avg_exit_velo": null
+  },
+  "691026 Winn, Masyn": {
+    "barrel_pct": 35.4,
+    "hardhit_pct": 0.302,
+    "xwoba": 88.0,
+    "avg_exit_velo": null
+  },
+  "694371 Troy, Tommy": {
+    "barrel_pct": 31.1,
+    "hardhit_pct": 0.317,
+    "xwoba": 84.8,
+    "avg_exit_velo": null
+  },
+  "687093 Grissom, Vaughn": {
+    "barrel_pct": 42.4,
+    "hardhit_pct": 0.34,
+    "xwoba": 89.3,
+    "avg_exit_velo": null
+  },
+  "624413 Alonso, Pete": {
+    "barrel_pct": 54.5,
+    "hardhit_pct": 0.377,
+    "xwoba": 93.8,
+    "avg_exit_velo": null
+  },
+  "660162 Moncada, Yo\u00e1n": {
+    "barrel_pct": 40.9,
+    "hardhit_pct": 0.269,
+    "xwoba": 90.3,
+    "avg_exit_velo": null
+  },
+  "519317 Stanton, Giancarlo": {
+    "barrel_pct": 44.3,
+    "hardhit_pct": 0.326,
+    "xwoba": 94.1,
+    "avg_exit_velo": null
+  },
+  "641355 Bellinger, Cody": {
+    "barrel_pct": 36.5,
+    "hardhit_pct": 0.351,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "668939 Rutschman, Adley": {
+    "barrel_pct": 42.0,
+    "hardhit_pct": 0.348,
+    "xwoba": 89.4,
+    "avg_exit_velo": null
+  },
+  "668715 Steer, Spencer": {
+    "barrel_pct": 40.0,
+    "hardhit_pct": 0.349,
+    "xwoba": 89.9,
+    "avg_exit_velo": null
+  },
+  "656775 Mullins, Cedric": {
+    "barrel_pct": 31.4,
+    "hardhit_pct": 0.262,
+    "xwoba": 88.3,
+    "avg_exit_velo": null
+  },
+  "694212 Basallo, Samuel": {
+    "barrel_pct": 45.8,
+    "hardhit_pct": 0.336,
+    "xwoba": 91.4,
+    "avg_exit_velo": null
+  },
+  "664761 Bohm, Alec": {
+    "barrel_pct": 41.4,
+    "hardhit_pct": 0.298,
+    "xwoba": 90.2,
+    "avg_exit_velo": null
+  },
+  "641933 O'Neill, Tyler": {
+    "barrel_pct": 43.8,
+    "hardhit_pct": 0.306,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "681807 Fry, David": {
+    "barrel_pct": 34.1,
+    "hardhit_pct": 0.264,
+    "xwoba": 85.8,
+    "avg_exit_velo": null
+  },
+  "670032 Lopez, Nicky": {
+    "barrel_pct": 20.2,
+    "hardhit_pct": 0.254,
+    "xwoba": 84.9,
+    "avg_exit_velo": null
+  },
+  "687263 Neto, Zach": {
+    "barrel_pct": 38.5,
+    "hardhit_pct": 0.309,
+    "xwoba": 89.2,
+    "avg_exit_velo": null
+  },
+  "681297 Cowser, Colton": {
+    "barrel_pct": 36.7,
+    "hardhit_pct": 0.313,
+    "xwoba": 86.8,
+    "avg_exit_velo": null
+  },
+  "805367 Meidroth, Chase": {
+    "barrel_pct": 34.2,
+    "hardhit_pct": 0.286,
+    "xwoba": 87.8,
+    "avg_exit_velo": null
+  },
+  "663647 Hayes, Ke'Bryan": {
+    "barrel_pct": 38.0,
+    "hardhit_pct": 0.304,
+    "xwoba": 90.4,
+    "avg_exit_velo": null
+  },
+  "666969 Garc\u00eda, Adolis": {
+    "barrel_pct": 48.0,
+    "hardhit_pct": 0.294,
+    "xwoba": 92.1,
+    "avg_exit_velo": null
+  },
+  "678011 Seigler, Anthony": {
+    "barrel_pct": 37.1,
+    "hardhit_pct": 0.33,
+    "xwoba": 88.4,
+    "avg_exit_velo": null
+  },
+  "687597 Beck, Jordan": {
+    "barrel_pct": 26.2,
+    "hardhit_pct": 0.26,
+    "xwoba": 85.3,
+    "avg_exit_velo": null
+  },
+  "679845 Loftin, Nick": {
+    "barrel_pct": 29.6,
+    "hardhit_pct": 0.311,
+    "xwoba": 87.8,
+    "avg_exit_velo": null
+  },
+  "700932 Manzardo, Kyle": {
+    "barrel_pct": 39.5,
+    "hardhit_pct": 0.305,
+    "xwoba": 89.1,
+    "avg_exit_velo": null
+  },
+  "694377 Yorke, Nick": {
+    "barrel_pct": 48.3,
+    "hardhit_pct": 0.306,
+    "xwoba": 89.3,
+    "avg_exit_velo": null
+  },
+  "656716 McKinstry, Zach": {
+    "barrel_pct": 20.1,
+    "hardhit_pct": 0.271,
+    "xwoba": 84.6,
+    "avg_exit_velo": null
+  },
+  "691723 Mayo, Coby": {
+    "barrel_pct": 49.3,
+    "hardhit_pct": 0.295,
+    "xwoba": 92.2,
+    "avg_exit_velo": null
+  },
+  "622761 Mateo, Jorge": {
+    "barrel_pct": 47.7,
+    "hardhit_pct": 0.325,
+    "xwoba": 90.4,
+    "avg_exit_velo": null
+  },
+  "660670 Acu\u00f1a Jr., Ronald": {
+    "barrel_pct": 43.4,
+    "hardhit_pct": 0.378,
+    "xwoba": 90.1,
+    "avg_exit_velo": null
+  },
+  "602104 Ur\u00edas, Ram\u00f3n": {
+    "barrel_pct": 37.0,
+    "hardhit_pct": 0.306,
+    "xwoba": 89.5,
+    "avg_exit_velo": null
+  },
+  "655316 Monasterio, Andruw": {
+    "barrel_pct": 38.2,
+    "hardhit_pct": 0.306,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "647304 Naylor, Josh": {
+    "barrel_pct": 37.3,
+    "hardhit_pct": 0.32,
+    "xwoba": 87.6,
+    "avg_exit_velo": null
+  },
+  "666018 Aranda, Jonathan": {
+    "barrel_pct": 45.2,
+    "hardhit_pct": 0.368,
+    "xwoba": 91.1,
+    "avg_exit_velo": null
+  },
+  "681508 Gasper, Mickey": {
+    "barrel_pct": 36.4,
+    "hardhit_pct": 0.28,
+    "xwoba": 88.3,
+    "avg_exit_velo": null
+  },
+  "683734 Vaughn, Andrew": {
+    "barrel_pct": 40.5,
+    "hardhit_pct": 0.339,
+    "xwoba": 89.6,
+    "avg_exit_velo": null
+  },
+  "656555 Hoskins, Rhys": {
+    "barrel_pct": 39.9,
+    "hardhit_pct": 0.288,
+    "xwoba": 88.6,
+    "avg_exit_velo": null
+  },
+  "664702 Straw, Myles": {
+    "barrel_pct": 26.9,
+    "hardhit_pct": 0.297,
+    "xwoba": 86.4,
+    "avg_exit_velo": null
+  },
+  "676609 Caballero, Jos\u00e9": {
+    "barrel_pct": 24.6,
+    "hardhit_pct": 0.271,
+    "xwoba": 83.8,
+    "avg_exit_velo": null
+  },
+  "687637 Beavers, Dylan": {
+    "barrel_pct": 37.4,
+    "hardhit_pct": 0.297,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "803011 Antonacci, Sam": {
+    "barrel_pct": 37.1,
+    "hardhit_pct": 0.363,
+    "xwoba": 87.5,
+    "avg_exit_velo": null
+  },
+  "681624 Pages, Andy": {
+    "barrel_pct": 44.9,
+    "hardhit_pct": 0.341,
+    "xwoba": 89.1,
+    "avg_exit_velo": null
+  },
+  "682928 Abrams, CJ": {
+    "barrel_pct": 42.0,
+    "hardhit_pct": 0.343,
+    "xwoba": 89.7,
+    "avg_exit_velo": null
+  },
+  "696030 Osuna, Alejandro": {
+    "barrel_pct": 29.3,
+    "hardhit_pct": 0.311,
+    "xwoba": 87.0,
+    "avg_exit_velo": null
+  },
+  "545121 Vargas, Ildemaro": {
+    "barrel_pct": 33.7,
+    "hardhit_pct": 0.307,
+    "xwoba": 87.3,
+    "avg_exit_velo": null
+  },
+  "660844 Rivas, Leo": {
+    "barrel_pct": 13.6,
+    "hardhit_pct": 0.238,
+    "xwoba": 86.2,
+    "avg_exit_velo": null
+  },
+  "687515 Thomas, Colby": {
+    "barrel_pct": 36.2,
+    "hardhit_pct": 0.258,
+    "xwoba": 89.7,
+    "avg_exit_velo": null
+  },
+  "701350 Anthony, Roman": {
+    "barrel_pct": 47.4,
+    "hardhit_pct": 0.352,
+    "xwoba": 92.3,
+    "avg_exit_velo": null
+  },
+  "669701 Smith, Josh": {
+    "barrel_pct": 30.9,
+    "hardhit_pct": 0.28,
+    "xwoba": 86.8,
+    "avg_exit_velo": null
+  },
+  "671056 Herrera, Iv\u00e1n": {
+    "barrel_pct": 39.0,
+    "hardhit_pct": 0.342,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "650402 Torres, Gleyber": {
+    "barrel_pct": 31.7,
+    "hardhit_pct": 0.342,
+    "xwoba": 85.3,
+    "avg_exit_velo": null
+  },
+  "682622 Marte, Noelvi": {
+    "barrel_pct": 28.9,
+    "hardhit_pct": 0.265,
+    "xwoba": 87.8,
+    "avg_exit_velo": null
+  },
+  "695731 Montgomery, Braden": {
+    "barrel_pct": 38.6,
+    "hardhit_pct": 0.3,
+    "xwoba": 89.5,
+    "avg_exit_velo": null
+  },
+  "681715 Hern\u00e1ndez, Heriberto": {
+    "barrel_pct": 50.3,
+    "hardhit_pct": 0.361,
+    "xwoba": 92.1,
+    "avg_exit_velo": null
+  },
+  "693307 Dingler, Dillon": {
+    "barrel_pct": 47.1,
+    "hardhit_pct": 0.377,
+    "xwoba": 89.8,
+    "avg_exit_velo": null
+  },
+  "656941 Schwarber, Kyle": {
+    "barrel_pct": 53.1,
+    "hardhit_pct": 0.377,
+    "xwoba": 93.5,
+    "avg_exit_velo": null
+  },
+  "677942 Alexander, Blaze": {
+    "barrel_pct": 48.8,
+    "hardhit_pct": 0.361,
+    "xwoba": 92.6,
+    "avg_exit_velo": null
+  },
+  "621493 Ward, Taylor": {
+    "barrel_pct": 38.7,
+    "hardhit_pct": 0.347,
+    "xwoba": 89.4,
+    "avg_exit_velo": null
+  },
+  "543309 Higashioka, Kyle": {
+    "barrel_pct": 38.3,
+    "hardhit_pct": 0.296,
+    "xwoba": 88.1,
+    "avg_exit_velo": null
+  },
+  "669357 Gorman, Nolan": {
+    "barrel_pct": 43.8,
+    "hardhit_pct": 0.278,
+    "xwoba": 89.3,
+    "avg_exit_velo": null
+  },
+  "650489 Castro, Willi": {
+    "barrel_pct": 40.3,
+    "hardhit_pct": 0.292,
+    "xwoba": 88.3,
+    "avg_exit_velo": null
+  },
+  "677870 Jim\u00e9nez, Leo": {
+    "barrel_pct": 44.8,
+    "hardhit_pct": 0.332,
+    "xwoba": 91.4,
+    "avg_exit_velo": null
+  },
+  "665926 Gim\u00e9nez, Andr\u00e9s": {
+    "barrel_pct": 23.2,
+    "hardhit_pct": 0.265,
+    "xwoba": 86.3,
+    "avg_exit_velo": null
+  },
+  "663886 Stephenson, Tyler": {
+    "barrel_pct": 44.3,
+    "hardhit_pct": 0.328,
+    "xwoba": 90.5,
+    "avg_exit_velo": null
+  },
+  "694497 Carter, Evan": {
+    "barrel_pct": 37.5,
+    "hardhit_pct": 0.294,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "691016 Soderstrom, Tyler": {
+    "barrel_pct": 45.5,
+    "hardhit_pct": 0.347,
+    "xwoba": 90.3,
+    "avg_exit_velo": null
+  },
+  "699912 Fernandez, Jose": {
+    "barrel_pct": 38.8,
+    "hardhit_pct": 0.276,
+    "xwoba": 87.9,
+    "avg_exit_velo": null
+  },
+  "608369 Seager, Corey": {
+    "barrel_pct": 44.6,
+    "hardhit_pct": 0.336,
+    "xwoba": 91.1,
+    "avg_exit_velo": null
+  },
+  "664954 Sullivan, Brett": {
+    "barrel_pct": 32.7,
+    "hardhit_pct": 0.262,
+    "xwoba": 86.9,
+    "avg_exit_velo": null
+  },
+  "641680 Heim, Jonah": {
+    "barrel_pct": 29.9,
+    "hardhit_pct": 0.296,
+    "xwoba": 87.2,
+    "avg_exit_velo": null
+  },
+  "457705 McCutchen, Andrew": {
+    "barrel_pct": 28.8,
+    "hardhit_pct": 0.237,
+    "xwoba": 87.1,
+    "avg_exit_velo": null
+  },
+  "687231 Hernaiz, Darell": {
+    "barrel_pct": 24.7,
+    "hardhit_pct": 0.263,
+    "xwoba": 84.4,
+    "avg_exit_velo": null
+  },
+  "669127 Langeliers, Shea": {
+    "barrel_pct": 45.0,
+    "hardhit_pct": 0.361,
+    "xwoba": 91.8,
+    "avg_exit_velo": null
+  },
+  "669743 Call, Alex": {
+    "barrel_pct": 17.2,
+    "hardhit_pct": 0.274,
+    "xwoba": 83.6,
+    "avg_exit_velo": null
+  },
+  "663968 Mangum, Jake": {
+    "barrel_pct": 27.1,
+    "hardhit_pct": 0.286,
+    "xwoba": 84.6,
+    "avg_exit_velo": null
+  },
+  "702616 Holliday, Jackson": {
+    "barrel_pct": 37.6,
+    "hardhit_pct": 0.324,
+    "xwoba": 87.4,
+    "avg_exit_velo": null
+  },
+  "680700 Palacios, Richie": {
+    "barrel_pct": 25.5,
+    "hardhit_pct": 0.31,
+    "xwoba": 86.0,
+    "avg_exit_velo": null
+  },
+  "656577 Jackson, Alex": {
+    "barrel_pct": 36.8,
+    "hardhit_pct": 0.215,
+    "xwoba": 87.7,
+    "avg_exit_velo": null
+  },
+  "701305 Dezenzo, Zach": {
+    "barrel_pct": 27.8,
+    "hardhit_pct": 0.272,
+    "xwoba": 83.3,
+    "avg_exit_velo": null
+  },
+  "670242 Wallner, Matt": {
+    "barrel_pct": 40.3,
+    "hardhit_pct": 0.281,
+    "xwoba": 88.4,
+    "avg_exit_velo": null
+  },
+  "657041 Thomas, Lane": {
+    "barrel_pct": 42.8,
+    "hardhit_pct": 0.339,
+    "xwoba": 89.6,
+    "avg_exit_velo": null
+  },
+  "805300 Marsee, Jakob": {
+    "barrel_pct": 33.1,
+    "hardhit_pct": 0.3,
+    "xwoba": 86.6,
+    "avg_exit_velo": null
+  },
+  "663494 Torres, Bryan": {
+    "barrel_pct": 32.1,
+    "hardhit_pct": 0.303,
+    "xwoba": 86.8,
+    "avg_exit_velo": null
+  },
+  "691781 House, Brady": {
+    "barrel_pct": 43.0,
+    "hardhit_pct": 0.319,
+    "xwoba": 89.0,
+    "avg_exit_velo": null
+  },
+  "663604 Lockridge, Brandon": {
+    "barrel_pct": 32.8,
+    "hardhit_pct": 0.276,
+    "xwoba": 86.2,
+    "avg_exit_velo": null
+  },
+  "672820 Sosa, Lenyn": {
+    "barrel_pct": 36.7,
+    "hardhit_pct": 0.249,
+    "xwoba": 88.7,
+    "avg_exit_velo": null
+  },
+  "663457 Nootbaar, Lars": {
+    "barrel_pct": 50.0,
+    "hardhit_pct": 0.34,
+    "xwoba": 91.3,
+    "avg_exit_velo": null
+  },
+  "665833 Cruz, Oneil": {
+    "barrel_pct": 59.2,
+    "hardhit_pct": 0.358,
+    "xwoba": 96.0,
+    "avg_exit_velo": null
+  },
+  "700337 Quero, Edgar": {
+    "barrel_pct": 34.5,
+    "hardhit_pct": 0.26,
+    "xwoba": 90.9,
+    "avg_exit_velo": null
+  },
+  "665487 Tatis Jr., Fernando": {
+    "barrel_pct": 53.7,
+    "hardhit_pct": 0.352,
+    "xwoba": 92.1,
+    "avg_exit_velo": null
+  },
+  "672640 Lopez, Otto": {
+    "barrel_pct": 42.9,
+    "hardhit_pct": 0.338,
+    "xwoba": 89.5,
+    "avg_exit_velo": null
+  },
+  "671976 Peters, Tristan": {
+    "barrel_pct": 30.7,
+    "hardhit_pct": 0.308,
+    "xwoba": 87.2,
+    "avg_exit_velo": null
+  },
+  "808959 Murakami, Munetaka": {
+    "barrel_pct": 58.5,
+    "hardhit_pct": 0.366,
+    "xwoba": 93.9,
+    "avg_exit_velo": null
+  },
+  "695657 Montgomery, Colson": {
+    "barrel_pct": 43.7,
+    "hardhit_pct": 0.325,
+    "xwoba": 89.1,
+    "avg_exit_velo": null
+  },
+  "669257 Smith, Will": {
+    "barrel_pct": 39.4,
+    "hardhit_pct": 0.385,
+    "xwoba": 90.0,
+    "avg_exit_velo": null
+  },
+  "663368 Perkins, Blake": {
+    "barrel_pct": 33.8,
+    "hardhit_pct": 0.264,
+    "xwoba": 86.4,
+    "avg_exit_velo": null
+  },
+  "663586 Riley, Austin": {
+    "barrel_pct": 42.3,
+    "hardhit_pct": 0.294,
+    "xwoba": 90.2,
+    "avg_exit_velo": null
+  },
+  "686668 Doyle, Brenton": {
+    "barrel_pct": 35.2,
+    "hardhit_pct": 0.248,
+    "xwoba": 87.8,
+    "avg_exit_velo": null
+  },
+  "703607 Bolte, Henry": {
+    "barrel_pct": 46.8,
+    "hardhit_pct": 0.298,
+    "xwoba": 89.9,
+    "avg_exit_velo": null
+  },
+  "642715 Adames, Willy": {
+    "barrel_pct": 40.5,
+    "hardhit_pct": 0.296,
+    "xwoba": 88.4,
+    "avg_exit_velo": null
+  },
+  "630105 Cronenworth, Jake": {
+    "barrel_pct": 32.2,
+    "hardhit_pct": 0.29,
+    "xwoba": 87.3,
+    "avg_exit_velo": null
+  },
+  "669003 Mitchell, Garrett": {
+    "barrel_pct": 50.3,
+    "hardhit_pct": 0.357,
+    "xwoba": 92.8,
+    "avg_exit_velo": null
+  },
+  "665877 Ferm\u00edn, Jos\u00e9": {
+    "barrel_pct": 29.8,
+    "hardhit_pct": 0.279,
+    "xwoba": 85.3,
+    "avg_exit_velo": null
+  },
+  "686452 Millas, Drew": {
+    "barrel_pct": 21.9,
+    "hardhit_pct": 0.266,
+    "xwoba": 83.6,
+    "avg_exit_velo": null
+  }
+}
