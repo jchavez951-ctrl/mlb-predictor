@@ -72,6 +72,7 @@ SAVANT_URL = (
 NAME_COLUMN_CANDIDATES = ["player_name", "name"]
 LAST_NAME_COLUMN_CANDIDATES = ["last_name"]
 FIRST_NAME_COLUMN_CANDIDATES = ["first_name"]
+PLAYER_ID_COLUMN_CANDIDATES = ["player_id", "playerid", "mlbid", "mlb_id"]
 BARREL_COLUMN_CANDIDATES = ["barrel_batted_rate", "brl_percent", "barrel_pct"]
 HARDHIT_COLUMN_CANDIDATES = ["hard_hit_percent", "hardhit_percent"]
 XWOBA_COLUMN_CANDIDATES = ["xwoba", "est_woba"]
@@ -145,6 +146,7 @@ def main():
         print("        actually on https://baseballsavant.mlb.com/leaderboard/custom")
         sys.exit(1)
 
+    id_col = find_column(fieldnames, PLAYER_ID_COLUMN_CANDIDATES)
     name_col = find_column(fieldnames, NAME_COLUMN_CANDIDATES)
     last_name_col = find_column(fieldnames, LAST_NAME_COLUMN_CANDIDATES)
     first_name_col = find_column(fieldnames, FIRST_NAME_COLUMN_CANDIDATES)
@@ -153,28 +155,34 @@ def main():
     xwoba_col = find_column(fieldnames, XWOBA_COLUMN_CANDIDATES)
     velo_col = find_column(fieldnames, EXIT_VELO_COLUMN_CANDIDATES)
 
-    print(f"Using columns -> name: {name_col}, last/first: {last_name_col}/{first_name_col}, "
+    print(f"Using columns -> id: {id_col}, name: {name_col}, last/first: {last_name_col}/{first_name_col}, "
           f"barrel: {barrel_col}, hardhit: {hardhit_col}, xwoba: {xwoba_col}, exit velo: {velo_col}\n")
-    if not name_col and not (last_name_col and first_name_col):
-        print("[ERROR] Could not find a usable player name column (neither a combined")
-        print("        name field, nor separate last_name/first_name columns). Can't proceed.")
+    if not id_col:
+        print("[ERROR] Could not find a player ID column. Can't key the output reliably without one")
+        print("        (name-only matching against roster_data.json is fragile -- 'Matt' vs")
+        print("        'Matthew' style formatting differences between data sources cause silent")
+        print("        mismatches, which is exactly the bug this ID-based keying fixes).")
         sys.exit(1)
 
     contact_quality = {}
     for row in rows:
-        if name_col:
-            raw_name = row.get(name_col, "")
-            if not raw_name:
-                continue
-            name = normalize_name(raw_name)
-        else:
-            last = row.get(last_name_col, "").strip()
-            first = row.get(first_name_col, "").strip()
-            if not last or not first:
-                continue
-            name = f"{first} {last}"
+        player_id = row.get(id_col, "").strip()
+        if not player_id:
+            continue
 
-        contact_quality[name] = {
+        # Name is still captured for readability/debugging in the output file,
+        # but PlayerID (matched against roster_data.json's PlayerID field) is
+        # what the app actually keys off of -- this is what actually fixes
+        # the "every value shows None" bug, not the name itself.
+        if name_col:
+            name = normalize_name(row.get(name_col, ""))
+        elif last_name_col and first_name_col:
+            name = f"{row.get(first_name_col, '').strip()} {row.get(last_name_col, '').strip()}"
+        else:
+            name = ""
+
+        contact_quality[player_id] = {
+            "name": name,
             "barrel_pct": to_float(row.get(barrel_col)) if barrel_col else None,
             "hardhit_pct": to_float(row.get(hardhit_col)) if hardhit_col else None,
             "xwoba": to_float(row.get(xwoba_col)) if xwoba_col else None,
