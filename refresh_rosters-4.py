@@ -163,7 +163,7 @@ def safe_div(numerator, denominator, default=0.0):
     return (numerator / denominator) if denominator else default
 
 
-def build_hitter_entry(name, bats, stat):
+def build_hitter_entry(name, bats, stat, player_id=None):
     ab = stat.get("atBats", 0)
     pa = stat.get("plateAppearances", ab)
     h = stat.get("hits", 0)
@@ -176,7 +176,7 @@ def build_hitter_entry(name, bats, stat):
 
     if pa < 20:  # not enough of a sample to compute anything meaningful
         return {
-            "Player": name, "Pos": "", "Bats": bats,
+            "Player": name, "PlayerID": player_id, "Pos": "", "Bats": bats,
             "BB_RATE": LEAGUE_BASELINE["BB_RATE"], "K_RATE": LEAGUE_BASELINE["K_RATE"],
             "HR_PA_RATE": LEAGUE_BASELINE["HR_PA_RATE"], "BABIP": LEAGUE_BASELINE["BABIP"],
             "1B_H_RATE": 0.66, "2B_H_RATE": 0.22, "3B_H_RATE": 0.02, "HR_H_RATE": 0.10,
@@ -187,7 +187,7 @@ def build_hitter_entry(name, bats, stat):
     babip = safe_div(h - hr, balls_in_play, LEAGUE_BASELINE["BABIP"])
 
     return {
-        "Player": name, "Pos": "", "Bats": bats,
+        "Player": name, "PlayerID": player_id, "Pos": "", "Bats": bats,
         "BB_RATE": round(safe_div(bb, pa, LEAGUE_BASELINE["BB_RATE"]), 3),
         "K_RATE": round(safe_div(so, pa, LEAGUE_BASELINE["K_RATE"]), 3),
         "HR_PA_RATE": round(safe_div(hr, pa, LEAGUE_BASELINE["HR_PA_RATE"]), 3),
@@ -290,7 +290,7 @@ def refresh_team(team_name, team_id):
             if stat is None:
                 continue
             bats, _ = get_handedness(player["id"])
-            entry = build_hitter_entry(player["name"], bats, stat)
+            entry = build_hitter_entry(player["name"], bats, stat, player_id=player["id"])
             entry["Pos"] = player["position"]
             hitting.append(entry)
 
