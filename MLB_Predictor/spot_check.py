@@ -1665,7 +1665,7 @@ else:
         st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
         st.caption("K Over% = share of the 1,000 simulated games where the pitcher actually cleared the strikeout line.")
 
-    def render_hr_leaderboard(away_team_name, away_means, away_dist, home_team_name, home_means, home_dist, park_hr_mult):
+    def render_hr_leaderboard(away_team_name, away_means, away_dist, home_team_name, home_means, home_dist, park_hr_mult, away_lineup, home_lineup):
         # Combines both lineups into one ranked list, sorted by real simulated
         # HR probability -- this reuses the exact same regressed, park- and
         # weather-adjusted HR projections already computed for the per-team
@@ -1677,6 +1677,17 @@ else:
         # simulation itself, so it's fine for some/all players to show
         # blank here if that data hasn't been refreshed or isn't available
         # for a given player yet.
+        #
+        # IMPORTANT: matched by PlayerID (stable numeric MLB ID), NOT by name
+        # string -- MLB's Stats API and Baseball Savant format player names
+        # differently (e.g. "Matt" vs "Matthew" for a common vs. legal first
+        # name), so matching on the name string alone silently fails for
+        # most players even when both data sources have the same real person.
+        name_to_id = {}
+        for p in away_lineup + home_lineup:
+            if p.get("PlayerID"):
+                name_to_id[p["Player"]] = str(p["PlayerID"])
+
         def prob_over(values, line):
             if not values: return 0.0
             return sum(1 for v in values if v > line) / len(values)
@@ -1686,7 +1697,8 @@ else:
             for name, stats in means_data.items():
                 hr_exp = stats.get("HR", 0)
                 hr_p = prob_over(dist_data.get(name, {}).get("HR", []), 0.5)
-                cq = CONTACT_QUALITY.get(name, {})
+                player_id = name_to_id.get(name)
+                cq = CONTACT_QUALITY.get(player_id, {}) if player_id else {}
                 rows.append({
                     "Team": team_name, "Hitter": name,
                     "Proj HR": round(hr_exp, 3), "HR Over 0.5%": f"{hr_p*100:.1f}%",
@@ -1703,7 +1715,7 @@ else:
         if not CONTACT_QUALITY:
             st.caption("Real Statcast contact-quality data (Barrel%/HardHit%/xwOBA) isn't loaded yet -- run refresh_contact_quality.py to add it.")
         st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
-        st.caption("Ranked by HR Over 0.5% (share of the 1,000 simulated games with at least one home run). This reflects simulated outcome probability -- it does not include Statcast contact-quality data (Barrel%, HardHit%, xwOBAcon), which isn't currently part of the roster data pipeline.")
+        st.caption("Ranked by HR Over 0.5% (share of the 1,000 simulated games with at least one home run). This reflects simulated outcome probability, not underlying batted-ball quality on its own.")
 
     t_prop_away, t_prop_home, t_pitch_away, t_pitch_home, t_hr_board = st.tabs([
         f"📊 {away_selection} Hitting Props", f"📊 {home_selection} Hitting Props",
@@ -1714,7 +1726,7 @@ else:
     with t_prop_home: render_hitting_prop_matrix_view(mc["home_box_means"], mc["home_box_dist"])
     with t_pitch_away: render_pitching_prop_matrix_view(mc["away_pitch_means"], mc["away_role_map"], mc["away_pitch_dist"])
     with t_pitch_home: render_pitching_prop_matrix_view(mc["home_pitch_means"], mc["home_role_map"], mc["home_pitch_dist"])
-    with t_hr_board: render_hr_leaderboard(away_selection, mc["away_box_means"], mc["away_box_dist"], home_selection, mc["home_box_means"], mc["home_box_dist"], park_rules["hr_mult"])
+    with t_hr_board: render_hr_leaderboard(away_selection, mc["away_box_means"], mc["away_box_dist"], home_selection, mc["home_box_means"], mc["home_box_dist"], park_rules["hr_mult"], st.session_state["locked_away_lineup"], st.session_state["locked_home_lineup"])
 
     st.markdown("### 🏟️ Live Play-By-Play Visual Render Interface")
     if st.button("Launch Immersive Real-Time Simulation Walkthrough Loop", type="primary", use_container_width=True):
