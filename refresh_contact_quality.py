@@ -50,11 +50,16 @@ CURRENT_SEASON = datetime.now().year
 OUTPUT_PATH = os.path.join("MLB_Predictor", "contact_quality.json")
 
 # Savant's "custom leaderboard" CSV export. The `selections` list picks which
-# stat columns come back; `min=50` requires at least 50 batted-ball events so
-# small samples don't produce noisy/meaningless percentages.
+# stat columns come back; `min=1` requires at least 1 batted-ball event so
+# the query includes virtually every hitter with any real activity this
+# season. NOTE: this was previously `min=50`, which produced a suspicious
+# result (Savant returned data for exactly 1 player instead of the expected
+# hundreds) -- an arbitrary raw integer here may be getting misinterpreted
+# by Savant's backend rather than treated as a genuine minimum-count filter.
+# min=1 is the safest, most inclusive value to test that theory.
 SAVANT_URL = (
     "https://baseballsavant.mlb.com/leaderboard/custom"
-    f"?year={CURRENT_SEASON}&type=batter&min=50"
+    f"?year={CURRENT_SEASON}&type=batter&min=1"
     "&selections=barrel_batted_rate,hard_hit_percent,xwoba,exit_velocity_avg"
     "&csv=true"
 )
@@ -137,9 +142,12 @@ def main():
     print(f"URL: {SAVANT_URL}\n")
 
     rows, fieldnames = fetch_csv_rows(SAVANT_URL)
-    print(f"Columns found in the raw CSV: {fieldnames}\n")
-    print("^ If the fields below show as 'None', send this column list back")
-    print("  and the field names in this script can be corrected in one pass.\n")
+    print(f"Columns found in the raw CSV: {fieldnames}")
+    print(f"Total rows returned: {len(rows)}  (should be several hundred, one per qualifying hitter)")
+    if rows:
+        print(f"First row (for inspection): {rows[0]}\n")
+    print("^ If the fields below show as 'None', or the row count looks wrong, send this")
+    print("  block back and the script can be corrected in one pass.\n")
 
     if not rows:
         print("[ERROR] No rows returned -- check the URL/params above against what's")
