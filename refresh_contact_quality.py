@@ -172,31 +172,61 @@ def main():
         print("        mismatches, which is exactly the bug this ID-based keying fixes).")
         sys.exit(1)
 
+    def get_shifted_value(row, col_name, shift=-1):
+        """When a shift is detected (see below), reads from the column
+        `shift` positions after col_name in the header order, rather than
+        col_name itself -- this compensates for Savant's CSV data rows
+        merging last_name and first_name into one combined field (e.g.
+        "Moore, Christian") despite the header listing them as two separate
+        columns, which pushes every subsequent value one position later
+        than the header names would suggest."""
+        if col_name not in fieldnames:
+            return None
+        idx = fieldnames.index(col_name) + shift
+        if 0 <= idx < len(fieldnames):
+            return row.get(fieldnames[idx])
+        return None
+
     contact_quality = {}
+    shift_detected_count = 0
     for row in rows:
-        player_id = row.get(id_col, "").strip()
+        last_name_raw = row.get(last_name_col, "").strip() if last_name_col else ""
+        shift_detected = "," in last_name_raw
+
+        if shift_detected:
+            shift_detected_count += 1
+            name = normalize_name(last_name_raw)
+            raw_id = get_shifted_value(row, id_col, shift=-1) if id_col else None
+            player_id = (raw_id or "").strip()
+            barrel_val = get_shifted_value(row, barrel_col, shift=-1) if barrel_col else None
+            hardhit_val = get_shifted_value(row, hardhit_col, shift=-1) if hardhit_col else None
+            xwoba_val = get_shifted_value(row, xwoba_col, shift=-1) if xwoba_col else None
+            velo_val = get_shifted_value(row, velo_col, shift=-1) if velo_col else None
+        else:
+            player_id = row.get(id_col, "").strip() if id_col else ""
+            if name_col:
+                name = normalize_name(row.get(name_col, ""))
+            elif last_name_col and first_name_col:
+                name = f"{row.get(first_name_col, '').strip()} {last_name_raw}"
+            else:
+                name = ""
+            barrel_val = row.get(barrel_col) if barrel_col else None
+            hardhit_val = row.get(hardhit_col) if hardhit_col else None
+            xwoba_val = row.get(xwoba_col) if xwoba_col else None
+            velo_val = row.get(velo_col) if velo_col else None
+
         if not player_id:
             continue
 
-        # Name is still captured for readability/debugging in the output file,
-        # but PlayerID (matched against roster_data.json's PlayerID field) is
-        # what the app actually keys off of -- this is what actually fixes
-        # the "every value shows None" bug, not the name itself.
-        if name_col:
-            name = normalize_name(row.get(name_col, ""))
-        elif last_name_col and first_name_col:
-            name = f"{row.get(first_name_col, '').strip()} {row.get(last_name_col, '').strip()}"
-        else:
-            name = ""
-
         contact_quality[player_id] = {
             "name": name,
-            "barrel_pct": to_float(row.get(barrel_col)) if barrel_col else None,
-            "hardhit_pct": to_float(row.get(hardhit_col)) if hardhit_col else None,
-            "xwoba": to_float(row.get(xwoba_col)) if xwoba_col else None,
-            "avg_exit_velo": to_float(row.get(velo_col)) if velo_col else None,
+            "barrel_pct": to_float(barrel_val),
+            "hardhit_pct": to_float(hardhit_val),
+            "xwoba": to_float(xwoba_val),
+            "avg_exit_velo": to_float(velo_val),
         }
 
+    print(f"Rows where the name/column shift was detected and corrected: {shift_detected_count} of {len(rows)}")
     print(f"Built contact-quality data for {len(contact_quality)} hitters.")
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
