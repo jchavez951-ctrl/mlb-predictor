@@ -1,207 +1,4 @@
 {
-  "695681": {
-    "name": "Christian Moore",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.202,
-    "avg_exit_velo": 93.9
-  },
-  "502671": {
-    "name": "Paul Goldschmidt",
-    "barrel_pct": 11.3,
-    "hardhit_pct": 38.2,
-    "xwoba": 0.313,
-    "avg_exit_velo": 86.5
-  },
-  "672695": {
-    "name": "Geraldo Perdomo",
-    "barrel_pct": 3.0,
-    "hardhit_pct": 29.7,
-    "xwoba": 0.327,
-    "avg_exit_velo": 87.1
-  },
-  "663968": {
-    "name": "Jake Mangum",
-    "barrel_pct": 1.5,
-    "hardhit_pct": 27.0,
-    "xwoba": 0.286,
-    "avg_exit_velo": 84.7
-  },
-  "673237": {
-    "name": "Yainer Diaz",
-    "barrel_pct": 5.3,
-    "hardhit_pct": 32.0,
-    "xwoba": 0.293,
-    "avg_exit_velo": 88.0
-  },
-  "680776": {
-    "name": "Jarren Duran",
-    "barrel_pct": 11.1,
-    "hardhit_pct": 38.2,
-    "xwoba": 0.294,
-    "avg_exit_velo": 89.6
-  },
-  "669208": {
-    "name": "Ryan Bliss",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 66.7,
-    "xwoba": 0.27,
-    "avg_exit_velo": 92.2
-  },
-  "608369": {
-    "name": "Corey Seager",
-    "barrel_pct": 15.4,
-    "hardhit_pct": 44.6,
-    "xwoba": 0.336,
-    "avg_exit_velo": 91.1
-  },
-  "687462": {
-    "name": "Spencer Horwitz",
-    "barrel_pct": 8.6,
-    "hardhit_pct": 34.3,
-    "xwoba": 0.339,
-    "avg_exit_velo": 86.9
-  },
-  "703607": {
-    "name": "Henry Bolte",
-    "barrel_pct": 6.8,
-    "hardhit_pct": 46.6,
-    "xwoba": 0.296,
-    "avg_exit_velo": 90.0
-  },
-  "695657": {
-    "name": "Colson Montgomery",
-    "barrel_pct": 13.7,
-    "hardhit_pct": 44.2,
-    "xwoba": 0.325,
-    "avg_exit_velo": 89.2
-  },
-  "695506": {
-    "name": "Jac Caglianone",
-    "barrel_pct": 15.0,
-    "hardhit_pct": 55.4,
-    "xwoba": 0.356,
-    "avg_exit_velo": 93.0
-  },
-  "699912": {
-    "name": "Jose Fernandez",
-    "barrel_pct": 3.9,
-    "hardhit_pct": 38.8,
-    "xwoba": 0.276,
-    "avg_exit_velo": 87.9
-  },
-  "641555": {
-    "name": "J.C. Escarra",
-    "barrel_pct": 4.5,
-    "hardhit_pct": 33.8,
-    "xwoba": 0.257,
-    "avg_exit_velo": 89.1
-  },
-  "665833": {
-    "name": "Oneil Cruz",
-    "barrel_pct": 16.7,
-    "hardhit_pct": 59.2,
-    "xwoba": 0.358,
-    "avg_exit_velo": 96.0
-  },
-  "676369": {
-    "name": "Nelson Vel\u00e1zquez",
-    "barrel_pct": 11.9,
-    "hardhit_pct": 66.7,
-    "xwoba": 0.371,
-    "avg_exit_velo": 94.7
-  },
-  "686765": {
-    "name": "Nick Sogard",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 16.7,
-    "xwoba": 0.301,
-    "avg_exit_velo": 81.6
-  },
-  "687637": {
-    "name": "Dylan Beavers",
-    "barrel_pct": 5.9,
-    "hardhit_pct": 37.9,
-    "xwoba": 0.302,
-    "avg_exit_velo": 87.9
-  },
-  "677956": {
-    "name": "Rece Hinds",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 23.5,
-    "xwoba": 0.155,
-    "avg_exit_velo": 85.2
-  },
-  "519317": {
-    "name": "Giancarlo Stanton",
-    "barrel_pct": 18.0,
-    "hardhit_pct": 44.3,
-    "xwoba": 0.326,
-    "avg_exit_velo": 94.1
-  },
-  "518595": {
-    "name": "Travis d'Arnaud",
-    "barrel_pct": 14.3,
-    "hardhit_pct": 32.1,
-    "xwoba": 0.337,
-    "avg_exit_velo": 87.7
-  },
-  "624641": {
-    "name": "Edmundo Sosa",
-    "barrel_pct": 7.2,
-    "hardhit_pct": 39.2,
-    "xwoba": 0.332,
-    "avg_exit_velo": 87.2
-  },
-  "622761": {
-    "name": "Jorge Mateo",
-    "barrel_pct": 10.5,
-    "hardhit_pct": 47.7,
-    "xwoba": 0.325,
-    "avg_exit_velo": 90.4
-  },
-  "680718": {
-    "name": "Addison Barger",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.255,
-    "avg_exit_velo": 89.0
-  },
-  "694371": {
-    "name": "Tommy Troy",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 31.1,
-    "xwoba": 0.317,
-    "avg_exit_velo": 84.8
-  },
-  "656716": {
-    "name": "Zach McKinstry",
-    "barrel_pct": 2.6,
-    "hardhit_pct": 20.5,
-    "xwoba": 0.272,
-    "avg_exit_velo": 84.8
-  },
-  "667472": {
-    "name": "Dane Myers",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 34.4,
-    "xwoba": 0.353,
-    "avg_exit_velo": 90.1
-  },
-  "665953": {
-    "name": "Andr\u00e9s Chaparro",
-    "barrel_pct": 14.9,
-    "hardhit_pct": 51.1,
-    "xwoba": 0.385,
-    "avg_exit_velo": 91.1
-  },
-  "675961": {
-    "name": "Alika Williams",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 35.4,
-    "xwoba": 0.233,
-    "avg_exit_velo": 85.5
-  },
   "695238": {
     "name": "Will Wagner",
     "barrel_pct": 0.0,
@@ -209,229 +6,54 @@
     "xwoba": 0.329,
     "avg_exit_velo": 81.9
   },
-  "687957": {
-    "name": "Dustin Harris",
+  "694876": {
+    "name": "Cooper Ingle",
     "barrel_pct": 0.0,
-    "hardhit_pct": 15.8,
-    "xwoba": 0.334,
-    "avg_exit_velo": 83.7
-  },
-  "672515": {
-    "name": "Gabriel Moreno",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 40.4,
-    "xwoba": 0.372,
-    "avg_exit_velo": 89.1
-  },
-  "623168": {
-    "name": "Tyler Heineman",
-    "barrel_pct": 1.2,
-    "hardhit_pct": 13.4,
-    "xwoba": 0.249,
-    "avg_exit_velo": 81.4
-  },
-  "806198": {
-    "name": "Cooper Pratt",
-    "barrel_pct": 4.2,
-    "hardhit_pct": 30.1,
-    "xwoba": 0.348,
-    "avg_exit_velo": 88.2
-  },
-  "680977": {
-    "name": "Brendan Donovan",
-    "barrel_pct": 4.4,
-    "hardhit_pct": 32.9,
-    "xwoba": 0.344,
-    "avg_exit_velo": 85.9
-  },
-  "807712": {
-    "name": "Luke Keaschall",
-    "barrel_pct": 3.0,
-    "hardhit_pct": 27.7,
-    "xwoba": 0.296,
-    "avg_exit_velo": 84.3
-  },
-  "696285": {
-    "name": "Jacob Young",
-    "barrel_pct": 7.0,
-    "hardhit_pct": 35.5,
-    "xwoba": 0.311,
-    "avg_exit_velo": 88.7
-  },
-  "665856": {
-    "name": "Jair Camargo",
-    "barrel_pct": 100.0,
-    "hardhit_pct": 100.0,
-    "xwoba": 0.407,
-    "avg_exit_velo": 108.1
-  },
-  "701358": {
-    "name": "Cam Smith",
-    "barrel_pct": 11.8,
     "hardhit_pct": 44.4,
-    "xwoba": 0.334,
-    "avg_exit_velo": 89.4
+    "xwoba": 0.175,
+    "avg_exit_velo": 90.9
   },
-  "681393": {
-    "name": "Connor Norby",
-    "barrel_pct": 7.6,
-    "hardhit_pct": 36.6,
-    "xwoba": 0.282,
-    "avg_exit_velo": 87.0
-  },
-  "671155": {
-    "name": "Ivan Johnson",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.21,
-    "avg_exit_velo": 89.1
-  },
-  "668952": {
-    "name": "Ryan Kreidler",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 35.7,
-    "xwoba": 0.29,
-    "avg_exit_velo": 87.5
-  },
-  "680574": {
-    "name": "Matt McLain",
-    "barrel_pct": 9.2,
-    "hardhit_pct": 38.0,
-    "xwoba": 0.317,
-    "avg_exit_velo": 88.8
-  },
-  "665487": {
-    "name": "Fernando Tatis Jr.",
-    "barrel_pct": 11.3,
-    "hardhit_pct": 53.2,
-    "xwoba": 0.357,
-    "avg_exit_velo": 92.1
-  },
-  "691785": {
-    "name": "Marcelo Mayer",
-    "barrel_pct": 6.1,
-    "hardhit_pct": 36.0,
-    "xwoba": 0.259,
-    "avg_exit_velo": 86.1
-  },
-  "691620": {
-    "name": "Jeferson Quero",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 0.0,
-    "xwoba": 0.495,
-    "avg_exit_velo": 85.6
-  },
-  "677800": {
-    "name": "Wilyer Abreu",
-    "barrel_pct": 13.1,
-    "hardhit_pct": 42.5,
-    "xwoba": 0.35,
-    "avg_exit_velo": 90.1
-  },
-  "679845": {
-    "name": "Nick Loftin",
-    "barrel_pct": 4.7,
-    "hardhit_pct": 29.6,
-    "xwoba": 0.309,
-    "avg_exit_velo": 87.5
-  },
-  "669701": {
-    "name": "Josh Smith",
-    "barrel_pct": 6.2,
-    "hardhit_pct": 30.9,
-    "xwoba": 0.28,
-    "avg_exit_velo": 86.8
-  },
-  "666018": {
-    "name": "Jonathan Aranda",
-    "barrel_pct": 9.9,
-    "hardhit_pct": 44.7,
-    "xwoba": 0.36,
-    "avg_exit_velo": 91.0
-  },
-  "663604": {
-    "name": "Brandon Lockridge",
-    "barrel_pct": 1.7,
-    "hardhit_pct": 32.8,
-    "xwoba": 0.276,
-    "avg_exit_velo": 86.2
-  },
-  "671218": {
-    "name": "Heliot Ramos",
-    "barrel_pct": 15.7,
-    "hardhit_pct": 50.3,
-    "xwoba": 0.341,
-    "avg_exit_velo": 92.4
-  },
-  "605141": {
-    "name": "Mookie Betts",
-    "barrel_pct": 8.5,
-    "hardhit_pct": 38.6,
-    "xwoba": 0.332,
-    "avg_exit_velo": 90.5
-  },
-  "808982": {
-    "name": "Jung Hoo Lee",
-    "barrel_pct": 2.2,
-    "hardhit_pct": 28.5,
-    "xwoba": 0.313,
-    "avg_exit_velo": 87.1
-  },
-  "664023": {
-    "name": "Ian Happ",
-    "barrel_pct": 12.2,
-    "hardhit_pct": 43.0,
-    "xwoba": 0.323,
-    "avg_exit_velo": 89.7
-  },
-  "677950": {
-    "name": "Alek Thomas",
-    "barrel_pct": 8.6,
-    "hardhit_pct": 43.1,
-    "xwoba": 0.292,
-    "avg_exit_velo": 89.9
-  },
-  "695731": {
-    "name": "Braden Montgomery",
-    "barrel_pct": 4.0,
-    "hardhit_pct": 41.4,
-    "xwoba": 0.304,
-    "avg_exit_velo": 89.4
-  },
-  "700250": {
-    "name": "Ben Rice",
-    "barrel_pct": 15.4,
-    "hardhit_pct": 48.5,
-    "xwoba": 0.386,
-    "avg_exit_velo": 92.3
-  },
-  "686668": {
-    "name": "Brenton Doyle",
-    "barrel_pct": 5.9,
-    "hardhit_pct": 35.2,
-    "xwoba": 0.248,
-    "avg_exit_velo": 87.8
-  },
-  "673490": {
-    "name": "Ha-Seong Kim",
-    "barrel_pct": 4.1,
-    "hardhit_pct": 21.6,
-    "xwoba": 0.212,
+  "664983": {
+    "name": "Jake McCarthy",
+    "barrel_pct": 5.6,
+    "hardhit_pct": 25.7,
+    "xwoba": 0.312,
     "avg_exit_velo": 85.2
   },
-  "592518": {
-    "name": "Manny Machado",
-    "barrel_pct": 11.2,
-    "hardhit_pct": 44.2,
-    "xwoba": 0.331,
-    "avg_exit_velo": 90.4
+  "660271": {
+    "name": "Shohei Ohtani",
+    "barrel_pct": 17.0,
+    "hardhit_pct": 53.6,
+    "xwoba": 0.409,
+    "avg_exit_velo": 93.6
   },
-  "681198": {
-    "name": "TJ Rumfield",
-    "barrel_pct": 5.4,
-    "hardhit_pct": 27.9,
-    "xwoba": 0.325,
-    "avg_exit_velo": 83.7
+  "666464": {
+    "name": "Jerar Encarnacion",
+    "barrel_pct": 7.7,
+    "hardhit_pct": 34.6,
+    "xwoba": 0.21,
+    "avg_exit_velo": 87.5
+  },
+  "683679": {
+    "name": "Jesus Rodriguez",
+    "barrel_pct": 2.5,
+    "hardhit_pct": 27.5,
+    "xwoba": 0.316,
+    "avg_exit_velo": 86.2
+  },
+  "700932": {
+    "name": "Kyle Manzardo",
+    "barrel_pct": 10.8,
+    "hardhit_pct": 40.3,
+    "xwoba": 0.303,
+    "avg_exit_velo": 89.3
+  },
+  "600869": {
+    "name": "Jeimer Candelario",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 40.0,
+    "xwoba": 0.218,
+    "avg_exit_velo": 91.8
   },
   "669717": {
     "name": "Will Wilson",
@@ -440,635 +62,40 @@
     "xwoba": 0.451,
     "avg_exit_velo": 87.8
   },
-  "666182": {
-    "name": "Bo Bichette",
-    "barrel_pct": 6.7,
-    "hardhit_pct": 43.0,
-    "xwoba": 0.329,
-    "avg_exit_velo": 89.9
-  },
-  "690993": {
-    "name": "Colt Keith",
-    "barrel_pct": 8.1,
-    "hardhit_pct": 42.9,
-    "xwoba": 0.326,
-    "avg_exit_velo": 89.3
-  },
-  "669242": {
-    "name": "Tommy Edman",
-    "barrel_pct": 9.1,
-    "hardhit_pct": 40.9,
-    "xwoba": 0.382,
-    "avg_exit_velo": 90.1
-  },
-  "642133": {
-    "name": "Rowdy Tellez",
-    "barrel_pct": 28.6,
-    "hardhit_pct": 42.9,
-    "xwoba": 0.506,
-    "avg_exit_velo": 91.8
-  },
-  "663647": {
-    "name": "Ke'Bryan Hayes",
-    "barrel_pct": 8.5,
-    "hardhit_pct": 39.1,
-    "xwoba": 0.308,
-    "avg_exit_velo": 90.7
-  },
-  "683357": {
-    "name": "Owen Caissie",
-    "barrel_pct": 16.3,
-    "hardhit_pct": 48.1,
-    "xwoba": 0.309,
-    "avg_exit_velo": 91.8
-  },
-  "670231": {
-    "name": "John Rave",
-    "barrel_pct": 27.3,
-    "hardhit_pct": 63.6,
-    "xwoba": 0.419,
-    "avg_exit_velo": 100.3
-  },
-  "665861": {
-    "name": "Sebasti\u00e1n Rivero",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 14.3,
-    "xwoba": 0.267,
-    "avg_exit_velo": 82.0
-  },
-  "592450": {
-    "name": "Aaron Judge",
-    "barrel_pct": 21.7,
-    "hardhit_pct": 57.3,
-    "xwoba": 0.415,
-    "avg_exit_velo": 94.1
-  },
-  "646240": {
-    "name": "Rafael Devers",
-    "barrel_pct": 11.2,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.319,
-    "avg_exit_velo": 92.2
-  },
-  "691406": {
-    "name": "Junior Caminero",
-    "barrel_pct": 13.6,
-    "hardhit_pct": 51.3,
-    "xwoba": 0.379,
-    "avg_exit_velo": 93.0
-  },
-  "642201": {
-    "name": "Eli White",
-    "barrel_pct": 6.6,
-    "hardhit_pct": 32.6,
-    "xwoba": 0.276,
-    "avg_exit_velo": 86.9
-  },
-  "669743": {
-    "name": "Alex Call",
-    "barrel_pct": 2.1,
-    "hardhit_pct": 17.7,
-    "xwoba": 0.275,
-    "avg_exit_velo": 83.9
-  },
-  "685133": {
-    "name": "Wade Meckler",
-    "barrel_pct": 5.2,
-    "hardhit_pct": 33.0,
-    "xwoba": 0.322,
-    "avg_exit_velo": 86.7
-  },
-  "668885": {
-    "name": "Austin Martin",
-    "barrel_pct": 2.1,
-    "hardhit_pct": 27.9,
-    "xwoba": 0.311,
-    "avg_exit_velo": 86.9
-  },
-  "543309": {
-    "name": "Kyle Higashioka",
-    "barrel_pct": 8.5,
-    "hardhit_pct": 38.1,
-    "xwoba": 0.295,
-    "avg_exit_velo": 88.2
-  },
-  "641680": {
-    "name": "Jonah Heim",
-    "barrel_pct": 6.8,
-    "hardhit_pct": 28.1,
-    "xwoba": 0.296,
-    "avg_exit_velo": 86.9
-  },
-  "672820": {
-    "name": "Lenyn Sosa",
-    "barrel_pct": 5.6,
-    "hardhit_pct": 36.7,
-    "xwoba": 0.249,
-    "avg_exit_velo": 88.7
-  },
-  "641584": {
-    "name": "Jake Fraley",
-    "barrel_pct": 8.8,
-    "hardhit_pct": 21.4,
-    "xwoba": 0.276,
-    "avg_exit_velo": 83.9
-  },
-  "668715": {
-    "name": "Spencer Steer",
-    "barrel_pct": 12.8,
-    "hardhit_pct": 39.6,
-    "xwoba": 0.345,
-    "avg_exit_velo": 89.7
-  },
-  "691788": {
-    "name": "Joe Mack",
-    "barrel_pct": 9.7,
-    "hardhit_pct": 37.9,
-    "xwoba": 0.316,
-    "avg_exit_velo": 88.8
-  },
-  "670224": {
-    "name": "Kameron Misner",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 20.0,
-    "xwoba": 0.209,
-    "avg_exit_velo": 81.8
-  },
-  "671083": {
-    "name": "Buddy Kennedy",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 30.0,
-    "xwoba": 0.198,
-    "avg_exit_velo": 80.3
-  },
-  "810938": {
-    "name": "Ben Williamson",
-    "barrel_pct": 1.8,
-    "hardhit_pct": 34.1,
-    "xwoba": 0.295,
-    "avg_exit_velo": 87.4
-  },
-  "664056": {
-    "name": "Harrison Bader",
-    "barrel_pct": 8.2,
-    "hardhit_pct": 41.1,
-    "xwoba": 0.272,
-    "avg_exit_velo": 89.2
-  },
-  "655316": {
-    "name": "Andruw Monasterio",
-    "barrel_pct": 9.6,
-    "hardhit_pct": 38.4,
-    "xwoba": 0.308,
-    "avg_exit_velo": 89.0
-  },
-  "687859": {
-    "name": "Troy Johnston",
-    "barrel_pct": 2.1,
-    "hardhit_pct": 38.2,
-    "xwoba": 0.326,
-    "avg_exit_velo": 89.8
-  },
-  "672642": {
-    "name": "Steward Berroa",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 0.0,
-    "xwoba": 0.211,
-    "avg_exit_velo": 90.7
-  },
-  "675448": {
-    "name": "Blake Hunt",
-    "barrel_pct": null,
-    "hardhit_pct": null,
-    "xwoba": 0.0,
-    "avg_exit_velo": null
-  },
-  "643289": {
-    "name": "Mauricio Dub\u00f3n",
-    "barrel_pct": 4.6,
-    "hardhit_pct": 30.7,
-    "xwoba": 0.31,
-    "avg_exit_velo": 86.4
-  },
-  "691723": {
-    "name": "Coby Mayo",
-    "barrel_pct": 11.4,
-    "hardhit_pct": 49.0,
-    "xwoba": 0.296,
-    "avg_exit_velo": 92.3
-  },
-  "805808": {
-    "name": "Kevin McGonigle",
-    "barrel_pct": 7.8,
-    "hardhit_pct": 37.3,
-    "xwoba": 0.362,
-    "avg_exit_velo": 88.0
-  },
-  "694212": {
-    "name": "Samuel Basallo",
-    "barrel_pct": 12.9,
-    "hardhit_pct": 45.5,
-    "xwoba": 0.336,
-    "avg_exit_velo": 91.3
-  },
-  "656775": {
-    "name": "Cedric Mullins",
-    "barrel_pct": 4.3,
-    "hardhit_pct": 31.2,
-    "xwoba": 0.262,
-    "avg_exit_velo": 88.0
-  },
-  "671286": {
-    "name": "Johnathan Rodr\u00edguez",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.33,
-    "avg_exit_velo": 89.1
-  },
-  "672724": {
-    "name": "Oswald Peraza",
-    "barrel_pct": 7.6,
-    "hardhit_pct": 37.3,
-    "xwoba": 0.279,
-    "avg_exit_velo": 87.3
-  },
-  "805347": {
-    "name": "Jim Jarvis",
-    "barrel_pct": 7.7,
-    "hardhit_pct": 38.5,
-    "xwoba": 0.279,
-    "avg_exit_velo": 88.0
-  },
-  "687394": {
-    "name": "Jack Brannigan",
-    "barrel_pct": null,
-    "hardhit_pct": null,
-    "xwoba": 0.0,
-    "avg_exit_velo": null
-  },
-  "805999": {
-    "name": "A.J. Ewing",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 42.6,
-    "xwoba": 0.327,
-    "avg_exit_velo": 89.4
-  },
-  "683146": {
-    "name": "Brett Baty",
-    "barrel_pct": 8.4,
-    "hardhit_pct": 39.1,
-    "xwoba": 0.303,
-    "avg_exit_velo": 89.4
-  },
-  "682641": {
-    "name": "Luis Matos",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 23.1,
-    "xwoba": 0.13,
-    "avg_exit_velo": 84.1
-  },
-  "666397": {
-    "name": "Edouard Julien",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 50.6,
-    "xwoba": 0.343,
-    "avg_exit_velo": 91.1
-  },
-  "694514": {
-    "name": "Sterlin Thompson",
-    "barrel_pct": 6.3,
-    "hardhit_pct": 43.8,
-    "xwoba": 0.295,
-    "avg_exit_velo": 86.6
-  },
-  "682177": {
-    "name": "Daniel Schneemann",
-    "barrel_pct": 7.8,
-    "hardhit_pct": 38.0,
-    "xwoba": 0.287,
-    "avg_exit_velo": 88.1
-  },
-  "682988": {
-    "name": "Tyler Locklear",
-    "barrel_pct": 16.7,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.419,
-    "avg_exit_velo": 85.1
-  },
-  "606115": {
-    "name": "Orlando Arcia",
-    "barrel_pct": 2.5,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.245,
-    "avg_exit_velo": 86.0
-  },
-  "682729": {
-    "name": "Jonatan Clase",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 35.7,
-    "xwoba": 0.247,
-    "avg_exit_velo": 86.8
-  },
-  "673995": {
-    "name": "Davis Wendzel",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.229,
-    "avg_exit_velo": 92.2
-  },
-  "805300": {
-    "name": "Jakob Marsee",
-    "barrel_pct": 3.2,
-    "hardhit_pct": 33.2,
-    "xwoba": 0.298,
-    "avg_exit_velo": 86.7
-  },
-  "815873": {
-    "name": "Sean Keys",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 61.9,
-    "xwoba": 0.202,
-    "avg_exit_velo": 93.5
-  },
   "695578": {
     "name": "James Wood",
     "barrel_pct": 22.1,
-    "hardhit_pct": 59.7,
-    "xwoba": 0.425,
+    "hardhit_pct": 59.3,
+    "xwoba": 0.426,
     "avg_exit_velo": 95.2
-  },
-  "668939": {
-    "name": "Adley Rutschman",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 42.0,
-    "xwoba": 0.348,
-    "avg_exit_velo": 89.4
-  },
-  "673357": {
-    "name": "Luis Robert Jr.",
-    "barrel_pct": 4.1,
-    "hardhit_pct": 42.5,
-    "xwoba": 0.325,
-    "avg_exit_velo": 89.9
-  },
-  "677942": {
-    "name": "Blaze Alexander",
-    "barrel_pct": 7.2,
-    "hardhit_pct": 48.8,
-    "xwoba": 0.361,
-    "avg_exit_velo": 92.6
-  },
-  "687363": {
-    "name": "Victor Scott II",
-    "barrel_pct": 0.8,
-    "hardhit_pct": 23.8,
-    "xwoba": 0.273,
-    "avg_exit_velo": 86.7
-  },
-  "702332": {
-    "name": "Caleb Durbin",
-    "barrel_pct": 2.7,
-    "hardhit_pct": 29.2,
-    "xwoba": 0.283,
-    "avg_exit_velo": 84.9
-  },
-  "805904": {
-    "name": "Zach Cole",
-    "barrel_pct": 16.7,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.289,
-    "avg_exit_velo": 92.5
-  },
-  "678218": {
-    "name": "Brandon Valenzuela",
-    "barrel_pct": 8.1,
-    "hardhit_pct": 37.1,
-    "xwoba": 0.318,
-    "avg_exit_velo": 88.4
-  },
-  "682829": {
-    "name": "Elly De La Cruz",
-    "barrel_pct": 15.0,
-    "hardhit_pct": 52.2,
-    "xwoba": 0.367,
-    "avg_exit_velo": 94.2
-  },
-  "664068": {
-    "name": "Scott Kingery",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 0.0,
-    "xwoba": 0.156,
-    "avg_exit_velo": 77.1
-  },
-  "696135": {
-    "name": "Kahlil Watson",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 32.1,
-    "xwoba": 0.246,
-    "avg_exit_velo": 89.3
-  },
-  "669397": {
-    "name": "Nick Allen",
-    "barrel_pct": 1.4,
-    "hardhit_pct": 26.0,
-    "xwoba": 0.228,
-    "avg_exit_velo": 84.2
-  },
-  "672960": {
-    "name": "Kazuma Okamoto",
-    "barrel_pct": 14.0,
-    "hardhit_pct": 46.2,
-    "xwoba": 0.321,
-    "avg_exit_velo": 91.0
-  },
-  "514888": {
-    "name": "Jose Altuve",
-    "barrel_pct": 6.0,
-    "hardhit_pct": 32.5,
-    "xwoba": 0.281,
-    "avg_exit_velo": 85.6
-  },
-  "670156": {
-    "name": "Miles Mastrobuoni",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 22.2,
-    "xwoba": 0.184,
-    "avg_exit_velo": 90.1
-  },
-  "694671": {
-    "name": "Wyatt Langford",
-    "barrel_pct": 8.4,
-    "hardhit_pct": 37.0,
-    "xwoba": 0.321,
-    "avg_exit_velo": 88.9
-  },
-  "668901": {
-    "name": "Mark Vientos",
-    "barrel_pct": 10.1,
-    "hardhit_pct": 43.8,
-    "xwoba": 0.31,
-    "avg_exit_velo": 89.5
-  },
-  "677595": {
-    "name": "Ronny Mauricio",
-    "barrel_pct": 9.4,
-    "hardhit_pct": 34.4,
-    "xwoba": 0.205,
-    "avg_exit_velo": 89.9
-  },
-  "663611": {
-    "name": "Nick Madrigal",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 24.4,
-    "xwoba": 0.298,
-    "avg_exit_velo": 88.7
-  },
-  "699625": {
-    "name": "Jimmy Crooks",
-    "barrel_pct": 9.8,
-    "hardhit_pct": 54.8,
-    "xwoba": 0.342,
-    "avg_exit_velo": 92.5
-  },
-  "650968": {
-    "name": "Yohel Pozo",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 26.7,
-    "xwoba": 0.244,
-    "avg_exit_velo": 87.6
-  },
-  "621020": {
-    "name": "Dansby Swanson",
-    "barrel_pct": 7.2,
-    "hardhit_pct": 42.8,
-    "xwoba": 0.303,
-    "avg_exit_velo": 89.8
-  },
-  "668227": {
-    "name": "Randy Arozarena",
-    "barrel_pct": 7.8,
-    "hardhit_pct": 42.2,
-    "xwoba": 0.352,
-    "avg_exit_velo": 91.3
   },
   "677587": {
     "name": "Brayan Rocchio",
-    "barrel_pct": 2.8,
-    "hardhit_pct": 32.4,
-    "xwoba": 0.305,
-    "avg_exit_velo": 86.7
+    "barrel_pct": 3.1,
+    "hardhit_pct": 32.5,
+    "xwoba": 0.306,
+    "avg_exit_velo": 86.6
   },
-  "657757": {
-    "name": "Gavin Sheets",
-    "barrel_pct": 7.3,
-    "hardhit_pct": 40.5,
-    "xwoba": 0.328,
-    "avg_exit_velo": 87.9
+  "680664": {
+    "name": "Eduardo Valencia",
+    "barrel_pct": 25.0,
+    "hardhit_pct": 62.5,
+    "xwoba": 0.423,
+    "avg_exit_velo": 89.5
   },
-  "668974": {
-    "name": "Maverick Handley",
-    "barrel_pct": null,
-    "hardhit_pct": null,
-    "xwoba": 0.0,
-    "avg_exit_velo": null
+  "668723": {
+    "name": "Ryan Vilade",
+    "barrel_pct": 5.9,
+    "hardhit_pct": 38.1,
+    "xwoba": 0.312,
+    "avg_exit_velo": 89.3
   },
-  "693307": {
-    "name": "Dillon Dingler",
-    "barrel_pct": 11.7,
-    "hardhit_pct": 47.0,
-    "xwoba": 0.379,
-    "avg_exit_velo": 89.7
-  },
-  "691781": {
-    "name": "Brady House",
-    "barrel_pct": 10.6,
-    "hardhit_pct": 43.0,
-    "xwoba": 0.319,
-    "avg_exit_velo": 89.0
-  },
-  "700337": {
-    "name": "Edgar Quero",
-    "barrel_pct": 2.6,
-    "hardhit_pct": 34.5,
-    "xwoba": 0.26,
-    "avg_exit_velo": 90.9
-  },
-  "665750": {
-    "name": "Leody Taveras",
-    "barrel_pct": 4.7,
-    "hardhit_pct": 29.9,
-    "xwoba": 0.288,
-    "avg_exit_velo": 87.3
-  },
-  "681190": {
-    "name": "Randy V\u00e1squez",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 0.0,
-    "xwoba": 0.044,
-    "avg_exit_velo": 66.1
-  },
-  "686527": {
-    "name": "Dominic Canzone",
-    "barrel_pct": 14.4,
-    "hardhit_pct": 48.1,
-    "xwoba": 0.363,
-    "avg_exit_velo": 92.8
-  },
-  "691026": {
-    "name": "Masyn Winn",
-    "barrel_pct": 3.0,
-    "hardhit_pct": 35.1,
-    "xwoba": 0.297,
-    "avg_exit_velo": 88.1
-  },
-  "660670": {
-    "name": "Ronald Acu\u00f1a Jr.",
-    "barrel_pct": 13.1,
-    "hardhit_pct": 43.4,
-    "xwoba": 0.378,
-    "avg_exit_velo": 90.1
-  },
-  "691720": {
-    "name": "Kyle Karros",
-    "barrel_pct": 8.6,
-    "hardhit_pct": 43.5,
-    "xwoba": 0.34,
-    "avg_exit_velo": 89.7
-  },
-  "665742": {
-    "name": "Juan Soto",
-    "barrel_pct": 14.3,
-    "hardhit_pct": 48.6,
-    "xwoba": 0.421,
-    "avg_exit_velo": 92.5
-  },
-  "672386": {
-    "name": "Alejandro Kirk",
-    "barrel_pct": 2.4,
-    "hardhit_pct": 37.6,
-    "xwoba": 0.269,
-    "avg_exit_velo": 86.8
-  },
-  "668709": {
-    "name": "JJ Bleday",
-    "barrel_pct": 9.6,
-    "hardhit_pct": 41.4,
-    "xwoba": 0.36,
-    "avg_exit_velo": 89.0
-  },
-  "606992": {
-    "name": "Eric Haase",
-    "barrel_pct": 16.3,
-    "hardhit_pct": 28.6,
-    "xwoba": 0.271,
-    "avg_exit_velo": 86.0
-  },
-  "650402": {
-    "name": "Gleyber Torres",
-    "barrel_pct": 7.8,
-    "hardhit_pct": 31.0,
-    "xwoba": 0.342,
-    "avg_exit_velo": 85.0
+  "665487": {
+    "name": "Fernando Tatis Jr.",
+    "barrel_pct": 11.2,
+    "hardhit_pct": 53.2,
+    "xwoba": 0.357,
+    "avg_exit_velo": 92.0
   },
   "641487": {
     "name": "J.P. Crawford",
@@ -1077,19 +104,362 @@
     "xwoba": 0.332,
     "avg_exit_velo": 88.2
   },
-  "553993": {
-    "name": "Eugenio Su\u00e1rez",
-    "barrel_pct": 10.4,
-    "hardhit_pct": 32.1,
-    "xwoba": 0.266,
-    "avg_exit_velo": 88.3
+  "673237": {
+    "name": "Yainer Diaz",
+    "barrel_pct": 5.2,
+    "hardhit_pct": 32.7,
+    "xwoba": 0.299,
+    "avg_exit_velo": 87.8
   },
-  "665926": {
-    "name": "Andr\u00e9s Gim\u00e9nez",
-    "barrel_pct": 4.1,
-    "hardhit_pct": 23.5,
-    "xwoba": 0.269,
-    "avg_exit_velo": 86.2
+  "669743": {
+    "name": "Alex Call",
+    "barrel_pct": 2.1,
+    "hardhit_pct": 17.7,
+    "xwoba": 0.275,
+    "avg_exit_velo": 83.9
+  },
+  "664770": {
+    "name": "Nathan Lukes",
+    "barrel_pct": 1.1,
+    "hardhit_pct": 28.3,
+    "xwoba": 0.29,
+    "avg_exit_velo": 86.6
+  },
+  "683011": {
+    "name": "Anthony Volpe",
+    "barrel_pct": 3.7,
+    "hardhit_pct": 34.3,
+    "xwoba": 0.299,
+    "avg_exit_velo": 87.9
+  },
+  "693304": {
+    "name": "Nick Gonzales",
+    "barrel_pct": 3.1,
+    "hardhit_pct": 36.5,
+    "xwoba": 0.324,
+    "avg_exit_velo": 85.8
+  },
+  "805672": {
+    "name": "Collin Price",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.302,
+    "avg_exit_velo": 93.0
+  },
+  "676551": {
+    "name": "Brewer Hicklen",
+    "barrel_pct": 9.1,
+    "hardhit_pct": 54.5,
+    "xwoba": 0.355,
+    "avg_exit_velo": 94.9
+  },
+  "806068": {
+    "name": "Colt Emerson",
+    "barrel_pct": 5.7,
+    "hardhit_pct": 29.2,
+    "xwoba": 0.237,
+    "avg_exit_velo": 86.3
+  },
+  "678554": {
+    "name": "Curtis Mead",
+    "barrel_pct": 11.2,
+    "hardhit_pct": 42.9,
+    "xwoba": 0.359,
+    "avg_exit_velo": 88.2
+  },
+  "694514": {
+    "name": "Sterlin Thompson",
+    "barrel_pct": 6.3,
+    "hardhit_pct": 43.8,
+    "xwoba": 0.295,
+    "avg_exit_velo": 86.6
+  },
+  "518595": {
+    "name": "Travis d'Arnaud",
+    "barrel_pct": 14.3,
+    "hardhit_pct": 32.1,
+    "xwoba": 0.337,
+    "avg_exit_velo": 87.7
+  },
+  "696030": {
+    "name": "Alejandro Osuna",
+    "barrel_pct": 0.7,
+    "hardhit_pct": 29.1,
+    "xwoba": 0.309,
+    "avg_exit_velo": 86.8
+  },
+  "606115": {
+    "name": "Orlando Arcia",
+    "barrel_pct": 2.5,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.245,
+    "avg_exit_velo": 86.0
+  },
+  "663656": {
+    "name": "Kyle Tucker",
+    "barrel_pct": 5.9,
+    "hardhit_pct": 38.6,
+    "xwoba": 0.331,
+    "avg_exit_velo": 88.9
+  },
+  "670042": {
+    "name": "Luke Raley",
+    "barrel_pct": 16.2,
+    "hardhit_pct": 47.9,
+    "xwoba": 0.346,
+    "avg_exit_velo": 90.8
+  },
+  "682657": {
+    "name": "Angel Mart\u00ednez",
+    "barrel_pct": 7.9,
+    "hardhit_pct": 37.3,
+    "xwoba": 0.306,
+    "avg_exit_velo": 88.0
+  },
+  "686555": {
+    "name": "Isaac Collins",
+    "barrel_pct": 5.6,
+    "hardhit_pct": 41.1,
+    "xwoba": 0.31,
+    "avg_exit_velo": 88.4
+  },
+  "670623": {
+    "name": "Isaac Paredes",
+    "barrel_pct": 6.1,
+    "hardhit_pct": 30.4,
+    "xwoba": 0.319,
+    "avg_exit_velo": 86.7
+  },
+  "650490": {
+    "name": "Yandy D\u00edaz",
+    "barrel_pct": 7.2,
+    "hardhit_pct": 47.6,
+    "xwoba": 0.362,
+    "avg_exit_velo": 91.0
+  },
+  "666971": {
+    "name": "Lourdes Gurriel Jr.",
+    "barrel_pct": 4.9,
+    "hardhit_pct": 34.3,
+    "xwoba": 0.277,
+    "avg_exit_velo": 87.3
+  },
+  "572233": {
+    "name": "Christian Walker",
+    "barrel_pct": 9.8,
+    "hardhit_pct": 42.4,
+    "xwoba": 0.298,
+    "avg_exit_velo": 89.3
+  },
+  "660688": {
+    "name": "Keibert Ruiz",
+    "barrel_pct": 5.3,
+    "hardhit_pct": 39.4,
+    "xwoba": 0.277,
+    "avg_exit_velo": 89.0
+  },
+  "675659": {
+    "name": "Greg Jones",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 28.6,
+    "xwoba": 0.164,
+    "avg_exit_velo": 86.3
+  },
+  "805904": {
+    "name": "Zach Cole",
+    "barrel_pct": 16.7,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.289,
+    "avg_exit_velo": 92.5
+  },
+  "677588": {
+    "name": "Jos\u00e9 Tena",
+    "barrel_pct": 8.2,
+    "hardhit_pct": 51.6,
+    "xwoba": 0.309,
+    "avg_exit_velo": 92.2
+  },
+  "702284": {
+    "name": "Cole Young",
+    "barrel_pct": 5.3,
+    "hardhit_pct": 38.7,
+    "xwoba": 0.329,
+    "avg_exit_velo": 88.4
+  },
+  "623168": {
+    "name": "Tyler Heineman",
+    "barrel_pct": 1.2,
+    "hardhit_pct": 12.9,
+    "xwoba": 0.248,
+    "avg_exit_velo": 81.3
+  },
+  "691594": {
+    "name": "Javier Sanoja",
+    "barrel_pct": 1.3,
+    "hardhit_pct": 31.2,
+    "xwoba": 0.275,
+    "avg_exit_velo": 87.0
+  },
+  "663743": {
+    "name": "Nick Fortes",
+    "barrel_pct": 2.6,
+    "hardhit_pct": 35.7,
+    "xwoba": 0.278,
+    "avg_exit_velo": 85.6
+  },
+  "663853": {
+    "name": "Romy Gonzalez",
+    "barrel_pct": 5.7,
+    "hardhit_pct": 45.7,
+    "xwoba": 0.303,
+    "avg_exit_velo": 90.4
+  },
+  "681198": {
+    "name": "TJ Rumfield",
+    "barrel_pct": 5.4,
+    "hardhit_pct": 28.2,
+    "xwoba": 0.325,
+    "avg_exit_velo": 83.9
+  },
+  "691011": {
+    "name": "Drew Romo",
+    "barrel_pct": 7.2,
+    "hardhit_pct": 26.5,
+    "xwoba": 0.247,
+    "avg_exit_velo": 83.9
+  },
+  "664774": {
+    "name": "LaMonte Wade Jr.",
+    "barrel_pct": 5.9,
+    "hardhit_pct": 32.4,
+    "xwoba": 0.291,
+    "avg_exit_velo": 84.8
+  },
+  "691788": {
+    "name": "Joe Mack",
+    "barrel_pct": 9.4,
+    "hardhit_pct": 38.3,
+    "xwoba": 0.315,
+    "avg_exit_velo": 88.9
+  },
+  "687952": {
+    "name": "Christian Encarnacion-Strand",
+    "barrel_pct": 15.4,
+    "hardhit_pct": 38.5,
+    "xwoba": 0.338,
+    "avg_exit_velo": 90.8
+  },
+  "681393": {
+    "name": "Connor Norby",
+    "barrel_pct": 7.6,
+    "hardhit_pct": 36.6,
+    "xwoba": 0.282,
+    "avg_exit_velo": 87.0
+  },
+  "669016": {
+    "name": "Brandon Marsh",
+    "barrel_pct": 9.7,
+    "hardhit_pct": 45.0,
+    "xwoba": 0.318,
+    "avg_exit_velo": 89.5
+  },
+  "686681": {
+    "name": "Michael Massey",
+    "barrel_pct": 6.3,
+    "hardhit_pct": 40.9,
+    "xwoba": 0.301,
+    "avg_exit_velo": 90.0
+  },
+  "666126": {
+    "name": "Carlos Cortes",
+    "barrel_pct": 7.6,
+    "hardhit_pct": 40.5,
+    "xwoba": 0.336,
+    "avg_exit_velo": 90.0
+  },
+  "669134": {
+    "name": "Luis Campusano",
+    "barrel_pct": 10.2,
+    "hardhit_pct": 45.8,
+    "xwoba": 0.347,
+    "avg_exit_velo": 87.3
+  },
+  "670242": {
+    "name": "Matt Wallner",
+    "barrel_pct": 10.4,
+    "hardhit_pct": 40.3,
+    "xwoba": 0.281,
+    "avg_exit_velo": 88.4
+  },
+  "678489": {
+    "name": "Jorge Barrosa",
+    "barrel_pct": 5.8,
+    "hardhit_pct": 24.4,
+    "xwoba": 0.227,
+    "avg_exit_velo": 87.0
+  },
+  "608348": {
+    "name": "Carson Kelly",
+    "barrel_pct": 6.3,
+    "hardhit_pct": 37.9,
+    "xwoba": 0.326,
+    "avg_exit_velo": 87.9
+  },
+  "681909": {
+    "name": "Justin Dean",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.36,
+    "avg_exit_velo": 80.3
+  },
+  "701305": {
+    "name": "Zach Dezenzo",
+    "barrel_pct": 10.5,
+    "hardhit_pct": 28.9,
+    "xwoba": 0.27,
+    "avg_exit_velo": 83.3
+  },
+  "691458": {
+    "name": "Blaze Jordan",
+    "barrel_pct": 6.3,
+    "hardhit_pct": 43.8,
+    "xwoba": 0.299,
+    "avg_exit_velo": 89.1
+  },
+  "671732": {
+    "name": "Lawrence Butler",
+    "barrel_pct": 6.2,
+    "hardhit_pct": 45.3,
+    "xwoba": 0.304,
+    "avg_exit_velo": 89.2
+  },
+  "694025": {
+    "name": "Felix Reyes",
+    "barrel_pct": 6.9,
+    "hardhit_pct": 27.6,
+    "xwoba": 0.233,
+    "avg_exit_velo": 89.2
+  },
+  "804668": {
+    "name": "Rafael Flores Jr.",
+    "barrel_pct": 15.4,
+    "hardhit_pct": 30.8,
+    "xwoba": 0.489,
+    "avg_exit_velo": 88.1
+  },
+  "691718": {
+    "name": "Pete Crow-Armstrong",
+    "barrel_pct": 10.5,
+    "hardhit_pct": 47.4,
+    "xwoba": 0.36,
+    "avg_exit_velo": 89.9
+  },
+  "691026": {
+    "name": "Masyn Winn",
+    "barrel_pct": 3.0,
+    "hardhit_pct": 35.0,
+    "xwoba": 0.299,
+    "avg_exit_velo": 88.0
   },
   "694388": {
     "name": "Joey Loperfido",
@@ -1098,6 +468,370 @@
     "xwoba": 0.297,
     "avg_exit_velo": 89.0
   },
+  "521692": {
+    "name": "Salvador Perez",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 42.6,
+    "xwoba": 0.295,
+    "avg_exit_velo": 89.0
+  },
+  "670224": {
+    "name": "Kameron Misner",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 20.0,
+    "xwoba": 0.209,
+    "avg_exit_velo": 81.8
+  },
+  "669394": {
+    "name": "Jake Burger",
+    "barrel_pct": 10.9,
+    "hardhit_pct": 46.5,
+    "xwoba": 0.308,
+    "avg_exit_velo": 90.0
+  },
+  "664728": {
+    "name": "Kyle Isbel",
+    "barrel_pct": 3.1,
+    "hardhit_pct": 34.1,
+    "xwoba": 0.275,
+    "avg_exit_velo": 88.6
+  },
+  "669899": {
+    "name": "Ryan Ward",
+    "barrel_pct": 10.8,
+    "hardhit_pct": 28.9,
+    "xwoba": 0.316,
+    "avg_exit_velo": 88.5
+  },
+  "660844": {
+    "name": "Leo Rivas",
+    "barrel_pct": 1.5,
+    "hardhit_pct": 13.6,
+    "xwoba": 0.238,
+    "avg_exit_velo": 86.2
+  },
+  "665877": {
+    "name": "Jos\u00e9 Ferm\u00edn",
+    "barrel_pct": 2.0,
+    "hardhit_pct": 30.6,
+    "xwoba": 0.287,
+    "avg_exit_velo": 85.6
+  },
+  "605141": {
+    "name": "Mookie Betts",
+    "barrel_pct": 8.4,
+    "hardhit_pct": 38.2,
+    "xwoba": 0.331,
+    "avg_exit_velo": 90.4
+  },
+  "681351": {
+    "name": "Logan O'Hoppe",
+    "barrel_pct": 10.3,
+    "hardhit_pct": 36.4,
+    "xwoba": 0.271,
+    "avg_exit_velo": 86.9
+  },
+  "808975": {
+    "name": "Hyeseong Kim",
+    "barrel_pct": 3.4,
+    "hardhit_pct": 25.3,
+    "xwoba": 0.304,
+    "avg_exit_velo": 85.8
+  },
+  "696100": {
+    "name": "Hunter Goodman",
+    "barrel_pct": 17.5,
+    "hardhit_pct": 46.5,
+    "xwoba": 0.34,
+    "avg_exit_velo": 91.1
+  },
+  "682818": {
+    "name": "Yohendrick Pi\u00f1ango",
+    "barrel_pct": 7.0,
+    "hardhit_pct": 44.7,
+    "xwoba": 0.313,
+    "avg_exit_velo": 90.5
+  },
+  "685133": {
+    "name": "Wade Meckler",
+    "barrel_pct": 5.0,
+    "hardhit_pct": 33.0,
+    "xwoba": 0.328,
+    "avg_exit_velo": 86.7
+  },
+  "696285": {
+    "name": "Jacob Young",
+    "barrel_pct": 7.0,
+    "hardhit_pct": 35.5,
+    "xwoba": 0.311,
+    "avg_exit_velo": 88.7
+  },
+  "682928": {
+    "name": "CJ Abrams",
+    "barrel_pct": 10.9,
+    "hardhit_pct": 42.7,
+    "xwoba": 0.351,
+    "avg_exit_velo": 90.0
+  },
+  "665804": {
+    "name": "Miguel Amaya",
+    "barrel_pct": 6.0,
+    "hardhit_pct": 34.0,
+    "xwoba": 0.298,
+    "avg_exit_velo": 86.6
+  },
+  "669357": {
+    "name": "Nolan Gorman",
+    "barrel_pct": 9.2,
+    "hardhit_pct": 43.8,
+    "xwoba": 0.278,
+    "avg_exit_velo": 89.3
+  },
+  "642133": {
+    "name": "Rowdy Tellez",
+    "barrel_pct": 28.6,
+    "hardhit_pct": 42.9,
+    "xwoba": 0.506,
+    "avg_exit_velo": 91.8
+  },
+  "664056": {
+    "name": "Harrison Bader",
+    "barrel_pct": 8.2,
+    "hardhit_pct": 41.1,
+    "xwoba": 0.272,
+    "avg_exit_velo": 89.2
+  },
+  "668952": {
+    "name": "Ryan Kreidler",
+    "barrel_pct": 7.0,
+    "hardhit_pct": 36.0,
+    "xwoba": 0.289,
+    "avg_exit_velo": 87.7
+  },
+  "663647": {
+    "name": "Ke'Bryan Hayes",
+    "barrel_pct": 8.3,
+    "hardhit_pct": 38.9,
+    "xwoba": 0.308,
+    "avg_exit_velo": 90.7
+  },
+  "596019": {
+    "name": "Francisco Lindor",
+    "barrel_pct": 9.1,
+    "hardhit_pct": 49.0,
+    "xwoba": 0.346,
+    "avg_exit_velo": 92.0
+  },
+  "644433": {
+    "name": "Chadwick Tromp",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 25.9,
+    "xwoba": 0.176,
+    "avg_exit_velo": 85.3
+  },
+  "665856": {
+    "name": "Jair Camargo",
+    "barrel_pct": 100.0,
+    "hardhit_pct": 100.0,
+    "xwoba": 0.407,
+    "avg_exit_velo": 108.1
+  },
+  "502054": {
+    "name": "Tommy Pham",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.137,
+    "avg_exit_velo": 91.7
+  },
+  "694203": {
+    "name": "Denzer Guzman",
+    "barrel_pct": 6.0,
+    "hardhit_pct": 36.9,
+    "xwoba": 0.277,
+    "avg_exit_velo": 87.4
+  },
+  "823550": {
+    "name": "Sung-Mun Song",
+    "barrel_pct": 5.3,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.273,
+    "avg_exit_velo": 86.9
+  },
+  "686780": {
+    "name": "Pedro Pag\u00e9s",
+    "barrel_pct": 5.5,
+    "hardhit_pct": 39.1,
+    "xwoba": 0.267,
+    "avg_exit_velo": 87.1
+  },
+  "664702": {
+    "name": "Myles Straw",
+    "barrel_pct": 4.3,
+    "hardhit_pct": 25.7,
+    "xwoba": 0.297,
+    "avg_exit_velo": 86.0
+  },
+  "701398": {
+    "name": "Sal Stewart",
+    "barrel_pct": 14.6,
+    "hardhit_pct": 40.1,
+    "xwoba": 0.349,
+    "avg_exit_velo": 90.3
+  },
+  "669087": {
+    "name": "Sam Huff",
+    "barrel_pct": 15.4,
+    "hardhit_pct": 61.5,
+    "xwoba": 0.138,
+    "avg_exit_velo": 91.3
+  },
+  "687462": {
+    "name": "Spencer Horwitz",
+    "barrel_pct": 8.6,
+    "hardhit_pct": 34.3,
+    "xwoba": 0.339,
+    "avg_exit_velo": 86.9
+  },
+  "506702": {
+    "name": "Sandy Le\u00f3n",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 19.2,
+    "xwoba": 0.132,
+    "avg_exit_velo": 81.9
+  },
+  "664238": {
+    "name": "Dylan Moore",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.233,
+    "avg_exit_velo": 91.3
+  },
+  "670770": {
+    "name": "TJ Friedl",
+    "barrel_pct": 2.8,
+    "hardhit_pct": 28.0,
+    "xwoba": 0.244,
+    "avg_exit_velo": 87.4
+  },
+  "543807": {
+    "name": "George Springer",
+    "barrel_pct": 7.9,
+    "hardhit_pct": 39.8,
+    "xwoba": 0.306,
+    "avg_exit_velo": 88.4
+  },
+  "687263": {
+    "name": "Zach Neto",
+    "barrel_pct": 12.6,
+    "hardhit_pct": 39.4,
+    "xwoba": 0.307,
+    "avg_exit_velo": 89.4
+  },
+  "668974": {
+    "name": "Maverick Handley",
+    "barrel_pct": null,
+    "hardhit_pct": null,
+    "xwoba": 0.0,
+    "avg_exit_velo": null
+  },
+  "666185": {
+    "name": "Dylan Carlson",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.07,
+    "avg_exit_velo": 84.4
+  },
+  "657041": {
+    "name": "Lane Thomas",
+    "barrel_pct": 7.0,
+    "hardhit_pct": 42.8,
+    "xwoba": 0.328,
+    "avg_exit_velo": 89.7
+  },
+  "687597": {
+    "name": "Jordan Beck",
+    "barrel_pct": 3.3,
+    "hardhit_pct": 26.2,
+    "xwoba": 0.26,
+    "avg_exit_velo": 85.3
+  },
+  "592206": {
+    "name": "Nick Castellanos",
+    "barrel_pct": 8.4,
+    "hardhit_pct": 37.3,
+    "xwoba": 0.285,
+    "avg_exit_velo": 87.7
+  },
+  "805249": {
+    "name": "Otto Kemp",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 13.3,
+    "xwoba": 0.205,
+    "avg_exit_velo": 81.5
+  },
+  "699393": {
+    "name": "Pedro Ram\u00edrez",
+    "barrel_pct": 3.3,
+    "hardhit_pct": 41.7,
+    "xwoba": 0.293,
+    "avg_exit_velo": 89.8
+  },
+  "696135": {
+    "name": "Kahlil Watson",
+    "barrel_pct": 7.1,
+    "hardhit_pct": 32.1,
+    "xwoba": 0.246,
+    "avg_exit_velo": 89.3
+  },
+  "669065": {
+    "name": "Kyle Stowers",
+    "barrel_pct": 11.2,
+    "hardhit_pct": 54.3,
+    "xwoba": 0.32,
+    "avg_exit_velo": 91.6
+  },
+  "677592": {
+    "name": "Everson Pereira",
+    "barrel_pct": 10.6,
+    "hardhit_pct": 42.6,
+    "xwoba": 0.302,
+    "avg_exit_velo": 87.9
+  },
+  "678577": {
+    "name": "Junior Perez",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.269,
+    "avg_exit_velo": 90.2
+  },
+  "680779": {
+    "name": "Henry Davis",
+    "barrel_pct": 9.7,
+    "hardhit_pct": 39.6,
+    "xwoba": 0.288,
+    "avg_exit_velo": 89.7
+  },
+  "502671": {
+    "name": "Paul Goldschmidt",
+    "barrel_pct": 11.1,
+    "hardhit_pct": 37.6,
+    "xwoba": 0.309,
+    "avg_exit_velo": 86.5
+  },
+  "665161": {
+    "name": "Jeremy Pe\u00f1a",
+    "barrel_pct": 5.1,
+    "hardhit_pct": 39.8,
+    "xwoba": 0.357,
+    "avg_exit_velo": 87.9
+  },
+  "691620": {
+    "name": "Jeferson Quero",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.495,
+    "avg_exit_velo": 85.6
+  },
   "666023": {
     "name": "Freddy Fermin",
     "barrel_pct": 2.6,
@@ -1105,74 +839,704 @@
     "xwoba": 0.26,
     "avg_exit_velo": 86.3
   },
-  "671732": {
-    "name": "Lawrence Butler",
-    "barrel_pct": 5.7,
-    "hardhit_pct": 44.9,
-    "xwoba": 0.302,
-    "avg_exit_velo": 89.1
+  "666211": {
+    "name": "Taylor Trammell",
+    "barrel_pct": 9.0,
+    "hardhit_pct": 34.6,
+    "xwoba": 0.275,
+    "avg_exit_velo": 89.2
   },
-  "805779": {
-    "name": "Jacob Wilson",
-    "barrel_pct": 2.8,
-    "hardhit_pct": 28.2,
-    "xwoba": 0.295,
-    "avg_exit_velo": 83.8
+  "649966": {
+    "name": "Luis Ur\u00edas",
+    "barrel_pct": 7.7,
+    "hardhit_pct": 23.1,
+    "xwoba": 0.288,
+    "avg_exit_velo": 84.5
   },
-  "691907": {
-    "name": "Tsung-Che Cheng",
-    "barrel_pct": 8.3,
-    "hardhit_pct": 20.8,
-    "xwoba": 0.314,
+  "669288": {
+    "name": "Daniel Johnson",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 45.5,
+    "xwoba": 0.341,
+    "avg_exit_velo": 92.7
+  },
+  "643396": {
+    "name": "Isiah Kiner-Falefa",
+    "barrel_pct": 3.0,
+    "hardhit_pct": 26.5,
+    "xwoba": 0.312,
+    "avg_exit_velo": 82.3
+  },
+  "606992": {
+    "name": "Eric Haase",
+    "barrel_pct": 16.3,
+    "hardhit_pct": 28.6,
+    "xwoba": 0.271,
     "avg_exit_velo": 86.0
   },
-  "701678": {
-    "name": "Hao-Yu Lee",
-    "barrel_pct": 7.4,
-    "hardhit_pct": 36.4,
-    "xwoba": 0.278,
-    "avg_exit_velo": 88.3
+  "672640": {
+    "name": "Otto Lopez",
+    "barrel_pct": 7.0,
+    "hardhit_pct": 42.4,
+    "xwoba": 0.337,
+    "avg_exit_velo": 89.5
   },
-  "663609": {
-    "name": "Luken Baker",
+  "650559": {
+    "name": "Bryan De La Cruz",
+    "barrel_pct": 100.0,
+    "hardhit_pct": 100.0,
+    "xwoba": 0.69,
+    "avg_exit_velo": 105.8
+  },
+  "664059": {
+    "name": "Sam Haggerty",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 7.1,
+    "xwoba": 0.182,
+    "avg_exit_velo": 83.4
+  },
+  "683146": {
+    "name": "Brett Baty",
+    "barrel_pct": 8.8,
+    "hardhit_pct": 39.6,
+    "xwoba": 0.306,
+    "avg_exit_velo": 89.5
+  },
+  "669242": {
+    "name": "Tommy Edman",
+    "barrel_pct": 8.6,
+    "hardhit_pct": 42.9,
+    "xwoba": 0.388,
+    "avg_exit_velo": 90.5
+  },
+  "547180": {
+    "name": "Bryce Harper",
+    "barrel_pct": 11.2,
+    "hardhit_pct": 45.7,
+    "xwoba": 0.384,
+    "avg_exit_velo": 90.2
+  },
+  "686469": {
+    "name": "Vinnie Pasquantino",
+    "barrel_pct": 7.1,
+    "hardhit_pct": 39.6,
+    "xwoba": 0.317,
+    "avg_exit_velo": 88.9
+  },
+  "666624": {
+    "name": "Christopher Morel",
+    "barrel_pct": 2.5,
+    "hardhit_pct": 42.5,
+    "xwoba": 0.22,
+    "avg_exit_velo": 88.4
+  },
+  "803011": {
+    "name": "Sam Antonacci",
+    "barrel_pct": 6.4,
+    "hardhit_pct": 35.6,
+    "xwoba": 0.356,
+    "avg_exit_velo": 87.4
+  },
+  "666018": {
+    "name": "Jonathan Aranda",
+    "barrel_pct": 9.9,
+    "hardhit_pct": 44.9,
+    "xwoba": 0.357,
+    "avg_exit_velo": 91.0
+  },
+  "672724": {
+    "name": "Oswald Peraza",
+    "barrel_pct": 7.5,
+    "hardhit_pct": 38.0,
+    "xwoba": 0.276,
+    "avg_exit_velo": 87.4
+  },
+  "665953": {
+    "name": "Andr\u00e9s Chaparro",
+    "barrel_pct": 14.9,
+    "hardhit_pct": 51.1,
+    "xwoba": 0.385,
+    "avg_exit_velo": 91.1
+  },
+  "695257": {
+    "name": "Billy Cook",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 23.1,
+    "xwoba": 0.139,
+    "avg_exit_velo": 85.3
+  },
+  "677956": {
+    "name": "Rece Hinds",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 23.5,
+    "xwoba": 0.155,
+    "avg_exit_velo": 85.2
+  },
+  "543760": {
+    "name": "Marcus Semien",
+    "barrel_pct": 7.7,
+    "hardhit_pct": 35.6,
+    "xwoba": 0.308,
+    "avg_exit_velo": 86.2
+  },
+  "669326": {
+    "name": "Bryce Teodosio",
+    "barrel_pct": 6.7,
+    "hardhit_pct": 23.3,
+    "xwoba": 0.203,
+    "avg_exit_velo": 83.5
+  },
+  "641598": {
+    "name": "Mitch Garver",
+    "barrel_pct": 8.5,
+    "hardhit_pct": 49.3,
+    "xwoba": 0.312,
+    "avg_exit_velo": 90.5
+  },
+  "681807": {
+    "name": "David Fry",
+    "barrel_pct": 6.8,
+    "hardhit_pct": 33.0,
+    "xwoba": 0.255,
+    "avg_exit_velo": 85.8
+  },
+  "665019": {
+    "name": "Kody Clemens",
+    "barrel_pct": 12.8,
+    "hardhit_pct": 45.7,
+    "xwoba": 0.328,
+    "avg_exit_velo": 92.6
+  },
+  "701538": {
+    "name": "Jackson Merrill",
+    "barrel_pct": 10.2,
+    "hardhit_pct": 46.2,
+    "xwoba": 0.318,
+    "avg_exit_velo": 89.8
+  },
+  "663967": {
+    "name": "C\u00e9sar Salazar",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.328,
+    "avg_exit_velo": 88.6
+  },
+  "672275": {
+    "name": "Patrick Bailey",
+    "barrel_pct": 7.0,
+    "hardhit_pct": 40.3,
+    "xwoba": 0.286,
+    "avg_exit_velo": 90.1
+  },
+  "687859": {
+    "name": "Troy Johnston",
+    "barrel_pct": 2.1,
+    "hardhit_pct": 38.2,
+    "xwoba": 0.326,
+    "avg_exit_velo": 89.8
+  },
+  "671056": {
+    "name": "Iv\u00e1n Herrera",
+    "barrel_pct": 5.4,
+    "hardhit_pct": 38.8,
+    "xwoba": 0.332,
+    "avg_exit_velo": 89.0
+  },
+  "683766": {
+    "name": "Christian Koss",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 15.8,
+    "xwoba": 0.221,
+    "avg_exit_velo": 83.8
+  },
+  "694671": {
+    "name": "Wyatt Langford",
+    "barrel_pct": 9.0,
+    "hardhit_pct": 37.2,
+    "xwoba": 0.323,
+    "avg_exit_velo": 88.9
+  },
+  "664040": {
+    "name": "Brandon Lowe",
+    "barrel_pct": 12.4,
+    "hardhit_pct": 45.7,
+    "xwoba": 0.336,
+    "avg_exit_velo": 90.9
+  },
+  "663538": {
+    "name": "Nico Hoerner",
+    "barrel_pct": 0.8,
+    "hardhit_pct": 27.8,
+    "xwoba": 0.32,
+    "avg_exit_velo": 86.1
+  },
+  "703492": {
+    "name": "Nick Morabito",
     "barrel_pct": 0.0,
     "hardhit_pct": 50.0,
-    "xwoba": 0.123,
-    "avg_exit_velo": 92.2
+    "xwoba": 0.173,
+    "avg_exit_velo": 86.8
   },
-  "595879": {
-    "name": "Javier B\u00e1ez",
+  "605137": {
+    "name": "Josh Bell",
+    "barrel_pct": 9.9,
+    "hardhit_pct": 43.6,
+    "xwoba": 0.325,
+    "avg_exit_velo": 89.9
+  },
+  "671739": {
+    "name": "Michael Harris II",
+    "barrel_pct": 12.2,
+    "hardhit_pct": 50.5,
+    "xwoba": 0.357,
+    "avg_exit_velo": 91.3
+  },
+  "691723": {
+    "name": "Coby Mayo",
+    "barrel_pct": 11.2,
+    "hardhit_pct": 49.3,
+    "xwoba": 0.296,
+    "avg_exit_velo": 92.4
+  },
+  "664954": {
+    "name": "Brett Sullivan",
+    "barrel_pct": 2.8,
+    "hardhit_pct": 32.1,
+    "xwoba": 0.261,
+    "avg_exit_velo": 86.8
+  },
+  "687282": {
+    "name": "Gabriel Rincones Jr.",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 35.8,
+    "xwoba": 0.215,
+    "avg_exit_velo": 90.8
+  },
+  "650402": {
+    "name": "Gleyber Torres",
+    "barrel_pct": 7.8,
+    "hardhit_pct": 31.0,
+    "xwoba": 0.342,
+    "avg_exit_velo": 85.0
+  },
+  "669364": {
+    "name": "Xavier Edwards",
+    "barrel_pct": 4.3,
+    "hardhit_pct": 29.0,
+    "xwoba": 0.322,
+    "avg_exit_velo": 87.0
+  },
+  "693409": {
+    "name": "C\u00e9sar Prieto",
+    "barrel_pct": 7.1,
+    "hardhit_pct": 46.7,
+    "xwoba": 0.251,
+    "avg_exit_velo": 91.2
+  },
+  "467793": {
+    "name": "Carlos Santana",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 43.8,
+    "xwoba": 0.187,
+    "avg_exit_velo": 87.8
+  },
+  "669257": {
+    "name": "Will Smith",
+    "barrel_pct": 13.4,
+    "hardhit_pct": 39.4,
+    "xwoba": 0.385,
+    "avg_exit_velo": 90.0
+  },
+  "605244": {
+    "name": "Aramis Garcia",
+    "barrel_pct": 7.7,
+    "hardhit_pct": 30.8,
+    "xwoba": 0.259,
+    "avg_exit_velo": 86.1
+  },
+  "643446": {
+    "name": "Jeff McNeil",
+    "barrel_pct": 1.2,
+    "hardhit_pct": 32.7,
+    "xwoba": 0.305,
+    "avg_exit_velo": 86.4
+  },
+  "687363": {
+    "name": "Victor Scott II",
+    "barrel_pct": 0.8,
+    "hardhit_pct": 23.8,
+    "xwoba": 0.273,
+    "avg_exit_velo": 86.7
+  },
+  "665828": {
+    "name": "Oswaldo Cabrera",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 42.9,
+    "xwoba": 0.148,
+    "avg_exit_velo": 89.6
+  },
+  "810938": {
+    "name": "Ben Williamson",
+    "barrel_pct": 1.8,
+    "hardhit_pct": 33.9,
+    "xwoba": 0.295,
+    "avg_exit_velo": 87.4
+  },
+  "682987": {
+    "name": "Spencer Jones",
+    "barrel_pct": 4.9,
+    "hardhit_pct": 62.5,
+    "xwoba": 0.276,
+    "avg_exit_velo": 94.8
+  },
+  "669360": {
+    "name": "Trei Cruz",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.097,
+    "avg_exit_velo": 96.7
+  },
+  "663604": {
+    "name": "Brandon Lockridge",
+    "barrel_pct": 1.7,
+    "hardhit_pct": 32.8,
+    "xwoba": 0.276,
+    "avg_exit_velo": 86.2
+  },
+  "807727": {
+    "name": "Charles McAdoo",
+    "barrel_pct": 5.3,
+    "hardhit_pct": 26.3,
+    "xwoba": 0.234,
+    "avg_exit_velo": 88.0
+  },
+  "702222": {
+    "name": "Justin Crawford",
+    "barrel_pct": 0.9,
+    "hardhit_pct": 33.0,
+    "xwoba": 0.273,
+    "avg_exit_velo": 86.6
+  },
+  "683357": {
+    "name": "Owen Caissie",
+    "barrel_pct": 16.3,
+    "hardhit_pct": 48.1,
+    "xwoba": 0.309,
+    "avg_exit_velo": 91.8
+  },
+  "670541": {
+    "name": "Yordan Alvarez",
+    "barrel_pct": 19.2,
+    "hardhit_pct": 53.2,
+    "xwoba": 0.477,
+    "avg_exit_velo": 94.6
+  },
+  "622761": {
+    "name": "Jorge Mateo",
+    "barrel_pct": 10.5,
+    "hardhit_pct": 47.7,
+    "xwoba": 0.325,
+    "avg_exit_velo": 90.4
+  },
+  "690993": {
+    "name": "Colt Keith",
+    "barrel_pct": 8.1,
+    "hardhit_pct": 42.5,
+    "xwoba": 0.325,
+    "avg_exit_velo": 89.2
+  },
+  "608369": {
+    "name": "Corey Seager",
+    "barrel_pct": 15.4,
+    "hardhit_pct": 44.6,
+    "xwoba": 0.336,
+    "avg_exit_velo": 91.1
+  },
+  "624431": {
+    "name": "Jose Trevino",
     "barrel_pct": 3.2,
-    "hardhit_pct": 28.6,
-    "xwoba": 0.294,
-    "avg_exit_velo": 84.7
+    "hardhit_pct": 30.8,
+    "xwoba": 0.24,
+    "avg_exit_velo": 87.4
   },
-  "542303": {
-    "name": "Marcell Ozuna",
+  "701807": {
+    "name": "Carson Benge",
+    "barrel_pct": 7.4,
+    "hardhit_pct": 40.7,
+    "xwoba": 0.34,
+    "avg_exit_velo": 89.2
+  },
+  "673357": {
+    "name": "Luis Robert Jr.",
+    "barrel_pct": 4.1,
+    "hardhit_pct": 42.5,
+    "xwoba": 0.322,
+    "avg_exit_velo": 89.9
+  },
+  "621550": {
+    "name": "Patrick Wisdom",
+    "barrel_pct": 21.7,
+    "hardhit_pct": 47.8,
+    "xwoba": 0.265,
+    "avg_exit_velo": 92.9
+  },
+  "656413": {
+    "name": "Stuart Fairchild",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 40.0,
+    "xwoba": 0.28,
+    "avg_exit_velo": 94.2
+  },
+  "700337": {
+    "name": "Edgar Quero",
+    "barrel_pct": 2.6,
+    "hardhit_pct": 34.5,
+    "xwoba": 0.263,
+    "avg_exit_velo": 90.9
+  },
+  "672012": {
+    "name": "Tyler Black",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 15.0,
+    "xwoba": 0.191,
+    "avg_exit_velo": 83.6
+  },
+  "678011": {
+    "name": "Anthony Seigler",
+    "barrel_pct": 5.2,
+    "hardhit_pct": 37.7,
+    "xwoba": 0.324,
+    "avg_exit_velo": 87.9
+  },
+  "642350": {
+    "name": "Jose Siri",
+    "barrel_pct": 12.1,
+    "hardhit_pct": 36.4,
+    "xwoba": 0.316,
+    "avg_exit_velo": 87.0
+  },
+  "695670": {
+    "name": "Harry Ford",
+    "barrel_pct": 16.7,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.257,
+    "avg_exit_velo": 73.2
+  },
+  "686611": {
+    "name": "Dylan Crews",
+    "barrel_pct": 9.0,
+    "hardhit_pct": 42.1,
+    "xwoba": 0.323,
+    "avg_exit_velo": 90.5
+  },
+  "624413": {
+    "name": "Pete Alonso",
+    "barrel_pct": 12.0,
+    "hardhit_pct": 54.7,
+    "xwoba": 0.376,
+    "avg_exit_velo": 93.8
+  },
+  "695020": {
+    "name": "Tanner Murray",
     "barrel_pct": 8.7,
-    "hardhit_pct": 38.6,
+    "hardhit_pct": 43.5,
+    "xwoba": 0.275,
+    "avg_exit_velo": 90.7
+  },
+  "642215": {
+    "name": "Weston Wilson",
+    "barrel_pct": 6.7,
+    "hardhit_pct": 30.4,
+    "xwoba": 0.255,
+    "avg_exit_velo": 86.6
+  },
+  "642708": {
+    "name": "Amed Rosario",
+    "barrel_pct": 11.3,
+    "hardhit_pct": 39.1,
     "xwoba": 0.311,
-    "avg_exit_velo": 89.5
+    "avg_exit_velo": 90.1
+  },
+  "571912": {
+    "name": "Luke Maile",
+    "barrel_pct": 14.3,
+    "hardhit_pct": 14.3,
+    "xwoba": 0.228,
+    "avg_exit_velo": 77.8
+  },
+  "802415": {
+    "name": "Chandler Simpson",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 14.3,
+    "xwoba": 0.267,
+    "avg_exit_velo": 83.9
+  },
+  "677950": {
+    "name": "Alek Thomas",
+    "barrel_pct": 8.6,
+    "hardhit_pct": 43.1,
+    "xwoba": 0.292,
+    "avg_exit_velo": 89.9
+  },
+  "672356": {
+    "name": "Gabriel Arias",
+    "barrel_pct": 12.5,
+    "hardhit_pct": 51.8,
+    "xwoba": 0.294,
+    "avg_exit_velo": 92.4
+  },
+  "687231": {
+    "name": "Darell Hernaiz",
+    "barrel_pct": 1.0,
+    "hardhit_pct": 24.7,
+    "xwoba": 0.263,
+    "avg_exit_velo": 84.4
+  },
+  "656976": {
+    "name": "Pavin Smith",
+    "barrel_pct": 3.3,
+    "hardhit_pct": 31.1,
+    "xwoba": 0.255,
+    "avg_exit_velo": 86.1
+  },
+  "668942": {
+    "name": "Josh Rojas",
+    "barrel_pct": 2.8,
+    "hardhit_pct": 38.9,
+    "xwoba": 0.217,
+    "avg_exit_velo": 83.8
+  },
+  "668670": {
+    "name": "Jake Rogers",
+    "barrel_pct": 8.1,
+    "hardhit_pct": 37.1,
+    "xwoba": 0.259,
+    "avg_exit_velo": 87.6
+  },
+  "695490": {
+    "name": "Edwin Arroyo",
+    "barrel_pct": 1.1,
+    "hardhit_pct": 24.4,
+    "xwoba": 0.316,
+    "avg_exit_velo": 87.4
+  },
+  "694728": {
+    "name": "Brice Matthews",
+    "barrel_pct": 8.6,
+    "hardhit_pct": 37.1,
+    "xwoba": 0.26,
+    "avg_exit_velo": 86.8
+  },
+  "608324": {
+    "name": "Alex Bregman",
+    "barrel_pct": 4.3,
+    "hardhit_pct": 36.3,
+    "xwoba": 0.305,
+    "avg_exit_velo": 88.0
   },
   "676439": {
     "name": "Hunter Feduccia",
-    "barrel_pct": 8.0,
-    "hardhit_pct": 37.2,
-    "xwoba": 0.299,
+    "barrel_pct": 7.9,
+    "hardhit_pct": 37.5,
+    "xwoba": 0.298,
     "avg_exit_velo": 90.5
   },
-  "596115": {
-    "name": "Trevor Story",
-    "barrel_pct": 3.6,
-    "hardhit_pct": 41.8,
-    "xwoba": 0.248,
-    "avg_exit_velo": 88.9
+  "805300": {
+    "name": "Jakob Marsee",
+    "barrel_pct": 3.2,
+    "hardhit_pct": 33.2,
+    "xwoba": 0.298,
+    "avg_exit_velo": 86.7
   },
-  "669016": {
-    "name": "Brandon Marsh",
-    "barrel_pct": 9.7,
-    "hardhit_pct": 45.2,
-    "xwoba": 0.318,
+  "681297": {
+    "name": "Colton Cowser",
+    "barrel_pct": 10.5,
+    "hardhit_pct": 37.1,
+    "xwoba": 0.316,
+    "avg_exit_velo": 87.0
+  },
+  "671277": {
+    "name": "Luis Garc\u00eda Jr.",
+    "barrel_pct": 10.9,
+    "hardhit_pct": 45.9,
+    "xwoba": 0.354,
+    "avg_exit_velo": 91.8
+  },
+  "553869": {
+    "name": "Elias D\u00edaz",
+    "barrel_pct": 5.9,
+    "hardhit_pct": 35.3,
+    "xwoba": 0.281,
+    "avg_exit_velo": 85.9
+  },
+  "672761": {
+    "name": "Wenceel P\u00e9rez",
+    "barrel_pct": 7.6,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.272,
+    "avg_exit_velo": 87.2
+  },
+  "813841": {
+    "name": "Jonah Cox",
+    "barrel_pct": 7.1,
+    "hardhit_pct": 35.7,
+    "xwoba": 0.262,
+    "avg_exit_velo": 90.0
+  },
+  "624585": {
+    "name": "Jorge Soler",
+    "barrel_pct": 11.4,
+    "hardhit_pct": 41.8,
+    "xwoba": 0.298,
+    "avg_exit_velo": 88.2
+  },
+  "669369": {
+    "name": "Bryce Johnson",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 7.1,
+    "xwoba": 0.172,
+    "avg_exit_velo": 79.1
+  },
+  "695391": {
+    "name": "Brett Harris",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.299,
+    "avg_exit_velo": 78.9
+  },
+  "621439": {
+    "name": "Byron Buxton",
+    "barrel_pct": 18.1,
+    "hardhit_pct": 47.4,
+    "xwoba": 0.353,
+    "avg_exit_velo": 90.8
+  },
+  "805779": {
+    "name": "Jacob Wilson",
+    "barrel_pct": 2.7,
+    "hardhit_pct": 28.3,
+    "xwoba": 0.293,
+    "avg_exit_velo": 83.7
+  },
+  "642020": {
+    "name": "Chuckie Robinson",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 14.3,
+    "xwoba": 0.149,
+    "avg_exit_velo": 85.8
+  },
+  "645277": {
+    "name": "Ozzie Albies",
+    "barrel_pct": 4.2,
+    "hardhit_pct": 27.3,
+    "xwoba": 0.287,
+    "avg_exit_velo": 86.8
+  },
+  "605170": {
+    "name": "Victor Caratini",
+    "barrel_pct": 7.2,
+    "hardhit_pct": 38.7,
+    "xwoba": 0.333,
     "avg_exit_velo": 89.6
   },
   "624428": {
@@ -1182,1552 +1546,12 @@
     "xwoba": 0.237,
     "avg_exit_velo": 83.5
   },
-  "678577": {
-    "name": "Junior Perez",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.269,
-    "avg_exit_velo": 90.2
-  },
-  "672761": {
-    "name": "Wenceel P\u00e9rez",
-    "barrel_pct": 7.6,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.272,
-    "avg_exit_velo": 87.2
-  },
-  "806068": {
-    "name": "Colt Emerson",
-    "barrel_pct": 5.8,
-    "hardhit_pct": 30.1,
-    "xwoba": 0.238,
-    "avg_exit_velo": 86.5
-  },
-  "682989": {
-    "name": "Victor Mederos",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 100.0,
-    "xwoba": 0.543,
-    "avg_exit_velo": 103.7
-  },
-  "686555": {
-    "name": "Isaac Collins",
-    "barrel_pct": 5.7,
-    "hardhit_pct": 41.4,
-    "xwoba": 0.312,
-    "avg_exit_velo": 88.5
-  },
-  "691011": {
-    "name": "Drew Romo",
-    "barrel_pct": 7.2,
-    "hardhit_pct": 26.5,
-    "xwoba": 0.247,
-    "avg_exit_velo": 83.9
-  },
-  "571657": {
-    "name": "Kyle Farmer",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.238,
-    "avg_exit_velo": 80.4
-  },
-  "670032": {
-    "name": "Nicky Lopez",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 23.1,
-    "xwoba": 0.272,
-    "avg_exit_velo": 85.4
-  },
-  "683079": {
-    "name": "Omar Martinez",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.111,
-    "avg_exit_velo": 88.8
-  },
-  "669289": {
-    "name": "Santiago Espinal",
-    "barrel_pct": 2.0,
-    "hardhit_pct": 31.4,
-    "xwoba": 0.29,
-    "avg_exit_velo": 86.2
-  },
-  "656582": {
-    "name": "Connor Joe",
-    "barrel_pct": 8.3,
-    "hardhit_pct": 45.8,
-    "xwoba": 0.337,
-    "avg_exit_velo": 92.5
-  },
-  "676914": {
-    "name": "Davis Schneider",
-    "barrel_pct": 11.7,
-    "hardhit_pct": 45.9,
-    "xwoba": 0.27,
-    "avg_exit_velo": 89.0
-  },
-  "687952": {
-    "name": "Christian Encarnacion-Strand",
-    "barrel_pct": 16.7,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.25,
-    "avg_exit_velo": 86.3
-  },
-  "701762": {
-    "name": "Nick Kurtz",
-    "barrel_pct": 18.1,
-    "hardhit_pct": 58.3,
-    "xwoba": 0.379,
-    "avg_exit_velo": 93.6
-  },
-  "663967": {
-    "name": "C\u00e9sar Salazar",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.328,
-    "avg_exit_velo": 88.6
-  },
-  "643446": {
-    "name": "Jeff McNeil",
-    "barrel_pct": 0.8,
-    "hardhit_pct": 32.4,
-    "xwoba": 0.303,
-    "avg_exit_velo": 86.4
-  },
-  "683748": {
-    "name": "Victor Mesa Jr.",
-    "barrel_pct": 11.8,
-    "hardhit_pct": 38.2,
-    "xwoba": 0.326,
-    "avg_exit_velo": 88.4
-  },
-  "682987": {
-    "name": "Spencer Jones",
-    "barrel_pct": 5.1,
-    "hardhit_pct": 63.2,
-    "xwoba": 0.28,
-    "avg_exit_velo": 94.7
-  },
-  "811965": {
-    "name": "Joshua Kuroda-Grauer",
-    "barrel_pct": 1.9,
-    "hardhit_pct": 40.4,
-    "xwoba": 0.329,
-    "avg_exit_velo": 89.3
-  },
-  "656941": {
-    "name": "Kyle Schwarber",
-    "barrel_pct": 19.1,
-    "hardhit_pct": 52.8,
-    "xwoba": 0.372,
-    "avg_exit_velo": 93.3
-  },
-  "545341": {
-    "name": "Randal Grichuk",
-    "barrel_pct": 12.7,
-    "hardhit_pct": 46.4,
-    "xwoba": 0.357,
-    "avg_exit_velo": 90.5
-  },
-  "624413": {
-    "name": "Pete Alonso",
-    "barrel_pct": 12.4,
-    "hardhit_pct": 54.3,
-    "xwoba": 0.374,
-    "avg_exit_velo": 93.7
-  },
-  "657041": {
-    "name": "Lane Thomas",
-    "barrel_pct": 7.0,
-    "hardhit_pct": 43.0,
-    "xwoba": 0.331,
-    "avg_exit_velo": 89.7
-  },
-  "669127": {
-    "name": "Shea Langeliers",
-    "barrel_pct": 15.2,
-    "hardhit_pct": 45.3,
-    "xwoba": 0.364,
-    "avg_exit_velo": 92.0
-  },
-  "802139": {
-    "name": "JJ Wetherholt",
-    "barrel_pct": 7.3,
-    "hardhit_pct": 45.2,
-    "xwoba": 0.348,
-    "avg_exit_velo": 90.0
-  },
-  "694208": {
-    "name": "Mois\u00e9s Ballesteros",
-    "barrel_pct": 9.1,
-    "hardhit_pct": 46.7,
-    "xwoba": 0.31,
-    "avg_exit_velo": 90.1
-  },
-  "671056": {
-    "name": "Iv\u00e1n Herrera",
-    "barrel_pct": 5.4,
-    "hardhit_pct": 39.1,
-    "xwoba": 0.338,
-    "avg_exit_velo": 89.0
-  },
-  "686894": {
-    "name": "Joey Wiemer",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 39.0,
-    "xwoba": 0.315,
-    "avg_exit_velo": 88.8
-  },
-  "672640": {
-    "name": "Otto Lopez",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 42.6,
-    "xwoba": 0.338,
-    "avg_exit_velo": 89.5
-  },
-  "701305": {
-    "name": "Zach Dezenzo",
-    "barrel_pct": 10.5,
-    "hardhit_pct": 28.9,
-    "xwoba": 0.27,
-    "avg_exit_velo": 83.3
-  },
-  "694376": {
-    "name": "Shay Whitcomb",
-    "barrel_pct": 16.7,
-    "hardhit_pct": 41.7,
-    "xwoba": 0.258,
-    "avg_exit_velo": 90.5
-  },
-  "521692": {
-    "name": "Salvador Perez",
-    "barrel_pct": 9.7,
-    "hardhit_pct": 42.4,
-    "xwoba": 0.293,
-    "avg_exit_velo": 89.0
-  },
-  "670242": {
-    "name": "Matt Wallner",
-    "barrel_pct": 10.4,
-    "hardhit_pct": 40.3,
-    "xwoba": 0.281,
-    "avg_exit_velo": 88.4
-  },
-  "672275": {
-    "name": "Patrick Bailey",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 40.4,
-    "xwoba": 0.284,
-    "avg_exit_velo": 90.1
-  },
-  "677060": {
-    "name": "Chad Stevens",
-    "barrel_pct": 6.3,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.21,
-    "avg_exit_velo": 81.4
-  },
-  "645277": {
-    "name": "Ozzie Albies",
-    "barrel_pct": 4.2,
-    "hardhit_pct": 27.4,
-    "xwoba": 0.286,
-    "avg_exit_velo": 86.8
-  },
-  "671739": {
-    "name": "Michael Harris II",
-    "barrel_pct": 12.3,
-    "hardhit_pct": 50.5,
-    "xwoba": 0.359,
-    "avg_exit_velo": 91.4
-  },
-  "553869": {
-    "name": "Elias D\u00edaz",
-    "barrel_pct": 6.0,
-    "hardhit_pct": 36.1,
-    "xwoba": 0.29,
-    "avg_exit_velo": 86.3
-  },
-  "683002": {
-    "name": "Gunnar Henderson",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 44.4,
-    "xwoba": 0.303,
-    "avg_exit_velo": 89.6
-  },
-  "808959": {
-    "name": "Munetaka Murakami",
-    "barrel_pct": 19.1,
-    "hardhit_pct": 58.1,
-    "xwoba": 0.369,
-    "avg_exit_velo": 93.8
-  },
-  "676551": {
-    "name": "Brewer Hicklen",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.311,
-    "avg_exit_velo": 95.3
-  },
-  "700246": {
-    "name": "Carson Williams",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.197,
-    "avg_exit_velo": 85.0
-  },
-  "695720": {
-    "name": "Tommy White",
-    "barrel_pct": 6.3,
-    "hardhit_pct": 31.3,
-    "xwoba": 0.353,
-    "avg_exit_velo": 86.1
-  },
-  "602104": {
-    "name": "Ram\u00f3n Ur\u00edas",
-    "barrel_pct": 10.9,
-    "hardhit_pct": 37.0,
-    "xwoba": 0.306,
-    "avg_exit_velo": 89.5
-  },
-  "694224": {
-    "name": "Gabriel Gonzalez",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 0.0,
-    "xwoba": 0.423,
-    "avg_exit_velo": 63.1
-  },
-  "665019": {
-    "name": "Kody Clemens",
-    "barrel_pct": 12.9,
-    "hardhit_pct": 45.9,
-    "xwoba": 0.331,
-    "avg_exit_velo": 92.7
-  },
-  "665877": {
-    "name": "Jos\u00e9 Ferm\u00edn",
-    "barrel_pct": 2.1,
-    "hardhit_pct": 29.7,
-    "xwoba": 0.289,
-    "avg_exit_velo": 85.4
-  },
-  "671976": {
-    "name": "Tristan Peters",
-    "barrel_pct": 5.1,
-    "hardhit_pct": 31.3,
-    "xwoba": 0.306,
-    "avg_exit_velo": 87.4
-  },
-  "682818": {
-    "name": "Yohendrick Pi\u00f1ango",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 45.1,
-    "xwoba": 0.314,
-    "avg_exit_velo": 90.5
-  },
-  "665561": {
-    "name": "Rafael March\u00e1n",
-    "barrel_pct": 2.8,
-    "hardhit_pct": 19.7,
-    "xwoba": 0.212,
-    "avg_exit_velo": 83.2
-  },
-  "700932": {
-    "name": "Kyle Manzardo",
-    "barrel_pct": 10.9,
-    "hardhit_pct": 39.9,
-    "xwoba": 0.305,
-    "avg_exit_velo": 89.1
-  },
-  "677588": {
-    "name": "Jos\u00e9 Tena",
-    "barrel_pct": 8.3,
-    "hardhit_pct": 51.7,
-    "xwoba": 0.313,
-    "avg_exit_velo": 92.2
-  },
-  "695020": {
-    "name": "Tanner Murray",
-    "barrel_pct": 8.7,
-    "hardhit_pct": 43.5,
-    "xwoba": 0.275,
-    "avg_exit_velo": 90.7
-  },
-  "694025": {
-    "name": "Felix Reyes",
-    "barrel_pct": 6.9,
-    "hardhit_pct": 27.6,
-    "xwoba": 0.233,
-    "avg_exit_velo": 89.2
-  },
-  "678489": {
-    "name": "Jorge Barrosa",
-    "barrel_pct": 5.8,
-    "hardhit_pct": 24.4,
-    "xwoba": 0.223,
-    "avg_exit_velo": 87.0
-  },
-  "624512": {
-    "name": "Reese McGuire",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 9.5,
-    "xwoba": 0.242,
-    "avg_exit_velo": 74.3
-  },
-  "650490": {
-    "name": "Yandy D\u00edaz",
-    "barrel_pct": 6.9,
-    "hardhit_pct": 47.8,
-    "xwoba": 0.364,
-    "avg_exit_velo": 91.1
-  },
-  "605170": {
-    "name": "Victor Caratini",
-    "barrel_pct": 7.3,
-    "hardhit_pct": 38.3,
-    "xwoba": 0.334,
-    "avg_exit_velo": 89.6
-  },
-  "608324": {
-    "name": "Alex Bregman",
-    "barrel_pct": 4.3,
-    "hardhit_pct": 36.5,
-    "xwoba": 0.308,
-    "avg_exit_velo": 88.1
-  },
-  "678882": {
-    "name": "Ceddanne Rafaela",
-    "barrel_pct": 4.9,
-    "hardhit_pct": 31.9,
-    "xwoba": 0.284,
-    "avg_exit_velo": 86.2
-  },
-  "663743": {
-    "name": "Nick Fortes",
-    "barrel_pct": 2.6,
-    "hardhit_pct": 36.1,
-    "xwoba": 0.28,
-    "avg_exit_velo": 85.7
-  },
-  "543877": {
-    "name": "Christian V\u00e1zquez",
-    "barrel_pct": 1.4,
-    "hardhit_pct": 23.0,
-    "xwoba": 0.239,
-    "avg_exit_velo": 85.9
-  },
-  "680664": {
-    "name": "Eduardo Valencia",
-    "barrel_pct": 25.0,
-    "hardhit_pct": 62.5,
-    "xwoba": 0.423,
-    "avg_exit_velo": 89.5
-  },
-  "676391": {
-    "name": "Ernie Clement",
-    "barrel_pct": 2.6,
-    "hardhit_pct": 22.4,
-    "xwoba": 0.277,
-    "avg_exit_velo": 85.0
-  },
-  "695257": {
-    "name": "Billy Cook",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 23.1,
-    "xwoba": 0.146,
-    "avg_exit_velo": 85.3
-  },
-  "807713": {
-    "name": "Matt Shaw",
-    "barrel_pct": 4.8,
-    "hardhit_pct": 36.2,
-    "xwoba": 0.301,
-    "avg_exit_velo": 86.8
-  },
-  "657656": {
-    "name": "Ram\u00f3n Laureano",
-    "barrel_pct": 14.3,
-    "hardhit_pct": 41.2,
-    "xwoba": 0.312,
-    "avg_exit_velo": 88.0
-  },
-  "681297": {
-    "name": "Colton Cowser",
-    "barrel_pct": 10.6,
-    "hardhit_pct": 36.6,
-    "xwoba": 0.314,
-    "avg_exit_velo": 86.9
-  },
-  "805811": {
-    "name": "Bryce Eldridge",
-    "barrel_pct": 13.0,
-    "hardhit_pct": 54.8,
-    "xwoba": 0.368,
-    "avg_exit_velo": 92.5
-  },
-  "643217": {
-    "name": "Andrew Benintendi",
-    "barrel_pct": 9.3,
-    "hardhit_pct": 47.1,
-    "xwoba": 0.324,
-    "avg_exit_velo": 89.1
-  },
-  "664761": {
-    "name": "Alec Bohm",
-    "barrel_pct": 5.3,
-    "hardhit_pct": 42.4,
-    "xwoba": 0.3,
-    "avg_exit_velo": 90.5
-  },
-  "678009": {
-    "name": "Parker Meadows",
-    "barrel_pct": 3.8,
-    "hardhit_pct": 19.2,
-    "xwoba": 0.25,
-    "avg_exit_velo": 85.3
-  },
-  "682928": {
-    "name": "CJ Abrams",
-    "barrel_pct": 11.0,
-    "hardhit_pct": 42.6,
-    "xwoba": 0.349,
-    "avg_exit_velo": 89.9
-  },
-  "682985": {
-    "name": "Riley Greene",
-    "barrel_pct": 14.3,
-    "hardhit_pct": 50.6,
-    "xwoba": 0.363,
-    "avg_exit_velo": 91.6
-  },
-  "669357": {
-    "name": "Nolan Gorman",
-    "barrel_pct": 9.2,
-    "hardhit_pct": 43.8,
-    "xwoba": 0.278,
-    "avg_exit_velo": 89.3
-  },
-  "682657": {
-    "name": "Angel Mart\u00ednez",
-    "barrel_pct": 7.9,
-    "hardhit_pct": 37.3,
-    "xwoba": 0.306,
-    "avg_exit_velo": 88.0
-  },
-  "666464": {
-    "name": "Jerar Encarnacion",
-    "barrel_pct": 7.7,
-    "hardhit_pct": 34.6,
-    "xwoba": 0.21,
-    "avg_exit_velo": 87.5
-  },
-  "693304": {
-    "name": "Nick Gonzales",
-    "barrel_pct": 2.8,
-    "hardhit_pct": 36.0,
-    "xwoba": 0.323,
-    "avg_exit_velo": 85.8
-  },
-  "608070": {
-    "name": "Jos\u00e9 Ram\u00edrez",
-    "barrel_pct": 6.6,
-    "hardhit_pct": 44.2,
-    "xwoba": 0.356,
-    "avg_exit_velo": 90.3
-  },
-  "672284": {
-    "name": "Jarred Kelenic",
-    "barrel_pct": 22.2,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.346,
-    "avg_exit_velo": 93.8
-  },
-  "693409": {
-    "name": "C\u00e9sar Prieto",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 46.7,
-    "xwoba": 0.251,
-    "avg_exit_velo": 91.2
-  },
-  "680779": {
-    "name": "Henry Davis",
-    "barrel_pct": 9.7,
-    "hardhit_pct": 39.6,
-    "xwoba": 0.292,
-    "avg_exit_velo": 89.7
-  },
-  "621043": {
-    "name": "Carlos Correa",
-    "barrel_pct": 10.3,
-    "hardhit_pct": 41.2,
-    "xwoba": 0.364,
-    "avg_exit_velo": 89.2
-  },
-  "695670": {
-    "name": "Harry Ford",
-    "barrel_pct": 16.7,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.257,
-    "avg_exit_velo": 73.2
-  },
-  "691373": {
-    "name": "Jhostynxon Garcia",
-    "barrel_pct": 4.0,
-    "hardhit_pct": 32.0,
-    "xwoba": 0.282,
-    "avg_exit_velo": 84.6
-  },
-  "805672": {
-    "name": "Collin Price",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.302,
-    "avg_exit_velo": 93.0
-  },
-  "641857": {
-    "name": "Ryan McMahon",
-    "barrel_pct": 11.2,
-    "hardhit_pct": 50.7,
-    "xwoba": 0.31,
-    "avg_exit_velo": 91.0
-  },
-  "803011": {
-    "name": "Sam Antonacci",
-    "barrel_pct": 6.5,
-    "hardhit_pct": 36.2,
-    "xwoba": 0.359,
-    "avg_exit_velo": 87.5
-  },
-  "694192": {
-    "name": "Jackson Chourio",
-    "barrel_pct": 13.4,
-    "hardhit_pct": 47.0,
-    "xwoba": 0.334,
-    "avg_exit_velo": 92.4
-  },
-  "677870": {
-    "name": "Leo Jim\u00e9nez",
-    "barrel_pct": 5.4,
-    "hardhit_pct": 45.2,
-    "xwoba": 0.325,
-    "avg_exit_velo": 91.2
-  },
-  "662139": {
-    "name": "Daulton Varsho",
-    "barrel_pct": 6.8,
-    "hardhit_pct": 38.3,
-    "xwoba": 0.298,
-    "avg_exit_velo": 86.1
-  },
-  "670623": {
-    "name": "Isaac Paredes",
-    "barrel_pct": 5.8,
-    "hardhit_pct": 30.5,
-    "xwoba": 0.318,
-    "avg_exit_velo": 86.7
-  },
-  "606192": {
-    "name": "Teoscar Hern\u00e1ndez",
-    "barrel_pct": 9.7,
-    "hardhit_pct": 45.2,
-    "xwoba": 0.321,
-    "avg_exit_velo": 90.0
-  },
-  "696100": {
-    "name": "Hunter Goodman",
-    "barrel_pct": 17.6,
-    "hardhit_pct": 46.3,
-    "xwoba": 0.34,
-    "avg_exit_velo": 91.0
-  },
-  "690291": {
-    "name": "Jace Jung",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 20.0,
-    "xwoba": 0.392,
-    "avg_exit_velo": 85.5
-  },
-  "666969": {
-    "name": "Adolis Garc\u00eda",
-    "barrel_pct": 9.3,
-    "hardhit_pct": 48.0,
-    "xwoba": 0.294,
-    "avg_exit_velo": 92.1
-  },
-  "701538": {
-    "name": "Jackson Merrill",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 45.4,
-    "xwoba": 0.313,
-    "avg_exit_velo": 89.6
-  },
-  "669398": {
-    "name": "Gage Workman",
-    "barrel_pct": 22.7,
-    "hardhit_pct": 45.5,
-    "xwoba": 0.311,
-    "avg_exit_velo": 94.2
-  },
-  "687401": {
-    "name": "Joey Ortiz",
-    "barrel_pct": 4.3,
-    "hardhit_pct": 34.0,
-    "xwoba": 0.302,
-    "avg_exit_velo": 87.9
-  },
-  "640492": {
-    "name": "Jos\u00e9 Az\u00f3car",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 23.1,
-    "xwoba": 0.298,
-    "avg_exit_velo": 87.3
-  },
-  "665862": {
-    "name": "Jazz Chisholm Jr.",
-    "barrel_pct": 9.8,
-    "hardhit_pct": 41.8,
-    "xwoba": 0.297,
-    "avg_exit_velo": 90.9
-  },
-  "687263": {
-    "name": "Zach Neto",
-    "barrel_pct": 12.7,
-    "hardhit_pct": 39.7,
-    "xwoba": 0.309,
-    "avg_exit_velo": 89.5
-  },
-  "630105": {
-    "name": "Jake Cronenworth",
-    "barrel_pct": 5.9,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.294,
-    "avg_exit_velo": 87.5
-  },
-  "664059": {
-    "name": "Sam Haggerty",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 7.1,
-    "xwoba": 0.182,
-    "avg_exit_velo": 83.4
-  },
-  "607208": {
-    "name": "Trea Turner",
-    "barrel_pct": 6.8,
-    "hardhit_pct": 41.3,
-    "xwoba": 0.295,
-    "avg_exit_velo": 88.9
-  },
-  "681987": {
-    "name": "Nate Eaton",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 35.0,
-    "xwoba": 0.291,
-    "avg_exit_velo": 88.4
-  },
-  "592663": {
-    "name": "J.T. Realmuto",
-    "barrel_pct": 4.8,
-    "hardhit_pct": 39.3,
-    "xwoba": 0.313,
-    "avg_exit_velo": 89.3
-  },
-  "702284": {
-    "name": "Cole Young",
-    "barrel_pct": 5.3,
-    "hardhit_pct": 38.7,
-    "xwoba": 0.331,
-    "avg_exit_velo": 88.4
-  },
-  "660710": {
-    "name": "Rodolfo Dur\u00e1n",
-    "barrel_pct": 8.5,
-    "hardhit_pct": 30.5,
-    "xwoba": 0.257,
-    "avg_exit_velo": 87.6
-  },
-  "683734": {
-    "name": "Andrew Vaughn",
-    "barrel_pct": 5.0,
-    "hardhit_pct": 41.4,
-    "xwoba": 0.34,
-    "avg_exit_velo": 90.0
-  },
-  "690984": {
-    "name": "Petey Halpin",
-    "barrel_pct": 8.8,
-    "hardhit_pct": 29.8,
-    "xwoba": 0.268,
-    "avg_exit_velo": 87.0
-  },
-  "669087": {
-    "name": "Sam Huff",
-    "barrel_pct": 16.7,
-    "hardhit_pct": 58.3,
-    "xwoba": 0.139,
-    "avg_exit_velo": 90.5
-  },
-  "694249": {
-    "name": "Cole Carrigg",
-    "barrel_pct": 6.5,
-    "hardhit_pct": 31.5,
-    "xwoba": 0.333,
-    "avg_exit_velo": 86.1
-  },
-  "609280": {
-    "name": "Miguel Andujar",
-    "barrel_pct": 4.5,
-    "hardhit_pct": 36.3,
-    "xwoba": 0.298,
-    "avg_exit_velo": 88.3
-  },
-  "701350": {
-    "name": "Roman Anthony",
-    "barrel_pct": 9.3,
-    "hardhit_pct": 47.4,
-    "xwoba": 0.352,
-    "avg_exit_velo": 92.3
-  },
-  "660271": {
-    "name": "Shohei Ohtani",
-    "barrel_pct": 16.9,
-    "hardhit_pct": 52.9,
-    "xwoba": 0.408,
-    "avg_exit_velo": 93.4
-  },
-  "645302": {
-    "name": "Victor Robles",
-    "barrel_pct": 2.2,
-    "hardhit_pct": 17.6,
-    "xwoba": 0.27,
-    "avg_exit_velo": 83.9
-  },
-  "808975": {
-    "name": "Hyeseong Kim",
-    "barrel_pct": 3.4,
-    "hardhit_pct": 25.3,
-    "xwoba": 0.304,
-    "avg_exit_velo": 85.8
-  },
-  "683227": {
-    "name": "Cody Freeman",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 16.7,
-    "xwoba": 0.164,
-    "avg_exit_velo": 82.5
-  },
-  "663728": {
-    "name": "Cal Raleigh",
-    "barrel_pct": 11.4,
-    "hardhit_pct": 31.9,
-    "xwoba": 0.287,
-    "avg_exit_velo": 87.9
-  },
-  "669384": {
-    "name": "Raynel Delgado",
-    "barrel_pct": 3.4,
-    "hardhit_pct": 31.0,
-    "xwoba": 0.277,
-    "avg_exit_velo": 85.9
-  },
-  "666211": {
-    "name": "Taylor Trammell",
-    "barrel_pct": 9.0,
-    "hardhit_pct": 34.6,
-    "xwoba": 0.275,
-    "avg_exit_velo": 89.2
-  },
-  "804606": {
-    "name": "Konnor Griffin",
-    "barrel_pct": 8.1,
-    "hardhit_pct": 37.0,
-    "xwoba": 0.305,
-    "avg_exit_velo": 87.8
-  },
-  "682626": {
-    "name": "Francisco Alvarez",
-    "barrel_pct": 16.0,
-    "hardhit_pct": 43.6,
-    "xwoba": 0.336,
-    "avg_exit_velo": 90.1
-  },
-  "664034": {
-    "name": "Ty France",
-    "barrel_pct": 12.4,
-    "hardhit_pct": 49.7,
-    "xwoba": 0.334,
-    "avg_exit_velo": 92.2
-  },
-  "682997": {
-    "name": "Tyler Callihan",
-    "barrel_pct": 7.4,
-    "hardhit_pct": 29.6,
-    "xwoba": 0.278,
-    "avg_exit_velo": 84.7
-  },
-  "666971": {
-    "name": "Lourdes Gurriel Jr.",
-    "barrel_pct": 4.9,
-    "hardhit_pct": 34.3,
-    "xwoba": 0.277,
-    "avg_exit_velo": 87.3
-  },
-  "681481": {
-    "name": "Kerry Carpenter",
-    "barrel_pct": 10.3,
-    "hardhit_pct": 44.6,
-    "xwoba": 0.294,
-    "avg_exit_velo": 89.8
-  },
-  "701807": {
-    "name": "Carson Benge",
-    "barrel_pct": 7.5,
-    "hardhit_pct": 40.6,
-    "xwoba": 0.342,
-    "avg_exit_velo": 89.2
-  },
-  "664954": {
-    "name": "Brett Sullivan",
+  "682877": {
+    "name": "Juan Brito",
     "barrel_pct": 2.9,
     "hardhit_pct": 32.4,
-    "xwoba": 0.26,
-    "avg_exit_velo": 86.8
-  },
-  "596019": {
-    "name": "Francisco Lindor",
-    "barrel_pct": 9.3,
-    "hardhit_pct": 49.3,
-    "xwoba": 0.343,
-    "avg_exit_velo": 92.2
-  },
-  "660844": {
-    "name": "Leo Rivas",
-    "barrel_pct": 1.5,
-    "hardhit_pct": 13.6,
-    "xwoba": 0.238,
-    "avg_exit_velo": 86.2
-  },
-  "620443": {
-    "name": "Luis Torrens",
-    "barrel_pct": 3.8,
-    "hardhit_pct": 37.3,
-    "xwoba": 0.279,
-    "avg_exit_velo": 87.6
-  },
-  "643396": {
-    "name": "Isiah Kiner-Falefa",
-    "barrel_pct": 3.0,
-    "hardhit_pct": 26.5,
-    "xwoba": 0.312,
-    "avg_exit_velo": 82.3
-  },
-  "677649": {
-    "name": "Ezequiel Duran",
-    "barrel_pct": 6.4,
-    "hardhit_pct": 36.9,
-    "xwoba": 0.304,
-    "avg_exit_velo": 88.4
-  },
-  "650489": {
-    "name": "Willi Castro",
-    "barrel_pct": 7.5,
-    "hardhit_pct": 40.5,
-    "xwoba": 0.298,
-    "avg_exit_velo": 88.1
-  },
-  "702616": {
-    "name": "Jackson Holliday",
-    "barrel_pct": 10.1,
-    "hardhit_pct": 36.0,
-    "xwoba": 0.321,
-    "avg_exit_velo": 86.9
-  },
-  "669134": {
-    "name": "Luis Campusano",
-    "barrel_pct": 10.5,
-    "hardhit_pct": 47.4,
-    "xwoba": 0.349,
-    "avg_exit_velo": 87.6
-  },
-  "679529": {
-    "name": "Spencer Torkelson",
-    "barrel_pct": 14.4,
-    "hardhit_pct": 42.4,
-    "xwoba": 0.318,
-    "avg_exit_velo": 89.8
-  },
-  "663494": {
-    "name": "Bryan Torres",
-    "barrel_pct": 7.7,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.309,
-    "avg_exit_velo": 87.0
-  },
-  "641933": {
-    "name": "Tyler O'Neill",
-    "barrel_pct": 9.1,
-    "hardhit_pct": 42.7,
-    "xwoba": 0.305,
-    "avg_exit_velo": 89.7
-  },
-  "666160": {
-    "name": "Mickey Moniak",
-    "barrel_pct": 11.3,
-    "hardhit_pct": 44.0,
-    "xwoba": 0.309,
-    "avg_exit_velo": 89.7
-  },
-  "671655": {
-    "name": "George Valera",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 34.5,
-    "xwoba": 0.198,
-    "avg_exit_velo": 90.2
-  },
-  "687282": {
-    "name": "Gabriel Rincones Jr.",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 35.8,
-    "xwoba": 0.217,
-    "avg_exit_velo": 90.8
-  },
-  "671289": {
-    "name": "Tyler Freeman",
-    "barrel_pct": 1.5,
-    "hardhit_pct": 35.8,
-    "xwoba": 0.314,
-    "avg_exit_velo": 88.0
-  },
-  "683766": {
-    "name": "Christian Koss",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 15.8,
-    "xwoba": 0.221,
-    "avg_exit_velo": 83.8
-  },
-  "800050": {
-    "name": "Chase DeLauter",
-    "barrel_pct": 6.6,
-    "hardhit_pct": 44.9,
-    "xwoba": 0.346,
-    "avg_exit_velo": 91.1
-  },
-  "683083": {
-    "name": "Nasim Nu\u00f1ez",
-    "barrel_pct": 0.5,
-    "hardhit_pct": 21.1,
-    "xwoba": 0.272,
-    "avg_exit_velo": 85.0
-  },
-  "692216": {
-    "name": "CJ Kayfus",
-    "barrel_pct": 21.4,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.304,
-    "avg_exit_velo": 92.8
-  },
-  "669369": {
-    "name": "Bryce Johnson",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 7.1,
-    "xwoba": 0.172,
-    "avg_exit_velo": 79.1
-  },
-  "641343": {
-    "name": "Jake Bauers",
-    "barrel_pct": 13.8,
-    "hardhit_pct": 52.8,
-    "xwoba": 0.359,
-    "avg_exit_velo": 92.5
-  },
-  "669065": {
-    "name": "Kyle Stowers",
-    "barrel_pct": 11.3,
-    "hardhit_pct": 53.8,
-    "xwoba": 0.32,
-    "avg_exit_velo": 91.5
-  },
-  "680869": {
-    "name": "Zack Gelof",
-    "barrel_pct": 6.6,
-    "hardhit_pct": 41.3,
-    "xwoba": 0.289,
-    "avg_exit_velo": 88.8
-  },
-  "663656": {
-    "name": "Kyle Tucker",
-    "barrel_pct": 5.6,
-    "hardhit_pct": 38.3,
-    "xwoba": 0.332,
-    "avg_exit_velo": 88.9
-  },
-  "681351": {
-    "name": "Logan O'Hoppe",
-    "barrel_pct": 10.3,
-    "hardhit_pct": 36.4,
-    "xwoba": 0.271,
-    "avg_exit_velo": 86.9
-  },
-  "669288": {
-    "name": "Daniel Johnson",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 45.5,
-    "xwoba": 0.341,
-    "avg_exit_velo": 92.7
-  },
-  "665489": {
-    "name": "Vladimir Guerrero Jr.",
-    "barrel_pct": 6.9,
-    "hardhit_pct": 43.8,
-    "xwoba": 0.341,
-    "avg_exit_velo": 90.2
-  },
-  "645305": {
-    "name": "Ali S\u00e1nchez",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 15.4,
-    "xwoba": 0.28,
-    "avg_exit_velo": 82.8
-  },
-  "805367": {
-    "name": "Chase Meidroth",
-    "barrel_pct": 4.1,
-    "hardhit_pct": 34.7,
-    "xwoba": 0.285,
-    "avg_exit_velo": 87.8
-  },
-  "823550": {
-    "name": "Sung-Mun Song",
-    "barrel_pct": 5.3,
-    "hardhit_pct": 24.0,
-    "xwoba": 0.276,
-    "avg_exit_velo": 86.8
-  },
-  "694378": {
-    "name": "Jacob Gonzalez",
-    "barrel_pct": 4.0,
-    "hardhit_pct": 42.7,
-    "xwoba": 0.327,
-    "avg_exit_velo": 88.6
-  },
-  "682674": {
-    "name": "Victor Bericoto",
-    "barrel_pct": 14.0,
-    "hardhit_pct": 46.5,
-    "xwoba": 0.289,
-    "avg_exit_velo": 88.5
-  },
-  "687093": {
-    "name": "Vaughn Grissom",
-    "barrel_pct": 6.9,
-    "hardhit_pct": 41.7,
-    "xwoba": 0.342,
-    "avg_exit_velo": 89.1
-  },
-  "656413": {
-    "name": "Stuart Fairchild",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 40.0,
-    "xwoba": 0.28,
-    "avg_exit_velo": 94.2
-  },
-  "682622": {
-    "name": "Noelvi Marte",
-    "barrel_pct": 6.1,
-    "hardhit_pct": 27.7,
-    "xwoba": 0.258,
-    "avg_exit_velo": 87.5
-  },
-  "669257": {
-    "name": "Will Smith",
-    "barrel_pct": 13.4,
-    "hardhit_pct": 39.4,
-    "xwoba": 0.385,
-    "avg_exit_velo": 90.0
-  },
-  "686217": {
-    "name": "Sal Frelick",
-    "barrel_pct": 2.0,
-    "hardhit_pct": 27.8,
-    "xwoba": 0.281,
-    "avg_exit_velo": 85.9
-  },
-  "607043": {
-    "name": "Brandon Nimmo",
-    "barrel_pct": 12.5,
-    "hardhit_pct": 52.5,
-    "xwoba": 0.374,
-    "avg_exit_velo": 92.4
-  },
-  "670770": {
-    "name": "TJ Friedl",
-    "barrel_pct": 2.8,
-    "hardhit_pct": 28.0,
-    "xwoba": 0.244,
-    "avg_exit_velo": 87.4
-  },
-  "672356": {
-    "name": "Gabriel Arias",
-    "barrel_pct": 12.5,
-    "hardhit_pct": 51.8,
-    "xwoba": 0.294,
-    "avg_exit_velo": 92.4
-  },
-  "694384": {
-    "name": "Nolan Schanuel",
-    "barrel_pct": 2.0,
-    "hardhit_pct": 32.5,
-    "xwoba": 0.334,
-    "avg_exit_velo": 87.3
-  },
-  "672613": {
-    "name": "Eliezer Alfonzo",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 16.7,
-    "xwoba": 0.187,
-    "avg_exit_velo": 90.0
-  },
-  "669256": {
-    "name": "Nick Solak",
-    "barrel_pct": 12.5,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.373,
-    "avg_exit_velo": 90.2
-  },
-  "691016": {
-    "name": "Tyler Soderstrom",
-    "barrel_pct": 10.2,
-    "hardhit_pct": 44.7,
-    "xwoba": 0.342,
-    "avg_exit_velo": 90.2
-  },
-  "671277": {
-    "name": "Luis Garc\u00eda Jr.",
-    "barrel_pct": 10.7,
-    "hardhit_pct": 46.0,
-    "xwoba": 0.355,
-    "avg_exit_velo": 91.8
-  },
-  "676572": {
-    "name": "Eric Wagaman",
-    "barrel_pct": 7.4,
-    "hardhit_pct": 22.2,
-    "xwoba": 0.286,
-    "avg_exit_velo": 83.7
-  },
-  "621439": {
-    "name": "Byron Buxton",
-    "barrel_pct": 18.1,
-    "hardhit_pct": 47.4,
-    "xwoba": 0.353,
-    "avg_exit_velo": 90.8
-  },
-  "669720": {
-    "name": "Austin Hays",
-    "barrel_pct": 3.3,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.283,
-    "avg_exit_velo": 87.0
-  },
-  "669326": {
-    "name": "Bryce Teodosio",
-    "barrel_pct": 6.7,
-    "hardhit_pct": 23.3,
-    "xwoba": 0.203,
-    "avg_exit_velo": 83.5
-  },
-  "678662": {
-    "name": "Ezequiel Tovar",
-    "barrel_pct": 6.6,
-    "hardhit_pct": 33.2,
-    "xwoba": 0.272,
-    "avg_exit_velo": 87.3
-  },
-  "694728": {
-    "name": "Brice Matthews",
-    "barrel_pct": 8.6,
-    "hardhit_pct": 37.1,
-    "xwoba": 0.26,
-    "avg_exit_velo": 86.8
-  },
-  "592206": {
-    "name": "Nick Castellanos",
-    "barrel_pct": 8.4,
-    "hardhit_pct": 37.3,
-    "xwoba": 0.285,
-    "avg_exit_velo": 87.7
-  },
-  "669221": {
-    "name": "Sean Murphy",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.133,
-    "avg_exit_velo": 80.3
-  },
-  "701398": {
-    "name": "Sal Stewart",
-    "barrel_pct": 14.4,
-    "hardhit_pct": 40.3,
-    "xwoba": 0.348,
-    "avg_exit_velo": 90.3
-  },
-  "694374": {
-    "name": "Tim Tawa",
-    "barrel_pct": 6.4,
-    "hardhit_pct": 36.3,
-    "xwoba": 0.287,
-    "avg_exit_velo": 88.3
-  },
-  "660162": {
-    "name": "Yo\u00e1n Moncada",
-    "barrel_pct": 7.7,
-    "hardhit_pct": 40.9,
-    "xwoba": 0.269,
-    "avg_exit_velo": 90.3
-  },
-  "668904": {
-    "name": "Royce Lewis",
-    "barrel_pct": 12.7,
-    "hardhit_pct": 41.6,
-    "xwoba": 0.307,
-    "avg_exit_velo": 89.1
-  },
-  "663584": {
-    "name": "Hayden Senger",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 23.1,
-    "xwoba": 0.181,
-    "avg_exit_velo": 82.3
-  },
-  "682515": {
-    "name": "Logan Porter",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.414,
-    "avg_exit_velo": 93.9
-  },
-  "571912": {
-    "name": "Luke Maile",
-    "barrel_pct": 14.3,
-    "hardhit_pct": 14.3,
-    "xwoba": 0.229,
-    "avg_exit_velo": 77.8
-  },
-  "457705": {
-    "name": "Andrew McCutchen",
-    "barrel_pct": 5.8,
-    "hardhit_pct": 28.8,
-    "xwoba": 0.237,
-    "avg_exit_velo": 87.1
-  },
-  "807799": {
-    "name": "Masataka Yoshida",
-    "barrel_pct": 3.0,
-    "hardhit_pct": 39.5,
-    "xwoba": 0.32,
-    "avg_exit_velo": 88.8
-  },
-  "693459": {
-    "name": "Kyler Fedko",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 44.4,
-    "xwoba": 0.166,
-    "avg_exit_velo": 87.9
-  },
-  "683021": {
-    "name": "Michael Stefanic",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 0.0,
-    "xwoba": 0.232,
-    "avg_exit_velo": 88.8
-  },
-  "682848": {
-    "name": "Endy Rodr\u00edguez",
-    "barrel_pct": 12.7,
-    "hardhit_pct": 46.5,
-    "xwoba": 0.366,
-    "avg_exit_velo": 92.4
-  },
-  "668942": {
-    "name": "Josh Rojas",
-    "barrel_pct": 2.9,
-    "hardhit_pct": 35.3,
-    "xwoba": 0.204,
-    "avg_exit_velo": 82.9
-  },
-  "656577": {
-    "name": "Alex Jackson",
-    "barrel_pct": 2.6,
-    "hardhit_pct": 35.9,
-    "xwoba": 0.22,
-    "avg_exit_velo": 87.8
-  },
-  "547180": {
-    "name": "Bryce Harper",
-    "barrel_pct": 11.2,
-    "hardhit_pct": 45.7,
-    "xwoba": 0.386,
-    "avg_exit_velo": 90.2
-  },
-  "677594": {
-    "name": "Julio Rodr\u00edguez",
-    "barrel_pct": 9.1,
-    "hardhit_pct": 44.6,
-    "xwoba": 0.349,
-    "avg_exit_velo": 90.3
-  },
-  "670097": {
-    "name": "Zack Short",
-    "barrel_pct": 5.9,
-    "hardhit_pct": 20.6,
     "xwoba": 0.256,
-    "avg_exit_velo": 88.7
-  },
-  "661531": {
-    "name": "Brian Serven",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.195,
-    "avg_exit_velo": 82.9
-  },
-  "593871": {
-    "name": "Jorge Polanco",
-    "barrel_pct": 3.1,
-    "hardhit_pct": 27.7,
-    "xwoba": 0.251,
-    "avg_exit_velo": 84.8
-  },
-  "690924": {
-    "name": "Braxton Fulford",
-    "barrel_pct": 8.8,
-    "hardhit_pct": 29.4,
-    "xwoba": 0.211,
-    "avg_exit_velo": 86.8
-  },
-  "694203": {
-    "name": "Denzer Guzman",
-    "barrel_pct": 6.0,
-    "hardhit_pct": 36.9,
-    "xwoba": 0.277,
-    "avg_exit_velo": 87.4
-  },
-  "650859": {
-    "name": "Luis Rengifo",
-    "barrel_pct": 4.6,
-    "hardhit_pct": 36.6,
-    "xwoba": 0.299,
-    "avg_exit_velo": 88.1
-  },
-  "500743": {
-    "name": "Miguel Rojas",
-    "barrel_pct": 6.7,
-    "hardhit_pct": 37.0,
-    "xwoba": 0.327,
-    "avg_exit_velo": 87.3
-  },
-  "649966": {
-    "name": "Luis Ur\u00edas",
-    "barrel_pct": 8.0,
-    "hardhit_pct": 24.0,
-    "xwoba": 0.297,
-    "avg_exit_velo": 84.4
-  },
-  "694497": {
-    "name": "Evan Carter",
-    "barrel_pct": 6.3,
-    "hardhit_pct": 37.7,
-    "xwoba": 0.291,
-    "avg_exit_velo": 87.7
-  },
-  "518692": {
-    "name": "Freddie Freeman",
-    "barrel_pct": 10.2,
-    "hardhit_pct": 44.3,
-    "xwoba": 0.377,
-    "avg_exit_velo": 90.2
-  },
-  "621438": {
-    "name": "Tyrone Taylor",
-    "barrel_pct": 9.4,
-    "hardhit_pct": 33.0,
-    "xwoba": 0.284,
-    "avg_exit_velo": 87.0
-  },
-  "665828": {
-    "name": "Oswaldo Cabrera",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 42.9,
-    "xwoba": 0.148,
-    "avg_exit_velo": 89.6
-  },
-  "642708": {
-    "name": "Amed Rosario",
-    "barrel_pct": 11.3,
-    "hardhit_pct": 39.1,
-    "xwoba": 0.313,
-    "avg_exit_velo": 90.1
-  },
-  "642086": {
-    "name": "Dominic Smith",
-    "barrel_pct": 5.9,
-    "hardhit_pct": 35.6,
-    "xwoba": 0.313,
-    "avg_exit_velo": 87.8
-  },
-  "687597": {
-    "name": "Jordan Beck",
-    "barrel_pct": 3.3,
-    "hardhit_pct": 26.2,
-    "xwoba": 0.26,
-    "avg_exit_velo": 85.3
-  },
-  "679822": {
-    "name": "Justin Foscue",
-    "barrel_pct": 11.6,
-    "hardhit_pct": 41.9,
-    "xwoba": 0.345,
-    "avg_exit_velo": 89.4
-  },
-  "656484": {
-    "name": "Tristan Gray",
-    "barrel_pct": 6.1,
-    "hardhit_pct": 37.4,
-    "xwoba": 0.266,
-    "avg_exit_velo": 88.4
-  },
-  "681909": {
-    "name": "Justin Dean",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.36,
-    "avg_exit_velo": 80.3
-  },
-  "663757": {
-    "name": "Trent Grisham",
-    "barrel_pct": 11.2,
-    "hardhit_pct": 47.8,
-    "xwoba": 0.355,
-    "avg_exit_velo": 91.3
-  },
-  "676694": {
-    "name": "Jake Meyers",
-    "barrel_pct": 6.5,
-    "hardhit_pct": 28.0,
-    "xwoba": 0.255,
-    "avg_exit_velo": 85.7
-  },
-  "691777": {
-    "name": "Max Muncy",
-    "barrel_pct": 11.1,
-    "hardhit_pct": 48.5,
-    "xwoba": 0.292,
-    "avg_exit_velo": 90.8
-  },
-  "663586": {
-    "name": "Austin Riley",
-    "barrel_pct": 11.4,
-    "hardhit_pct": 43.5,
-    "xwoba": 0.302,
-    "avg_exit_velo": 90.6
+    "avg_exit_velo": 84.3
   },
   "672016": {
     "name": "Denzel Clarke",
@@ -2736,1209 +1560,19 @@
     "xwoba": 0.193,
     "avg_exit_velo": 91.9
   },
-  "695734": {
-    "name": "Daylen Lile",
-    "barrel_pct": 8.0,
-    "hardhit_pct": 35.7,
-    "xwoba": 0.315,
-    "avg_exit_velo": 88.2
-  },
-  "804668": {
-    "name": "Rafael Flores Jr.",
-    "barrel_pct": 20.0,
-    "hardhit_pct": 30.0,
-    "xwoba": 0.52,
-    "avg_exit_velo": 89.3
-  },
-  "666152": {
-    "name": "David Hamilton",
-    "barrel_pct": 3.8,
-    "hardhit_pct": 27.7,
-    "xwoba": 0.264,
-    "avg_exit_velo": 86.8
-  },
-  "668670": {
-    "name": "Jake Rogers",
-    "barrel_pct": 8.1,
-    "hardhit_pct": 37.1,
-    "xwoba": 0.259,
-    "avg_exit_velo": 87.6
-  },
-  "686797": {
-    "name": "Brooks Lee",
-    "barrel_pct": 3.7,
-    "hardhit_pct": 31.8,
-    "xwoba": 0.277,
-    "avg_exit_velo": 88.1
-  },
-  "694377": {
-    "name": "Nick Yorke",
-    "barrel_pct": 5.0,
-    "hardhit_pct": 48.3,
-    "xwoba": 0.306,
-    "avg_exit_velo": 89.3
-  },
-  "813841": {
-    "name": "Jonah Cox",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 35.7,
-    "xwoba": 0.262,
-    "avg_exit_velo": 90.0
-  },
-  "608841": {
-    "name": "Joey Meneses",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 58.8,
-    "xwoba": 0.327,
-    "avg_exit_velo": 92.7
-  },
-  "664702": {
-    "name": "Myles Straw",
-    "barrel_pct": 4.3,
-    "hardhit_pct": 25.7,
-    "xwoba": 0.299,
-    "avg_exit_velo": 86.0
-  },
-  "593428": {
-    "name": "Xander Bogaerts",
-    "barrel_pct": 6.4,
-    "hardhit_pct": 39.0,
-    "xwoba": 0.314,
-    "avg_exit_velo": 88.0
-  },
-  "687529": {
-    "name": "Grant McCray",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 0.0,
-    "xwoba": 0.037,
-    "avg_exit_velo": 84.8
-  },
-  "656555": {
-    "name": "Rhys Hoskins",
-    "barrel_pct": 12.5,
-    "hardhit_pct": 40.3,
-    "xwoba": 0.295,
-    "avg_exit_velo": 88.8
-  },
-  "814439": {
-    "name": "Ryan Waldschmidt",
-    "barrel_pct": 7.6,
-    "hardhit_pct": 34.2,
-    "xwoba": 0.277,
-    "avg_exit_velo": 87.0
-  },
-  "641820": {
-    "name": "Trey Mancini",
-    "barrel_pct": 18.2,
-    "hardhit_pct": 45.5,
-    "xwoba": 0.282,
-    "avg_exit_velo": 90.5
-  },
-  "516782": {
-    "name": "Starling Marte",
-    "barrel_pct": 10.8,
-    "hardhit_pct": 39.8,
-    "xwoba": 0.316,
-    "avg_exit_velo": 89.7
-  },
-  "670042": {
-    "name": "Luke Raley",
-    "barrel_pct": 16.6,
-    "hardhit_pct": 47.2,
-    "xwoba": 0.347,
-    "avg_exit_velo": 90.6
-  },
-  "691023": {
-    "name": "Jordan Walker",
-    "barrel_pct": 14.1,
-    "hardhit_pct": 50.5,
-    "xwoba": 0.37,
-    "avg_exit_velo": 93.9
-  },
-  "695490": {
-    "name": "Edwin Arroyo",
-    "barrel_pct": 1.2,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.312,
-    "avg_exit_velo": 87.3
-  },
-  "695336": {
-    "name": "Thomas Saggese",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 38.0,
-    "xwoba": 0.274,
-    "avg_exit_velo": 88.8
-  },
-  "656976": {
-    "name": "Pavin Smith",
-    "barrel_pct": 3.3,
-    "hardhit_pct": 31.1,
-    "xwoba": 0.255,
-    "avg_exit_velo": 86.1
-  },
-  "628451": {
-    "name": "Andy Ib\u00e1\u00f1ez",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 18.2,
-    "xwoba": 0.164,
-    "avg_exit_velo": 86.3
-  },
-  "699393": {
-    "name": "Pedro Ram\u00edrez",
-    "barrel_pct": 3.3,
-    "hardhit_pct": 41.7,
-    "xwoba": 0.293,
-    "avg_exit_velo": 89.8
-  },
-  "677592": {
-    "name": "Everson Pereira",
-    "barrel_pct": 10.6,
-    "hardhit_pct": 42.6,
-    "xwoba": 0.302,
-    "avg_exit_velo": 87.9
-  },
-  "666310": {
-    "name": "Bo Naylor",
-    "barrel_pct": 11.1,
-    "hardhit_pct": 42.6,
-    "xwoba": 0.29,
-    "avg_exit_velo": 89.6
-  },
-  "575929": {
-    "name": "Willson Contreras",
-    "barrel_pct": 14.7,
-    "hardhit_pct": 47.0,
-    "xwoba": 0.394,
-    "avg_exit_velo": 90.7
-  },
-  "691718": {
-    "name": "Pete Crow-Armstrong",
-    "barrel_pct": 10.6,
-    "hardhit_pct": 47.5,
-    "xwoba": 0.361,
-    "avg_exit_velo": 90.1
-  },
-  "641355": {
-    "name": "Cody Bellinger",
-    "barrel_pct": 6.4,
-    "hardhit_pct": 36.8,
-    "xwoba": 0.349,
-    "avg_exit_velo": 89.1
-  },
-  "686611": {
-    "name": "Dylan Crews",
-    "barrel_pct": 9.2,
-    "hardhit_pct": 42.0,
-    "xwoba": 0.321,
-    "avg_exit_velo": 90.5
-  },
-  "672012": {
-    "name": "Tyler Black",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 15.0,
-    "xwoba": 0.191,
-    "avg_exit_velo": 83.6
-  },
-  "663538": {
-    "name": "Nico Hoerner",
-    "barrel_pct": 0.8,
-    "hardhit_pct": 27.5,
-    "xwoba": 0.322,
-    "avg_exit_velo": 86.1
-  },
-  "702222": {
-    "name": "Justin Crawford",
-    "barrel_pct": 0.9,
-    "hardhit_pct": 33.0,
-    "xwoba": 0.273,
-    "avg_exit_velo": 86.6
-  },
-  "668930": {
-    "name": "Brice Turang",
-    "barrel_pct": 8.6,
-    "hardhit_pct": 43.7,
-    "xwoba": 0.343,
-    "avg_exit_velo": 90.6
-  },
-  "668804": {
-    "name": "Bryan Reynolds",
-    "barrel_pct": 10.6,
-    "hardhit_pct": 47.2,
-    "xwoba": 0.366,
-    "avg_exit_velo": 90.9
-  },
-  "678246": {
-    "name": "Miguel Vargas",
-    "barrel_pct": 14.9,
-    "hardhit_pct": 46.4,
-    "xwoba": 0.395,
-    "avg_exit_velo": 90.4
-  },
-  "703492": {
-    "name": "Nick Morabito",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.173,
-    "avg_exit_velo": 86.8
-  },
-  "673548": {
-    "name": "Seiya Suzuki",
-    "barrel_pct": 9.6,
-    "hardhit_pct": 41.2,
-    "xwoba": 0.339,
-    "avg_exit_velo": 89.2
-  },
-  "694876": {
-    "name": "Cooper Ingle",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 44.4,
-    "xwoba": 0.175,
-    "avg_exit_velo": 90.9
-  },
-  "663993": {
-    "name": "Nathaniel Lowe",
-    "barrel_pct": 12.0,
-    "hardhit_pct": 40.8,
-    "xwoba": 0.353,
-    "avg_exit_velo": 89.1
-  },
-  "506702": {
-    "name": "Sandy Le\u00f3n",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 19.2,
-    "xwoba": 0.132,
-    "avg_exit_velo": 81.9
-  },
-  "642350": {
-    "name": "Jose Siri",
-    "barrel_pct": 12.1,
-    "hardhit_pct": 36.4,
-    "xwoba": 0.316,
-    "avg_exit_velo": 87.0
-  },
-  "669477": {
-    "name": "Casey Schmitt",
-    "barrel_pct": 12.1,
-    "hardhit_pct": 44.1,
-    "xwoba": 0.356,
-    "avg_exit_velo": 89.7
-  },
-  "686780": {
-    "name": "Pedro Pag\u00e9s",
-    "barrel_pct": 5.5,
-    "hardhit_pct": 39.1,
-    "xwoba": 0.267,
-    "avg_exit_velo": 87.1
-  },
-  "680728": {
-    "name": "Adrian Del Castillo",
-    "barrel_pct": 6.6,
-    "hardhit_pct": 39.3,
-    "xwoba": 0.266,
-    "avg_exit_velo": 88.9
-  },
-  "663886": {
-    "name": "Tyler Stephenson",
-    "barrel_pct": 11.3,
-    "hardhit_pct": 45.7,
-    "xwoba": 0.342,
-    "avg_exit_velo": 90.9
-  },
-  "681546": {
-    "name": "James Outman",
-    "barrel_pct": 6.7,
-    "hardhit_pct": 34.7,
-    "xwoba": 0.211,
-    "avg_exit_velo": 86.2
-  },
-  "624585": {
-    "name": "Jorge Soler",
-    "barrel_pct": 11.4,
-    "hardhit_pct": 41.8,
-    "xwoba": 0.298,
-    "avg_exit_velo": 88.2
-  },
-  "681624": {
-    "name": "Andy Pages",
-    "barrel_pct": 8.2,
-    "hardhit_pct": 43.8,
-    "xwoba": 0.339,
-    "avg_exit_velo": 88.9
-  },
-  "543807": {
-    "name": "George Springer",
-    "barrel_pct": 8.0,
-    "hardhit_pct": 40.4,
-    "xwoba": 0.309,
-    "avg_exit_velo": 88.7
-  },
-  "545361": {
-    "name": "Mike Trout",
-    "barrel_pct": 19.1,
-    "hardhit_pct": 48.3,
-    "xwoba": 0.402,
-    "avg_exit_velo": 90.7
-  },
-  "687749": {
-    "name": "Jase Bowen",
-    "barrel_pct": 10.7,
-    "hardhit_pct": 24.1,
-    "xwoba": 0.237,
-    "avg_exit_velo": 85.3
-  },
-  "691277": {
-    "name": "Deyvison De Los Santos",
-    "barrel_pct": 25.0,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.221,
-    "avg_exit_velo": 92.9
-  },
-  "681715": {
-    "name": "Heriberto Hern\u00e1ndez",
-    "barrel_pct": 12.8,
-    "hardhit_pct": 51.2,
-    "xwoba": 0.36,
-    "avg_exit_velo": 92.4
-  },
-  "665923": {
-    "name": "Esteury Ruiz",
-    "barrel_pct": 8.8,
-    "hardhit_pct": 29.4,
-    "xwoba": 0.32,
-    "avg_exit_velo": 86.5
-  },
-  "800325": {
-    "name": "Luis Lara",
-    "barrel_pct": 4.8,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.352,
-    "avg_exit_velo": 87.6
-  },
-  "689414": {
-    "name": "Liam Hicks",
-    "barrel_pct": 3.8,
-    "hardhit_pct": 30.2,
-    "xwoba": 0.308,
-    "avg_exit_velo": 85.3
-  },
-  "572233": {
-    "name": "Christian Walker",
-    "barrel_pct": 9.8,
-    "hardhit_pct": 42.2,
-    "xwoba": 0.3,
-    "avg_exit_velo": 89.3
-  },
-  "695391": {
-    "name": "Brett Harris",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.299,
-    "avg_exit_velo": 78.9
-  },
-  "640902": {
-    "name": "Jhonny Pereda",
-    "barrel_pct": 3.8,
-    "hardhit_pct": 46.2,
-    "xwoba": 0.341,
-    "avg_exit_velo": 89.8
-  },
-  "682663": {
-    "name": "Agust\u00edn Ram\u00edrez",
-    "barrel_pct": 4.7,
-    "hardhit_pct": 40.7,
-    "xwoba": 0.282,
-    "avg_exit_velo": 89.2
-  },
-  "642851": {
-    "name": "Austin Wynns",
-    "barrel_pct": 4.9,
-    "hardhit_pct": 29.3,
-    "xwoba": 0.26,
-    "avg_exit_velo": 86.3
-  },
-  "669360": {
-    "name": "Trei Cruz",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.097,
-    "avg_exit_velo": 96.7
-  },
-  "608348": {
-    "name": "Carson Kelly",
-    "barrel_pct": 6.4,
-    "hardhit_pct": 38.0,
-    "xwoba": 0.328,
-    "avg_exit_velo": 88.0
-  },
-  "683679": {
-    "name": "Jesus Rodriguez",
-    "barrel_pct": 2.5,
-    "hardhit_pct": 27.5,
-    "xwoba": 0.316,
-    "avg_exit_velo": 86.2
-  },
-  "665966": {
-    "name": "Carlos Narv\u00e1ez",
-    "barrel_pct": 7.4,
-    "hardhit_pct": 38.0,
-    "xwoba": 0.278,
-    "avg_exit_velo": 91.4
-  },
-  "691458": {
-    "name": "Blaze Jordan",
-    "barrel_pct": 6.4,
-    "hardhit_pct": 44.9,
-    "xwoba": 0.299,
-    "avg_exit_velo": 89.1
-  },
-  "690022": {
-    "name": "Ryan Ritter",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.166,
-    "avg_exit_velo": 90.6
-  },
-  "807747": {
-    "name": "Rikuu Nishida",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 12.0,
-    "xwoba": 0.247,
-    "avg_exit_velo": 87.9
-  },
-  "640459": {
-    "name": "Brian Navarreto",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 10.0,
-    "xwoba": 0.142,
-    "avg_exit_velo": 86.2
-  },
-  "687515": {
-    "name": "Colby Thomas",
-    "barrel_pct": 9.7,
-    "hardhit_pct": 36.1,
-    "xwoba": 0.261,
-    "avg_exit_velo": 89.1
-  },
-  "647304": {
-    "name": "Josh Naylor",
-    "barrel_pct": 4.6,
-    "hardhit_pct": 36.4,
-    "xwoba": 0.321,
-    "avg_exit_velo": 87.5
-  },
-  "666126": {
-    "name": "Carlos Cortes",
-    "barrel_pct": 7.7,
-    "hardhit_pct": 40.7,
-    "xwoba": 0.339,
-    "avg_exit_velo": 90.1
-  },
-  "666931": {
-    "name": "Jared Oliva",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 66.7,
-    "xwoba": 0.308,
-    "avg_exit_velo": 93.6
-  },
-  "643376": {
-    "name": "Danny Jansen",
-    "barrel_pct": 6.0,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.254,
-    "avg_exit_velo": 87.7
-  },
-  "680757": {
-    "name": "Steven Kwan",
-    "barrel_pct": 0.4,
-    "hardhit_pct": 9.5,
-    "xwoba": 0.316,
-    "avg_exit_velo": 83.2
-  },
-  "592626": {
-    "name": "Joc Pederson",
-    "barrel_pct": 11.8,
-    "hardhit_pct": 49.2,
-    "xwoba": 0.356,
-    "avg_exit_velo": 92.0
-  },
-  "677951": {
-    "name": "Bobby Witt Jr.",
-    "barrel_pct": 12.2,
-    "hardhit_pct": 52.2,
-    "xwoba": 0.386,
-    "avg_exit_velo": 92.9
-  },
-  "664040": {
-    "name": "Brandon Lowe",
-    "barrel_pct": 12.2,
-    "hardhit_pct": 45.8,
-    "xwoba": 0.336,
-    "avg_exit_velo": 91.0
-  },
-  "680777": {
-    "name": "Ryan Jeffers",
-    "barrel_pct": 14.3,
-    "hardhit_pct": 41.2,
-    "xwoba": 0.385,
-    "avg_exit_velo": 90.4
-  },
-  "681508": {
-    "name": "Mickey Gasper",
-    "barrel_pct": 4.5,
-    "hardhit_pct": 36.4,
-    "xwoba": 0.28,
-    "avg_exit_velo": 88.3
-  },
-  "805249": {
-    "name": "Otto Kemp",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 13.3,
-    "xwoba": 0.205,
-    "avg_exit_velo": 81.5
-  },
-  "669392": {
-    "name": "Samad Taylor",
-    "barrel_pct": 3.3,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.326,
-    "avg_exit_velo": 85.2
-  },
-  "670764": {
-    "name": "Taylor Walls",
-    "barrel_pct": 2.8,
-    "hardhit_pct": 22.8,
-    "xwoba": 0.254,
-    "avg_exit_velo": 85.3
-  },
-  "669236": {
-    "name": "Jeremiah Jackson",
-    "barrel_pct": 7.7,
-    "hardhit_pct": 38.5,
-    "xwoba": 0.291,
-    "avg_exit_velo": 89.4
-  },
-  "664728": {
-    "name": "Kyle Isbel",
-    "barrel_pct": 3.1,
-    "hardhit_pct": 34.1,
-    "xwoba": 0.275,
-    "avg_exit_velo": 88.6
-  },
-  "802415": {
-    "name": "Chandler Simpson",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 14.4,
-    "xwoba": 0.264,
-    "avg_exit_velo": 83.9
-  },
-  "828599": {
-    "name": "Lucas Spence",
-    "barrel_pct": 8.3,
-    "hardhit_pct": 58.3,
-    "xwoba": 0.304,
-    "avg_exit_velo": 94.4
-  },
-  "571970": {
-    "name": "Max Muncy",
-    "barrel_pct": 13.7,
-    "hardhit_pct": 44.2,
-    "xwoba": 0.364,
-    "avg_exit_velo": 90.1
-  },
-  "691019": {
-    "name": "Kyle Teel",
-    "barrel_pct": 11.1,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.302,
-    "avg_exit_velo": 84.4
-  },
-  "686469": {
-    "name": "Vinnie Pasquantino",
-    "barrel_pct": 7.2,
-    "hardhit_pct": 38.6,
-    "xwoba": 0.317,
-    "avg_exit_velo": 88.7
-  },
-  "681807": {
-    "name": "David Fry",
-    "barrel_pct": 6.8,
-    "hardhit_pct": 33.0,
-    "xwoba": 0.255,
-    "avg_exit_velo": 85.8
-  },
-  "596117": {
-    "name": "Garrett Stubbs",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 34.8,
-    "xwoba": 0.243,
-    "avg_exit_velo": 86.5
-  },
-  "624424": {
-    "name": "Michael Conforto",
-    "barrel_pct": 13.0,
-    "hardhit_pct": 48.0,
-    "xwoba": 0.337,
-    "avg_exit_velo": 92.6
-  },
-  "663697": {
-    "name": "Jonathan India",
-    "barrel_pct": 5.7,
-    "hardhit_pct": 31.4,
-    "xwoba": 0.284,
-    "avg_exit_velo": 85.7
-  },
-  "678011": {
-    "name": "Anthony Seigler",
-    "barrel_pct": 5.4,
-    "hardhit_pct": 37.8,
-    "xwoba": 0.323,
-    "avg_exit_velo": 88.2
-  },
-  "596103": {
-    "name": "Austin Slater",
-    "barrel_pct": 2.3,
-    "hardhit_pct": 18.2,
-    "xwoba": 0.235,
-    "avg_exit_velo": 85.0
-  },
-  "663616": {
-    "name": "Trevor Larnach",
-    "barrel_pct": 7.0,
-    "hardhit_pct": 34.7,
-    "xwoba": 0.339,
-    "avg_exit_velo": 87.1
-  },
-  "686452": {
-    "name": "Drew Millas",
-    "barrel_pct": 3.2,
-    "hardhit_pct": 21.9,
-    "xwoba": 0.266,
-    "avg_exit_velo": 83.6
-  },
-  "666185": {
-    "name": "Dylan Carlson",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 0.0,
-    "xwoba": 0.07,
-    "avg_exit_velo": 84.4
-  },
-  "672580": {
-    "name": "Maikel Garcia",
-    "barrel_pct": 4.9,
-    "hardhit_pct": 41.3,
-    "xwoba": 0.316,
-    "avg_exit_velo": 90.1
-  },
-  "676475": {
-    "name": "Alec Burleson",
-    "barrel_pct": 11.3,
-    "hardhit_pct": 48.1,
-    "xwoba": 0.384,
-    "avg_exit_velo": 91.6
-  },
-  "606466": {
-    "name": "Ketel Marte",
-    "barrel_pct": 10.6,
-    "hardhit_pct": 44.7,
-    "xwoba": 0.362,
-    "avg_exit_velo": 91.1
-  },
-  "467793": {
-    "name": "Carlos Santana",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 43.8,
-    "xwoba": 0.187,
-    "avg_exit_velo": 87.8
-  },
-  "683953": {
-    "name": "Travis Bazzana",
-    "barrel_pct": 5.1,
-    "hardhit_pct": 36.4,
-    "xwoba": 0.304,
-    "avg_exit_velo": 88.3
-  },
-  "669364": {
-    "name": "Xavier Edwards",
-    "barrel_pct": 4.4,
-    "hardhit_pct": 29.0,
-    "xwoba": 0.323,
-    "avg_exit_velo": 87.0
-  },
-  "687231": {
-    "name": "Darell Hernaiz",
-    "barrel_pct": 1.0,
-    "hardhit_pct": 24.7,
-    "xwoba": 0.263,
-    "avg_exit_velo": 84.4
-  },
-  "642715": {
-    "name": "Willy Adames",
-    "barrel_pct": 9.5,
-    "hardhit_pct": 40.1,
-    "xwoba": 0.293,
-    "avg_exit_velo": 88.1
-  },
-  "807727": {
-    "name": "Charles McAdoo",
-    "barrel_pct": 5.3,
-    "hardhit_pct": 26.3,
-    "xwoba": 0.234,
-    "avg_exit_velo": 88.0
-  },
-  "683737": {
-    "name": "Michael Busch",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 40.5,
-    "xwoba": 0.341,
-    "avg_exit_velo": 88.3
-  },
-  "670541": {
-    "name": "Yordan Alvarez",
-    "barrel_pct": 19.1,
-    "hardhit_pct": 53.2,
-    "xwoba": 0.476,
-    "avg_exit_velo": 94.6
-  },
-  "641598": {
-    "name": "Mitch Garver",
-    "barrel_pct": 8.5,
-    "hardhit_pct": 49.3,
-    "xwoba": 0.312,
-    "avg_exit_velo": 90.5
-  },
-  "686948": {
-    "name": "Drake Baldwin",
-    "barrel_pct": 15.4,
-    "hardhit_pct": 50.7,
-    "xwoba": 0.387,
-    "avg_exit_velo": 91.5
-  },
-  "686554": {
-    "name": "Oliver Dunn",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.207,
-    "avg_exit_velo": 82.6
-  },
-  "666176": {
-    "name": "Jo Adell",
-    "barrel_pct": 8.7,
-    "hardhit_pct": 43.3,
-    "xwoba": 0.326,
-    "avg_exit_velo": 89.6
-  },
-  "669394": {
-    "name": "Jake Burger",
-    "barrel_pct": 10.9,
-    "hardhit_pct": 46.7,
-    "xwoba": 0.309,
-    "avg_exit_velo": 90.0
-  },
-  "676609": {
-    "name": "Jos\u00e9 Caballero",
-    "barrel_pct": 3.7,
-    "hardhit_pct": 25.2,
-    "xwoba": 0.271,
-    "avg_exit_velo": 83.8
-  },
-  "605137": {
-    "name": "Josh Bell",
-    "barrel_pct": 10.1,
-    "hardhit_pct": 43.3,
-    "xwoba": 0.324,
-    "avg_exit_velo": 89.9
-  },
-  "675659": {
-    "name": "Greg Jones",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 28.6,
-    "xwoba": 0.164,
-    "avg_exit_velo": 86.3
-  },
-  "669003": {
-    "name": "Garrett Mitchell",
-    "barrel_pct": 14.1,
-    "hardhit_pct": 49.5,
-    "xwoba": 0.354,
-    "avg_exit_velo": 92.6
-  },
-  "669707": {
-    "name": "Jared Triolo",
-    "barrel_pct": 2.6,
-    "hardhit_pct": 36.8,
-    "xwoba": 0.284,
-    "avg_exit_velo": 87.5
-  },
-  "664731": {
-    "name": "P.J. Higgins",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 13.6,
-    "xwoba": 0.287,
-    "avg_exit_velo": 83.6
-  },
-  "701162": {
-    "name": "Ben Malgeri",
-    "barrel_pct": 4.3,
-    "hardhit_pct": 39.1,
-    "xwoba": 0.282,
-    "avg_exit_velo": 89.6
-  },
-  "691740": {
-    "name": "Daniel Susac",
-    "barrel_pct": 4.8,
-    "hardhit_pct": 29.8,
-    "xwoba": 0.294,
-    "avg_exit_velo": 86.5
-  },
-  "656811": {
-    "name": "Ryan O'Hearn",
-    "barrel_pct": 7.8,
-    "hardhit_pct": 45.5,
-    "xwoba": 0.327,
-    "avg_exit_velo": 89.8
-  },
-  "669004": {
-    "name": "MJ Melendez",
-    "barrel_pct": 11.1,
-    "hardhit_pct": 55.6,
-    "xwoba": 0.28,
-    "avg_exit_velo": 94.2
-  },
-  "664238": {
-    "name": "Dylan Moore",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.233,
-    "avg_exit_velo": 91.3
-  },
-  "502054": {
-    "name": "Tommy Pham",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.137,
-    "avg_exit_velo": 91.7
-  },
-  "660688": {
-    "name": "Keibert Ruiz",
-    "barrel_pct": 5.5,
-    "hardhit_pct": 39.3,
-    "xwoba": 0.277,
-    "avg_exit_velo": 89.3
-  },
-  "663624": {
-    "name": "Ryan Mountcastle",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 41.7,
-    "xwoba": 0.301,
-    "avg_exit_velo": 90.0
-  },
-  "686475": {
-    "name": "Tyler Tolbert",
-    "barrel_pct": 3.7,
-    "hardhit_pct": 31.5,
-    "xwoba": 0.303,
-    "avg_exit_velo": 85.0
-  },
-  "663330": {
-    "name": "Jahmai Jones",
-    "barrel_pct": 9.4,
-    "hardhit_pct": 43.8,
-    "xwoba": 0.304,
-    "avg_exit_velo": 90.7
-  },
-  "596146": {
-    "name": "Max Kepler",
-    "barrel_pct": 12.8,
-    "hardhit_pct": 51.3,
-    "xwoba": 0.323,
-    "avg_exit_velo": 90.6
-  },
-  "605244": {
-    "name": "Aramis Garcia",
-    "barrel_pct": 7.7,
-    "hardhit_pct": 30.8,
+  "691785": {
+    "name": "Marcelo Mayer",
+    "barrel_pct": 6.1,
+    "hardhit_pct": 36.0,
     "xwoba": 0.259,
     "avg_exit_velo": 86.1
-  },
-  "595978": {
-    "name": "Austin Hedges",
-    "barrel_pct": 5.3,
-    "hardhit_pct": 31.9,
-    "xwoba": 0.293,
-    "avg_exit_velo": 86.9
-  },
-  "678391": {
-    "name": "Jorbit Vivas",
-    "barrel_pct": 3.7,
-    "hardhit_pct": 25.8,
-    "xwoba": 0.297,
-    "avg_exit_velo": 83.3
-  },
-  "688363": {
-    "name": "Graham Pauley",
-    "barrel_pct": 4.3,
-    "hardhit_pct": 22.9,
-    "xwoba": 0.205,
-    "avg_exit_velo": 83.9
-  },
-  "665161": {
-    "name": "Jeremy Pe\u00f1a",
-    "barrel_pct": 4.7,
-    "hardhit_pct": 38.4,
-    "xwoba": 0.353,
-    "avg_exit_velo": 87.5
-  },
-  "696030": {
-    "name": "Alejandro Osuna",
-    "barrel_pct": 0.7,
-    "hardhit_pct": 29.7,
-    "xwoba": 0.311,
-    "avg_exit_velo": 87.1
-  },
-  "680474": {
-    "name": "Max Schuemann",
-    "barrel_pct": 12.5,
-    "hardhit_pct": 40.0,
-    "xwoba": 0.336,
-    "avg_exit_velo": 89.1
-  },
-  "676356": {
-    "name": "Jonny DeLuca",
-    "barrel_pct": 4.1,
-    "hardhit_pct": 29.5,
-    "xwoba": 0.285,
-    "avg_exit_velo": 84.8
-  },
-  "650333": {
-    "name": "Luis Arraez",
-    "barrel_pct": 0.5,
-    "hardhit_pct": 21.4,
-    "xwoba": 0.304,
-    "avg_exit_velo": 87.0
-  },
-  "680700": {
-    "name": "Richie Palacios",
-    "barrel_pct": 3.7,
-    "hardhit_pct": 24.8,
-    "xwoba": 0.306,
-    "avg_exit_velo": 85.8
-  },
-  "663837": {
-    "name": "Matt Vierling",
-    "barrel_pct": 5.2,
-    "hardhit_pct": 36.8,
-    "xwoba": 0.304,
-    "avg_exit_velo": 87.7
-  },
-  "682877": {
-    "name": "Juan Brito",
-    "barrel_pct": 2.9,
-    "hardhit_pct": 32.4,
-    "xwoba": 0.256,
-    "avg_exit_velo": 84.3
-  },
-  "663698": {
-    "name": "Joey Bart",
-    "barrel_pct": 9.1,
-    "hardhit_pct": 33.3,
-    "xwoba": 0.292,
-    "avg_exit_velo": 86.2
-  },
-  "660821": {
-    "name": "Jes\u00fas S\u00e1nchez",
-    "barrel_pct": 10.8,
-    "hardhit_pct": 46.7,
-    "xwoba": 0.335,
-    "avg_exit_velo": 91.1
-  },
-  "695508": {
-    "name": "Cam Cauley",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 16.7,
-    "xwoba": 0.275,
-    "avg_exit_velo": 84.2
-  },
-  "657136": {
-    "name": "Connor Wong",
-    "barrel_pct": 4.3,
-    "hardhit_pct": 35.5,
-    "xwoba": 0.31,
-    "avg_exit_velo": 85.8
-  },
-  "676724": {
-    "name": "Jared Young",
-    "barrel_pct": 10.9,
-    "hardhit_pct": 46.2,
-    "xwoba": 0.332,
-    "avg_exit_velo": 89.5
-  },
-  "666139": {
-    "name": "Josh Lowe",
-    "barrel_pct": 9.2,
-    "hardhit_pct": 36.9,
-    "xwoba": 0.286,
-    "avg_exit_velo": 89.0
-  },
-  "663853": {
-    "name": "Romy Gonzalez",
-    "barrel_pct": 6.3,
-    "hardhit_pct": 43.8,
-    "xwoba": 0.299,
-    "avg_exit_velo": 89.6
-  },
-  "573262": {
-    "name": "Mike Yastrzemski",
-    "barrel_pct": 6.4,
-    "hardhit_pct": 43.0,
-    "xwoba": 0.303,
-    "avg_exit_velo": 90.3
-  },
-  "687221": {
-    "name": "Dalton Rushing",
-    "barrel_pct": 11.5,
-    "hardhit_pct": 43.1,
-    "xwoba": 0.332,
-    "avg_exit_velo": 89.0
-  },
-  "678554": {
-    "name": "Curtis Mead",
-    "barrel_pct": 11.2,
-    "hardhit_pct": 42.9,
-    "xwoba": 0.359,
-    "avg_exit_velo": 88.2
-  },
-  "701852": {
-    "name": "Drew Cavanaugh",
-    "barrel_pct": 7.7,
-    "hardhit_pct": 23.1,
-    "xwoba": 0.323,
-    "avg_exit_velo": 86.5
-  },
-  "672279": {
-    "name": "Michael Siani",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 0.0,
-    "xwoba": 0.292,
-    "avg_exit_velo": 79.9
-  },
-  "656305": {
-    "name": "Matt Chapman",
-    "barrel_pct": 6.6,
-    "hardhit_pct": 35.8,
-    "xwoba": 0.286,
-    "avg_exit_velo": 88.2
-  },
-  "686823": {
-    "name": "Will Brennan",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 25.0,
-    "xwoba": 0.178,
-    "avg_exit_velo": 82.9
-  },
-  "664770": {
-    "name": "Nathan Lukes",
-    "barrel_pct": 1.1,
-    "hardhit_pct": 28.8,
-    "xwoba": 0.292,
-    "avg_exit_velo": 86.6
-  },
-  "656537": {
-    "name": "Derek Hill",
-    "barrel_pct": 11.9,
-    "hardhit_pct": 35.3,
-    "xwoba": 0.303,
-    "avg_exit_velo": 90.4
-  },
-  "669224": {
-    "name": "Austin Wells",
-    "barrel_pct": 6.3,
-    "hardhit_pct": 43.7,
-    "xwoba": 0.287,
-    "avg_exit_velo": 88.8
-  },
-  "669899": {
-    "name": "Ryan Ward",
-    "barrel_pct": 10.8,
-    "hardhit_pct": 28.9,
-    "xwoba": 0.316,
-    "avg_exit_velo": 88.5
-  },
-  "621566": {
-    "name": "Matt Olson",
-    "barrel_pct": 14.0,
-    "hardhit_pct": 50.5,
-    "xwoba": 0.358,
-    "avg_exit_velo": 92.6
-  },
-  "673962": {
-    "name": "Josh Jung",
-    "barrel_pct": 6.3,
-    "hardhit_pct": 48.3,
-    "xwoba": 0.347,
-    "avg_exit_velo": 90.6
-  },
-  "663897": {
-    "name": "Luke Williams",
-    "barrel_pct": null,
-    "hardhit_pct": null,
-    "xwoba": 0.699,
-    "avg_exit_velo": null
-  },
-  "660644": {
-    "name": "Vidal Bruj\u00e1n",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 9.1,
-    "xwoba": 0.213,
-    "avg_exit_velo": 82.0
-  },
-  "666624": {
-    "name": "Christopher Morel",
-    "barrel_pct": 2.5,
-    "hardhit_pct": 42.5,
-    "xwoba": 0.22,
-    "avg_exit_velo": 88.4
-  },
-  "694410": {
-    "name": "LuJames Groover",
-    "barrel_pct": 11.1,
-    "hardhit_pct": 45.9,
-    "xwoba": 0.286,
-    "avg_exit_velo": 90.0
-  },
-  "642020": {
-    "name": "Chuckie Robinson",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 14.3,
-    "xwoba": 0.149,
-    "avg_exit_velo": 85.8
   },
   "665052": {
     "name": "Griffin Conine",
-    "barrel_pct": 16.7,
-    "hardhit_pct": 55.0,
-    "xwoba": 0.383,
-    "avg_exit_velo": 90.4
-  },
-  "571771": {
-    "name": "Enrique Hern\u00e1ndez",
-    "barrel_pct": 50.0,
-    "hardhit_pct": 75.0,
-    "xwoba": 0.78,
-    "avg_exit_velo": 91.7
-  },
-  "694362": {
-    "name": "Blake Dunn",
-    "barrel_pct": 2.9,
-    "hardhit_pct": 30.3,
-    "xwoba": 0.278,
-    "avg_exit_velo": 89.2
-  },
-  "668723": {
-    "name": "Ryan Vilade",
-    "barrel_pct": 5.9,
-    "hardhit_pct": 38.1,
-    "xwoba": 0.312,
-    "avg_exit_velo": 89.3
+    "barrel_pct": 17.5,
+    "hardhit_pct": 54.0,
+    "xwoba": 0.389,
+    "avg_exit_velo": 90.3
   },
   "691783": {
     "name": "Jordan Lawlar",
@@ -3947,40 +1581,719 @@
     "xwoba": 0.348,
     "avg_exit_velo": 86.5
   },
-  "621493": {
-    "name": "Taylor Ward",
-    "barrel_pct": 5.8,
-    "hardhit_pct": 38.2,
-    "xwoba": 0.347,
-    "avg_exit_velo": 89.3
+  "571448": {
+    "name": "Nolan Arenado",
+    "barrel_pct": 7.5,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.3,
+    "avg_exit_velo": 85.3
   },
-  "664983": {
-    "name": "Jake McCarthy",
-    "barrel_pct": 5.6,
-    "hardhit_pct": 25.2,
-    "xwoba": 0.315,
-    "avg_exit_velo": 85.2
+  "571657": {
+    "name": "Kyle Farmer",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.238,
+    "avg_exit_velo": 80.4
   },
-  "663368": {
-    "name": "Blake Perkins",
-    "barrel_pct": 4.4,
-    "hardhit_pct": 33.8,
-    "xwoba": 0.264,
+  "662139": {
+    "name": "Daulton Varsho",
+    "barrel_pct": 6.8,
+    "hardhit_pct": 38.1,
+    "xwoba": 0.295,
+    "avg_exit_velo": 86.1
+  },
+  "669398": {
+    "name": "Gage Workman",
+    "barrel_pct": 22.7,
+    "hardhit_pct": 45.5,
+    "xwoba": 0.311,
+    "avg_exit_velo": 94.2
+  },
+  "665966": {
+    "name": "Carlos Narv\u00e1ez",
+    "barrel_pct": 7.3,
+    "hardhit_pct": 38.5,
+    "xwoba": 0.277,
+    "avg_exit_velo": 91.4
+  },
+  "642715": {
+    "name": "Willy Adames",
+    "barrel_pct": 9.5,
+    "hardhit_pct": 40.2,
+    "xwoba": 0.294,
+    "avg_exit_velo": 88.1
+  },
+  "807799": {
+    "name": "Masataka Yoshida",
+    "barrel_pct": 2.9,
+    "hardhit_pct": 39.1,
+    "xwoba": 0.321,
+    "avg_exit_velo": 88.9
+  },
+  "543309": {
+    "name": "Kyle Higashioka",
+    "barrel_pct": 8.5,
+    "hardhit_pct": 38.1,
+    "xwoba": 0.295,
+    "avg_exit_velo": 88.2
+  },
+  "607043": {
+    "name": "Brandon Nimmo",
+    "barrel_pct": 12.4,
+    "hardhit_pct": 51.9,
+    "xwoba": 0.374,
+    "avg_exit_velo": 92.3
+  },
+  "656941": {
+    "name": "Kyle Schwarber",
+    "barrel_pct": 18.9,
+    "hardhit_pct": 52.3,
+    "xwoba": 0.369,
+    "avg_exit_velo": 93.2
+  },
+  "663609": {
+    "name": "Luken Baker",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.123,
+    "avg_exit_velo": 92.2
+  },
+  "663586": {
+    "name": "Austin Riley",
+    "barrel_pct": 11.3,
+    "hardhit_pct": 44.0,
+    "xwoba": 0.301,
+    "avg_exit_velo": 90.7
+  },
+  "686797": {
+    "name": "Brooks Lee",
+    "barrel_pct": 4.0,
+    "hardhit_pct": 32.1,
+    "xwoba": 0.277,
+    "avg_exit_velo": 88.1
+  },
+  "595879": {
+    "name": "Javier B\u00e1ez",
+    "barrel_pct": 3.2,
+    "hardhit_pct": 28.6,
+    "xwoba": 0.294,
+    "avg_exit_velo": 84.7
+  },
+  "575929": {
+    "name": "Willson Contreras",
+    "barrel_pct": 14.8,
+    "hardhit_pct": 46.9,
+    "xwoba": 0.393,
+    "avg_exit_velo": 90.8
+  },
+  "677951": {
+    "name": "Bobby Witt Jr.",
+    "barrel_pct": 12.2,
+    "hardhit_pct": 52.2,
+    "xwoba": 0.386,
+    "avg_exit_velo": 92.9
+  },
+  "695734": {
+    "name": "Daylen Lile",
+    "barrel_pct": 8.2,
+    "hardhit_pct": 35.8,
+    "xwoba": 0.316,
+    "avg_exit_velo": 88.2
+  },
+  "676724": {
+    "name": "Jared Young",
+    "barrel_pct": 10.8,
+    "hardhit_pct": 45.8,
+    "xwoba": 0.33,
+    "avg_exit_velo": 89.5
+  },
+  "665489": {
+    "name": "Vladimir Guerrero Jr.",
+    "barrel_pct": 7.1,
+    "hardhit_pct": 44.2,
+    "xwoba": 0.341,
+    "avg_exit_velo": 90.3
+  },
+  "640492": {
+    "name": "Jos\u00e9 Az\u00f3car",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 23.1,
+    "xwoba": 0.298,
+    "avg_exit_velo": 87.3
+  },
+  "694212": {
+    "name": "Samuel Basallo",
+    "barrel_pct": 12.9,
+    "hardhit_pct": 45.5,
+    "xwoba": 0.336,
+    "avg_exit_velo": 91.3
+  },
+  "682641": {
+    "name": "Luis Matos",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 23.1,
+    "xwoba": 0.13,
+    "avg_exit_velo": 84.1
+  },
+  "692216": {
+    "name": "CJ Kayfus",
+    "barrel_pct": 21.4,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.304,
+    "avg_exit_velo": 92.8
+  },
+  "663897": {
+    "name": "Luke Williams",
+    "barrel_pct": null,
+    "hardhit_pct": null,
+    "xwoba": 0.698,
+    "avg_exit_velo": null
+  },
+  "695731": {
+    "name": "Braden Montgomery",
+    "barrel_pct": 3.9,
+    "hardhit_pct": 40.2,
+    "xwoba": 0.303,
+    "avg_exit_velo": 89.0
+  },
+  "641820": {
+    "name": "Trey Mancini",
+    "barrel_pct": 18.2,
+    "hardhit_pct": 45.5,
+    "xwoba": 0.282,
+    "avg_exit_velo": 90.5
+  },
+  "680718": {
+    "name": "Addison Barger",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.255,
+    "avg_exit_velo": 89.0
+  },
+  "683737": {
+    "name": "Michael Busch",
+    "barrel_pct": 9.9,
+    "hardhit_pct": 40.4,
+    "xwoba": 0.341,
+    "avg_exit_velo": 88.4
+  },
+  "681508": {
+    "name": "Mickey Gasper",
+    "barrel_pct": 4.5,
+    "hardhit_pct": 36.4,
+    "xwoba": 0.28,
+    "avg_exit_velo": 88.3
+  },
+  "592450": {
+    "name": "Aaron Judge",
+    "barrel_pct": 21.7,
+    "hardhit_pct": 57.3,
+    "xwoba": 0.415,
+    "avg_exit_velo": 94.1
+  },
+  "664761": {
+    "name": "Alec Bohm",
+    "barrel_pct": 5.5,
+    "hardhit_pct": 42.5,
+    "xwoba": 0.302,
+    "avg_exit_velo": 90.6
+  },
+  "683227": {
+    "name": "Cody Freeman",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 16.7,
+    "xwoba": 0.164,
+    "avg_exit_velo": 82.5
+  },
+  "672642": {
+    "name": "Steward Berroa",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.211,
+    "avg_exit_velo": 90.7
+  },
+  "668901": {
+    "name": "Mark Vientos",
+    "barrel_pct": 10.1,
+    "hardhit_pct": 43.8,
+    "xwoba": 0.31,
+    "avg_exit_velo": 89.5
+  },
+  "663616": {
+    "name": "Trevor Larnach",
+    "barrel_pct": 7.8,
+    "hardhit_pct": 35.0,
+    "xwoba": 0.344,
+    "avg_exit_velo": 87.2
+  },
+  "665561": {
+    "name": "Rafael March\u00e1n",
+    "barrel_pct": 2.7,
+    "hardhit_pct": 18.9,
+    "xwoba": 0.208,
+    "avg_exit_velo": 83.2
+  },
+  "655316": {
+    "name": "Andruw Monasterio",
+    "barrel_pct": 9.4,
+    "hardhit_pct": 38.3,
+    "xwoba": 0.309,
+    "avg_exit_velo": 88.9
+  },
+  "694249": {
+    "name": "Cole Carrigg",
+    "barrel_pct": 6.4,
+    "hardhit_pct": 33.0,
+    "xwoba": 0.327,
     "avg_exit_velo": 86.4
   },
-  "596142": {
-    "name": "Gary S\u00e1nchez",
-    "barrel_pct": 8.7,
-    "hardhit_pct": 35.7,
-    "xwoba": 0.368,
-    "avg_exit_velo": 88.6
+  "669256": {
+    "name": "Nick Solak",
+    "barrel_pct": 12.5,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.373,
+    "avg_exit_velo": 90.2
   },
-  "681082": {
-    "name": "Bryson Stott",
-    "barrel_pct": 6.9,
-    "hardhit_pct": 37.8,
-    "xwoba": 0.318,
+  "680474": {
+    "name": "Max Schuemann",
+    "barrel_pct": 12.5,
+    "hardhit_pct": 40.0,
+    "xwoba": 0.336,
+    "avg_exit_velo": 89.1
+  },
+  "671655": {
+    "name": "George Valera",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 34.5,
+    "xwoba": 0.198,
+    "avg_exit_velo": 90.2
+  },
+  "676914": {
+    "name": "Davis Schneider",
+    "barrel_pct": 11.7,
+    "hardhit_pct": 45.9,
+    "xwoba": 0.27,
     "avg_exit_velo": 89.0
+  },
+  "592663": {
+    "name": "J.T. Realmuto",
+    "barrel_pct": 4.7,
+    "hardhit_pct": 39.6,
+    "xwoba": 0.315,
+    "avg_exit_velo": 89.4
+  },
+  "656775": {
+    "name": "Cedric Mullins",
+    "barrel_pct": 4.3,
+    "hardhit_pct": 31.0,
+    "xwoba": 0.264,
+    "avg_exit_velo": 88.0
+  },
+  "700246": {
+    "name": "Carson Williams",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.197,
+    "avg_exit_velo": 85.0
+  },
+  "519317": {
+    "name": "Giancarlo Stanton",
+    "barrel_pct": 18.0,
+    "hardhit_pct": 44.3,
+    "xwoba": 0.326,
+    "avg_exit_velo": 94.1
+  },
+  "602104": {
+    "name": "Ram\u00f3n Ur\u00edas",
+    "barrel_pct": 10.9,
+    "hardhit_pct": 37.0,
+    "xwoba": 0.306,
+    "avg_exit_velo": 89.5
+  },
+  "593428": {
+    "name": "Xander Bogaerts",
+    "barrel_pct": 6.3,
+    "hardhit_pct": 39.0,
+    "xwoba": 0.318,
+    "avg_exit_velo": 88.0
+  },
+  "650333": {
+    "name": "Luis Arraez",
+    "barrel_pct": 0.5,
+    "hardhit_pct": 21.2,
+    "xwoba": 0.302,
+    "avg_exit_velo": 87.0
+  },
+  "686475": {
+    "name": "Tyler Tolbert",
+    "barrel_pct": 3.7,
+    "hardhit_pct": 31.5,
+    "xwoba": 0.303,
+    "avg_exit_velo": 85.0
+  },
+  "701678": {
+    "name": "Hao-Yu Lee",
+    "barrel_pct": 8.1,
+    "hardhit_pct": 36.3,
+    "xwoba": 0.282,
+    "avg_exit_velo": 88.4
+  },
+  "681624": {
+    "name": "Andy Pages",
+    "barrel_pct": 8.1,
+    "hardhit_pct": 43.8,
+    "xwoba": 0.338,
+    "avg_exit_velo": 89.0
+  },
+  "694362": {
+    "name": "Blake Dunn",
+    "barrel_pct": 2.9,
+    "hardhit_pct": 30.3,
+    "xwoba": 0.278,
+    "avg_exit_velo": 89.2
+  },
+  "701762": {
+    "name": "Nick Kurtz",
+    "barrel_pct": 18.1,
+    "hardhit_pct": 58.3,
+    "xwoba": 0.379,
+    "avg_exit_velo": 93.6
+  },
+  "596117": {
+    "name": "Garrett Stubbs",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 34.8,
+    "xwoba": 0.243,
+    "avg_exit_velo": 86.5
+  },
+  "668804": {
+    "name": "Bryan Reynolds",
+    "barrel_pct": 10.4,
+    "hardhit_pct": 46.5,
+    "xwoba": 0.36,
+    "avg_exit_velo": 90.7
+  },
+  "800325": {
+    "name": "Luis Lara",
+    "barrel_pct": 4.8,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.351,
+    "avg_exit_velo": 87.6
+  },
+  "516782": {
+    "name": "Starling Marte",
+    "barrel_pct": 10.5,
+    "hardhit_pct": 38.4,
+    "xwoba": 0.312,
+    "avg_exit_velo": 89.2
+  },
+  "663494": {
+    "name": "Bryan Torres",
+    "barrel_pct": 7.7,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.309,
+    "avg_exit_velo": 87.0
+  },
+  "805999": {
+    "name": "A.J. Ewing",
+    "barrel_pct": 7.0,
+    "hardhit_pct": 43.0,
+    "xwoba": 0.328,
+    "avg_exit_velo": 89.6
+  },
+  "628451": {
+    "name": "Andy Ib\u00e1\u00f1ez",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 18.2,
+    "xwoba": 0.164,
+    "avg_exit_velo": 86.3
+  },
+  "665926": {
+    "name": "Andr\u00e9s Gim\u00e9nez",
+    "barrel_pct": 4.1,
+    "hardhit_pct": 23.6,
+    "xwoba": 0.268,
+    "avg_exit_velo": 86.2
+  },
+  "661531": {
+    "name": "Brian Serven",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.194,
+    "avg_exit_velo": 82.9
+  },
+  "691016": {
+    "name": "Tyler Soderstrom",
+    "barrel_pct": 10.1,
+    "hardhit_pct": 44.6,
+    "xwoba": 0.341,
+    "avg_exit_velo": 90.2
+  },
+  "642086": {
+    "name": "Dominic Smith",
+    "barrel_pct": 5.9,
+    "hardhit_pct": 35.4,
+    "xwoba": 0.312,
+    "avg_exit_velo": 87.8
+  },
+  "680869": {
+    "name": "Zack Gelof",
+    "barrel_pct": 6.6,
+    "hardhit_pct": 41.3,
+    "xwoba": 0.289,
+    "avg_exit_velo": 88.8
+  },
+  "607208": {
+    "name": "Trea Turner",
+    "barrel_pct": 6.7,
+    "hardhit_pct": 41.2,
+    "xwoba": 0.295,
+    "avg_exit_velo": 88.9
+  },
+  "687529": {
+    "name": "Grant McCray",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.037,
+    "avg_exit_velo": 84.8
+  },
+  "691740": {
+    "name": "Daniel Susac",
+    "barrel_pct": 4.7,
+    "hardhit_pct": 29.4,
+    "xwoba": 0.293,
+    "avg_exit_velo": 86.4
+  },
+  "677595": {
+    "name": "Ronny Mauricio",
+    "barrel_pct": 9.4,
+    "hardhit_pct": 34.4,
+    "xwoba": 0.205,
+    "avg_exit_velo": 89.9
+  },
+  "678218": {
+    "name": "Brandon Valenzuela",
+    "barrel_pct": 8.1,
+    "hardhit_pct": 37.1,
+    "xwoba": 0.318,
+    "avg_exit_velo": 88.4
+  },
+  "666310": {
+    "name": "Bo Naylor",
+    "barrel_pct": 11.1,
+    "hardhit_pct": 42.6,
+    "xwoba": 0.29,
+    "avg_exit_velo": 89.6
+  },
+  "702616": {
+    "name": "Jackson Holliday",
+    "barrel_pct": 9.5,
+    "hardhit_pct": 37.9,
+    "xwoba": 0.323,
+    "avg_exit_velo": 87.5
+  },
+  "700250": {
+    "name": "Ben Rice",
+    "barrel_pct": 15.5,
+    "hardhit_pct": 48.3,
+    "xwoba": 0.382,
+    "avg_exit_velo": 92.3
+  },
+  "805367": {
+    "name": "Chase Meidroth",
+    "barrel_pct": 4.1,
+    "hardhit_pct": 34.9,
+    "xwoba": 0.288,
+    "avg_exit_velo": 87.8
+  },
+  "691777": {
+    "name": "Max Muncy",
+    "barrel_pct": 11.1,
+    "hardhit_pct": 48.5,
+    "xwoba": 0.29,
+    "avg_exit_velo": 90.8
+  },
+  "691023": {
+    "name": "Jordan Walker",
+    "barrel_pct": 14.0,
+    "hardhit_pct": 50.5,
+    "xwoba": 0.367,
+    "avg_exit_velo": 93.9
+  },
+  "693459": {
+    "name": "Kyler Fedko",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 44.4,
+    "xwoba": 0.166,
+    "avg_exit_velo": 87.9
+  },
+  "807713": {
+    "name": "Matt Shaw",
+    "barrel_pct": 4.8,
+    "hardhit_pct": 36.2,
+    "xwoba": 0.301,
+    "avg_exit_velo": 86.8
+  },
+  "694376": {
+    "name": "Shay Whitcomb",
+    "barrel_pct": 16.7,
+    "hardhit_pct": 41.7,
+    "xwoba": 0.258,
+    "avg_exit_velo": 90.5
+  },
+  "804606": {
+    "name": "Konnor Griffin",
+    "barrel_pct": 8.1,
+    "hardhit_pct": 37.0,
+    "xwoba": 0.305,
+    "avg_exit_velo": 87.8
+  },
+  "679529": {
+    "name": "Spencer Torkelson",
+    "barrel_pct": 14.7,
+    "hardhit_pct": 42.5,
+    "xwoba": 0.321,
+    "avg_exit_velo": 89.8
+  },
+  "656582": {
+    "name": "Connor Joe",
+    "barrel_pct": 8.3,
+    "hardhit_pct": 45.8,
+    "xwoba": 0.337,
+    "avg_exit_velo": 92.5
+  },
+  "676391": {
+    "name": "Ernie Clement",
+    "barrel_pct": 2.6,
+    "hardhit_pct": 22.3,
+    "xwoba": 0.275,
+    "avg_exit_velo": 85.1
+  },
+  "689414": {
+    "name": "Liam Hicks",
+    "barrel_pct": 4.1,
+    "hardhit_pct": 30.9,
+    "xwoba": 0.312,
+    "avg_exit_velo": 85.4
+  },
+  "682674": {
+    "name": "Victor Bericoto",
+    "barrel_pct": 14.0,
+    "hardhit_pct": 46.5,
+    "xwoba": 0.289,
+    "avg_exit_velo": 88.5
+  },
+  "677800": {
+    "name": "Wilyer Abreu",
+    "barrel_pct": 12.8,
+    "hardhit_pct": 42.6,
+    "xwoba": 0.348,
+    "avg_exit_velo": 89.9
+  },
+  "650968": {
+    "name": "Yohel Pozo",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 26.7,
+    "xwoba": 0.244,
+    "avg_exit_velo": 87.6
+  },
+  "800050": {
+    "name": "Chase DeLauter",
+    "barrel_pct": 6.5,
+    "hardhit_pct": 44.8,
+    "xwoba": 0.345,
+    "avg_exit_velo": 91.0
+  },
+  "669208": {
+    "name": "Ryan Bliss",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 66.7,
+    "xwoba": 0.27,
+    "avg_exit_velo": 92.2
+  },
+  "642201": {
+    "name": "Eli White",
+    "barrel_pct": 6.5,
+    "hardhit_pct": 32.3,
+    "xwoba": 0.275,
+    "avg_exit_velo": 86.9
+  },
+  "695681": {
+    "name": "Christian Moore",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.202,
+    "avg_exit_velo": 93.9
+  },
+  "680757": {
+    "name": "Steven Kwan",
+    "barrel_pct": 0.3,
+    "hardhit_pct": 9.4,
+    "xwoba": 0.319,
+    "avg_exit_velo": 83.3
+  },
+  "677649": {
+    "name": "Ezequiel Duran",
+    "barrel_pct": 6.4,
+    "hardhit_pct": 37.0,
+    "xwoba": 0.303,
+    "avg_exit_velo": 88.5
+  },
+  "672284": {
+    "name": "Jarred Kelenic",
+    "barrel_pct": 22.2,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.346,
+    "avg_exit_velo": 93.8
+  },
+  "553993": {
+    "name": "Eugenio Su\u00e1rez",
+    "barrel_pct": 10.4,
+    "hardhit_pct": 32.1,
+    "xwoba": 0.266,
+    "avg_exit_velo": 88.3
+  },
+  "641680": {
+    "name": "Jonah Heim",
+    "barrel_pct": 6.7,
+    "hardhit_pct": 29.5,
+    "xwoba": 0.3,
+    "avg_exit_velo": 87.1
+  },
+  "656811": {
+    "name": "Ryan O'Hearn",
+    "barrel_pct": 7.7,
+    "hardhit_pct": 45.3,
+    "xwoba": 0.32,
+    "avg_exit_velo": 89.8
+  },
+  "609280": {
+    "name": "Miguel Andujar",
+    "barrel_pct": 4.5,
+    "hardhit_pct": 36.3,
+    "xwoba": 0.298,
+    "avg_exit_velo": 88.3
+  },
+  "670231": {
+    "name": "John Rave",
+    "barrel_pct": 27.3,
+    "hardhit_pct": 63.6,
+    "xwoba": 0.419,
+    "avg_exit_velo": 100.3
+  },
+  "657656": {
+    "name": "Ram\u00f3n Laureano",
+    "barrel_pct": 14.3,
+    "hardhit_pct": 41.2,
+    "xwoba": 0.312,
+    "avg_exit_velo": 88.0
+  },
+  "681546": {
+    "name": "James Outman",
+    "barrel_pct": 6.5,
+    "hardhit_pct": 33.8,
+    "xwoba": 0.212,
+    "avg_exit_velo": 85.6
   },
   "667670": {
     "name": "Brent Rooker",
@@ -3989,32 +2302,305 @@
     "xwoba": 0.314,
     "avg_exit_velo": 89.9
   },
-  "683011": {
-    "name": "Anthony Volpe",
+  "656555": {
+    "name": "Rhys Hoskins",
+    "barrel_pct": 12.5,
+    "hardhit_pct": 40.3,
+    "xwoba": 0.295,
+    "avg_exit_velo": 88.8
+  },
+  "665742": {
+    "name": "Juan Soto",
+    "barrel_pct": 14.3,
+    "hardhit_pct": 48.6,
+    "xwoba": 0.421,
+    "avg_exit_velo": 92.5
+  },
+  "606466": {
+    "name": "Ketel Marte",
+    "barrel_pct": 10.5,
+    "hardhit_pct": 44.6,
+    "xwoba": 0.361,
+    "avg_exit_velo": 91.0
+  },
+  "805808": {
+    "name": "Kevin McGonigle",
+    "barrel_pct": 7.7,
+    "hardhit_pct": 37.6,
+    "xwoba": 0.361,
+    "avg_exit_velo": 88.1
+  },
+  "596142": {
+    "name": "Gary S\u00e1nchez",
+    "barrel_pct": 8.7,
+    "hardhit_pct": 35.7,
+    "xwoba": 0.368,
+    "avg_exit_velo": 88.6
+  },
+  "664068": {
+    "name": "Scott Kingery",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.156,
+    "avg_exit_velo": 77.1
+  },
+  "699013": {
+    "name": "Esmerlyn Valdez",
+    "barrel_pct": 29.7,
+    "hardhit_pct": 56.3,
+    "xwoba": 0.368,
+    "avg_exit_velo": 93.4
+  },
+  "682177": {
+    "name": "Daniel Schneemann",
+    "barrel_pct": 7.6,
+    "hardhit_pct": 37.9,
+    "xwoba": 0.286,
+    "avg_exit_velo": 87.9
+  },
+  "664731": {
+    "name": "P.J. Higgins",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 13.6,
+    "xwoba": 0.287,
+    "avg_exit_velo": 83.6
+  },
+  "645302": {
+    "name": "Victor Robles",
+    "barrel_pct": 2.2,
+    "hardhit_pct": 17.6,
+    "xwoba": 0.27,
+    "avg_exit_velo": 83.9
+  },
+  "673548": {
+    "name": "Seiya Suzuki",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 41.3,
+    "xwoba": 0.341,
+    "avg_exit_velo": 89.2
+  },
+  "678009": {
+    "name": "Parker Meadows",
     "barrel_pct": 3.8,
-    "hardhit_pct": 33.0,
-    "xwoba": 0.3,
-    "avg_exit_velo": 87.6
+    "hardhit_pct": 19.2,
+    "xwoba": 0.25,
+    "avg_exit_velo": 85.3
   },
-  "545121": {
-    "name": "Ildemaro Vargas",
-    "barrel_pct": 3.4,
-    "hardhit_pct": 34.7,
-    "xwoba": 0.308,
-    "avg_exit_velo": 87.6
+  "676369": {
+    "name": "Nelson Vel\u00e1zquez",
+    "barrel_pct": 11.6,
+    "hardhit_pct": 65.1,
+    "xwoba": 0.367,
+    "avg_exit_velo": 94.6
   },
-  "701675": {
-    "name": "Nathan Church",
-    "barrel_pct": 7.5,
-    "hardhit_pct": 32.2,
-    "xwoba": 0.281,
-    "avg_exit_velo": 86.2
+  "545341": {
+    "name": "Randal Grichuk",
+    "barrel_pct": 12.7,
+    "hardhit_pct": 46.4,
+    "xwoba": 0.355,
+    "avg_exit_velo": 90.5
   },
-  "691594": {
-    "name": "Javier Sanoja",
-    "barrel_pct": 1.3,
-    "hardhit_pct": 31.3,
-    "xwoba": 0.278,
+  "683953": {
+    "name": "Travis Bazzana",
+    "barrel_pct": 5.0,
+    "hardhit_pct": 36.5,
+    "xwoba": 0.304,
+    "avg_exit_velo": 88.3
+  },
+  "656716": {
+    "name": "Zach McKinstry",
+    "barrel_pct": 2.6,
+    "hardhit_pct": 20.6,
+    "xwoba": 0.275,
+    "avg_exit_velo": 84.9
+  },
+  "683734": {
+    "name": "Andrew Vaughn",
+    "barrel_pct": 4.9,
+    "hardhit_pct": 40.8,
+    "xwoba": 0.34,
+    "avg_exit_velo": 89.9
+  },
+  "694497": {
+    "name": "Evan Carter",
+    "barrel_pct": 6.3,
+    "hardhit_pct": 37.7,
+    "xwoba": 0.291,
+    "avg_exit_velo": 87.7
+  },
+  "646240": {
+    "name": "Rafael Devers",
+    "barrel_pct": 11.1,
+    "hardhit_pct": 50.2,
+    "xwoba": 0.32,
+    "avg_exit_velo": 92.3
+  },
+  "630105": {
+    "name": "Jake Cronenworth",
+    "barrel_pct": 5.8,
+    "hardhit_pct": 33.6,
+    "xwoba": 0.297,
+    "avg_exit_velo": 87.5
+  },
+  "664034": {
+    "name": "Ty France",
+    "barrel_pct": 12.1,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.329,
+    "avg_exit_velo": 92.3
+  },
+  "669224": {
+    "name": "Austin Wells",
+    "barrel_pct": 6.3,
+    "hardhit_pct": 43.4,
+    "xwoba": 0.293,
+    "avg_exit_velo": 88.7
+  },
+  "666176": {
+    "name": "Jo Adell",
+    "barrel_pct": 8.7,
+    "hardhit_pct": 43.2,
+    "xwoba": 0.325,
+    "avg_exit_velo": 89.6
+  },
+  "694673": {
+    "name": "Abimelec Ortiz",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 100.0,
+    "xwoba": 0.427,
+    "avg_exit_velo": 102.9
+  },
+  "694384": {
+    "name": "Nolan Schanuel",
+    "barrel_pct": 1.9,
+    "hardhit_pct": 32.4,
+    "xwoba": 0.332,
+    "avg_exit_velo": 87.2
+  },
+  "663457": {
+    "name": "Lars Nootbaar",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 51.1,
+    "xwoba": 0.353,
+    "avg_exit_velo": 91.8
+  },
+  "686823": {
+    "name": "Will Brennan",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.178,
+    "avg_exit_velo": 82.9
+  },
+  "678662": {
+    "name": "Ezequiel Tovar",
+    "barrel_pct": 6.6,
+    "hardhit_pct": 33.2,
+    "xwoba": 0.272,
+    "avg_exit_velo": 87.3
+  },
+  "691019": {
+    "name": "Kyle Teel",
+    "barrel_pct": 11.1,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.302,
+    "avg_exit_velo": 84.4
+  },
+  "670097": {
+    "name": "Zack Short",
+    "barrel_pct": 5.9,
+    "hardhit_pct": 20.6,
+    "xwoba": 0.256,
+    "avg_exit_velo": 88.7
+  },
+  "650489": {
+    "name": "Willi Castro",
+    "barrel_pct": 7.4,
+    "hardhit_pct": 39.9,
+    "xwoba": 0.296,
+    "avg_exit_velo": 87.8
+  },
+  "691720": {
+    "name": "Kyle Karros",
+    "barrel_pct": 8.5,
+    "hardhit_pct": 43.3,
+    "xwoba": 0.341,
+    "avg_exit_velo": 89.7
+  },
+  "624512": {
+    "name": "Reese McGuire",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 9.5,
+    "xwoba": 0.242,
+    "avg_exit_velo": 74.3
+  },
+  "643217": {
+    "name": "Andrew Benintendi",
+    "barrel_pct": 9.1,
+    "hardhit_pct": 46.4,
+    "xwoba": 0.325,
+    "avg_exit_velo": 89.0
+  },
+  "641343": {
+    "name": "Jake Bauers",
+    "barrel_pct": 13.6,
+    "hardhit_pct": 53.0,
+    "xwoba": 0.356,
+    "avg_exit_velo": 92.5
+  },
+  "500743": {
+    "name": "Miguel Rojas",
+    "barrel_pct": 6.7,
+    "hardhit_pct": 37.0,
+    "xwoba": 0.327,
+    "avg_exit_velo": 87.3
+  },
+  "545361": {
+    "name": "Mike Trout",
+    "barrel_pct": 18.8,
+    "hardhit_pct": 48.6,
+    "xwoba": 0.401,
+    "avg_exit_velo": 90.7
+  },
+  "622268": {
+    "name": "Donovan Walton",
+    "barrel_pct": 4.9,
+    "hardhit_pct": 38.3,
+    "xwoba": 0.321,
+    "avg_exit_velo": 88.2
+  },
+  "672515": {
+    "name": "Gabriel Moreno",
+    "barrel_pct": 7.4,
+    "hardhit_pct": 41.2,
+    "xwoba": 0.377,
+    "avg_exit_velo": 89.3
+  },
+  "690984": {
+    "name": "Petey Halpin",
+    "barrel_pct": 8.2,
+    "hardhit_pct": 29.5,
+    "xwoba": 0.263,
+    "avg_exit_velo": 86.5
+  },
+  "669392": {
+    "name": "Samad Taylor",
+    "barrel_pct": 3.3,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.326,
+    "avg_exit_velo": 85.2
+  },
+  "682729": {
+    "name": "Jonatan Clase",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 35.7,
+    "xwoba": 0.247,
+    "avg_exit_velo": 86.8
+  },
+  "665750": {
+    "name": "Leody Taveras",
+    "barrel_pct": 4.6,
+    "hardhit_pct": 29.8,
+    "xwoba": 0.288,
     "avg_exit_velo": 87.1
   },
   "669699": {
@@ -4024,12 +2610,243 @@
     "xwoba": 0.294,
     "avg_exit_velo": 89.9
   },
-  "642215": {
-    "name": "Weston Wilson",
-    "barrel_pct": 7.0,
-    "hardhit_pct": 31.8,
-    "xwoba": 0.253,
-    "avg_exit_velo": 86.7
+  "680776": {
+    "name": "Jarren Duran",
+    "barrel_pct": 10.8,
+    "hardhit_pct": 39.1,
+    "xwoba": 0.295,
+    "avg_exit_velo": 89.7
+  },
+  "663697": {
+    "name": "Jonathan India",
+    "barrel_pct": 5.7,
+    "hardhit_pct": 31.4,
+    "xwoba": 0.284,
+    "avg_exit_velo": 85.7
+  },
+  "682998": {
+    "name": "Corbin Carroll",
+    "barrel_pct": 12.0,
+    "hardhit_pct": 47.2,
+    "xwoba": 0.344,
+    "avg_exit_velo": 91.5
+  },
+  "811965": {
+    "name": "Joshua Kuroda-Grauer",
+    "barrel_pct": 1.9,
+    "hardhit_pct": 40.4,
+    "xwoba": 0.329,
+    "avg_exit_velo": 89.3
+  },
+  "687637": {
+    "name": "Dylan Beavers",
+    "barrel_pct": 5.6,
+    "hardhit_pct": 37.0,
+    "xwoba": 0.303,
+    "avg_exit_velo": 88.1
+  },
+  "691176": {
+    "name": "Jasson Dom\u00ednguez",
+    "barrel_pct": 4.9,
+    "hardhit_pct": 38.5,
+    "xwoba": 0.298,
+    "avg_exit_velo": 88.0
+  },
+  "656577": {
+    "name": "Alex Jackson",
+    "barrel_pct": 2.4,
+    "hardhit_pct": 35.7,
+    "xwoba": 0.233,
+    "avg_exit_velo": 87.9
+  },
+  "666182": {
+    "name": "Bo Bichette",
+    "barrel_pct": 6.7,
+    "hardhit_pct": 42.7,
+    "xwoba": 0.327,
+    "avg_exit_velo": 89.8
+  },
+  "681481": {
+    "name": "Kerry Carpenter",
+    "barrel_pct": 10.1,
+    "hardhit_pct": 44.4,
+    "xwoba": 0.297,
+    "avg_exit_velo": 89.9
+  },
+  "620443": {
+    "name": "Luis Torrens",
+    "barrel_pct": 3.8,
+    "hardhit_pct": 37.8,
+    "xwoba": 0.281,
+    "avg_exit_velo": 87.7
+  },
+  "666160": {
+    "name": "Mickey Moniak",
+    "barrel_pct": 11.0,
+    "hardhit_pct": 43.6,
+    "xwoba": 0.306,
+    "avg_exit_velo": 89.6
+  },
+  "663757": {
+    "name": "Trent Grisham",
+    "barrel_pct": 10.9,
+    "hardhit_pct": 46.5,
+    "xwoba": 0.353,
+    "avg_exit_velo": 91.2
+  },
+  "694192": {
+    "name": "Jackson Chourio",
+    "barrel_pct": 13.2,
+    "hardhit_pct": 46.6,
+    "xwoba": 0.331,
+    "avg_exit_velo": 92.2
+  },
+  "693307": {
+    "name": "Dillon Dingler",
+    "barrel_pct": 11.6,
+    "hardhit_pct": 46.6,
+    "xwoba": 0.376,
+    "avg_exit_velo": 89.6
+  },
+  "641584": {
+    "name": "Jake Fraley",
+    "barrel_pct": 8.8,
+    "hardhit_pct": 21.4,
+    "xwoba": 0.276,
+    "avg_exit_velo": 83.9
+  },
+  "687551": {
+    "name": "Drew Gilbert",
+    "barrel_pct": 1.8,
+    "hardhit_pct": 33.1,
+    "xwoba": 0.291,
+    "avg_exit_velo": 85.5
+  },
+  "701358": {
+    "name": "Cam Smith",
+    "barrel_pct": 11.8,
+    "hardhit_pct": 44.4,
+    "xwoba": 0.334,
+    "avg_exit_velo": 89.4
+  },
+  "678246": {
+    "name": "Miguel Vargas",
+    "barrel_pct": 14.8,
+    "hardhit_pct": 46.3,
+    "xwoba": 0.392,
+    "avg_exit_velo": 90.5
+  },
+  "682988": {
+    "name": "Tyler Locklear",
+    "barrel_pct": 14.3,
+    "hardhit_pct": 28.6,
+    "xwoba": 0.4,
+    "avg_exit_velo": 85.9
+  },
+  "663968": {
+    "name": "Jake Mangum",
+    "barrel_pct": 1.5,
+    "hardhit_pct": 26.4,
+    "xwoba": 0.287,
+    "avg_exit_velo": 84.7
+  },
+  "695657": {
+    "name": "Colson Montgomery",
+    "barrel_pct": 13.7,
+    "hardhit_pct": 43.9,
+    "xwoba": 0.325,
+    "avg_exit_velo": 89.1
+  },
+  "641355": {
+    "name": "Cody Bellinger",
+    "barrel_pct": 6.3,
+    "hardhit_pct": 37.1,
+    "xwoba": 0.351,
+    "avg_exit_velo": 89.1
+  },
+  "673995": {
+    "name": "Davis Wendzel",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.229,
+    "avg_exit_velo": 92.2
+  },
+  "695600": {
+    "name": "Carter Jensen",
+    "barrel_pct": 9.5,
+    "hardhit_pct": 43.1,
+    "xwoba": 0.286,
+    "avg_exit_velo": 90.7
+  },
+  "671289": {
+    "name": "Tyler Freeman",
+    "barrel_pct": 1.5,
+    "hardhit_pct": 35.8,
+    "xwoba": 0.314,
+    "avg_exit_velo": 88.0
+  },
+  "677870": {
+    "name": "Leo Jim\u00e9nez",
+    "barrel_pct": 5.4,
+    "hardhit_pct": 45.2,
+    "xwoba": 0.325,
+    "avg_exit_velo": 91.2
+  },
+  "621020": {
+    "name": "Dansby Swanson",
+    "barrel_pct": 7.5,
+    "hardhit_pct": 42.7,
+    "xwoba": 0.305,
+    "avg_exit_velo": 89.7
+  },
+  "669701": {
+    "name": "Josh Smith",
+    "barrel_pct": 6.2,
+    "hardhit_pct": 30.9,
+    "xwoba": 0.28,
+    "avg_exit_velo": 86.8
+  },
+  "701675": {
+    "name": "Nathan Church",
+    "barrel_pct": 7.5,
+    "hardhit_pct": 32.0,
+    "xwoba": 0.28,
+    "avg_exit_velo": 86.1
+  },
+  "677594": {
+    "name": "Julio Rodr\u00edguez",
+    "barrel_pct": 9.3,
+    "hardhit_pct": 44.6,
+    "xwoba": 0.35,
+    "avg_exit_velo": 90.3
+  },
+  "669004": {
+    "name": "MJ Melendez",
+    "barrel_pct": 11.1,
+    "hardhit_pct": 55.6,
+    "xwoba": 0.28,
+    "avg_exit_velo": 94.2
+  },
+  "663584": {
+    "name": "Hayden Senger",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 23.1,
+    "xwoba": 0.181,
+    "avg_exit_velo": 82.3
+  },
+  "670156": {
+    "name": "Miles Mastrobuoni",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 22.2,
+    "xwoba": 0.184,
+    "avg_exit_velo": 90.1
+  },
+  "573262": {
+    "name": "Mike Yastrzemski",
+    "barrel_pct": 6.4,
+    "hardhit_pct": 43.4,
+    "xwoba": 0.3,
+    "avg_exit_velo": 90.3
   },
   "682634": {
     "name": "Kevin Alc\u00e1ntara",
@@ -4038,138 +2855,383 @@
     "xwoba": 0.234,
     "avg_exit_velo": 89.5
   },
-  "680737": {
-    "name": "Michael Helman",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 7.7,
-    "xwoba": 0.2,
-    "avg_exit_velo": 82.9
-  },
-  "691176": {
-    "name": "Jasson Dom\u00ednguez",
-    "barrel_pct": 5.2,
-    "hardhit_pct": 40.0,
-    "xwoba": 0.297,
-    "avg_exit_velo": 88.0
-  },
-  "622268": {
-    "name": "Donovan Walton",
-    "barrel_pct": 5.1,
-    "hardhit_pct": 39.2,
-    "xwoba": 0.323,
-    "avg_exit_velo": 88.3
-  },
-  "694673": {
-    "name": "Abimelec Ortiz",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 100.0,
-    "xwoba": 0.427,
-    "avg_exit_velo": 102.9
-  },
-  "695600": {
-    "name": "Carter Jensen",
-    "barrel_pct": 9.6,
-    "hardhit_pct": 43.5,
-    "xwoba": 0.287,
-    "avg_exit_velo": 90.8
-  },
-  "624431": {
-    "name": "Jose Trevino",
-    "barrel_pct": 3.2,
-    "hardhit_pct": 30.8,
-    "xwoba": 0.24,
-    "avg_exit_velo": 87.4
-  },
-  "664774": {
-    "name": "LaMonte Wade Jr.",
-    "barrel_pct": 6.5,
-    "hardhit_pct": 29.0,
-    "xwoba": 0.291,
-    "avg_exit_velo": 84.2
-  },
-  "644433": {
-    "name": "Chadwick Tromp",
-    "barrel_pct": 0.0,
-    "hardhit_pct": 26.1,
-    "xwoba": 0.194,
-    "avg_exit_velo": 85.9
-  },
-  "571448": {
-    "name": "Nolan Arenado",
-    "barrel_pct": 7.1,
-    "hardhit_pct": 33.1,
-    "xwoba": 0.295,
-    "avg_exit_velo": 85.3
-  },
-  "663457": {
-    "name": "Lars Nootbaar",
-    "barrel_pct": 10.0,
-    "hardhit_pct": 51.1,
-    "xwoba": 0.353,
-    "avg_exit_velo": 91.8
-  },
-  "592885": {
-    "name": "Christian Yelich",
-    "barrel_pct": 6.8,
-    "hardhit_pct": 41.8,
-    "xwoba": 0.297,
-    "avg_exit_velo": 89.0
-  },
-  "686681": {
-    "name": "Michael Massey",
+  "673962": {
+    "name": "Josh Jung",
     "barrel_pct": 6.3,
-    "hardhit_pct": 41.3,
-    "xwoba": 0.304,
-    "avg_exit_velo": 90.1
-  },
-  "690976": {
-    "name": "Alex Freeland",
-    "barrel_pct": 5.3,
-    "hardhit_pct": 37.1,
-    "xwoba": 0.277,
-    "avg_exit_velo": 88.7
-  },
-  "682998": {
-    "name": "Corbin Carroll",
-    "barrel_pct": 11.8,
-    "hardhit_pct": 46.4,
-    "xwoba": 0.341,
-    "avg_exit_velo": 91.3
-  },
-  "702176": {
-    "name": "Alan Roden",
-    "barrel_pct": 11.1,
-    "hardhit_pct": 50.0,
-    "xwoba": 0.351,
+    "hardhit_pct": 48.3,
+    "xwoba": 0.347,
     "avg_exit_velo": 90.6
   },
-  "665804": {
-    "name": "Miguel Amaya",
-    "barrel_pct": 6.0,
-    "hardhit_pct": 34.0,
-    "xwoba": 0.298,
-    "avg_exit_velo": 86.6
+  "677060": {
+    "name": "Chad Stevens",
+    "barrel_pct": 6.3,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.21,
+    "avg_exit_velo": 81.4
   },
-  "600869": {
-    "name": "Jeimer Candelario",
+  "672960": {
+    "name": "Kazuma Okamoto",
+    "barrel_pct": 14.0,
+    "hardhit_pct": 46.2,
+    "xwoba": 0.321,
+    "avg_exit_velo": 91.0
+  },
+  "686217": {
+    "name": "Sal Frelick",
+    "barrel_pct": 2.0,
+    "hardhit_pct": 27.8,
+    "xwoba": 0.281,
+    "avg_exit_velo": 85.9
+  },
+  "679822": {
+    "name": "Justin Foscue",
+    "barrel_pct": 11.2,
+    "hardhit_pct": 41.6,
+    "xwoba": 0.339,
+    "avg_exit_velo": 89.1
+  },
+  "687394": {
+    "name": "Jack Brannigan",
+    "barrel_pct": null,
+    "hardhit_pct": null,
+    "xwoba": 0.0,
+    "avg_exit_velo": null
+  },
+  "687401": {
+    "name": "Joey Ortiz",
+    "barrel_pct": 4.2,
+    "hardhit_pct": 35.1,
+    "xwoba": 0.306,
+    "avg_exit_velo": 88.0
+  },
+  "641933": {
+    "name": "Tyler O'Neill",
+    "barrel_pct": 8.8,
+    "hardhit_pct": 43.9,
+    "xwoba": 0.299,
+    "avg_exit_velo": 90.0
+  },
+  "608841": {
+    "name": "Joey Meneses",
     "barrel_pct": 0.0,
-    "hardhit_pct": 40.0,
-    "xwoba": 0.218,
-    "avg_exit_velo": 91.8
+    "hardhit_pct": 58.8,
+    "xwoba": 0.327,
+    "avg_exit_velo": 92.7
   },
-  "687551": {
-    "name": "Drew Gilbert",
-    "barrel_pct": 1.8,
-    "hardhit_pct": 32.9,
-    "xwoba": 0.29,
-    "avg_exit_velo": 85.6
+  "545121": {
+    "name": "Ildemaro Vargas",
+    "barrel_pct": 3.4,
+    "hardhit_pct": 35.0,
+    "xwoba": 0.311,
+    "avg_exit_velo": 87.5
   },
-  "699013": {
-    "name": "Esmerlyn Valdez",
-    "barrel_pct": 28.6,
-    "hardhit_pct": 55.6,
+  "807747": {
+    "name": "Rikuu Nishida",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 12.0,
+    "xwoba": 0.247,
+    "avg_exit_velo": 87.9
+  },
+  "683083": {
+    "name": "Nasim Nu\u00f1ez",
+    "barrel_pct": 0.5,
+    "hardhit_pct": 20.7,
+    "xwoba": 0.272,
+    "avg_exit_velo": 84.8
+  },
+  "681082": {
+    "name": "Bryson Stott",
+    "barrel_pct": 7.2,
+    "hardhit_pct": 38.1,
+    "xwoba": 0.32,
+    "avg_exit_velo": 89.1
+  },
+  "593871": {
+    "name": "Jorge Polanco",
+    "barrel_pct": 3.0,
+    "hardhit_pct": 28.4,
+    "xwoba": 0.246,
+    "avg_exit_velo": 85.1
+  },
+  "679845": {
+    "name": "Nick Loftin",
+    "barrel_pct": 4.7,
+    "hardhit_pct": 29.4,
+    "xwoba": 0.31,
+    "avg_exit_velo": 87.5
+  },
+  "669127": {
+    "name": "Shea Langeliers",
+    "barrel_pct": 15.1,
+    "hardhit_pct": 45.3,
     "xwoba": 0.365,
-    "avg_exit_velo": 93.1
+    "avg_exit_velo": 91.9
+  },
+  "669720": {
+    "name": "Austin Hays",
+    "barrel_pct": 3.3,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.283,
+    "avg_exit_velo": 87.0
+  },
+  "675961": {
+    "name": "Alika Williams",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 34.8,
+    "xwoba": 0.232,
+    "avg_exit_velo": 85.4
+  },
+  "690291": {
+    "name": "Jace Jung",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 20.0,
+    "xwoba": 0.392,
+    "avg_exit_velo": 85.5
+  },
+  "694371": {
+    "name": "Tommy Troy",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 31.1,
+    "xwoba": 0.317,
+    "avg_exit_velo": 84.8
+  },
+  "641555": {
+    "name": "J.C. Escarra",
+    "barrel_pct": 4.5,
+    "hardhit_pct": 33.8,
+    "xwoba": 0.257,
+    "avg_exit_velo": 89.1
+  },
+  "647304": {
+    "name": "Josh Naylor",
+    "barrel_pct": 4.6,
+    "hardhit_pct": 36.1,
+    "xwoba": 0.321,
+    "avg_exit_velo": 87.5
+  },
+  "699625": {
+    "name": "Jimmy Crooks",
+    "barrel_pct": 9.3,
+    "hardhit_pct": 52.3,
+    "xwoba": 0.329,
+    "avg_exit_velo": 92.3
+  },
+  "691406": {
+    "name": "Junior Caminero",
+    "barrel_pct": 13.4,
+    "hardhit_pct": 51.6,
+    "xwoba": 0.378,
+    "avg_exit_velo": 93.2
+  },
+  "663624": {
+    "name": "Ryan Mountcastle",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 41.7,
+    "xwoba": 0.301,
+    "avg_exit_velo": 90.0
+  },
+  "695506": {
+    "name": "Jac Caglianone",
+    "barrel_pct": 15.0,
+    "hardhit_pct": 55.4,
+    "xwoba": 0.356,
+    "avg_exit_velo": 93.0
+  },
+  "681987": {
+    "name": "Nate Eaton",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 35.0,
+    "xwoba": 0.291,
+    "avg_exit_velo": 88.4
+  },
+  "663330": {
+    "name": "Jahmai Jones",
+    "barrel_pct": 9.4,
+    "hardhit_pct": 43.8,
+    "xwoba": 0.302,
+    "avg_exit_velo": 90.7
+  },
+  "660670": {
+    "name": "Ronald Acu\u00f1a Jr.",
+    "barrel_pct": 13.1,
+    "hardhit_pct": 43.4,
+    "xwoba": 0.378,
+    "avg_exit_velo": 90.1
+  },
+  "543510": {
+    "name": "James McCann",
+    "barrel_pct": 9.1,
+    "hardhit_pct": 43.6,
+    "xwoba": 0.241,
+    "avg_exit_velo": 89.5
+  },
+  "695508": {
+    "name": "Cam Cauley",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 19.2,
+    "xwoba": 0.277,
+    "avg_exit_velo": 84.8
+  },
+  "668939": {
+    "name": "Adley Rutschman",
+    "barrel_pct": 7.1,
+    "hardhit_pct": 42.0,
+    "xwoba": 0.348,
+    "avg_exit_velo": 89.4
+  },
+  "673490": {
+    "name": "Ha-Seong Kim",
+    "barrel_pct": 4.1,
+    "hardhit_pct": 21.6,
+    "xwoba": 0.212,
+    "avg_exit_velo": 85.2
+  },
+  "665833": {
+    "name": "Oneil Cruz",
+    "barrel_pct": 16.7,
+    "hardhit_pct": 59.2,
+    "xwoba": 0.358,
+    "avg_exit_velo": 96.0
+  },
+  "642851": {
+    "name": "Austin Wynns",
+    "barrel_pct": 4.9,
+    "hardhit_pct": 29.3,
+    "xwoba": 0.26,
+    "avg_exit_velo": 86.3
+  },
+  "695720": {
+    "name": "Tommy White",
+    "barrel_pct": 5.3,
+    "hardhit_pct": 26.3,
+    "xwoba": 0.35,
+    "avg_exit_velo": 85.2
+  },
+  "608070": {
+    "name": "Jos\u00e9 Ram\u00edrez",
+    "barrel_pct": 6.5,
+    "hardhit_pct": 43.3,
+    "xwoba": 0.356,
+    "avg_exit_velo": 89.9
+  },
+  "675448": {
+    "name": "Blake Hunt",
+    "barrel_pct": null,
+    "hardhit_pct": null,
+    "xwoba": 0.0,
+    "avg_exit_velo": null
+  },
+  "687093": {
+    "name": "Vaughn Grissom",
+    "barrel_pct": 6.8,
+    "hardhit_pct": 42.0,
+    "xwoba": 0.336,
+    "avg_exit_velo": 89.1
+  },
+  "666969": {
+    "name": "Adolis Garc\u00eda",
+    "barrel_pct": 9.3,
+    "hardhit_pct": 48.0,
+    "xwoba": 0.294,
+    "avg_exit_velo": 92.1
+  },
+  "682515": {
+    "name": "Logan Porter",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.414,
+    "avg_exit_velo": 93.9
+  },
+  "682622": {
+    "name": "Noelvi Marte",
+    "barrel_pct": 6.1,
+    "hardhit_pct": 27.7,
+    "xwoba": 0.258,
+    "avg_exit_velo": 87.5
+  },
+  "701350": {
+    "name": "Roman Anthony",
+    "barrel_pct": 9.3,
+    "hardhit_pct": 47.4,
+    "xwoba": 0.352,
+    "avg_exit_velo": 92.3
+  },
+  "672613": {
+    "name": "Eliezer Alfonzo",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 16.7,
+    "xwoba": 0.181,
+    "avg_exit_velo": 90.0
+  },
+  "657136": {
+    "name": "Connor Wong",
+    "barrel_pct": 4.3,
+    "hardhit_pct": 35.1,
+    "xwoba": 0.305,
+    "avg_exit_velo": 85.7
+  },
+  "650859": {
+    "name": "Luis Rengifo",
+    "barrel_pct": 5.1,
+    "hardhit_pct": 36.9,
+    "xwoba": 0.299,
+    "avg_exit_velo": 88.1
+  },
+  "663698": {
+    "name": "Joey Bart",
+    "barrel_pct": 9.1,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.292,
+    "avg_exit_velo": 86.2
+  },
+  "805347": {
+    "name": "Jim Jarvis",
+    "barrel_pct": 7.0,
+    "hardhit_pct": 37.2,
+    "xwoba": 0.298,
+    "avg_exit_velo": 88.2
+  },
+  "672580": {
+    "name": "Maikel Garcia",
+    "barrel_pct": 4.9,
+    "hardhit_pct": 41.3,
+    "xwoba": 0.316,
+    "avg_exit_velo": 90.1
+  },
+  "808982": {
+    "name": "Jung Hoo Lee",
+    "barrel_pct": 2.2,
+    "hardhit_pct": 28.7,
+    "xwoba": 0.314,
+    "avg_exit_velo": 87.1
+  },
+  "680977": {
+    "name": "Brendan Donovan",
+    "barrel_pct": 4.4,
+    "hardhit_pct": 32.9,
+    "xwoba": 0.344,
+    "avg_exit_velo": 85.9
+  },
+  "669384": {
+    "name": "Raynel Delgado",
+    "barrel_pct": 3.4,
+    "hardhit_pct": 31.0,
+    "xwoba": 0.277,
+    "avg_exit_velo": 85.9
+  },
+  "666139": {
+    "name": "Josh Lowe",
+    "barrel_pct": 9.0,
+    "hardhit_pct": 38.3,
+    "xwoba": 0.287,
+    "avg_exit_velo": 89.2
+  },
+  "542303": {
+    "name": "Marcell Ozuna",
+    "barrel_pct": 8.6,
+    "hardhit_pct": 38.3,
+    "xwoba": 0.31,
+    "avg_exit_velo": 89.4
   },
   "608701": {
     "name": "Rob Refsnyder",
@@ -4178,26 +3240,257 @@
     "xwoba": 0.249,
     "avg_exit_velo": 86.1
   },
-  "543510": {
-    "name": "James McCann",
-    "barrel_pct": 7.7,
-    "hardhit_pct": 44.2,
-    "xwoba": 0.216,
-    "avg_exit_velo": 90.0
+  "680700": {
+    "name": "Richie Palacios",
+    "barrel_pct": 3.6,
+    "hardhit_pct": 25.1,
+    "xwoba": 0.305,
+    "avg_exit_velo": 85.8
   },
-  "650391": {
-    "name": "Eloy Jim\u00e9nez",
-    "barrel_pct": 4.0,
-    "hardhit_pct": 44.0,
-    "xwoba": 0.256,
+  "814439": {
+    "name": "Ryan Waldschmidt",
+    "barrel_pct": 8.4,
+    "hardhit_pct": 34.9,
+    "xwoba": 0.286,
+    "avg_exit_velo": 87.5
+  },
+  "671976": {
+    "name": "Tristan Peters",
+    "barrel_pct": 5.0,
+    "hardhit_pct": 31.2,
+    "xwoba": 0.304,
+    "avg_exit_velo": 87.3
+  },
+  "571771": {
+    "name": "Enrique Hern\u00e1ndez",
+    "barrel_pct": 50.0,
+    "hardhit_pct": 75.0,
+    "xwoba": 0.78,
+    "avg_exit_velo": 91.7
+  },
+  "672279": {
+    "name": "Michael Siani",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.292,
+    "avg_exit_velo": 79.9
+  },
+  "676694": {
+    "name": "Jake Meyers",
+    "barrel_pct": 6.5,
+    "hardhit_pct": 28.0,
+    "xwoba": 0.255,
+    "avg_exit_velo": 85.7
+  },
+  "595978": {
+    "name": "Austin Hedges",
+    "barrel_pct": 5.3,
+    "hardhit_pct": 31.9,
+    "xwoba": 0.293,
+    "avg_exit_velo": 86.9
+  },
+  "669707": {
+    "name": "Jared Triolo",
+    "barrel_pct": 2.6,
+    "hardhit_pct": 37.8,
+    "xwoba": 0.283,
+    "avg_exit_velo": 87.7
+  },
+  "543877": {
+    "name": "Christian V\u00e1zquez",
+    "barrel_pct": 1.3,
+    "hardhit_pct": 22.5,
+    "xwoba": 0.239,
+    "avg_exit_velo": 85.8
+  },
+  "678391": {
+    "name": "Jorbit Vivas",
+    "barrel_pct": 3.6,
+    "hardhit_pct": 26.1,
+    "xwoba": 0.299,
+    "avg_exit_velo": 83.3
+  },
+  "682626": {
+    "name": "Francisco Alvarez",
+    "barrel_pct": 15.9,
+    "hardhit_pct": 43.9,
+    "xwoba": 0.333,
+    "avg_exit_velo": 90.2
+  },
+  "640459": {
+    "name": "Brian Navarreto",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 10.0,
+    "xwoba": 0.142,
+    "avg_exit_velo": 86.2
+  },
+  "686668": {
+    "name": "Brenton Doyle",
+    "barrel_pct": 5.9,
+    "hardhit_pct": 35.2,
+    "xwoba": 0.248,
+    "avg_exit_velo": 87.8
+  },
+  "660710": {
+    "name": "Rodolfo Dur\u00e1n",
+    "barrel_pct": 8.5,
+    "hardhit_pct": 30.5,
+    "xwoba": 0.257,
+    "avg_exit_velo": 87.6
+  },
+  "701852": {
+    "name": "Drew Cavanaugh",
+    "barrel_pct": 7.1,
+    "hardhit_pct": 21.4,
+    "xwoba": 0.317,
+    "avg_exit_velo": 85.9
+  },
+  "596115": {
+    "name": "Trevor Story",
+    "barrel_pct": 3.6,
+    "hardhit_pct": 41.8,
+    "xwoba": 0.248,
+    "avg_exit_velo": 88.9
+  },
+  "518692": {
+    "name": "Freddie Freeman",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 44.3,
+    "xwoba": 0.38,
+    "avg_exit_velo": 90.2
+  },
+  "682989": {
+    "name": "Victor Mederos",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 100.0,
+    "xwoba": 0.543,
+    "avg_exit_velo": 103.7
+  },
+  "694374": {
+    "name": "Tim Tawa",
+    "barrel_pct": 7.4,
+    "hardhit_pct": 37.3,
+    "xwoba": 0.296,
+    "avg_exit_velo": 88.3
+  },
+  "645305": {
+    "name": "Ali S\u00e1nchez",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 13.8,
+    "xwoba": 0.281,
+    "avg_exit_velo": 81.3
+  },
+  "806198": {
+    "name": "Cooper Pratt",
+    "barrel_pct": 4.1,
+    "hardhit_pct": 30.7,
+    "xwoba": 0.336,
+    "avg_exit_velo": 88.3
+  },
+  "699912": {
+    "name": "Jose Fernandez",
+    "barrel_pct": 3.9,
+    "hardhit_pct": 38.8,
+    "xwoba": 0.276,
+    "avg_exit_velo": 87.9
+  },
+  "624424": {
+    "name": "Michael Conforto",
+    "barrel_pct": 13.0,
+    "hardhit_pct": 48.0,
+    "xwoba": 0.331,
+    "avg_exit_velo": 92.6
+  },
+  "687221": {
+    "name": "Dalton Rushing",
+    "barrel_pct": 12.0,
+    "hardhit_pct": 44.4,
+    "xwoba": 0.342,
+    "avg_exit_velo": 89.4
+  },
+  "670032": {
+    "name": "Nicky Lopez",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 22.7,
+    "xwoba": 0.269,
+    "avg_exit_velo": 85.1
+  },
+  "702176": {
+    "name": "Alan Roden",
+    "barrel_pct": 9.1,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.354,
+    "avg_exit_velo": 89.8
+  },
+  "680728": {
+    "name": "Adrian Del Castillo",
+    "barrel_pct": 6.6,
+    "hardhit_pct": 39.3,
+    "xwoba": 0.266,
+    "avg_exit_velo": 88.9
+  },
+  "666397": {
+    "name": "Edouard Julien",
+    "barrel_pct": 7.1,
+    "hardhit_pct": 51.3,
+    "xwoba": 0.341,
+    "avg_exit_velo": 91.3
+  },
+  "681190": {
+    "name": "Randy V\u00e1squez",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.044,
+    "avg_exit_velo": 66.1
+  },
+  "668227": {
+    "name": "Randy Arozarena",
+    "barrel_pct": 7.6,
+    "hardhit_pct": 42.0,
+    "xwoba": 0.352,
+    "avg_exit_velo": 91.0
+  },
+  "665861": {
+    "name": "Sebasti\u00e1n Rivero",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 14.3,
+    "xwoba": 0.267,
+    "avg_exit_velo": 82.0
+  },
+  "621043": {
+    "name": "Carlos Correa",
+    "barrel_pct": 10.3,
+    "hardhit_pct": 41.2,
+    "xwoba": 0.364,
     "avg_exit_velo": 89.2
   },
-  "543760": {
-    "name": "Marcus Semien",
-    "barrel_pct": 7.8,
-    "hardhit_pct": 35.2,
-    "xwoba": 0.307,
-    "avg_exit_velo": 86.2
+  "663993": {
+    "name": "Nathaniel Lowe",
+    "barrel_pct": 11.7,
+    "hardhit_pct": 41.3,
+    "xwoba": 0.348,
+    "avg_exit_velo": 89.1
+  },
+  "690924": {
+    "name": "Braxton Fulford",
+    "barrel_pct": 8.8,
+    "hardhit_pct": 29.4,
+    "xwoba": 0.211,
+    "avg_exit_velo": 86.8
+  },
+  "657757": {
+    "name": "Gavin Sheets",
+    "barrel_pct": 7.2,
+    "hardhit_pct": 40.5,
+    "xwoba": 0.326,
+    "avg_exit_velo": 88.0
+  },
+  "671218": {
+    "name": "Heliot Ramos",
+    "barrel_pct": 16.1,
+    "hardhit_pct": 50.8,
+    "xwoba": 0.34,
+    "avg_exit_velo": 92.6
   },
   "682668": {
     "name": "Luisangel Acu\u00f1a",
@@ -4206,6 +3499,496 @@
     "xwoba": 0.284,
     "avg_exit_velo": 89.3
   },
+  "669477": {
+    "name": "Casey Schmitt",
+    "barrel_pct": 12.4,
+    "hardhit_pct": 44.3,
+    "xwoba": 0.355,
+    "avg_exit_velo": 89.7
+  },
+  "621566": {
+    "name": "Matt Olson",
+    "barrel_pct": 13.8,
+    "hardhit_pct": 50.3,
+    "xwoba": 0.36,
+    "avg_exit_velo": 92.6
+  },
+  "807712": {
+    "name": "Luke Keaschall",
+    "barrel_pct": 3.0,
+    "hardhit_pct": 27.9,
+    "xwoba": 0.298,
+    "avg_exit_velo": 84.4
+  },
+  "665862": {
+    "name": "Jazz Chisholm Jr.",
+    "barrel_pct": 9.5,
+    "hardhit_pct": 41.8,
+    "xwoba": 0.294,
+    "avg_exit_velo": 90.8
+  },
+  "682985": {
+    "name": "Riley Greene",
+    "barrel_pct": 14.6,
+    "hardhit_pct": 50.6,
+    "xwoba": 0.363,
+    "avg_exit_velo": 91.6
+  },
+  "671083": {
+    "name": "Buddy Kennedy",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 30.0,
+    "xwoba": 0.198,
+    "avg_exit_velo": 80.3
+  },
+  "656537": {
+    "name": "Derek Hill",
+    "barrel_pct": 11.5,
+    "hardhit_pct": 34.1,
+    "xwoba": 0.299,
+    "avg_exit_velo": 89.6
+  },
+  "702332": {
+    "name": "Caleb Durbin",
+    "barrel_pct": 2.6,
+    "hardhit_pct": 28.4,
+    "xwoba": 0.284,
+    "avg_exit_velo": 84.5
+  },
+  "686452": {
+    "name": "Drew Millas",
+    "barrel_pct": 3.2,
+    "hardhit_pct": 21.9,
+    "xwoba": 0.266,
+    "avg_exit_velo": 83.6
+  },
+  "666152": {
+    "name": "David Hamilton",
+    "barrel_pct": 3.8,
+    "hardhit_pct": 27.7,
+    "xwoba": 0.264,
+    "avg_exit_velo": 86.8
+  },
+  "624641": {
+    "name": "Edmundo Sosa",
+    "barrel_pct": 7.0,
+    "hardhit_pct": 41.1,
+    "xwoba": 0.332,
+    "avg_exit_velo": 87.6
+  },
+  "668709": {
+    "name": "JJ Bleday",
+    "barrel_pct": 10.5,
+    "hardhit_pct": 41.8,
+    "xwoba": 0.365,
+    "avg_exit_velo": 89.1
+  },
+  "686554": {
+    "name": "Oliver Dunn",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.207,
+    "avg_exit_velo": 82.6
+  },
+  "672820": {
+    "name": "Lenyn Sosa",
+    "barrel_pct": 5.6,
+    "hardhit_pct": 36.7,
+    "xwoba": 0.249,
+    "avg_exit_velo": 88.7
+  },
+  "640902": {
+    "name": "Jhonny Pereda",
+    "barrel_pct": 3.8,
+    "hardhit_pct": 46.2,
+    "xwoba": 0.341,
+    "avg_exit_velo": 89.8
+  },
+  "680737": {
+    "name": "Michael Helman",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 7.7,
+    "xwoba": 0.2,
+    "avg_exit_velo": 82.9
+  },
+  "669221": {
+    "name": "Sean Murphy",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.133,
+    "avg_exit_velo": 80.3
+  },
+  "660821": {
+    "name": "Jes\u00fas S\u00e1nchez",
+    "barrel_pct": 10.8,
+    "hardhit_pct": 46.7,
+    "xwoba": 0.335,
+    "avg_exit_velo": 91.1
+  },
+  "694377": {
+    "name": "Nick Yorke",
+    "barrel_pct": 5.0,
+    "hardhit_pct": 48.3,
+    "xwoba": 0.306,
+    "avg_exit_velo": 89.3
+  },
+  "668930": {
+    "name": "Brice Turang",
+    "barrel_pct": 8.5,
+    "hardhit_pct": 43.8,
+    "xwoba": 0.345,
+    "avg_exit_velo": 90.6
+  },
+  "686948": {
+    "name": "Drake Baldwin",
+    "barrel_pct": 15.2,
+    "hardhit_pct": 50.9,
+    "xwoba": 0.39,
+    "avg_exit_velo": 91.6
+  },
+  "691907": {
+    "name": "Tsung-Che Cheng",
+    "barrel_pct": 7.7,
+    "hardhit_pct": 23.1,
+    "xwoba": 0.303,
+    "avg_exit_velo": 86.6
+  },
+  "688363": {
+    "name": "Graham Pauley",
+    "barrel_pct": 4.3,
+    "hardhit_pct": 22.9,
+    "xwoba": 0.205,
+    "avg_exit_velo": 83.9
+  },
+  "668904": {
+    "name": "Royce Lewis",
+    "barrel_pct": 12.4,
+    "hardhit_pct": 41.2,
+    "xwoba": 0.305,
+    "avg_exit_velo": 89.1
+  },
+  "457705": {
+    "name": "Andrew McCutchen",
+    "barrel_pct": 5.8,
+    "hardhit_pct": 28.8,
+    "xwoba": 0.237,
+    "avg_exit_velo": 87.1
+  },
+  "687957": {
+    "name": "Dustin Harris",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 15.8,
+    "xwoba": 0.334,
+    "avg_exit_velo": 83.7
+  },
+  "815873": {
+    "name": "Sean Keys",
+    "barrel_pct": 4.3,
+    "hardhit_pct": 60.9,
+    "xwoba": 0.211,
+    "avg_exit_velo": 91.7
+  },
+  "690976": {
+    "name": "Alex Freeland",
+    "barrel_pct": 5.3,
+    "hardhit_pct": 37.1,
+    "xwoba": 0.277,
+    "avg_exit_velo": 88.7
+  },
+  "670764": {
+    "name": "Taylor Walls",
+    "barrel_pct": 2.7,
+    "hardhit_pct": 22.5,
+    "xwoba": 0.251,
+    "avg_exit_velo": 85.3
+  },
+  "663728": {
+    "name": "Cal Raleigh",
+    "barrel_pct": 11.2,
+    "hardhit_pct": 32.0,
+    "xwoba": 0.287,
+    "avg_exit_velo": 87.9
+  },
+  "683079": {
+    "name": "Omar Martinez",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.111,
+    "avg_exit_velo": 88.8
+  },
+  "664023": {
+    "name": "Ian Happ",
+    "barrel_pct": 12.1,
+    "hardhit_pct": 42.6,
+    "xwoba": 0.323,
+    "avg_exit_velo": 89.6
+  },
+  "671286": {
+    "name": "Johnathan Rodr\u00edguez",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.297,
+    "avg_exit_velo": 90.6
+  },
+  "682997": {
+    "name": "Tyler Callihan",
+    "barrel_pct": 7.4,
+    "hardhit_pct": 29.6,
+    "xwoba": 0.269,
+    "avg_exit_velo": 84.7
+  },
+  "691277": {
+    "name": "Deyvison De Los Santos",
+    "barrel_pct": 25.0,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.221,
+    "avg_exit_velo": 92.9
+  },
+  "621493": {
+    "name": "Taylor Ward",
+    "barrel_pct": 5.6,
+    "hardhit_pct": 38.7,
+    "xwoba": 0.348,
+    "avg_exit_velo": 89.4
+  },
+  "596146": {
+    "name": "Max Kepler",
+    "barrel_pct": 12.5,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.317,
+    "avg_exit_velo": 90.4
+  },
+  "694378": {
+    "name": "Jacob Gonzalez",
+    "barrel_pct": 3.8,
+    "hardhit_pct": 43.8,
+    "xwoba": 0.331,
+    "avg_exit_velo": 89.0
+  },
+  "656305": {
+    "name": "Matt Chapman",
+    "barrel_pct": 6.6,
+    "hardhit_pct": 35.8,
+    "xwoba": 0.286,
+    "avg_exit_velo": 88.2
+  },
+  "668715": {
+    "name": "Spencer Steer",
+    "barrel_pct": 12.6,
+    "hardhit_pct": 39.4,
+    "xwoba": 0.345,
+    "avg_exit_velo": 89.7
+  },
+  "676475": {
+    "name": "Alec Burleson",
+    "barrel_pct": 11.2,
+    "hardhit_pct": 48.4,
+    "xwoba": 0.384,
+    "avg_exit_velo": 91.7
+  },
+  "676572": {
+    "name": "Eric Wagaman",
+    "barrel_pct": 7.4,
+    "hardhit_pct": 22.2,
+    "xwoba": 0.286,
+    "avg_exit_velo": 83.7
+  },
+  "592518": {
+    "name": "Manny Machado",
+    "barrel_pct": 11.2,
+    "hardhit_pct": 43.9,
+    "xwoba": 0.329,
+    "avg_exit_velo": 90.3
+  },
+  "828599": {
+    "name": "Lucas Spence",
+    "barrel_pct": 7.1,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.268,
+    "avg_exit_velo": 92.6
+  },
+  "621438": {
+    "name": "Tyrone Taylor",
+    "barrel_pct": 9.4,
+    "hardhit_pct": 33.0,
+    "xwoba": 0.285,
+    "avg_exit_velo": 87.0
+  },
+  "672386": {
+    "name": "Alejandro Kirk",
+    "barrel_pct": 3.4,
+    "hardhit_pct": 38.6,
+    "xwoba": 0.289,
+    "avg_exit_velo": 87.2
+  },
+  "676356": {
+    "name": "Jonny DeLuca",
+    "barrel_pct": 4.1,
+    "hardhit_pct": 29.5,
+    "xwoba": 0.285,
+    "avg_exit_velo": 84.8
+  },
+  "650391": {
+    "name": "Eloy Jim\u00e9nez",
+    "barrel_pct": 4.0,
+    "hardhit_pct": 44.0,
+    "xwoba": 0.256,
+    "avg_exit_velo": 89.2
+  },
+  "680574": {
+    "name": "Matt McLain",
+    "barrel_pct": 9.2,
+    "hardhit_pct": 38.0,
+    "xwoba": 0.317,
+    "avg_exit_velo": 88.8
+  },
+  "661388": {
+    "name": "William Contreras",
+    "barrel_pct": 7.3,
+    "hardhit_pct": 42.2,
+    "xwoba": 0.335,
+    "avg_exit_velo": 90.0
+  },
+  "682848": {
+    "name": "Endy Rodr\u00edguez",
+    "barrel_pct": 12.7,
+    "hardhit_pct": 46.5,
+    "xwoba": 0.366,
+    "avg_exit_velo": 92.4
+  },
+  "666931": {
+    "name": "Jared Oliva",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 66.7,
+    "xwoba": 0.308,
+    "avg_exit_velo": 93.6
+  },
+  "686527": {
+    "name": "Dominic Canzone",
+    "barrel_pct": 14.3,
+    "hardhit_pct": 47.6,
+    "xwoba": 0.36,
+    "avg_exit_velo": 92.6
+  },
+  "643289": {
+    "name": "Mauricio Dub\u00f3n",
+    "barrel_pct": 4.5,
+    "hardhit_pct": 31.0,
+    "xwoba": 0.31,
+    "avg_exit_velo": 86.5
+  },
+  "680777": {
+    "name": "Ryan Jeffers",
+    "barrel_pct": 14.3,
+    "hardhit_pct": 41.2,
+    "xwoba": 0.385,
+    "avg_exit_velo": 90.4
+  },
+  "643376": {
+    "name": "Danny Jansen",
+    "barrel_pct": 6.0,
+    "hardhit_pct": 33.3,
+    "xwoba": 0.254,
+    "avg_exit_velo": 87.7
+  },
+  "687515": {
+    "name": "Colby Thomas",
+    "barrel_pct": 9.7,
+    "hardhit_pct": 36.1,
+    "xwoba": 0.261,
+    "avg_exit_velo": 89.1
+  },
+  "663368": {
+    "name": "Blake Perkins",
+    "barrel_pct": 4.4,
+    "hardhit_pct": 33.8,
+    "xwoba": 0.264,
+    "avg_exit_velo": 86.4
+  },
+  "668885": {
+    "name": "Austin Martin",
+    "barrel_pct": 2.1,
+    "hardhit_pct": 27.9,
+    "xwoba": 0.311,
+    "avg_exit_velo": 86.9
+  },
+  "683002": {
+    "name": "Gunnar Henderson",
+    "barrel_pct": 6.9,
+    "hardhit_pct": 44.5,
+    "xwoba": 0.304,
+    "avg_exit_velo": 89.6
+  },
+  "669236": {
+    "name": "Jeremiah Jackson",
+    "barrel_pct": 7.7,
+    "hardhit_pct": 38.5,
+    "xwoba": 0.291,
+    "avg_exit_velo": 89.4
+  },
+  "676609": {
+    "name": "Jos\u00e9 Caballero",
+    "barrel_pct": 3.6,
+    "hardhit_pct": 25.5,
+    "xwoba": 0.271,
+    "avg_exit_velo": 83.9
+  },
+  "682829": {
+    "name": "Elly De La Cruz",
+    "barrel_pct": 14.8,
+    "hardhit_pct": 51.5,
+    "xwoba": 0.365,
+    "avg_exit_velo": 94.0
+  },
+  "669289": {
+    "name": "Santiago Espinal",
+    "barrel_pct": 2.0,
+    "hardhit_pct": 31.4,
+    "xwoba": 0.29,
+    "avg_exit_velo": 86.2
+  },
+  "660162": {
+    "name": "Yo\u00e1n Moncada",
+    "barrel_pct": 7.7,
+    "hardhit_pct": 40.9,
+    "xwoba": 0.269,
+    "avg_exit_velo": 90.3
+  },
+  "802139": {
+    "name": "JJ Wetherholt",
+    "barrel_pct": 7.5,
+    "hardhit_pct": 45.6,
+    "xwoba": 0.349,
+    "avg_exit_velo": 90.1
+  },
+  "592885": {
+    "name": "Christian Yelich",
+    "barrel_pct": 7.2,
+    "hardhit_pct": 41.8,
+    "xwoba": 0.299,
+    "avg_exit_velo": 89.0
+  },
+  "663611": {
+    "name": "Nick Madrigal",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 24.4,
+    "xwoba": 0.298,
+    "avg_exit_velo": 88.7
+  },
+  "686894": {
+    "name": "Joey Wiemer",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 39.0,
+    "xwoba": 0.315,
+    "avg_exit_velo": 88.8
+  },
+  "694410": {
+    "name": "LuJames Groover",
+    "barrel_pct": 11.1,
+    "hardhit_pct": 45.9,
+    "xwoba": 0.286,
+    "avg_exit_velo": 90.0
+  },
   "666181": {
     "name": "Will Benson",
     "barrel_pct": 12.7,
@@ -4213,18 +3996,249 @@
     "xwoba": 0.3,
     "avg_exit_velo": 91.1
   },
-  "661388": {
-    "name": "William Contreras",
-    "barrel_pct": 7.4,
-    "hardhit_pct": 42.6,
-    "xwoba": 0.338,
+  "606192": {
+    "name": "Teoscar Hern\u00e1ndez",
+    "barrel_pct": 9.6,
+    "hardhit_pct": 44.9,
+    "xwoba": 0.32,
+    "avg_exit_velo": 89.8
+  },
+  "667472": {
+    "name": "Dane Myers",
+    "barrel_pct": 6.7,
+    "hardhit_pct": 35.1,
+    "xwoba": 0.354,
+    "avg_exit_velo": 90.3
+  },
+  "695336": {
+    "name": "Thomas Saggese",
+    "barrel_pct": 10.0,
+    "hardhit_pct": 38.0,
+    "xwoba": 0.274,
+    "avg_exit_velo": 88.8
+  },
+  "677942": {
+    "name": "Blaze Alexander",
+    "barrel_pct": 7.2,
+    "hardhit_pct": 48.8,
+    "xwoba": 0.361,
+    "avg_exit_velo": 92.6
+  },
+  "691373": {
+    "name": "Jhostynxon Garcia",
+    "barrel_pct": 4.0,
+    "hardhit_pct": 32.0,
+    "xwoba": 0.282,
+    "avg_exit_velo": 84.6
+  },
+  "596103": {
+    "name": "Austin Slater",
+    "barrel_pct": 2.3,
+    "hardhit_pct": 18.2,
+    "xwoba": 0.235,
+    "avg_exit_velo": 85.0
+  },
+  "808959": {
+    "name": "Munetaka Murakami",
+    "barrel_pct": 19.1,
+    "hardhit_pct": 58.1,
+    "xwoba": 0.366,
+    "avg_exit_velo": 93.8
+  },
+  "683021": {
+    "name": "Michael Stefanic",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.232,
+    "avg_exit_velo": 88.8
+  },
+  "682663": {
+    "name": "Agust\u00edn Ram\u00edrez",
+    "barrel_pct": 4.7,
+    "hardhit_pct": 40.7,
+    "xwoba": 0.282,
+    "avg_exit_velo": 89.2
+  },
+  "665923": {
+    "name": "Esteury Ruiz",
+    "barrel_pct": 8.5,
+    "hardhit_pct": 29.6,
+    "xwoba": 0.315,
+    "avg_exit_velo": 86.6
+  },
+  "514888": {
+    "name": "Jose Altuve",
+    "barrel_pct": 6.0,
+    "hardhit_pct": 32.5,
+    "xwoba": 0.281,
+    "avg_exit_velo": 85.6
+  },
+  "805811": {
+    "name": "Bryce Eldridge",
+    "barrel_pct": 12.8,
+    "hardhit_pct": 55.0,
+    "xwoba": 0.365,
+    "avg_exit_velo": 92.6
+  },
+  "571970": {
+    "name": "Max Muncy",
+    "barrel_pct": 13.9,
+    "hardhit_pct": 43.9,
+    "xwoba": 0.361,
+    "avg_exit_velo": 90.1
+  },
+  "694224": {
+    "name": "Gabriel Gonzalez",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.422,
+    "avg_exit_velo": 63.1
+  },
+  "641857": {
+    "name": "Ryan McMahon",
+    "barrel_pct": 10.9,
+    "hardhit_pct": 51.4,
+    "xwoba": 0.307,
+    "avg_exit_velo": 91.1
+  },
+  "690022": {
+    "name": "Ryan Ritter",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.166,
+    "avg_exit_velo": 90.6
+  },
+  "678882": {
+    "name": "Ceddanne Rafaela",
+    "barrel_pct": 4.8,
+    "hardhit_pct": 32.4,
+    "xwoba": 0.281,
+    "avg_exit_velo": 86.2
+  },
+  "671155": {
+    "name": "Ivan Johnson",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 25.0,
+    "xwoba": 0.21,
+    "avg_exit_velo": 89.1
+  },
+  "663886": {
+    "name": "Tyler Stephenson",
+    "barrel_pct": 11.6,
+    "hardhit_pct": 45.8,
+    "xwoba": 0.344,
+    "avg_exit_velo": 90.8
+  },
+  "703607": {
+    "name": "Henry Bolte",
+    "barrel_pct": 6.7,
+    "hardhit_pct": 46.6,
+    "xwoba": 0.297,
     "avg_exit_velo": 90.0
   },
-  "621550": {
-    "name": "Patrick Wisdom",
-    "barrel_pct": 21.7,
-    "hardhit_pct": 47.8,
-    "xwoba": 0.265,
-    "avg_exit_velo": 92.9
+  "683748": {
+    "name": "Victor Mesa Jr.",
+    "barrel_pct": 11.5,
+    "hardhit_pct": 38.5,
+    "xwoba": 0.33,
+    "avg_exit_velo": 88.3
+  },
+  "660644": {
+    "name": "Vidal Bruj\u00e1n",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 9.1,
+    "xwoba": 0.213,
+    "avg_exit_velo": 82.0
+  },
+  "686765": {
+    "name": "Nick Sogard",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 16.7,
+    "xwoba": 0.301,
+    "avg_exit_velo": 81.6
+  },
+  "669003": {
+    "name": "Garrett Mitchell",
+    "barrel_pct": 14.1,
+    "hardhit_pct": 49.2,
+    "xwoba": 0.352,
+    "avg_exit_velo": 92.6
+  },
+  "623205": {
+    "name": "Andrew Velazquez",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.173,
+    "avg_exit_velo": 82.5
+  },
+  "694208": {
+    "name": "Mois\u00e9s Ballesteros",
+    "barrel_pct": 9.1,
+    "hardhit_pct": 46.7,
+    "xwoba": 0.31,
+    "avg_exit_velo": 90.1
+  },
+  "701162": {
+    "name": "Ben Malgeri",
+    "barrel_pct": 4.3,
+    "hardhit_pct": 39.1,
+    "xwoba": 0.282,
+    "avg_exit_velo": 89.6
+  },
+  "669397": {
+    "name": "Nick Allen",
+    "barrel_pct": 1.3,
+    "hardhit_pct": 26.3,
+    "xwoba": 0.225,
+    "avg_exit_velo": 84.5
+  },
+  "672695": {
+    "name": "Geraldo Perdomo",
+    "barrel_pct": 3.0,
+    "hardhit_pct": 29.3,
+    "xwoba": 0.325,
+    "avg_exit_velo": 87.0
+  },
+  "691781": {
+    "name": "Brady House",
+    "barrel_pct": 10.6,
+    "hardhit_pct": 43.0,
+    "xwoba": 0.319,
+    "avg_exit_velo": 89.0
+  },
+  "592626": {
+    "name": "Joc Pederson",
+    "barrel_pct": 11.8,
+    "hardhit_pct": 49.2,
+    "xwoba": 0.356,
+    "avg_exit_velo": 92.0
+  },
+  "681715": {
+    "name": "Heriberto Hern\u00e1ndez",
+    "barrel_pct": 13.3,
+    "hardhit_pct": 51.8,
+    "xwoba": 0.364,
+    "avg_exit_velo": 92.5
+  },
+  "687749": {
+    "name": "Jase Bowen",
+    "barrel_pct": 10.7,
+    "hardhit_pct": 24.1,
+    "xwoba": 0.228,
+    "avg_exit_velo": 85.3
+  },
+  "656484": {
+    "name": "Tristan Gray",
+    "barrel_pct": 6.1,
+    "hardhit_pct": 37.4,
+    "xwoba": 0.266,
+    "avg_exit_velo": 88.4
+  },
+  "663837": {
+    "name": "Matt Vierling",
+    "barrel_pct": 5.2,
+    "hardhit_pct": 36.8,
+    "xwoba": 0.303,
+    "avg_exit_velo": 87.7
   }
 }
