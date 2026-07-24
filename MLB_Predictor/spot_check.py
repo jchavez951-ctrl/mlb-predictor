@@ -1742,7 +1742,7 @@ else:
         # gets a boost; a player without contact-quality data yet just uses
         # the simulated probability unadjusted (multiplier of 1.0).
         LEAGUE_AVG_BARREL_PCT = 8.0     # Statcast barrel rate, percentage scale
-        LEAGUE_AVG_HARDHIT_PCT = 0.38   # Statcast hard-hit rate, decimal scale
+        LEAGUE_AVG_HARDHIT_PCT = 38.0   # Statcast hard-hit rate -- stored on a percentage scale (e.g. 44.6, not 0.446), same as barrel_pct
         def comb_score(hr_prob, barrel_pct, hardhit_pct):
             if barrel_pct is None or hardhit_pct is None:
                 return round(hr_prob, 4)
@@ -1799,7 +1799,7 @@ else:
             for r in rows[:10]:
                 color = badge_color(r["COMB"])
                 barrel_txt = f"{r['Barrel%']:.1f}" if r["Barrel%"] is not None else "--"
-                hardhit_txt = f"{r['HardHit%']*100:.1f}" if r["HardHit%"] is not None else "--"
+                hardhit_txt = f"{r['HardHit%']:.1f}" if r["HardHit%"] is not None else "--"
                 velo_txt = f"{r['Exit Velo']:.1f}" if r["Exit Velo"] is not None else "--"
                 html += f"""
                 <div class="hrlb-row">
