@@ -5,6 +5,7 @@ import random
 import time
 import copy
 import plotly.graph_objects as go
+import requests
 
 st.set_page_config(page_title="Ultimate MLB Analytics Platform v2", page_icon="⚾", layout="wide")
 
@@ -1589,6 +1590,219 @@ else:
             }
 
     # ----------------------------------------------------
+    # MLB-WIDE SLATE SIMULATION -- TOP HR PLAYS ACROSS EVERY GAME TODAY
+    # ----------------------------------------------------
+    def fetch_todays_mlb_schedule():
+        """Pulls today's real MLB schedule (which teams are playing, and
+        their probable starting pitchers when MLB has announced them) from
+        the free, public MLB Stats API. This is a LIVE same-day call --
+        NOT the same nightly-cached data as roster_data.json, since
+        probable pitchers/schedules change day to day, unlike season-long
+        roster stats."""
+        try:
+            today = time.strftime("%Y-%m-%d")
+            resp = requests.get(
+                "https://statsapi.mlb.com/api/v1/schedule",
+                params={"sportId": 1, "date": today, "hydrate": "probablePitcher"},
+                timeout=15,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+        except Exception as e:
+            st.error(f"Couldn't fetch today's MLB schedule: {e}")
+            return []
+
+        games = []
+        for date_block in data.get("dates", []):
+            for g in date_block.get("games", []):
+                away_team_data = g.get("teams", {}).get("away", {})
+                home_team_data = g.get("teams", {}).get("home", {})
+                away_name = away_team_data.get("team", {}).get("name", "")
+                home_name = home_team_data.get("team", {}).get("name", "")
+                away_probable = away_team_data.get("probablePitcher", {}).get("fullName")
+                home_probable = home_team_data.get("probablePitcher", {}).get("fullName")
+                # Only include games where both teams match our roster data's
+                # naming -- MLB's API sometimes uses slightly different team
+                # name strings (e.g. market name vs. mascot only).
+                if away_name in ROSTER_DATABASE and home_name in ROSTER_DATABASE:
+                    games.append({
+                        "away_team": away_name, "home_team": home_name,
+                        "away_probable": away_probable, "home_probable": home_probable,
+                    })
+        return games
+
+    def build_matchup_pieces(team_name, probable_pitcher_name=None):
+        """Builds a team's locked lineup, starting pitcher, and bullpen from
+        ROSTER_DATABASE for slate-wide simulation. Uses today's real
+        probable pitcher when MLB has announced one and it matches a name
+        already in our roster data; otherwise falls back to the team's
+        primary starter by innings pitched (the same fallback the
+        single-game view already relies on when nothing more specific is
+        available)."""
+        team_data = ROSTER_DATABASE.get(team_name, {})
+        hitting = team_data.get("hitting", [])
+        pitching = team_data.get("pitching", [])
+        if not hitting or not pitching:
+            return None
+
+        sp_candidates = [p for p in pitching if p["Role"] == "SP"]
+        sp = None
+        if probable_pitcher_name:
+            for p in sp_candidates:
+                if p["Player"] == probable_pitcher_name:
+                    sp = p
+                    break
+        if sp is None and sp_candidates:
+            try:
+                sp = max(sp_candidates, key=lambda p: float(p.get("IP", "0.0")))
+            except (TypeError, ValueError):
+                sp = sp_candidates[0]
+        if sp is None:
+            return None
+
+        bullpen = [p for p in pitching if p["Player"] != sp["Player"]]
+        return {"lineup": hitting[:9], "sp": sp, "bullpen": bullpen}
+
+    def run_matchup_simulation(away_pieces, home_pieces, park_rules_for_game, env_tensors_for_game, iterations=300):
+        """A leaner, reusable version of the single-game Monte Carlo loop
+        above -- takes explicit parameters instead of reading from
+        st.session_state, so the slate-wide feature can run the SAME
+        simulation engine repeatedly for different team pairs without
+        duplicating the core game logic. Only tracks HR per hitter (not the
+        full box score) since that's all the slate-wide leaderboard needs,
+        and uses fewer iterations per game (300 vs. the single-game view's
+        1,000) to keep total slate runtime reasonable across many games."""
+        engine = DipsMarkovEngine(
+            away_pieces["lineup"], home_pieces["lineup"],
+            away_pieces["sp"], home_pieces["sp"],
+            away_pieces["bullpen"], home_pieces["bullpen"],
+            park_rules_for_game, env_tensors_for_game,
+        )
+        agg_away_hr = {p["Player"]: 0 for p in away_pieces["lineup"]}
+        agg_home_hr = {p["Player"]: 0 for p in home_pieces["lineup"]}
+        dist_away_hr = {p["Player"]: [] for p in away_pieces["lineup"]}
+        dist_home_hr = {p["Player"]: [] for p in home_pieces["lineup"]}
+
+        for _ in range(iterations):
+            sim_res = engine.run_full_game(tracking_mode=False)
+            for p in agg_away_hr:
+                hr = sim_res["box_scores"]["away"][p]["HR"]
+                agg_away_hr[p] += hr
+                dist_away_hr[p].append(hr)
+            for p in agg_home_hr:
+                hr = sim_res["box_scores"]["home"][p]["HR"]
+                agg_home_hr[p] += hr
+                dist_home_hr[p].append(hr)
+
+        for p in agg_away_hr: agg_away_hr[p] /= iterations
+        for p in agg_home_hr: agg_home_hr[p] /= iterations
+
+        return {"away_hr_means": agg_away_hr, "home_hr_means": agg_home_hr,
+                "away_hr_dist": dist_away_hr, "home_hr_dist": dist_home_hr}
+
+    def comb_score_shared(hr_prob, barrel_pct, hardhit_pct):
+        """Shared version of the COMB composite score used by both the
+        single-matchup HR Leaderboard and the slate-wide view below, so the
+        two never drift out of sync with each other."""
+        LEAGUE_AVG_BARREL_PCT = 8.0
+        LEAGUE_AVG_HARDHIT_PCT = 38.0
+        if barrel_pct is None or hardhit_pct is None:
+            return round(hr_prob, 4)
+        barrel_ratio = barrel_pct / LEAGUE_AVG_BARREL_PCT
+        hardhit_ratio = hardhit_pct / LEAGUE_AVG_HARDHIT_PCT
+        quality_mult = max(0.5, min(2.0, (barrel_ratio + hardhit_ratio) / 2))
+        return round(hr_prob * quality_mult, 4)
+
+    def render_slate_wide_hr_leaderboard():
+        st.markdown("""
+        <style>
+        .hrlb-card { background:#0e1117; border:1px solid #262b36; border-radius:8px; padding:14px 16px; margin-bottom:8px; }
+        .hrlb-header { color:#8a8f98; font-size:11px; letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; }
+        .hrlb-row { display:flex; align-items:center; padding:8px 6px; border-bottom:1px solid #1c2029; gap:10px; }
+        .hrlb-row:last-child { border-bottom:none; }
+        .hrlb-name { color:#e8e8ea; font-weight:600; font-size:13.5px; }
+        .hrlb-team { color:#6e7480; font-size:11px; }
+        .hrlb-badge { min-width:46px; text-align:center; border-radius:5px; padding:3px 7px; font-weight:700; font-size:12.5px; }
+        .hrlb-stat { color:#9aa0ac; font-size:12px; min-width:52px; text-align:center; }
+        .hrlb-stat b { color:#d5d8de; }
+        </style>
+        """, unsafe_allow_html=True)
+        st.markdown("### 🌎 MLB-Wide Top HR Plays")
+        st.caption("Simulates every game on today's real MLB schedule (not just the two teams selected above) and ranks the single best HR plays across the whole slate. This takes longer than the single-matchup view since it's running a separate simulation for each game.")
+        if st.button("Run Full Slate Simulation"):
+            with st.spinner("Fetching today's schedule and simulating every game..."):
+                games = fetch_todays_mlb_schedule()
+                if not games:
+                    st.warning("No games found for today, or the schedule couldn't be fetched -- see any error above.")
+                    return
+
+                all_rows = []
+                progress = st.progress(0)
+                for i, g in enumerate(games):
+                    away_pieces = build_matchup_pieces(g["away_team"], g["away_probable"])
+                    home_pieces = build_matchup_pieces(g["home_team"], g["home_probable"])
+                    if not away_pieces or not home_pieces:
+                        progress.progress((i + 1) / len(games))
+                        continue
+
+                    game_park_rules = BALLPARK_ENV.get(g["home_team"], {"run_mult": 1.0, "hr_mult": 1.0, "babip_mult": 1.0})
+                    game_env_tensors = {"temp": 72, "elevation": 0, "wind": "Calm / Neutral"}  # neutral defaults -- no live per-game weather source wired up yet
+
+                    result = run_matchup_simulation(away_pieces, home_pieces, game_park_rules, game_env_tensors)
+
+                    name_to_id = {}
+                    for p in away_pieces["lineup"] + home_pieces["lineup"]:
+                        if p.get("PlayerID"):
+                            name_to_id[p["Player"]] = str(p["PlayerID"])
+
+                    for team_name, hr_means, hr_dist in [(g["away_team"], result["away_hr_means"], result["away_hr_dist"]),
+                                                          (g["home_team"], result["home_hr_means"], result["home_hr_dist"])]:
+                        for name, hr_exp in hr_means.items():
+                            values = hr_dist[name]
+                            hr_p = (sum(1 for v in values if v > 0.5) / len(values)) if values else 0.0
+                            player_id = name_to_id.get(name)
+                            cq = CONTACT_QUALITY.get(player_id, {}) if player_id else {}
+                            all_rows.append({
+                                "Team": team_name, "Hitter": name, "HR Over 0.5%": hr_p,
+                                "Barrel%": cq.get("barrel_pct"), "HardHit%": cq.get("hardhit_pct"),
+                                "Exit Velo": cq.get("avg_exit_velo"),
+                                "COMB": comb_score_shared(hr_p, cq.get("barrel_pct"), cq.get("hardhit_pct")),
+                            })
+                    progress.progress((i + 1) / len(games))
+
+                all_rows.sort(key=lambda r: r["COMB"], reverse=True)
+                top_10 = all_rows[:10]
+
+                def badge_color(comb):
+                    if comb >= 0.20: return "#1f8a4c"
+                    if comb >= 0.10: return "#8a7a1f"
+                    return "#5a2020"
+
+                html = f'<div class="hrlb-card"><div class="hrlb-header">TOP 10 HR PLAYS -- {len(games)} GAMES TODAY</div>'
+                for r in top_10:
+                    color = badge_color(r["COMB"])
+                    barrel_txt = f"{r['Barrel%']:.1f}" if r["Barrel%"] is not None else "--"
+                    hardhit_txt = f"{r['HardHit%']:.1f}" if r["HardHit%"] is not None else "--"
+                    velo_txt = f"{r['Exit Velo']:.1f}" if r["Exit Velo"] is not None else "--"
+                    html += f"""
+                    <div class="hrlb-row">
+                        <div class="hrlb-badge" style="background:{color};color:white;">{r['COMB']:.3f}</div>
+                        <div style="flex:1;">
+                            <div class="hrlb-name">{r['Hitter']}</div>
+                            <div class="hrlb-team">{r['Team']}</div>
+                        </div>
+                        <div class="hrlb-stat">BRL<br><b>{barrel_txt}</b></div>
+                        <div class="hrlb-stat">HH%<br><b>{hardhit_txt}</b></div>
+                        <div class="hrlb-stat">EV<br><b>{velo_txt}</b></div>
+                        <div class="hrlb-stat">HR%<br><b>{r['HR Over 0.5%']*100:.1f}</b></div>
+                    </div>"""
+                html += "</div>"
+                st.markdown(html, unsafe_allow_html=True)
+                st.caption("Uses today's real probable pitchers when MLB has announced them; falls back to each team's primary starter otherwise. Batting lineups use each team's top-9-by-playing-time from the nightly roster refresh, not necessarily tonight's exact announced batting order (that's only published 1-3 hours before first pitch). Weather uses neutral defaults per game -- no live per-game forecast source wired up yet.")
+
+    render_slate_wide_hr_leaderboard()
+
+    # ----------------------------------------------------
     # SPORTSBOOK & POSTSEASON INTERFACE RENDERS
     # ----------------------------------------------------
     mc = st.session_state["monte_carlo_results"]
@@ -1759,16 +1973,16 @@ else:
                 player_id = name_to_id.get(name)
                 cq = CONTACT_QUALITY.get(player_id, {}) if player_id else {}
                 rows.append({
-                    "Hitter": name, "Proj HR": round(hr_exp, 3), "HR Over 0.5%": hr_p,
+                    "Team": team_name, "Hitter": name, "Proj HR": round(hr_exp, 3), "HR Over 0.5%": hr_p,
                     "Barrel%": cq.get("barrel_pct"), "HardHit%": cq.get("hardhit_pct"),
                     "xwOBA": cq.get("xwoba"), "Exit Velo": cq.get("avg_exit_velo"),
                     "COMB": comb_score(hr_p, cq.get("barrel_pct"), cq.get("hardhit_pct")),
                 })
-            rows.sort(key=lambda r: r["COMB"], reverse=True)
             return rows
 
-        away_rows = build_rows(away_team_name, away_means, away_dist)
-        home_rows = build_rows(home_team_name, home_means, home_dist)
+        combined_rows = build_rows(away_team_name, away_means, away_dist) + build_rows(home_team_name, home_means, home_dist)
+        combined_rows.sort(key=lambda r: r["COMB"], reverse=True)
+        top_10 = combined_rows[:10]
 
         # ---- Dark card theme (custom CSS injected once for this view) ----
         st.markdown("""
@@ -1777,7 +1991,8 @@ else:
         .hrlb-header { color:#8a8f98; font-size:11px; letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; }
         .hrlb-row { display:flex; align-items:center; padding:8px 6px; border-bottom:1px solid #1c2029; gap:10px; }
         .hrlb-row:last-child { border-bottom:none; }
-        .hrlb-name { color:#e8e8ea; font-weight:600; font-size:13.5px; flex:1; }
+        .hrlb-name { color:#e8e8ea; font-weight:600; font-size:13.5px; }
+        .hrlb-team { color:#6e7480; font-size:11px; }
         .hrlb-badge { min-width:46px; text-align:center; border-radius:5px; padding:3px 7px; font-weight:700; font-size:12.5px; }
         .hrlb-stat { color:#9aa0ac; font-size:12px; min-width:52px; text-align:center; }
         .hrlb-stat b { color:#d5d8de; }
@@ -1794,28 +2009,26 @@ else:
             if comb >= 0.10: return "#8a7a1f"
             return "#5a2020"
 
-        def render_team_panel(team_name, rows):
-            html = f'<div class="hrlb-card"><div class="hrlb-header">{team_name}</div>'
-            for r in rows[:10]:
-                color = badge_color(r["COMB"])
-                barrel_txt = f"{r['Barrel%']:.1f}" if r["Barrel%"] is not None else "--"
-                hardhit_txt = f"{r['HardHit%']:.1f}" if r["HardHit%"] is not None else "--"
-                velo_txt = f"{r['Exit Velo']:.1f}" if r["Exit Velo"] is not None else "--"
-                html += f"""
-                <div class="hrlb-row">
-                    <div class="hrlb-badge" style="background:{color};color:white;">{r['COMB']:.3f}</div>
+        html = '<div class="hrlb-card"><div class="hrlb-header">TOP 10 HR PLAYS -- BOTH LINEUPS COMBINED</div>'
+        for r in top_10:
+            color = badge_color(r["COMB"])
+            barrel_txt = f"{r['Barrel%']:.1f}" if r["Barrel%"] is not None else "--"
+            hardhit_txt = f"{r['HardHit%']:.1f}" if r["HardHit%"] is not None else "--"
+            velo_txt = f"{r['Exit Velo']:.1f}" if r["Exit Velo"] is not None else "--"
+            html += f"""
+            <div class="hrlb-row">
+                <div class="hrlb-badge" style="background:{color};color:white;">{r['COMB']:.3f}</div>
+                <div style="flex:1;">
                     <div class="hrlb-name">{r['Hitter']}</div>
-                    <div class="hrlb-stat">BRL<br><b>{barrel_txt}</b></div>
-                    <div class="hrlb-stat">HH%<br><b>{hardhit_txt}</b></div>
-                    <div class="hrlb-stat">EV<br><b>{velo_txt}</b></div>
-                    <div class="hrlb-stat">HR%<br><b>{r['HR Over 0.5%']*100:.1f}</b></div>
-                </div>"""
-            html += "</div>"
-            st.markdown(html, unsafe_allow_html=True)
-
-        col_away, col_home = st.columns(2)
-        with col_away: render_team_panel(away_team_name, away_rows)
-        with col_home: render_team_panel(home_team_name, home_rows)
+                    <div class="hrlb-team">{r['Team']}</div>
+                </div>
+                <div class="hrlb-stat">BRL<br><b>{barrel_txt}</b></div>
+                <div class="hrlb-stat">HH%<br><b>{hardhit_txt}</b></div>
+                <div class="hrlb-stat">EV<br><b>{velo_txt}</b></div>
+                <div class="hrlb-stat">HR%<br><b>{r['HR Over 0.5%']*100:.1f}</b></div>
+            </div>"""
+        html += "</div>"
+        st.markdown(html, unsafe_allow_html=True)
 
         st.caption("COMB = an original composite score built from this app's own data: simulated HR probability, adjusted up or down by real Barrel%/HardHit% relative to league average (when loaded). Not a copy of any other tool's formula. BRL=Barrel%, HH%=HardHit%, EV=Exit Velo (mph), HR%=share of 1,000 simulated games with a home run.")
 
