@@ -24,7 +24,7 @@ jobs:
         run: pip install requests
 
       - name: Run sprint speed refresh
-        run: python refresh_sprint_speed.py
+        run: python MLB_Predictor/refresh_sprint_speed.py
 
       - name: Commit and push updated sprint speed data
         run: |
