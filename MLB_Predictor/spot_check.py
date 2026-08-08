@@ -916,6 +916,46 @@ def _load_contact_quality():
 
 CONTACT_QUALITY = _load_contact_quality()
 
+def _load_sprint_speed():
+    json_path = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "sprint_speed.json")
+    try:
+        with open(json_path, "r") as f:
+            data = _json.load(f)
+        if not isinstance(data, dict):
+            return {}
+        return data
+    except FileNotFoundError:
+        return {}
+    except Exception as e:
+        print(f"[sprint speed loader] Ignoring sprint_speed.json -- problem reading it: {e}")
+        return {}
+
+SPRINT_SPEED = _load_sprint_speed()
+
+def _apply_real_sprint_speed(roster_database, sprint_speed_data):
+    """Overrides each hitter's flat placeholder SPD (previously always 55,
+    since real speed data was never wired into the roster refresh) with
+    their real Statcast-derived value, matched by PlayerID -- the same
+    ID-based matching that fixed the contact-quality name-mismatch bug.
+    This is the step that makes the simulation actually USE real speed
+    data for stolen bases and extra-base advancement, not just display it
+    somewhere separate from the math."""
+    if not sprint_speed_data:
+        return roster_database  # nothing to apply -- every hitter keeps their existing SPD (the flat default)
+    applied_count = 0
+    for team_name, team_data in roster_database.items():
+        for hitter in team_data.get("hitting", []):
+            player_id = str(hitter.get("PlayerID")) if hitter.get("PlayerID") else None
+            if player_id and player_id in sprint_speed_data:
+                real_spd = sprint_speed_data[player_id].get("SPD")
+                if real_spd is not None:
+                    hitter["SPD"] = real_spd
+                    applied_count += 1
+    print(f"[sprint speed] Applied real SPD to {applied_count} hitters; everyone else keeps the flat default.")
+    return roster_database
+
+ROSTER_DATABASE = _apply_real_sprint_speed(ROSTER_DATABASE, SPRINT_SPEED)
+
 BALLPARK_ENV_FALLBACK = {
 
     "Athletics": {"run_mult": 0.95, "hr_mult": 0.88, "babip_mult": 0.98},
