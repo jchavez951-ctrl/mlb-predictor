@@ -1613,8 +1613,11 @@ else:
             return []
 
         games = []
+        unmatched_names = set()
+        total_raw_games = 0
         for date_block in data.get("dates", []):
             for g in date_block.get("games", []):
+                total_raw_games += 1
                 away_team_data = g.get("teams", {}).get("away", {})
                 home_team_data = g.get("teams", {}).get("home", {})
                 away_name = away_team_data.get("team", {}).get("name", "")
@@ -1629,6 +1632,13 @@ else:
                         "away_team": away_name, "home_team": home_name,
                         "away_probable": away_probable, "home_probable": home_probable,
                     })
+                else:
+                    if away_name not in ROSTER_DATABASE: unmatched_names.add(away_name)
+                    if home_name not in ROSTER_DATABASE: unmatched_names.add(home_name)
+
+        st.caption(f"Schedule diagnostic -- date queried: {today} | raw games from MLB: {total_raw_games} | matched to our roster data: {len(games)}")
+        if unmatched_names:
+            st.caption(f"Team names from MLB's API that did NOT match our roster data (likely the actual bug if this list isn't empty): {sorted(unmatched_names)}")
         return games
 
     def build_matchup_pieces(team_name, probable_pitcher_name=None):
