@@ -1,1081 +1,111 @@
 {
-  "678011": {
-    "name": "Anthony Seigler",
-    "sprint_speed_ft_s": 25.6,
-    "SPD": 38
-  },
-  "805779": {
-    "name": "Jacob Wilson",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "669357": {
-    "name": "Nolan Gorman",
-    "sprint_speed_ft_s": 25.2,
-    "SPD": 32
-  },
-  "686554": {
-    "name": "Oliver Dunn",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "691176": {
-    "name": "Jasson Dom\u00ednguez",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
-  },
-  "691406": {
-    "name": "Junior Caminero",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "807713": {
-    "name": "Matt Shaw",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
-  },
-  "683079": {
-    "name": "Omar Martinez",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "815873": {
-    "name": "Sean Keys",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "694362": {
-    "name": "Blake Dunn",
-    "sprint_speed_ft_s": 29.6,
-    "SPD": 88
-  },
-  "681715": {
-    "name": "Heriberto Hern\u00e1ndez",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
-  },
-  "676369": {
-    "name": "Nelson Vel\u00e1zquez",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "678577": {
-    "name": "Junior Perez",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "669720": {
-    "name": "Austin Hays",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "696285": {
-    "name": "Jacob Young",
-    "sprint_speed_ft_s": 29.2,
-    "SPD": 82
-  },
-  "691788": {
-    "name": "Joe Mack",
-    "sprint_speed_ft_s": 26.3,
-    "SPD": 46
-  },
-  "701762": {
-    "name": "Nick Kurtz",
-    "sprint_speed_ft_s": 26.6,
-    "SPD": 50
-  },
-  "668715": {
-    "name": "Spencer Steer",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "595978": {
-    "name": "Austin Hedges",
-    "sprint_speed_ft_s": 24.5,
-    "SPD": 24
-  },
-  "663698": {
-    "name": "Joey Bart",
-    "sprint_speed_ft_s": 26.6,
-    "SPD": 50
-  },
-  "643289": {
-    "name": "Mauricio Dub\u00f3n",
-    "sprint_speed_ft_s": 26.8,
-    "SPD": 53
-  },
-  "665161": {
-    "name": "Jeremy Pe\u00f1a",
-    "sprint_speed_ft_s": 29.2,
-    "SPD": 82
-  },
-  "678662": {
-    "name": "Ezequiel Tovar",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "686894": {
-    "name": "Joey Wiemer",
-    "sprint_speed_ft_s": 28.9,
-    "SPD": 79
-  },
-  "650489": {
-    "name": "Willi Castro",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "695391": {
-    "name": "Brett Harris",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "669087": {
-    "name": "Sam Huff",
-    "sprint_speed_ft_s": 24.3,
-    "SPD": 21
-  },
-  "681082": {
-    "name": "Bryson Stott",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "660821": {
-    "name": "Jes\u00fas S\u00e1nchez",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "701350": {
-    "name": "Roman Anthony",
-    "sprint_speed_ft_s": 27.4,
-    "SPD": 60
-  },
-  "665877": {
-    "name": "Jos\u00e9 Ferm\u00edn",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "678391": {
-    "name": "Jorbit Vivas",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "686475": {
-    "name": "Tyler Tolbert",
-    "sprint_speed_ft_s": 29.4,
-    "SPD": 85
-  },
-  "514888": {
-    "name": "Jose Altuve",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "676609": {
-    "name": "Jos\u00e9 Caballero",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
-  },
-  "672275": {
-    "name": "Patrick Bailey",
-    "sprint_speed_ft_s": 25.3,
-    "SPD": 34
-  },
-  "682985": {
-    "name": "Riley Greene",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "682674": {
-    "name": "Victor Bericoto",
-    "sprint_speed_ft_s": 27.1,
-    "SPD": 56
-  },
-  "571945": {
-    "name": "Miles Mikolas",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "553993": {
-    "name": "Eugenio Su\u00e1rez",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "665856": {
-    "name": "Jair Camargo",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "669224": {
-    "name": "Austin Wells",
-    "sprint_speed_ft_s": 25.7,
-    "SPD": 39
-  },
-  "687401": {
-    "name": "Joey Ortiz",
-    "sprint_speed_ft_s": 29.1,
-    "SPD": 81
-  },
-  "663330": {
-    "name": "Jahmai Jones",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "641355": {
-    "name": "Cody Bellinger",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "676439": {
-    "name": "Hunter Feduccia",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "677592": {
-    "name": "Everson Pereira",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "547180": {
-    "name": "Bryce Harper",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "683679": {
-    "name": "Jesus Rodriguez",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "666023": {
-    "name": "Freddy Fermin",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "701807": {
-    "name": "Carson Benge",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "669288": {
-    "name": "Daniel Johnson",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "666163": {
-    "name": "Ben Rortvedt",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "669899": {
-    "name": "Ryan Ward",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "672016": {
-    "name": "Denzel Clarke",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "695020": {
-    "name": "Tanner Murray",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "542303": {
-    "name": "Marcell Ozuna",
-    "sprint_speed_ft_s": 24.7,
-    "SPD": 26
-  },
-  "621438": {
-    "name": "Tyrone Taylor",
-    "sprint_speed_ft_s": 29.1,
-    "SPD": 81
-  },
-  "701358": {
-    "name": "Cam Smith",
-    "sprint_speed_ft_s": 29.2,
-    "SPD": 82
-  },
-  "672642": {
-    "name": "Steward Berroa",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "681047": {
-    "name": "Christian Franklin",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "663656": {
-    "name": "Kyle Tucker",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "668804": {
-    "name": "Bryan Reynolds",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
-  },
-  "693459": {
-    "name": "Kyler Fedko",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "666464": {
-    "name": "Jerar Encarnacion",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "677649": {
-    "name": "Ezequiel Duran",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
-  },
-  "656577": {
-    "name": "Alex Jackson",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "608701": {
-    "name": "Rob Refsnyder",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "701675": {
-    "name": "Nathan Church",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "663584": {
-    "name": "Hayden Senger",
-    "sprint_speed_ft_s": 24.8,
-    "SPD": 28
-  },
-  "701678": {
-    "name": "Hao-Yu Lee",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "702176": {
-    "name": "Alan Roden",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "553869": {
-    "name": "Elias D\u00edaz",
-    "sprint_speed_ft_s": 24.4,
-    "SPD": 22
-  },
-  "694377": {
-    "name": "Nick Yorke",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "690022": {
-    "name": "Ryan Ritter",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "695670": {
-    "name": "Harry Ford",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "678760": {
-    "name": "Eddys Leonard",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "624641": {
-    "name": "Edmundo Sosa",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
-  },
-  "800325": {
-    "name": "Luis Lara",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "700932": {
-    "name": "Kyle Manzardo",
-    "sprint_speed_ft_s": 25.4,
-    "SPD": 35
-  },
-  "573262": {
-    "name": "Mike Yastrzemski",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "672356": {
-    "name": "Gabriel Arias",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "606115": {
-    "name": "Orlando Arcia",
-    "sprint_speed_ft_s": 25.5,
-    "SPD": 36
-  },
-  "650391": {
-    "name": "Eloy Jim\u00e9nez",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "683734": {
-    "name": "Andrew Vaughn",
-    "sprint_speed_ft_s": 25.7,
-    "SPD": 39
-  },
-  "663897": {
-    "name": "Luke Williams",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "689414": {
-    "name": "Liam Hicks",
+  "682877": {
+    "name": "Juan Brito",
+    "sprint_speed_ft_s": 26.5,
+    "SPD": 49
+  },
+  "640459": {
+    "name": "Brian Navarreto",
     "sprint_speed_ft_s": 25.8,
     "SPD": 40
   },
-  "680869": {
-    "name": "Zack Gelof",
+  "642350": {
+    "name": "Jose Siri",
+    "sprint_speed_ft_s": 29.8,
+    "SPD": 90
+  },
+  "803011": {
+    "name": "Sam Antonacci",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "695506": {
+    "name": "Jac Caglianone",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "687529": {
+    "name": "Grant McCray",
     "sprint_speed_ft_s": 28.8,
     "SPD": 78
   },
-  "669236": {
-    "name": "Jeremiah Jackson",
-    "sprint_speed_ft_s": 27.1,
-    "SPD": 56
+  "657757": {
+    "name": "Gavin Sheets",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
   },
-  "663647": {
-    "name": "Ke'Bryan Hayes",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "666182": {
-    "name": "Bo Bichette",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "670242": {
-    "name": "Matt Wallner",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "683737": {
-    "name": "Michael Busch",
-    "sprint_speed_ft_s": 25.9,
-    "SPD": 41
-  },
-  "677587": {
-    "name": "Brayan Rocchio",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "673962": {
-    "name": "Josh Jung",
-    "sprint_speed_ft_s": 25.8,
-    "SPD": 40
-  },
-  "641555": {
-    "name": "J.C. Escarra",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
-  },
-  "650402": {
-    "name": "Gleyber Torres",
-    "sprint_speed_ft_s": 25.2,
-    "SPD": 32
-  },
-  "676724": {
-    "name": "Jared Young",
-    "sprint_speed_ft_s": 27.6,
-    "SPD": 63
-  },
-  "605137": {
-    "name": "Josh Bell",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "656582": {
-    "name": "Connor Joe",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "666152": {
-    "name": "David Hamilton",
-    "sprint_speed_ft_s": 29.4,
-    "SPD": 85
-  },
-  "694378": {
-    "name": "Jacob Gonzalez",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "680777": {
-    "name": "Ryan Jeffers",
-    "sprint_speed_ft_s": 26.3,
-    "SPD": 46
-  },
-  "669707": {
-    "name": "Jared Triolo",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "543807": {
-    "name": "George Springer",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "673490": {
-    "name": "Ha-Seong Kim",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "682998": {
-    "name": "Corbin Carroll",
-    "sprint_speed_ft_s": 29.7,
-    "SPD": 89
-  },
-  "665833": {
-    "name": "Oneil Cruz",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "680757": {
-    "name": "Steven Kwan",
-    "sprint_speed_ft_s": 27.1,
-    "SPD": 56
-  },
-  "672960": {
-    "name": "Kazuma Okamoto",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "663743": {
-    "name": "Nick Fortes",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "801501": {
-    "name": "Nate Furman",
+  "675448": {
+    "name": "Blake Hunt",
     "sprint_speed_ft_s": null,
     "SPD": null
   },
-  "677956": {
-    "name": "Rece Hinds",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "668939": {
-    "name": "Adley Rutschman",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
-  },
-  "678545": {
-    "name": "Osleivis Basabe",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "694388": {
-    "name": "Joey Loperfido",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "673357": {
-    "name": "Luis Robert Jr.",
-    "sprint_speed_ft_s": 29.1,
-    "SPD": 81
-  },
-  "671155": {
-    "name": "Ivan Johnson",
+  "623205": {
+    "name": "Andrew Velazquez",
     "sprint_speed_ft_s": null,
     "SPD": null
   },
-  "680700": {
-    "name": "Richie Palacios",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
+  "691907": {
+    "name": "Tsung-Che Cheng",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
   },
-  "691026": {
-    "name": "Masyn Winn",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "694197": {
-    "name": "Angel Genao",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "660271": {
-    "name": "Shohei Ohtani",
-    "sprint_speed_ft_s": 27.6,
-    "SPD": 63
-  },
-  "669257": {
-    "name": "Will Smith",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "669134": {
-    "name": "Luis Campusano",
-    "sprint_speed_ft_s": 25.8,
-    "SPD": 40
-  },
-  "683021": {
-    "name": "Michael Stefanic",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "682829": {
-    "name": "Elly De La Cruz",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "669699": {
-    "name": "Braden Shewmake",
+  "669369": {
+    "name": "Bryce Johnson",
     "sprint_speed_ft_s": 28.2,
     "SPD": 70
   },
-  "701852": {
-    "name": "Drew Cavanaugh",
+  "682988": {
+    "name": "Tyler Locklear",
     "sprint_speed_ft_s": 26.2,
     "SPD": 45
   },
-  "700246": {
-    "name": "Carson Williams",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "665862": {
-    "name": "Jazz Chisholm Jr.",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "673548": {
-    "name": "Seiya Suzuki",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
+  "680977": {
+    "name": "Brendan Donovan",
+    "sprint_speed_ft_s": 25.4,
+    "SPD": 35
   },
   "672284": {
     "name": "Jarred Kelenic",
     "sprint_speed_ft_s": 26.9,
     "SPD": 54
   },
-  "695734": {
-    "name": "Daylen Lile",
-    "sprint_speed_ft_s": 29.3,
-    "SPD": 84
+  "547180": {
+    "name": "Bryce Harper",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
   },
-  "608324": {
-    "name": "Alex Bregman",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
+  "679529": {
+    "name": "Spencer Torkelson",
+    "sprint_speed_ft_s": 26.3,
+    "SPD": 46
   },
-  "669016": {
-    "name": "Brandon Marsh",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
+  "683737": {
+    "name": "Michael Busch",
+    "sprint_speed_ft_s": 25.9,
+    "SPD": 41
   },
-  "670770": {
-    "name": "TJ Friedl",
+  "699625": {
+    "name": "Jimmy Crooks",
     "sprint_speed_ft_s": 26.8,
     "SPD": 53
   },
-  "643376": {
-    "name": "Danny Jansen",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "690924": {
-    "name": "Braxton Fulford",
+  "630105": {
+    "name": "Jake Cronenworth",
     "sprint_speed_ft_s": 28.3,
     "SPD": 71
   },
-  "671289": {
-    "name": "Tyler Freeman",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "679845": {
-    "name": "Nick Loftin",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "664731": {
-    "name": "P.J. Higgins",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "596019": {
-    "name": "Francisco Lindor",
-    "sprint_speed_ft_s": 26.6,
-    "SPD": 50
-  },
-  "681351": {
-    "name": "Logan O'Hoppe",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "596117": {
-    "name": "Garrett Stubbs",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "686555": {
-    "name": "Isaac Collins",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "656775": {
-    "name": "Cedric Mullins",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "663967": {
-    "name": "C\u00e9sar Salazar",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "681508": {
-    "name": "Mickey Gasper",
-    "sprint_speed_ft_s": 26.8,
-    "SPD": 53
-  },
-  "545121": {
-    "name": "Ildemaro Vargas",
-    "sprint_speed_ft_s": 27.1,
-    "SPD": 56
-  },
-  "521692": {
-    "name": "Salvador Perez",
-    "sprint_speed_ft_s": 23.9,
-    "SPD": 16
-  },
-  "680779": {
-    "name": "Henry Davis",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "670042": {
-    "name": "Luke Raley",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
-  },
-  "660162": {
-    "name": "Yo\u00e1n Moncada",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "670224": {
-    "name": "Kameron Misner",
-    "sprint_speed_ft_s": 29.3,
-    "SPD": 84
-  },
-  "621566": {
-    "name": "Matt Olson",
-    "sprint_speed_ft_s": 25.4,
-    "SPD": 35
-  },
-  "682641": {
-    "name": "Luis Matos",
-    "sprint_speed_ft_s": 26.8,
-    "SPD": 53
-  },
-  "650559": {
-    "name": "Bryan De La Cruz",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "663538": {
-    "name": "Nico Hoerner",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "703607": {
-    "name": "Henry Bolte",
-    "sprint_speed_ft_s": 30.5,
-    "SPD": 99
-  },
-  "695490": {
-    "name": "Edwin Arroyo",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
-  },
-  "665052": {
-    "name": "Griffin Conine",
-    "sprint_speed_ft_s": 26.5,
-    "SPD": 49
-  },
-  "593871": {
-    "name": "Jorge Polanco",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "806198": {
-    "name": "Cooper Pratt",
-    "sprint_speed_ft_s": 28.7,
-    "SPD": 76
-  },
-  "663624": {
-    "name": "Ryan Mountcastle",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
-  },
-  "685133": {
-    "name": "Wade Meckler",
-    "sprint_speed_ft_s": 28.9,
-    "SPD": 79
-  },
-  "663457": {
-    "name": "Lars Nootbaar",
-    "sprint_speed_ft_s": 27.6,
-    "SPD": 63
-  },
-  "676694": {
-    "name": "Jake Meyers",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "677950": {
-    "name": "Alek Thomas",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "671277": {
-    "name": "Luis Garc\u00eda Jr.",
-    "sprint_speed_ft_s": 26.5,
-    "SPD": 49
-  },
-  "687597": {
-    "name": "Jordan Beck",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
-  },
-  "691723": {
-    "name": "Coby Mayo",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "666211": {
-    "name": "Taylor Trammell",
-    "sprint_speed_ft_s": 27.4,
-    "SPD": 60
-  },
-  "693307": {
-    "name": "Dillon Dingler",
-    "sprint_speed_ft_s": 27.4,
-    "SPD": 60
-  },
-  "516782": {
-    "name": "Starling Marte",
-    "sprint_speed_ft_s": 25.7,
-    "SPD": 39
-  },
-  "680716": {
-    "name": "Jonathan Ornelas",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "681987": {
-    "name": "Nate Eaton",
-    "sprint_speed_ft_s": 29.5,
-    "SPD": 86
-  },
-  "687263": {
-    "name": "Zach Neto",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "641933": {
-    "name": "Tyler O'Neill",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "681297": {
-    "name": "Colton Cowser",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "805249": {
-    "name": "Otto Kemp",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "671218": {
-    "name": "Heliot Ramos",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "670541": {
-    "name": "Yordan Alvarez",
-    "sprint_speed_ft_s": 25.0,
-    "SPD": 30
-  },
-  "696030": {
-    "name": "Alejandro Osuna",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "609280": {
-    "name": "Miguel Andujar",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "621043": {
-    "name": "Carlos Correa",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "664023": {
-    "name": "Ian Happ",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "810938": {
-    "name": "Ben Williamson",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
-  },
-  "695336": {
-    "name": "Thomas Saggese",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "596103": {
-    "name": "Austin Slater",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "665489": {
-    "name": "Vladimir Guerrero Jr.",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
-  },
-  "691019": {
-    "name": "Kyle Teel",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "675659": {
-    "name": "Greg Jones",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
-  },
-  "649966": {
-    "name": "Luis Ur\u00edas",
-    "sprint_speed_ft_s": 25.9,
-    "SPD": 41
-  },
-  "660670": {
-    "name": "Ronald Acu\u00f1a Jr.",
-    "sprint_speed_ft_s": 27.1,
-    "SPD": 56
-  },
-  "661388": {
-    "name": "William Contreras",
-    "sprint_speed_ft_s": 25.9,
-    "SPD": 41
-  },
-  "672695": {
-    "name": "Geraldo Perdomo",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "672820": {
-    "name": "Lenyn Sosa",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "642708": {
-    "name": "Amed Rosario",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "687394": {
-    "name": "Jack Brannigan",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "680737": {
-    "name": "Michael Helman",
-    "sprint_speed_ft_s": 29.7,
-    "SPD": 89
-  },
-  "641680": {
-    "name": "Jonah Heim",
-    "sprint_speed_ft_s": 25.1,
-    "SPD": 31
-  },
-  "670623": {
-    "name": "Isaac Paredes",
-    "sprint_speed_ft_s": 25.0,
-    "SPD": 30
-  },
-  "677800": {
-    "name": "Wilyer Abreu",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
-  },
-  "701649": {
-    "name": "James Triantos",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "682848": {
-    "name": "Endy Rodr\u00edguez",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "682626": {
-    "name": "Francisco Alvarez",
-    "sprint_speed_ft_s": 25.6,
-    "SPD": 38
-  },
-  "657041": {
-    "name": "Lane Thomas",
+  "694025": {
+    "name": "Felix Reyes",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "682622": {
+    "name": "Noelvi Marte",
     "sprint_speed_ft_s": 29.1,
     "SPD": 81
   },
-  "805904": {
-    "name": "Zach Cole",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "702222": {
-    "name": "Justin Crawford",
-    "sprint_speed_ft_s": 29.6,
-    "SPD": 88
-  },
-  "694192": {
-    "name": "Jackson Chourio",
-    "sprint_speed_ft_s": 28.7,
-    "SPD": 76
-  },
-  "683011": {
-    "name": "Anthony Volpe",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "683953": {
-    "name": "Travis Bazzana",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "686948": {
-    "name": "Drake Baldwin",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "678489": {
-    "name": "Jorge Barrosa",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "608348": {
-    "name": "Carson Kelly",
-    "sprint_speed_ft_s": 25.8,
-    "SPD": 40
-  },
-  "687605": {
-    "name": "Andrew Pinckney",
+  "663967": {
+    "name": "C\u00e9sar Salazar",
     "sprint_speed_ft_s": null,
     "SPD": null
   },
@@ -1084,75 +114,1305 @@
     "sprint_speed_ft_s": 28.9,
     "SPD": 79
   },
-  "650968": {
-    "name": "Yohel Pozo",
-    "sprint_speed_ft_s": 24.7,
-    "SPD": 26
+  "693459": {
+    "name": "Kyler Fedko",
+    "sprint_speed_ft_s": null,
+    "SPD": null
   },
-  "682928": {
-    "name": "CJ Abrams",
+  "811965": {
+    "name": "Joshua Kuroda-Grauer",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "650489": {
+    "name": "Willi Castro",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "687093": {
+    "name": "Vaughn Grissom",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "672279": {
+    "name": "Michael Siani",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "691016": {
+    "name": "Tyler Soderstrom",
+    "sprint_speed_ft_s": 27.1,
+    "SPD": 56
+  },
+  "624413": {
+    "name": "Pete Alonso",
+    "sprint_speed_ft_s": 25.3,
+    "SPD": 34
+  },
+  "664954": {
+    "name": "Brett Sullivan",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "683953": {
+    "name": "Travis Bazzana",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "592663": {
+    "name": "J.T. Realmuto",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "668670": {
+    "name": "Jake Rogers",
+    "sprint_speed_ft_s": 26.5,
+    "SPD": 49
+  },
+  "702176": {
+    "name": "Alan Roden",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "571771": {
+    "name": "Enrique Hern\u00e1ndez",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
+  },
+  "664731": {
+    "name": "P.J. Higgins",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "828599": {
+    "name": "Lucas Spence",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "696030": {
+    "name": "Alejandro Osuna",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "690984": {
+    "name": "Petey Halpin",
     "sprint_speed_ft_s": 28.5,
     "SPD": 74
   },
-  "694728": {
-    "name": "Brice Matthews",
+  "805347": {
+    "name": "Jim Jarvis",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "656305": {
+    "name": "Matt Chapman",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "681190": {
+    "name": "Randy V\u00e1squez",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "666931": {
+    "name": "Jared Oliva",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "592626": {
+    "name": "Joc Pederson",
+    "sprint_speed_ft_s": 25.1,
+    "SPD": 31
+  },
+  "672275": {
+    "name": "Patrick Bailey",
+    "sprint_speed_ft_s": 25.3,
+    "SPD": 34
+  },
+  "701807": {
+    "name": "Carson Benge",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "807799": {
+    "name": "Masataka Yoshida",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
+  },
+  "666971": {
+    "name": "Lourdes Gurriel Jr.",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "667472": {
+    "name": "Dane Myers",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "807727": {
+    "name": "Charles McAdoo",
+    "sprint_speed_ft_s": 28.9,
+    "SPD": 79
+  },
+  "814439": {
+    "name": "Ryan Waldschmidt",
+    "sprint_speed_ft_s": 28.9,
+    "SPD": 79
+  },
+  "680700": {
+    "name": "Richie Palacios",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "687282": {
+    "name": "Gabriel Rincones Jr.",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "690022": {
+    "name": "Ryan Ritter",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "673995": {
+    "name": "Davis Wendzel",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "665861": {
+    "name": "Sebasti\u00e1n Rivero",
+    "sprint_speed_ft_s": 25.5,
+    "SPD": 36
+  },
+  "663837": {
+    "name": "Matt Vierling",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "663616": {
+    "name": "Trevor Larnach",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "669242": {
+    "name": "Tommy Edman",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "607208": {
+    "name": "Trea Turner",
+    "sprint_speed_ft_s": 29.8,
+    "SPD": 90
+  },
+  "660688": {
+    "name": "Keibert Ruiz",
+    "sprint_speed_ft_s": 25.2,
+    "SPD": 32
+  },
+  "686894": {
+    "name": "Joey Wiemer",
+    "sprint_speed_ft_s": 28.9,
+    "SPD": 79
+  },
+  "665506": {
+    "name": "Cristian Pache",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "669288": {
+    "name": "Daniel Johnson",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "621020": {
+    "name": "Dansby Swanson",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "687401": {
+    "name": "Joey Ortiz",
+    "sprint_speed_ft_s": 29.1,
+    "SPD": 81
+  },
+  "624512": {
+    "name": "Reese McGuire",
+    "sprint_speed_ft_s": 25.2,
+    "SPD": 32
+  },
+  "572233": {
+    "name": "Christian Walker",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "545361": {
+    "name": "Mike Trout",
     "sprint_speed_ft_s": 28.6,
     "SPD": 75
   },
-  "691718": {
-    "name": "Pete Crow-Armstrong",
+  "660670": {
+    "name": "Ronald Acu\u00f1a Jr.",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "695490": {
+    "name": "Edwin Arroyo",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
+  },
+  "694362": {
+    "name": "Blake Dunn",
+    "sprint_speed_ft_s": 29.6,
+    "SPD": 88
+  },
+  "543807": {
+    "name": "George Springer",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "545341": {
+    "name": "Randal Grichuk",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "666152": {
+    "name": "David Hamilton",
+    "sprint_speed_ft_s": 29.4,
+    "SPD": 85
+  },
+  "670770": {
+    "name": "TJ Friedl",
+    "sprint_speed_ft_s": 26.8,
+    "SPD": 53
+  },
+  "669016": {
+    "name": "Brandon Marsh",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "691788": {
+    "name": "Joe Mack",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
+  },
+  "664056": {
+    "name": "Harrison Bader",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "678882": {
+    "name": "Ceddanne Rafaela",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
+  },
+  "681508": {
+    "name": "Mickey Gasper",
+    "sprint_speed_ft_s": 26.8,
+    "SPD": 53
+  },
+  "686554": {
+    "name": "Oliver Dunn",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "669720": {
+    "name": "Austin Hays",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "668885": {
+    "name": "Austin Martin",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "805999": {
+    "name": "A.J. Ewing",
     "sprint_speed_ft_s": 29.5,
     "SPD": 86
+  },
+  "691176": {
+    "name": "Jasson Dom\u00ednguez",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
   },
   "696100": {
     "name": "Hunter Goodman",
     "sprint_speed_ft_s": 27.3,
     "SPD": 59
   },
-  "695506": {
-    "name": "Jac Caglianone",
+  "701162": {
+    "name": "Ben Malgeri",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
+  },
+  "683079": {
+    "name": "Omar Martinez",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "686780": {
+    "name": "Pedro Pag\u00e9s",
+    "sprint_speed_ft_s": 25.5,
+    "SPD": 36
+  },
+  "665833": {
+    "name": "Oneil Cruz",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "669701": {
+    "name": "Josh Smith",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "669257": {
+    "name": "Will Smith",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "678218": {
+    "name": "Brandon Valenzuela",
+    "sprint_speed_ft_s": 25.6,
+    "SPD": 38
+  },
+  "521692": {
+    "name": "Salvador Perez",
+    "sprint_speed_ft_s": 23.9,
+    "SPD": 16
+  },
+  "664774": {
+    "name": "LaMonte Wade Jr.",
+    "sprint_speed_ft_s": 25.8,
+    "SPD": 40
+  },
+  "800050": {
+    "name": "Chase DeLauter",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
+  },
+  "694197": {
+    "name": "Angel Genao",
+    "sprint_speed_ft_s": 25.9,
+    "SPD": 41
+  },
+  "808982": {
+    "name": "Jung Hoo Lee",
+    "sprint_speed_ft_s": 27.4,
+    "SPD": 60
+  },
+  "823550": {
+    "name": "Sung-Mun Song",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "650968": {
+    "name": "Yohel Pozo",
+    "sprint_speed_ft_s": 24.7,
+    "SPD": 26
+  },
+  "701649": {
+    "name": "James Triantos",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "665966": {
+    "name": "Carlos Narv\u00e1ez",
+    "sprint_speed_ft_s": 25.3,
+    "SPD": 34
+  },
+  "694876": {
+    "name": "Cooper Ingle",
+    "sprint_speed_ft_s": 25.6,
+    "SPD": 38
+  },
+  "641555": {
+    "name": "J.C. Escarra",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
+  },
+  "676566": {
+    "name": "Shawn Ross",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "646240": {
+    "name": "Rafael Devers",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "663368": {
+    "name": "Blake Perkins",
+    "sprint_speed_ft_s": 28.7,
+    "SPD": 76
+  },
+  "672613": {
+    "name": "Eliezer Alfonzo",
+    "sprint_speed_ft_s": 26.1,
+    "SPD": 44
+  },
+  "664983": {
+    "name": "Jake McCarthy",
+    "sprint_speed_ft_s": 29.9,
+    "SPD": 91
+  },
+  "608841": {
+    "name": "Joey Meneses",
+    "sprint_speed_ft_s": 25.3,
+    "SPD": 34
+  },
+  "656775": {
+    "name": "Cedric Mullins",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "606192": {
+    "name": "Teoscar Hern\u00e1ndez",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "669699": {
+    "name": "Braden Shewmake",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "624424": {
+    "name": "Michael Conforto",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "608070": {
+    "name": "Jos\u00e9 Ram\u00edrez",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "683002": {
+    "name": "Gunnar Henderson",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "702284": {
+    "name": "Cole Young",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "806146": {
+    "name": "George Lombard Jr.",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "695720": {
+    "name": "Tommy White",
     "sprint_speed_ft_s": 27.0,
     "SPD": 55
+  },
+  "664068": {
+    "name": "Scott Kingery",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "686611": {
+    "name": "Dylan Crews",
+    "sprint_speed_ft_s": 29.3,
+    "SPD": 84
+  },
+  "691594": {
+    "name": "Javier Sanoja",
+    "sprint_speed_ft_s": 28.7,
+    "SPD": 76
+  },
+  "643396": {
+    "name": "Isiah Kiner-Falefa",
+    "sprint_speed_ft_s": 27.4,
+    "SPD": 60
+  },
+  "641355": {
+    "name": "Cody Bellinger",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "668715": {
+    "name": "Spencer Steer",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "666176": {
+    "name": "Jo Adell",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "700246": {
+    "name": "Carson Williams",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "680757": {
+    "name": "Steven Kwan",
+    "sprint_speed_ft_s": 27.1,
+    "SPD": 56
+  },
+  "621550": {
+    "name": "Patrick Wisdom",
+    "sprint_speed_ft_s": 27.1,
+    "SPD": 56
+  },
+  "807712": {
+    "name": "Luke Keaschall",
+    "sprint_speed_ft_s": 28.8,
+    "SPD": 78
+  },
+  "624585": {
+    "name": "Jorge Soler",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "686823": {
+    "name": "Will Brennan",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "680718": {
+    "name": "Addison Barger",
+    "sprint_speed_ft_s": 26.1,
+    "SPD": 44
+  },
+  "666160": {
+    "name": "Mickey Moniak",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "670156": {
+    "name": "Miles Mastrobuoni",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "668901": {
+    "name": "Mark Vientos",
+    "sprint_speed_ft_s": 25.7,
+    "SPD": 39
+  },
+  "687597": {
+    "name": "Jordan Beck",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "687394": {
+    "name": "Jack Brannigan",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "663743": {
+    "name": "Nick Fortes",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "669134": {
+    "name": "Luis Campusano",
+    "sprint_speed_ft_s": 25.8,
+    "SPD": 40
+  },
+  "680716": {
+    "name": "Jonathan Ornelas",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "694728": {
+    "name": "Brice Matthews",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
+  },
+  "671155": {
+    "name": "Ivan Johnson",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "642020": {
+    "name": "Chuckie Robinson",
+    "sprint_speed_ft_s": 24.6,
+    "SPD": 25
+  },
+  "686948": {
+    "name": "Drake Baldwin",
+    "sprint_speed_ft_s": 26.1,
+    "SPD": 44
+  },
+  "642708": {
+    "name": "Amed Rosario",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "686555": {
+    "name": "Isaac Collins",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "669899": {
+    "name": "Ryan Ward",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "666182": {
+    "name": "Bo Bichette",
+    "sprint_speed_ft_s": 26.1,
+    "SPD": 44
+  },
+  "664238": {
+    "name": "Dylan Moore",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "687637": {
+    "name": "Dylan Beavers",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
+  },
+  "656537": {
+    "name": "Derek Hill",
+    "sprint_speed_ft_s": 29.7,
+    "SPD": 89
+  },
+  "600869": {
+    "name": "Jeimer Candelario",
+    "sprint_speed_ft_s": 26.3,
+    "SPD": 46
+  },
+  "596146": {
+    "name": "Max Kepler",
+    "sprint_speed_ft_s": 27.1,
+    "SPD": 56
+  },
+  "645302": {
+    "name": "Victor Robles",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
+  },
+  "671976": {
+    "name": "Tristan Peters",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
+  },
+  "700250": {
+    "name": "Ben Rice",
+    "sprint_speed_ft_s": 26.8,
+    "SPD": 53
+  },
+  "682997": {
+    "name": "Tyler Callihan",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "676572": {
+    "name": "Eric Wagaman",
+    "sprint_speed_ft_s": 26.3,
+    "SPD": 46
+  },
+  "680737": {
+    "name": "Michael Helman",
+    "sprint_speed_ft_s": 29.7,
+    "SPD": 89
+  },
+  "678662": {
+    "name": "Ezequiel Tovar",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "701678": {
+    "name": "Hao-Yu Lee",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "681297": {
+    "name": "Colton Cowser",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "694374": {
+    "name": "Tim Tawa",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "804606": {
+    "name": "Konnor Griffin",
+    "sprint_speed_ft_s": 29.9,
+    "SPD": 91
+  },
+  "682674": {
+    "name": "Victor Bericoto",
+    "sprint_speed_ft_s": 27.1,
+    "SPD": 56
+  },
+  "669477": {
+    "name": "Casey Schmitt",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "670042": {
+    "name": "Luke Raley",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
+  },
+  "687605": {
+    "name": "Andrew Pinckney",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "666163": {
+    "name": "Ben Rortvedt",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "670032": {
+    "name": "Nicky Lopez",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "592518": {
+    "name": "Manny Machado",
+    "sprint_speed_ft_s": 25.2,
+    "SPD": 32
+  },
+  "677595": {
+    "name": "Ronny Mauricio",
+    "sprint_speed_ft_s": 25.9,
+    "SPD": 41
+  },
+  "668904": {
+    "name": "Royce Lewis",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "695681": {
+    "name": "Christian Moore",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "649966": {
+    "name": "Luis Ur\u00edas",
+    "sprint_speed_ft_s": 25.9,
+    "SPD": 41
+  },
+  "677951": {
+    "name": "Bobby Witt Jr.",
+    "sprint_speed_ft_s": 30.2,
+    "SPD": 95
+  },
+  "664728": {
+    "name": "Kyle Isbel",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "516782": {
+    "name": "Starling Marte",
+    "sprint_speed_ft_s": 25.7,
+    "SPD": 39
+  },
+  "593428": {
+    "name": "Xander Bogaerts",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "670224": {
+    "name": "Kameron Misner",
+    "sprint_speed_ft_s": 29.3,
+    "SPD": 84
+  },
+  "682668": {
+    "name": "Luisangel Acu\u00f1a",
+    "sprint_speed_ft_s": 29.8,
+    "SPD": 90
+  },
+  "677588": {
+    "name": "Jos\u00e9 Tena",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "680728": {
+    "name": "Adrian Del Castillo",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
+  },
+  "699393": {
+    "name": "Pedro Ram\u00edrez",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "686217": {
+    "name": "Sal Frelick",
+    "sprint_speed_ft_s": 28.7,
+    "SPD": 76
+  },
+  "660821": {
+    "name": "Jes\u00fas S\u00e1nchez",
+    "sprint_speed_ft_s": 26.4,
+    "SPD": 47
+  },
+  "680474": {
+    "name": "Max Schuemann",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "800325": {
+    "name": "Luis Lara",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "542303": {
+    "name": "Marcell Ozuna",
+    "sprint_speed_ft_s": 24.7,
+    "SPD": 26
+  },
+  "701762": {
+    "name": "Nick Kurtz",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
+  },
+  "687859": {
+    "name": "Troy Johnston",
+    "sprint_speed_ft_s": 26.1,
+    "SPD": 44
+  },
+  "645305": {
+    "name": "Ali S\u00e1nchez",
+    "sprint_speed_ft_s": 25.4,
+    "SPD": 35
+  },
+  "669398": {
+    "name": "Gage Workman",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "671083": {
+    "name": "Buddy Kennedy",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "641343": {
+    "name": "Jake Bauers",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "641680": {
+    "name": "Jonah Heim",
+    "sprint_speed_ft_s": 25.1,
+    "SPD": 31
+  },
+  "682626": {
+    "name": "Francisco Alvarez",
+    "sprint_speed_ft_s": 25.6,
+    "SPD": 38
+  },
+  "650490": {
+    "name": "Yandy D\u00edaz",
+    "sprint_speed_ft_s": 26.1,
+    "SPD": 44
+  },
+  "642215": {
+    "name": "Weston Wilson",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "691458": {
+    "name": "Blaze Jordan",
+    "sprint_speed_ft_s": 25.6,
+    "SPD": 38
+  },
+  "808959": {
+    "name": "Munetaka Murakami",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "553869": {
+    "name": "Elias D\u00edaz",
+    "sprint_speed_ft_s": 24.4,
+    "SPD": 22
+  },
+  "596117": {
+    "name": "Garrett Stubbs",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "683011": {
+    "name": "Anthony Volpe",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "686527": {
+    "name": "Dominic Canzone",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
   },
   "500743": {
     "name": "Miguel Rojas",
     "sprint_speed_ft_s": 26.1,
     "SPD": 44
   },
+  "683748": {
+    "name": "Victor Mesa Jr.",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "660644": {
+    "name": "Vidal Bruj\u00e1n",
+    "sprint_speed_ft_s": 25.7,
+    "SPD": 39
+  },
+  "691011": {
+    "name": "Drew Romo",
+    "sprint_speed_ft_s": 26.3,
+    "SPD": 46
+  },
+  "695731": {
+    "name": "Braden Montgomery",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "506702": {
+    "name": "Sandy Le\u00f3n",
+    "sprint_speed_ft_s": 22.1,
+    "SPD": 1
+  },
+  "680776": {
+    "name": "Jarren Duran",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
+  },
+  "662139": {
+    "name": "Daulton Varsho",
+    "sprint_speed_ft_s": 27.4,
+    "SPD": 60
+  },
+  "502054": {
+    "name": "Tommy Pham",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "642201": {
+    "name": "Eli White",
+    "sprint_speed_ft_s": 30.3,
+    "SPD": 96
+  },
+  "680869": {
+    "name": "Zack Gelof",
+    "sprint_speed_ft_s": 28.8,
+    "SPD": 78
+  },
+  "592885": {
+    "name": "Christian Yelich",
+    "sprint_speed_ft_s": 27.1,
+    "SPD": 56
+  },
+  "571945": {
+    "name": "Miles Mikolas",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "543309": {
+    "name": "Kyle Higashioka",
+    "sprint_speed_ft_s": 24.6,
+    "SPD": 25
+  },
+  "596115": {
+    "name": "Trevor Story",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "682641": {
+    "name": "Luis Matos",
+    "sprint_speed_ft_s": 26.8,
+    "SPD": 53
+  },
+  "687551": {
+    "name": "Drew Gilbert",
+    "sprint_speed_ft_s": 27.4,
+    "SPD": 60
+  },
+  "596019": {
+    "name": "Francisco Lindor",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
+  },
+  "690993": {
+    "name": "Colt Keith",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "624428": {
+    "name": "Adam Frazier",
+    "sprint_speed_ft_s": 26.1,
+    "SPD": 44
+  },
+  "701675": {
+    "name": "Nathan Church",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "670764": {
+    "name": "Taylor Walls",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "666397": {
+    "name": "Edouard Julien",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "689414": {
+    "name": "Liam Hicks",
+    "sprint_speed_ft_s": 25.7,
+    "SPD": 39
+  },
+  "690924": {
+    "name": "Braxton Fulford",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "694384": {
+    "name": "Nolan Schanuel",
+    "sprint_speed_ft_s": 25.7,
+    "SPD": 39
+  },
+  "665561": {
+    "name": "Rafael March\u00e1n",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "643376": {
+    "name": "Danny Jansen",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "687462": {
+    "name": "Spencer Horwitz",
+    "sprint_speed_ft_s": 24.9,
+    "SPD": 29
+  },
+  "663609": {
+    "name": "Luken Baker",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "669256": {
+    "name": "Nick Solak",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "694378": {
+    "name": "Jacob Gonzalez",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "682928": {
+    "name": "CJ Abrams",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "668952": {
+    "name": "Ryan Kreidler",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "682985": {
+    "name": "Riley Greene",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "673357": {
+    "name": "Luis Robert Jr.",
+    "sprint_speed_ft_s": 29.1,
+    "SPD": 81
+  },
+  "700337": {
+    "name": "Edgar Quero",
+    "sprint_speed_ft_s": 24.3,
+    "SPD": 21
+  },
+  "595879": {
+    "name": "Javier B\u00e1ez",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "666185": {
+    "name": "Dylan Carlson",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "663698": {
+    "name": "Joey Bart",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
+  },
+  "683679": {
+    "name": "Jesus Rodriguez",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "695578": {
+    "name": "James Wood",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "657656": {
+    "name": "Ram\u00f3n Laureano",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "691406": {
+    "name": "Junior Caminero",
+    "sprint_speed_ft_s": 26.4,
+    "SPD": 47
+  },
+  "683146": {
+    "name": "Brett Baty",
+    "sprint_speed_ft_s": 26.8,
+    "SPD": 53
+  },
+  "805300": {
+    "name": "Jakob Marsee",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
   "606992": {
     "name": "Eric Haase",
     "sprint_speed_ft_s": 28.3,
     "SPD": 71
   },
-  "694376": {
-    "name": "Shay Whitcomb",
+  "650333": {
+    "name": "Luis Arraez",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "676391": {
+    "name": "Ernie Clement",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "677800": {
+    "name": "Wilyer Abreu",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "671286": {
+    "name": "Johnathan Rodr\u00edguez",
     "sprint_speed_ft_s": null,
     "SPD": null
   },
-  "660710": {
-    "name": "Rodolfo Dur\u00e1n",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
+  "677594": {
+    "name": "Julio Rodr\u00edguez",
+    "sprint_speed_ft_s": 28.8,
+    "SPD": 78
   },
-  "687363": {
-    "name": "Victor Scott II",
-    "sprint_speed_ft_s": 29.7,
-    "SPD": 89
-  },
-  "669208": {
-    "name": "Ryan Bliss",
+  "682927": {
+    "name": "Ronny Simon",
     "sprint_speed_ft_s": null,
     "SPD": null
+  },
+  "694224": {
+    "name": "Gabriel Gonzalez",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "677942": {
+    "name": "Blaze Alexander",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "694673": {
+    "name": "Abimelec Ortiz",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "691783": {
+    "name": "Jordan Lawlar",
+    "sprint_speed_ft_s": 28.8,
+    "SPD": 78
+  },
+  "678246": {
+    "name": "Miguel Vargas",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "677592": {
+    "name": "Everson Pereira",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "694410": {
+    "name": "LuJames Groover",
+    "sprint_speed_ft_s": 26.8,
+    "SPD": 53
+  },
+  "606466": {
+    "name": "Ketel Marte",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
+  },
+  "671289": {
+    "name": "Tyler Freeman",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
   },
   "678554": {
     "name": "Curtis Mead",
     "sprint_speed_ft_s": 27.0,
     "SPD": 55
   },
-  "813841": {
-    "name": "Jonah Cox",
-    "sprint_speed_ft_s": 28.8,
-    "SPD": 78
+  "694371": {
+    "name": "Tommy Troy",
+    "sprint_speed_ft_s": 30.1,
+    "SPD": 94
+  },
+  "687515": {
+    "name": "Colby Thomas",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "675659": {
+    "name": "Greg Jones",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "665926": {
+    "name": "Andr\u00e9s Gim\u00e9nez",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "669707": {
+    "name": "Jared Triolo",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "656577": {
+    "name": "Alex Jackson",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "663886": {
+    "name": "Tyler Stephenson",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "681715": {
+    "name": "Heriberto Hern\u00e1ndez",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
+  },
+  "701358": {
+    "name": "Cam Smith",
+    "sprint_speed_ft_s": 29.2,
+    "SPD": 82
+  },
+  "694208": {
+    "name": "Mois\u00e9s Ballesteros",
+    "sprint_speed_ft_s": 24.8,
+    "SPD": 28
+  },
+  "663538": {
+    "name": "Nico Hoerner",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "805672": {
+    "name": "Collin Price",
+    "sprint_speed_ft_s": null,
+    "SPD": null
   },
   "700652": {
     "name": "Kenny Piper",
@@ -1164,458 +1424,543 @@
     "sprint_speed_ft_s": 27.4,
     "SPD": 60
   },
-  "668952": {
-    "name": "Ryan Kreidler",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
+  "657136": {
+    "name": "Connor Wong",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
   },
-  "701162": {
-    "name": "Ben Malgeri",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
+  "642133": {
+    "name": "Rowdy Tellez",
+    "sprint_speed_ft_s": null,
+    "SPD": null
   },
-  "663368": {
-    "name": "Blake Perkins",
-    "sprint_speed_ft_s": 28.7,
-    "SPD": 76
+  "672724": {
+    "name": "Oswald Peraza",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
   },
-  "665019": {
-    "name": "Kody Clemens",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
+  "605244": {
+    "name": "Aramis Garcia",
+    "sprint_speed_ft_s": 25.9,
+    "SPD": 41
   },
-  "687462": {
-    "name": "Spencer Horwitz",
+  "608369": {
+    "name": "Corey Seager",
     "sprint_speed_ft_s": 24.8,
     "SPD": 28
   },
-  "677942": {
-    "name": "Blaze Alexander",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
+  "656555": {
+    "name": "Rhys Hoskins",
+    "sprint_speed_ft_s": 24.8,
+    "SPD": 28
   },
-  "664954": {
-    "name": "Brett Sullivan",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
+  "676439": {
+    "name": "Hunter Feduccia",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
   },
-  "682515": {
-    "name": "Logan Porter",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "666185": {
-    "name": "Dylan Carlson",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "695600": {
-    "name": "Carter Jensen",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "624428": {
-    "name": "Adam Frazier",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "699393": {
-    "name": "Pedro Ram\u00edrez",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "687637": {
-    "name": "Dylan Beavers",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
-  },
-  "669326": {
-    "name": "Bryce Teodosio",
-    "sprint_speed_ft_s": 29.6,
-    "SPD": 88
-  },
-  "669743": {
-    "name": "Alex Call",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "694876": {
-    "name": "Cooper Ingle",
-    "sprint_speed_ft_s": 25.6,
-    "SPD": 38
-  },
-  "592450": {
-    "name": "Aaron Judge",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "624585": {
-    "name": "Jorge Soler",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "571448": {
-    "name": "Nolan Arenado",
-    "sprint_speed_ft_s": 25.2,
-    "SPD": 32
-  },
-  "628451": {
-    "name": "Andy Ib\u00e1\u00f1ez",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "643446": {
-    "name": "Jeff McNeil",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "622761": {
-    "name": "Jorge Mateo",
-    "sprint_speed_ft_s": 30.3,
-    "SPD": 96
-  },
-  "671083": {
-    "name": "Buddy Kennedy",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "691720": {
-    "name": "Kyle Karros",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "686681": {
-    "name": "Michael Massey",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "669397": {
-    "name": "Nick Allen",
+  "691740": {
+    "name": "Daniel Susac",
     "sprint_speed_ft_s": 26.9,
     "SPD": 54
   },
-  "691594": {
-    "name": "Javier Sanoja",
-    "sprint_speed_ft_s": 28.7,
-    "SPD": 76
+  "682829": {
+    "name": "Elly De La Cruz",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "695734": {
+    "name": "Daylen Lile",
+    "sprint_speed_ft_s": 29.3,
+    "SPD": 84
+  },
+  "609280": {
+    "name": "Miguel Andujar",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "660710": {
+    "name": "Rodolfo Dur\u00e1n",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "663611": {
+    "name": "Nick Madrigal",
+    "sprint_speed_ft_s": 26.8,
+    "SPD": 53
+  },
+  "694212": {
+    "name": "Samuel Basallo",
+    "sprint_speed_ft_s": 25.0,
+    "SPD": 30
+  },
+  "695020": {
+    "name": "Tanner Murray",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "665750": {
+    "name": "Leody Taveras",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
+  },
+  "676369": {
+    "name": "Nelson Vel\u00e1zquez",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "669221": {
+    "name": "Sean Murphy",
+    "sprint_speed_ft_s": 24.2,
+    "SPD": 20
   },
   "645277": {
     "name": "Ozzie Albies",
     "sprint_speed_ft_s": 27.1,
     "SPD": 56
   },
-  "644433": {
-    "name": "Chadwick Tromp",
-    "sprint_speed_ft_s": 24.4,
-    "SPD": 22
-  },
-  "677060": {
-    "name": "Chad Stevens",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "807712": {
-    "name": "Luke Keaschall",
-    "sprint_speed_ft_s": 28.8,
-    "SPD": 78
-  },
-  "676391": {
-    "name": "Ernie Clement",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "650490": {
-    "name": "Yandy D\u00edaz",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "699625": {
-    "name": "Jimmy Crooks",
-    "sprint_speed_ft_s": 26.8,
-    "SPD": 53
-  },
-  "666397": {
-    "name": "Edouard Julien",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "805300": {
-    "name": "Jakob Marsee",
+  "678577": {
+    "name": "Junior Perez",
     "sprint_speed_ft_s": 27.9,
     "SPD": 66
-  },
-  "682177": {
-    "name": "Daniel Schneemann",
-    "sprint_speed_ft_s": 27.6,
-    "SPD": 63
-  },
-  "681190": {
-    "name": "Randy V\u00e1squez",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "675448": {
-    "name": "Blake Hunt",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "805347": {
-    "name": "Jim Jarvis",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "621493": {
-    "name": "Taylor Ward",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "657656": {
-    "name": "Ram\u00f3n Laureano",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "681624": {
-    "name": "Andy Pages",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "805672": {
-    "name": "Collin Price",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "656305": {
-    "name": "Matt Chapman",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
-  },
-  "686452": {
-    "name": "Drew Millas",
-    "sprint_speed_ft_s": 27.6,
-    "SPD": 63
-  },
-  "682997": {
-    "name": "Tyler Callihan",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "691023": {
-    "name": "Jordan Walker",
-    "sprint_speed_ft_s": 29.2,
-    "SPD": 82
-  },
-  "623205": {
-    "name": "Andrew Velazquez",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "694671": {
-    "name": "Wyatt Langford",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "695720": {
-    "name": "Tommy White",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "656413": {
-    "name": "Stuart Fairchild",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "571771": {
-    "name": "Enrique Hern\u00e1ndez",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "807799": {
-    "name": "Masataka Yoshida",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
-  },
-  "672386": {
-    "name": "Alejandro Kirk",
-    "sprint_speed_ft_s": 22.9,
-    "SPD": 4
-  },
-  "687282": {
-    "name": "Gabriel Rincones Jr.",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "683357": {
-    "name": "Owen Caissie",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "690976": {
-    "name": "Alex Freeland",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "694208": {
-    "name": "Mois\u00e9s Ballesteros",
-    "sprint_speed_ft_s": 24.8,
-    "SPD": 28
-  },
-  "680664": {
-    "name": "Eduardo Valencia",
-    "sprint_speed_ft_s": 24.3,
-    "SPD": 21
-  },
-  "702616": {
-    "name": "Jackson Holliday",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "703492": {
-    "name": "Nick Morabito",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "804668": {
-    "name": "Rafael Flores Jr.",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "673237": {
-    "name": "Yainer Diaz",
-    "sprint_speed_ft_s": 25.8,
-    "SPD": 40
-  },
-  "805367": {
-    "name": "Chase Meidroth",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "593428": {
-    "name": "Xander Bogaerts",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "592626": {
-    "name": "Joc Pederson",
-    "sprint_speed_ft_s": 25.1,
-    "SPD": 31
-  },
-  "686668": {
-    "name": "Brenton Doyle",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
-  },
-  "645305": {
-    "name": "Ali S\u00e1nchez",
-    "sprint_speed_ft_s": 25.4,
-    "SPD": 35
-  },
-  "666971": {
-    "name": "Lourdes Gurriel Jr.",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "691907": {
-    "name": "Tsung-Che Cheng",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
-  },
-  "656976": {
-    "name": "Pavin Smith",
-    "sprint_speed_ft_s": 24.6,
-    "SPD": 25
-  },
-  "592885": {
-    "name": "Christian Yelich",
-    "sprint_speed_ft_s": 27.1,
-    "SPD": 56
-  },
-  "680474": {
-    "name": "Max Schuemann",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "663586": {
-    "name": "Austin Riley",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "682634": {
-    "name": "Kevin Alc\u00e1ntara",
-    "sprint_speed_ft_s": 27.4,
-    "SPD": 60
-  },
-  "669360": {
-    "name": "Trei Cruz",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "803011": {
-    "name": "Sam Antonacci",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "695508": {
-    "name": "Cam Cauley",
-    "sprint_speed_ft_s": 30.5,
-    "SPD": 99
-  },
-  "656811": {
-    "name": "Ryan O'Hearn",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "671732": {
-    "name": "Lawrence Butler",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "686527": {
-    "name": "Dominic Canzone",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
-  },
-  "664702": {
-    "name": "Myles Straw",
-    "sprint_speed_ft_s": 29.7,
-    "SPD": 89
-  },
-  "683083": {
-    "name": "Nasim Nu\u00f1ez",
-    "sprint_speed_ft_s": 29.7,
-    "SPD": 89
-  },
-  "657136": {
-    "name": "Connor Wong",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "683227": {
-    "name": "Cody Freeman",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "595879": {
-    "name": "Javier B\u00e1ez",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "669221": {
-    "name": "Sean Murphy",
-    "sprint_speed_ft_s": 24.0,
-    "SPD": 18
-  },
-  "687957": {
-    "name": "Dustin Harris",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
   },
   "663968": {
     "name": "Jake Mangum",
     "sprint_speed_ft_s": 29.4,
     "SPD": 85
   },
-  "669256": {
-    "name": "Nick Solak",
+  "656484": {
+    "name": "Tristan Gray",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
+  },
+  "676914": {
+    "name": "Davis Schneider",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "664059": {
+    "name": "Sam Haggerty",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "669743": {
+    "name": "Alex Call",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "806198": {
+    "name": "Cooper Pratt",
+    "sprint_speed_ft_s": 28.8,
+    "SPD": 78
+  },
+  "703601": {
+    "name": "Max Clark",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "813841": {
+    "name": "Jonah Cox",
+    "sprint_speed_ft_s": 28.8,
+    "SPD": 78
+  },
+  "621566": {
+    "name": "Matt Olson",
+    "sprint_speed_ft_s": 25.4,
+    "SPD": 35
+  },
+  "608324": {
+    "name": "Alex Bregman",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
+  },
+  "678009": {
+    "name": "Parker Meadows",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "670242": {
+    "name": "Matt Wallner",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "663457": {
+    "name": "Lars Nootbaar",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "668942": {
+    "name": "Josh Rojas",
+    "sprint_speed_ft_s": 25.9,
+    "SPD": 41
+  },
+  "682998": {
+    "name": "Corbin Carroll",
+    "sprint_speed_ft_s": 29.7,
+    "SPD": 89
+  },
+  "666464": {
+    "name": "Jerar Encarnacion",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "687231": {
+    "name": "Darell Hernaiz",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "672820": {
+    "name": "Lenyn Sosa",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "664034": {
+    "name": "Ty France",
+    "sprint_speed_ft_s": 24.9,
+    "SPD": 29
+  },
+  "666969": {
+    "name": "Adolis Garc\u00eda",
+    "sprint_speed_ft_s": 26.5,
+    "SPD": 49
+  },
+  "656811": {
+    "name": "Ryan O'Hearn",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "666211": {
+    "name": "Taylor Trammell",
+    "sprint_speed_ft_s": 27.4,
+    "SPD": 60
+  },
+  "691620": {
+    "name": "Jeferson Quero",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "642086": {
+    "name": "Dominic Smith",
+    "sprint_speed_ft_s": 26.1,
+    "SPD": 44
+  },
+  "672960": {
+    "name": "Kazuma Okamoto",
+    "sprint_speed_ft_s": 26.4,
+    "SPD": 47
+  },
+  "621043": {
+    "name": "Carlos Correa",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "656976": {
+    "name": "Pavin Smith",
+    "sprint_speed_ft_s": 24.6,
+    "SPD": 25
+  },
+  "680664": {
+    "name": "Eduardo Valencia",
+    "sprint_speed_ft_s": 24.3,
+    "SPD": 21
+  },
+  "682848": {
+    "name": "Endy Rodr\u00edguez",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "679822": {
+    "name": "Justin Foscue",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "687221": {
+    "name": "Dalton Rushing",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "621493": {
+    "name": "Taylor Ward",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "673490": {
+    "name": "Ha-Seong Kim",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "656716": {
+    "name": "Zach McKinstry",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "670541": {
+    "name": "Yordan Alvarez",
+    "sprint_speed_ft_s": 25.0,
+    "SPD": 30
+  },
+  "663853": {
+    "name": "Romy Gonzalez",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "664770": {
+    "name": "Nathan Lukes",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "686475": {
+    "name": "Tyler Tolbert",
+    "sprint_speed_ft_s": 29.4,
+    "SPD": 85
+  },
+  "668930": {
+    "name": "Brice Turang",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
+  },
+  "650402": {
+    "name": "Gleyber Torres",
+    "sprint_speed_ft_s": 25.1,
+    "SPD": 31
+  },
+  "571912": {
+    "name": "Luke Maile",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "687363": {
+    "name": "Victor Scott II",
+    "sprint_speed_ft_s": 29.7,
+    "SPD": 89
+  },
+  "663897": {
+    "name": "Luke Williams",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "665862": {
+    "name": "Jazz Chisholm Jr.",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "663656": {
+    "name": "Kyle Tucker",
+    "sprint_speed_ft_s": 26.4,
+    "SPD": 47
+  },
+  "680574": {
+    "name": "Matt McLain",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
+  },
+  "663757": {
+    "name": "Trent Grisham",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
+  },
+  "663330": {
+    "name": "Jahmai Jones",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "692216": {
+    "name": "CJ Kayfus",
+    "sprint_speed_ft_s": 27.4,
+    "SPD": 60
+  },
+  "664023": {
+    "name": "Ian Happ",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "665804": {
+    "name": "Miguel Amaya",
+    "sprint_speed_ft_s": 25.3,
+    "SPD": 34
+  },
+  "702222": {
+    "name": "Justin Crawford",
+    "sprint_speed_ft_s": 29.6,
+    "SPD": 88
+  },
+  "680779": {
+    "name": "Henry Davis",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "700932": {
+    "name": "Kyle Manzardo",
+    "sprint_speed_ft_s": 25.4,
+    "SPD": 35
+  },
+  "702616": {
+    "name": "Jackson Holliday",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "663494": {
+    "name": "Bryan Torres",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "695336": {
+    "name": "Thomas Saggese",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "673548": {
+    "name": "Seiya Suzuki",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "677587": {
+    "name": "Brayan Rocchio",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "643289": {
+    "name": "Mauricio Dub\u00f3n",
+    "sprint_speed_ft_s": 26.8,
+    "SPD": 53
+  },
+  "543877": {
+    "name": "Christian V\u00e1zquez",
+    "sprint_speed_ft_s": 23.4,
+    "SPD": 10
+  },
+  "671218": {
+    "name": "Heliot Ramos",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "686668": {
+    "name": "Brenton Doyle",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
+  },
+  "688363": {
+    "name": "Graham Pauley",
+    "sprint_speed_ft_s": 26.5,
+    "SPD": 49
+  },
+  "663584": {
+    "name": "Hayden Senger",
+    "sprint_speed_ft_s": 24.8,
+    "SPD": 28
+  },
+  "690291": {
+    "name": "Jace Jung",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "641584": {
+    "name": "Jake Fraley",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "810938": {
+    "name": "Ben Williamson",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "641857": {
+    "name": "Ryan McMahon",
+    "sprint_speed_ft_s": 25.8,
+    "SPD": 40
+  },
+  "669003": {
+    "name": "Garrett Mitchell",
+    "sprint_speed_ft_s": 29.9,
+    "SPD": 91
+  },
+  "699013": {
+    "name": "Esmerlyn Valdez",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "801501": {
+    "name": "Nate Furman",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "606115": {
+    "name": "Orlando Arcia",
+    "sprint_speed_ft_s": 25.5,
+    "SPD": 36
+  },
+  "678545": {
+    "name": "Osleivis Basabe",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "805249": {
+    "name": "Otto Kemp",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "678011": {
+    "name": "Anthony Seigler",
+    "sprint_speed_ft_s": 25.7,
+    "SPD": 39
+  },
+  "571657": {
+    "name": "Kyle Farmer",
+    "sprint_speed_ft_s": 25.4,
+    "SPD": 35
+  },
+  "677950": {
+    "name": "Alek Thomas",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "691718": {
+    "name": "Pete Crow-Armstrong",
+    "sprint_speed_ft_s": 29.5,
+    "SPD": 86
+  },
+  "666126": {
+    "name": "Carlos Cortes",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "695238": {
+    "name": "Will Wagner",
+    "sprint_speed_ft_s": 26.1,
+    "SPD": 44
+  },
+  "683766": {
+    "name": "Christian Koss",
+    "sprint_speed_ft_s": 28.7,
+    "SPD": 76
+  },
+  "682177": {
+    "name": "Daniel Schneemann",
+    "sprint_speed_ft_s": 27.6,
+    "SPD": 63
+  },
+  "676356": {
+    "name": "Jonny DeLuca",
+    "sprint_speed_ft_s": 29.1,
+    "SPD": 81
+  },
+  "672016": {
+    "name": "Denzel Clarke",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "665487": {
+    "name": "Fernando Tatis Jr.",
+    "sprint_speed_ft_s": 28.9,
+    "SPD": 79
+  },
+  "669224": {
+    "name": "Austin Wells",
+    "sprint_speed_ft_s": 25.8,
+    "SPD": 40
+  },
+  "665828": {
+    "name": "Oswaldo Cabrera",
     "sprint_speed_ft_s": null,
     "SPD": null
   },
@@ -1624,723 +1969,123 @@
     "sprint_speed_ft_s": 27.1,
     "SPD": 56
   },
-  "660644": {
-    "name": "Vidal Bruj\u00e1n",
-    "sprint_speed_ft_s": 25.7,
-    "SPD": 39
-  },
-  "642215": {
-    "name": "Weston Wilson",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "693409": {
-    "name": "C\u00e9sar Prieto",
-    "sprint_speed_ft_s": 25.4,
-    "SPD": 35
-  },
-  "666624": {
-    "name": "Christopher Morel",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "670764": {
-    "name": "Taylor Walls",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "572233": {
-    "name": "Christian Walker",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "663886": {
-    "name": "Tyler Stephenson",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "667670": {
-    "name": "Brent Rooker",
-    "sprint_speed_ft_s": 27.6,
-    "SPD": 63
-  },
-  "457705": {
-    "name": "Andrew McCutchen",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "642715": {
-    "name": "Willy Adames",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "669477": {
-    "name": "Casey Schmitt",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "683146": {
-    "name": "Brett Baty",
-    "sprint_speed_ft_s": 26.8,
-    "SPD": 53
-  },
-  "596146": {
-    "name": "Max Kepler",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "663837": {
-    "name": "Matt Vierling",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "678882": {
-    "name": "Ceddanne Rafaela",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
-  },
-  "686765": {
-    "name": "Nick Sogard",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "663616": {
-    "name": "Trevor Larnach",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "699302": {
-    "name": "H\u00e9ctor Rodr\u00edguez",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "694497": {
-    "name": "Evan Carter",
-    "sprint_speed_ft_s": 28.8,
-    "SPD": 78
-  },
-  "682729": {
-    "name": "Jonatan Clase",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "660844": {
-    "name": "Leo Rivas",
-    "sprint_speed_ft_s": 27.4,
-    "SPD": 60
-  },
-  "695578": {
-    "name": "James Wood",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "686780": {
-    "name": "Pedro Pag\u00e9s",
-    "sprint_speed_ft_s": 25.5,
-    "SPD": 36
-  },
-  "592206": {
-    "name": "Nick Castellanos",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "687952": {
-    "name": "Christian Encarnacion-Strand",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "678246": {
-    "name": "Miguel Vargas",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "671655": {
-    "name": "George Valera",
-    "sprint_speed_ft_s": 25.5,
-    "SPD": 36
-  },
-  "664774": {
-    "name": "LaMonte Wade Jr.",
-    "sprint_speed_ft_s": 25.8,
-    "SPD": 40
-  },
-  "663728": {
-    "name": "Cal Raleigh",
-    "sprint_speed_ft_s": 25.8,
-    "SPD": 40
-  },
-  "677870": {
-    "name": "Leo Jim\u00e9nez",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "656537": {
-    "name": "Derek Hill",
+  "665923": {
+    "name": "Esteury Ruiz",
     "sprint_speed_ft_s": 29.7,
     "SPD": 89
-  },
-  "808975": {
-    "name": "Hyeseong Kim",
-    "sprint_speed_ft_s": 28.8,
-    "SPD": 78
-  },
-  "671056": {
-    "name": "Iv\u00e1n Herrera",
-    "sprint_speed_ft_s": 25.9,
-    "SPD": 41
-  },
-  "622268": {
-    "name": "Donovan Walton",
-    "sprint_speed_ft_s": 26.5,
-    "SPD": 49
-  },
-  "690984": {
-    "name": "Petey Halpin",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "663757": {
-    "name": "Trent Grisham",
-    "sprint_speed_ft_s": 26.6,
-    "SPD": 50
   },
   "666181": {
     "name": "Will Benson",
     "sprint_speed_ft_s": 28.8,
     "SPD": 78
   },
-  "669242": {
-    "name": "Tommy Edman",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "671286": {
-    "name": "Johnathan Rodr\u00edguez",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "672515": {
-    "name": "Gabriel Moreno",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "701305": {
-    "name": "Zach Dezenzo",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "823550": {
-    "name": "Sung-Mun Song",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "676551": {
-    "name": "Brewer Hicklen",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
-  },
-  "668904": {
-    "name": "Royce Lewis",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "663853": {
-    "name": "Romy Gonzalez",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "672613": {
-    "name": "Eliezer Alfonzo",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "630105": {
-    "name": "Jake Cronenworth",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "665750": {
-    "name": "Leody Taveras",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
-  },
-  "687093": {
-    "name": "Vaughn Grissom",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "686823": {
-    "name": "Will Brennan",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "805999": {
-    "name": "A.J. Ewing",
-    "sprint_speed_ft_s": 29.5,
-    "SPD": 86
-  },
-  "642086": {
-    "name": "Dominic Smith",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "695657": {
-    "name": "Colson Montgomery",
-    "sprint_speed_ft_s": 26.5,
-    "SPD": 49
-  },
-  "669394": {
-    "name": "Jake Burger",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "694673": {
-    "name": "Abimelec Ortiz",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "624424": {
-    "name": "Michael Conforto",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "666310": {
-    "name": "Bo Naylor",
+  "665877": {
+    "name": "Jos\u00e9 Ferm\u00edn",
     "sprint_speed_ft_s": 27.3,
     "SPD": 59
   },
-  "691777": {
-    "name": "Max Muncy",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
+  "687749": {
+    "name": "Jase Bowen",
+    "sprint_speed_ft_s": 29.3,
+    "SPD": 84
   },
-  "700337": {
-    "name": "Edgar Quero",
-    "sprint_speed_ft_s": 24.3,
-    "SPD": 21
-  },
-  "642350": {
-    "name": "Jose Siri",
-    "sprint_speed_ft_s": 29.8,
-    "SPD": 90
-  },
-  "663993": {
-    "name": "Nathaniel Lowe",
-    "sprint_speed_ft_s": 25.6,
-    "SPD": 38
-  },
-  "808982": {
-    "name": "Jung Hoo Lee",
-    "sprint_speed_ft_s": 27.4,
-    "SPD": 60
-  },
-  "694203": {
-    "name": "Denzer Guzman",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "592518": {
-    "name": "Manny Machado",
+  "669357": {
+    "name": "Nolan Gorman",
     "sprint_speed_ft_s": 25.2,
     "SPD": 32
   },
-  "679529": {
-    "name": "Spencer Torkelson",
-    "sprint_speed_ft_s": 26.3,
-    "SPD": 46
+  "701350": {
+    "name": "Roman Anthony",
+    "sprint_speed_ft_s": 27.4,
+    "SPD": 60
   },
-  "702332": {
-    "name": "Caleb Durbin",
+  "682729": {
+    "name": "Jonatan Clase",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "681987": {
+    "name": "Nate Eaton",
+    "sprint_speed_ft_s": 29.5,
+    "SPD": 86
+  },
+  "691277": {
+    "name": "Deyvison De Los Santos",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "693409": {
+    "name": "C\u00e9sar Prieto",
+    "sprint_speed_ft_s": 25.1,
+    "SPD": 31
+  },
+  "677870": {
+    "name": "Leo Jim\u00e9nez",
     "sprint_speed_ft_s": 28.0,
     "SPD": 68
   },
-  "665742": {
-    "name": "Juan Soto",
-    "sprint_speed_ft_s": 25.9,
-    "SPD": 41
+  "694388": {
+    "name": "Joey Loperfido",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
   },
   "669004": {
     "name": "MJ Melendez",
     "sprint_speed_ft_s": 27.2,
     "SPD": 57
   },
-  "571912": {
-    "name": "Luke Maile",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "641820": {
-    "name": "Trey Mancini",
-    "sprint_speed_ft_s": 26.6,
-    "SPD": 50
-  },
-  "800050": {
-    "name": "Chase DeLauter",
-    "sprint_speed_ft_s": 26.6,
-    "SPD": 50
-  },
-  "668974": {
-    "name": "Maverick Handley",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "680574": {
-    "name": "Matt McLain",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
-  },
-  "608070": {
-    "name": "Jos\u00e9 Ram\u00edrez",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "642133": {
-    "name": "Rowdy Tellez",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "672640": {
-    "name": "Otto Lopez",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "682927": {
-    "name": "Ronny Simon",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "695681": {
-    "name": "Christian Moore",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "518692": {
-    "name": "Freddie Freeman",
-    "sprint_speed_ft_s": 25.3,
-    "SPD": 34
-  },
-  "663604": {
-    "name": "Brandon Lockridge",
-    "sprint_speed_ft_s": 29.2,
-    "SPD": 82
-  },
-  "669127": {
-    "name": "Shea Langeliers",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "670097": {
-    "name": "Zack Short",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "641343": {
-    "name": "Jake Bauers",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "668930": {
-    "name": "Brice Turang",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
-  },
-  "686469": {
-    "name": "Vinnie Pasquantino",
-    "sprint_speed_ft_s": 25.7,
-    "SPD": 39
-  },
-  "621020": {
-    "name": "Dansby Swanson",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
+  "660844": {
+    "name": "Leo Rivas",
+    "sprint_speed_ft_s": 27.4,
+    "SPD": 60
   },
   "669392": {
     "name": "Samad Taylor",
     "sprint_speed_ft_s": 29.2,
     "SPD": 82
   },
-  "657757": {
-    "name": "Gavin Sheets",
-    "sprint_speed_ft_s": 26.6,
-    "SPD": 50
-  },
-  "664056": {
-    "name": "Harrison Bader",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "592663": {
-    "name": "J.T. Realmuto",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "682987": {
-    "name": "Spencer Jones",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
-  },
-  "641598": {
-    "name": "Mitch Garver",
-    "sprint_speed_ft_s": 25.1,
-    "SPD": 31
-  },
-  "605170": {
-    "name": "Victor Caratini",
-    "sprint_speed_ft_s": 24.4,
-    "SPD": 22
-  },
-  "694212": {
-    "name": "Samuel Basallo",
-    "sprint_speed_ft_s": 25.0,
-    "SPD": 30
-  },
-  "669717": {
-    "name": "Will Wilson",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "643396": {
-    "name": "Isiah Kiner-Falefa",
-    "sprint_speed_ft_s": 27.4,
-    "SPD": 60
-  },
-  "661531": {
-    "name": "Brian Serven",
-    "sprint_speed_ft_s": 25.2,
-    "SPD": 32
-  },
-  "640459": {
-    "name": "Brian Navarreto",
-    "sprint_speed_ft_s": 25.8,
-    "SPD": 40
-  },
-  "672761": {
-    "name": "Wenceel P\u00e9rez",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "664059": {
-    "name": "Sam Haggerty",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "811965": {
-    "name": "Joshua Kuroda-Grauer",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "620443": {
-    "name": "Luis Torrens",
-    "sprint_speed_ft_s": 26.6,
-    "SPD": 50
-  },
-  "676356": {
-    "name": "Jonny DeLuca",
-    "sprint_speed_ft_s": 29.1,
-    "SPD": 81
-  },
-  "664983": {
-    "name": "Jake McCarthy",
-    "sprint_speed_ft_s": 29.9,
-    "SPD": 91
-  },
-  "681546": {
-    "name": "James Outman",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "596115": {
-    "name": "Trevor Story",
+  "701305": {
+    "name": "Zach Dezenzo",
     "sprint_speed_ft_s": 27.9,
     "SPD": 66
   },
-  "602104": {
-    "name": "Ram\u00f3n Ur\u00edas",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
+  "666018": {
+    "name": "Jonathan Aranda",
+    "sprint_speed_ft_s": 25.7,
+    "SPD": 39
   },
-  "668709": {
-    "name": "JJ Bleday",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "686611": {
-    "name": "Dylan Crews",
-    "sprint_speed_ft_s": 29.3,
-    "SPD": 84
-  },
-  "669701": {
-    "name": "Josh Smith",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "650333": {
-    "name": "Luis Arraez",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "667472": {
-    "name": "Dane Myers",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "606466": {
-    "name": "Ketel Marte",
-    "sprint_speed_ft_s": 26.6,
-    "SPD": 50
-  },
-  "662139": {
-    "name": "Daulton Varsho",
-    "sprint_speed_ft_s": 27.4,
-    "SPD": 60
-  },
-  "668885": {
-    "name": "Austin Martin",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "666160": {
-    "name": "Mickey Moniak",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "641487": {
-    "name": "J.P. Crawford",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "678009": {
-    "name": "Parker Meadows",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "703601": {
-    "name": "Max Clark",
-    "sprint_speed_ft_s": 26.8,
-    "SPD": 53
-  },
-  "690993": {
-    "name": "Colt Keith",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
-  },
-  "694249": {
-    "name": "Cole Carrigg",
-    "sprint_speed_ft_s": 28.8,
-    "SPD": 78
-  },
-  "624413": {
-    "name": "Pete Alonso",
-    "sprint_speed_ft_s": 25.3,
-    "SPD": 34
-  },
-  "640492": {
-    "name": "Jos\u00e9 Az\u00f3car",
-    "sprint_speed_ft_s": 28.4,
-    "SPD": 72
-  },
-  "676566": {
-    "name": "Shawn Ross",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "682988": {
-    "name": "Tyler Locklear",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
-  },
-  "802139": {
-    "name": "JJ Wetherholt",
-    "sprint_speed_ft_s": 27.6,
-    "SPD": 63
-  },
-  "681198": {
-    "name": "TJ Rumfield",
-    "sprint_speed_ft_s": 25.0,
-    "SPD": 30
-  },
-  "668670": {
-    "name": "Jake Rogers",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "805808": {
-    "name": "Kevin McGonigle",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "643217": {
-    "name": "Andrew Benintendi",
-    "sprint_speed_ft_s": 26.6,
-    "SPD": 50
-  },
-  "807747": {
-    "name": "Rikuu Nishida",
+  "805904": {
+    "name": "Zach Cole",
     "sprint_speed_ft_s": 28.0,
     "SPD": 68
   },
-  "694374": {
-    "name": "Tim Tawa",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
+  "668723": {
+    "name": "Ryan Vilade",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
   },
   "669289": {
     "name": "Santiago Espinal",
     "sprint_speed_ft_s": 26.4,
     "SPD": 47
   },
-  "687529": {
-    "name": "Grant McCray",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
+  "592206": {
+    "name": "Nick Castellanos",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
   },
-  "664068": {
-    "name": "Scott Kingery",
-    "sprint_speed_ft_s": null,
-    "SPD": null
+  "605170": {
+    "name": "Victor Caratini",
+    "sprint_speed_ft_s": 24.4,
+    "SPD": 22
   },
-  "682668": {
-    "name": "Luisangel Acu\u00f1a",
-    "sprint_speed_ft_s": 29.8,
-    "SPD": 90
+  "805779": {
+    "name": "Jacob Wilson",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
   },
-  "666931": {
-    "name": "Jared Oliva",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "624431": {
-    "name": "Jose Trevino",
-    "sprint_speed_ft_s": 23.4,
-    "SPD": 10
-  },
-  "690291": {
-    "name": "Jace Jung",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "671739": {
-    "name": "Michael Harris II",
-    "sprint_speed_ft_s": 27.6,
-    "SPD": 63
-  },
-  "700250": {
-    "name": "Ben Rice",
-    "sprint_speed_ft_s": 26.8,
-    "SPD": 53
-  },
-  "665804": {
-    "name": "Miguel Amaya",
-    "sprint_speed_ft_s": 25.3,
-    "SPD": 34
-  },
-  "807727": {
-    "name": "Charles McAdoo",
-    "sprint_speed_ft_s": 28.9,
-    "SPD": 79
-  },
-  "665828": {
-    "name": "Oswaldo Cabrera",
+  "804668": {
+    "name": "Rafael Flores Jr.",
     "sprint_speed_ft_s": null,
     "SPD": null
   },
@@ -2349,769 +2094,1024 @@
     "sprint_speed_ft_s": 24.5,
     "SPD": 24
   },
-  "666969": {
-    "name": "Adolis Garc\u00eda",
-    "sprint_speed_ft_s": 26.5,
-    "SPD": 49
-  },
-  "571657": {
-    "name": "Kyle Farmer",
-    "sprint_speed_ft_s": 25.4,
-    "SPD": 35
-  },
-  "694025": {
-    "name": "Felix Reyes",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "608369": {
-    "name": "Corey Seager",
-    "sprint_speed_ft_s": 24.8,
-    "SPD": 28
-  },
-  "687221": {
-    "name": "Dalton Rushing",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "695731": {
-    "name": "Braden Montgomery",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "691740": {
-    "name": "Daniel Susac",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "694410": {
-    "name": "LuJames Groover",
-    "sprint_speed_ft_s": 26.8,
-    "SPD": 53
-  },
-  "621550": {
-    "name": "Patrick Wisdom",
-    "sprint_speed_ft_s": 27.1,
-    "SPD": 56
-  },
-  "806146": {
-    "name": "George Lombard Jr.",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "670156": {
-    "name": "Miles Mastrobuoni",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "678218": {
-    "name": "Brandon Valenzuela",
-    "sprint_speed_ft_s": 25.6,
-    "SPD": 38
-  },
-  "694371": {
-    "name": "Tommy Troy",
-    "sprint_speed_ft_s": 30.1,
-    "SPD": 94
-  },
-  "663609": {
-    "name": "Luken Baker",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "607208": {
-    "name": "Trea Turner",
-    "sprint_speed_ft_s": 29.8,
-    "SPD": 90
-  },
-  "672012": {
-    "name": "Tyler Black",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "467793": {
-    "name": "Carlos Santana",
-    "sprint_speed_ft_s": 23.7,
-    "SPD": 14
-  },
-  "676914": {
-    "name": "Davis Schneider",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "677594": {
-    "name": "Julio Rodr\u00edguez",
-    "sprint_speed_ft_s": 28.8,
-    "SPD": 78
-  },
-  "686797": {
-    "name": "Brooks Lee",
-    "sprint_speed_ft_s": 26.4,
-    "SPD": 47
-  },
-  "665926": {
-    "name": "Andr\u00e9s Gim\u00e9nez",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "691783": {
-    "name": "Jordan Lawlar",
-    "sprint_speed_ft_s": 28.8,
-    "SPD": 78
-  },
-  "682989": {
-    "name": "Victor Mederos",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "828599": {
-    "name": "Lucas Spence",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "663611": {
-    "name": "Nick Madrigal",
-    "sprint_speed_ft_s": 26.8,
-    "SPD": 53
-  },
-  "687515": {
-    "name": "Colby Thomas",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "665861": {
-    "name": "Sebasti\u00e1n Rivero",
-    "sprint_speed_ft_s": 25.5,
-    "SPD": 36
-  },
-  "669364": {
-    "name": "Xavier Edwards",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "677951": {
-    "name": "Bobby Witt Jr.",
-    "sprint_speed_ft_s": 30.2,
-    "SPD": 95
-  },
-  "664238": {
-    "name": "Dylan Moore",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "663494": {
-    "name": "Bryan Torres",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "502054": {
-    "name": "Tommy Pham",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "683748": {
-    "name": "Victor Mesa Jr.",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "688363": {
-    "name": "Graham Pauley",
-    "sprint_speed_ft_s": 26.5,
-    "SPD": 49
-  },
-  "677588": {
-    "name": "Jos\u00e9 Tena",
-    "sprint_speed_ft_s": 27.8,
-    "SPD": 65
-  },
-  "660688": {
-    "name": "Keibert Ruiz",
-    "sprint_speed_ft_s": 25.2,
-    "SPD": 32
-  },
-  "645302": {
-    "name": "Victor Robles",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
-  },
-  "683002": {
-    "name": "Gunnar Henderson",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "676475": {
-    "name": "Alec Burleson",
-    "sprint_speed_ft_s": 25.6,
-    "SPD": 38
-  },
-  "647304": {
-    "name": "Josh Naylor",
-    "sprint_speed_ft_s": 24.6,
-    "SPD": 25
-  },
-  "666126": {
-    "name": "Carlos Cortes",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "682818": {
-    "name": "Yohendrick Pi\u00f1ango",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "802415": {
-    "name": "Chandler Simpson",
-    "sprint_speed_ft_s": 29.5,
-    "SPD": 86
-  },
-  "682877": {
-    "name": "Juan Brito",
-    "sprint_speed_ft_s": 26.5,
-    "SPD": 49
-  },
-  "669003": {
-    "name": "Garrett Mitchell",
-    "sprint_speed_ft_s": 29.8,
-    "SPD": 90
-  },
-  "693304": {
-    "name": "Nick Gonzales",
-    "sprint_speed_ft_s": 28.8,
-    "SPD": 78
-  },
-  "679822": {
-    "name": "Justin Foscue",
-    "sprint_speed_ft_s": 27.5,
-    "SPD": 61
-  },
-  "681807": {
-    "name": "David Fry",
-    "sprint_speed_ft_s": 26.3,
-    "SPD": 46
-  },
-  "681393": {
-    "name": "Connor Norby",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
-  },
-  "596142": {
-    "name": "Gary S\u00e1nchez",
-    "sprint_speed_ft_s": 24.5,
-    "SPD": 24
-  },
-  "600869": {
-    "name": "Jeimer Candelario",
-    "sprint_speed_ft_s": 26.3,
-    "SPD": 46
-  },
-  "681909": {
-    "name": "Justin Dean",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "804606": {
-    "name": "Konnor Griffin",
-    "sprint_speed_ft_s": 29.9,
-    "SPD": 91
-  },
-  "664040": {
-    "name": "Brandon Lowe",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "669369": {
-    "name": "Bryce Johnson",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "699912": {
-    "name": "Jose Fernandez",
-    "sprint_speed_ft_s": 29.5,
-    "SPD": 86
-  },
-  "665506": {
-    "name": "Cristian Pache",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "682663": {
-    "name": "Agust\u00edn Ram\u00edrez",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "702284": {
-    "name": "Cole Young",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "665923": {
-    "name": "Esteury Ruiz",
-    "sprint_speed_ft_s": 29.7,
-    "SPD": 89
-  },
-  "641857": {
-    "name": "Ryan McMahon",
-    "sprint_speed_ft_s": 25.8,
-    "SPD": 40
-  },
-  "701398": {
-    "name": "Sal Stewart",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "805811": {
-    "name": "Bryce Eldridge",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
-  },
-  "696135": {
-    "name": "Kahlil Watson",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "691016": {
-    "name": "Tyler Soderstrom",
-    "sprint_speed_ft_s": 27.1,
-    "SPD": 56
-  },
-  "545361": {
-    "name": "Mike Trout",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "682622": {
-    "name": "Noelvi Marte",
-    "sprint_speed_ft_s": 29.1,
-    "SPD": 81
-  },
-  "623168": {
-    "name": "Tyler Heineman",
-    "sprint_speed_ft_s": 25.8,
-    "SPD": 40
-  },
-  "687231": {
-    "name": "Darell Hernaiz",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "691373": {
-    "name": "Jhostynxon Garcia",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "666139": {
-    "name": "Josh Lowe",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "687749": {
-    "name": "Jase Bowen",
-    "sprint_speed_ft_s": 29.3,
-    "SPD": 84
-  },
-  "666176": {
-    "name": "Jo Adell",
-    "sprint_speed_ft_s": 28.1,
-    "SPD": 69
-  },
-  "680718": {
-    "name": "Addison Barger",
+  "605137": {
+    "name": "Josh Bell",
     "sprint_speed_ft_s": 26.1,
     "SPD": 44
-  },
-  "695257": {
-    "name": "Billy Cook",
-    "sprint_speed_ft_s": 29.5,
-    "SPD": 86
-  },
-  "671976": {
-    "name": "Tristan Peters",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
-  },
-  "687551": {
-    "name": "Drew Gilbert",
-    "sprint_speed_ft_s": 27.4,
-    "SPD": 60
-  },
-  "669384": {
-    "name": "Raynel Delgado",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "664761": {
-    "name": "Alec Bohm",
-    "sprint_speed_ft_s": 26.5,
-    "SPD": 49
-  },
-  "683766": {
-    "name": "Christian Koss",
-    "sprint_speed_ft_s": 28.7,
-    "SPD": 76
-  },
-  "668942": {
-    "name": "Josh Rojas",
-    "sprint_speed_ft_s": 25.9,
-    "SPD": 41
-  },
-  "543760": {
-    "name": "Marcus Semien",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "642851": {
-    "name": "Austin Wynns",
-    "sprint_speed_ft_s": 25.1,
-    "SPD": 31
-  },
-  "605244": {
-    "name": "Aramis Garcia",
-    "sprint_speed_ft_s": 25.9,
-    "SPD": 41
-  },
-  "606192": {
-    "name": "Teoscar Hern\u00e1ndez",
-    "sprint_speed_ft_s": 28.2,
-    "SPD": 70
-  },
-  "668901": {
-    "name": "Mark Vientos",
-    "sprint_speed_ft_s": 25.7,
-    "SPD": 39
-  },
-  "691458": {
-    "name": "Blaze Jordan",
-    "sprint_speed_ft_s": 25.6,
-    "SPD": 38
-  },
-  "607043": {
-    "name": "Brandon Nimmo",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "814439": {
-    "name": "Ryan Waldschmidt",
-    "sprint_speed_ft_s": 28.9,
-    "SPD": 79
-  },
-  "666018": {
-    "name": "Jonathan Aranda",
-    "sprint_speed_ft_s": 25.7,
-    "SPD": 39
-  },
-  "680977": {
-    "name": "Brendan Donovan",
-    "sprint_speed_ft_s": 25.4,
-    "SPD": 35
-  },
-  "695238": {
-    "name": "Will Wagner",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "665953": {
-    "name": "Andr\u00e9s Chaparro",
-    "sprint_speed_ft_s": 25.1,
-    "SPD": 31
-  },
-  "518595": {
-    "name": "Travis d'Arnaud",
-    "sprint_speed_ft_s": 24.9,
-    "SPD": 29
-  },
-  "665487": {
-    "name": "Fernando Tatis Jr.",
-    "sprint_speed_ft_s": 28.9,
-    "SPD": 79
-  },
-  "694224": {
-    "name": "Gabriel Gonzalez",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "543510": {
-    "name": "James McCann",
-    "sprint_speed_ft_s": 25.3,
-    "SPD": 34
-  },
-  "673995": {
-    "name": "Davis Wendzel",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "664728": {
-    "name": "Kyle Isbel",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "699013": {
-    "name": "Esmerlyn Valdez",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "656941": {
-    "name": "Kyle Schwarber",
-    "sprint_speed_ft_s": 25.8,
-    "SPD": 40
-  },
-  "665966": {
-    "name": "Carlos Narv\u00e1ez",
-    "sprint_speed_ft_s": 25.3,
-    "SPD": 34
-  },
-  "656555": {
-    "name": "Rhys Hoskins",
-    "sprint_speed_ft_s": 24.8,
-    "SPD": 28
-  },
-  "655316": {
-    "name": "Andruw Monasterio",
-    "sprint_speed_ft_s": 27.0,
-    "SPD": 55
-  },
-  "687859": {
-    "name": "Troy Johnston",
-    "sprint_speed_ft_s": 26.1,
-    "SPD": 44
-  },
-  "545341": {
-    "name": "Randal Grichuk",
-    "sprint_speed_ft_s": 27.2,
-    "SPD": 57
-  },
-  "694384": {
-    "name": "Nolan Schanuel",
-    "sprint_speed_ft_s": 25.7,
-    "SPD": 39
-  },
-  "663697": {
-    "name": "Jonathan India",
-    "sprint_speed_ft_s": 27.7,
-    "SPD": 64
-  },
-  "543877": {
-    "name": "Christian V\u00e1zquez",
-    "sprint_speed_ft_s": 23.4,
-    "SPD": 10
-  },
-  "656716": {
-    "name": "Zach McKinstry",
-    "sprint_speed_ft_s": 27.9,
-    "SPD": 66
-  },
-  "519317": {
-    "name": "Giancarlo Stanton",
-    "sprint_speed_ft_s": 23.8,
-    "SPD": 15
-  },
-  "502671": {
-    "name": "Paul Goldschmidt",
-    "sprint_speed_ft_s": 25.4,
-    "SPD": 35
-  },
-  "677595": {
-    "name": "Ronny Mauricio",
-    "sprint_speed_ft_s": 25.9,
-    "SPD": 41
-  },
-  "641584": {
-    "name": "Jake Fraley",
-    "sprint_speed_ft_s": 28.3,
-    "SPD": 71
-  },
-  "691781": {
-    "name": "Brady House",
-    "sprint_speed_ft_s": 28.0,
-    "SPD": 68
-  },
-  "646240": {
-    "name": "Rafael Devers",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "686217": {
-    "name": "Sal Frelick",
-    "sprint_speed_ft_s": 28.7,
-    "SPD": 76
-  },
-  "650859": {
-    "name": "Luis Rengifo",
-    "sprint_speed_ft_s": 27.1,
-    "SPD": 56
   },
   "672580": {
     "name": "Maikel Garcia",
     "sprint_speed_ft_s": 27.7,
     "SPD": 64
   },
-  "680728": {
-    "name": "Adrian Del Castillo",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
+  "605141": {
+    "name": "Mookie Betts",
+    "sprint_speed_ft_s": 26.4,
+    "SPD": 47
   },
-  "670032": {
-    "name": "Nicky Lopez",
+  "668709": {
+    "name": "JJ Bleday",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "664040": {
+    "name": "Brandon Lowe",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "595978": {
+    "name": "Austin Hedges",
+    "sprint_speed_ft_s": 24.4,
+    "SPD": 22
+  },
+  "695600": {
+    "name": "Carter Jensen",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "660162": {
+    "name": "Yo\u00e1n Moncada",
+    "sprint_speed_ft_s": 26.4,
+    "SPD": 47
+  },
+  "680777": {
+    "name": "Ryan Jeffers",
+    "sprint_speed_ft_s": 26.3,
+    "SPD": 46
+  },
+  "596103": {
+    "name": "Austin Slater",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "678489": {
+    "name": "Jorge Barrosa",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "672642": {
+    "name": "Steward Berroa",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "642715": {
+    "name": "Willy Adames",
     "sprint_speed_ft_s": 27.7,
     "SPD": 64
   },
-  "605141": {
-    "name": "Mookie Betts",
-    "sprint_speed_ft_s": 26.5,
-    "SPD": 49
-  },
-  "691277": {
-    "name": "Deyvison De Los Santos",
+  "681909": {
+    "name": "Justin Dean",
     "sprint_speed_ft_s": null,
     "SPD": null
   },
-  "694514": {
-    "name": "Sterlin Thompson",
-    "sprint_speed_ft_s": 27.6,
-    "SPD": 63
-  },
-  "571970": {
-    "name": "Max Muncy",
+  "672695": {
+    "name": "Geraldo Perdomo",
     "sprint_speed_ft_s": 27.1,
     "SPD": 56
   },
-  "681481": {
-    "name": "Kerry Carpenter",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
+  "808975": {
+    "name": "Hyeseong Kim",
+    "sprint_speed_ft_s": 28.8,
+    "SPD": 78
   },
-  "642201": {
-    "name": "Eli White",
-    "sprint_speed_ft_s": 30.3,
-    "SPD": 96
+  "695508": {
+    "name": "Cam Cauley",
+    "sprint_speed_ft_s": 30.5,
+    "SPD": 99
   },
-  "543309": {
-    "name": "Kyle Higashioka",
-    "sprint_speed_ft_s": 24.6,
-    "SPD": 25
-  },
-  "672279": {
-    "name": "Michael Siani",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "665561": {
-    "name": "Rafael March\u00e1n",
-    "sprint_speed_ft_s": 26.0,
-    "SPD": 42
-  },
-  "672724": {
-    "name": "Oswald Peraza",
-    "sprint_speed_ft_s": 28.6,
-    "SPD": 75
-  },
-  "624512": {
-    "name": "Reese McGuire",
-    "sprint_speed_ft_s": 25.2,
-    "SPD": 32
-  },
-  "656484": {
-    "name": "Tristan Gray",
-    "sprint_speed_ft_s": 26.2,
-    "SPD": 45
-  },
-  "682657": {
-    "name": "Angel Mart\u00ednez",
+  "676724": {
+    "name": "Jared Young",
     "sprint_speed_ft_s": 27.6,
     "SPD": 63
   },
-  "642020": {
-    "name": "Chuckie Robinson",
-    "sprint_speed_ft_s": 24.6,
-    "SPD": 25
-  },
-  "676572": {
-    "name": "Eric Wagaman",
-    "sprint_speed_ft_s": 26.3,
-    "SPD": 46
-  },
-  "668227": {
-    "name": "Randy Arozarena",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "506702": {
-    "name": "Sandy Le\u00f3n",
-    "sprint_speed_ft_s": 22.1,
-    "SPD": 1
-  },
-  "808959": {
-    "name": "Munetaka Murakami",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "691620": {
-    "name": "Jeferson Quero",
-    "sprint_speed_ft_s": null,
-    "SPD": null
-  },
-  "692216": {
-    "name": "CJ Kayfus",
-    "sprint_speed_ft_s": 27.4,
-    "SPD": 60
-  },
-  "691011": {
-    "name": "Drew Romo",
-    "sprint_speed_ft_s": 26.3,
-    "SPD": 46
-  },
-  "675961": {
-    "name": "Alika Williams",
-    "sprint_speed_ft_s": 27.6,
-    "SPD": 63
-  },
-  "575929": {
-    "name": "Willson Contreras",
-    "sprint_speed_ft_s": 27.3,
-    "SPD": 59
-  },
-  "608841": {
-    "name": "Joey Meneses",
-    "sprint_speed_ft_s": 25.3,
-    "SPD": 34
-  },
-  "680776": {
-    "name": "Jarren Duran",
-    "sprint_speed_ft_s": 29.0,
-    "SPD": 80
-  },
-  "664770": {
-    "name": "Nathan Lukes",
-    "sprint_speed_ft_s": 26.9,
-    "SPD": 54
-  },
-  "664034": {
-    "name": "Ty France",
-    "sprint_speed_ft_s": 24.9,
-    "SPD": 29
-  },
-  "668723": {
-    "name": "Ryan Vilade",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
-  },
-  "669065": {
-    "name": "Kyle Stowers",
-    "sprint_speed_ft_s": 26.7,
-    "SPD": 51
-  },
-  "669398": {
-    "name": "Gage Workman",
-    "sprint_speed_ft_s": 28.5,
-    "SPD": 74
+  "669087": {
+    "name": "Sam Huff",
+    "sprint_speed_ft_s": 24.3,
+    "SPD": 21
   },
   "621439": {
     "name": "Byron Buxton",
     "sprint_speed_ft_s": 29.8,
     "SPD": 90
   },
+  "666624": {
+    "name": "Christopher Morel",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "667670": {
+    "name": "Brent Rooker",
+    "sprint_speed_ft_s": 27.6,
+    "SPD": 63
+  },
+  "681481": {
+    "name": "Kerry Carpenter",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "650859": {
+    "name": "Luis Rengifo",
+    "sprint_speed_ft_s": 27.1,
+    "SPD": 56
+  },
+  "672386": {
+    "name": "Alejandro Kirk",
+    "sprint_speed_ft_s": 22.8,
+    "SPD": 3
+  },
+  "669127": {
+    "name": "Shea Langeliers",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "676609": {
+    "name": "Jos\u00e9 Caballero",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "660271": {
+    "name": "Shohei Ohtani",
+    "sprint_speed_ft_s": 27.6,
+    "SPD": 63
+  },
+  "624641": {
+    "name": "Edmundo Sosa",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
+  },
+  "672761": {
+    "name": "Wenceel P\u00e9rez",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "671732": {
+    "name": "Lawrence Butler",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "682663": {
+    "name": "Agust\u00edn Ram\u00edrez",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "457705": {
+    "name": "Andrew McCutchen",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "514888": {
+    "name": "Jose Altuve",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "691720": {
+    "name": "Kyle Karros",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "691026": {
+    "name": "Masyn Winn",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "665161": {
+    "name": "Jeremy Pe\u00f1a",
+    "sprint_speed_ft_s": 29.2,
+    "SPD": 82
+  },
+  "669397": {
+    "name": "Nick Allen",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "694514": {
+    "name": "Sterlin Thompson",
+    "sprint_speed_ft_s": 27.6,
+    "SPD": 63
+  },
+  "641820": {
+    "name": "Trey Mancini",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
+  },
+  "664761": {
+    "name": "Alec Bohm",
+    "sprint_speed_ft_s": 26.5,
+    "SPD": 49
+  },
+  "669360": {
+    "name": "Trei Cruz",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "681393": {
+    "name": "Connor Norby",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "553993": {
+    "name": "Eugenio Su\u00e1rez",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "575929": {
+    "name": "Willson Contreras",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "691781": {
+    "name": "Brady House",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "592450": {
+    "name": "Aaron Judge",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "683021": {
+    "name": "Michael Stefanic",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "681351": {
+    "name": "Logan O'Hoppe",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "691373": {
+    "name": "Jhostynxon Garcia",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "696135": {
+    "name": "Kahlil Watson",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "694671": {
+    "name": "Wyatt Langford",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "665856": {
+    "name": "Jair Camargo",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "666023": {
+    "name": "Freddy Fermin",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "622268": {
+    "name": "Donovan Walton",
+    "sprint_speed_ft_s": 26.5,
+    "SPD": 49
+  },
+  "571448": {
+    "name": "Nolan Arenado",
+    "sprint_speed_ft_s": 25.3,
+    "SPD": 34
+  },
+  "676475": {
+    "name": "Alec Burleson",
+    "sprint_speed_ft_s": 25.6,
+    "SPD": 38
+  },
+  "518692": {
+    "name": "Freddie Freeman",
+    "sprint_speed_ft_s": 25.3,
+    "SPD": 34
+  },
+  "545121": {
+    "name": "Ildemaro Vargas",
+    "sprint_speed_ft_s": 27.1,
+    "SPD": 56
+  },
+  "694497": {
+    "name": "Evan Carter",
+    "sprint_speed_ft_s": 28.8,
+    "SPD": 78
+  },
+  "702332": {
+    "name": "Caleb Durbin",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "669326": {
+    "name": "Bryce Teodosio",
+    "sprint_speed_ft_s": 29.6,
+    "SPD": 88
+  },
+  "683734": {
+    "name": "Andrew Vaughn",
+    "sprint_speed_ft_s": 25.7,
+    "SPD": 39
+  },
+  "669364": {
+    "name": "Xavier Edwards",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "628451": {
+    "name": "Andy Ib\u00e1\u00f1ez",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "682657": {
+    "name": "Angel Mart\u00ednez",
+    "sprint_speed_ft_s": 27.6,
+    "SPD": 63
+  },
+  "665742": {
+    "name": "Juan Soto",
+    "sprint_speed_ft_s": 25.9,
+    "SPD": 41
+  },
+  "607043": {
+    "name": "Brandon Nimmo",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "805811": {
+    "name": "Bryce Eldridge",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
+  },
+  "623168": {
+    "name": "Tyler Heineman",
+    "sprint_speed_ft_s": 25.8,
+    "SPD": 40
+  },
+  "663624": {
+    "name": "Ryan Mountcastle",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
+  },
+  "663647": {
+    "name": "Ke'Bryan Hayes",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "805367": {
+    "name": "Chase Meidroth",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "671739": {
+    "name": "Michael Harris II",
+    "sprint_speed_ft_s": 27.6,
+    "SPD": 63
+  },
+  "682989": {
+    "name": "Victor Mederos",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "640492": {
+    "name": "Jos\u00e9 Az\u00f3car",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "677956": {
+    "name": "Rece Hinds",
+    "sprint_speed_ft_s": 28.4,
+    "SPD": 72
+  },
+  "694249": {
+    "name": "Cole Carrigg",
+    "sprint_speed_ft_s": 28.8,
+    "SPD": 78
+  },
+  "673237": {
+    "name": "Yainer Diaz",
+    "sprint_speed_ft_s": 25.9,
+    "SPD": 41
+  },
+  "681624": {
+    "name": "Andy Pages",
+    "sprint_speed_ft_s": 28.3,
+    "SPD": 71
+  },
+  "650559": {
+    "name": "Bryan De La Cruz",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "644433": {
+    "name": "Chadwick Tromp",
+    "sprint_speed_ft_s": 24.4,
+    "SPD": 22
+  },
+  "701852": {
+    "name": "Drew Cavanaugh",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
+  },
+  "620443": {
+    "name": "Luis Torrens",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
+  },
+  "802415": {
+    "name": "Chandler Simpson",
+    "sprint_speed_ft_s": 29.5,
+    "SPD": 86
+  },
+  "669384": {
+    "name": "Raynel Delgado",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "664702": {
+    "name": "Myles Straw",
+    "sprint_speed_ft_s": 29.7,
+    "SPD": 89
+  },
+  "642851": {
+    "name": "Austin Wynns",
+    "sprint_speed_ft_s": 25.1,
+    "SPD": 31
+  },
+  "665019": {
+    "name": "Kody Clemens",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "669394": {
+    "name": "Jake Burger",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "621438": {
+    "name": "Tyrone Taylor",
+    "sprint_speed_ft_s": 29.1,
+    "SPD": 81
+  },
+  "519317": {
+    "name": "Giancarlo Stanton",
+    "sprint_speed_ft_s": 23.8,
+    "SPD": 15
+  },
+  "683083": {
+    "name": "Nasim Nu\u00f1ez",
+    "sprint_speed_ft_s": 29.8,
+    "SPD": 90
+  },
+  "681807": {
+    "name": "David Fry",
+    "sprint_speed_ft_s": 26.3,
+    "SPD": 46
+  },
+  "666310": {
+    "name": "Bo Naylor",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "663604": {
+    "name": "Brandon Lockridge",
+    "sprint_speed_ft_s": 29.2,
+    "SPD": 82
+  },
+  "641598": {
+    "name": "Mitch Garver",
+    "sprint_speed_ft_s": 25.1,
+    "SPD": 31
+  },
+  "665489": {
+    "name": "Vladimir Guerrero Jr.",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
+  },
+  "663993": {
+    "name": "Nathaniel Lowe",
+    "sprint_speed_ft_s": 25.6,
+    "SPD": 38
+  },
+  "608701": {
+    "name": "Rob Refsnyder",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "668227": {
+    "name": "Randy Arozarena",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "676694": {
+    "name": "Jake Meyers",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "665052": {
+    "name": "Griffin Conine",
+    "sprint_speed_ft_s": 26.5,
+    "SPD": 49
+  },
+  "661388": {
+    "name": "William Contreras",
+    "sprint_speed_ft_s": 25.9,
+    "SPD": 41
+  },
+  "543760": {
+    "name": "Marcus Semien",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "671056": {
+    "name": "Iv\u00e1n Herrera",
+    "sprint_speed_ft_s": 25.9,
+    "SPD": 41
+  },
+  "691019": {
+    "name": "Kyle Teel",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "663728": {
+    "name": "Cal Raleigh",
+    "sprint_speed_ft_s": 25.8,
+    "SPD": 40
+  },
+  "650391": {
+    "name": "Eloy Jim\u00e9nez",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "686765": {
+    "name": "Nick Sogard",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "695391": {
+    "name": "Brett Harris",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "669065": {
+    "name": "Kyle Stowers",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "666139": {
+    "name": "Josh Lowe",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "678760": {
+    "name": "Eddys Leonard",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "683227": {
+    "name": "Cody Freeman",
+    "sprint_speed_ft_s": 26.4,
+    "SPD": 47
+  },
+  "687263": {
+    "name": "Zach Neto",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "690976": {
+    "name": "Alex Freeland",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "608348": {
+    "name": "Carson Kelly",
+    "sprint_speed_ft_s": 25.8,
+    "SPD": 40
+  },
+  "679845": {
+    "name": "Nick Loftin",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "695257": {
+    "name": "Billy Cook",
+    "sprint_speed_ft_s": 29.5,
+    "SPD": 86
+  },
+  "656582": {
+    "name": "Connor Joe",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "693307": {
+    "name": "Dillon Dingler",
+    "sprint_speed_ft_s": 27.4,
+    "SPD": 60
+  },
+  "467793": {
+    "name": "Carlos Santana",
+    "sprint_speed_ft_s": 23.7,
+    "SPD": 14
+  },
+  "815873": {
+    "name": "Sean Keys",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "696285": {
+    "name": "Jacob Young",
+    "sprint_speed_ft_s": 29.2,
+    "SPD": 82
+  },
+  "670623": {
+    "name": "Isaac Paredes",
+    "sprint_speed_ft_s": 25.0,
+    "SPD": 30
+  },
+  "682515": {
+    "name": "Logan Porter",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "672640": {
+    "name": "Otto Lopez",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "518595": {
+    "name": "Travis d'Arnaud",
+    "sprint_speed_ft_s": 24.9,
+    "SPD": 29
+  },
+  "668804": {
+    "name": "Bryan Reynolds",
+    "sprint_speed_ft_s": 28.1,
+    "SPD": 69
+  },
+  "573262": {
+    "name": "Mike Yastrzemski",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "647304": {
+    "name": "Josh Naylor",
+    "sprint_speed_ft_s": 24.6,
+    "SPD": 25
+  },
+  "681546": {
+    "name": "James Outman",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "672515": {
+    "name": "Gabriel Moreno",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "807713": {
+    "name": "Matt Shaw",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
+  },
+  "691777": {
+    "name": "Max Muncy",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "681082": {
+    "name": "Bryson Stott",
+    "sprint_speed_ft_s": 28.5,
+    "SPD": 74
+  },
+  "543510": {
+    "name": "James McCann",
+    "sprint_speed_ft_s": 25.3,
+    "SPD": 34
+  },
+  "686452": {
+    "name": "Drew Millas",
+    "sprint_speed_ft_s": 27.6,
+    "SPD": 63
+  },
+  "802139": {
+    "name": "JJ Wetherholt",
+    "sprint_speed_ft_s": 27.6,
+    "SPD": 63
+  },
+  "643217": {
+    "name": "Andrew Benintendi",
+    "sprint_speed_ft_s": 26.6,
+    "SPD": 50
+  },
+  "593871": {
+    "name": "Jorge Polanco",
+    "sprint_speed_ft_s": 26.3,
+    "SPD": 46
+  },
+  "807747": {
+    "name": "Rikuu Nishida",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "687952": {
+    "name": "Christian Encarnacion-Strand",
+    "sprint_speed_ft_s": 26.4,
+    "SPD": 47
+  },
+  "691023": {
+    "name": "Jordan Walker",
+    "sprint_speed_ft_s": 29.2,
+    "SPD": 82
+  },
+  "672012": {
+    "name": "Tyler Black",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "663697": {
+    "name": "Jonathan India",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "655316": {
+    "name": "Andruw Monasterio",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "693304": {
+    "name": "Nick Gonzales",
+    "sprint_speed_ft_s": 28.8,
+    "SPD": 78
+  },
+  "657041": {
+    "name": "Lane Thomas",
+    "sprint_speed_ft_s": 29.1,
+    "SPD": 81
+  },
+  "641487": {
+    "name": "J.P. Crawford",
+    "sprint_speed_ft_s": 26.1,
+    "SPD": 44
+  },
+  "701398": {
+    "name": "Sal Stewart",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "678391": {
+    "name": "Jorbit Vivas",
+    "sprint_speed_ft_s": 27.0,
+    "SPD": 55
+  },
+  "687957": {
+    "name": "Dustin Harris",
+    "sprint_speed_ft_s": 28.6,
+    "SPD": 75
+  },
+  "622761": {
+    "name": "Jorge Mateo",
+    "sprint_speed_ft_s": 30.3,
+    "SPD": 96
+  },
+  "665953": {
+    "name": "Andr\u00e9s Chaparro",
+    "sprint_speed_ft_s": 25.1,
+    "SPD": 31
+  },
+  "682987": {
+    "name": "Spencer Jones",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
+  },
+  "694203": {
+    "name": "Denzer Guzman",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "641933": {
+    "name": "Tyler O'Neill",
+    "sprint_speed_ft_s": 28.0,
+    "SPD": 68
+  },
+  "669208": {
+    "name": "Ryan Bliss",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "685133": {
+    "name": "Wade Meckler",
+    "sprint_speed_ft_s": 28.9,
+    "SPD": 79
+  },
+  "683357": {
+    "name": "Owen Caissie",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "695670": {
+    "name": "Harry Ford",
+    "sprint_speed_ft_s": 27.3,
+    "SPD": 59
+  },
+  "624431": {
+    "name": "Jose Trevino",
+    "sprint_speed_ft_s": 23.4,
+    "SPD": 10
+  },
+  "669236": {
+    "name": "Jeremiah Jackson",
+    "sprint_speed_ft_s": 27.1,
+    "SPD": 56
+  },
+  "691723": {
+    "name": "Coby Mayo",
+    "sprint_speed_ft_s": 27.9,
+    "SPD": 66
+  },
+  "694377": {
+    "name": "Nick Yorke",
+    "sprint_speed_ft_s": 27.7,
+    "SPD": 64
+  },
+  "602104": {
+    "name": "Ram\u00f3n Ur\u00edas",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "675961": {
+    "name": "Alika Williams",
+    "sprint_speed_ft_s": 27.6,
+    "SPD": 63
+  },
+  "672356": {
+    "name": "Gabriel Arias",
+    "sprint_speed_ft_s": 26.7,
+    "SPD": 51
+  },
+  "677649": {
+    "name": "Ezequiel Duran",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
+  },
+  "670097": {
+    "name": "Zack Short",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
   "670231": {
     "name": "John Rave",
     "sprint_speed_ft_s": 28.8,
     "SPD": 78
+  },
+  "661531": {
+    "name": "Brian Serven",
+    "sprint_speed_ft_s": 25.2,
+    "SPD": 32
+  },
+  "681198": {
+    "name": "TJ Rumfield",
+    "sprint_speed_ft_s": 25.0,
+    "SPD": 30
+  },
+  "681047": {
+    "name": "Christian Franklin",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "656941": {
+    "name": "Kyle Schwarber",
+    "sprint_speed_ft_s": 25.8,
+    "SPD": 40
+  },
+  "671277": {
+    "name": "Luis Garc\u00eda Jr.",
+    "sprint_speed_ft_s": 26.5,
+    "SPD": 49
+  },
+  "673962": {
+    "name": "Josh Jung",
+    "sprint_speed_ft_s": 25.8,
+    "SPD": 40
+  },
+  "676551": {
+    "name": "Brewer Hicklen",
+    "sprint_speed_ft_s": 29.0,
+    "SPD": 80
+  },
+  "682818": {
+    "name": "Yohendrick Pi\u00f1ango",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "663586": {
+    "name": "Austin Riley",
+    "sprint_speed_ft_s": 27.8,
+    "SPD": 65
+  },
+  "694376": {
+    "name": "Shay Whitcomb",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "686797": {
+    "name": "Brooks Lee",
+    "sprint_speed_ft_s": 26.4,
+    "SPD": 47
+  },
+  "695657": {
+    "name": "Colson Montgomery",
+    "sprint_speed_ft_s": 26.5,
+    "SPD": 49
+  },
+  "805808": {
+    "name": "Kevin McGonigle",
+    "sprint_speed_ft_s": 28.2,
+    "SPD": 70
+  },
+  "596142": {
+    "name": "Gary S\u00e1nchez",
+    "sprint_speed_ft_s": 24.5,
+    "SPD": 24
+  },
+  "677060": {
+    "name": "Chad Stevens",
+    "sprint_speed_ft_s": 27.2,
+    "SPD": 57
+  },
+  "703607": {
+    "name": "Henry Bolte",
+    "sprint_speed_ft_s": 30.5,
+    "SPD": 99
+  },
+  "668974": {
+    "name": "Maverick Handley",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "643446": {
+    "name": "Jeff McNeil",
+    "sprint_speed_ft_s": 26.0,
+    "SPD": 42
+  },
+  "669717": {
+    "name": "Will Wilson",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "694192": {
+    "name": "Jackson Chourio",
+    "sprint_speed_ft_s": 28.7,
+    "SPD": 76
+  },
+  "502671": {
+    "name": "Paul Goldschmidt",
+    "sprint_speed_ft_s": 25.4,
+    "SPD": 35
+  },
+  "699302": {
+    "name": "H\u00e9ctor Rodr\u00edguez",
+    "sprint_speed_ft_s": 26.8,
+    "SPD": 53
+  },
+  "656413": {
+    "name": "Stuart Fairchild",
+    "sprint_speed_ft_s": 27.5,
+    "SPD": 61
+  },
+  "686681": {
+    "name": "Michael Massey",
+    "sprint_speed_ft_s": 26.9,
+    "SPD": 54
+  },
+  "571970": {
+    "name": "Max Muncy",
+    "sprint_speed_ft_s": 27.1,
+    "SPD": 56
+  },
+  "686469": {
+    "name": "Vinnie Pasquantino",
+    "sprint_speed_ft_s": 25.7,
+    "SPD": 39
+  },
+  "682634": {
+    "name": "Kevin Alc\u00e1ntara",
+    "sprint_speed_ft_s": 27.4,
+    "SPD": 60
+  },
+  "671655": {
+    "name": "George Valera",
+    "sprint_speed_ft_s": 25.5,
+    "SPD": 36
+  },
+  "699912": {
+    "name": "Jose Fernandez",
+    "sprint_speed_ft_s": 29.5,
+    "SPD": 86
+  },
+  "703492": {
+    "name": "Nick Morabito",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
+  "668939": {
+    "name": "Adley Rutschman",
+    "sprint_speed_ft_s": 26.2,
+    "SPD": 45
   }
 }
