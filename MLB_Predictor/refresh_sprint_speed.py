@@ -175,6 +175,7 @@ def main():
 
     sprint_speed_data = {}
     shift_detected_count = 0
+    missing_speed_count = 0          # <-- add this line
     for row in rows:
         last_name_raw = row.get(last_name_col, "").strip() if last_name_col else ""
         shift_detected = "," in last_name_raw
