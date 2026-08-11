@@ -979,6 +979,13 @@
     "xwoba": 0.284,
     "avg_exit_velo": 85.7
   },
+  "678225": {
+    "name": "Jihwan Bae",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 0.0,
+    "xwoba": 0.354,
+    "avg_exit_velo": null
+  },
   "663586": {
     "name": "Austin Riley",
     "barrel_pct": 11.5,
@@ -1307,6 +1314,13 @@
     "hardhit_pct": 38.1,
     "xwoba": 0.305,
     "avg_exit_velo": 89.4
+  },
+  "681146": {
+    "name": "Jonah Bride",
+    "barrel_pct": 0.0,
+    "hardhit_pct": 50.0,
+    "xwoba": 0.143,
+    "avg_exit_velo": 95.8
   },
   "666624": {
     "name": "Christopher Morel",
