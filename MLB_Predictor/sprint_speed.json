@@ -699,6 +699,11 @@
     "sprint_speed_ft_s": 27.7,
     "SPD": 64
   },
+  "678225": {
+    "name": "Jihwan Bae",
+    "sprint_speed_ft_s": null,
+    "SPD": null
+  },
   "663586": {
     "name": "Austin Riley",
     "sprint_speed_ft_s": 27.8,
@@ -933,6 +938,11 @@
     "name": "Wyatt Langford",
     "sprint_speed_ft_s": 28.4,
     "SPD": 72
+  },
+  "681146": {
+    "name": "Jonah Bride",
+    "sprint_speed_ft_s": null,
+    "SPD": null
   },
   "666624": {
     "name": "Christopher Morel",
