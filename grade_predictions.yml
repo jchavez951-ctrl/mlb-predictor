@@ -1,0 +1,36 @@
+name: Nightly Prediction Grading
+
+on:
+  schedule:
+    # 11:40 UTC = 4:40am PT -- late enough that every West Coast game is final.
+    - cron: "40 11 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Grade predictions
+        run: python MLB_Predictor/grade_predictions.py
+
+      - name: Commit and push graded predictions
+        run: |
+          git config user.name "actions-user"
+          git config user.email "actions@github.com"
+          git add MLB_Predictor/predictions_log.jsonl
+          git diff --staged --quiet || git commit -m "Automated nightly prediction grading"
+          git push
