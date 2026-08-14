@@ -1814,7 +1814,7 @@ else:
                             player_id = name_to_id.get(name)
                             cq = CONTACT_QUALITY.get(player_id, {}) if player_id else {}
                             all_rows.append({
-                                "Team": team_name, "Hitter": name, "playerID": player_
+                                "Team": team_name, "Hitter": name, "PlayerID": player_id, "HR Over 0.5%": hr_p,
                                 "Barrel%": cq.get("barrel_pct"), "HardHit%": cq.get("hardhit_pct"),
                                 "Exit Velo": cq.get("avg_exit_velo"),
                                 "COMB": comb_score_shared(hr_p, cq.get("barrel_pct"), cq.get("hardhit_pct")),
