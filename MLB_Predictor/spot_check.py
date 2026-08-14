@@ -1822,6 +1822,7 @@ else:
                     progress.progress((i + 1) / len(games))
                 ok, msg = prediction_log.log_predictions(all_rows, iterations=300)
                 if ok: st.caption(f"Logged: {msg}")
+                else: st.warning(f"Logging failed: {msg}")
                 all_rows.sort(key=lambda r: r["COMB"], reverse=True)
                 top_10 = all_rows[:10]
 
