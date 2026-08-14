@@ -175,7 +175,7 @@ def main():
 
     sprint_speed_data = {}
     shift_detected_count = 0
-    missing_speed_count = 0          # <-- add this line
+    missing_speed_count = 0          
     for row in rows:
         last_name_raw = row.get(last_name_col, "").strip() if last_name_col else ""
         shift_detected = "," in last_name_raw
@@ -200,6 +200,9 @@ def main():
             continue
 
         sprint_speed_ft_s = to_float(speed_val)
+       if sprint_speed_ft_s is None:
+            missing_speed_count += 1
+            continue
         sprint_speed_data[player_id] = {
             "name": name,
             "sprint_speed_ft_s": sprint_speed_ft_s,
@@ -207,6 +210,7 @@ def main():
         }
 
     print(f"Rows where the name/column shift was detected and corrected: {shift_detected_count} of {len(rows)}")
+    print(f"Skipped {missing_speed_count} players with no sprint speed reported by Savant.")
     print(f"Built sprint speed data for {len(sprint_speed_data)} hitters.")
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
