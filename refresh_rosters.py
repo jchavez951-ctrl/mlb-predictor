@@ -18,6 +18,16 @@ writes the result out as MLB_Predictor/roster_data.json. The GitHub Actions
 workflow that calls this script handles committing and pushing that file --
 this script itself just writes it locally.
 
+PITCHERS NOW CARRY A PlayerID
+------------------------------
+Hitter entries have always included "PlayerID" (the stable numeric MLB ID),
+which is what lets sprint speed and hitter contact quality match against
+Baseball Savant reliably -- name strings are formatted differently between
+the two sources and silently fail to match for a lot of players. Pitcher
+entries were missing it entirely, so nothing keyed by PlayerID could ever
+find a pitcher. build_pitcher_entry() now takes and stores it the same way
+build_hitter_entry() does.
+
 WHAT THIS DOES NOT DO (be aware of these before trusting the output)
 ----------------------------------------------------------------------
 1. It does NOT know today's actual starting 9 -- real teams typically don't
@@ -29,13 +39,11 @@ WHAT THIS DOES NOT DO (be aware of these before trusting the output)
 2. SPD (speed rating, 0-100 scale) isn't in this API in a directly usable
    form -- true sprint speed lives in Statcast/Baseball Savant, a different
    data source. This script assigns a neutral default (55) for every player;
-   if you want real speed differentiation, that's a separate follow-up.
+   refresh_sprint_speed.py overrides it with real values at app load time.
 3. Pitcher "Role" (SP vs RP vs Closer) isn't an explicit field anywhere in
    the API -- it's inferred here from games-started ratio and saves count.
    This heuristic will occasionally misclassify a swingman or a committee
    closer situation; spot-check it after the first run.
-4. This has NOT been run against the live API yet. Test it (see the
-   workflow's manual-trigger option) before trusting it.
 """
 
 import json
@@ -201,7 +209,7 @@ def build_hitter_entry(name, bats, stat, player_id=None):
     }
 
 
-def build_pitcher_entry(name, throws, stat):
+def build_pitcher_entry(name, throws, stat, player_id=None):
     ip_str = stat.get("inningsPitched", "0.0")
     try:
         whole, _, frac = ip_str.partition(".")
@@ -220,7 +228,7 @@ def build_pitcher_entry(name, throws, stat):
 
     if bf < 15:
         return {
-            "Player": name, "Pos": "P", "Role": "RP", "Throws": throws,
+            "Player": name, "PlayerID": player_id, "Pos": "P", "Role": "RP", "Throws": throws,
             "BB_ALLOWED_RATE": LEAGUE_BASELINE["BB_RATE"], "K_ALLOWED_RATE": LEAGUE_BASELINE["K_RATE"],
             "HR_PA_ALLOWED_RATE": LEAGUE_BASELINE["HR_PA_RATE"], "BABIP_ALLOWED": LEAGUE_BASELINE["BABIP"],
             "OAVG": LEAGUE_BASELINE["AVG"], "IP": "0.0", "ERA": 4.50, "Fatigue": 0.0,
@@ -240,7 +248,7 @@ def build_pitcher_entry(name, throws, stat):
     babip_allowed = safe_div(h - hr, balls_in_play_faced, LEAGUE_BASELINE["BABIP"])
 
     return {
-        "Player": name, "Pos": "P", "Role": role, "Throws": throws,
+        "Player": name, "PlayerID": player_id, "Pos": "P", "Role": role, "Throws": throws,
         "BB_ALLOWED_RATE": round(safe_div(bb, bf, LEAGUE_BASELINE["BB_RATE"]), 3),
         "K_ALLOWED_RATE": round(safe_div(so, bf, LEAGUE_BASELINE["K_RATE"]), 3),
         "HR_PA_ALLOWED_RATE": round(safe_div(hr, bf, LEAGUE_BASELINE["HR_PA_RATE"]), 3),
@@ -284,7 +292,7 @@ def refresh_team(team_name, team_id):
             if stat is None:
                 continue
             _, throws = get_handedness(player["id"])
-            pitching.append(build_pitcher_entry(player["name"], throws, stat))
+            pitching.append(build_pitcher_entry(player["name"], throws, stat, player_id=player["id"]))
         else:
             stat = get_season_hitting_stats(player["id"])
             if stat is None:
@@ -317,11 +325,17 @@ def main():
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w") as f:
         json.dump(roster_database, f, indent=2)
+
     total_players = sum(len(v["hitting"]) + len(v["pitching"]) for v in roster_database.values())
+    pitchers_with_id = sum(
+        1 for v in roster_database.values() for p in v["pitching"] if p.get("PlayerID")
+    )
+    total_pitchers = sum(len(v["pitching"]) for v in roster_database.values())
     print(f"\nDone. Wrote {OUTPUT_PATH} ({total_players} total players across {len(roster_database)} teams).")
+    print(f"Pitchers carrying a PlayerID: {pitchers_with_id} of {total_pitchers}")
+    if pitchers_with_id < total_pitchers:
+        print("[WARN] Some pitchers have no PlayerID -- anything keyed by ID (contact quality allowed) will silently skip them.")
 
 
 if __name__ == "__main__":
     main()
-  
- 
