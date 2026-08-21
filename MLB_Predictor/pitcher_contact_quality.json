@@ -8,18 +8,8 @@
     "gb_pct": 49.1,
     "fb_pct": 18.6,
     "bbe": null,
-    "pa": 339.0
-  },
-  "622694": {
-    "name": "Elieser Hern\u00e1ndez",
-    "barrel_pct_allowed": 5.6,
-    "hardhit_pct_allowed": 27.8,
-    "xwoba_allowed": 0.247,
-    "avg_exit_velo_allowed": 85.9,
-    "gb_pct": 38.9,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 28.0
+    "pa": 339.0,
+    "sample_field": "pa"
   },
   "693645": {
     "name": "Cam Schlittler",
@@ -30,18 +20,8 @@
     "gb_pct": 42.7,
     "fb_pct": 27.2,
     "bbe": null,
-    "pa": 602.0
-  },
-  "680702": {
-    "name": "Joey Gerber",
-    "barrel_pct_allowed": 9.1,
-    "hardhit_pct_allowed": 54.5,
-    "xwoba_allowed": 0.309,
-    "avg_exit_velo_allowed": 93.7,
-    "gb_pct": 22.7,
-    "fb_pct": 31.8,
-    "bbe": null,
-    "pa": 34.0
+    "pa": 602.0,
+    "sample_field": "pa"
   },
   "681870": {
     "name": "Erik Sabrowski",
@@ -52,7 +32,8 @@
     "gb_pct": 20.0,
     "fb_pct": 34.3,
     "bbe": null,
-    "pa": 156.0
+    "pa": 156.0,
+    "sample_field": "pa"
   },
   "673513": {
     "name": "Yuki Matsui",
@@ -63,7 +44,8 @@
     "gb_pct": 34.7,
     "fb_pct": 28.8,
     "bbe": null,
-    "pa": 198.0
+    "pa": 198.0,
+    "sample_field": "pa"
   },
   "696519": {
     "name": "Samy Natera Jr.",
@@ -74,29 +56,8 @@
     "gb_pct": 21.6,
     "fb_pct": 41.2,
     "bbe": null,
-    "pa": 104.0
-  },
-  "666126": {
-    "name": "Carlos Cortes",
-    "barrel_pct_allowed": 12.1,
-    "hardhit_pct_allowed": 37.1,
-    "xwoba_allowed": 0.401,
-    "avg_exit_velo_allowed": 86.5,
-    "gb_pct": 34.3,
-    "fb_pct": 40.0,
-    "bbe": null,
-    "pa": 41.0
-  },
-  "647315": {
-    "name": "Zach Pop",
-    "barrel_pct_allowed": 4.8,
-    "hardhit_pct_allowed": 47.6,
-    "xwoba_allowed": 0.317,
-    "avg_exit_velo_allowed": 93.3,
-    "gb_pct": 52.4,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 31.0
+    "pa": 104.0,
+    "sample_field": "pa"
   },
   "656222": {
     "name": "Jalen Beeks",
@@ -107,29 +68,8 @@
     "gb_pct": 44.0,
     "fb_pct": 27.4,
     "bbe": null,
-    "pa": 113.0
-  },
-  "677020": {
-    "name": "Josh Walker",
-    "barrel_pct_allowed": 4.2,
-    "hardhit_pct_allowed": 39.6,
-    "xwoba_allowed": 0.275,
-    "avg_exit_velo_allowed": 89.8,
-    "gb_pct": 41.7,
-    "fb_pct": 35.4,
-    "bbe": null,
-    "pa": 70.0
-  },
-  "701474": {
-    "name": "Duncan Davitt",
-    "barrel_pct_allowed": 16.7,
-    "hardhit_pct_allowed": 83.3,
-    "xwoba_allowed": 0.448,
-    "avg_exit_velo_allowed": 94.5,
-    "gb_pct": 33.3,
-    "fb_pct": 16.7,
-    "bbe": null,
-    "pa": 8.0
+    "pa": 113.0,
+    "sample_field": "pa"
   },
   "641329": {
     "name": "Bryan Baker",
@@ -140,18 +80,8 @@
     "gb_pct": 40.8,
     "fb_pct": 25.8,
     "bbe": null,
-    "pa": 193.0
-  },
-  "657265": {
-    "name": "Peter Strzelecki",
-    "barrel_pct_allowed": 4.9,
-    "hardhit_pct_allowed": 36.6,
-    "xwoba_allowed": 0.27,
-    "avg_exit_velo_allowed": 91.0,
-    "gb_pct": 36.6,
-    "fb_pct": 41.5,
-    "bbe": null,
-    "pa": 54.0
+    "pa": 193.0,
+    "sample_field": "pa"
   },
   "671922": {
     "name": "Cade Smith",
@@ -162,29 +92,8 @@
     "gb_pct": 40.6,
     "fb_pct": 30.1,
     "bbe": null,
-    "pa": 234.0
-  },
-  "676510": {
-    "name": "Nolan Hoffman",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 31.3,
-    "xwoba_allowed": 0.341,
-    "avg_exit_velo_allowed": 81.4,
-    "gb_pct": 43.8,
-    "fb_pct": 12.5,
-    "bbe": null,
-    "pa": 21.0
-  },
-  "682997": {
-    "name": "Tyler Callihan",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 54.5,
-    "xwoba_allowed": 0.38,
-    "avg_exit_velo_allowed": 91.8,
-    "gb_pct": 36.4,
-    "fb_pct": 36.4,
-    "bbe": null,
-    "pa": 15.0
+    "pa": 234.0,
+    "sample_field": "pa"
   },
   "808963": {
     "name": "Roki Sasaki",
@@ -195,7 +104,8 @@
     "gb_pct": 43.3,
     "fb_pct": 26.2,
     "bbe": null,
-    "pa": 493.0
+    "pa": 493.0,
+    "sample_field": "pa"
   },
   "605280": {
     "name": "Clay Holmes",
@@ -206,7 +116,8 @@
     "gb_pct": 59.6,
     "fb_pct": 19.2,
     "bbe": null,
-    "pa": 278.0
+    "pa": 278.0,
+    "sample_field": "pa"
   },
   "573124": {
     "name": "Taylor Rogers",
@@ -217,7 +128,8 @@
     "gb_pct": 37.9,
     "fb_pct": 29.7,
     "bbe": null,
-    "pa": 208.0
+    "pa": 208.0,
+    "sample_field": "pa"
   },
   "696147": {
     "name": "Sam Bachman",
@@ -228,7 +140,8 @@
     "gb_pct": 50.8,
     "fb_pct": 21.3,
     "bbe": null,
-    "pa": 198.0
+    "pa": 198.0,
+    "sample_field": "pa"
   },
   "607200": {
     "name": "Erick Fedde",
@@ -239,7 +152,8 @@
     "gb_pct": 38.5,
     "fb_pct": 29.8,
     "bbe": null,
-    "pa": 498.0
+    "pa": 498.0,
+    "sample_field": "pa"
   },
   "669373": {
     "name": "Tarik Skubal",
@@ -250,7 +164,8 @@
     "gb_pct": 45.1,
     "fb_pct": 25.9,
     "bbe": null,
-    "pa": 446.0
+    "pa": 446.0,
+    "sample_field": "pa"
   },
   "680730": {
     "name": "Mitchell Parker",
@@ -261,40 +176,8 @@
     "gb_pct": 40.3,
     "fb_pct": 27.9,
     "bbe": null,
-    "pa": 178.0
-  },
-  "694795": {
-    "name": "Josh Ekness",
-    "barrel_pct_allowed": 8.1,
-    "hardhit_pct_allowed": 35.1,
-    "xwoba_allowed": 0.329,
-    "avg_exit_velo_allowed": 84.8,
-    "gb_pct": 43.2,
-    "fb_pct": 32.4,
-    "bbe": null,
-    "pa": 53.0
-  },
-  "670912": {
-    "name": "Johan Oviedo",
-    "barrel_pct_allowed": 23.1,
-    "hardhit_pct_allowed": 61.5,
-    "xwoba_allowed": 0.484,
-    "avg_exit_velo_allowed": 92.4,
-    "gb_pct": 46.2,
-    "fb_pct": 38.5,
-    "bbe": null,
-    "pa": 18.0
-  },
-  "690953": {
-    "name": "Mick Abel",
-    "barrel_pct_allowed": 5.3,
-    "hardhit_pct_allowed": 40.4,
-    "xwoba_allowed": 0.349,
-    "avg_exit_velo_allowed": 87.7,
-    "gb_pct": 40.4,
-    "fb_pct": 24.6,
-    "bbe": null,
-    "pa": 93.0
+    "pa": 178.0,
+    "sample_field": "pa"
   },
   "681402": {
     "name": "Gus Varland",
@@ -305,18 +188,8 @@
     "gb_pct": 28.3,
     "fb_pct": 32.1,
     "bbe": null,
-    "pa": 151.0
-  },
-  "661563": {
-    "name": "Luis Gil",
-    "barrel_pct_allowed": 9.7,
-    "hardhit_pct_allowed": 46.8,
-    "xwoba_allowed": 0.385,
-    "avg_exit_velo_allowed": 93.2,
-    "gb_pct": 46.8,
-    "fb_pct": 32.3,
-    "bbe": null,
-    "pa": 85.0
+    "pa": 151.0,
+    "sample_field": "pa"
   },
   "665795": {
     "name": "Edward Cabrera",
@@ -327,7 +200,8 @@
     "gb_pct": 43.4,
     "fb_pct": 25.0,
     "bbe": null,
-    "pa": 329.0
+    "pa": 329.0,
+    "sample_field": "pa"
   },
   "691799": {
     "name": "Grant Taylor",
@@ -338,18 +212,8 @@
     "gb_pct": 47.4,
     "fb_pct": 26.3,
     "bbe": null,
-    "pa": 263.0
-  },
-  "701719": {
-    "name": "Tyler Samaniego",
-    "barrel_pct_allowed": 3.2,
-    "hardhit_pct_allowed": 36.5,
-    "xwoba_allowed": 0.331,
-    "avg_exit_velo_allowed": 90.0,
-    "gb_pct": 49.2,
-    "fb_pct": 20.6,
-    "bbe": null,
-    "pa": 90.0
+    "pa": 263.0,
+    "sample_field": "pa"
   },
   "668674": {
     "name": "Lucas Erceg",
@@ -360,51 +224,8 @@
     "gb_pct": 50.7,
     "fb_pct": 15.5,
     "bbe": null,
-    "pa": 208.0
-  },
-  "605335": {
-    "name": "Brandon Leibrandt",
-    "barrel_pct_allowed": 18.2,
-    "hardhit_pct_allowed": 29.2,
-    "xwoba_allowed": 0.437,
-    "avg_exit_velo_allowed": 88.1,
-    "gb_pct": 33.3,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 30.0
-  },
-  "605242": {
-    "name": "Michael Fulmer",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 16.7,
-    "xwoba_allowed": 0.337,
-    "avg_exit_velo_allowed": 82.1,
-    "gb_pct": 33.3,
-    "fb_pct": 16.7,
-    "bbe": null,
-    "pa": 11.0
-  },
-  "679885": {
-    "name": "Justin Martinez",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 0.0,
-    "xwoba_allowed": 0.397,
-    "avg_exit_velo_allowed": 71.6,
-    "gb_pct": 33.3,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 5.0
-  },
-  "700363": {
-    "name": "AJ Smith-Shawver",
-    "barrel_pct_allowed": 7.1,
-    "hardhit_pct_allowed": 35.7,
-    "xwoba_allowed": 0.363,
-    "avg_exit_velo_allowed": 88.7,
-    "gb_pct": 39.3,
-    "fb_pct": 21.4,
-    "bbe": null,
-    "pa": 40.0
+    "pa": 208.0,
+    "sample_field": "pa"
   },
   "607625": {
     "name": "Seth Lugo",
@@ -415,7 +236,8 @@
     "gb_pct": 41.5,
     "fb_pct": 29.5,
     "bbe": null,
-    "pa": 619.0
+    "pa": 619.0,
+    "sample_field": "pa"
   },
   "646241": {
     "name": "Enmanuel De Jesus",
@@ -426,7 +248,8 @@
     "gb_pct": 41.3,
     "fb_pct": 27.3,
     "bbe": null,
-    "pa": 177.0
+    "pa": 177.0,
+    "sample_field": "pa"
   },
   "691946": {
     "name": "George Klassen",
@@ -437,7 +260,8 @@
     "gb_pct": 52.5,
     "fb_pct": 21.3,
     "bbe": null,
-    "pa": 101.0
+    "pa": 101.0,
+    "sample_field": "pa"
   },
   "668941": {
     "name": "JoJo Romero",
@@ -448,7 +272,8 @@
     "gb_pct": 48.8,
     "fb_pct": 22.0,
     "bbe": null,
-    "pa": 186.0
+    "pa": 186.0,
+    "sample_field": "pa"
   },
   "676083": {
     "name": "Janson Junk",
@@ -459,7 +284,8 @@
     "gb_pct": 45.7,
     "fb_pct": 21.9,
     "bbe": null,
-    "pa": 396.0
+    "pa": 396.0,
+    "sample_field": "pa"
   },
   "663423": {
     "name": "Trent Thornton",
@@ -470,7 +296,8 @@
     "gb_pct": 49.6,
     "fb_pct": 24.3,
     "bbe": null,
-    "pa": 153.0
+    "pa": 153.0,
+    "sample_field": "pa"
   },
   "686560": {
     "name": "Gavin Collyer",
@@ -481,7 +308,8 @@
     "gb_pct": 36.2,
     "fb_pct": 24.1,
     "bbe": null,
-    "pa": 105.0
+    "pa": 105.0,
+    "sample_field": "pa"
   },
   "683175": {
     "name": "Connor Phillips",
@@ -492,18 +320,8 @@
     "gb_pct": 25.7,
     "fb_pct": 37.8,
     "bbe": null,
-    "pa": 133.0
-  },
-  "683627": {
-    "name": "Anthony Molina",
-    "barrel_pct_allowed": 5.6,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.36,
-    "avg_exit_velo_allowed": 81.7,
-    "gb_pct": 55.6,
-    "fb_pct": 22.2,
-    "bbe": null,
-    "pa": 21.0
+    "pa": 133.0,
+    "sample_field": "pa"
   },
   "669438": {
     "name": "Mason Englert",
@@ -514,7 +332,8 @@
     "gb_pct": 31.0,
     "fb_pct": 32.8,
     "bbe": null,
-    "pa": 157.0
+    "pa": 157.0,
+    "sample_field": "pa"
   },
   "669432": {
     "name": "Trevor Rogers",
@@ -525,7 +344,8 @@
     "gb_pct": 39.9,
     "fb_pct": 24.5,
     "bbe": null,
-    "pa": 529.0
+    "pa": 529.0,
+    "sample_field": "pa"
   },
   "663554": {
     "name": "Casey Mize",
@@ -536,7 +356,8 @@
     "gb_pct": 32.8,
     "fb_pct": 31.0,
     "bbe": null,
-    "pa": 408.0
+    "pa": 408.0,
+    "sample_field": "pa"
   },
   "656546": {
     "name": "Jeff Hoffman",
@@ -547,7 +368,8 @@
     "gb_pct": 45.1,
     "fb_pct": 21.8,
     "bbe": null,
-    "pa": 248.0
+    "pa": 248.0,
+    "sample_field": "pa"
   },
   "687396": {
     "name": "Brent Headrick",
@@ -558,18 +380,8 @@
     "gb_pct": 38.3,
     "fb_pct": 25.3,
     "bbe": null,
-    "pa": 261.0
-  },
-  "681432": {
-    "name": "Luke Little",
-    "barrel_pct_allowed": 25.0,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.527,
-    "avg_exit_velo_allowed": 90.0,
-    "gb_pct": 75.0,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 5.0
+    "pa": 261.0,
+    "sample_field": "pa"
   },
   "681217": {
     "name": "Chase Silseth",
@@ -580,7 +392,8 @@
     "gb_pct": 37.3,
     "fb_pct": 30.2,
     "bbe": null,
-    "pa": 213.0
+    "pa": 213.0,
+    "sample_field": "pa"
   },
   "663460": {
     "name": "Kris Bubic",
@@ -591,18 +404,8 @@
     "gb_pct": 45.7,
     "fb_pct": 27.9,
     "bbe": null,
-    "pa": 207.0
-  },
-  "669704": {
-    "name": "Kade Strowd",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.509,
-    "avg_exit_velo_allowed": 90.5,
-    "gb_pct": 0.0,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 7.0
+    "pa": 207.0,
+    "sample_field": "pa"
   },
   "683352": {
     "name": "Mitch Bratt",
@@ -613,18 +416,8 @@
     "gb_pct": 27.0,
     "fb_pct": 33.3,
     "bbe": null,
-    "pa": 159.0
-  },
-  "702153": {
-    "name": "Brian Fitzpatrick",
-    "barrel_pct_allowed": 4.5,
-    "hardhit_pct_allowed": 22.7,
-    "xwoba_allowed": 0.257,
-    "avg_exit_velo_allowed": 80.8,
-    "gb_pct": 50.0,
-    "fb_pct": 18.2,
-    "bbe": null,
-    "pa": 30.0
+    "pa": 159.0,
+    "sample_field": "pa"
   },
   "684974": {
     "name": "Craig Yoho",
@@ -635,7 +428,8 @@
     "gb_pct": 42.0,
     "fb_pct": 29.0,
     "bbe": null,
-    "pa": 109.0
+    "pa": 109.0,
+    "sample_field": "pa"
   },
   "571948": {
     "name": "Hoby Milner",
@@ -646,7 +440,8 @@
     "gb_pct": 43.7,
     "fb_pct": 23.5,
     "bbe": null,
-    "pa": 149.0
+    "pa": 149.0,
+    "sample_field": "pa"
   },
   "680802": {
     "name": "Ryan Weiss",
@@ -657,7 +452,8 @@
     "gb_pct": 33.3,
     "fb_pct": 27.2,
     "bbe": null,
-    "pa": 131.0
+    "pa": 131.0,
+    "sample_field": "pa"
   },
   "687570": {
     "name": "Connor Prielipp",
@@ -668,7 +464,8 @@
     "gb_pct": 43.1,
     "fb_pct": 26.8,
     "bbe": null,
-    "pa": 382.0
+    "pa": 382.0,
+    "sample_field": "pa"
   },
   "805326": {
     "name": "Tyler Schweitzer",
@@ -679,7 +476,8 @@
     "gb_pct": 41.8,
     "fb_pct": 27.8,
     "bbe": null,
-    "pa": 102.0
+    "pa": 102.0,
+    "sample_field": "pa"
   },
   "820862": {
     "name": "Jos\u00e9 Fermin",
@@ -690,18 +488,8 @@
     "gb_pct": 47.2,
     "fb_pct": 23.1,
     "bbe": null,
-    "pa": 181.0
-  },
-  "663432": {
-    "name": "Tanner Rainey",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 28.6,
-    "xwoba_allowed": 0.31,
-    "avg_exit_velo_allowed": 87.5,
-    "gb_pct": 0.0,
-    "fb_pct": 42.9,
-    "bbe": null,
-    "pa": 15.0
+    "pa": 181.0,
+    "sample_field": "pa"
   },
   "571945": {
     "name": "Miles Mikolas",
@@ -712,7 +500,8 @@
     "gb_pct": 45.3,
     "fb_pct": 26.5,
     "bbe": null,
-    "pa": 498.0
+    "pa": 498.0,
+    "sample_field": "pa"
   },
   "694346": {
     "name": "Trey Gibson",
@@ -723,18 +512,8 @@
     "gb_pct": 51.4,
     "fb_pct": 20.0,
     "bbe": null,
-    "pa": 161.0
-  },
-  "657649": {
-    "name": "Jared Koenig",
-    "barrel_pct_allowed": 7.7,
-    "hardhit_pct_allowed": 46.2,
-    "xwoba_allowed": 0.337,
-    "avg_exit_velo_allowed": 92.8,
-    "gb_pct": 50.0,
-    "fb_pct": 23.1,
-    "bbe": null,
-    "pa": 41.0
+    "pa": 161.0,
+    "sample_field": "pa"
   },
   "641927": {
     "name": "Bailey Ober",
@@ -745,7 +524,8 @@
     "gb_pct": 34.0,
     "fb_pct": 30.7,
     "bbe": null,
-    "pa": 435.0
+    "pa": 435.0,
+    "sample_field": "pa"
   },
   "670329": {
     "name": "Rico Garcia",
@@ -756,7 +536,8 @@
     "gb_pct": 41.2,
     "fb_pct": 25.7,
     "bbe": null,
-    "pa": 210.0
+    "pa": 210.0,
+    "sample_field": "pa"
   },
   "677865": {
     "name": "Justin Bruihl",
@@ -767,7 +548,8 @@
     "gb_pct": 53.0,
     "fb_pct": 18.5,
     "bbe": null,
-    "pa": 274.0
+    "pa": 274.0,
+    "sample_field": "pa"
   },
   "676684": {
     "name": "Will Vest",
@@ -778,7 +560,8 @@
     "gb_pct": 62.3,
     "fb_pct": 19.5,
     "bbe": null,
-    "pa": 116.0
+    "pa": 116.0,
+    "sample_field": "pa"
   },
   "694335": {
     "name": "Matt Svanson",
@@ -789,18 +572,8 @@
     "gb_pct": 37.8,
     "fb_pct": 27.3,
     "bbe": null,
-    "pa": 207.0
-  },
-  "669169": {
-    "name": "Jonathan Heasley",
-    "barrel_pct_allowed": 11.8,
-    "hardhit_pct_allowed": 58.8,
-    "xwoba_allowed": 0.479,
-    "avg_exit_velo_allowed": 95.1,
-    "gb_pct": 29.4,
-    "fb_pct": 47.1,
-    "bbe": null,
-    "pa": 19.0
+    "pa": 207.0,
+    "sample_field": "pa"
   },
   "669270": {
     "name": "Joel Kuhnel",
@@ -811,51 +584,8 @@
     "gb_pct": 50.4,
     "fb_pct": 16.0,
     "bbe": null,
-    "pa": 157.0
-  },
-  "670183": {
-    "name": "Garrett Acton",
-    "barrel_pct_allowed": 6.7,
-    "hardhit_pct_allowed": 40.0,
-    "xwoba_allowed": 0.251,
-    "avg_exit_velo_allowed": 95.6,
-    "gb_pct": 33.3,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 28.0
-  },
-  "702752": {
-    "name": "Jonathan Pintaro",
-    "barrel_pct_allowed": 6.5,
-    "hardhit_pct_allowed": 40.4,
-    "xwoba_allowed": 0.32,
-    "avg_exit_velo_allowed": 90.4,
-    "gb_pct": 48.9,
-    "fb_pct": 27.7,
-    "bbe": null,
-    "pa": 77.0
-  },
-  "680474": {
-    "name": "Max Schuemann",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 0.0,
-    "xwoba_allowed": 0.43,
-    "avg_exit_velo_allowed": 88.0,
-    "gb_pct": 25.0,
-    "fb_pct": 50.0,
-    "bbe": null,
-    "pa": 5.0
-  },
-  "800600": {
-    "name": "Jackson Kent",
-    "barrel_pct_allowed": 4.2,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.377,
-    "avg_exit_velo_allowed": 90.9,
-    "gb_pct": 54.2,
-    "fb_pct": 12.5,
-    "bbe": null,
-    "pa": 41.0
+    "pa": 157.0,
+    "sample_field": "pa"
   },
   "607074": {
     "name": "Carlos Rod\u00f3n",
@@ -866,7 +596,8 @@
     "gb_pct": 40.5,
     "fb_pct": 27.0,
     "bbe": null,
-    "pa": 211.0
+    "pa": 211.0,
+    "sample_field": "pa"
   },
   "805427": {
     "name": "Drew Sommers",
@@ -877,7 +608,8 @@
     "gb_pct": 58.5,
     "fb_pct": 17.0,
     "bbe": null,
-    "pa": 103.0
+    "pa": 103.0,
+    "sample_field": "pa"
   },
   "665622": {
     "name": "Luis Medina",
@@ -888,7 +620,8 @@
     "gb_pct": 37.8,
     "fb_pct": 32.4,
     "bbe": null,
-    "pa": 248.0
+    "pa": 248.0,
+    "sample_field": "pa"
   },
   "687075": {
     "name": "Brandon Sproat",
@@ -899,29 +632,8 @@
     "gb_pct": 43.2,
     "fb_pct": 27.6,
     "bbe": null,
-    "pa": 414.0
-  },
-  "814305": {
-    "name": "Yunior Tur",
-    "barrel_pct_allowed": 27.3,
-    "hardhit_pct_allowed": 34.8,
-    "xwoba_allowed": 0.55,
-    "avg_exit_velo_allowed": 89.1,
-    "gb_pct": 26.1,
-    "fb_pct": 47.8,
-    "bbe": null,
-    "pa": 34.0
-  },
-  "607481": {
-    "name": "Aaron Bummer",
-    "barrel_pct_allowed": 12.7,
-    "hardhit_pct_allowed": 49.2,
-    "xwoba_allowed": 0.382,
-    "avg_exit_velo_allowed": 91.7,
-    "gb_pct": 47.6,
-    "fb_pct": 30.2,
-    "bbe": null,
-    "pa": 88.0
+    "pa": 414.0,
+    "sample_field": "pa"
   },
   "656638": {
     "name": "Alex Lange",
@@ -932,18 +644,8 @@
     "gb_pct": 45.7,
     "fb_pct": 25.4,
     "bbe": null,
-    "pa": 222.0
-  },
-  "700842": {
-    "name": "Eduardo Rivera",
-    "barrel_pct_allowed": 3.6,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.297,
-    "avg_exit_velo_allowed": 91.8,
-    "gb_pct": 50.0,
-    "fb_pct": 21.4,
-    "bbe": null,
-    "pa": 44.0
+    "pa": 222.0,
+    "sample_field": "pa"
   },
   "657571": {
     "name": "Caleb Ferguson",
@@ -954,18 +656,8 @@
     "gb_pct": 51.2,
     "fb_pct": 20.9,
     "bbe": null,
-    "pa": 130.0
-  },
-  "680704": {
-    "name": "Nick Sandlin",
-    "barrel_pct_allowed": 7.7,
-    "hardhit_pct_allowed": 38.5,
-    "xwoba_allowed": 0.377,
-    "avg_exit_velo_allowed": 87.0,
-    "gb_pct": 42.3,
-    "fb_pct": 38.5,
-    "bbe": null,
-    "pa": 40.0
+    "pa": 130.0,
+    "sample_field": "pa"
   },
   "518585": {
     "name": "Fernando Cruz",
@@ -976,7 +668,8 @@
     "gb_pct": 32.5,
     "fb_pct": 34.1,
     "bbe": null,
-    "pa": 224.0
+    "pa": 224.0,
+    "sample_field": "pa"
   },
   "691725": {
     "name": "Andrew Painter",
@@ -987,18 +680,8 @@
     "gb_pct": 40.7,
     "fb_pct": 27.1,
     "bbe": null,
-    "pa": 383.0
-  },
-  "684665": {
-    "name": "Luke Murphy",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 27.3,
-    "xwoba_allowed": 0.259,
-    "avg_exit_velo_allowed": 84.7,
-    "gb_pct": 36.4,
-    "fb_pct": 22.7,
-    "bbe": null,
-    "pa": 35.0
+    "pa": 383.0,
+    "sample_field": "pa"
   },
   "669022": {
     "name": "MacKenzie Gore",
@@ -1009,7 +692,8 @@
     "gb_pct": 38.3,
     "fb_pct": 26.2,
     "bbe": null,
-    "pa": 597.0
+    "pa": 597.0,
+    "sample_field": "pa"
   },
   "661395": {
     "name": "Jhoan Duran",
@@ -1020,7 +704,8 @@
     "gb_pct": 59.8,
     "fb_pct": 11.2,
     "bbe": null,
-    "pa": 181.0
+    "pa": 181.0,
+    "sample_field": "pa"
   },
   "656945": {
     "name": "Tanner Scott",
@@ -1031,18 +716,8 @@
     "gb_pct": 35.2,
     "fb_pct": 32.8,
     "bbe": null,
-    "pa": 197.0
-  },
-  "702047": {
-    "name": "Alex Cook",
-    "barrel_pct_allowed": 7.7,
-    "hardhit_pct_allowed": 46.2,
-    "xwoba_allowed": 0.293,
-    "avg_exit_velo_allowed": 91.9,
-    "gb_pct": 7.7,
-    "fb_pct": 30.8,
-    "bbe": null,
-    "pa": 17.0
+    "pa": 197.0,
+    "sample_field": "pa"
   },
   "699823": {
     "name": "Tyler Davis",
@@ -1053,18 +728,8 @@
     "gb_pct": 40.6,
     "fb_pct": 24.6,
     "bbe": null,
-    "pa": 106.0
-  },
-  "693713": {
-    "name": "Emiliano Teodo",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.38,
-    "avg_exit_velo_allowed": 91.5,
-    "gb_pct": 42.9,
-    "fb_pct": 14.3,
-    "bbe": null,
-    "pa": 10.0
+    "pa": 106.0,
+    "sample_field": "pa"
   },
   "676534": {
     "name": "Calvin Faucher",
@@ -1075,7 +740,8 @@
     "gb_pct": 54.4,
     "fb_pct": 17.6,
     "bbe": null,
-    "pa": 231.0
+    "pa": 231.0,
+    "sample_field": "pa"
   },
   "676263": {
     "name": "Jack Dreyer",
@@ -1086,18 +752,8 @@
     "gb_pct": 48.4,
     "fb_pct": 25.4,
     "bbe": null,
-    "pa": 208.0
-  },
-  "608371": {
-    "name": "Lucas Sims",
-    "barrel_pct_allowed": 7.1,
-    "hardhit_pct_allowed": 39.3,
-    "xwoba_allowed": 0.33,
-    "avg_exit_velo_allowed": 86.8,
-    "gb_pct": 42.9,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 46.0
+    "pa": 208.0,
+    "sample_field": "pa"
   },
   "669165": {
     "name": "Kyle Hurt",
@@ -1108,7 +764,8 @@
     "gb_pct": 43.1,
     "fb_pct": 25.5,
     "bbe": null,
-    "pa": 176.0
+    "pa": 176.0,
+    "sample_field": "pa"
   },
   "656271": {
     "name": "Brock Burke",
@@ -1119,18 +776,8 @@
     "gb_pct": 40.7,
     "fb_pct": 30.5,
     "bbe": null,
-    "pa": 271.0
-  },
-  "673929": {
-    "name": "Jordan Leasure",
-    "barrel_pct_allowed": 25.0,
-    "hardhit_pct_allowed": 44.2,
-    "xwoba_allowed": 0.406,
-    "avg_exit_velo_allowed": 92.4,
-    "gb_pct": 23.1,
-    "fb_pct": 50.0,
-    "bbe": null,
-    "pa": 78.0
+    "pa": 271.0,
+    "sample_field": "pa"
   },
   "680767": {
     "name": "Victor Vodnik",
@@ -1141,40 +788,8 @@
     "gb_pct": 58.3,
     "fb_pct": 14.4,
     "bbe": null,
-    "pa": 197.0
-  },
-  "694680": {
-    "name": "Trevor Martin",
-    "barrel_pct_allowed": 12.2,
-    "hardhit_pct_allowed": 48.8,
-    "xwoba_allowed": 0.385,
-    "avg_exit_velo_allowed": 90.9,
-    "gb_pct": 41.5,
-    "fb_pct": 36.6,
-    "bbe": null,
-    "pa": 54.0
-  },
-  "689149": {
-    "name": "Chad Dallas",
-    "barrel_pct_allowed": 3.7,
-    "hardhit_pct_allowed": 37.0,
-    "xwoba_allowed": 0.32,
-    "avg_exit_velo_allowed": 90.1,
-    "gb_pct": 37.0,
-    "fb_pct": 29.6,
-    "bbe": null,
-    "pa": 39.0
-  },
-  "664854": {
-    "name": "Ryan Helsley",
-    "barrel_pct_allowed": 5.3,
-    "hardhit_pct_allowed": 47.4,
-    "xwoba_allowed": 0.265,
-    "avg_exit_velo_allowed": 89.5,
-    "gb_pct": 60.5,
-    "fb_pct": 26.3,
-    "bbe": null,
-    "pa": 68.0
+    "pa": 197.0,
+    "sample_field": "pa"
   },
   "676775": {
     "name": "Keaton Winn",
@@ -1185,7 +800,8 @@
     "gb_pct": 49.6,
     "fb_pct": 21.1,
     "bbe": null,
-    "pa": 176.0
+    "pa": 176.0,
+    "sample_field": "pa"
   },
   "596001": {
     "name": "Jakob Junis",
@@ -1196,18 +812,8 @@
     "gb_pct": 41.4,
     "fb_pct": 26.3,
     "bbe": null,
-    "pa": 177.0
-  },
-  "664192": {
-    "name": "Joey Lucchesi",
-    "barrel_pct_allowed": 15.4,
-    "hardhit_pct_allowed": 69.2,
-    "xwoba_allowed": 0.441,
-    "avg_exit_velo_allowed": 95.2,
-    "gb_pct": 69.2,
-    "fb_pct": 15.4,
-    "bbe": null,
-    "pa": 24.0
+    "pa": 177.0,
+    "sample_field": "pa"
   },
   "593958": {
     "name": "Eduardo Rodriguez",
@@ -1218,7 +824,8 @@
     "gb_pct": 40.7,
     "fb_pct": 28.9,
     "bbe": null,
-    "pa": 613.0
+    "pa": 613.0,
+    "sample_field": "pa"
   },
   "700241": {
     "name": "Michael McGreevy",
@@ -1229,18 +836,8 @@
     "gb_pct": 44.7,
     "fb_pct": 27.4,
     "bbe": null,
-    "pa": 558.0
-  },
-  "679775": {
-    "name": "Kyle Backhus",
-    "barrel_pct_allowed": 4.6,
-    "hardhit_pct_allowed": 30.3,
-    "xwoba_allowed": 0.308,
-    "avg_exit_velo_allowed": 86.0,
-    "gb_pct": 45.5,
-    "fb_pct": 22.7,
-    "bbe": null,
-    "pa": 94.0
+    "pa": 558.0,
+    "sample_field": "pa"
   },
   "663372": {
     "name": "Ryan Feltner",
@@ -1251,7 +848,8 @@
     "gb_pct": 42.8,
     "fb_pct": 29.9,
     "bbe": null,
-    "pa": 408.0
+    "pa": 408.0,
+    "sample_field": "pa"
   },
   "623211": {
     "name": "Huascar Brazob\u00e1n",
@@ -1262,84 +860,8 @@
     "gb_pct": 49.4,
     "fb_pct": 23.5,
     "bbe": null,
-    "pa": 242.0
-  },
-  "624431": {
-    "name": "Jose Trevino",
-    "barrel_pct_allowed": 11.5,
-    "hardhit_pct_allowed": 53.8,
-    "xwoba_allowed": 0.436,
-    "avg_exit_velo_allowed": 93.2,
-    "gb_pct": 38.5,
-    "fb_pct": 19.2,
-    "bbe": null,
-    "pa": 29.0
-  },
-  "685005": {
-    "name": "Christian Roa",
-    "barrel_pct_allowed": 7.4,
-    "hardhit_pct_allowed": 63.0,
-    "xwoba_allowed": 0.415,
-    "avg_exit_velo_allowed": 91.8,
-    "gb_pct": 33.3,
-    "fb_pct": 25.9,
-    "bbe": null,
-    "pa": 43.0
-  },
-  "694851": {
-    "name": "Andrew Hoffmann",
-    "barrel_pct_allowed": 8.1,
-    "hardhit_pct_allowed": 43.2,
-    "xwoba_allowed": 0.336,
-    "avg_exit_velo_allowed": 89.9,
-    "gb_pct": 35.1,
-    "fb_pct": 29.7,
-    "bbe": null,
-    "pa": 59.0
-  },
-  "665665": {
-    "name": "Reiver Sanmartin",
-    "barrel_pct_allowed": 15.2,
-    "hardhit_pct_allowed": 48.5,
-    "xwoba_allowed": 0.354,
-    "avg_exit_velo_allowed": 88.8,
-    "gb_pct": 45.5,
-    "fb_pct": 18.2,
-    "bbe": null,
-    "pa": 46.0
-  },
-  "694646": {
-    "name": "Chayce McDermott",
-    "barrel_pct_allowed": 21.1,
-    "hardhit_pct_allowed": 36.8,
-    "xwoba_allowed": 0.382,
-    "avg_exit_velo_allowed": 91.9,
-    "gb_pct": 15.8,
-    "fb_pct": 47.4,
-    "bbe": null,
-    "pa": 25.0
-  },
-  "695001": {
-    "name": "Alimber Santa",
-    "barrel_pct_allowed": 2.3,
-    "hardhit_pct_allowed": 34.1,
-    "xwoba_allowed": 0.267,
-    "avg_exit_velo_allowed": 83.8,
-    "gb_pct": 52.3,
-    "fb_pct": 27.3,
-    "bbe": null,
-    "pa": 59.0
-  },
-  "700327": {
-    "name": "Welinton Herrera",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 57.1,
-    "xwoba_allowed": 0.333,
-    "avg_exit_velo_allowed": 94.6,
-    "gb_pct": 28.6,
-    "fb_pct": 42.9,
-    "bbe": null,
-    "pa": 10.0
+    "pa": 242.0,
+    "sample_field": "pa"
   },
   "622608": {
     "name": "Antonio Senzatela",
@@ -1350,18 +872,8 @@
     "gb_pct": 45.9,
     "fb_pct": 27.3,
     "bbe": null,
-    "pa": 243.0
-  },
-  "815081": {
-    "name": "Mark Manfredi",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 0.0,
-    "xwoba_allowed": 0.242,
-    "avg_exit_velo_allowed": 86.1,
-    "gb_pct": 33.3,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 6.0
+    "pa": 243.0,
+    "sample_field": "pa"
   },
   "675660": {
     "name": "Shane Drohan",
@@ -1372,7 +884,8 @@
     "gb_pct": 41.6,
     "fb_pct": 29.0,
     "bbe": null,
-    "pa": 421.0
+    "pa": 421.0,
+    "sample_field": "pa"
   },
   "621097": {
     "name": "Jacob Waguespack",
@@ -1383,29 +896,8 @@
     "gb_pct": 48.1,
     "fb_pct": 27.2,
     "bbe": null,
-    "pa": 107.0
-  },
-  "666745": {
-    "name": "Jhony Brito",
-    "barrel_pct_allowed": 6.7,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.256,
-    "avg_exit_velo_allowed": 87.2,
-    "gb_pct": 26.7,
-    "fb_pct": 53.3,
-    "bbe": null,
-    "pa": 20.0
-  },
-  "666374": {
-    "name": "Matt Brash",
-    "barrel_pct_allowed": 5.0,
-    "hardhit_pct_allowed": 40.0,
-    "xwoba_allowed": 0.316,
-    "avg_exit_velo_allowed": 88.9,
-    "gb_pct": 42.5,
-    "fb_pct": 12.5,
-    "bbe": null,
-    "pa": 64.0
+    "pa": 107.0,
+    "sample_field": "pa"
   },
   "664199": {
     "name": "Taylor Clarke",
@@ -1416,40 +908,8 @@
     "gb_pct": 50.3,
     "fb_pct": 22.8,
     "bbe": null,
-    "pa": 215.0
-  },
-  "621016": {
-    "name": "Jose Cuas",
-    "barrel_pct_allowed": 3.3,
-    "hardhit_pct_allowed": 36.7,
-    "xwoba_allowed": 0.321,
-    "avg_exit_velo_allowed": 85.4,
-    "gb_pct": 26.7,
-    "fb_pct": 26.7,
-    "bbe": null,
-    "pa": 47.0
-  },
-  "676051": {
-    "name": "Codi Heuer",
-    "barrel_pct_allowed": 2.9,
-    "hardhit_pct_allowed": 52.9,
-    "xwoba_allowed": 0.335,
-    "avg_exit_velo_allowed": 92.6,
-    "gb_pct": 41.2,
-    "fb_pct": 32.4,
-    "bbe": null,
-    "pa": 46.0
-  },
-  "679922": {
-    "name": "Carlos Duran",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 0.0,
-    "xwoba_allowed": 0.333,
-    "avg_exit_velo_allowed": 75.9,
-    "gb_pct": 80.0,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 9.0
+    "pa": 215.0,
+    "sample_field": "pa"
   },
   "678020": {
     "name": "Seth Halvorsen",
@@ -1460,7 +920,8 @@
     "gb_pct": 40.3,
     "fb_pct": 19.4,
     "bbe": null,
-    "pa": 100.0
+    "pa": 100.0,
+    "sample_field": "pa"
   },
   "663623": {
     "name": "Jake Irvin",
@@ -1471,7 +932,8 @@
     "gb_pct": 37.4,
     "fb_pct": 31.0,
     "bbe": null,
-    "pa": 313.0
+    "pa": 313.0,
+    "sample_field": "pa"
   },
   "596133": {
     "name": "Luke Weaver",
@@ -1482,7 +944,8 @@
     "gb_pct": 41.1,
     "fb_pct": 30.6,
     "bbe": null,
-    "pa": 187.0
+    "pa": 187.0,
+    "sample_field": "pa"
   },
   "690986": {
     "name": "Kyle Harrison",
@@ -1493,7 +956,8 @@
     "gb_pct": 39.2,
     "fb_pct": 28.8,
     "bbe": null,
-    "pa": 402.0
+    "pa": 402.0,
+    "sample_field": "pa"
   },
   "489446": {
     "name": "Kirby Yates",
@@ -1504,29 +968,8 @@
     "gb_pct": 32.2,
     "fb_pct": 29.9,
     "bbe": null,
-    "pa": 148.0
-  },
-  "661527": {
-    "name": "Seth Martinez",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.36,
-    "avg_exit_velo_allowed": 82.8,
-    "gb_pct": 25.0,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 6.0
-  },
-  "592288": {
-    "name": "Kent Emanuel",
-    "barrel_pct_allowed": 6.7,
-    "hardhit_pct_allowed": 40.0,
-    "xwoba_allowed": 0.307,
-    "avg_exit_velo_allowed": 91.4,
-    "gb_pct": 33.3,
-    "fb_pct": 20.0,
-    "bbe": null,
-    "pa": 23.0
+    "pa": 148.0,
+    "sample_field": "pa"
   },
   "696149": {
     "name": "Bubba Chandler",
@@ -1537,18 +980,8 @@
     "gb_pct": 40.0,
     "fb_pct": 28.3,
     "bbe": null,
-    "pa": 528.0
-  },
-  "694462": {
-    "name": "Hurston Waldrep",
-    "barrel_pct_allowed": 8.6,
-    "hardhit_pct_allowed": 34.3,
-    "xwoba_allowed": 0.359,
-    "avg_exit_velo_allowed": 89.3,
-    "gb_pct": 71.4,
-    "fb_pct": 14.3,
-    "bbe": null,
-    "pa": 56.0
+    "pa": 528.0,
+    "sample_field": "pa"
   },
   "668909": {
     "name": "Gavin Williams",
@@ -1559,7 +992,8 @@
     "gb_pct": 43.9,
     "fb_pct": 25.5,
     "bbe": null,
-    "pa": 621.0
+    "pa": 621.0,
+    "sample_field": "pa"
   },
   "592791": {
     "name": "Jameson Taillon",
@@ -1570,18 +1004,8 @@
     "gb_pct": 34.4,
     "fb_pct": 38.3,
     "bbe": null,
-    "pa": 362.0
-  },
-  "688883": {
-    "name": "Peyton Pallette",
-    "barrel_pct_allowed": 7.1,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.356,
-    "avg_exit_velo_allowed": 89.5,
-    "gb_pct": 35.7,
-    "fb_pct": 17.9,
-    "bbe": null,
-    "pa": 97.0
+    "pa": 362.0,
+    "sample_field": "pa"
   },
   "605288": {
     "name": "Adrian Houser",
@@ -1592,7 +1016,8 @@
     "gb_pct": 44.8,
     "fb_pct": 24.6,
     "bbe": null,
-    "pa": 464.0
+    "pa": 464.0,
+    "sample_field": "pa"
   },
   "592662": {
     "name": "Robbie Ray",
@@ -1603,40 +1028,8 @@
     "gb_pct": 36.7,
     "fb_pct": 34.7,
     "bbe": null,
-    "pa": 578.0
-  },
-  "642152": {
-    "name": "Lou Trivino III",
-    "barrel_pct_allowed": 4.8,
-    "hardhit_pct_allowed": 38.1,
-    "xwoba_allowed": 0.33,
-    "avg_exit_velo_allowed": 85.3,
-    "gb_pct": 38.1,
-    "fb_pct": 23.8,
-    "bbe": null,
-    "pa": 36.0
-  },
-  "623381": {
-    "name": "Thomas Pannone",
-    "barrel_pct_allowed": 10.0,
-    "hardhit_pct_allowed": 30.0,
-    "xwoba_allowed": 0.4,
-    "avg_exit_velo_allowed": 88.2,
-    "gb_pct": 40.0,
-    "fb_pct": 20.0,
-    "bbe": null,
-    "pa": 14.0
-  },
-  "686228": {
-    "name": "Juan Burgos",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 18.2,
-    "xwoba_allowed": 0.208,
-    "avg_exit_velo_allowed": 82.3,
-    "gb_pct": 54.5,
-    "fb_pct": 9.1,
-    "bbe": null,
-    "pa": 12.0
+    "pa": 578.0,
+    "sample_field": "pa"
   },
   "681895": {
     "name": "Evan Sisk",
@@ -1647,18 +1040,8 @@
     "gb_pct": 43.6,
     "fb_pct": 14.9,
     "bbe": null,
-    "pa": 174.0
-  },
-  "656986": {
-    "name": "Bennett Sousa",
-    "barrel_pct_allowed": 9.5,
-    "hardhit_pct_allowed": 31.0,
-    "xwoba_allowed": 0.253,
-    "avg_exit_velo_allowed": 87.1,
-    "gb_pct": 33.3,
-    "fb_pct": 45.2,
-    "bbe": null,
-    "pa": 67.0
+    "pa": 174.0,
+    "sample_field": "pa"
   },
   "667297": {
     "name": "Tommy Nance",
@@ -1669,7 +1052,8 @@
     "gb_pct": 49.2,
     "fb_pct": 21.4,
     "bbe": null,
-    "pa": 194.0
+    "pa": 194.0,
+    "sample_field": "pa"
   },
   "669062": {
     "name": "Erik Miller",
@@ -1680,7 +1064,8 @@
     "gb_pct": 53.4,
     "fb_pct": 15.9,
     "bbe": null,
-    "pa": 173.0
+    "pa": 173.0,
+    "sample_field": "pa"
   },
   "642546": {
     "name": "Jonathan Hern\u00e1ndez",
@@ -1691,7 +1076,8 @@
     "gb_pct": 40.5,
     "fb_pct": 31.1,
     "bbe": null,
-    "pa": 109.0
+    "pa": 109.0,
+    "sample_field": "pa"
   },
   "680744": {
     "name": "Ty Madden",
@@ -1702,7 +1088,8 @@
     "gb_pct": 40.6,
     "fb_pct": 24.0,
     "bbe": null,
-    "pa": 146.0
+    "pa": 146.0,
+    "sample_field": "pa"
   },
   "694918": {
     "name": "Blade Tidwell",
@@ -1713,7 +1100,8 @@
     "gb_pct": 40.5,
     "fb_pct": 19.0,
     "bbe": null,
-    "pa": 110.0
+    "pa": 110.0,
+    "sample_field": "pa"
   },
   "669358": {
     "name": "Shane Baz",
@@ -1724,18 +1112,8 @@
     "gb_pct": 38.7,
     "fb_pct": 26.7,
     "bbe": null,
-    "pa": 623.0
-  },
-  "656686": {
-    "name": "Corbin Martin",
-    "barrel_pct_allowed": 12.5,
-    "hardhit_pct_allowed": 56.3,
-    "xwoba_allowed": 0.396,
-    "avg_exit_velo_allowed": 93.3,
-    "gb_pct": 37.5,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 25.0
+    "pa": 623.0,
+    "sample_field": "pa"
   },
   "657044": {
     "name": "Ryan Thompson",
@@ -1746,40 +1124,8 @@
     "gb_pct": 51.8,
     "fb_pct": 14.9,
     "bbe": null,
-    "pa": 186.0
-  },
-  "672582": {
-    "name": "Angel Zerpa",
-    "barrel_pct_allowed": 7.3,
-    "hardhit_pct_allowed": 51.2,
-    "xwoba_allowed": 0.405,
-    "avg_exit_velo_allowed": 92.4,
-    "gb_pct": 61.0,
-    "fb_pct": 14.6,
-    "bbe": null,
-    "pa": 55.0
-  },
-  "695445": {
-    "name": "Chase Lee",
-    "barrel_pct_allowed": 11.1,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.35,
-    "avg_exit_velo_allowed": 87.8,
-    "gb_pct": 48.1,
-    "fb_pct": 29.6,
-    "bbe": null,
-    "pa": 37.0
-  },
-  "687859": {
-    "name": "Troy Johnston",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 66.7,
-    "xwoba_allowed": 0.376,
-    "avg_exit_velo_allowed": 94.1,
-    "gb_pct": 66.7,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 5.0
+    "pa": 186.0,
+    "sample_field": "pa"
   },
   "669387": {
     "name": "Carmen Mlodzinski",
@@ -1790,7 +1136,8 @@
     "gb_pct": 40.5,
     "fb_pct": 24.5,
     "bbe": null,
-    "pa": 451.0
+    "pa": 451.0,
+    "sample_field": "pa"
   },
   "700712": {
     "name": "Walbert Ure\u00f1a",
@@ -1801,7 +1148,8 @@
     "gb_pct": 53.8,
     "fb_pct": 23.1,
     "bbe": null,
-    "pa": 479.0
+    "pa": 479.0,
+    "sample_field": "pa"
   },
   "664208": {
     "name": "Phil Maton",
@@ -1812,18 +1160,8 @@
     "gb_pct": 41.7,
     "fb_pct": 19.0,
     "bbe": null,
-    "pa": 136.0
-  },
-  "689441": {
-    "name": "Coleman Crow",
-    "barrel_pct_allowed": 7.4,
-    "hardhit_pct_allowed": 36.8,
-    "xwoba_allowed": 0.34,
-    "avg_exit_velo_allowed": 89.2,
-    "gb_pct": 36.8,
-    "fb_pct": 26.5,
-    "bbe": null,
-    "pa": 85.0
+    "pa": 136.0,
+    "sample_field": "pa"
   },
   "666808": {
     "name": "Camilo Doval",
@@ -1834,29 +1172,8 @@
     "gb_pct": 55.0,
     "fb_pct": 20.7,
     "bbe": null,
-    "pa": 217.0
-  },
-  "691945": {
-    "name": "Carter Baumler",
-    "barrel_pct_allowed": 7.1,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.359,
-    "avg_exit_velo_allowed": 91.8,
-    "gb_pct": 28.6,
-    "fb_pct": 42.9,
-    "bbe": null,
-    "pa": 27.0
-  },
-  "694363": {
-    "name": "Jared Shuster",
-    "barrel_pct_allowed": 2.9,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.311,
-    "avg_exit_velo_allowed": 91.0,
-    "gb_pct": 50.0,
-    "fb_pct": 29.4,
-    "bbe": null,
-    "pa": 44.0
+    "pa": 217.0,
+    "sample_field": "pa"
   },
   "679883": {
     "name": "Luinder Avila",
@@ -1867,18 +1184,8 @@
     "gb_pct": 47.5,
     "fb_pct": 25.5,
     "bbe": null,
-    "pa": 309.0
-  },
-  "671106": {
-    "name": "Logan Allen",
-    "barrel_pct_allowed": 10.7,
-    "hardhit_pct_allowed": 53.6,
-    "xwoba_allowed": 0.312,
-    "avg_exit_velo_allowed": 90.9,
-    "gb_pct": 53.6,
-    "fb_pct": 35.7,
-    "bbe": null,
-    "pa": 42.0
+    "pa": 309.0,
+    "sample_field": "pa"
   },
   "656464": {
     "name": "Kevin Ginkel",
@@ -1889,7 +1196,8 @@
     "gb_pct": 39.9,
     "fb_pct": 28.8,
     "bbe": null,
-    "pa": 217.0
+    "pa": 217.0,
+    "sample_field": "pa"
   },
   "642100": {
     "name": "Gabe Speier",
@@ -1900,7 +1208,8 @@
     "gb_pct": 43.0,
     "fb_pct": 25.8,
     "bbe": null,
-    "pa": 140.0
+    "pa": 140.0,
+    "sample_field": "pa"
   },
   "686751": {
     "name": "Seth Johnson",
@@ -1911,40 +1220,8 @@
     "gb_pct": 37.1,
     "fb_pct": 19.4,
     "bbe": null,
-    "pa": 106.0
-  },
-  "682989": {
-    "name": "Victor Mederos",
-    "barrel_pct_allowed": 4.8,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.291,
-    "avg_exit_velo_allowed": 89.4,
-    "gb_pct": 34.9,
-    "fb_pct": 27.0,
-    "bbe": null,
-    "pa": 92.0
-  },
-  "673380": {
-    "name": "Dedniel N\u00fa\u00f1ez",
-    "barrel_pct_allowed": 9.1,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.402,
-    "avg_exit_velo_allowed": 93.7,
-    "gb_pct": 36.4,
-    "fb_pct": 36.4,
-    "bbe": null,
-    "pa": 27.0
-  },
-  "687531": {
-    "name": "William Kempner",
-    "barrel_pct_allowed": 3.3,
-    "hardhit_pct_allowed": 23.3,
-    "xwoba_allowed": 0.306,
-    "avg_exit_velo_allowed": 85.8,
-    "gb_pct": 30.0,
-    "fb_pct": 26.7,
-    "bbe": null,
-    "pa": 50.0
+    "pa": 106.0,
+    "sample_field": "pa"
   },
   "608566": {
     "name": "Germ\u00e1n M\u00e1rquez",
@@ -1955,7 +1232,8 @@
     "gb_pct": 38.7,
     "fb_pct": 33.5,
     "bbe": null,
-    "pa": 236.0
+    "pa": 236.0,
+    "sample_field": "pa"
   },
   "666200": {
     "name": "Jes\u00fas Luzardo",
@@ -1966,7 +1244,8 @@
     "gb_pct": 50.4,
     "fb_pct": 21.0,
     "bbe": null,
-    "pa": 621.0
+    "pa": 621.0,
+    "sample_field": "pa"
   },
   "669276": {
     "name": "Dylan Lee",
@@ -1977,51 +1256,8 @@
     "gb_pct": 34.6,
     "fb_pct": 34.6,
     "bbe": null,
-    "pa": 216.0
-  },
-  "666711": {
-    "name": "Joel Peguero",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 24.3,
-    "xwoba_allowed": 0.256,
-    "avg_exit_velo_allowed": 84.5,
-    "gb_pct": 56.8,
-    "fb_pct": 21.6,
-    "bbe": null,
-    "pa": 48.0
-  },
-  "692230": {
-    "name": "Carlos Rodriguez",
-    "barrel_pct_allowed": 3.3,
-    "hardhit_pct_allowed": 16.7,
-    "xwoba_allowed": 0.282,
-    "avg_exit_velo_allowed": 83.5,
-    "gb_pct": 23.3,
-    "fb_pct": 36.7,
-    "bbe": null,
-    "pa": 42.0
-  },
-  "670103": {
-    "name": "Raymond Burgos",
-    "barrel_pct_allowed": 7.1,
-    "hardhit_pct_allowed": 35.7,
-    "xwoba_allowed": 0.296,
-    "avg_exit_velo_allowed": 90.5,
-    "gb_pct": 53.6,
-    "fb_pct": 32.1,
-    "bbe": null,
-    "pa": 34.0
-  },
-  "671162": {
-    "name": "Connor Thomas",
-    "barrel_pct_allowed": 8.3,
-    "hardhit_pct_allowed": 41.7,
-    "xwoba_allowed": 0.373,
-    "avg_exit_velo_allowed": 87.8,
-    "gb_pct": 44.4,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 49.0
+    "pa": 216.0,
+    "sample_field": "pa"
   },
   "547179": {
     "name": "Michael Lorenzen",
@@ -2032,7 +1268,8 @@
     "gb_pct": 44.5,
     "fb_pct": 24.7,
     "bbe": null,
-    "pa": 562.0
+    "pa": 562.0,
+    "sample_field": "pa"
   },
   "670245": {
     "name": "Ryan Watson",
@@ -2043,7 +1280,8 @@
     "gb_pct": 39.7,
     "fb_pct": 25.0,
     "bbe": null,
-    "pa": 253.0
+    "pa": 253.0,
+    "sample_field": "pa"
   },
   "607067": {
     "name": "Colin Rea",
@@ -2054,18 +1292,8 @@
     "gb_pct": 42.9,
     "fb_pct": 28.4,
     "bbe": null,
-    "pa": 535.0
-  },
-  "663465": {
-    "name": "Kolby Allard",
-    "barrel_pct_allowed": 15.6,
-    "hardhit_pct_allowed": 43.8,
-    "xwoba_allowed": 0.385,
-    "avg_exit_velo_allowed": 89.9,
-    "gb_pct": 40.6,
-    "fb_pct": 21.9,
-    "bbe": null,
-    "pa": 45.0
+    "pa": 535.0,
+    "sample_field": "pa"
   },
   "682254": {
     "name": "Mason Montgomery",
@@ -2076,7 +1304,8 @@
     "gb_pct": 56.1,
     "fb_pct": 18.7,
     "bbe": null,
-    "pa": 210.0
+    "pa": 210.0,
+    "sample_field": "pa"
   },
   "669084": {
     "name": "DL Hall",
@@ -2087,29 +1316,8 @@
     "gb_pct": 48.9,
     "fb_pct": 23.9,
     "bbe": null,
-    "pa": 162.0
-  },
-  "702352": {
-    "name": "Spencer Bivens",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.25,
-    "avg_exit_velo_allowed": 92.9,
-    "gb_pct": 50.0,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 10.0
-  },
-  "678576": {
-    "name": "Wilkin Ramos",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.459,
-    "avg_exit_velo_allowed": 89.5,
-    "gb_pct": 50.0,
-    "fb_pct": 20.0,
-    "bbe": null,
-    "pa": 15.0
+    "pa": 162.0,
+    "sample_field": "pa"
   },
   "673540": {
     "name": "Kodai Senga",
@@ -2120,7 +1328,8 @@
     "gb_pct": 30.9,
     "fb_pct": 33.8,
     "bbe": null,
-    "pa": 234.0
+    "pa": 234.0,
+    "sample_field": "pa"
   },
   "700249": {
     "name": "Cade Povich",
@@ -2131,18 +1340,8 @@
     "gb_pct": 42.0,
     "fb_pct": 30.7,
     "bbe": null,
-    "pa": 120.0
-  },
-  "656756": {
-    "name": "Jordan Montgomery",
-    "barrel_pct_allowed": 9.7,
-    "hardhit_pct_allowed": 35.5,
-    "xwoba_allowed": 0.368,
-    "avg_exit_velo_allowed": 88.2,
-    "gb_pct": 54.8,
-    "fb_pct": 19.4,
-    "bbe": null,
-    "pa": 38.0
+    "pa": 120.0,
+    "sample_field": "pa"
   },
   "695534": {
     "name": "Chase Petty",
@@ -2153,7 +1352,8 @@
     "gb_pct": 38.4,
     "fb_pct": 30.4,
     "bbe": null,
-    "pa": 139.0
+    "pa": 139.0,
+    "sample_field": "pa"
   },
   "663738": {
     "name": "Daniel Lynch IV",
@@ -2164,18 +1364,8 @@
     "gb_pct": 50.9,
     "fb_pct": 25.2,
     "bbe": null,
-    "pa": 218.0
-  },
-  "676105": {
-    "name": "Jeff Criswell",
-    "barrel_pct_allowed": 16.7,
-    "hardhit_pct_allowed": 25.0,
-    "xwoba_allowed": 0.436,
-    "avg_exit_velo_allowed": 84.8,
-    "gb_pct": 33.3,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 18.0
+    "pa": 218.0,
+    "sample_field": "pa"
   },
   "664126": {
     "name": "Pete Fairbanks",
@@ -2186,18 +1376,8 @@
     "gb_pct": 22.6,
     "fb_pct": 44.1,
     "bbe": null,
-    "pa": 166.0
-  },
-  "672629": {
-    "name": "Gerardo Carrillo",
-    "barrel_pct_allowed": 3.2,
-    "hardhit_pct_allowed": 19.4,
-    "xwoba_allowed": 0.222,
-    "avg_exit_velo_allowed": 84.6,
-    "gb_pct": 51.6,
-    "fb_pct": 19.4,
-    "bbe": null,
-    "pa": 55.0
+    "pa": 166.0,
+    "sample_field": "pa"
   },
   "623474": {
     "name": "Jimmy Herget",
@@ -2208,7 +1388,8 @@
     "gb_pct": 31.5,
     "fb_pct": 30.6,
     "bbe": null,
-    "pa": 169.0
+    "pa": 169.0,
+    "sample_field": "pa"
   },
   "681911": {
     "name": "Alex Vesia",
@@ -2219,7 +1400,8 @@
     "gb_pct": 29.4,
     "fb_pct": 39.2,
     "bbe": null,
-    "pa": 190.0
+    "pa": 190.0,
+    "sample_field": "pa"
   },
   "656641": {
     "name": "Jacob Latz",
@@ -2230,18 +1412,8 @@
     "gb_pct": 39.8,
     "fb_pct": 27.1,
     "bbe": null,
-    "pa": 210.0
-  },
-  "676568": {
-    "name": "Ricky Vanasco",
-    "barrel_pct_allowed": 6.7,
-    "hardhit_pct_allowed": 43.3,
-    "xwoba_allowed": 0.399,
-    "avg_exit_velo_allowed": 87.6,
-    "gb_pct": 43.3,
-    "fb_pct": 30.0,
-    "bbe": null,
-    "pa": 40.0
+    "pa": 210.0,
+    "sample_field": "pa"
   },
   "453286": {
     "name": "Max Scherzer",
@@ -2252,18 +1424,8 @@
     "gb_pct": 36.2,
     "fb_pct": 30.2,
     "bbe": null,
-    "pa": 202.0
-  },
-  "664731": {
-    "name": "P.J. Higgins",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 0.0,
-    "xwoba_allowed": 0.034,
-    "avg_exit_velo_allowed": 78.0,
-    "gb_pct": 0.0,
-    "fb_pct": 50.0,
-    "bbe": null,
-    "pa": 3.0
+    "pa": 202.0,
+    "sample_field": "pa"
   },
   "687064": {
     "name": "Brandon Young",
@@ -2274,7 +1436,8 @@
     "gb_pct": 43.3,
     "fb_pct": 26.8,
     "bbe": null,
-    "pa": 507.0
+    "pa": 507.0,
+    "sample_field": "pa"
   },
   "689147": {
     "name": "Orion Kerkering",
@@ -2285,62 +1448,8 @@
     "gb_pct": 33.6,
     "fb_pct": 32.8,
     "bbe": null,
-    "pa": 218.0
-  },
-  "640451": {
-    "name": "Hunter Harvey",
-    "barrel_pct_allowed": 23.1,
-    "hardhit_pct_allowed": 38.5,
-    "xwoba_allowed": 0.344,
-    "avg_exit_velo_allowed": 93.2,
-    "gb_pct": 46.2,
-    "fb_pct": 46.2,
-    "bbe": null,
-    "pa": 18.0
-  },
-  "684442": {
-    "name": "Kohl Drake",
-    "barrel_pct_allowed": 16.4,
-    "hardhit_pct_allowed": 49.1,
-    "xwoba_allowed": 0.43,
-    "avg_exit_velo_allowed": 91.6,
-    "gb_pct": 25.5,
-    "fb_pct": 40.0,
-    "bbe": null,
-    "pa": 77.0
-  },
-  "680689": {
-    "name": "Lyon Richardson",
-    "barrel_pct_allowed": 28.6,
-    "hardhit_pct_allowed": 25.0,
-    "xwoba_allowed": 0.478,
-    "avg_exit_velo_allowed": 88.8,
-    "gb_pct": 62.5,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 16.0
-  },
-  "677053": {
-    "name": "Andrew Nardi",
-    "barrel_pct_allowed": 13.3,
-    "hardhit_pct_allowed": 45.0,
-    "xwoba_allowed": 0.348,
-    "avg_exit_velo_allowed": 89.6,
-    "gb_pct": 43.3,
-    "fb_pct": 31.7,
-    "bbe": null,
-    "pa": 99.0
-  },
-  "804636": {
-    "name": "Jonah Tong",
-    "barrel_pct_allowed": 6.1,
-    "hardhit_pct_allowed": 30.3,
-    "xwoba_allowed": 0.309,
-    "avg_exit_velo_allowed": 89.9,
-    "gb_pct": 45.5,
-    "fb_pct": 39.4,
-    "bbe": null,
-    "pa": 47.0
+    "pa": 218.0,
+    "sample_field": "pa"
   },
   "666157": {
     "name": "Nick Lodolo",
@@ -2351,18 +1460,8 @@
     "gb_pct": 44.1,
     "fb_pct": 24.5,
     "bbe": null,
-    "pa": 316.0
-  },
-  "675989": {
-    "name": "Cody Bolton",
-    "barrel_pct_allowed": 10.3,
-    "hardhit_pct_allowed": 48.3,
-    "xwoba_allowed": 0.38,
-    "avg_exit_velo_allowed": 90.7,
-    "gb_pct": 37.9,
-    "fb_pct": 29.3,
-    "bbe": null,
-    "pa": 95.0
+    "pa": 316.0,
+    "sample_field": "pa"
   },
   "676604": {
     "name": "Tyler Zuber",
@@ -2373,18 +1472,8 @@
     "gb_pct": 47.9,
     "fb_pct": 31.0,
     "bbe": null,
-    "pa": 108.0
-  },
-  "608723": {
-    "name": "Austin Voth",
-    "barrel_pct_allowed": 8.5,
-    "hardhit_pct_allowed": 40.4,
-    "xwoba_allowed": 0.402,
-    "avg_exit_velo_allowed": 90.8,
-    "gb_pct": 25.5,
-    "fb_pct": 36.2,
-    "bbe": null,
-    "pa": 56.0
+    "pa": 108.0,
+    "sample_field": "pa"
   },
   "702273": {
     "name": "Noah Schultz",
@@ -2395,7 +1484,8 @@
     "gb_pct": 37.3,
     "fb_pct": 27.5,
     "bbe": null,
-    "pa": 291.0
+    "pa": 291.0,
+    "sample_field": "pa"
   },
   "678606": {
     "name": "Jos\u00e9 A. Ferrer",
@@ -2406,7 +1496,8 @@
     "gb_pct": 54.8,
     "fb_pct": 25.0,
     "bbe": null,
-    "pa": 231.0
+    "pa": 231.0,
+    "sample_field": "pa"
   },
   "685299": {
     "name": "Tanner Gordon",
@@ -2417,7 +1508,8 @@
     "gb_pct": 33.6,
     "fb_pct": 35.3,
     "bbe": null,
-    "pa": 312.0
+    "pa": 312.0,
+    "sample_field": "pa"
   },
   "669093": {
     "name": "Jeremiah Estrada",
@@ -2428,7 +1520,8 @@
     "gb_pct": 36.2,
     "fb_pct": 27.5,
     "bbe": null,
-    "pa": 122.0
+    "pa": 122.0,
+    "sample_field": "pa"
   },
   "681517": {
     "name": "Kyle Leahy",
@@ -2439,18 +1532,8 @@
     "gb_pct": 46.4,
     "fb_pct": 22.5,
     "bbe": null,
-    "pa": 516.0
-  },
-  "669724": {
-    "name": "Brenan Hanifee",
-    "barrel_pct_allowed": 8.1,
-    "hardhit_pct_allowed": 45.3,
-    "xwoba_allowed": 0.37,
-    "avg_exit_velo_allowed": 90.5,
-    "gb_pct": 61.3,
-    "fb_pct": 21.3,
-    "bbe": null,
-    "pa": 93.0
+    "pa": 516.0,
+    "sample_field": "pa"
   },
   "571578": {
     "name": "Patrick Corbin",
@@ -2461,29 +1544,8 @@
     "gb_pct": 39.5,
     "fb_pct": 24.1,
     "bbe": null,
-    "pa": 360.0
-  },
-  "687849": {
-    "name": "Zak Kent",
-    "barrel_pct_allowed": 11.8,
-    "hardhit_pct_allowed": 45.1,
-    "xwoba_allowed": 0.351,
-    "avg_exit_velo_allowed": 89.9,
-    "gb_pct": 39.2,
-    "fb_pct": 35.3,
-    "bbe": null,
-    "pa": 69.0
-  },
-  "687209": {
-    "name": "Zach Maxwell",
-    "barrel_pct_allowed": 11.4,
-    "hardhit_pct_allowed": 39.5,
-    "xwoba_allowed": 0.359,
-    "avg_exit_velo_allowed": 91.3,
-    "gb_pct": 26.7,
-    "fb_pct": 31.1,
-    "bbe": null,
-    "pa": 67.0
+    "pa": 360.0,
+    "sample_field": "pa"
   },
   "687606": {
     "name": "Paxton Schultz",
@@ -2494,7 +1556,8 @@
     "gb_pct": 34.6,
     "fb_pct": 36.4,
     "bbe": null,
-    "pa": 153.0
+    "pa": 153.0,
+    "sample_field": "pa"
   },
   "656302": {
     "name": "Dylan Cease",
@@ -2505,7 +1568,8 @@
     "gb_pct": 44.1,
     "fb_pct": 23.4,
     "bbe": null,
-    "pa": 553.0
+    "pa": 553.0,
+    "sample_field": "pa"
   },
   "683769": {
     "name": "Hunter Gaddis",
@@ -2516,7 +1580,8 @@
     "gb_pct": 33.3,
     "fb_pct": 32.5,
     "bbe": null,
-    "pa": 188.0
+    "pa": 188.0,
+    "sample_field": "pa"
   },
   "668678": {
     "name": "Zac Gallen",
@@ -2527,29 +1592,8 @@
     "gb_pct": 45.1,
     "fb_pct": 27.0,
     "bbe": null,
-    "pa": 440.0
-  },
-  "683155": {
-    "name": "Joey Estes",
-    "barrel_pct_allowed": 7.7,
-    "hardhit_pct_allowed": 30.8,
-    "xwoba_allowed": 0.263,
-    "avg_exit_velo_allowed": 91.8,
-    "gb_pct": 15.4,
-    "fb_pct": 46.2,
-    "bbe": null,
-    "pa": 18.0
-  },
-  "674003": {
-    "name": "Cody Bradford",
-    "barrel_pct_allowed": 10.2,
-    "hardhit_pct_allowed": 42.0,
-    "xwoba_allowed": 0.369,
-    "avg_exit_velo_allowed": 92.7,
-    "gb_pct": 34.0,
-    "fb_pct": 34.0,
-    "bbe": null,
-    "pa": 65.0
+    "pa": 440.0,
+    "sample_field": "pa"
   },
   "682608": {
     "name": "Peyton Gray",
@@ -2560,7 +1604,8 @@
     "gb_pct": 36.9,
     "fb_pct": 25.5,
     "bbe": null,
-    "pa": 219.0
+    "pa": 219.0,
+    "sample_field": "pa"
   },
   "608331": {
     "name": "Max Fried",
@@ -2571,7 +1616,8 @@
     "gb_pct": 49.6,
     "fb_pct": 21.9,
     "bbe": null,
-    "pa": 332.0
+    "pa": 332.0,
+    "sample_field": "pa"
   },
   "689546": {
     "name": "Nick Davila",
@@ -2582,7 +1628,8 @@
     "gb_pct": 52.4,
     "fb_pct": 21.4,
     "bbe": null,
-    "pa": 111.0
+    "pa": 111.0,
+    "sample_field": "pa"
   },
   "669020": {
     "name": "Ryan Rolison",
@@ -2593,7 +1640,8 @@
     "gb_pct": 43.9,
     "fb_pct": 31.1,
     "bbe": null,
-    "pa": 202.0
+    "pa": 202.0,
+    "sample_field": "pa"
   },
   "656550": {
     "name": "Grant Holmes",
@@ -2604,7 +1652,8 @@
     "gb_pct": 42.2,
     "fb_pct": 26.9,
     "bbe": null,
-    "pa": 529.0
+    "pa": 529.0,
+    "sample_field": "pa"
   },
   "683004": {
     "name": "Jack Leiter",
@@ -2615,29 +1664,8 @@
     "gb_pct": 37.3,
     "fb_pct": 31.3,
     "bbe": null,
-    "pa": 355.0
-  },
-  "668716": {
-    "name": "Noah Murdock",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 57.1,
-    "xwoba_allowed": 0.245,
-    "avg_exit_velo_allowed": 89.5,
-    "gb_pct": 85.7,
-    "fb_pct": 14.3,
-    "bbe": null,
-    "pa": 14.0
-  },
-  "595978": {
-    "name": "Austin Hedges",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 27.3,
-    "xwoba_allowed": 0.275,
-    "avg_exit_velo_allowed": 90.8,
-    "gb_pct": 45.5,
-    "fb_pct": 18.2,
-    "bbe": null,
-    "pa": 12.0
+    "pa": 355.0,
+    "sample_field": "pa"
   },
   "686799": {
     "name": "Jack Kochanowicz",
@@ -2648,7 +1676,8 @@
     "gb_pct": 57.2,
     "fb_pct": 19.7,
     "bbe": null,
-    "pa": 296.0
+    "pa": 296.0,
+    "sample_field": "pa"
   },
   "676755": {
     "name": "Isaac Mattson",
@@ -2659,18 +1688,8 @@
     "gb_pct": 26.5,
     "fb_pct": 31.9,
     "bbe": null,
-    "pa": 166.0
-  },
-  "692437": {
-    "name": "Winston Santos",
-    "barrel_pct_allowed": 14.3,
-    "hardhit_pct_allowed": 14.3,
-    "xwoba_allowed": 0.387,
-    "avg_exit_velo_allowed": 82.6,
-    "gb_pct": 14.3,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 9.0
+    "pa": 166.0,
+    "sample_field": "pa"
   },
   "683618": {
     "name": "Edgardo Henriquez",
@@ -2681,7 +1700,8 @@
     "gb_pct": 48.3,
     "fb_pct": 20.0,
     "bbe": null,
-    "pa": 202.0
+    "pa": 202.0,
+    "sample_field": "pa"
   },
   "552640": {
     "name": "Andrew Kittredge",
@@ -2692,7 +1712,8 @@
     "gb_pct": 47.2,
     "fb_pct": 24.0,
     "bbe": null,
-    "pa": 167.0
+    "pa": 167.0,
+    "sample_field": "pa"
   },
   "688297": {
     "name": "Chris Roycroft",
@@ -2703,40 +1724,8 @@
     "gb_pct": 56.5,
     "fb_pct": 20.7,
     "bbe": null,
-    "pa": 125.0
-  },
-  "681320": {
-    "name": "Nate Lavender",
-    "barrel_pct_allowed": 9.1,
-    "hardhit_pct_allowed": 36.4,
-    "xwoba_allowed": 0.164,
-    "avg_exit_velo_allowed": 89.0,
-    "gb_pct": 36.4,
-    "fb_pct": 45.5,
-    "bbe": null,
-    "pa": 21.0
-  },
-  "676508": {
-    "name": "Ben Casparius",
-    "barrel_pct_allowed": 13.3,
-    "hardhit_pct_allowed": 26.7,
-    "xwoba_allowed": 0.385,
-    "avg_exit_velo_allowed": 88.8,
-    "gb_pct": 26.7,
-    "fb_pct": 53.3,
-    "bbe": null,
-    "pa": 23.0
-  },
-  "690155": {
-    "name": "Matt Pushard",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.347,
-    "avg_exit_velo_allowed": 89.2,
-    "gb_pct": 35.0,
-    "fb_pct": 30.0,
-    "bbe": null,
-    "pa": 32.0
+    "pa": 125.0,
+    "sample_field": "pa"
   },
   "666974": {
     "name": "Yennier Cano",
@@ -2747,18 +1736,8 @@
     "gb_pct": 63.4,
     "fb_pct": 15.4,
     "bbe": null,
-    "pa": 172.0
-  },
-  "605452": {
-    "name": "Joe Ross",
-    "barrel_pct_allowed": 11.4,
-    "hardhit_pct_allowed": 36.4,
-    "xwoba_allowed": 0.391,
-    "avg_exit_velo_allowed": 86.2,
-    "gb_pct": 43.2,
-    "fb_pct": 20.5,
-    "bbe": null,
-    "pa": 57.0
+    "pa": 172.0,
+    "sample_field": "pa"
   },
   "693821": {
     "name": "Bryce Elder",
@@ -2769,7 +1748,8 @@
     "gb_pct": 44.1,
     "fb_pct": 26.4,
     "bbe": null,
-    "pa": 579.0
+    "pa": 579.0,
+    "sample_field": "pa"
   },
   "656427": {
     "name": "Jack Flaherty",
@@ -2780,40 +1760,8 @@
     "gb_pct": 31.5,
     "fb_pct": 31.5,
     "bbe": null,
-    "pa": 389.0
-  },
-  "664353": {
-    "name": "Jos\u00e9 Urquidy",
-    "barrel_pct_allowed": 7.8,
-    "hardhit_pct_allowed": 34.6,
-    "xwoba_allowed": 0.257,
-    "avg_exit_velo_allowed": 88.1,
-    "gb_pct": 38.5,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 71.0
-  },
-  "547184": {
-    "name": "Michael Kelly",
-    "barrel_pct_allowed": 15.0,
-    "hardhit_pct_allowed": 45.0,
-    "xwoba_allowed": 0.435,
-    "avg_exit_velo_allowed": 88.3,
-    "gb_pct": 20.0,
-    "fb_pct": 20.0,
-    "bbe": null,
-    "pa": 32.0
-  },
-  "695034": {
-    "name": "Kade Morris",
-    "barrel_pct_allowed": 4.9,
-    "hardhit_pct_allowed": 48.8,
-    "xwoba_allowed": 0.316,
-    "avg_exit_velo_allowed": 86.9,
-    "gb_pct": 56.1,
-    "fb_pct": 24.4,
-    "bbe": null,
-    "pa": 53.0
+    "pa": 389.0,
+    "sample_field": "pa"
   },
   "680573": {
     "name": "Simeon Woods Richardson",
@@ -2824,18 +1772,8 @@
     "gb_pct": 39.7,
     "fb_pct": 28.5,
     "bbe": null,
-    "pa": 285.0
-  },
-  "680951": {
-    "name": "Doug Nikhazy",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.291,
-    "avg_exit_velo_allowed": 89.0,
-    "gb_pct": 83.3,
-    "fb_pct": 16.7,
-    "bbe": null,
-    "pa": 9.0
+    "pa": 285.0,
+    "sample_field": "pa"
   },
   "641745": {
     "name": "Brad Keller",
@@ -2846,18 +1784,8 @@
     "gb_pct": 44.3,
     "fb_pct": 28.4,
     "bbe": null,
-    "pa": 135.0
-  },
-  "681806": {
-    "name": "Andrew Wantz",
-    "barrel_pct_allowed": 7.1,
-    "hardhit_pct_allowed": 35.7,
-    "xwoba_allowed": 0.463,
-    "avg_exit_velo_allowed": 87.0,
-    "gb_pct": 21.4,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 20.0
+    "pa": 135.0,
+    "sample_field": "pa"
   },
   "592155": {
     "name": "Cam Booser",
@@ -2868,7 +1796,8 @@
     "gb_pct": 27.1,
     "fb_pct": 35.7,
     "bbe": null,
-    "pa": 114.0
+    "pa": 114.0,
+    "sample_field": "pa"
   },
   "650556": {
     "name": "Bryan Abreu",
@@ -2879,29 +1808,8 @@
     "gb_pct": 43.8,
     "fb_pct": 27.6,
     "bbe": null,
-    "pa": 201.0
-  },
-  "687721": {
-    "name": "Cameron Weston",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 100.0,
-    "xwoba_allowed": 0.381,
-    "avg_exit_velo_allowed": 99.6,
-    "gb_pct": 100.0,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 3.0
-  },
-  "814490": {
-    "name": "Ethan Pecko",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 20.0,
-    "xwoba_allowed": 0.301,
-    "avg_exit_velo_allowed": 85.1,
-    "gb_pct": 10.0,
-    "fb_pct": 50.0,
-    "bbe": null,
-    "pa": 18.0
+    "pa": 201.0,
+    "sample_field": "pa"
   },
   "804267": {
     "name": "Zac Thornton",
@@ -2912,7 +1820,8 @@
     "gb_pct": 40.9,
     "fb_pct": 28.9,
     "bbe": null,
-    "pa": 200.0
+    "pa": 200.0,
+    "sample_field": "pa"
   },
   "702021": {
     "name": "Will Dion",
@@ -2923,7 +1832,8 @@
     "gb_pct": 35.1,
     "fb_pct": 31.1,
     "bbe": null,
-    "pa": 114.0
+    "pa": 114.0,
+    "sample_field": "pa"
   },
   "656234": {
     "name": "Jake Bird",
@@ -2934,29 +1844,8 @@
     "gb_pct": 39.6,
     "fb_pct": 25.5,
     "bbe": null,
-    "pa": 162.0
-  },
-  "676910": {
-    "name": "Matt Seelinger",
-    "barrel_pct_allowed": 22.2,
-    "hardhit_pct_allowed": 44.4,
-    "xwoba_allowed": 0.409,
-    "avg_exit_velo_allowed": 91.1,
-    "gb_pct": 33.3,
-    "fb_pct": 44.4,
-    "bbe": null,
-    "pa": 15.0
-  },
-  "699044": {
-    "name": "Miguel Ullola",
-    "barrel_pct_allowed": 15.4,
-    "hardhit_pct_allowed": 30.8,
-    "xwoba_allowed": 0.282,
-    "avg_exit_velo_allowed": 85.1,
-    "gb_pct": 15.4,
-    "fb_pct": 53.8,
-    "bbe": null,
-    "pa": 23.0
+    "pa": 162.0,
+    "sample_field": "pa"
   },
   "642701": {
     "name": "Dennis Santana",
@@ -2967,18 +1856,8 @@
     "gb_pct": 30.7,
     "fb_pct": 33.9,
     "bbe": null,
-    "pa": 187.0
-  },
-  "694350": {
-    "name": "Zach Brzykcy",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 37.5,
-    "xwoba_allowed": 0.306,
-    "avg_exit_velo_allowed": 91.6,
-    "gb_pct": 75.0,
-    "fb_pct": 12.5,
-    "bbe": null,
-    "pa": 12.0
+    "pa": 187.0,
+    "sample_field": "pa"
   },
   "808967": {
     "name": "Yoshinobu Yamamoto",
@@ -2989,40 +1868,8 @@
     "gb_pct": 47.4,
     "fb_pct": 24.1,
     "bbe": null,
-    "pa": 556.0
-  },
-  "687765": {
-    "name": "Mitch Spence",
-    "barrel_pct_allowed": 2.4,
-    "hardhit_pct_allowed": 41.5,
-    "xwoba_allowed": 0.361,
-    "avg_exit_velo_allowed": 91.6,
-    "gb_pct": 46.3,
-    "fb_pct": 17.1,
-    "bbe": null,
-    "pa": 56.0
-  },
-  "691769": {
-    "name": "Philip Abner",
-    "barrel_pct_allowed": 12.0,
-    "hardhit_pct_allowed": 40.0,
-    "xwoba_allowed": 0.401,
-    "avg_exit_velo_allowed": 89.9,
-    "gb_pct": 40.0,
-    "fb_pct": 28.0,
-    "bbe": null,
-    "pa": 64.0
-  },
-  "641401": {
-    "name": "Connor Brogdon",
-    "barrel_pct_allowed": 14.0,
-    "hardhit_pct_allowed": 44.0,
-    "xwoba_allowed": 0.345,
-    "avg_exit_velo_allowed": 91.6,
-    "gb_pct": 40.0,
-    "fb_pct": 36.0,
-    "bbe": null,
-    "pa": 67.0
+    "pa": 556.0,
+    "sample_field": "pa"
   },
   "702275": {
     "name": "JR Ritchie",
@@ -3033,29 +1880,8 @@
     "gb_pct": 45.1,
     "fb_pct": 29.6,
     "bbe": null,
-    "pa": 256.0
-  },
-  "689690": {
-    "name": "Alek Jacob",
-    "barrel_pct_allowed": 7.1,
-    "hardhit_pct_allowed": 35.7,
-    "xwoba_allowed": 0.272,
-    "avg_exit_velo_allowed": 85.5,
-    "gb_pct": 42.9,
-    "fb_pct": 35.7,
-    "bbe": null,
-    "pa": 23.0
-  },
-  "671109": {
-    "name": "Jake Eder",
-    "barrel_pct_allowed": 30.8,
-    "hardhit_pct_allowed": 69.2,
-    "xwoba_allowed": 0.459,
-    "avg_exit_velo_allowed": 95.3,
-    "gb_pct": 30.8,
-    "fb_pct": 38.5,
-    "bbe": null,
-    "pa": 15.0
+    "pa": 256.0,
+    "sample_field": "pa"
   },
   "669684": {
     "name": "Chris Murphy",
@@ -3066,18 +1892,8 @@
     "gb_pct": 28.6,
     "fb_pct": 38.1,
     "bbe": null,
-    "pa": 132.0
-  },
-  "685801": {
-    "name": "Hunter Bigge",
-    "barrel_pct_allowed": 5.3,
-    "hardhit_pct_allowed": 36.8,
-    "xwoba_allowed": 0.311,
-    "avg_exit_velo_allowed": 89.6,
-    "gb_pct": 42.1,
-    "fb_pct": 29.8,
-    "bbe": null,
-    "pa": 85.0
+    "pa": 132.0,
+    "sample_field": "pa"
   },
   "676962": {
     "name": "Ben Brown",
@@ -3088,18 +1904,8 @@
     "gb_pct": 44.7,
     "fb_pct": 25.1,
     "bbe": null,
-    "pa": 265.0
-  },
-  "676467": {
-    "name": "Colton Gordon",
-    "barrel_pct_allowed": 11.4,
-    "hardhit_pct_allowed": 48.6,
-    "xwoba_allowed": 0.41,
-    "avg_exit_velo_allowed": 88.7,
-    "gb_pct": 37.1,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 50.0
+    "pa": 265.0,
+    "sample_field": "pa"
   },
   "650644": {
     "name": "Aaron Civale",
@@ -3110,18 +1916,8 @@
     "gb_pct": 28.9,
     "fb_pct": 31.6,
     "bbe": null,
-    "pa": 410.0
-  },
-  "674073": {
-    "name": "Jack Weisenburger",
-    "barrel_pct_allowed": 8.3,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.257,
-    "avg_exit_velo_allowed": 91.9,
-    "gb_pct": 33.3,
-    "fb_pct": 41.7,
-    "bbe": null,
-    "pa": 18.0
+    "pa": 410.0,
+    "sample_field": "pa"
   },
   "663776": {
     "name": "Patrick Sandoval",
@@ -3132,7 +1928,8 @@
     "gb_pct": 34.3,
     "fb_pct": 25.0,
     "bbe": null,
-    "pa": 160.0
+    "pa": 160.0,
+    "sample_field": "pa"
   },
   "543037": {
     "name": "Gerrit Cole",
@@ -3143,18 +1940,8 @@
     "gb_pct": 34.8,
     "fb_pct": 29.6,
     "bbe": null,
-    "pa": 376.0
-  },
-  "645302": {
-    "name": "Victor Robles",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 37.5,
-    "xwoba_allowed": 0.504,
-    "avg_exit_velo_allowed": 93.1,
-    "gb_pct": 37.5,
-    "fb_pct": 12.5,
-    "bbe": null,
-    "pa": 9.0
+    "pa": 376.0,
+    "sample_field": "pa"
   },
   "606996": {
     "name": "Kyle Hart",
@@ -3165,51 +1952,8 @@
     "gb_pct": 52.1,
     "fb_pct": 22.1,
     "bbe": null,
-    "pa": 209.0
-  },
-  "670090": {
-    "name": "Wyatt Mills",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 25.0,
-    "xwoba_allowed": 0.368,
-    "avg_exit_velo_allowed": 89.7,
-    "gb_pct": 40.0,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 36.0
-  },
-  "681151": {
-    "name": "Jayden Murray",
-    "barrel_pct_allowed": 14.3,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.363,
-    "avg_exit_velo_allowed": 91.4,
-    "gb_pct": 26.8,
-    "fb_pct": 42.9,
-    "bbe": null,
-    "pa": 79.0
-  },
-  "686610": {
-    "name": "Ken Waldichuk",
-    "barrel_pct_allowed": 19.2,
-    "hardhit_pct_allowed": 38.5,
-    "xwoba_allowed": 0.397,
-    "avg_exit_velo_allowed": 89.3,
-    "gb_pct": 42.3,
-    "fb_pct": 34.6,
-    "bbe": null,
-    "pa": 40.0
-  },
-  "690978": {
-    "name": "Dax Fulton",
-    "barrel_pct_allowed": 5.7,
-    "hardhit_pct_allowed": 31.4,
-    "xwoba_allowed": 0.301,
-    "avg_exit_velo_allowed": 86.9,
-    "gb_pct": 62.9,
-    "fb_pct": 8.6,
-    "bbe": null,
-    "pa": 57.0
+    "pa": 209.0,
+    "sample_field": "pa"
   },
   "694738": {
     "name": "Landen Roupp",
@@ -3220,7 +1964,8 @@
     "gb_pct": 51.5,
     "fb_pct": 21.9,
     "bbe": null,
-    "pa": 574.0
+    "pa": 574.0,
+    "sample_field": "pa"
   },
   "665871": {
     "name": "Javier Assad",
@@ -3231,7 +1976,8 @@
     "gb_pct": 46.2,
     "fb_pct": 29.2,
     "bbe": null,
-    "pa": 332.0
+    "pa": 332.0,
+    "sample_field": "pa"
   },
   "701542": {
     "name": "Will Warren",
@@ -3242,7 +1988,8 @@
     "gb_pct": 44.2,
     "fb_pct": 23.4,
     "bbe": null,
-    "pa": 535.0
+    "pa": 535.0,
+    "sample_field": "pa"
   },
   "686973": {
     "name": "Louis Varland",
@@ -3253,18 +2000,8 @@
     "gb_pct": 54.5,
     "fb_pct": 19.9,
     "bbe": null,
-    "pa": 254.0
-  },
-  "801434": {
-    "name": "Paul Gervase",
-    "barrel_pct_allowed": 4.8,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.306,
-    "avg_exit_velo_allowed": 89.0,
-    "gb_pct": 47.6,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 34.0
+    "pa": 254.0,
+    "sample_field": "pa"
   },
   "669330": {
     "name": "Tyler Wells",
@@ -3275,29 +2012,8 @@
     "gb_pct": 29.0,
     "fb_pct": 32.7,
     "bbe": null,
-    "pa": 241.0
-  },
-  "675916": {
-    "name": "James Karinchak",
-    "barrel_pct_allowed": 8.3,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.268,
-    "avg_exit_velo_allowed": 88.4,
-    "gb_pct": 29.2,
-    "fb_pct": 37.5,
-    "bbe": null,
-    "pa": 37.0
-  },
-  "697812": {
-    "name": "Joe Rock",
-    "barrel_pct_allowed": 3.6,
-    "hardhit_pct_allowed": 57.1,
-    "xwoba_allowed": 0.39,
-    "avg_exit_velo_allowed": 94.6,
-    "gb_pct": 28.6,
-    "fb_pct": 32.1,
-    "bbe": null,
-    "pa": 53.0
+    "pa": 241.0,
+    "sample_field": "pa"
   },
   "800048": {
     "name": "Parker Messick",
@@ -3308,7 +2024,8 @@
     "gb_pct": 45.3,
     "fb_pct": 21.4,
     "bbe": null,
-    "pa": 591.0
+    "pa": 591.0,
+    "sample_field": "pa"
   },
   "701519": {
     "name": "Travis Adams",
@@ -3319,7 +2036,8 @@
     "gb_pct": 38.7,
     "fb_pct": 30.6,
     "bbe": null,
-    "pa": 174.0
+    "pa": 174.0,
+    "sample_field": "pa"
   },
   "699134": {
     "name": "Bradgley Rodriguez",
@@ -3330,7 +2048,8 @@
     "gb_pct": 52.6,
     "fb_pct": 24.0,
     "bbe": null,
-    "pa": 231.0
+    "pa": 231.0,
+    "sample_field": "pa"
   },
   "605447": {
     "name": "Jordan Romano",
@@ -3341,7 +2060,8 @@
     "gb_pct": 31.1,
     "fb_pct": 23.0,
     "bbe": null,
-    "pa": 102.0
+    "pa": 102.0,
+    "sample_field": "pa"
   },
   "608372": {
     "name": "Tomoyuki Sugano",
@@ -3352,18 +2072,8 @@
     "gb_pct": 37.5,
     "fb_pct": 31.3,
     "bbe": null,
-    "pa": 498.0
-  },
-  "642376": {
-    "name": "Jefry Yan",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.325,
-    "avg_exit_velo_allowed": 89.3,
-    "gb_pct": 50.0,
-    "fb_pct": 21.4,
-    "bbe": null,
-    "pa": 26.0
+    "pa": 498.0,
+    "sample_field": "pa"
   },
   "608337": {
     "name": "Lucas Giolito",
@@ -3374,18 +2084,8 @@
     "gb_pct": 31.3,
     "fb_pct": 24.0,
     "bbe": null,
-    "pa": 138.0
-  },
-  "671936": {
-    "name": "Adam Macko",
-    "barrel_pct_allowed": 6.3,
-    "hardhit_pct_allowed": 34.9,
-    "xwoba_allowed": 0.338,
-    "avg_exit_velo_allowed": 86.8,
-    "gb_pct": 34.9,
-    "fb_pct": 25.4,
-    "bbe": null,
-    "pa": 99.0
+    "pa": 138.0,
+    "sample_field": "pa"
   },
   "664141": {
     "name": "JT Brubaker",
@@ -3396,18 +2096,8 @@
     "gb_pct": 41.7,
     "fb_pct": 25.1,
     "bbe": null,
-    "pa": 241.0
-  },
-  "678868": {
-    "name": "Eddy Yean",
-    "barrel_pct_allowed": 3.3,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.257,
-    "avg_exit_velo_allowed": 89.0,
-    "gb_pct": 53.3,
-    "fb_pct": 23.3,
-    "bbe": null,
-    "pa": 39.0
+    "pa": 241.0,
+    "sample_field": "pa"
   },
   "663574": {
     "name": "Tony Santillan",
@@ -3418,7 +2108,8 @@
     "gb_pct": 37.0,
     "fb_pct": 37.0,
     "bbe": null,
-    "pa": 134.0
+    "pa": 134.0,
+    "sample_field": "pa"
   },
   "518886": {
     "name": "Craig Kimbrel",
@@ -3429,7 +2120,8 @@
     "gb_pct": 30.8,
     "fb_pct": 34.6,
     "bbe": null,
-    "pa": 156.0
+    "pa": 156.0,
+    "sample_field": "pa"
   },
   "670167": {
     "name": "John Schreiber",
@@ -3440,7 +2132,8 @@
     "gb_pct": 44.1,
     "fb_pct": 23.5,
     "bbe": null,
-    "pa": 191.0
+    "pa": 191.0,
+    "sample_field": "pa"
   },
   "693686": {
     "name": "Spencer Miles",
@@ -3451,40 +2144,8 @@
     "gb_pct": 52.4,
     "fb_pct": 20.1,
     "bbe": null,
-    "pa": 322.0
-  },
-  "668970": {
-    "name": "Gavin Hollowell",
-    "barrel_pct_allowed": 15.0,
-    "hardhit_pct_allowed": 35.0,
-    "xwoba_allowed": 0.351,
-    "avg_exit_velo_allowed": 87.3,
-    "gb_pct": 20.0,
-    "fb_pct": 42.5,
-    "bbe": null,
-    "pa": 62.0
-  },
-  "676596": {
-    "name": "Josh Fleming",
-    "barrel_pct_allowed": 7.1,
-    "hardhit_pct_allowed": 64.3,
-    "xwoba_allowed": 0.47,
-    "avg_exit_velo_allowed": 92.4,
-    "gb_pct": 64.3,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 18.0
-  },
-  "606115": {
-    "name": "Orlando Arcia",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 0.0,
-    "xwoba_allowed": 0.411,
-    "avg_exit_velo_allowed": 88.4,
-    "gb_pct": 66.7,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 5.0
+    "pa": 322.0,
+    "sample_field": "pa"
   },
   "678906": {
     "name": "Kai-Wei Teng",
@@ -3495,18 +2156,8 @@
     "gb_pct": 39.9,
     "fb_pct": 23.8,
     "bbe": null,
-    "pa": 301.0
-  },
-  "668831": {
-    "name": "Garrett Stallings",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 16.7,
-    "xwoba_allowed": 0.182,
-    "avg_exit_velo_allowed": 88.8,
-    "gb_pct": 38.9,
-    "fb_pct": 38.9,
-    "bbe": null,
-    "pa": 30.0
+    "pa": 301.0,
+    "sample_field": "pa"
   },
   "678394": {
     "name": "Brayan Bello",
@@ -3517,7 +2168,8 @@
     "gb_pct": 52.8,
     "fb_pct": 21.7,
     "bbe": null,
-    "pa": 385.0
+    "pa": 385.0,
+    "sample_field": "pa"
   },
   "669194": {
     "name": "Ryne Nelson",
@@ -3528,7 +2180,8 @@
     "gb_pct": 32.5,
     "fb_pct": 37.4,
     "bbe": null,
-    "pa": 355.0
+    "pa": 355.0,
+    "sample_field": "pa"
   },
   "664875": {
     "name": "Justin Lawrence",
@@ -3539,7 +2192,8 @@
     "gb_pct": 43.0,
     "fb_pct": 25.0,
     "bbe": null,
-    "pa": 177.0
+    "pa": 177.0,
+    "sample_field": "pa"
   },
   "685126": {
     "name": "Brandon Eisert",
@@ -3550,7 +2204,8 @@
     "gb_pct": 42.9,
     "fb_pct": 30.6,
     "bbe": null,
-    "pa": 150.0
+    "pa": 150.0,
+    "sample_field": "pa"
   },
   "642121": {
     "name": "Cole Sulser",
@@ -3561,29 +2216,8 @@
     "gb_pct": 40.0,
     "fb_pct": 31.1,
     "bbe": null,
-    "pa": 197.0
-  },
-  "684049": {
-    "name": "Brandan Bidois",
-    "barrel_pct_allowed": 17.0,
-    "hardhit_pct_allowed": 46.8,
-    "xwoba_allowed": 0.363,
-    "avg_exit_velo_allowed": 90.9,
-    "gb_pct": 25.5,
-    "fb_pct": 44.7,
-    "bbe": null,
-    "pa": 80.0
-  },
-  "677161": {
-    "name": "Zack Kelly",
-    "barrel_pct_allowed": 8.2,
-    "hardhit_pct_allowed": 38.8,
-    "xwoba_allowed": 0.368,
-    "avg_exit_velo_allowed": 88.1,
-    "gb_pct": 46.9,
-    "fb_pct": 18.4,
-    "bbe": null,
-    "pa": 71.0
+    "pa": 197.0,
+    "sample_field": "pa"
   },
   "668984": {
     "name": "Casey Legumina",
@@ -3594,7 +2228,8 @@
     "gb_pct": 41.4,
     "fb_pct": 27.6,
     "bbe": null,
-    "pa": 239.0
+    "pa": 239.0,
+    "sample_field": "pa"
   },
   "663542": {
     "name": "Bryan Hudson",
@@ -3605,7 +2240,8 @@
     "gb_pct": 43.7,
     "fb_pct": 28.5,
     "bbe": null,
-    "pa": 224.0
+    "pa": 224.0,
+    "sample_field": "pa"
   },
   "660271": {
     "name": "Shohei Ohtani",
@@ -3616,7 +2252,8 @@
     "gb_pct": 52.1,
     "fb_pct": 20.2,
     "bbe": null,
-    "pa": 340.0
+    "pa": 340.0,
+    "sample_field": "pa"
   },
   "686790": {
     "name": "Trevor McDonald",
@@ -3627,7 +2264,8 @@
     "gb_pct": 54.4,
     "fb_pct": 17.5,
     "bbe": null,
-    "pa": 310.0
+    "pa": 310.0,
+    "sample_field": "pa"
   },
   "696131": {
     "name": "Mason Black",
@@ -3638,7 +2276,8 @@
     "gb_pct": 33.3,
     "fb_pct": 30.0,
     "bbe": null,
-    "pa": 130.0
+    "pa": 130.0,
+    "sample_field": "pa"
   },
   "622663": {
     "name": "Luis Severino",
@@ -3649,7 +2288,8 @@
     "gb_pct": 45.1,
     "fb_pct": 26.6,
     "bbe": null,
-    "pa": 271.0
+    "pa": 271.0,
+    "sample_field": "pa"
   },
   "676106": {
     "name": "Emerson Hancock",
@@ -3660,7 +2300,8 @@
     "gb_pct": 42.5,
     "fb_pct": 29.4,
     "bbe": null,
-    "pa": 516.0
+    "pa": 516.0,
+    "sample_field": "pa"
   },
   "608379": {
     "name": "Michael Wacha",
@@ -3671,7 +2312,8 @@
     "gb_pct": 38.8,
     "fb_pct": 29.6,
     "bbe": null,
-    "pa": 632.0
+    "pa": 632.0,
+    "sample_field": "pa"
   },
   "669456": {
     "name": "Shane Bieber",
@@ -3682,7 +2324,8 @@
     "gb_pct": 43.7,
     "fb_pct": 25.3,
     "bbe": null,
-    "pa": 242.0
+    "pa": 242.0,
+    "sample_field": "pa"
   },
   "622554": {
     "name": "Seranthony Dom\u00ednguez",
@@ -3693,7 +2336,8 @@
     "gb_pct": 41.6,
     "fb_pct": 26.5,
     "bbe": null,
-    "pa": 194.0
+    "pa": 194.0,
+    "sample_field": "pa"
   },
   "670036": {
     "name": "Matt Festa",
@@ -3704,7 +2348,8 @@
     "gb_pct": 36.1,
     "fb_pct": 23.2,
     "bbe": null,
-    "pa": 233.0
+    "pa": 233.0,
+    "sample_field": "pa"
   },
   "681916": {
     "name": "Dylan Smith",
@@ -3715,7 +2360,8 @@
     "gb_pct": 33.8,
     "fb_pct": 21.5,
     "bbe": null,
-    "pa": 112.0
+    "pa": 112.0,
+    "sample_field": "pa"
   },
   "572955": {
     "name": "Pierce Johnson",
@@ -3726,7 +2372,8 @@
     "gb_pct": 38.9,
     "fb_pct": 32.4,
     "bbe": null,
-    "pa": 154.0
+    "pa": 154.0,
+    "sample_field": "pa"
   },
   "681190": {
     "name": "Randy V\u00e1squez",
@@ -3737,29 +2384,8 @@
     "gb_pct": 39.8,
     "fb_pct": 28.6,
     "bbe": null,
-    "pa": 474.0
-  },
-  "672021": {
-    "name": "Eric Cerantola",
-    "barrel_pct_allowed": 20.0,
-    "hardhit_pct_allowed": 60.0,
-    "xwoba_allowed": 0.402,
-    "avg_exit_velo_allowed": 89.6,
-    "gb_pct": 50.0,
-    "fb_pct": 30.0,
-    "bbe": null,
-    "pa": 28.0
-  },
-  "672442": {
-    "name": "Yovanny Cruz",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 51.9,
-    "xwoba_allowed": 0.353,
-    "avg_exit_velo_allowed": 89.4,
-    "gb_pct": 37.0,
-    "fb_pct": 18.5,
-    "bbe": null,
-    "pa": 44.0
+    "pa": 474.0,
+    "sample_field": "pa"
   },
   "544150": {
     "name": "Albert Su\u00e1rez",
@@ -3770,7 +2396,8 @@
     "gb_pct": 32.4,
     "fb_pct": 27.2,
     "bbe": null,
-    "pa": 230.0
+    "pa": 230.0,
+    "sample_field": "pa"
   },
   "670280": {
     "name": "David Bednar",
@@ -3781,29 +2408,8 @@
     "gb_pct": 55.2,
     "fb_pct": 18.9,
     "bbe": null,
-    "pa": 227.0
-  },
-  "656240": {
-    "name": "Scott Blewett",
-    "barrel_pct_allowed": 3.4,
-    "hardhit_pct_allowed": 29.3,
-    "xwoba_allowed": 0.301,
-    "avg_exit_velo_allowed": 87.0,
-    "gb_pct": 51.7,
-    "fb_pct": 20.7,
-    "bbe": null,
-    "pa": 75.0
-  },
-  "471911": {
-    "name": "Carlos Carrasco",
-    "barrel_pct_allowed": 9.8,
-    "hardhit_pct_allowed": 41.0,
-    "xwoba_allowed": 0.431,
-    "avg_exit_velo_allowed": 89.4,
-    "gb_pct": 44.3,
-    "fb_pct": 14.8,
-    "bbe": null,
-    "pa": 73.0
+    "pa": 227.0,
+    "sample_field": "pa"
   },
   "696070": {
     "name": "Kendry Rojas",
@@ -3814,7 +2420,8 @@
     "gb_pct": 43.8,
     "fb_pct": 28.8,
     "bbe": null,
-    "pa": 130.0
+    "pa": 130.0,
+    "sample_field": "pa"
   },
   "680736": {
     "name": "Justin Wrobleski",
@@ -3825,7 +2432,8 @@
     "gb_pct": 40.5,
     "fb_pct": 32.4,
     "bbe": null,
-    "pa": 516.0
+    "pa": 516.0,
+    "sample_field": "pa"
   },
   "663567": {
     "name": "Peter Lambert",
@@ -3836,7 +2444,8 @@
     "gb_pct": 38.9,
     "fb_pct": 33.0,
     "bbe": null,
-    "pa": 516.0
+    "pa": 516.0,
+    "sample_field": "pa"
   },
   "642528": {
     "name": "Jonathan Lo\u00e1isiga",
@@ -3847,7 +2456,8 @@
     "gb_pct": 52.6,
     "fb_pct": 20.1,
     "bbe": null,
-    "pa": 202.0
+    "pa": 202.0,
+    "sample_field": "pa"
   },
   "622088": {
     "name": "Tejay Antone",
@@ -3858,18 +2468,8 @@
     "gb_pct": 44.5,
     "fb_pct": 28.6,
     "bbe": null,
-    "pa": 178.0
-  },
-  "805345": {
-    "name": "Trent Harris",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 30.0,
-    "xwoba_allowed": 0.261,
-    "avg_exit_velo_allowed": 80.6,
-    "gb_pct": 50.0,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 23.0
+    "pa": 178.0,
+    "sample_field": "pa"
   },
   "677961": {
     "name": "Cole Wilcox",
@@ -3880,7 +2480,8 @@
     "gb_pct": 44.7,
     "fb_pct": 17.1,
     "bbe": null,
-    "pa": 123.0
+    "pa": 123.0,
+    "sample_field": "pa"
   },
   "681892": {
     "name": "Kody Funderburk",
@@ -3891,7 +2492,8 @@
     "gb_pct": 62.3,
     "fb_pct": 17.5,
     "bbe": null,
-    "pa": 172.0
+    "pa": 172.0,
+    "sample_field": "pa"
   },
   "621121": {
     "name": "Lance McCullers Jr.",
@@ -3902,7 +2504,8 @@
     "gb_pct": 44.1,
     "fb_pct": 24.6,
     "bbe": null,
-    "pa": 195.0
+    "pa": 195.0,
+    "sample_field": "pa"
   },
   "664299": {
     "name": "Cristian Javier",
@@ -3913,7 +2516,8 @@
     "gb_pct": 24.6,
     "fb_pct": 41.5,
     "bbe": null,
-    "pa": 167.0
+    "pa": 167.0,
+    "sample_field": "pa"
   },
   "594580": {
     "name": "Sam Moll",
@@ -3924,7 +2528,8 @@
     "gb_pct": 54.2,
     "fb_pct": 18.8,
     "bbe": null,
-    "pa": 230.0
+    "pa": 230.0,
+    "sample_field": "pa"
   },
   "621074": {
     "name": "Michael Rucker",
@@ -3935,7 +2540,8 @@
     "gb_pct": 49.3,
     "fb_pct": 17.3,
     "bbe": null,
-    "pa": 120.0
+    "pa": 120.0,
+    "sample_field": "pa"
   },
   "695611": {
     "name": "Gage Jump",
@@ -3946,7 +2552,8 @@
     "gb_pct": 40.9,
     "fb_pct": 26.1,
     "bbe": null,
-    "pa": 361.0
+    "pa": 361.0,
+    "sample_field": "pa"
   },
   "650911": {
     "name": "Cristopher S\u00e1nchez",
@@ -3957,7 +2564,8 @@
     "gb_pct": 57.8,
     "fb_pct": 16.5,
     "bbe": null,
-    "pa": 673.0
+    "pa": 673.0,
+    "sample_field": "pa"
   },
   "695380": {
     "name": "Alex Hoppe",
@@ -3968,7 +2576,8 @@
     "gb_pct": 48.4,
     "fb_pct": 14.3,
     "bbe": null,
-    "pa": 144.0
+    "pa": 144.0,
+    "sample_field": "pa"
   },
   "663767": {
     "name": "Chase Shugart",
@@ -3979,7 +2588,8 @@
     "gb_pct": 37.7,
     "fb_pct": 34.9,
     "bbe": null,
-    "pa": 176.0
+    "pa": 176.0,
+    "sample_field": "pa"
   },
   "668964": {
     "name": "Tobias Myers",
@@ -3990,18 +2600,8 @@
     "gb_pct": 32.9,
     "fb_pct": 28.3,
     "bbe": null,
-    "pa": 198.0
-  },
-  "689225": {
-    "name": "Beau Brieske",
-    "barrel_pct_allowed": 11.1,
-    "hardhit_pct_allowed": 48.1,
-    "xwoba_allowed": 0.33,
-    "avg_exit_velo_allowed": 88.6,
-    "gb_pct": 37.0,
-    "fb_pct": 29.6,
-    "bbe": null,
-    "pa": 39.0
+    "pa": 198.0,
+    "sample_field": "pa"
   },
   "624133": {
     "name": "Ranger Suarez",
@@ -4012,29 +2612,8 @@
     "gb_pct": 41.6,
     "fb_pct": 22.4,
     "bbe": null,
-    "pa": 467.0
-  },
-  "680723": {
-    "name": "Drew Rom",
-    "barrel_pct_allowed": 16.7,
-    "hardhit_pct_allowed": 66.7,
-    "xwoba_allowed": 0.355,
-    "avg_exit_velo_allowed": 97.8,
-    "gb_pct": 29.2,
-    "fb_pct": 20.8,
-    "bbe": null,
-    "pa": 45.0
-  },
-  "683232": {
-    "name": "Nick Mears",
-    "barrel_pct_allowed": 12.5,
-    "hardhit_pct_allowed": 50.9,
-    "xwoba_allowed": 0.382,
-    "avg_exit_velo_allowed": 90.3,
-    "gb_pct": 47.4,
-    "fb_pct": 24.6,
-    "bbe": null,
-    "pa": 83.0
+    "pa": 467.0,
+    "sample_field": "pa"
   },
   "641302": {
     "name": "Tyler Alexander",
@@ -4045,7 +2624,8 @@
     "gb_pct": 54.5,
     "fb_pct": 22.2,
     "bbe": null,
-    "pa": 234.0
+    "pa": 234.0,
+    "sample_field": "pa"
   },
   "660825": {
     "name": "Eduard Bazardo",
@@ -4056,7 +2636,8 @@
     "gb_pct": 34.5,
     "fb_pct": 30.9,
     "bbe": null,
-    "pa": 239.0
+    "pa": 239.0,
+    "sample_field": "pa"
   },
   "543243": {
     "name": "Sonny Gray",
@@ -4067,7 +2648,8 @@
     "gb_pct": 47.4,
     "fb_pct": 22.9,
     "bbe": null,
-    "pa": 536.0
+    "pa": 536.0,
+    "sample_field": "pa"
   },
   "666661": {
     "name": "Juan Morillo",
@@ -4078,18 +2660,8 @@
     "gb_pct": 53.2,
     "fb_pct": 17.7,
     "bbe": null,
-    "pa": 203.0
-  },
-  "681084": {
-    "name": "Tanner Andrews",
-    "barrel_pct_allowed": 12.5,
-    "hardhit_pct_allowed": 25.0,
-    "xwoba_allowed": 0.273,
-    "avg_exit_velo_allowed": 80.1,
-    "gb_pct": 50.0,
-    "fb_pct": 37.5,
-    "bbe": null,
-    "pa": 11.0
+    "pa": 203.0,
+    "sample_field": "pa"
   },
   "682227": {
     "name": "Brandon Williamson",
@@ -4100,18 +2672,8 @@
     "gb_pct": 33.7,
     "fb_pct": 32.6,
     "bbe": null,
-    "pa": 128.0
-  },
-  "699008": {
-    "name": "Antwone Kelly",
-    "barrel_pct_allowed": 4.2,
-    "hardhit_pct_allowed": 37.5,
-    "xwoba_allowed": 0.345,
-    "avg_exit_velo_allowed": 89.9,
-    "gb_pct": 58.3,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 32.0
+    "pa": 128.0,
+    "sample_field": "pa"
   },
   "676879": {
     "name": "Aaron Ashby",
@@ -4122,7 +2684,8 @@
     "gb_pct": 54.1,
     "fb_pct": 18.0,
     "bbe": null,
-    "pa": 311.0
+    "pa": 311.0,
+    "sample_field": "pa"
   },
   "519141": {
     "name": "Drew Pomeranz",
@@ -4133,18 +2696,8 @@
     "gb_pct": 28.0,
     "fb_pct": 32.0,
     "bbe": null,
-    "pa": 135.0
-  },
-  "642759": {
-    "name": "Julian Fern\u00e1ndez",
-    "barrel_pct_allowed": 7.7,
-    "hardhit_pct_allowed": 53.8,
-    "xwoba_allowed": 0.301,
-    "avg_exit_velo_allowed": 91.2,
-    "gb_pct": 30.8,
-    "fb_pct": 61.5,
-    "bbe": null,
-    "pa": 18.0
+    "pa": 135.0,
+    "sample_field": "pa"
   },
   "680742": {
     "name": "Jonathan Bowlan",
@@ -4155,7 +2708,8 @@
     "gb_pct": 49.1,
     "fb_pct": 26.3,
     "bbe": null,
-    "pa": 187.0
+    "pa": 187.0,
+    "sample_field": "pa"
   },
   "667463": {
     "name": "John King",
@@ -4166,18 +2720,8 @@
     "gb_pct": 47.6,
     "fb_pct": 26.6,
     "bbe": null,
-    "pa": 197.0
-  },
-  "699151": {
-    "name": "Jedixson Paez",
-    "barrel_pct_allowed": 23.1,
-    "hardhit_pct_allowed": 46.2,
-    "xwoba_allowed": 0.492,
-    "avg_exit_velo_allowed": 95.3,
-    "gb_pct": 30.8,
-    "fb_pct": 53.8,
-    "bbe": null,
-    "pa": 16.0
+    "pa": 197.0,
+    "sample_field": "pa"
   },
   "554430": {
     "name": "Zack Wheeler",
@@ -4188,7 +2732,8 @@
     "gb_pct": 43.5,
     "fb_pct": 24.8,
     "bbe": null,
-    "pa": 474.0
+    "pa": 474.0,
+    "sample_field": "pa"
   },
   "594027": {
     "name": "Tyron Guerrero",
@@ -4199,7 +2744,8 @@
     "gb_pct": 54.7,
     "fb_pct": 18.9,
     "bbe": null,
-    "pa": 137.0
+    "pa": 137.0,
+    "sample_field": "pa"
   },
   "672282": {
     "name": "Reid Detmers",
@@ -4210,7 +2756,8 @@
     "gb_pct": 36.5,
     "fb_pct": 31.0,
     "bbe": null,
-    "pa": 579.0
+    "pa": 579.0,
+    "sample_field": "pa"
   },
   "663556": {
     "name": "Shane McClanahan",
@@ -4221,18 +2768,8 @@
     "gb_pct": 47.1,
     "fb_pct": 27.7,
     "bbe": null,
-    "pa": 423.0
-  },
-  "687941": {
-    "name": "Alec Gamboa",
-    "barrel_pct_allowed": 3.8,
-    "hardhit_pct_allowed": 29.6,
-    "xwoba_allowed": 0.242,
-    "avg_exit_velo_allowed": 87.3,
-    "gb_pct": 51.9,
-    "fb_pct": 18.5,
-    "bbe": null,
-    "pa": 72.0
+    "pa": 423.0,
+    "sample_field": "pa"
   },
   "668933": {
     "name": "Graham Ashcraft",
@@ -4243,18 +2780,8 @@
     "gb_pct": 54.1,
     "fb_pct": 23.0,
     "bbe": null,
-    "pa": 109.0
-  },
-  "676742": {
-    "name": "Cam Sanders",
-    "barrel_pct_allowed": 6.5,
-    "hardhit_pct_allowed": 28.3,
-    "xwoba_allowed": 0.322,
-    "avg_exit_velo_allowed": 87.1,
-    "gb_pct": 41.3,
-    "fb_pct": 21.7,
-    "bbe": null,
-    "pa": 85.0
+    "pa": 109.0,
+    "sample_field": "pa"
   },
   "669160": {
     "name": "Dustin May",
@@ -4265,7 +2792,8 @@
     "gb_pct": 43.3,
     "fb_pct": 23.8,
     "bbe": null,
-    "pa": 523.0
+    "pa": 523.0,
+    "sample_field": "pa"
   },
   "686993": {
     "name": "Justin Sterner",
@@ -4276,29 +2804,8 @@
     "gb_pct": 41.2,
     "fb_pct": 32.1,
     "bbe": null,
-    "pa": 184.0
-  },
-  "605483": {
-    "name": "Blake Snell",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 10.8,
-    "xwoba_allowed": 0.229,
-    "avg_exit_velo_allowed": 82.8,
-    "gb_pct": 51.4,
-    "fb_pct": 24.3,
-    "bbe": null,
-    "pa": 63.0
-  },
-  "623437": {
-    "name": "Justin Topa",
-    "barrel_pct_allowed": 9.1,
-    "hardhit_pct_allowed": 45.6,
-    "xwoba_allowed": 0.376,
-    "avg_exit_velo_allowed": 91.2,
-    "gb_pct": 57.4,
-    "fb_pct": 23.5,
-    "bbe": null,
-    "pa": 92.0
+    "pa": 184.0,
+    "sample_field": "pa"
   },
   "625643": {
     "name": "Reynaldo L\u00f3pez",
@@ -4309,18 +2816,8 @@
     "gb_pct": 36.8,
     "fb_pct": 28.7,
     "bbe": null,
-    "pa": 306.0
-  },
-  "434378": {
-    "name": "Justin Verlander",
-    "barrel_pct_allowed": 12.5,
-    "hardhit_pct_allowed": 56.3,
-    "xwoba_allowed": 0.474,
-    "avg_exit_velo_allowed": 93.5,
-    "gb_pct": 18.8,
-    "fb_pct": 37.5,
-    "bbe": null,
-    "pa": 19.0
+    "pa": 306.0,
+    "sample_field": "pa"
   },
   "595345": {
     "name": "Steven Okert",
@@ -4331,7 +2828,8 @@
     "gb_pct": 28.3,
     "fb_pct": 34.6,
     "bbe": null,
-    "pa": 240.0
+    "pa": 240.0,
+    "sample_field": "pa"
   },
   "650633": {
     "name": "Michael King",
@@ -4342,29 +2840,8 @@
     "gb_pct": 45.9,
     "fb_pct": 26.8,
     "bbe": null,
-    "pa": 610.0
-  },
-  "683742": {
-    "name": "Jose Franco",
-    "barrel_pct_allowed": 10.0,
-    "hardhit_pct_allowed": 33.9,
-    "xwoba_allowed": 0.347,
-    "avg_exit_velo_allowed": 88.0,
-    "gb_pct": 33.9,
-    "fb_pct": 33.9,
-    "bbe": null,
-    "pa": 92.0
-  },
-  "696522": {
-    "name": "Hayden Juenger",
-    "barrel_pct_allowed": 8.8,
-    "hardhit_pct_allowed": 36.8,
-    "xwoba_allowed": 0.374,
-    "avg_exit_velo_allowed": 89.0,
-    "gb_pct": 22.8,
-    "fb_pct": 26.3,
-    "bbe": null,
-    "pa": 72.0
+    "pa": 610.0,
+    "sample_field": "pa"
   },
   "663158": {
     "name": "Robert Suarez",
@@ -4375,7 +2852,8 @@
     "gb_pct": 47.7,
     "fb_pct": 23.9,
     "bbe": null,
-    "pa": 121.0
+    "pa": 121.0,
+    "sample_field": "pa"
   },
   "647336": {
     "name": "Michael Soroka",
@@ -4386,7 +2864,8 @@
     "gb_pct": 38.3,
     "fb_pct": 28.0,
     "bbe": null,
-    "pa": 375.0
+    "pa": 375.0,
+    "sample_field": "pa"
   },
   "676282": {
     "name": "Joey Cantillo",
@@ -4397,29 +2876,8 @@
     "gb_pct": 46.2,
     "fb_pct": 27.8,
     "bbe": null,
-    "pa": 542.0
-  },
-  "668834": {
-    "name": "Easton McGee",
-    "barrel_pct_allowed": 12.5,
-    "hardhit_pct_allowed": 37.5,
-    "xwoba_allowed": 0.369,
-    "avg_exit_velo_allowed": 89.1,
-    "gb_pct": 41.7,
-    "fb_pct": 37.5,
-    "bbe": null,
-    "pa": 35.0
-  },
-  "624522": {
-    "name": "Keegan Thompson",
-    "barrel_pct_allowed": 13.6,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.407,
-    "avg_exit_velo_allowed": 92.5,
-    "gb_pct": 31.8,
-    "fb_pct": 34.1,
-    "bbe": null,
-    "pa": 57.0
+    "pa": 542.0,
+    "sample_field": "pa"
   },
   "676571": {
     "name": "PJ Poulin",
@@ -4430,7 +2888,8 @@
     "gb_pct": 47.2,
     "fb_pct": 28.3,
     "bbe": null,
-    "pa": 153.0
+    "pa": 153.0,
+    "sample_field": "pa"
   },
   "592773": {
     "name": "Ryne Stanek",
@@ -4441,7 +2900,8 @@
     "gb_pct": 39.4,
     "fb_pct": 27.0,
     "bbe": null,
-    "pa": 218.0
+    "pa": 218.0,
+    "sample_field": "pa"
   },
   "445276": {
     "name": "Kenley Jansen",
@@ -4452,7 +2912,8 @@
     "gb_pct": 21.4,
     "fb_pct": 38.1,
     "bbe": null,
-    "pa": 144.0
+    "pa": 144.0,
+    "sample_field": "pa"
   },
   "687473": {
     "name": "Ryan Gusto",
@@ -4463,18 +2924,8 @@
     "gb_pct": 39.0,
     "fb_pct": 25.6,
     "bbe": null,
-    "pa": 237.0
-  },
-  "683000": {
-    "name": "Riley Cornelio",
-    "barrel_pct_allowed": 10.7,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.318,
-    "avg_exit_velo_allowed": 86.2,
-    "gb_pct": 41.1,
-    "fb_pct": 32.1,
-    "bbe": null,
-    "pa": 96.0
+    "pa": 237.0,
+    "sample_field": "pa"
   },
   "669199": {
     "name": "Lake Bachar",
@@ -4485,7 +2936,8 @@
     "gb_pct": 38.9,
     "fb_pct": 32.8,
     "bbe": null,
-    "pa": 281.0
+    "pa": 281.0,
+    "sample_field": "pa"
   },
   "694819": {
     "name": "Jacob Misiorowski",
@@ -4496,7 +2948,8 @@
     "gb_pct": 45.1,
     "fb_pct": 24.9,
     "bbe": null,
-    "pa": 527.0
+    "pa": 527.0,
+    "sample_field": "pa"
   },
   "542888": {
     "name": "Shawn Armstrong",
@@ -4507,18 +2960,8 @@
     "gb_pct": 44.6,
     "fb_pct": 28.3,
     "bbe": null,
-    "pa": 146.0
-  },
-  "703725": {
-    "name": "Luis Gastelum",
-    "barrel_pct_allowed": 9.8,
-    "hardhit_pct_allowed": 23.5,
-    "xwoba_allowed": 0.302,
-    "avg_exit_velo_allowed": 85.5,
-    "gb_pct": 43.1,
-    "fb_pct": 21.6,
-    "bbe": null,
-    "pa": 80.0
+    "pa": 146.0,
+    "sample_field": "pa"
   },
   "657097": {
     "name": "Jacob Webb",
@@ -4529,7 +2972,8 @@
     "gb_pct": 43.0,
     "fb_pct": 24.8,
     "bbe": null,
-    "pa": 232.0
+    "pa": 232.0,
+    "sample_field": "pa"
   },
   "681867": {
     "name": "Cooper Criswell",
@@ -4540,7 +2984,8 @@
     "gb_pct": 61.8,
     "fb_pct": 20.2,
     "bbe": null,
-    "pa": 121.0
+    "pa": 121.0,
+    "sample_field": "pa"
   },
   "657514": {
     "name": "Brennan Bernardino",
@@ -4551,7 +2996,8 @@
     "gb_pct": 45.0,
     "fb_pct": 25.6,
     "bbe": null,
-    "pa": 215.0
+    "pa": 215.0,
+    "sample_field": "pa"
   },
   "681347": {
     "name": "Mike Burrows",
@@ -4562,18 +3008,8 @@
     "gb_pct": 37.9,
     "fb_pct": 28.5,
     "bbe": null,
-    "pa": 423.0
-  },
-  "665645": {
-    "name": "Kervin Castro",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 30.8,
-    "xwoba_allowed": 0.235,
-    "avg_exit_velo_allowed": 92.5,
-    "gb_pct": 61.5,
-    "fb_pct": 15.4,
-    "bbe": null,
-    "pa": 23.0
+    "pa": 423.0,
+    "sample_field": "pa"
   },
   "676254": {
     "name": "Ryan Walker",
@@ -4584,29 +3020,8 @@
     "gb_pct": 47.8,
     "fb_pct": 23.3,
     "bbe": null,
-    "pa": 125.0
-  },
-  "663485": {
-    "name": "Cole Sands",
-    "barrel_pct_allowed": 10.3,
-    "hardhit_pct_allowed": 56.4,
-    "xwoba_allowed": 0.364,
-    "avg_exit_velo_allowed": 95.0,
-    "gb_pct": 41.0,
-    "fb_pct": 35.9,
-    "bbe": null,
-    "pa": 56.0
-  },
-  "674370": {
-    "name": "Osvaldo Bido",
-    "barrel_pct_allowed": 8.9,
-    "hardhit_pct_allowed": 41.1,
-    "xwoba_allowed": 0.377,
-    "avg_exit_velo_allowed": 88.5,
-    "gb_pct": 32.1,
-    "fb_pct": 32.1,
-    "bbe": null,
-    "pa": 81.0
+    "pa": 125.0,
+    "sample_field": "pa"
   },
   "621383": {
     "name": "Tanner Banks",
@@ -4617,7 +3032,8 @@
     "gb_pct": 35.6,
     "fb_pct": 31.7,
     "bbe": null,
-    "pa": 146.0
+    "pa": 146.0,
+    "sample_field": "pa"
   },
   "677958": {
     "name": "Kumar Rocker",
@@ -4628,29 +3044,8 @@
     "gb_pct": 42.5,
     "fb_pct": 24.0,
     "bbe": null,
-    "pa": 528.0
-  },
-  "683409": {
-    "name": "Angel Chivilli",
-    "barrel_pct_allowed": 6.3,
-    "hardhit_pct_allowed": 38.8,
-    "xwoba_allowed": 0.309,
-    "avg_exit_velo_allowed": 88.0,
-    "gb_pct": 38.8,
-    "fb_pct": 38.8,
-    "bbe": null,
-    "pa": 73.0
-  },
-  "608650": {
-    "name": "Dietrich Enns",
-    "barrel_pct_allowed": 6.5,
-    "hardhit_pct_allowed": 39.1,
-    "xwoba_allowed": 0.301,
-    "avg_exit_velo_allowed": 91.6,
-    "gb_pct": 34.8,
-    "fb_pct": 34.8,
-    "bbe": null,
-    "pa": 70.0
+    "pa": 528.0,
+    "sample_field": "pa"
   },
   "694360": {
     "name": "Beck Way",
@@ -4661,7 +3056,8 @@
     "gb_pct": 52.1,
     "fb_pct": 21.9,
     "bbe": null,
-    "pa": 105.0
+    "pa": 105.0,
+    "sample_field": "pa"
   },
   "694973": {
     "name": "Paul Skenes",
@@ -4672,7 +3068,8 @@
     "gb_pct": 41.9,
     "fb_pct": 23.6,
     "bbe": null,
-    "pa": 573.0
+    "pa": 573.0,
+    "sample_field": "pa"
   },
   "656492": {
     "name": "Foster Griffin",
@@ -4683,18 +3080,8 @@
     "gb_pct": 44.6,
     "fb_pct": 26.5,
     "bbe": null,
-    "pa": 589.0
-  },
-  "687273": {
-    "name": "Quinn Mathews",
-    "barrel_pct_allowed": 4.0,
-    "hardhit_pct_allowed": 24.0,
-    "xwoba_allowed": 0.273,
-    "avg_exit_velo_allowed": 85.6,
-    "gb_pct": 40.0,
-    "fb_pct": 28.0,
-    "bbe": null,
-    "pa": 41.0
+    "pa": 589.0,
+    "sample_field": "pa"
   },
   "806188": {
     "name": "Cade Gibson",
@@ -4705,18 +3092,8 @@
     "gb_pct": 49.1,
     "fb_pct": 20.9,
     "bbe": null,
-    "pa": 163.0
-  },
-  "678061": {
-    "name": "Ray Kerr",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 22.2,
-    "xwoba_allowed": 0.283,
-    "avg_exit_velo_allowed": 93.0,
-    "gb_pct": 55.6,
-    "fb_pct": 11.1,
-    "bbe": null,
-    "pa": 10.0
+    "pa": 163.0,
+    "sample_field": "pa"
   },
   "663878": {
     "name": "Nate Pearson",
@@ -4727,7 +3104,8 @@
     "gb_pct": 48.1,
     "fb_pct": 24.7,
     "bbe": null,
-    "pa": 125.0
+    "pa": 125.0,
+    "sample_field": "pa"
   },
   "676440": {
     "name": "Tanner Bibee",
@@ -4738,7 +3116,8 @@
     "gb_pct": 38.4,
     "fb_pct": 28.1,
     "bbe": null,
-    "pa": 613.0
+    "pa": 613.0,
+    "sample_field": "pa"
   },
   "700669": {
     "name": "Gordon Graceffo",
@@ -4749,40 +3128,8 @@
     "gb_pct": 48.9,
     "fb_pct": 28.9,
     "bbe": null,
-    "pa": 249.0
-  },
-  "592454": {
-    "name": "Tommy Kahnle",
-    "barrel_pct_allowed": 15.6,
-    "hardhit_pct_allowed": 56.3,
-    "xwoba_allowed": 0.381,
-    "avg_exit_velo_allowed": 93.1,
-    "gb_pct": 40.6,
-    "fb_pct": 18.8,
-    "bbe": null,
-    "pa": 43.0
-  },
-  "601713": {
-    "name": "Nick Pivetta",
-    "barrel_pct_allowed": 2.8,
-    "hardhit_pct_allowed": 30.6,
-    "xwoba_allowed": 0.212,
-    "avg_exit_velo_allowed": 86.2,
-    "gb_pct": 33.3,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 66.0
-  },
-  "688497": {
-    "name": "Taylor Rashi",
-    "barrel_pct_allowed": 5.6,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.359,
-    "avg_exit_velo_allowed": 89.2,
-    "gb_pct": 44.4,
-    "fb_pct": 27.8,
-    "bbe": null,
-    "pa": 26.0
+    "pa": 249.0,
+    "sample_field": "pa"
   },
   "669060": {
     "name": "Bryse Wilson",
@@ -4793,7 +3140,8 @@
     "gb_pct": 36.8,
     "fb_pct": 23.2,
     "bbe": null,
-    "pa": 124.0
+    "pa": 124.0,
+    "sample_field": "pa"
   },
   "669302": {
     "name": "Logan Gilbert",
@@ -4804,29 +3152,8 @@
     "gb_pct": 38.7,
     "fb_pct": 28.9,
     "bbe": null,
-    "pa": 594.0
-  },
-  "669145": {
-    "name": "Bruce Zimmermann",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 27.8,
-    "xwoba_allowed": 0.261,
-    "avg_exit_velo_allowed": 87.2,
-    "gb_pct": 33.3,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 21.0
-  },
-  "669310": {
-    "name": "CJ Van Eyk",
-    "barrel_pct_allowed": 3.6,
-    "hardhit_pct_allowed": 46.4,
-    "xwoba_allowed": 0.363,
-    "avg_exit_velo_allowed": 87.6,
-    "gb_pct": 50.0,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 31.0
+    "pa": 594.0,
+    "sample_field": "pa"
   },
   "663558": {
     "name": "Jovani Mor\u00e1n",
@@ -4837,18 +3164,8 @@
     "gb_pct": 42.0,
     "fb_pct": 28.2,
     "bbe": null,
-    "pa": 216.0
-  },
-  "543056": {
-    "name": "Danny Coulombe",
-    "barrel_pct_allowed": 1.4,
-    "hardhit_pct_allowed": 21.4,
-    "xwoba_allowed": 0.321,
-    "avg_exit_velo_allowed": 82.1,
-    "gb_pct": 42.9,
-    "fb_pct": 24.3,
-    "bbe": null,
-    "pa": 96.0
+    "pa": 216.0,
+    "sample_field": "pa"
   },
   "663687": {
     "name": "Hogan Harris",
@@ -4859,29 +3176,8 @@
     "gb_pct": 47.1,
     "fb_pct": 22.1,
     "bbe": null,
-    "pa": 253.0
-  },
-  "606303": {
-    "name": "Joel Payamps",
-    "barrel_pct_allowed": 17.4,
-    "hardhit_pct_allowed": 39.1,
-    "xwoba_allowed": 0.377,
-    "avg_exit_velo_allowed": 92.5,
-    "gb_pct": 21.7,
-    "fb_pct": 52.2,
-    "bbe": null,
-    "pa": 36.0
-  },
-  "676130": {
-    "name": "Jos\u00e9 Butt\u00f3",
-    "barrel_pct_allowed": 14.3,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.494,
-    "avg_exit_velo_allowed": 84.2,
-    "gb_pct": 14.3,
-    "fb_pct": 42.9,
-    "bbe": null,
-    "pa": 16.0
+    "pa": 253.0,
+    "sample_field": "pa"
   },
   "571927": {
     "name": "Steven Matz",
@@ -4892,18 +3188,8 @@
     "gb_pct": 39.0,
     "fb_pct": 26.7,
     "bbe": null,
-    "pa": 282.0
-  },
-  "680728": {
-    "name": "Adrian Del Castillo",
-    "barrel_pct_allowed": 11.1,
-    "hardhit_pct_allowed": 66.7,
-    "xwoba_allowed": 0.551,
-    "avg_exit_velo_allowed": 88.8,
-    "gb_pct": 0.0,
-    "fb_pct": 22.2,
-    "bbe": null,
-    "pa": 10.0
+    "pa": 282.0,
+    "sample_field": "pa"
   },
   "643511": {
     "name": "Tyler Rogers",
@@ -4914,7 +3200,8 @@
     "gb_pct": 64.0,
     "fb_pct": 14.3,
     "bbe": null,
-    "pa": 240.0
+    "pa": 240.0,
+    "sample_field": "pa"
   },
   "702070": {
     "name": "Noah Cameron",
@@ -4925,7 +3212,8 @@
     "gb_pct": 40.2,
     "fb_pct": 26.2,
     "bbe": null,
-    "pa": 580.0
+    "pa": 580.0,
+    "sample_field": "pa"
   },
   "642207": {
     "name": "Devin Williams",
@@ -4936,7 +3224,8 @@
     "gb_pct": 39.6,
     "fb_pct": 19.8,
     "bbe": null,
-    "pa": 178.0
+    "pa": 178.0,
+    "sample_field": "pa"
   },
   "663362": {
     "name": "Matt Waldron",
@@ -4947,7 +3236,8 @@
     "gb_pct": 44.4,
     "fb_pct": 31.0,
     "bbe": null,
-    "pa": 169.0
+    "pa": 169.0,
+    "sample_field": "pa"
   },
   "686218": {
     "name": "Emmet Sheehan",
@@ -4958,7 +3248,8 @@
     "gb_pct": 35.0,
     "fb_pct": 30.5,
     "bbe": null,
-    "pa": 412.0
+    "pa": 412.0,
+    "sample_field": "pa"
   },
   "664285": {
     "name": "Framber Valdez",
@@ -4969,7 +3260,8 @@
     "gb_pct": 54.5,
     "fb_pct": 19.8,
     "bbe": null,
-    "pa": 613.0
+    "pa": 613.0,
+    "sample_field": "pa"
   },
   "666171": {
     "name": "Ryan Zeferjahn",
@@ -4980,29 +3272,8 @@
     "gb_pct": 39.2,
     "fb_pct": 25.6,
     "bbe": null,
-    "pa": 251.0
-  },
-  "592779": {
-    "name": "Brock Stewart",
-    "barrel_pct_allowed": 2.7,
-    "hardhit_pct_allowed": 21.6,
-    "xwoba_allowed": 0.214,
-    "avg_exit_velo_allowed": 81.5,
-    "gb_pct": 48.6,
-    "fb_pct": 29.7,
-    "bbe": null,
-    "pa": 58.0
-  },
-  "675919": {
-    "name": "Nick Raquet",
-    "barrel_pct_allowed": 7.7,
-    "hardhit_pct_allowed": 30.8,
-    "xwoba_allowed": 0.416,
-    "avg_exit_velo_allowed": 88.6,
-    "gb_pct": 23.1,
-    "fb_pct": 46.2,
-    "bbe": null,
-    "pa": 17.0
+    "pa": 251.0,
+    "sample_field": "pa"
   },
   "675911": {
     "name": "Spencer Strider",
@@ -5013,29 +3284,8 @@
     "gb_pct": 29.6,
     "fb_pct": 37.8,
     "bbe": null,
-    "pa": 165.0
-  },
-  "608344": {
-    "name": "Cole Irvin",
-    "barrel_pct_allowed": 9.5,
-    "hardhit_pct_allowed": 52.4,
-    "xwoba_allowed": 0.39,
-    "avg_exit_velo_allowed": 89.2,
-    "gb_pct": 52.4,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 30.0
-  },
-  "605218": {
-    "name": "Carl Edwards Jr.",
-    "barrel_pct_allowed": 10.0,
-    "hardhit_pct_allowed": 40.0,
-    "xwoba_allowed": 0.258,
-    "avg_exit_velo_allowed": 93.6,
-    "gb_pct": 40.0,
-    "fb_pct": 40.0,
-    "bbe": null,
-    "pa": 25.0
+    "pa": 165.0,
+    "sample_field": "pa"
   },
   "805673": {
     "name": "Zebby Matthews",
@@ -5046,7 +3296,8 @@
     "gb_pct": 44.1,
     "fb_pct": 25.8,
     "bbe": null,
-    "pa": 410.0
+    "pa": 410.0,
+    "sample_field": "pa"
   },
   "657424": {
     "name": "Matt Gage",
@@ -5057,51 +3308,8 @@
     "gb_pct": 41.9,
     "fb_pct": 27.9,
     "bbe": null,
-    "pa": 126.0
-  },
-  "669212": {
-    "name": "Eli Morgan",
-    "barrel_pct_allowed": 6.3,
-    "hardhit_pct_allowed": 42.2,
-    "xwoba_allowed": 0.399,
-    "avg_exit_velo_allowed": 88.9,
-    "gb_pct": 32.8,
-    "fb_pct": 20.3,
-    "bbe": null,
-    "pa": 91.0
-  },
-  "669920": {
-    "name": "Jason Alexander",
-    "barrel_pct_allowed": 10.0,
-    "hardhit_pct_allowed": 37.7,
-    "xwoba_allowed": 0.332,
-    "avg_exit_velo_allowed": 87.1,
-    "gb_pct": 44.3,
-    "fb_pct": 27.9,
-    "bbe": null,
-    "pa": 84.0
-  },
-  "691008": {
-    "name": "Max Rajcic",
-    "barrel_pct_allowed": 8.0,
-    "hardhit_pct_allowed": 36.0,
-    "xwoba_allowed": 0.281,
-    "avg_exit_velo_allowed": 87.0,
-    "gb_pct": 36.0,
-    "fb_pct": 32.0,
-    "bbe": null,
-    "pa": 39.0
-  },
-  "678368": {
-    "name": "Valente Bellozo",
-    "barrel_pct_allowed": 15.6,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.475,
-    "avg_exit_velo_allowed": 91.3,
-    "gb_pct": 28.1,
-    "fb_pct": 40.6,
-    "bbe": null,
-    "pa": 48.0
+    "pa": 126.0,
+    "sample_field": "pa"
   },
   "690925": {
     "name": "Clayton Beeter",
@@ -5112,40 +3320,8 @@
     "gb_pct": 55.7,
     "fb_pct": 23.7,
     "bbe": null,
-    "pa": 164.0
-  },
-  "642048": {
-    "name": "Tayler Saucedo",
-    "barrel_pct_allowed": 11.5,
-    "hardhit_pct_allowed": 42.3,
-    "xwoba_allowed": 0.313,
-    "avg_exit_velo_allowed": 89.4,
-    "gb_pct": 34.6,
-    "fb_pct": 34.6,
-    "bbe": null,
-    "pa": 41.0
-  },
-  "641656": {
-    "name": "Ian Hamilton",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.342,
-    "avg_exit_velo_allowed": 93.0,
-    "gb_pct": 56.3,
-    "fb_pct": 12.5,
-    "bbe": null,
-    "pa": 23.0
-  },
-  "693308": {
-    "name": "Nick Frasso",
-    "barrel_pct_allowed": 10.5,
-    "hardhit_pct_allowed": 26.3,
-    "xwoba_allowed": 0.356,
-    "avg_exit_velo_allowed": 90.0,
-    "gb_pct": 26.3,
-    "fb_pct": 36.8,
-    "bbe": null,
-    "pa": 28.0
+    "pa": 164.0,
+    "sample_field": "pa"
   },
   "674444": {
     "name": "Steven Cruz",
@@ -5156,18 +3332,8 @@
     "gb_pct": 47.2,
     "fb_pct": 24.8,
     "bbe": null,
-    "pa": 196.0
-  },
-  "681520": {
-    "name": "Antoine Kelly",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 100.0,
-    "xwoba_allowed": 0.454,
-    "avg_exit_velo_allowed": 99.4,
-    "gb_pct": 100.0,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 4.0
+    "pa": 196.0,
+    "sample_field": "pa"
   },
   "669923": {
     "name": "George Kirby",
@@ -5178,7 +3344,8 @@
     "gb_pct": 44.7,
     "fb_pct": 25.3,
     "bbe": null,
-    "pa": 587.0
+    "pa": 587.0,
+    "sample_field": "pa"
   },
   "656849": {
     "name": "David Peterson",
@@ -5189,7 +3356,8 @@
     "gb_pct": 50.3,
     "fb_pct": 21.3,
     "bbe": null,
-    "pa": 507.0
+    "pa": 507.0,
+    "sample_field": "pa"
   },
   "641835": {
     "name": "Tim Mayza",
@@ -5200,7 +3368,8 @@
     "gb_pct": 49.0,
     "fb_pct": 22.2,
     "bbe": null,
-    "pa": 224.0
+    "pa": 224.0,
+    "sample_field": "pa"
   },
   "605400": {
     "name": "Aaron Nola",
@@ -5211,7 +3380,8 @@
     "gb_pct": 40.0,
     "fb_pct": 28.0,
     "bbe": null,
-    "pa": 593.0
+    "pa": 593.0,
+    "sample_field": "pa"
   },
   "623149": {
     "name": "Paul Sewald",
@@ -5222,7 +3392,8 @@
     "gb_pct": 19.5,
     "fb_pct": 46.0,
     "bbe": null,
-    "pa": 170.0
+    "pa": 170.0,
+    "sample_field": "pa"
   },
   "641816": {
     "name": "Tyler Mahle",
@@ -5233,18 +3404,8 @@
     "gb_pct": 41.8,
     "fb_pct": 29.4,
     "bbe": null,
-    "pa": 473.0
-  },
-  "680604": {
-    "name": "Blas Casta\u00f1o",
-    "barrel_pct_allowed": 10.2,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.367,
-    "avg_exit_velo_allowed": 92.7,
-    "gb_pct": 48.3,
-    "fb_pct": 30.0,
-    "bbe": null,
-    "pa": 85.0
+    "pa": 473.0,
+    "sample_field": "pa"
   },
   "672335": {
     "name": "Cionel P\u00e9rez",
@@ -5255,84 +3416,8 @@
     "gb_pct": 56.5,
     "fb_pct": 20.2,
     "bbe": null,
-    "pa": 181.0
-  },
-  "641585": {
-    "name": "J.P. France",
-    "barrel_pct_allowed": 14.3,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.42,
-    "avg_exit_velo_allowed": 89.9,
-    "gb_pct": 47.6,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 31.0
-  },
-  "692030": {
-    "name": "Jose Corniell",
-    "barrel_pct_allowed": 10.0,
-    "hardhit_pct_allowed": 45.0,
-    "xwoba_allowed": 0.365,
-    "avg_exit_velo_allowed": 91.5,
-    "gb_pct": 20.0,
-    "fb_pct": 40.0,
-    "bbe": null,
-    "pa": 28.0
-  },
-  "683363": {
-    "name": "Matt Wilkinson",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 14.3,
-    "xwoba_allowed": 0.201,
-    "avg_exit_velo_allowed": 79.6,
-    "gb_pct": 28.6,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 7.0
-  },
-  "681676": {
-    "name": "Ryan Fernandez",
-    "barrel_pct_allowed": 6.3,
-    "hardhit_pct_allowed": 34.4,
-    "xwoba_allowed": 0.291,
-    "avg_exit_velo_allowed": 83.9,
-    "gb_pct": 40.6,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 59.0
-  },
-  "702281": {
-    "name": "Robby Snelling",
-    "barrel_pct_allowed": 6.3,
-    "hardhit_pct_allowed": 43.8,
-    "xwoba_allowed": 0.371,
-    "avg_exit_velo_allowed": 88.5,
-    "gb_pct": 50.0,
-    "fb_pct": 12.5,
-    "bbe": null,
-    "pa": 22.0
-  },
-  "694753": {
-    "name": "Khristian Curtis",
-    "barrel_pct_allowed": 9.1,
-    "hardhit_pct_allowed": 27.3,
-    "xwoba_allowed": 0.327,
-    "avg_exit_velo_allowed": 87.5,
-    "gb_pct": 45.5,
-    "fb_pct": 9.1,
-    "bbe": null,
-    "pa": 17.0
-  },
-  "606965": {
-    "name": "Chris Devenski",
-    "barrel_pct_allowed": 22.2,
-    "hardhit_pct_allowed": 55.6,
-    "xwoba_allowed": 0.297,
-    "avg_exit_velo_allowed": 94.7,
-    "gb_pct": 44.4,
-    "fb_pct": 11.1,
-    "bbe": null,
-    "pa": 12.0
+    "pa": 181.0,
+    "sample_field": "pa"
   },
   "641778": {
     "name": "Eric Lauer",
@@ -5343,7 +3428,8 @@
     "gb_pct": 31.9,
     "fb_pct": 37.7,
     "bbe": null,
-    "pa": 438.0
+    "pa": 438.0,
+    "sample_field": "pa"
   },
   "664076": {
     "name": "Garrett Cleavinger",
@@ -5354,18 +3440,8 @@
     "gb_pct": 37.8,
     "fb_pct": 24.4,
     "bbe": null,
-    "pa": 157.0
-  },
-  "682995": {
-    "name": "Hunter Barco",
-    "barrel_pct_allowed": 7.0,
-    "hardhit_pct_allowed": 43.1,
-    "xwoba_allowed": 0.381,
-    "avg_exit_velo_allowed": 89.3,
-    "gb_pct": 46.6,
-    "fb_pct": 22.4,
-    "bbe": null,
-    "pa": 87.0
+    "pa": 157.0,
+    "sample_field": "pa"
   },
   "689818": {
     "name": "David Sandlin",
@@ -5376,40 +3452,8 @@
     "gb_pct": 43.5,
     "fb_pct": 24.6,
     "bbe": null,
-    "pa": 106.0
-  },
-  "623465": {
-    "name": "Evan Phillips",
-    "barrel_pct_allowed": 14.3,
-    "hardhit_pct_allowed": 38.1,
-    "xwoba_allowed": 0.332,
-    "avg_exit_velo_allowed": 90.8,
-    "gb_pct": 33.3,
-    "fb_pct": 47.6,
-    "bbe": null,
-    "pa": 60.0
-  },
-  "681006": {
-    "name": "Josh Simpson",
-    "barrel_pct_allowed": 17.4,
-    "hardhit_pct_allowed": 43.5,
-    "xwoba_allowed": 0.369,
-    "avg_exit_velo_allowed": 92.2,
-    "gb_pct": 30.4,
-    "fb_pct": 43.5,
-    "bbe": null,
-    "pa": 38.0
-  },
-  "700413": {
-    "name": "Tyler Uberstine",
-    "barrel_pct_allowed": 12.5,
-    "hardhit_pct_allowed": 37.5,
-    "xwoba_allowed": 0.378,
-    "avg_exit_velo_allowed": 87.4,
-    "gb_pct": 12.5,
-    "fb_pct": 50.0,
-    "bbe": null,
-    "pa": 11.0
+    "pa": 106.0,
+    "sample_field": "pa"
   },
   "641793": {
     "name": "Zack Littell",
@@ -5420,29 +3464,8 @@
     "gb_pct": 35.6,
     "fb_pct": 33.4,
     "bbe": null,
-    "pa": 519.0
-  },
-  "455119": {
-    "name": "Chris Martin",
-    "barrel_pct_allowed": 11.1,
-    "hardhit_pct_allowed": 44.4,
-    "xwoba_allowed": 0.408,
-    "avg_exit_velo_allowed": 91.3,
-    "gb_pct": 31.5,
-    "fb_pct": 25.9,
-    "bbe": null,
-    "pa": 66.0
-  },
-  "686894": {
-    "name": "Joey Wiemer",
-    "barrel_pct_allowed": 7.7,
-    "hardhit_pct_allowed": 30.8,
-    "xwoba_allowed": 0.473,
-    "avg_exit_velo_allowed": 90.6,
-    "gb_pct": 15.4,
-    "fb_pct": 46.2,
-    "bbe": null,
-    "pa": 16.0
+    "pa": 519.0,
+    "sample_field": "pa"
   },
   "519242": {
     "name": "Chris Sale",
@@ -5453,7 +3476,8 @@
     "gb_pct": 44.5,
     "fb_pct": 23.5,
     "bbe": null,
-    "pa": 517.0
+    "pa": 517.0,
+    "sample_field": "pa"
   },
   "660853": {
     "name": "Enyel De Los Santos",
@@ -5464,18 +3488,8 @@
     "gb_pct": 36.8,
     "fb_pct": 30.5,
     "bbe": null,
-    "pa": 240.0
-  },
-  "671111": {
-    "name": "Sammy Peralta",
-    "barrel_pct_allowed": 14.3,
-    "hardhit_pct_allowed": 42.9,
-    "xwoba_allowed": 0.413,
-    "avg_exit_velo_allowed": 89.0,
-    "gb_pct": 21.4,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 28.0
+    "pa": 240.0,
+    "sample_field": "pa"
   },
   "671737": {
     "name": "Taj Bradley",
@@ -5486,7 +3500,8 @@
     "gb_pct": 34.8,
     "fb_pct": 30.3,
     "bbe": null,
-    "pa": 599.0
+    "pa": 599.0,
+    "sample_field": "pa"
   },
   "683003": {
     "name": "Jared Jones",
@@ -5497,7 +3512,8 @@
     "gb_pct": 37.9,
     "fb_pct": 27.0,
     "bbe": null,
-    "pa": 269.0
+    "pa": 269.0,
+    "sample_field": "pa"
   },
   "805299": {
     "name": "Brandyn Garcia",
@@ -5508,18 +3524,8 @@
     "gb_pct": 61.4,
     "fb_pct": 16.9,
     "bbe": null,
-    "pa": 138.0
-  },
-  "681168": {
-    "name": "Luis Curvelo",
-    "barrel_pct_allowed": 9.5,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.387,
-    "avg_exit_velo_allowed": 91.1,
-    "gb_pct": 23.8,
-    "fb_pct": 35.7,
-    "bbe": null,
-    "pa": 54.0
+    "pa": 138.0,
+    "sample_field": "pa"
   },
   "667755": {
     "name": "Jos\u00e9 Soriano",
@@ -5530,18 +3536,8 @@
     "gb_pct": 52.8,
     "fb_pct": 21.3,
     "bbe": null,
-    "pa": 578.0
-  },
-  "701121": {
-    "name": "Logan VanWey",
-    "barrel_pct_allowed": 5.9,
-    "hardhit_pct_allowed": 41.2,
-    "xwoba_allowed": 0.239,
-    "avg_exit_velo_allowed": 89.3,
-    "gb_pct": 41.2,
-    "fb_pct": 29.4,
-    "bbe": null,
-    "pa": 22.0
+    "pa": 578.0,
+    "sample_field": "pa"
   },
   "676477": {
     "name": "Garrett Whitlock",
@@ -5552,7 +3548,8 @@
     "gb_pct": 39.3,
     "fb_pct": 27.7,
     "bbe": null,
-    "pa": 168.0
+    "pa": 168.0,
+    "sample_field": "pa"
   },
   "695243": {
     "name": "Mason Miller",
@@ -5563,7 +3560,8 @@
     "gb_pct": 48.2,
     "fb_pct": 25.3,
     "bbe": null,
-    "pa": 199.0
+    "pa": 199.0,
+    "sample_field": "pa"
   },
   "690928": {
     "name": "Hunter Dobbins",
@@ -5574,18 +3572,8 @@
     "gb_pct": 45.0,
     "fb_pct": 26.4,
     "bbe": null,
-    "pa": 212.0
-  },
-  "694397": {
-    "name": "Marco Raya",
-    "barrel_pct_allowed": 5.6,
-    "hardhit_pct_allowed": 27.8,
-    "xwoba_allowed": 0.341,
-    "avg_exit_velo_allowed": 87.0,
-    "gb_pct": 44.4,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 25.0
+    "pa": 212.0,
+    "sample_field": "pa"
   },
   "643410": {
     "name": "Mark Leiter Jr.",
@@ -5596,7 +3584,8 @@
     "gb_pct": 42.9,
     "fb_pct": 24.2,
     "bbe": null,
-    "pa": 144.0
+    "pa": 144.0,
+    "sample_field": "pa"
   },
   "801139": {
     "name": "Payton Tolle",
@@ -5607,7 +3596,8 @@
     "gb_pct": 36.7,
     "fb_pct": 27.8,
     "bbe": null,
-    "pa": 483.0
+    "pa": 483.0,
+    "sample_field": "pa"
   },
   "680732": {
     "name": "Sean Burke",
@@ -5618,29 +3608,8 @@
     "gb_pct": 35.5,
     "fb_pct": 30.9,
     "bbe": null,
-    "pa": 571.0
-  },
-  "656212": {
-    "name": "Charlie Barnes",
-    "barrel_pct_allowed": 8.2,
-    "hardhit_pct_allowed": 46.9,
-    "xwoba_allowed": 0.404,
-    "avg_exit_velo_allowed": 92.5,
-    "gb_pct": 46.9,
-    "fb_pct": 16.3,
-    "bbe": null,
-    "pa": 63.0
-  },
-  "696146": {
-    "name": "Hagen Smith",
-    "barrel_pct_allowed": 11.1,
-    "hardhit_pct_allowed": 55.6,
-    "xwoba_allowed": 0.291,
-    "avg_exit_velo_allowed": 91.3,
-    "gb_pct": 55.6,
-    "fb_pct": 11.1,
-    "bbe": null,
-    "pa": 25.0
+    "pa": 571.0,
+    "sample_field": "pa"
   },
   "640455": {
     "name": "Sean Manaea",
@@ -5651,18 +3620,8 @@
     "gb_pct": 39.6,
     "fb_pct": 29.9,
     "bbe": null,
-    "pa": 481.0
-  },
-  "669298": {
-    "name": "TJ Shook",
-    "barrel_pct_allowed": 7.4,
-    "hardhit_pct_allowed": 40.7,
-    "xwoba_allowed": 0.319,
-    "avg_exit_velo_allowed": 91.4,
-    "gb_pct": 29.6,
-    "fb_pct": 37.0,
-    "bbe": null,
-    "pa": 36.0
+    "pa": 481.0,
+    "sample_field": "pa"
   },
   "642547": {
     "name": "Freddy Peralta",
@@ -5673,7 +3632,8 @@
     "gb_pct": 40.2,
     "fb_pct": 27.4,
     "bbe": null,
-    "pa": 573.0
+    "pa": 573.0,
+    "sample_field": "pa"
   },
   "594798": {
     "name": "Jacob deGrom",
@@ -5684,7 +3644,8 @@
     "gb_pct": 35.3,
     "fb_pct": 28.3,
     "bbe": null,
-    "pa": 518.0
+    "pa": 518.0,
+    "sample_field": "pa"
   },
   "687377": {
     "name": "Orlando Ribalta",
@@ -5695,7 +3656,8 @@
     "gb_pct": 39.6,
     "fb_pct": 30.2,
     "bbe": null,
-    "pa": 155.0
+    "pa": 155.0,
+    "sample_field": "pa"
   },
   "579328": {
     "name": "Yusei Kikuchi",
@@ -5706,7 +3668,8 @@
     "gb_pct": 39.4,
     "fb_pct": 24.5,
     "bbe": null,
-    "pa": 142.0
+    "pa": 142.0,
+    "sample_field": "pa"
   },
   "680694": {
     "name": "Kyle Bradish",
@@ -5717,18 +3680,8 @@
     "gb_pct": 47.6,
     "fb_pct": 23.3,
     "bbe": null,
-    "pa": 587.0
-  },
-  "682825": {
-    "name": "Luis Mey",
-    "barrel_pct_allowed": 12.1,
-    "hardhit_pct_allowed": 44.4,
-    "xwoba_allowed": 0.318,
-    "avg_exit_velo_allowed": 92.4,
-    "gb_pct": 55.6,
-    "fb_pct": 27.8,
-    "bbe": null,
-    "pa": 81.0
+    "pa": 587.0,
+    "sample_field": "pa"
   },
   "593974": {
     "name": "Wandy Peralta",
@@ -5739,18 +3692,8 @@
     "gb_pct": 48.5,
     "fb_pct": 16.7,
     "bbe": null,
-    "pa": 261.0
-  },
-  "662144": {
-    "name": "Brian Keller",
-    "barrel_pct_allowed": 25.0,
-    "hardhit_pct_allowed": 37.5,
-    "xwoba_allowed": 0.361,
-    "avg_exit_velo_allowed": 94.5,
-    "gb_pct": 25.0,
-    "fb_pct": 37.5,
-    "bbe": null,
-    "pa": 11.0
+    "pa": 261.0,
+    "sample_field": "pa"
   },
   "666142": {
     "name": "Cole Ragans",
@@ -5761,7 +3704,8 @@
     "gb_pct": 34.9,
     "fb_pct": 37.3,
     "bbe": null,
-    "pa": 151.0
+    "pa": 151.0,
+    "sample_field": "pa"
   },
   "668390": {
     "name": "Cole Winn",
@@ -5772,7 +3716,8 @@
     "gb_pct": 36.7,
     "fb_pct": 30.2,
     "bbe": null,
-    "pa": 197.0
+    "pa": 197.0,
+    "sample_field": "pa"
   },
   "595014": {
     "name": "Blake Treinen",
@@ -5783,7 +3728,8 @@
     "gb_pct": 53.1,
     "fb_pct": 26.6,
     "bbe": null,
-    "pa": 100.0
+    "pa": 100.0,
+    "sample_field": "pa"
   },
   "688107": {
     "name": "Robert Gasser",
@@ -5794,7 +3740,8 @@
     "gb_pct": 33.3,
     "fb_pct": 29.4,
     "bbe": null,
-    "pa": 333.0
+    "pa": 333.0,
+    "sample_field": "pa"
   },
   "670062": {
     "name": "Julian Garcia",
@@ -5805,7 +3752,8 @@
     "gb_pct": 40.9,
     "fb_pct": 37.9,
     "bbe": null,
-    "pa": 107.0
+    "pa": 107.0,
+    "sample_field": "pa"
   },
   "621111": {
     "name": "Walker Buehler",
@@ -5816,7 +3764,8 @@
     "gb_pct": 46.7,
     "fb_pct": 23.3,
     "bbe": null,
-    "pa": 518.0
+    "pa": 518.0,
+    "sample_field": "pa"
   },
   "669461": {
     "name": "Matthew Liberatore",
@@ -5827,18 +3776,8 @@
     "gb_pct": 37.6,
     "fb_pct": 29.7,
     "bbe": null,
-    "pa": 541.0
-  },
-  "666619": {
-    "name": "Gregory Santos",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 55.6,
-    "xwoba_allowed": 0.376,
-    "avg_exit_velo_allowed": 91.6,
-    "gb_pct": 50.0,
-    "fb_pct": 16.7,
-    "bbe": null,
-    "pa": 22.0
+    "pa": 541.0,
+    "sample_field": "pa"
   },
   "691587": {
     "name": "Eury P\u00e9rez",
@@ -5849,7 +3788,8 @@
     "gb_pct": 40.1,
     "fb_pct": 27.6,
     "bbe": null,
-    "pa": 494.0
+    "pa": 494.0,
+    "sample_field": "pa"
   },
   "676664": {
     "name": "JP Sears",
@@ -5860,7 +3800,8 @@
     "gb_pct": 43.3,
     "fb_pct": 33.7,
     "bbe": null,
-    "pa": 143.0
+    "pa": 143.0,
+    "sample_field": "pa"
   },
   "682243": {
     "name": "Bryce Miller",
@@ -5871,18 +3812,8 @@
     "gb_pct": 38.3,
     "fb_pct": 34.3,
     "bbe": null,
-    "pa": 354.0
-  },
-  "664774": {
-    "name": "LaMonte Wade Jr.",
-    "barrel_pct_allowed": 16.7,
-    "hardhit_pct_allowed": 66.7,
-    "xwoba_allowed": 0.599,
-    "avg_exit_velo_allowed": 96.2,
-    "gb_pct": 33.3,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 6.0
+    "pa": 354.0,
+    "sample_field": "pa"
   },
   "621366": {
     "name": "Ryan Borucki",
@@ -5893,18 +3824,8 @@
     "gb_pct": 44.9,
     "fb_pct": 29.5,
     "bbe": null,
-    "pa": 104.0
-  },
-  "681544": {
-    "name": "Wyatt Olds",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 0.0,
-    "xwoba_allowed": 0.2,
-    "avg_exit_velo_allowed": 78.6,
-    "gb_pct": 66.7,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 6.0
+    "pa": 104.0,
+    "sample_field": "pa"
   },
   "686930": {
     "name": "Mason Barnett",
@@ -5915,29 +3836,8 @@
     "gb_pct": 36.4,
     "fb_pct": 34.7,
     "bbe": null,
-    "pa": 185.0
-  },
-  "694357": {
-    "name": "Ricky Tiedemann",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 40.0,
-    "xwoba_allowed": 0.332,
-    "avg_exit_velo_allowed": 89.1,
-    "gb_pct": 20.0,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 7.0
-  },
-  "669713": {
-    "name": "Hayden Wesneski",
-    "barrel_pct_allowed": 7.2,
-    "hardhit_pct_allowed": 42.0,
-    "xwoba_allowed": 0.325,
-    "avg_exit_velo_allowed": 89.5,
-    "gb_pct": 40.6,
-    "fb_pct": 27.5,
-    "bbe": null,
-    "pa": 95.0
+    "pa": 185.0,
+    "sample_field": "pa"
   },
   "682052": {
     "name": "Jacob Lopez",
@@ -5948,7 +3848,8 @@
     "gb_pct": 33.5,
     "fb_pct": 32.0,
     "bbe": null,
-    "pa": 396.0
+    "pa": 396.0,
+    "sample_field": "pa"
   },
   "695076": {
     "name": "Rhett Lowder",
@@ -5959,7 +3860,8 @@
     "gb_pct": 43.0,
     "fb_pct": 28.2,
     "bbe": null,
-    "pa": 452.0
+    "pa": 452.0,
+    "sample_field": "pa"
   },
   "669711": {
     "name": "Greg Weissert",
@@ -5970,7 +3872,8 @@
     "gb_pct": 43.5,
     "fb_pct": 32.6,
     "bbe": null,
-    "pa": 204.0
+    "pa": 204.0,
+    "sample_field": "pa"
   },
   "837227": {
     "name": "Tatsuya Imai",
@@ -5981,29 +3884,8 @@
     "gb_pct": 43.5,
     "fb_pct": 26.5,
     "bbe": null,
-    "pa": 301.0
-  },
-  "668820": {
-    "name": "Max Kranick",
-    "barrel_pct_allowed": 6.4,
-    "hardhit_pct_allowed": 29.8,
-    "xwoba_allowed": 0.345,
-    "avg_exit_velo_allowed": 86.8,
-    "gb_pct": 36.2,
-    "fb_pct": 25.5,
-    "bbe": null,
-    "pa": 61.0
-  },
-  "702566": {
-    "name": "Owen Murphy",
-    "barrel_pct_allowed": 10.0,
-    "hardhit_pct_allowed": 55.0,
-    "xwoba_allowed": 0.353,
-    "avg_exit_velo_allowed": 94.1,
-    "gb_pct": 20.0,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 29.0
+    "pa": 301.0,
+    "sample_field": "pa"
   },
   "694361": {
     "name": "Will Klein",
@@ -6014,18 +3896,8 @@
     "gb_pct": 56.0,
     "fb_pct": 10.3,
     "bbe": null,
-    "pa": 189.0
-  },
-  "660787": {
-    "name": "Yerry De los Santos",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 40.5,
-    "xwoba_allowed": 0.293,
-    "avg_exit_velo_allowed": 91.6,
-    "gb_pct": 54.8,
-    "fb_pct": 19.0,
-    "bbe": null,
-    "pa": 58.0
+    "pa": 189.0,
+    "sample_field": "pa"
   },
   "656605": {
     "name": "Mitch Keller",
@@ -6036,18 +3908,8 @@
     "gb_pct": 37.9,
     "fb_pct": 25.8,
     "bbe": null,
-    "pa": 503.0
-  },
-  "690829": {
-    "name": "Ben Joyce",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 20.0,
-    "xwoba_allowed": 0.122,
-    "avg_exit_velo_allowed": 78.9,
-    "gb_pct": 30.0,
-    "fb_pct": 20.0,
-    "bbe": null,
-    "pa": 19.0
+    "pa": 503.0,
+    "sample_field": "pa"
   },
   "681035": {
     "name": "Christian Scott",
@@ -6058,7 +3920,8 @@
     "gb_pct": 33.8,
     "fb_pct": 26.5,
     "bbe": null,
-    "pa": 367.0
+    "pa": 367.0,
+    "sample_field": "pa"
   },
   "608718": {
     "name": "Brent Suter",
@@ -6069,7 +3932,8 @@
     "gb_pct": 48.2,
     "fb_pct": 22.0,
     "bbe": null,
-    "pa": 300.0
+    "pa": 300.0,
+    "sample_field": "pa"
   },
   "670950": {
     "name": "Trevor Richards",
@@ -6080,7 +3944,8 @@
     "gb_pct": 30.8,
     "fb_pct": 35.5,
     "bbe": null,
-    "pa": 243.0
+    "pa": 243.0,
+    "sample_field": "pa"
   },
   "571510": {
     "name": "Matthew Boyd",
@@ -6091,7 +3956,8 @@
     "gb_pct": 41.5,
     "fb_pct": 24.9,
     "bbe": null,
-    "pa": 354.0
+    "pa": 354.0,
+    "sample_field": "pa"
   },
   "687330": {
     "name": "Kevin Kelly",
@@ -6102,18 +3968,8 @@
     "gb_pct": 59.5,
     "fb_pct": 12.0,
     "bbe": null,
-    "pa": 215.0
-  },
-  "592866": {
-    "name": "Trevor Williams",
-    "barrel_pct_allowed": 5.6,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.253,
-    "avg_exit_velo_allowed": 89.0,
-    "gb_pct": 52.8,
-    "fb_pct": 22.2,
-    "bbe": null,
-    "pa": 59.0
+    "pa": 215.0,
+    "sample_field": "pa"
   },
   "543135": {
     "name": "Nathan Eovaldi",
@@ -6124,7 +3980,8 @@
     "gb_pct": 49.2,
     "fb_pct": 24.9,
     "bbe": null,
-    "pa": 555.0
+    "pa": 555.0,
+    "sample_field": "pa"
   },
   "669211": {
     "name": "Keegan Akin",
@@ -6135,7 +3992,8 @@
     "gb_pct": 35.2,
     "fb_pct": 35.2,
     "bbe": null,
-    "pa": 114.0
+    "pa": 114.0,
+    "sample_field": "pa"
   },
   "807743": {
     "name": "Sean Sullivan",
@@ -6146,18 +4004,8 @@
     "gb_pct": 20.2,
     "fb_pct": 40.5,
     "bbe": null,
-    "pa": 114.0
-  },
-  "696136": {
-    "name": "Jordan Wicks",
-    "barrel_pct_allowed": 7.7,
-    "hardhit_pct_allowed": 43.6,
-    "xwoba_allowed": 0.322,
-    "avg_exit_velo_allowed": 88.5,
-    "gb_pct": 46.2,
-    "fb_pct": 20.5,
-    "bbe": null,
-    "pa": 50.0
+    "pa": 114.0,
+    "sample_field": "pa"
   },
   "688642": {
     "name": "Zach Agnos",
@@ -6168,18 +4016,8 @@
     "gb_pct": 38.5,
     "fb_pct": 31.4,
     "bbe": null,
-    "pa": 315.0
-  },
-  "605154": {
-    "name": "John Brebbia",
-    "barrel_pct_allowed": 10.5,
-    "hardhit_pct_allowed": 42.1,
-    "xwoba_allowed": 0.414,
-    "avg_exit_velo_allowed": 89.5,
-    "gb_pct": 31.6,
-    "fb_pct": 52.6,
-    "bbe": null,
-    "pa": 21.0
+    "pa": 315.0,
+    "sample_field": "pa"
   },
   "641743": {
     "name": "Anthony Kay",
@@ -6190,18 +4028,8 @@
     "gb_pct": 45.1,
     "fb_pct": 21.8,
     "bbe": null,
-    "pa": 565.0
-  },
-  "686934": {
-    "name": "Alex McFarlane",
-    "barrel_pct_allowed": 7.7,
-    "hardhit_pct_allowed": 46.2,
-    "xwoba_allowed": 0.356,
-    "avg_exit_velo_allowed": 89.8,
-    "gb_pct": 61.5,
-    "fb_pct": 7.7,
-    "bbe": null,
-    "pa": 20.0
+    "pa": 565.0,
+    "sample_field": "pa"
   },
   "670059": {
     "name": "Colin Holderman",
@@ -6212,7 +4040,8 @@
     "gb_pct": 55.1,
     "fb_pct": 22.0,
     "bbe": null,
-    "pa": 199.0
+    "pa": 199.0,
+    "sample_field": "pa"
   },
   "681799": {
     "name": "Ethan Roberts",
@@ -6223,7 +4052,8 @@
     "gb_pct": 47.4,
     "fb_pct": 21.1,
     "bbe": null,
-    "pa": 110.0
+    "pa": 110.0,
+    "sample_field": "pa"
   },
   "669854": {
     "name": "Ronel Blanco",
@@ -6234,18 +4064,8 @@
     "gb_pct": 41.2,
     "fb_pct": 41.2,
     "bbe": null,
-    "pa": 101.0
-  },
-  "663884": {
-    "name": "Nolan Kingham",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 0.0,
-    "xwoba_allowed": 0.333,
-    "avg_exit_velo_allowed": 83.7,
-    "gb_pct": 33.3,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 6.0
+    "pa": 101.0,
+    "sample_field": "pa"
   },
   "657746": {
     "name": "Joe Ryan",
@@ -6256,7 +4076,8 @@
     "gb_pct": 36.5,
     "fb_pct": 29.2,
     "bbe": null,
-    "pa": 523.0
+    "pa": 523.0,
+    "sample_field": "pa"
   },
   "684007": {
     "name": "Shota Imanaga",
@@ -6267,18 +4088,8 @@
     "gb_pct": 36.4,
     "fb_pct": 32.7,
     "bbe": null,
-    "pa": 578.0
-  },
-  "663893": {
-    "name": "Brendon Little",
-    "barrel_pct_allowed": 9.3,
-    "hardhit_pct_allowed": 46.5,
-    "xwoba_allowed": 0.335,
-    "avg_exit_velo_allowed": 91.0,
-    "gb_pct": 60.5,
-    "fb_pct": 16.3,
-    "bbe": null,
-    "pa": 84.0
+    "pa": 578.0,
+    "sample_field": "pa"
   },
   "660604": {
     "name": "Alan Rangel",
@@ -6289,18 +4100,8 @@
     "gb_pct": 32.9,
     "fb_pct": 29.1,
     "bbe": null,
-    "pa": 123.0
-  },
-  "691548": {
-    "name": "Rolddy Mu\u00f1oz",
-    "barrel_pct_allowed": 25.0,
-    "hardhit_pct_allowed": 62.5,
-    "xwoba_allowed": 0.428,
-    "avg_exit_velo_allowed": 94.2,
-    "gb_pct": 75.0,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 12.0
+    "pa": 123.0,
+    "sample_field": "pa"
   },
   "622491": {
     "name": "Luis Castillo",
@@ -6311,7 +4112,8 @@
     "gb_pct": 39.0,
     "fb_pct": 27.7,
     "bbe": null,
-    "pa": 508.0
+    "pa": 508.0,
+    "sample_field": "pa"
   },
   "696270": {
     "name": "Ryan Johnson",
@@ -6322,18 +4124,8 @@
     "gb_pct": 34.9,
     "fb_pct": 35.9,
     "bbe": null,
-    "pa": 271.0
-  },
-  "682274": {
-    "name": "Yaramil Hiraldo",
-    "barrel_pct_allowed": 11.8,
-    "hardhit_pct_allowed": 35.3,
-    "xwoba_allowed": 0.295,
-    "avg_exit_velo_allowed": 88.9,
-    "gb_pct": 17.6,
-    "fb_pct": 47.1,
-    "bbe": null,
-    "pa": 37.0
+    "pa": 271.0,
+    "sample_field": "pa"
   },
   "640448": {
     "name": "Kyle Finnegan",
@@ -6344,18 +4136,8 @@
     "gb_pct": 48.1,
     "fb_pct": 26.0,
     "bbe": null,
-    "pa": 226.0
-  },
-  "669371": {
-    "name": "Cole Henry",
-    "barrel_pct_allowed": 13.6,
-    "hardhit_pct_allowed": 40.9,
-    "xwoba_allowed": 0.374,
-    "avg_exit_velo_allowed": 88.9,
-    "gb_pct": 27.3,
-    "fb_pct": 38.6,
-    "bbe": null,
-    "pa": 71.0
+    "pa": 226.0,
+    "sample_field": "pa"
   },
   "676974": {
     "name": "Max Meyer",
@@ -6366,7 +4148,8 @@
     "gb_pct": 43.3,
     "fb_pct": 26.6,
     "bbe": null,
-    "pa": 462.0
+    "pa": 462.0,
+    "sample_field": "pa"
   },
   "663436": {
     "name": "Davis Martin",
@@ -6377,18 +4160,8 @@
     "gb_pct": 42.3,
     "fb_pct": 22.1,
     "bbe": null,
-    "pa": 530.0
-  },
-  "690990": {
-    "name": "Cade Horton",
-    "barrel_pct_allowed": 5.3,
-    "hardhit_pct_allowed": 35.0,
-    "xwoba_allowed": 0.283,
-    "avg_exit_velo_allowed": 85.8,
-    "gb_pct": 55.0,
-    "fb_pct": 15.0,
-    "bbe": null,
-    "pa": 26.0
+    "pa": 530.0,
+    "sample_field": "pa"
   },
   "656794": {
     "name": "Sean Newcomb",
@@ -6399,29 +4172,8 @@
     "gb_pct": 48.9,
     "fb_pct": 19.4,
     "bbe": null,
-    "pa": 283.0
-  },
-  "693313": {
-    "name": "Carson Seymour",
-    "barrel_pct_allowed": 8.9,
-    "hardhit_pct_allowed": 40.0,
-    "xwoba_allowed": 0.39,
-    "avg_exit_velo_allowed": 88.5,
-    "gb_pct": 40.0,
-    "fb_pct": 26.7,
-    "bbe": null,
-    "pa": 63.0
-  },
-  "671131": {
-    "name": "Jackson Rutledge",
-    "barrel_pct_allowed": 12.5,
-    "hardhit_pct_allowed": 37.5,
-    "xwoba_allowed": 0.418,
-    "avg_exit_velo_allowed": 85.2,
-    "gb_pct": 75.0,
-    "fb_pct": 12.5,
-    "bbe": null,
-    "pa": 12.0
+    "pa": 283.0,
+    "sample_field": "pa"
   },
   "677952": {
     "name": "Braxton Ashcraft",
@@ -6432,18 +4184,8 @@
     "gb_pct": 46.7,
     "fb_pct": 25.6,
     "bbe": null,
-    "pa": 602.0
-  },
-  "678391": {
-    "name": "Jorbit Vivas",
-    "barrel_pct_allowed": 25.0,
-    "hardhit_pct_allowed": 53.3,
-    "xwoba_allowed": 0.542,
-    "avg_exit_velo_allowed": 92.8,
-    "gb_pct": 31.3,
-    "fb_pct": 31.3,
-    "bbe": null,
-    "pa": 18.0
+    "pa": 602.0,
+    "sample_field": "pa"
   },
   "623454": {
     "name": "Drew Anderson",
@@ -6454,7 +4196,8 @@
     "gb_pct": 48.3,
     "fb_pct": 24.6,
     "bbe": null,
-    "pa": 328.0
+    "pa": 328.0,
+    "sample_field": "pa"
   },
   "663765": {
     "name": "Jake Woodford",
@@ -6465,18 +4208,8 @@
     "gb_pct": 38.5,
     "fb_pct": 26.0,
     "bbe": null,
-    "pa": 126.0
-  },
-  "663559": {
-    "name": "Bailey Falter",
-    "barrel_pct_allowed": 6.7,
-    "hardhit_pct_allowed": 44.4,
-    "xwoba_allowed": 0.415,
-    "avg_exit_velo_allowed": 91.5,
-    "gb_pct": 31.1,
-    "fb_pct": 20.0,
-    "bbe": null,
-    "pa": 57.0
+    "pa": 126.0,
+    "sample_field": "pa"
   },
   "657277": {
     "name": "Logan Webb",
@@ -6487,18 +4220,8 @@
     "gb_pct": 52.1,
     "fb_pct": 20.2,
     "bbe": null,
-    "pa": 560.0
-  },
-  "682769": {
-    "name": "Eiberson Castellano",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 44.4,
-    "xwoba_allowed": 0.376,
-    "avg_exit_velo_allowed": 92.6,
-    "gb_pct": 55.6,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 12.0
+    "pa": 560.0,
+    "sample_field": "pa"
   },
   "677955": {
     "name": "Jaden Hill",
@@ -6509,7 +4232,8 @@
     "gb_pct": 43.0,
     "fb_pct": 25.3,
     "bbe": null,
-    "pa": 130.0
+    "pa": 130.0,
+    "sample_field": "pa"
   },
   "668873": {
     "name": "Caleb Kilian",
@@ -6520,7 +4244,8 @@
     "gb_pct": 48.8,
     "fb_pct": 27.1,
     "bbe": null,
-    "pa": 209.0
+    "pa": 209.0,
+    "sample_field": "pa"
   },
   "676617": {
     "name": "Riley O'Brien",
@@ -6531,7 +4256,8 @@
     "gb_pct": 50.4,
     "fb_pct": 20.3,
     "bbe": null,
-    "pa": 218.0
+    "pa": 218.0,
+    "sample_field": "pa"
   },
   "666277": {
     "name": "George Soriano",
@@ -6542,18 +4268,8 @@
     "gb_pct": 41.6,
     "fb_pct": 26.0,
     "bbe": null,
-    "pa": 239.0
-  },
-  "690440": {
-    "name": "Bradley Hanner",
-    "barrel_pct_allowed": 50.0,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.255,
-    "avg_exit_velo_allowed": 100.1,
-    "gb_pct": 50.0,
-    "fb_pct": 50.0,
-    "bbe": null,
-    "pa": 4.0
+    "pa": 239.0,
+    "sample_field": "pa"
   },
   "592094": {
     "name": "Jason Adam",
@@ -6564,7 +4280,8 @@
     "gb_pct": 46.1,
     "fb_pct": 31.4,
     "bbe": null,
-    "pa": 134.0
+    "pa": 134.0,
+    "sample_field": "pa"
   },
   "605130": {
     "name": "Scott Barlow",
@@ -6575,18 +4292,8 @@
     "gb_pct": 37.1,
     "fb_pct": 35.1,
     "bbe": null,
-    "pa": 153.0
-  },
-  "681751": {
-    "name": "Lazaro Estrada",
-    "barrel_pct_allowed": 8.1,
-    "hardhit_pct_allowed": 40.5,
-    "xwoba_allowed": 0.333,
-    "avg_exit_velo_allowed": 89.2,
-    "gb_pct": 43.2,
-    "fb_pct": 29.7,
-    "bbe": null,
-    "pa": 57.0
+    "pa": 153.0,
+    "sample_field": "pa"
   },
   "621345": {
     "name": "A.J. Minter",
@@ -6597,40 +4304,8 @@
     "gb_pct": 43.2,
     "fb_pct": 31.6,
     "bbe": null,
-    "pa": 125.0
-  },
-  "671212": {
-    "name": "Joe Boyle",
-    "barrel_pct_allowed": 4.0,
-    "hardhit_pct_allowed": 39.2,
-    "xwoba_allowed": 0.308,
-    "avg_exit_velo_allowed": 86.5,
-    "gb_pct": 41.2,
-    "fb_pct": 21.6,
-    "bbe": null,
-    "pa": 81.0
-  },
-  "572143": {
-    "name": "Burch Smith",
-    "barrel_pct_allowed": 4.4,
-    "hardhit_pct_allowed": 47.8,
-    "xwoba_allowed": 0.287,
-    "avg_exit_velo_allowed": 90.3,
-    "gb_pct": 52.2,
-    "fb_pct": 26.1,
-    "bbe": null,
-    "pa": 73.0
-  },
-  "693312": {
-    "name": "Kyle Nicolas",
-    "barrel_pct_allowed": 5.0,
-    "hardhit_pct_allowed": 31.8,
-    "xwoba_allowed": 0.434,
-    "avg_exit_velo_allowed": 87.2,
-    "gb_pct": 27.3,
-    "fb_pct": 31.8,
-    "bbe": null,
-    "pa": 42.0
+    "pa": 125.0,
+    "sample_field": "pa"
   },
   "670970": {
     "name": "Adrian Morejon",
@@ -6641,7 +4316,8 @@
     "gb_pct": 59.5,
     "fb_pct": 13.9,
     "bbe": null,
-    "pa": 279.0
+    "pa": 279.0,
+    "sample_field": "pa"
   },
   "670990": {
     "name": "Yohan Ram\u00edrez",
@@ -6652,29 +4328,8 @@
     "gb_pct": 48.8,
     "fb_pct": 20.5,
     "bbe": null,
-    "pa": 296.0
-  },
-  "594835": {
-    "name": "Marco Gonzales",
-    "barrel_pct_allowed": 4.5,
-    "hardhit_pct_allowed": 22.7,
-    "xwoba_allowed": 0.267,
-    "avg_exit_velo_allowed": 84.8,
-    "gb_pct": 36.4,
-    "fb_pct": 27.3,
-    "bbe": null,
-    "pa": 29.0
-  },
-  "689017": {
-    "name": "Landon Knack",
-    "barrel_pct_allowed": 15.4,
-    "hardhit_pct_allowed": 46.2,
-    "xwoba_allowed": 0.34,
-    "avg_exit_velo_allowed": 90.9,
-    "gb_pct": 30.8,
-    "fb_pct": 42.3,
-    "bbe": null,
-    "pa": 35.0
+    "pa": 296.0,
+    "sample_field": "pa"
   },
   "687562": {
     "name": "Jake Bennett",
@@ -6685,7 +4340,8 @@
     "gb_pct": 47.5,
     "fb_pct": 24.8,
     "bbe": null,
-    "pa": 323.0
+    "pa": 323.0,
+    "sample_field": "pa"
   },
   "676760": {
     "name": "Ron Marinaccio",
@@ -6696,7 +4352,8 @@
     "gb_pct": 39.3,
     "fb_pct": 26.4,
     "bbe": null,
-    "pa": 260.0
+    "pa": 260.0,
+    "sample_field": "pa"
   },
   "672456": {
     "name": "Keider Montero",
@@ -6707,7 +4364,8 @@
     "gb_pct": 43.1,
     "fb_pct": 24.6,
     "bbe": null,
-    "pa": 535.0
+    "pa": 535.0,
+    "sample_field": "pa"
   },
   "681293": {
     "name": "Spencer Arrighetti",
@@ -6718,29 +4376,8 @@
     "gb_pct": 36.6,
     "fb_pct": 28.9,
     "bbe": null,
-    "pa": 386.0
-  },
-  "676680": {
-    "name": "Tom Cosgrove",
-    "barrel_pct_allowed": 4.9,
-    "hardhit_pct_allowed": 34.1,
-    "xwoba_allowed": 0.263,
-    "avg_exit_velo_allowed": 84.8,
-    "gb_pct": 36.6,
-    "fb_pct": 36.6,
-    "bbe": null,
-    "pa": 55.0
-  },
-  "804619": {
-    "name": "John Klein",
-    "barrel_pct_allowed": 7.7,
-    "hardhit_pct_allowed": 38.5,
-    "xwoba_allowed": 0.352,
-    "avg_exit_velo_allowed": 82.5,
-    "gb_pct": 30.8,
-    "fb_pct": 38.5,
-    "bbe": null,
-    "pa": 19.0
+    "pa": 386.0,
+    "sample_field": "pa"
   },
   "605488": {
     "name": "Jeffrey Springs",
@@ -6751,7 +4388,8 @@
     "gb_pct": 33.2,
     "fb_pct": 33.7,
     "bbe": null,
-    "pa": 504.0
+    "pa": 504.0,
+    "sample_field": "pa"
   },
   "680755": {
     "name": "Braydon Fisher",
@@ -6762,7 +4400,8 @@
     "gb_pct": 46.1,
     "fb_pct": 24.8,
     "bbe": null,
-    "pa": 260.0
+    "pa": 260.0,
+    "sample_field": "pa"
   },
   "681982": {
     "name": "Grant Anderson",
@@ -6773,18 +4412,8 @@
     "gb_pct": 35.6,
     "fb_pct": 30.4,
     "bbe": null,
-    "pa": 201.0
-  },
-  "676620": {
-    "name": "Blake Weiman",
-    "barrel_pct_allowed": 4.0,
-    "hardhit_pct_allowed": 32.0,
-    "xwoba_allowed": 0.265,
-    "avg_exit_velo_allowed": 86.5,
-    "gb_pct": 48.0,
-    "fb_pct": 8.0,
-    "bbe": null,
-    "pa": 33.0
+    "pa": 201.0,
+    "sample_field": "pa"
   },
   "656529": {
     "name": "Sam Hentges",
@@ -6795,7 +4424,8 @@
     "gb_pct": 48.1,
     "fb_pct": 24.7,
     "bbe": null,
-    "pa": 139.0
+    "pa": 139.0,
+    "sample_field": "pa"
   },
   "676979": {
     "name": "Garrett Crochet",
@@ -6806,7 +4436,8 @@
     "gb_pct": 37.2,
     "fb_pct": 24.4,
     "bbe": null,
-    "pa": 138.0
+    "pa": 138.0,
+    "sample_field": "pa"
   },
   "656288": {
     "name": "Griffin Canning",
@@ -6817,7 +4448,8 @@
     "gb_pct": 46.7,
     "fb_pct": 25.2,
     "bbe": null,
-    "pa": 319.0
+    "pa": 319.0,
+    "sample_field": "pa"
   },
   "679358": {
     "name": "Eric Orze",
@@ -6828,7 +4460,8 @@
     "gb_pct": 43.8,
     "fb_pct": 19.2,
     "bbe": null,
-    "pa": 189.0
+    "pa": 189.0,
+    "sample_field": "pa"
   },
   "813349": {
     "name": "Connelly Early",
@@ -6839,7 +4472,8 @@
     "gb_pct": 44.1,
     "fb_pct": 30.3,
     "bbe": null,
-    "pa": 390.0
+    "pa": 390.0,
+    "sample_field": "pa"
   },
   "693433": {
     "name": "Bryan Woo",
@@ -6850,7 +4484,8 @@
     "gb_pct": 37.7,
     "fb_pct": 29.5,
     "bbe": null,
-    "pa": 563.0
+    "pa": 563.0,
+    "sample_field": "pa"
   },
   "687931": {
     "name": "Carson Whisenhunt",
@@ -6861,7 +4496,8 @@
     "gb_pct": 34.9,
     "fb_pct": 33.0,
     "bbe": null,
-    "pa": 153.0
+    "pa": 153.0,
+    "sample_field": "pa"
   },
   "663903": {
     "name": "Brady Singer",
@@ -6872,7 +4508,8 @@
     "gb_pct": 42.2,
     "fb_pct": 27.3,
     "bbe": null,
-    "pa": 583.0
+    "pa": 583.0,
+    "sample_field": "pa"
   },
   "815083": {
     "name": "Mitch Farris",
@@ -6883,18 +4520,8 @@
     "gb_pct": 36.6,
     "fb_pct": 27.5,
     "bbe": null,
-    "pa": 204.0
-  },
-  "682982": {
-    "name": "Daniel Espino",
-    "barrel_pct_allowed": 9.1,
-    "hardhit_pct_allowed": 45.5,
-    "xwoba_allowed": 0.279,
-    "avg_exit_velo_allowed": 86.6,
-    "gb_pct": 27.3,
-    "fb_pct": 36.4,
-    "bbe": null,
-    "pa": 27.0
+    "pa": 204.0,
+    "sample_field": "pa"
   },
   "675848": {
     "name": "Juan Mejia",
@@ -6905,7 +4532,8 @@
     "gb_pct": 43.0,
     "fb_pct": 25.9,
     "bbe": null,
-    "pa": 240.0
+    "pa": 240.0,
+    "sample_field": "pa"
   },
   "607192": {
     "name": "Tyler Glasnow",
@@ -6916,7 +4544,8 @@
     "gb_pct": 45.3,
     "fb_pct": 25.6,
     "bbe": null,
-    "pa": 148.0
+    "pa": 148.0,
+    "sample_field": "pa"
   },
   "656876": {
     "name": "Drew Rasmussen",
@@ -6927,7 +4556,8 @@
     "gb_pct": 44.8,
     "fb_pct": 22.6,
     "bbe": null,
-    "pa": 529.0
+    "pa": 529.0,
+    "sample_field": "pa"
   },
   "687312": {
     "name": "Gabriel Hughes",
@@ -6938,18 +4568,8 @@
     "gb_pct": 40.5,
     "fb_pct": 25.0,
     "bbe": null,
-    "pa": 164.0
-  },
-  "656786": {
-    "name": "Parker Mushinski",
-    "barrel_pct_allowed": 3.4,
-    "hardhit_pct_allowed": 37.9,
-    "xwoba_allowed": 0.39,
-    "avg_exit_velo_allowed": 90.1,
-    "gb_pct": 34.5,
-    "fb_pct": 27.6,
-    "bbe": null,
-    "pa": 34.0
+    "pa": 164.0,
+    "sample_field": "pa"
   },
   "663969": {
     "name": "Tyler Phillips",
@@ -6960,7 +4580,8 @@
     "gb_pct": 46.3,
     "fb_pct": 27.5,
     "bbe": null,
-    "pa": 434.0
+    "pa": 434.0,
+    "sample_field": "pa"
   },
   "669947": {
     "name": "Jesse Scholtens",
@@ -6971,7 +4592,8 @@
     "gb_pct": 38.6,
     "fb_pct": 26.9,
     "bbe": null,
-    "pa": 196.0
+    "pa": 196.0,
+    "sample_field": "pa"
   },
   "621112": {
     "name": "Paul Blackburn",
@@ -6982,29 +4604,8 @@
     "gb_pct": 56.6,
     "fb_pct": 21.2,
     "bbe": null,
-    "pa": 274.0
-  },
-  "671345": {
-    "name": "Jason Foley",
-    "barrel_pct_allowed": 6.5,
-    "hardhit_pct_allowed": 29.0,
-    "xwoba_allowed": 0.283,
-    "avg_exit_velo_allowed": 85.9,
-    "gb_pct": 45.2,
-    "fb_pct": 25.8,
-    "bbe": null,
-    "pa": 42.0
-  },
-  "694341": {
-    "name": "Brendan Beck",
-    "barrel_pct_allowed": 27.3,
-    "hardhit_pct_allowed": 59.1,
-    "xwoba_allowed": 0.448,
-    "avg_exit_velo_allowed": 94.9,
-    "gb_pct": 18.2,
-    "fb_pct": 50.0,
-    "bbe": null,
-    "pa": 31.0
+    "pa": 274.0,
+    "sample_field": "pa"
   },
   "623352": {
     "name": "Josh Hader",
@@ -7015,29 +4616,8 @@
     "gb_pct": 41.5,
     "fb_pct": 24.6,
     "bbe": null,
-    "pa": 117.0
-  },
-  "641312": {
-    "name": "Shaun Anderson",
-    "barrel_pct_allowed": 9.2,
-    "hardhit_pct_allowed": 38.5,
-    "xwoba_allowed": 0.391,
-    "avg_exit_velo_allowed": 88.2,
-    "gb_pct": 46.2,
-    "fb_pct": 21.5,
-    "bbe": null,
-    "pa": 93.0
-  },
-  "650960": {
-    "name": "Daniel Duarte",
-    "barrel_pct_allowed": 5.9,
-    "hardhit_pct_allowed": 21.6,
-    "xwoba_allowed": 0.241,
-    "avg_exit_velo_allowed": 81.1,
-    "gb_pct": 37.3,
-    "fb_pct": 21.6,
-    "bbe": null,
-    "pa": 76.0
+    "pa": 117.0,
+    "sample_field": "pa"
   },
   "657756": {
     "name": "Connor Seabold",
@@ -7048,29 +4628,8 @@
     "gb_pct": 43.2,
     "fb_pct": 28.4,
     "bbe": null,
-    "pa": 113.0
-  },
-  "621107": {
-    "name": "Zach Eflin",
-    "barrel_pct_allowed": 25.0,
-    "hardhit_pct_allowed": 75.0,
-    "xwoba_allowed": 0.307,
-    "avg_exit_velo_allowed": 99.1,
-    "gb_pct": 62.5,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 17.0
-  },
-  "472610": {
-    "name": "Luis Garc\u00eda",
-    "barrel_pct_allowed": 5.2,
-    "hardhit_pct_allowed": 44.3,
-    "xwoba_allowed": 0.397,
-    "avg_exit_velo_allowed": 88.4,
-    "gb_pct": 39.3,
-    "fb_pct": 26.2,
-    "bbe": null,
-    "pa": 74.0
+    "pa": 113.0,
+    "sample_field": "pa"
   },
   "800311": {
     "name": "Didier Fuentes",
@@ -7081,7 +4640,8 @@
     "gb_pct": 38.2,
     "fb_pct": 26.5,
     "bbe": null,
-    "pa": 226.0
+    "pa": 226.0,
+    "sample_field": "pa"
   },
   "547973": {
     "name": "Aroldis Chapman",
@@ -7092,7 +4652,8 @@
     "gb_pct": 46.1,
     "fb_pct": 29.4,
     "bbe": null,
-    "pa": 175.0
+    "pa": 175.0,
+    "sample_field": "pa"
   },
   "691951": {
     "name": "Sam Aldegheri",
@@ -7103,7 +4664,8 @@
     "gb_pct": 37.8,
     "fb_pct": 31.5,
     "bbe": null,
-    "pa": 151.0
+    "pa": 151.0,
+    "sample_field": "pa"
   },
   "669372": {
     "name": "J.T. Ginn",
@@ -7114,29 +4676,8 @@
     "gb_pct": 46.6,
     "fb_pct": 24.0,
     "bbe": null,
-    "pa": 533.0
-  },
-  "663941": {
-    "name": "Tristan Beck",
-    "barrel_pct_allowed": 9.6,
-    "hardhit_pct_allowed": 40.4,
-    "xwoba_allowed": 0.33,
-    "avg_exit_velo_allowed": 90.0,
-    "gb_pct": 51.9,
-    "fb_pct": 28.8,
-    "bbe": null,
-    "pa": 64.0
-  },
-  "703615": {
-    "name": "Jose Cabrera",
-    "barrel_pct_allowed": 6.7,
-    "hardhit_pct_allowed": 35.0,
-    "xwoba_allowed": 0.353,
-    "avg_exit_velo_allowed": 88.2,
-    "gb_pct": 45.0,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 81.0
+    "pa": 533.0,
+    "sample_field": "pa"
   },
   "500779": {
     "name": "Jose Quintana",
@@ -7147,7 +4688,8 @@
     "gb_pct": 35.7,
     "fb_pct": 30.8,
     "bbe": null,
-    "pa": 181.0
+    "pa": 181.0,
+    "sample_field": "pa"
   },
   "669620": {
     "name": "Brady Basso",
@@ -7158,18 +4700,8 @@
     "gb_pct": 39.7,
     "fb_pct": 28.2,
     "bbe": null,
-    "pa": 100.0
-  },
-  "592826": {
-    "name": "Vince Velasquez",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 30.0,
-    "xwoba_allowed": 0.154,
-    "avg_exit_velo_allowed": 85.8,
-    "gb_pct": 30.0,
-    "fb_pct": 40.0,
-    "bbe": null,
-    "pa": 11.0
+    "pa": 100.0,
+    "sample_field": "pa"
   },
   "645261": {
     "name": "Sandy Alcantara",
@@ -7180,7 +4712,8 @@
     "gb_pct": 43.3,
     "fb_pct": 24.1,
     "bbe": null,
-    "pa": 728.0
+    "pa": 728.0,
+    "sample_field": "pa"
   },
   "668881": {
     "name": "Hunter Greene",
@@ -7191,7 +4724,8 @@
     "gb_pct": 26.6,
     "fb_pct": 27.8,
     "bbe": null,
-    "pa": 121.0
+    "pa": 121.0,
+    "sample_field": "pa"
   },
   "678022": {
     "name": "Jack Perkins",
@@ -7202,7 +4736,8 @@
     "gb_pct": 35.2,
     "fb_pct": 33.2,
     "bbe": null,
-    "pa": 387.0
+    "pa": 387.0,
+    "sample_field": "pa"
   },
   "642397": {
     "name": "Gregory Soto",
@@ -7213,7 +4748,8 @@
     "gb_pct": 45.5,
     "fb_pct": 22.4,
     "bbe": null,
-    "pa": 227.0
+    "pa": 227.0,
+    "sample_field": "pa"
   },
   "656730": {
     "name": "Trevor Megill",
@@ -7224,29 +4760,8 @@
     "gb_pct": 34.7,
     "fb_pct": 30.6,
     "bbe": null,
-    "pa": 189.0
-  },
-  "689520": {
-    "name": "Cody Laweryson",
-    "barrel_pct_allowed": 8.2,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.329,
-    "avg_exit_velo_allowed": 92.4,
-    "gb_pct": 40.0,
-    "fb_pct": 22.0,
-    "bbe": null,
-    "pa": 78.0
-  },
-  "664074": {
-    "name": "Cody Ponce",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.243,
-    "avg_exit_velo_allowed": 87.9,
-    "gb_pct": 50.0,
-    "fb_pct": 16.7,
-    "bbe": null,
-    "pa": 10.0
+    "pa": 189.0,
+    "sample_field": "pa"
   },
   "801403": {
     "name": "Chase Dollander",
@@ -7257,29 +4772,8 @@
     "gb_pct": 49.6,
     "fb_pct": 24.8,
     "bbe": null,
-    "pa": 189.0
-  },
-  "675627": {
-    "name": "Michael Grove",
-    "barrel_pct_allowed": 18.2,
-    "hardhit_pct_allowed": 36.4,
-    "xwoba_allowed": 0.423,
-    "avg_exit_velo_allowed": 90.8,
-    "gb_pct": 27.3,
-    "fb_pct": 31.8,
-    "bbe": null,
-    "pa": 28.0
-  },
-  "695684": {
-    "name": "Elmer Rodr\u00edguez",
-    "barrel_pct_allowed": 5.2,
-    "hardhit_pct_allowed": 34.5,
-    "xwoba_allowed": 0.366,
-    "avg_exit_velo_allowed": 86.9,
-    "gb_pct": 50.0,
-    "fb_pct": 20.7,
-    "bbe": null,
-    "pa": 83.0
+    "pa": 189.0,
+    "sample_field": "pa"
   },
   "690997": {
     "name": "Nolan McLean",
@@ -7290,7 +4784,8 @@
     "gb_pct": 45.6,
     "fb_pct": 24.2,
     "bbe": null,
-    "pa": 594.0
+    "pa": 594.0,
+    "sample_field": "pa"
   },
   "695505": {
     "name": "Chase Burns",
@@ -7301,7 +4796,8 @@
     "gb_pct": 38.3,
     "fb_pct": 28.6,
     "bbe": null,
-    "pa": 548.0
+    "pa": 548.0,
+    "sample_field": "pa"
   },
   "662253": {
     "name": "Andr\u00e9s Mu\u00f1oz",
@@ -7312,7 +4808,8 @@
     "gb_pct": 47.6,
     "fb_pct": 20.4,
     "bbe": null,
-    "pa": 195.0
+    "pa": 195.0,
+    "sample_field": "pa"
   },
   "689266": {
     "name": "Dylan Dodd",
@@ -7323,7 +4820,8 @@
     "gb_pct": 29.6,
     "fb_pct": 28.6,
     "bbe": null,
-    "pa": 154.0
+    "pa": 154.0,
+    "sample_field": "pa"
   },
   "641941": {
     "name": "Emilio Pag\u00e1n",
@@ -7334,7 +4832,8 @@
     "gb_pct": 25.3,
     "fb_pct": 40.5,
     "bbe": null,
-    "pa": 123.0
+    "pa": 123.0,
+    "sample_field": "pa"
   },
   "660761": {
     "name": "Jos\u00e9 Suarez",
@@ -7345,18 +4844,8 @@
     "gb_pct": 42.4,
     "fb_pct": 22.9,
     "bbe": null,
-    "pa": 258.0
-  },
-  "664849": {
-    "name": "Danny Young",
-    "barrel_pct_allowed": 17.6,
-    "hardhit_pct_allowed": 61.8,
-    "xwoba_allowed": 0.391,
-    "avg_exit_velo_allowed": 96.0,
-    "gb_pct": 47.1,
-    "fb_pct": 26.5,
-    "bbe": null,
-    "pa": 65.0
+    "pa": 258.0,
+    "sample_field": "pa"
   },
   "663947": {
     "name": "Tyler Holton",
@@ -7367,7 +4856,8 @@
     "gb_pct": 51.4,
     "fb_pct": 17.7,
     "bbe": null,
-    "pa": 246.0
+    "pa": 246.0,
+    "sample_field": "pa"
   },
   "677944": {
     "name": "Slade Cecconi",
@@ -7378,7 +4868,8 @@
     "gb_pct": 44.2,
     "fb_pct": 25.8,
     "bbe": null,
-    "pa": 488.0
+    "pa": 488.0,
+    "sample_field": "pa"
   },
   "694297": {
     "name": "Brandon Pfaadt",
@@ -7389,7 +4880,8 @@
     "gb_pct": 48.4,
     "fb_pct": 22.2,
     "bbe": null,
-    "pa": 403.0
+    "pa": 403.0,
+    "sample_field": "pa"
   },
   "675512": {
     "name": "Troy Melton",
@@ -7400,7 +4892,8 @@
     "gb_pct": 42.8,
     "fb_pct": 23.6,
     "bbe": null,
-    "pa": 329.0
+    "pa": 329.0,
+    "sample_field": "pa"
   },
   "686580": {
     "name": "Justin Slaten",
@@ -7411,7 +4904,8 @@
     "gb_pct": 43.3,
     "fb_pct": 25.6,
     "bbe": null,
-    "pa": 137.0
+    "pa": 137.0,
+    "sample_field": "pa"
   },
   "702056": {
     "name": "Trey Yesavage",
@@ -7422,18 +4916,8 @@
     "gb_pct": 35.6,
     "fb_pct": 28.7,
     "bbe": null,
-    "pa": 386.0
-  },
-  "685112": {
-    "name": "Zach McCambley",
-    "barrel_pct_allowed": 7.4,
-    "hardhit_pct_allowed": 48.1,
-    "xwoba_allowed": 0.366,
-    "avg_exit_velo_allowed": 90.5,
-    "gb_pct": 48.1,
-    "fb_pct": 25.9,
-    "bbe": null,
-    "pa": 43.0
+    "pa": 386.0,
+    "sample_field": "pa"
   },
   "592836": {
     "name": "Taijuan Walker",
@@ -7444,29 +4928,8 @@
     "gb_pct": 39.5,
     "fb_pct": 33.7,
     "bbe": null,
-    "pa": 115.0
-  },
-  "701552": {
-    "name": "Andre Granillo",
-    "barrel_pct_allowed": 13.2,
-    "hardhit_pct_allowed": 39.5,
-    "xwoba_allowed": 0.394,
-    "avg_exit_velo_allowed": 91.0,
-    "gb_pct": 34.2,
-    "fb_pct": 36.8,
-    "bbe": null,
-    "pa": 50.0
-  },
-  "686753": {
-    "name": "Drey Jameson",
-    "barrel_pct_allowed": 5.7,
-    "hardhit_pct_allowed": 28.3,
-    "xwoba_allowed": 0.322,
-    "avg_exit_velo_allowed": 86.4,
-    "gb_pct": 37.7,
-    "fb_pct": 24.5,
-    "bbe": null,
-    "pa": 76.0
+    "pa": 115.0,
+    "sample_field": "pa"
   },
   "702474": {
     "name": "Mike Paredes",
@@ -7477,7 +4940,8 @@
     "gb_pct": 39.0,
     "fb_pct": 29.7,
     "bbe": null,
-    "pa": 154.0
+    "pa": 154.0,
+    "sample_field": "pa"
   },
   "663978": {
     "name": "Chris Paddack",
@@ -7488,18 +4952,8 @@
     "gb_pct": 39.3,
     "fb_pct": 29.1,
     "bbe": null,
-    "pa": 267.0
-  },
-  "676702": {
-    "name": "Hunter Stratton",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 25.0,
-    "xwoba_allowed": 0.383,
-    "avg_exit_velo_allowed": 87.0,
-    "gb_pct": 50.0,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 15.0
+    "pa": 267.0,
+    "sample_field": "pa"
   },
   "687911": {
     "name": "Bryan King",
@@ -7510,7 +4964,8 @@
     "gb_pct": 47.3,
     "fb_pct": 17.8,
     "bbe": null,
-    "pa": 238.0
+    "pa": 238.0,
+    "sample_field": "pa"
   },
   "607259": {
     "name": "Nick Martinez",
@@ -7521,7 +4976,8 @@
     "gb_pct": 36.3,
     "fb_pct": 28.8,
     "bbe": null,
-    "pa": 574.0
+    "pa": 574.0,
+    "sample_field": "pa"
   },
   "605135": {
     "name": "Chris Bassitt",
@@ -7532,29 +4988,8 @@
     "gb_pct": 47.6,
     "fb_pct": 22.3,
     "bbe": null,
-    "pa": 309.0
-  },
-  "670871": {
-    "name": "Guillo Zu\u00f1iga",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 0.0,
-    "xwoba_allowed": 0.187,
-    "avg_exit_velo_allowed": 59.9,
-    "gb_pct": 0.0,
-    "fb_pct": 50.0,
-    "bbe": null,
-    "pa": 4.0
-  },
-  "476594": {
-    "name": "Robert Stock",
-    "barrel_pct_allowed": 10.4,
-    "hardhit_pct_allowed": 27.1,
-    "xwoba_allowed": 0.331,
-    "avg_exit_velo_allowed": 87.0,
-    "gb_pct": 35.4,
-    "fb_pct": 35.4,
-    "bbe": null,
-    "pa": 81.0
+    "pa": 309.0,
+    "sample_field": "pa"
   },
   "621381": {
     "name": "Matt Strahm",
@@ -7565,7 +5000,8 @@
     "gb_pct": 27.8,
     "fb_pct": 44.3,
     "bbe": null,
-    "pa": 161.0
+    "pa": 161.0,
+    "sample_field": "pa"
   },
   "672782": {
     "name": "Yoendrys G\u00f3mez",
@@ -7576,29 +5012,8 @@
     "gb_pct": 28.9,
     "fb_pct": 32.7,
     "bbe": null,
-    "pa": 243.0
-  },
-  "621242": {
-    "name": "Edwin D\u00edaz",
-    "barrel_pct_allowed": 8.7,
-    "hardhit_pct_allowed": 53.2,
-    "xwoba_allowed": 0.378,
-    "avg_exit_velo_allowed": 92.5,
-    "gb_pct": 31.9,
-    "fb_pct": 31.9,
-    "bbe": null,
-    "pa": 79.0
-  },
-  "621139": {
-    "name": "Brooks Kriske",
-    "barrel_pct_allowed": 12.5,
-    "hardhit_pct_allowed": 37.5,
-    "xwoba_allowed": 0.244,
-    "avg_exit_velo_allowed": 88.1,
-    "gb_pct": 25.0,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 10.0
+    "pa": 243.0,
+    "sample_field": "pa"
   },
   "592332": {
     "name": "Kevin Gausman",
@@ -7609,29 +5024,8 @@
     "gb_pct": 39.8,
     "fb_pct": 24.7,
     "bbe": null,
-    "pa": 609.0
-  },
-  "664129": {
-    "name": "Geoff Hartlieb",
-    "barrel_pct_allowed": 8.2,
-    "hardhit_pct_allowed": 40.8,
-    "xwoba_allowed": 0.327,
-    "avg_exit_velo_allowed": 90.0,
-    "gb_pct": 34.7,
-    "fb_pct": 34.7,
-    "bbe": null,
-    "pa": 64.0
-  },
-  "687223": {
-    "name": "Carson Palmquist",
-    "barrel_pct_allowed": 3.8,
-    "hardhit_pct_allowed": 23.1,
-    "xwoba_allowed": 0.337,
-    "avg_exit_velo_allowed": 85.3,
-    "gb_pct": 36.5,
-    "fb_pct": 28.8,
-    "bbe": null,
-    "pa": 78.0
+    "pa": 609.0,
+    "sample_field": "pa"
   },
   "682842": {
     "name": "Abner Uribe",
@@ -7642,7 +5036,8 @@
     "gb_pct": 55.6,
     "fb_pct": 17.7,
     "bbe": null,
-    "pa": 191.0
+    "pa": 191.0,
+    "sample_field": "pa"
   },
   "682120": {
     "name": "Tim Herrin",
@@ -7653,7 +5048,8 @@
     "gb_pct": 44.4,
     "fb_pct": 24.8,
     "bbe": null,
-    "pa": 184.0
+    "pa": 184.0,
+    "sample_field": "pa"
   },
   "527048": {
     "name": "Mart\u00edn P\u00e9rez",
@@ -7664,18 +5060,8 @@
     "gb_pct": 48.0,
     "fb_pct": 20.9,
     "bbe": null,
-    "pa": 455.0
-  },
-  "664744": {
-    "name": "Jose Espada",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 50.0,
-    "xwoba_allowed": 0.34,
-    "avg_exit_velo_allowed": 95.4,
-    "gb_pct": 50.0,
-    "fb_pct": 25.0,
-    "bbe": null,
-    "pa": 4.0
+    "pa": 455.0,
+    "sample_field": "pa"
   },
   "689296": {
     "name": "Anthony Nunez",
@@ -7686,7 +5072,8 @@
     "gb_pct": 42.9,
     "fb_pct": 24.6,
     "bbe": null,
-    "pa": 196.0
+    "pa": 196.0,
+    "sample_field": "pa"
   },
   "677960": {
     "name": "Ryan Weathers",
@@ -7697,7 +5084,8 @@
     "gb_pct": 49.5,
     "fb_pct": 21.6,
     "bbe": null,
-    "pa": 551.0
+    "pa": 551.0,
+    "sample_field": "pa"
   },
   "669622": {
     "name": "Anthony Bender",
@@ -7708,40 +5096,8 @@
     "gb_pct": 44.0,
     "fb_pct": 32.1,
     "bbe": null,
-    "pa": 140.0
-  },
-  "680916": {
-    "name": "Franco Aleman",
-    "barrel_pct_allowed": 4.0,
-    "hardhit_pct_allowed": 40.0,
-    "xwoba_allowed": 0.277,
-    "avg_exit_velo_allowed": 88.9,
-    "gb_pct": 32.0,
-    "fb_pct": 28.0,
-    "bbe": null,
-    "pa": 82.0
-  },
-  "676395": {
-    "name": "Robert Garcia",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.333,
-    "avg_exit_velo_allowed": 88.8,
-    "gb_pct": 57.1,
-    "fb_pct": 23.8,
-    "bbe": null,
-    "pa": 34.0
-  },
-  "646242": {
-    "name": "Jhonathan D\u00edaz",
-    "barrel_pct_allowed": 20.0,
-    "hardhit_pct_allowed": 20.0,
-    "xwoba_allowed": 0.457,
-    "avg_exit_velo_allowed": 87.9,
-    "gb_pct": 40.0,
-    "fb_pct": 20.0,
-    "bbe": null,
-    "pa": 6.0
+    "pa": 140.0,
+    "sample_field": "pa"
   },
   "656848": {
     "name": "Michael Petersen",
@@ -7752,18 +5108,8 @@
     "gb_pct": 35.7,
     "fb_pct": 31.7,
     "bbe": null,
-    "pa": 213.0
-  },
-  "684320": {
-    "name": "Yariel Rodr\u00edguez",
-    "barrel_pct_allowed": 12.9,
-    "hardhit_pct_allowed": 32.3,
-    "xwoba_allowed": 0.402,
-    "avg_exit_velo_allowed": 87.2,
-    "gb_pct": 38.7,
-    "fb_pct": 22.6,
-    "bbe": null,
-    "pa": 45.0
+    "pa": 213.0,
+    "sample_field": "pa"
   },
   "702193": {
     "name": "Andrew Morris",
@@ -7774,18 +5120,8 @@
     "gb_pct": 45.3,
     "fb_pct": 28.5,
     "bbe": null,
-    "pa": 252.0
-  },
-  "621053": {
-    "name": "Tyler Ferguson",
-    "barrel_pct_allowed": 17.8,
-    "hardhit_pct_allowed": 46.7,
-    "xwoba_allowed": 0.332,
-    "avg_exit_velo_allowed": 91.5,
-    "gb_pct": 33.3,
-    "fb_pct": 40.0,
-    "bbe": null,
-    "pa": 70.0
+    "pa": 252.0,
+    "sample_field": "pa"
   },
   "696062": {
     "name": "Wilber Dotel",
@@ -7796,51 +5132,8 @@
     "gb_pct": 45.6,
     "fb_pct": 29.1,
     "bbe": null,
-    "pa": 123.0
-  },
-  "802408": {
-    "name": "Brycen Mautz",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 20.0,
-    "xwoba_allowed": 0.316,
-    "avg_exit_velo_allowed": 90.0,
-    "gb_pct": 30.0,
-    "fb_pct": 40.0,
-    "bbe": null,
-    "pa": 14.0
-  },
-  "806960": {
-    "name": "Luis Morales",
-    "barrel_pct_allowed": 11.3,
-    "hardhit_pct_allowed": 40.3,
-    "xwoba_allowed": 0.408,
-    "avg_exit_velo_allowed": 88.5,
-    "gb_pct": 38.7,
-    "fb_pct": 21.0,
-    "bbe": null,
-    "pa": 90.0
-  },
-  "640454": {
-    "name": "Matt Krook",
-    "barrel_pct_allowed": 4.0,
-    "hardhit_pct_allowed": 36.0,
-    "xwoba_allowed": 0.417,
-    "avg_exit_velo_allowed": 87.5,
-    "gb_pct": 48.0,
-    "fb_pct": 12.0,
-    "bbe": null,
-    "pa": 46.0
-  },
-  "808970": {
-    "name": "Woo-Suk Go",
-    "barrel_pct_allowed": 20.0,
-    "hardhit_pct_allowed": 53.3,
-    "xwoba_allowed": 0.386,
-    "avg_exit_velo_allowed": 94.9,
-    "gb_pct": 46.7,
-    "fb_pct": 26.7,
-    "bbe": null,
-    "pa": 22.0
+    "pa": 123.0,
+    "sample_field": "pa"
   },
   "695418": {
     "name": "Brad Lord",
@@ -7851,18 +5144,8 @@
     "gb_pct": 56.7,
     "fb_pct": 20.0,
     "bbe": null,
-    "pa": 269.0
-  },
-  "641386": {
-    "name": "Ben Bowden",
-    "barrel_pct_allowed": 20.0,
-    "hardhit_pct_allowed": 40.0,
-    "xwoba_allowed": 0.538,
-    "avg_exit_velo_allowed": 88.6,
-    "gb_pct": 20.0,
-    "fb_pct": 40.0,
-    "bbe": null,
-    "pa": 8.0
+    "pa": 269.0,
+    "sample_field": "pa"
   },
   "573204": {
     "name": "Caleb Thielbar",
@@ -7873,7 +5156,8 @@
     "gb_pct": 31.1,
     "fb_pct": 36.9,
     "bbe": null,
-    "pa": 164.0
+    "pa": 164.0,
+    "sample_field": "pa"
   },
   "701656": {
     "name": "Logan Henderson",
@@ -7884,18 +5168,8 @@
     "gb_pct": 31.6,
     "fb_pct": 27.6,
     "bbe": null,
-    "pa": 240.0
-  },
-  "676661": {
-    "name": "Max Lazar",
-    "barrel_pct_allowed": 11.5,
-    "hardhit_pct_allowed": 40.7,
-    "xwoba_allowed": 0.33,
-    "avg_exit_velo_allowed": 92.2,
-    "gb_pct": 51.9,
-    "fb_pct": 29.6,
-    "bbe": null,
-    "pa": 35.0
+    "pa": 240.0,
+    "sample_field": "pa"
   },
   "642232": {
     "name": "Ryan Yarbrough",
@@ -7906,7 +5180,8 @@
     "gb_pct": 35.9,
     "fb_pct": 28.3,
     "bbe": null,
-    "pa": 204.0
+    "pa": 204.0,
+    "sample_field": "pa"
   },
   "676917": {
     "name": "Cade Cavalli",
@@ -7917,7 +5192,8 @@
     "gb_pct": 50.5,
     "fb_pct": 24.0,
     "bbe": null,
-    "pa": 600.0
+    "pa": 600.0,
+    "sample_field": "pa"
   },
   "665152": {
     "name": "Dean Kremer",
@@ -7928,7 +5204,8 @@
     "gb_pct": 37.8,
     "fb_pct": 37.2,
     "bbe": null,
-    "pa": 217.0
+    "pa": 217.0,
+    "sample_field": "pa"
   },
   "693855": {
     "name": "Ian Seymour",
@@ -7939,18 +5216,8 @@
     "gb_pct": 33.2,
     "fb_pct": 30.9,
     "bbe": null,
-    "pa": 421.0
-  },
-  "695049": {
-    "name": "Brett Kerry",
-    "barrel_pct_allowed": 5.0,
-    "hardhit_pct_allowed": 42.5,
-    "xwoba_allowed": 0.27,
-    "avg_exit_velo_allowed": 88.5,
-    "gb_pct": 47.5,
-    "fb_pct": 20.0,
-    "bbe": null,
-    "pa": 54.0
+    "pa": 421.0,
+    "sample_field": "pa"
   },
   "663568": {
     "name": "Stephen Kolek",
@@ -7961,7 +5228,8 @@
     "gb_pct": 46.0,
     "fb_pct": 22.7,
     "bbe": null,
-    "pa": 224.0
+    "pa": 224.0,
+    "sample_field": "pa"
   },
   "686613": {
     "name": "Hunter Brown",
@@ -7972,7 +5240,8 @@
     "gb_pct": 54.9,
     "fb_pct": 22.3,
     "bbe": null,
-    "pa": 291.0
+    "pa": 291.0,
+    "sample_field": "pa"
   },
   "805123": {
     "name": "AJ Blubaugh",
@@ -7983,7 +5252,8 @@
     "gb_pct": 33.8,
     "fb_pct": 36.2,
     "bbe": null,
-    "pa": 324.0
+    "pa": 324.0,
+    "sample_field": "pa"
   },
   "605540": {
     "name": "Brandon Woodruff",
@@ -7994,7 +5264,8 @@
     "gb_pct": 27.6,
     "fb_pct": 42.2,
     "bbe": null,
-    "pa": 174.0
+    "pa": 174.0,
+    "sample_field": "pa"
   },
   "665660": {
     "name": "Elvis Alvarado",
@@ -8005,40 +5276,8 @@
     "gb_pct": 36.8,
     "fb_pct": 48.4,
     "bbe": null,
-    "pa": 164.0
-  },
-  "681343": {
-    "name": "Shane Smith",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.332,
-    "avg_exit_velo_allowed": 82.2,
-    "gb_pct": 44.4,
-    "fb_pct": 22.2,
-    "bbe": null,
-    "pa": 49.0
-  },
-  "656457": {
-    "name": "Tyler Gilbert",
-    "barrel_pct_allowed": 20.0,
-    "hardhit_pct_allowed": 46.7,
-    "xwoba_allowed": 0.497,
-    "avg_exit_velo_allowed": 93.4,
-    "gb_pct": 40.0,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 22.0
-  },
-  "573009": {
-    "name": "Joe Mantiply",
-    "barrel_pct_allowed": 10.0,
-    "hardhit_pct_allowed": 44.0,
-    "xwoba_allowed": 0.332,
-    "avg_exit_velo_allowed": 90.5,
-    "gb_pct": 52.0,
-    "fb_pct": 12.0,
-    "bbe": null,
-    "pa": 71.0
+    "pa": 164.0,
+    "sample_field": "pa"
   },
   "689254": {
     "name": "Mason Fluharty",
@@ -8049,18 +5288,8 @@
     "gb_pct": 36.8,
     "fb_pct": 32.4,
     "bbe": null,
-    "pa": 213.0
-  },
-  "702303": {
-    "name": "Riley Martin",
-    "barrel_pct_allowed": 5.3,
-    "hardhit_pct_allowed": 42.1,
-    "xwoba_allowed": 0.25,
-    "avg_exit_velo_allowed": 90.9,
-    "gb_pct": 36.8,
-    "fb_pct": 31.6,
-    "bbe": null,
-    "pa": 32.0
+    "pa": 213.0,
+    "sample_field": "pa"
   },
   "688158": {
     "name": "David Morgan",
@@ -8071,29 +5300,8 @@
     "gb_pct": 58.7,
     "fb_pct": 14.3,
     "bbe": null,
-    "pa": 105.0
-  },
-  "681252": {
-    "name": "Jack Anderson",
-    "barrel_pct_allowed": 9.1,
-    "hardhit_pct_allowed": 36.4,
-    "xwoba_allowed": 0.301,
-    "avg_exit_velo_allowed": 86.9,
-    "gb_pct": 36.4,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 48.0
-  },
-  "686678": {
-    "name": "Chase Solesky",
-    "barrel_pct_allowed": 8.3,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.353,
-    "avg_exit_velo_allowed": 89.4,
-    "gb_pct": 50.0,
-    "fb_pct": 16.7,
-    "bbe": null,
-    "pa": 17.0
+    "pa": 105.0,
+    "sample_field": "pa"
   },
   "680570": {
     "name": "Grayson Rodriguez",
@@ -8104,18 +5312,8 @@
     "gb_pct": 37.1,
     "fb_pct": 26.2,
     "bbe": null,
-    "pa": 298.0
-  },
-  "621389": {
-    "name": "Ty Blach",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 57.1,
-    "xwoba_allowed": 0.269,
-    "avg_exit_velo_allowed": 93.9,
-    "gb_pct": 71.4,
-    "fb_pct": 0.0,
-    "bbe": null,
-    "pa": 9.0
+    "pa": 298.0,
+    "sample_field": "pa"
   },
   "663992": {
     "name": "Richard Lovelady",
@@ -8126,7 +5324,8 @@
     "gb_pct": 45.3,
     "fb_pct": 22.1,
     "bbe": null,
-    "pa": 146.0
+    "pa": 146.0,
+    "sample_field": "pa"
   },
   "669467": {
     "name": "Andre Pallante",
@@ -8137,18 +5336,8 @@
     "gb_pct": 55.0,
     "fb_pct": 17.6,
     "bbe": null,
-    "pa": 564.0
-  },
-  "675540": {
-    "name": "Xzavion Curry",
-    "barrel_pct_allowed": 6.0,
-    "hardhit_pct_allowed": 34.0,
-    "xwoba_allowed": 0.277,
-    "avg_exit_velo_allowed": 88.7,
-    "gb_pct": 28.0,
-    "fb_pct": 36.0,
-    "bbe": null,
-    "pa": 67.0
+    "pa": 564.0,
+    "sample_field": "pa"
   },
   "607536": {
     "name": "Kyle Freeland",
@@ -8159,7 +5348,8 @@
     "gb_pct": 41.2,
     "fb_pct": 29.5,
     "bbe": null,
-    "pa": 554.0
+    "pa": 554.0,
+    "sample_field": "pa"
   },
   "628452": {
     "name": "Raisel Iglesias",
@@ -8170,7 +5360,8 @@
     "gb_pct": 36.8,
     "fb_pct": 29.6,
     "bbe": null,
-    "pa": 191.0
+    "pa": 191.0,
+    "sample_field": "pa"
   },
   "676428": {
     "name": "Brant Hurter",
@@ -8181,18 +5372,8 @@
     "gb_pct": 60.0,
     "fb_pct": 10.0,
     "bbe": null,
-    "pa": 101.0
-  },
-  "605441": {
-    "name": "Yacksel R\u00edos",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.335,
-    "avg_exit_velo_allowed": 90.8,
-    "gb_pct": 33.3,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 5.0
+    "pa": 101.0,
+    "sample_field": "pa"
   },
   "663855": {
     "name": "Jordan Hicks",
@@ -8203,7 +5384,8 @@
     "gb_pct": 47.4,
     "fb_pct": 23.7,
     "bbe": null,
-    "pa": 168.0
+    "pa": 168.0,
+    "sample_field": "pa"
   },
   "681810": {
     "name": "Austin Warren",
@@ -8214,29 +5396,8 @@
     "gb_pct": 39.0,
     "fb_pct": 25.0,
     "bbe": null,
-    "pa": 160.0
-  },
-  "687239": {
-    "name": "Ben Peoples",
-    "barrel_pct_allowed": 7.1,
-    "hardhit_pct_allowed": 26.2,
-    "xwoba_allowed": 0.305,
-    "avg_exit_velo_allowed": 83.8,
-    "gb_pct": 45.2,
-    "fb_pct": 28.6,
-    "bbe": null,
-    "pa": 57.0
-  },
-  "671382": {
-    "name": "Cameron Foster",
-    "barrel_pct_allowed": 6.5,
-    "hardhit_pct_allowed": 28.1,
-    "xwoba_allowed": 0.336,
-    "avg_exit_velo_allowed": 87.0,
-    "gb_pct": 50.0,
-    "fb_pct": 6.3,
-    "bbe": null,
-    "pa": 49.0
+    "pa": 160.0,
+    "sample_field": "pa"
   },
   "548384": {
     "name": "Brooks Raley",
@@ -8247,7 +5408,8 @@
     "gb_pct": 38.3,
     "fb_pct": 24.2,
     "bbe": null,
-    "pa": 195.0
+    "pa": 195.0,
+    "sample_field": "pa"
   },
   "621237": {
     "name": "Jos\u00e9 Alvarado",
@@ -8258,7 +5420,8 @@
     "gb_pct": 36.8,
     "fb_pct": 24.8,
     "bbe": null,
-    "pa": 211.0
+    "pa": 211.0,
+    "sample_field": "pa"
   },
   "657612": {
     "name": "Tim Hill",
@@ -8269,7 +5432,8 @@
     "gb_pct": 66.3,
     "fb_pct": 15.3,
     "bbe": null,
-    "pa": 202.0
+    "pa": 202.0,
+    "sample_field": "pa"
   },
   "695239": {
     "name": "Robby Ahlstrom",
@@ -8280,7 +5444,8 @@
     "gb_pct": 40.7,
     "fb_pct": 27.2,
     "bbe": null,
-    "pa": 118.0
+    "pa": 118.0,
+    "sample_field": "pa"
   },
   "694477": {
     "name": "Chad Patrick",
@@ -8291,7 +5456,8 @@
     "gb_pct": 38.4,
     "fb_pct": 28.8,
     "bbe": null,
-    "pa": 369.0
+    "pa": 369.0,
+    "sample_field": "pa"
   },
   "671096": {
     "name": "Andrew Abbott",
@@ -8302,18 +5468,8 @@
     "gb_pct": 42.1,
     "fb_pct": 25.7,
     "bbe": null,
-    "pa": 604.0
-  },
-  "700270": {
-    "name": "Yilber D\u00edaz",
-    "barrel_pct_allowed": 20.0,
-    "hardhit_pct_allowed": 40.0,
-    "xwoba_allowed": 0.559,
-    "avg_exit_velo_allowed": 94.5,
-    "gb_pct": 20.0,
-    "fb_pct": 30.0,
-    "bbe": null,
-    "pa": 15.0
+    "pa": 604.0,
+    "sample_field": "pa"
   },
   "643377": {
     "name": "Griffin Jax",
@@ -8324,18 +5480,8 @@
     "gb_pct": 46.6,
     "fb_pct": 25.1,
     "bbe": null,
-    "pa": 379.0
-  },
-  "695549": {
-    "name": "Jackson Jobe",
-    "barrel_pct_allowed": 12.2,
-    "hardhit_pct_allowed": 40.5,
-    "xwoba_allowed": 0.378,
-    "avg_exit_velo_allowed": 88.2,
-    "gb_pct": 54.8,
-    "fb_pct": 21.4,
-    "bbe": null,
-    "pa": 61.0
+    "pa": 379.0,
+    "sample_field": "pa"
   },
   "615698": {
     "name": "Cal Quantrill",
@@ -8346,29 +5492,8 @@
     "gb_pct": 39.8,
     "fb_pct": 28.2,
     "bbe": null,
-    "pa": 323.0
-  },
-  "643361": {
-    "name": "Kevin Herget",
-    "barrel_pct_allowed": 0.0,
-    "hardhit_pct_allowed": 33.3,
-    "xwoba_allowed": 0.128,
-    "avg_exit_velo_allowed": 93.6,
-    "gb_pct": 33.3,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 3.0
-  },
-  "682610": {
-    "name": "Roddery Mu\u00f1oz",
-    "barrel_pct_allowed": 15.4,
-    "hardhit_pct_allowed": 76.9,
-    "xwoba_allowed": 0.44,
-    "avg_exit_velo_allowed": 95.5,
-    "gb_pct": 23.1,
-    "fb_pct": 38.5,
-    "bbe": null,
-    "pa": 25.0
+    "pa": 323.0,
+    "sample_field": "pa"
   },
   "518876": {
     "name": "Merrill Kelly",
@@ -8379,29 +5504,8 @@
     "gb_pct": 41.7,
     "fb_pct": 26.7,
     "bbe": null,
-    "pa": 565.0
-  },
-  "694037": {
-    "name": "Daniel Palencia",
-    "barrel_pct_allowed": 6.5,
-    "hardhit_pct_allowed": 30.4,
-    "xwoba_allowed": 0.3,
-    "avg_exit_velo_allowed": 88.9,
-    "gb_pct": 30.4,
-    "fb_pct": 23.9,
-    "bbe": null,
-    "pa": 71.0
-  },
-  "666129": {
-    "name": "Braxton Garrett",
-    "barrel_pct_allowed": 14.3,
-    "hardhit_pct_allowed": 26.7,
-    "xwoba_allowed": 0.386,
-    "avg_exit_velo_allowed": 85.6,
-    "gb_pct": 46.7,
-    "fb_pct": 33.3,
-    "bbe": null,
-    "pa": 28.0
+    "pa": 565.0,
+    "sample_field": "pa"
   },
   "641755": {
     "name": "Tyler Kinley",
@@ -8412,7 +5516,8 @@
     "gb_pct": 30.4,
     "fb_pct": 33.9,
     "bbe": null,
-    "pa": 179.0
+    "pa": 179.0,
+    "sample_field": "pa"
   },
   "677976": {
     "name": "Randy Dobnak",
@@ -8423,7 +5528,8 @@
     "gb_pct": 55.1,
     "fb_pct": 19.7,
     "bbe": null,
-    "pa": 196.0
+    "pa": 196.0,
+    "sample_field": "pa"
   },
   "607455": {
     "name": "Anthony Banda",
@@ -8434,7 +5540,8 @@
     "gb_pct": 41.0,
     "fb_pct": 32.0,
     "bbe": null,
-    "pa": 156.0
+    "pa": 156.0,
+    "sample_field": "pa"
   },
   "664991": {
     "name": "Grant Wolfram",
@@ -8445,36 +5552,16 @@
     "gb_pct": 49.5,
     "fb_pct": 25.2,
     "bbe": null,
-    "pa": 173.0
-  },
-  "682445": {
-    "name": "Domingo Gonzalez",
-    "barrel_pct_allowed": 12.0,
-    "hardhit_pct_allowed": 52.0,
-    "xwoba_allowed": 0.453,
-    "avg_exit_velo_allowed": 92.9,
-    "gb_pct": 24.0,
-    "fb_pct": 32.0,
-    "bbe": null,
-    "pa": 36.0
-  },
-  "666201": {
-    "name": "Alek Manoah",
-    "barrel_pct_allowed": 11.5,
-    "hardhit_pct_allowed": 34.6,
-    "xwoba_allowed": 0.379,
-    "avg_exit_velo_allowed": 87.1,
-    "gb_pct": 34.6,
-    "fb_pct": 30.8,
-    "bbe": null,
-    "pa": 39.0
+    "pa": 173.0,
+    "sample_field": "pa"
   },
   "_league_avg": {
-    "barrel_pct_allowed": null,
-    "hardhit_pct_allowed": null,
-    "xwoba_allowed": null,
-    "avg_exit_velo_allowed": null,
-    "gb_pct": null,
-    "fb_pct": null
-  }
+    "barrel_pct_allowed": 7.6536,
+    "hardhit_pct_allowed": 38.5546,
+    "xwoba_allowed": 0.312,
+    "avg_exit_velo_allowed": 88.7332,
+    "gb_pct": 42.581,
+    "fb_pct": 26.5191
+  },
+  "_sample_field": "pa"
 }
