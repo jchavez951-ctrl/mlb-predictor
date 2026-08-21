@@ -1,4 +1,5 @@
-import prediction_log  
+import prediction_log 
+import recalibrate
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -1811,10 +1812,12 @@ else:
                         for name, hr_exp in hr_means.items():
                             values = hr_dist[name]
                             hr_p = (sum(1 for v in values if v > 0.5) / len(values)) if values else 0.0
+                                                        hr_p_raw = hr_p
+                            hr_p = recalibrate.calibrate(hr_p)
                             player_id = name_to_id.get(name)
                             cq = CONTACT_QUALITY.get(player_id, {}) if player_id else {}
                             all_rows.append({
-                                "Team": team_name, "Hitter": name, "PlayerID": player_id, "HR Over 0.5%": hr_p,
+                                "Team": team_name, "Hitter": name, "PlayerID": player_id, "HR Over 0.5%": hr_p,"HR Raw%": hr_p_raw,
                                 "Barrel%": cq.get("barrel_pct"), "HardHit%": cq.get("hardhit_pct"),
                                 "Exit Velo": cq.get("avg_exit_velo"),
                                 "COMB": comb_score_shared(hr_p, cq.get("barrel_pct"), cq.get("hardhit_pct")),
