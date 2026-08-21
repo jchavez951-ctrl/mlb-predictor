@@ -390,7 +390,7 @@
       {
         "Player": "Lane Thomas",
         "PlayerID": 657041,
-        "Pos": "CF",
+        "Pos": "LF",
         "Bats": "R",
         "BB_RATE": 0.119,
         "K_RATE": 0.25,
@@ -5432,22 +5432,6 @@
         "PA": 388
       },
       {
-        "Player": "Jacob Wilson",
-        "PlayerID": 805779,
-        "Pos": "SS",
-        "Bats": "R",
-        "BB_RATE": 0.036,
-        "K_RATE": 0.116,
-        "HR_PA_RATE": 0.021,
-        "BABIP": 0.285,
-        "1B_H_RATE": 0.72,
-        "2B_H_RATE": 0.19,
-        "3B_H_RATE": 0.01,
-        "HR_H_RATE": 0.08,
-        "SPD": 55,
-        "PA": 337
-      },
-      {
         "Player": "Henry Bolte",
         "PlayerID": 703607,
         "Pos": "CF",
@@ -5542,6 +5526,22 @@
         "HR_H_RATE": 0.07,
         "SPD": 55,
         "PA": 168
+      },
+      {
+        "Player": "Alika Williams",
+        "PlayerID": 675961,
+        "Pos": "SS",
+        "Bats": "R",
+        "BB_RATE": 0.039,
+        "K_RATE": 0.243,
+        "HR_PA_RATE": 0.013,
+        "BABIP": 0.343,
+        "1B_H_RATE": 0.62,
+        "2B_H_RATE": 0.32,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.05,
+        "SPD": 55,
+        "PA": 152
       }
     ],
     "pitching": [
@@ -6810,7 +6810,7 @@
       {
         "Player": "Taylor Ward",
         "PlayerID": 621493,
-        "Pos": "LF",
+        "Pos": "DH",
         "Bats": "R",
         "BB_RATE": 0.163,
         "K_RATE": 0.207,
