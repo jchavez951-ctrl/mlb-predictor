@@ -918,6 +918,57 @@ def _load_contact_quality():
 
 CONTACT_QUALITY = _load_contact_quality()
 
+# ----------------------------------------------------
+# PITCHER CONTACT QUALITY LOADER (OPTIONAL)
+# ----------------------------------------------------
+def _load_pitcher_contact_quality():
+    json_path = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "pitcher_contact_quality.json")
+    try:
+        with open(json_path, "r") as f:
+            data = _json.load(f)
+        if not isinstance(data, dict):
+            return {}, {}
+        league = data.pop("_league_avg", {}) or {}
+        data.pop("_sample_field", None)
+        return data, league
+    except FileNotFoundError:
+        return {}, {}
+    except Exception as e:
+        print(f"[pitcher contact quality loader] Ignoring pitcher_contact_quality.json -- problem reading it: {e}")
+        return {}, {}
+
+PITCHER_CONTACT_QUALITY, PITCHER_CQ_LEAGUE_AVG = _load_pitcher_contact_quality()
+
+# Shrinkage constant for pitcher contact-quality-allowed, in plate appearances.
+# NOT a published stabilization point -- a deliberately conservative choice,
+# since pitchers only partly control contact quality against them. A starter at
+# ~400 PA gets weighted 50/50 against league average; a call-up barely moves off
+# league average at all. Raise to trust the data less, lower to trust it more.
+PITCHER_CQ_SHRINK_PA = 400
+
+
+def _pitcher_cq_for(pitcher):
+    """Looks up a pitcher's contact-quality-allowed by PlayerID. Returns None
+    when the roster entry has no PlayerID or when this pitcher didn't clear the
+    minimum-PA filter in the nightly refresh -- both are normal, not errors."""
+    pid = pitcher.get("PlayerID")
+    if not pid:
+        return None
+    return PITCHER_CONTACT_QUALITY.get(str(pid))
+
+
+def _regressed_pitcher_cq(entry, field):
+    """Shrinks one contact-quality-allowed field toward the league average in
+    proportion to how little this pitcher has actually pitched."""
+    if not entry:
+        return None
+    observed = entry.get(field)
+    league_value = PITCHER_CQ_LEAGUE_AVG.get(field)
+    if observed is None or league_value is None:
+        return None
+    pa = entry.get("pa") or 0.0
+    return (pa * observed + PITCHER_CQ_SHRINK_PA * league_value) / (pa + PITCHER_CQ_SHRINK_PA)
+
 def _load_sprint_speed():
     json_path = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "sprint_speed.json")
     try:
@@ -2088,25 +2139,57 @@ else:
 
         st.caption("COMB = an original composite score built from this app's own data: simulated HR probability, adjusted up or down by real Barrel%/HardHit% relative to league average (when loaded). Not a copy of any other tool's formula. BRL=Barrel%, HH%=HardHit%, EV=Exit Velo (mph), HR%=share of 1,000 simulated games with a home run.")
 
-    def build_pitcher_radar_data(pitcher):
-        # Builds normalized (vs. league average, 100 = average) axis values.
-        # All four axes are oriented so a BIGGER value means MORE
-        # hittable/dangerous for the pitcher, keeping one consistent visual
-        # language across every axis. K rate specifically gets inverted (as
-        # "Contact Allowed" = 1 - K rate) since it's the one stat where LOW
-        # is bad for the pitcher, unlike the other three.
+    
+          def build_pitcher_radar_data(pitcher, include_contact_quality=False):
+        # Normalized vs. league average (100 = average), every axis oriented so
+        # BIGGER = more hittable. K rate is inverted into "Contact Allowed"
+        # since it's the one stat where low is bad for the pitcher.
         contact_rate = 1.0 - pitcher["K_ALLOWED_RATE"]
         league_contact_rate = 1.0 - LEAGUE_BASELINE["K_RATE"]
-        return {
+        axes = {
             "Contact Allowed": round(contact_rate / league_contact_rate * 100, 1),
             "BB Rate": round(pitcher["BB_ALLOWED_RATE"] / LEAGUE_BASELINE["BB_RATE"] * 100, 1),
             "HR Rate": round(pitcher["HR_PA_ALLOWED_RATE"] / LEAGUE_BASELINE["HR_PA_RATE"] * 100, 1),
             "BABIP Allowed": round(pitcher["BABIP_ALLOWED"] / LEAGUE_BASELINE["BABIP"] * 100, 1),
         }
 
+        if include_contact_quality:
+            entry = _pitcher_cq_for(pitcher)
+            added = {}
+            for label, field in (("Barrel% Allowed", "barrel_pct_allowed"),
+                                 ("HardHit% Allowed", "hardhit_pct_allowed"),
+                                 ("Fly Ball%", "fb_pct")):
+                value = _regressed_pitcher_cq(entry, field)
+                league_value = PITCHER_CQ_LEAGUE_AVG.get(field)
+                if value is not None and league_value:
+                    added[label] = round(value / league_value * 100, 1)
+
+            # HR Rate comes OUT once Barrel% Allowed is available -- a barrel is
+            # precisely the contact that becomes a home run, so showing both
+            # would make a hard-contact pitcher's shape bulge twice for one
+            # underlying trait. Barrel% Allowed is the better of the pair: real
+            # Statcast data, and less luck-driven than a season HR total.
+            if "Barrel% Allowed" in added:
+                axes.pop("HR Rate", None)
+            axes.update(added)
+
+        return axes
+
     def render_pitcher_matchup_radar(away_sp, home_sp, away_team_name, home_team_name):
-        away_data = build_pitcher_radar_data(away_sp)
-        home_data = build_pitcher_radar_data(home_sp)
+        # Both starters need data or neither gets the extra axes -- mismatched
+        # categories would compare different shapes and look meaningful.
+        both_have_cq = (
+            _pitcher_cq_for(away_sp) is not None
+            and _pitcher_cq_for(home_sp) is not None
+            and bool(PITCHER_CQ_LEAGUE_AVG)
+        )
+
+        away_data = build_pitcher_radar_data(away_sp, both_have_cq)
+        home_data = build_pitcher_radar_data(home_sp, both_have_cq)
+
+        shared = [k for k in away_data if k in home_data]
+        away_data = {k: away_data[k] for k in shared}
+        home_data = {k: home_data[k] for k in shared}
         categories = list(away_data.keys())
 
         fig = go.Figure()
@@ -2125,21 +2208,34 @@ else:
         fig.update_layout(
             polar=dict(
                 bgcolor='#16241C',
-                radialaxis=dict(visible=True, range=[0, 160], gridcolor='#2A3D30', tickfont=dict(color='#8FA396', size=9)),
+                radialaxis=dict(visible=True, range=[0, 180], gridcolor='#2A3D30', tickfont=dict(color='#8FA396', size=9)),
                 angularaxis=dict(gridcolor='#2A3D30', tickfont=dict(color='#F2EFE6', size=11)),
             ),
             paper_bgcolor='#0E1912', font=dict(color='#F2EFE6', family='Inter'),
             showlegend=True, legend=dict(orientation='h', yanchor='bottom', y=-0.2, x=0.5, xanchor='center'),
             margin=dict(l=40, r=40, t=20, b=20), height=380,
         )
-        return fig
+        return fig, both_have_cq     
 
-    st.markdown("### 🌗 Starter Matchup Profile")
+       st.markdown("### 🌗 Starter Matchup Profile")
     st.caption("Every axis is normalized to 100 = league average, and oriented so a bigger shape means more hittable -- the two pitchers' shapes overlay directly for an at-a-glance read on who's more exposed tonight.")
-    st.plotly_chart(
-        render_pitcher_matchup_radar(st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], away_selection, home_selection),
-        use_container_width=True,
+    _radar_fig, _radar_has_cq = render_pitcher_matchup_radar(
+        st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], away_selection, home_selection
     )
+    st.plotly_chart(_radar_fig, use_container_width=True)
+    if _radar_has_cq:
+        st.caption(
+            "Barrel%/HardHit%/Fly Ball% are real Statcast contact-quality-allowed, shrunk toward "
+            "league average based on how much each pitcher has actually thrown -- a short-sample "
+            "arm sits near 100 on those axes rather than showing a dramatic shape built on noise. "
+            "Barrel% Allowed replaces the old HR Rate axis rather than sitting alongside it, since "
+            "a barrel is the contact that becomes a home run and showing both would count the same "
+            "trait twice."
+        )
+    elif not PITCHER_CONTACT_QUALITY:
+        st.caption("Real Statcast contact-quality-allowed isn't loaded yet -- showing the four roster-derived axes only until refresh_pitcher_contact_quality.py has run.")
+    else:
+        st.caption("One or both of tonight's starters isn't in the Statcast contact-quality file (usually too few PA to be meaningful) -- showing the four roster-derived axes only.") )
 
     t_prop_away, t_prop_home, t_pitch_away, t_pitch_home, t_hr_board = st.tabs([
         f"📊 {away_selection} Hitting Props", f"📊 {home_selection} Hitting Props",
