@@ -1,0 +1,42 @@
+name: Refresh Pitcher Contact Quality
+
+on:
+  schedule:
+    # 09:20 UTC nightly. Offset from the other refresh jobs so they don't
+    # all hit Savant at once.
+    - cron: '20 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Pull pitcher contact quality from Baseball Savant
+        run: python refresh_pitcher_contact_quality.py
+
+      - name: Commit updated JSON
+        run: |
+          git config user.name "actions-user"
+          git config user.email "actions@github.com"
+          git add MLB_Predictor/pitcher_contact_quality.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Nightly refresh: pitcher contact quality"
+            git push
+          fi
