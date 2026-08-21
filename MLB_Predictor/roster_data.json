@@ -149,6 +149,7 @@
     "pitching": [
       {
         "Player": "Eduardo Rodriguez",
+        "PlayerID": 593958,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -163,6 +164,7 @@
       },
       {
         "Player": "Merrill Kelly",
+        "PlayerID": 518876,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -177,6 +179,7 @@
       },
       {
         "Player": "Zack Littell",
+        "PlayerID": 641793,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -191,6 +194,7 @@
       },
       {
         "Player": "Brandon Pfaadt",
+        "PlayerID": 694297,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -205,6 +209,7 @@
       },
       {
         "Player": "Michael Soroka",
+        "PlayerID": 647336,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -219,6 +224,7 @@
       },
       {
         "Player": "Taylor Clarke",
+        "PlayerID": 664199,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -233,6 +239,7 @@
       },
       {
         "Player": "Kevin Ginkel",
+        "PlayerID": 656464,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -247,6 +254,7 @@
       },
       {
         "Player": "Jonathan Lo\u00e1isiga",
+        "PlayerID": 642528,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -261,6 +269,7 @@
       },
       {
         "Player": "Juan Morillo",
+        "PlayerID": 666661,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -275,6 +284,7 @@
       },
       {
         "Player": "Dennis Santana",
+        "PlayerID": 642701,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -439,6 +449,7 @@
     "pitching": [
       {
         "Player": "Bryce Elder",
+        "PlayerID": 693821,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -453,6 +464,7 @@
       },
       {
         "Player": "Chris Sale",
+        "PlayerID": 519242,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -467,6 +479,7 @@
       },
       {
         "Player": "Grant Holmes",
+        "PlayerID": 656550,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -481,6 +494,7 @@
       },
       {
         "Player": "Tyler Mahle",
+        "PlayerID": 641816,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -495,6 +509,7 @@
       },
       {
         "Player": "Mart\u00edn P\u00e9rez",
+        "PlayerID": 527048,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -509,6 +524,7 @@
       },
       {
         "Player": "Raisel Iglesias",
+        "PlayerID": 628452,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -523,6 +539,7 @@
       },
       {
         "Player": "Brent Suter",
+        "PlayerID": 608718,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -537,6 +554,7 @@
       },
       {
         "Player": "Dylan Lee",
+        "PlayerID": 669276,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -551,6 +569,7 @@
       },
       {
         "Player": "Didier Fuentes",
+        "PlayerID": 800311,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -565,6 +584,7 @@
       },
       {
         "Player": "Dylan Dodd",
+        "PlayerID": 689266,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -729,6 +749,7 @@
     "pitching": [
       {
         "Player": "Shane Baz",
+        "PlayerID": 669358,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -743,6 +764,7 @@
       },
       {
         "Player": "Kyle Bradish",
+        "PlayerID": 680694,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -757,6 +779,7 @@
       },
       {
         "Player": "Trevor Rogers",
+        "PlayerID": 669432,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -771,6 +794,7 @@
       },
       {
         "Player": "Brandon Young",
+        "PlayerID": 687064,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -785,6 +809,7 @@
       },
       {
         "Player": "Chris Bassitt",
+        "PlayerID": 605135,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -799,6 +824,7 @@
       },
       {
         "Player": "Andrew Kittredge",
+        "PlayerID": 552640,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -812,21 +838,23 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Albert Su\u00e1rez",
+        "Player": "Anthony Nunez",
+        "PlayerID": 689296,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.083,
-        "K_ALLOWED_RATE": 0.165,
-        "HR_PA_ALLOWED_RATE": 0.03,
-        "BABIP_ALLOWED": 0.259,
-        "OAVG": 0.237,
-        "IP": "55.0",
-        "ERA": 3.93,
+        "BB_ALLOWED_RATE": 0.112,
+        "K_ALLOWED_RATE": 0.235,
+        "HR_PA_ALLOWED_RATE": 0.026,
+        "BABIP_ALLOWED": 0.268,
+        "OAVG": 0.218,
+        "IP": "45.0",
+        "ERA": 4.6,
         "Fatigue": 0.0
       },
       {
         "Player": "Yennier Cano",
+        "PlayerID": 666974,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -841,6 +869,7 @@
       },
       {
         "Player": "Grant Wolfram",
+        "PlayerID": 664991,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -855,6 +884,7 @@
       },
       {
         "Player": "Alex Hoppe",
+        "PlayerID": 695380,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -1019,6 +1049,7 @@
     "pitching": [
       {
         "Player": "Sonny Gray",
+        "PlayerID": 543243,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -1033,6 +1064,7 @@
       },
       {
         "Player": "Payton Tolle",
+        "PlayerID": 801139,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -1047,6 +1079,7 @@
       },
       {
         "Player": "Ranger Suarez",
+        "PlayerID": 624133,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -1061,6 +1094,7 @@
       },
       {
         "Player": "Jake Bennett",
+        "PlayerID": 687562,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -1075,6 +1109,7 @@
       },
       {
         "Player": "Patrick Sandoval",
+        "PlayerID": 663776,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -1089,6 +1124,7 @@
       },
       {
         "Player": "Aroldis Chapman",
+        "PlayerID": 547973,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "L",
@@ -1103,6 +1139,7 @@
       },
       {
         "Player": "Brayan Bello",
+        "PlayerID": 678394,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -1117,6 +1154,7 @@
       },
       {
         "Player": "Jovani Mor\u00e1n",
+        "PlayerID": 663558,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -1131,6 +1169,7 @@
       },
       {
         "Player": "Greg Weissert",
+        "PlayerID": 669711,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -1145,6 +1184,7 @@
       },
       {
         "Player": "Erik Miller",
+        "PlayerID": 669062,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -1309,6 +1349,7 @@
     "pitching": [
       {
         "Player": "Kevin Gausman",
+        "PlayerID": 592332,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -1323,6 +1364,7 @@
       },
       {
         "Player": "Shota Imanaga",
+        "PlayerID": 684007,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -1337,6 +1379,7 @@
       },
       {
         "Player": "Colin Rea",
+        "PlayerID": 607067,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -1351,6 +1394,7 @@
       },
       {
         "Player": "David Peterson",
+        "PlayerID": 656849,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -1365,6 +1409,7 @@
       },
       {
         "Player": "Aaron Civale",
+        "PlayerID": 650644,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -1379,6 +1424,7 @@
       },
       {
         "Player": "Jacob Webb",
+        "PlayerID": 657097,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -1393,6 +1439,7 @@
       },
       {
         "Player": "Javier Assad",
+        "PlayerID": 665871,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -1407,6 +1454,7 @@
       },
       {
         "Player": "Ryan Zeferjahn",
+        "PlayerID": 666171,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -1421,6 +1469,7 @@
       },
       {
         "Player": "Ryan Rolison",
+        "PlayerID": 669020,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -1435,6 +1484,7 @@
       },
       {
         "Player": "Trent Thornton",
+        "PlayerID": 663423,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -1599,6 +1649,7 @@
     "pitching": [
       {
         "Player": "Sean Burke",
+        "PlayerID": 680732,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -1613,6 +1664,7 @@
       },
       {
         "Player": "Anthony Kay",
+        "PlayerID": 641743,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -1627,6 +1679,7 @@
       },
       {
         "Player": "Luis Castillo",
+        "PlayerID": 622491,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -1641,6 +1694,7 @@
       },
       {
         "Player": "Bryan Hudson",
+        "PlayerID": 663542,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "L",
@@ -1655,6 +1709,7 @@
       },
       {
         "Player": "Erick Fedde",
+        "PlayerID": 607200,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -1669,6 +1724,7 @@
       },
       {
         "Player": "Sean Newcomb",
+        "PlayerID": 656794,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -1683,6 +1739,7 @@
       },
       {
         "Player": "Huascar Brazob\u00e1n",
+        "PlayerID": 623211,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -1697,6 +1754,7 @@
       },
       {
         "Player": "Trevor Richards",
+        "PlayerID": 670950,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -1861,6 +1919,7 @@
     "pitching": [
       {
         "Player": "Andrew Abbott",
+        "PlayerID": 671096,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -1875,6 +1934,7 @@
       },
       {
         "Player": "Chase Burns",
+        "PlayerID": 695505,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -1889,6 +1949,7 @@
       },
       {
         "Player": "Brady Singer",
+        "PlayerID": 663903,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -1903,6 +1964,7 @@
       },
       {
         "Player": "Rhett Lowder",
+        "PlayerID": 695076,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -1917,6 +1979,7 @@
       },
       {
         "Player": "Nick Lodolo",
+        "PlayerID": 666157,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -1931,6 +1994,7 @@
       },
       {
         "Player": "Emilio Pag\u00e1n",
+        "PlayerID": 641941,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -1945,6 +2009,7 @@
       },
       {
         "Player": "Brock Burke",
+        "PlayerID": 656271,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -1959,6 +2024,7 @@
       },
       {
         "Player": "Sam Moll",
+        "PlayerID": 594580,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -1973,6 +2039,7 @@
       },
       {
         "Player": "Tejay Antone",
+        "PlayerID": 622088,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -1987,6 +2054,7 @@
       },
       {
         "Player": "Pierce Johnson",
+        "PlayerID": 572955,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -2151,6 +2219,7 @@
     "pitching": [
       {
         "Player": "Gavin Williams",
+        "PlayerID": 668909,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -2165,6 +2234,7 @@
       },
       {
         "Player": "Tanner Bibee",
+        "PlayerID": 676440,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -2179,6 +2249,7 @@
       },
       {
         "Player": "Parker Messick",
+        "PlayerID": 800048,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -2193,6 +2264,7 @@
       },
       {
         "Player": "Foster Griffin",
+        "PlayerID": 656492,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -2207,6 +2279,7 @@
       },
       {
         "Player": "Joey Cantillo",
+        "PlayerID": 676282,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -2221,6 +2294,7 @@
       },
       {
         "Player": "Cade Smith",
+        "PlayerID": 671922,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -2235,6 +2309,7 @@
       },
       {
         "Player": "Matt Festa",
+        "PlayerID": 670036,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -2249,6 +2324,7 @@
       },
       {
         "Player": "Colin Holderman",
+        "PlayerID": 670059,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -2263,6 +2339,7 @@
       },
       {
         "Player": "Tim Herrin",
+        "PlayerID": 682120,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -2277,6 +2354,7 @@
       },
       {
         "Player": "Hunter Gaddis",
+        "PlayerID": 683769,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -2441,6 +2519,7 @@
     "pitching": [
       {
         "Player": "Kyle Freeland",
+        "PlayerID": 607536,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -2455,6 +2534,7 @@
       },
       {
         "Player": "Tomoyuki Sugano",
+        "PlayerID": 608372,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -2469,6 +2549,7 @@
       },
       {
         "Player": "Ryan Feltner",
+        "PlayerID": 663372,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -2483,6 +2564,7 @@
       },
       {
         "Player": "Gabriel Hughes",
+        "PlayerID": 687312,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -2497,6 +2579,7 @@
       },
       {
         "Player": "Jordan Romano",
+        "PlayerID": 605447,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -2511,6 +2594,7 @@
       },
       {
         "Player": "Zach Agnos",
+        "PlayerID": 688642,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -2525,6 +2609,7 @@
       },
       {
         "Player": "Tanner Gordon",
+        "PlayerID": 685299,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -2539,6 +2624,7 @@
       },
       {
         "Player": "Juan Mejia",
+        "PlayerID": 675848,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -2553,6 +2639,7 @@
       },
       {
         "Player": "Brennan Bernardino",
+        "PlayerID": 657514,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -2717,6 +2804,7 @@
     "pitching": [
       {
         "Player": "Framber Valdez",
+        "PlayerID": 664285,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -2731,6 +2819,7 @@
       },
       {
         "Player": "Keider Montero",
+        "PlayerID": 672456,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -2745,6 +2834,7 @@
       },
       {
         "Player": "Troy Melton",
+        "PlayerID": 675512,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -2759,6 +2849,7 @@
       },
       {
         "Player": "Jackson Jobe",
+        "PlayerID": 695549,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -2773,6 +2864,7 @@
       },
       {
         "Player": "Kenley Jansen",
+        "PlayerID": 445276,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -2787,6 +2879,7 @@
       },
       {
         "Player": "Drew Anderson",
+        "PlayerID": 623454,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -2801,6 +2894,7 @@
       },
       {
         "Player": "Tyler Holton",
+        "PlayerID": 663947,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -2815,6 +2909,7 @@
       },
       {
         "Player": "Kyle Finnegan",
+        "PlayerID": 640448,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -2829,6 +2924,7 @@
       },
       {
         "Player": "Enmanuel De Jesus",
+        "PlayerID": 646241,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -2993,6 +3089,7 @@
     "pitching": [
       {
         "Player": "Peter Lambert",
+        "PlayerID": 663567,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3007,6 +3104,7 @@
       },
       {
         "Player": "Hunter Brown",
+        "PlayerID": 686613,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3021,6 +3119,7 @@
       },
       {
         "Player": "Tatsuya Imai",
+        "PlayerID": 837227,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3035,6 +3134,7 @@
       },
       {
         "Player": "Cristian Javier",
+        "PlayerID": 664299,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3049,6 +3149,7 @@
       },
       {
         "Player": "Hayden Wesneski",
+        "PlayerID": 669713,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3063,6 +3164,7 @@
       },
       {
         "Player": "Bryan Abreu",
+        "PlayerID": 650556,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -3077,6 +3179,7 @@
       },
       {
         "Player": "AJ Blubaugh",
+        "PlayerID": 805123,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -3091,6 +3194,7 @@
       },
       {
         "Player": "Steven Okert",
+        "PlayerID": 595345,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -3105,6 +3209,7 @@
       },
       {
         "Player": "Bennett Sousa",
+        "PlayerID": 656986,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -3269,6 +3374,7 @@
     "pitching": [
       {
         "Player": "Michael Wacha",
+        "PlayerID": 608379,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3283,6 +3389,7 @@
       },
       {
         "Player": "Seth Lugo",
+        "PlayerID": 607625,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3297,6 +3404,7 @@
       },
       {
         "Player": "Noah Cameron",
+        "PlayerID": 702070,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -3311,6 +3419,7 @@
       },
       {
         "Player": "Randy Dobnak",
+        "PlayerID": 677976,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3325,6 +3434,7 @@
       },
       {
         "Player": "Alex Lange",
+        "PlayerID": 656638,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -3339,6 +3449,7 @@
       },
       {
         "Player": "Daniel Lynch IV",
+        "PlayerID": 663738,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -3353,6 +3464,7 @@
       },
       {
         "Player": "John Schreiber",
+        "PlayerID": 670167,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -3367,6 +3479,7 @@
       },
       {
         "Player": "Craig Kimbrel",
+        "PlayerID": 518886,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -3381,6 +3494,7 @@
       },
       {
         "Player": "Nate Pearson",
+        "PlayerID": 663878,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -3545,6 +3659,7 @@
     "pitching": [
       {
         "Player": "Reid Detmers",
+        "PlayerID": 672282,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -3559,6 +3674,7 @@
       },
       {
         "Player": "Walbert Ure\u00f1a",
+        "PlayerID": 700712,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3573,6 +3689,7 @@
       },
       {
         "Player": "Grayson Rodriguez",
+        "PlayerID": 680570,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3587,6 +3704,7 @@
       },
       {
         "Player": "Ryan Johnson",
+        "PlayerID": 696270,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3601,6 +3719,7 @@
       },
       {
         "Player": "George Klassen",
+        "PlayerID": 691946,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3615,6 +3734,7 @@
       },
       {
         "Player": "Ryan Watson",
+        "PlayerID": 670245,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -3629,6 +3749,7 @@
       },
       {
         "Player": "Jos\u00e9 Fermin",
+        "PlayerID": 820862,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -3643,6 +3764,7 @@
       },
       {
         "Player": "Tayler Saucedo",
+        "PlayerID": 642048,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -3657,6 +3779,7 @@
       },
       {
         "Player": "Luke Murphy",
+        "PlayerID": 684665,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -3671,6 +3794,7 @@
       },
       {
         "Player": "Blake Weiman",
+        "PlayerID": 676620,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -3835,6 +3959,7 @@
     "pitching": [
       {
         "Player": "Yoshinobu Yamamoto",
+        "PlayerID": 808967,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3849,6 +3974,7 @@
       },
       {
         "Player": "Roki Sasaki",
+        "PlayerID": 808963,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3863,6 +3989,7 @@
       },
       {
         "Player": "Tarik Skubal",
+        "PlayerID": 669373,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -3877,6 +4004,7 @@
       },
       {
         "Player": "Eric Lauer",
+        "PlayerID": 641778,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -3891,6 +4019,7 @@
       },
       {
         "Player": "Emmet Sheehan",
+        "PlayerID": 686218,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -3905,6 +4034,7 @@
       },
       {
         "Player": "Tanner Scott",
+        "PlayerID": 656945,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "L",
@@ -3919,6 +4049,7 @@
       },
       {
         "Player": "Jack Dreyer",
+        "PlayerID": 676263,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -3933,6 +4064,7 @@
       },
       {
         "Player": "Edgardo Henriquez",
+        "PlayerID": 683618,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -3947,6 +4079,7 @@
       },
       {
         "Player": "Alex Vesia",
+        "PlayerID": 681911,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -3961,6 +4094,7 @@
       },
       {
         "Player": "Kyle Hurt",
+        "PlayerID": 669165,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -4125,6 +4259,7 @@
     "pitching": [
       {
         "Player": "Sandy Alcantara",
+        "PlayerID": 645261,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4139,6 +4274,7 @@
       },
       {
         "Player": "Eury P\u00e9rez",
+        "PlayerID": 691587,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4153,6 +4289,7 @@
       },
       {
         "Player": "Janson Junk",
+        "PlayerID": 676083,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4167,6 +4304,7 @@
       },
       {
         "Player": "Ryan Gusto",
+        "PlayerID": 687473,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4181,6 +4319,7 @@
       },
       {
         "Player": "Pete Fairbanks",
+        "PlayerID": 664126,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -4195,6 +4334,7 @@
       },
       {
         "Player": "Tyler Phillips",
+        "PlayerID": 663969,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -4209,6 +4349,7 @@
       },
       {
         "Player": "Calvin Faucher",
+        "PlayerID": 676534,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -4223,6 +4364,7 @@
       },
       {
         "Player": "Michael Petersen",
+        "PlayerID": 656848,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -4237,6 +4379,7 @@
       },
       {
         "Player": "John King",
+        "PlayerID": 667463,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -4401,6 +4544,7 @@
     "pitching": [
       {
         "Player": "Jacob Misiorowski",
+        "PlayerID": 694819,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4415,6 +4559,7 @@
       },
       {
         "Player": "Dustin May",
+        "PlayerID": 669160,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4429,6 +4574,7 @@
       },
       {
         "Player": "Shane Drohan",
+        "PlayerID": 675660,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -4443,6 +4589,7 @@
       },
       {
         "Player": "Kyle Harrison",
+        "PlayerID": 690986,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -4457,6 +4604,7 @@
       },
       {
         "Player": "Robert Gasser",
+        "PlayerID": 688107,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -4471,6 +4619,7 @@
       },
       {
         "Player": "Chad Patrick",
+        "PlayerID": 694477,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -4485,6 +4634,7 @@
       },
       {
         "Player": "Aaron Ashby",
+        "PlayerID": 676879,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -4499,6 +4649,7 @@
       },
       {
         "Player": "Antonio Senzatela",
+        "PlayerID": 622608,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -4513,6 +4664,7 @@
       },
       {
         "Player": "Grant Anderson",
+        "PlayerID": 681982,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -4527,6 +4679,7 @@
       },
       {
         "Player": "DL Hall",
+        "PlayerID": 669084,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -4691,6 +4844,7 @@
     "pitching": [
       {
         "Player": "Taj Bradley",
+        "PlayerID": 671737,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4705,6 +4859,7 @@
       },
       {
         "Player": "Bailey Ober",
+        "PlayerID": 641927,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4719,6 +4874,7 @@
       },
       {
         "Player": "Zebby Matthews",
+        "PlayerID": 805673,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4733,6 +4889,7 @@
       },
       {
         "Player": "Connor Prielipp",
+        "PlayerID": 687570,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -4747,6 +4904,7 @@
       },
       {
         "Player": "Dean Kremer",
+        "PlayerID": 665152,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4761,6 +4919,7 @@
       },
       {
         "Player": "Jeff Hoffman",
+        "PlayerID": 656546,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -4775,6 +4934,7 @@
       },
       {
         "Player": "Andrew Morris",
+        "PlayerID": 702193,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -4789,6 +4949,7 @@
       },
       {
         "Player": "Tommy Nance",
+        "PlayerID": 667297,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -4803,6 +4964,7 @@
       },
       {
         "Player": "Taylor Rogers",
+        "PlayerID": 573124,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -4817,6 +4979,7 @@
       },
       {
         "Player": "Kody Funderburk",
+        "PlayerID": 681892,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -4981,6 +5144,7 @@
     "pitching": [
       {
         "Player": "Nolan McLean",
+        "PlayerID": 690997,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -4995,6 +5159,7 @@
       },
       {
         "Player": "Christian Scott",
+        "PlayerID": 681035,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -5009,6 +5174,7 @@
       },
       {
         "Player": "Zac Thornton",
+        "PlayerID": 804267,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -5023,6 +5189,7 @@
       },
       {
         "Player": "Robert Stock",
+        "PlayerID": 476594,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -5037,6 +5204,7 @@
       },
       {
         "Player": "Sean Manaea",
+        "PlayerID": 640455,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -5051,6 +5219,7 @@
       },
       {
         "Player": "Kodai Senga",
+        "PlayerID": 673540,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -5065,6 +5234,7 @@
       },
       {
         "Player": "Austin Warren",
+        "PlayerID": 681810,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -5079,6 +5249,7 @@
       },
       {
         "Player": "Daniel Duarte",
+        "PlayerID": 650960,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -5093,6 +5264,7 @@
       },
       {
         "Player": "Jonathan Pintaro",
+        "PlayerID": 702752,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -5257,6 +5429,7 @@
     "pitching": [
       {
         "Player": "Cam Schlittler",
+        "PlayerID": 693645,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -5271,6 +5444,7 @@
       },
       {
         "Player": "Ryan Weathers",
+        "PlayerID": 677960,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -5285,6 +5459,7 @@
       },
       {
         "Player": "Will Warren",
+        "PlayerID": 701542,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -5299,6 +5474,7 @@
       },
       {
         "Player": "Gerrit Cole",
+        "PlayerID": 543037,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -5313,6 +5489,7 @@
       },
       {
         "Player": "Carlos Rod\u00f3n",
+        "PlayerID": 607074,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -5327,6 +5504,7 @@
       },
       {
         "Player": "David Bednar",
+        "PlayerID": 670280,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -5341,6 +5519,7 @@
       },
       {
         "Player": "Paul Blackburn",
+        "PlayerID": 621112,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -5355,6 +5534,7 @@
       },
       {
         "Player": "Brent Headrick",
+        "PlayerID": 687396,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -5369,6 +5549,7 @@
       },
       {
         "Player": "Fernando Cruz",
+        "PlayerID": 518585,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -5383,6 +5564,7 @@
       },
       {
         "Player": "Tim Hill",
+        "PlayerID": 657612,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -5547,6 +5729,7 @@
     "pitching": [
       {
         "Player": "J.T. Ginn",
+        "PlayerID": 669372,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -5561,6 +5744,7 @@
       },
       {
         "Player": "Jeffrey Springs",
+        "PlayerID": 605488,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -5575,6 +5759,7 @@
       },
       {
         "Player": "Jacob Lopez",
+        "PlayerID": 682052,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -5589,6 +5774,7 @@
       },
       {
         "Player": "Gage Jump",
+        "PlayerID": 695611,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -5603,6 +5789,7 @@
       },
       {
         "Player": "Hogan Harris",
+        "PlayerID": 663687,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "L",
@@ -5617,6 +5804,7 @@
       },
       {
         "Player": "Jack Perkins",
+        "PlayerID": 678022,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -5631,6 +5819,7 @@
       },
       {
         "Player": "Luis Medina",
+        "PlayerID": 665622,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -5645,6 +5834,7 @@
       },
       {
         "Player": "Elvis Alvarado",
+        "PlayerID": 665660,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -5659,6 +5849,7 @@
       },
       {
         "Player": "Brady Basso",
+        "PlayerID": 669620,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -5823,6 +6014,7 @@
     "pitching": [
       {
         "Player": "Cristopher S\u00e1nchez",
+        "PlayerID": 650911,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -5837,6 +6029,7 @@
       },
       {
         "Player": "Jes\u00fas Luzardo",
+        "PlayerID": 666200,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -5851,6 +6044,7 @@
       },
       {
         "Player": "Aaron Nola",
+        "PlayerID": 605400,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -5865,6 +6059,7 @@
       },
       {
         "Player": "Zack Wheeler",
+        "PlayerID": 554430,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -5879,6 +6074,7 @@
       },
       {
         "Player": "Andrew Painter",
+        "PlayerID": 691725,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -5893,6 +6089,7 @@
       },
       {
         "Player": "Jhoan Duran",
+        "PlayerID": 661395,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -5907,6 +6104,7 @@
       },
       {
         "Player": "Tim Mayza",
+        "PlayerID": 641835,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -5921,6 +6119,7 @@
       },
       {
         "Player": "Orion Kerkering",
+        "PlayerID": 689147,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -5935,6 +6134,7 @@
       },
       {
         "Player": "Brooks Raley",
+        "PlayerID": 548384,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -5949,6 +6149,7 @@
       },
       {
         "Player": "Jonathan Bowlan",
+        "PlayerID": 680742,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -6113,6 +6314,7 @@
     "pitching": [
       {
         "Player": "Braxton Ashcraft",
+        "PlayerID": 677952,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6127,6 +6329,7 @@
       },
       {
         "Player": "Paul Skenes",
+        "PlayerID": 694973,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6141,6 +6344,7 @@
       },
       {
         "Player": "Bubba Chandler",
+        "PlayerID": 696149,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6155,6 +6359,7 @@
       },
       {
         "Player": "Jared Jones",
+        "PlayerID": 683003,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6169,6 +6374,7 @@
       },
       {
         "Player": "Gregory Soto",
+        "PlayerID": 642397,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "L",
@@ -6183,6 +6389,7 @@
       },
       {
         "Player": "Carmen Mlodzinski",
+        "PlayerID": 669387,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -6197,6 +6404,7 @@
       },
       {
         "Player": "Lake Bachar",
+        "PlayerID": 669199,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -6211,6 +6419,7 @@
       },
       {
         "Player": "Yohan Ram\u00edrez",
+        "PlayerID": 670990,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -6225,6 +6434,7 @@
       },
       {
         "Player": "Camilo Doval",
+        "PlayerID": 666808,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -6389,6 +6599,7 @@
     "pitching": [
       {
         "Player": "Michael King",
+        "PlayerID": 650633,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6403,6 +6614,7 @@
       },
       {
         "Player": "Robbie Ray",
+        "PlayerID": 592662,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -6417,6 +6629,7 @@
       },
       {
         "Player": "Walker Buehler",
+        "PlayerID": 621111,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6431,6 +6644,7 @@
       },
       {
         "Player": "Randy V\u00e1squez",
+        "PlayerID": 681190,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6445,6 +6659,7 @@
       },
       {
         "Player": "Casey Mize",
+        "PlayerID": 663554,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6459,6 +6674,7 @@
       },
       {
         "Player": "Mason Miller",
+        "PlayerID": 695243,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -6473,6 +6689,7 @@
       },
       {
         "Player": "Adrian Morejon",
+        "PlayerID": 670970,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -6487,6 +6704,7 @@
       },
       {
         "Player": "Wandy Peralta",
+        "PlayerID": 593974,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -6501,6 +6719,7 @@
       },
       {
         "Player": "Bradgley Rodriguez",
+        "PlayerID": 699134,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -6515,6 +6734,7 @@
       },
       {
         "Player": "Kyle Hart",
+        "PlayerID": 606996,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -6679,6 +6899,7 @@
     "pitching": [
       {
         "Player": "Logan Webb",
+        "PlayerID": 657277,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6693,6 +6914,7 @@
       },
       {
         "Player": "Landen Roupp",
+        "PlayerID": 694738,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6707,6 +6929,7 @@
       },
       {
         "Player": "Adrian Houser",
+        "PlayerID": 605288,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6721,6 +6944,7 @@
       },
       {
         "Player": "Carson Whisenhunt",
+        "PlayerID": 687931,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -6735,6 +6959,7 @@
       },
       {
         "Player": "JT Brubaker",
+        "PlayerID": 664141,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -6749,6 +6974,7 @@
       },
       {
         "Player": "Sam Hentges",
+        "PlayerID": 656529,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -6763,6 +6989,7 @@
       },
       {
         "Player": "Blade Tidwell",
+        "PlayerID": 694918,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -6777,6 +7004,7 @@
       },
       {
         "Player": "Dylan Smith",
+        "PlayerID": 681916,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -6791,6 +7019,7 @@
       },
       {
         "Player": "Carson Seymour",
+        "PlayerID": 693313,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -6955,6 +7184,7 @@
     "pitching": [
       {
         "Player": "Logan Gilbert",
+        "PlayerID": 669302,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6969,6 +7199,7 @@
       },
       {
         "Player": "George Kirby",
+        "PlayerID": 669923,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6983,6 +7214,7 @@
       },
       {
         "Player": "Bryan Woo",
+        "PlayerID": 693433,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -6997,6 +7229,7 @@
       },
       {
         "Player": "Emerson Hancock",
+        "PlayerID": 676106,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7011,6 +7244,7 @@
       },
       {
         "Player": "Bryce Miller",
+        "PlayerID": 682243,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7025,6 +7259,7 @@
       },
       {
         "Player": "Andr\u00e9s Mu\u00f1oz",
+        "PlayerID": 662253,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -7039,6 +7274,7 @@
       },
       {
         "Player": "Eduard Bazardo",
+        "PlayerID": 660825,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -7053,6 +7289,7 @@
       },
       {
         "Player": "Jos\u00e9 A. Ferrer",
+        "PlayerID": 678606,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -7067,6 +7304,7 @@
       },
       {
         "Player": "Gabe Speier",
+        "PlayerID": 642100,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -7081,6 +7319,7 @@
       },
       {
         "Player": "Michael Rucker",
+        "PlayerID": 621074,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -7245,6 +7484,7 @@
     "pitching": [
       {
         "Player": "Michael McGreevy",
+        "PlayerID": 700241,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7259,6 +7499,7 @@
       },
       {
         "Player": "Andre Pallante",
+        "PlayerID": 669467,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7273,6 +7514,7 @@
       },
       {
         "Player": "Matthew Liberatore",
+        "PlayerID": 669461,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -7287,6 +7529,7 @@
       },
       {
         "Player": "Kyle Leahy",
+        "PlayerID": 681517,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7301,6 +7544,7 @@
       },
       {
         "Player": "Hunter Dobbins",
+        "PlayerID": 690928,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7315,6 +7559,7 @@
       },
       {
         "Player": "Riley O'Brien",
+        "PlayerID": 676617,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -7329,6 +7574,7 @@
       },
       {
         "Player": "Gordon Graceffo",
+        "PlayerID": 700669,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -7343,6 +7589,7 @@
       },
       {
         "Player": "Justin Bruihl",
+        "PlayerID": 677865,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -7357,6 +7604,7 @@
       },
       {
         "Player": "George Soriano",
+        "PlayerID": 666277,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -7371,6 +7619,7 @@
       },
       {
         "Player": "Ryne Stanek",
+        "PlayerID": 592773,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -7535,6 +7784,7 @@
     "pitching": [
       {
         "Player": "Nick Martinez",
+        "PlayerID": 607259,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7549,6 +7799,7 @@
       },
       {
         "Player": "Drew Rasmussen",
+        "PlayerID": 656876,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7563,6 +7814,7 @@
       },
       {
         "Player": "Freddy Peralta",
+        "PlayerID": 642547,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7577,6 +7829,7 @@
       },
       {
         "Player": "Shane McClanahan",
+        "PlayerID": 663556,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -7591,6 +7844,7 @@
       },
       {
         "Player": "Bryan Baker",
+        "PlayerID": 641329,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -7605,6 +7859,7 @@
       },
       {
         "Player": "Ian Seymour",
+        "PlayerID": 693855,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -7619,6 +7874,7 @@
       },
       {
         "Player": "Steven Matz",
+        "PlayerID": 571927,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -7633,6 +7889,7 @@
       },
       {
         "Player": "Tyler Wells",
+        "PlayerID": 669330,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -7647,6 +7904,7 @@
       },
       {
         "Player": "Kevin Kelly",
+        "PlayerID": 687330,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -7811,6 +8069,7 @@
     "pitching": [
       {
         "Player": "MacKenzie Gore",
+        "PlayerID": 669022,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -7825,6 +8084,7 @@
       },
       {
         "Player": "Jacob deGrom",
+        "PlayerID": 594798,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7839,6 +8099,7 @@
       },
       {
         "Player": "Kumar Rocker",
+        "PlayerID": 677958,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -7853,6 +8114,7 @@
       },
       {
         "Player": "Cody Bradford",
+        "PlayerID": 674003,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -7867,6 +8129,7 @@
       },
       {
         "Player": "Jacob Latz",
+        "PlayerID": 656641,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "L",
@@ -7881,6 +8144,7 @@
       },
       {
         "Player": "Cal Quantrill",
+        "PlayerID": 615698,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -7895,6 +8159,7 @@
       },
       {
         "Player": "Tyler Alexander",
+        "PlayerID": 641302,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -7909,6 +8174,7 @@
       },
       {
         "Player": "Peyton Gray",
+        "PlayerID": 682608,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -7923,6 +8189,7 @@
       },
       {
         "Player": "Chase Silseth",
+        "PlayerID": 681217,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -8087,6 +8354,7 @@
     "pitching": [
       {
         "Player": "Jos\u00e9 Soriano",
+        "PlayerID": 667755,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -8101,6 +8369,7 @@
       },
       {
         "Player": "Dylan Cease",
+        "PlayerID": 656302,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -8115,6 +8384,7 @@
       },
       {
         "Player": "Simeon Woods Richardson",
+        "PlayerID": 680573,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -8129,6 +8399,7 @@
       },
       {
         "Player": "Shane Bieber",
+        "PlayerID": 669456,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -8143,6 +8414,7 @@
       },
       {
         "Player": "Max Scherzer",
+        "PlayerID": 453286,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -8157,6 +8429,7 @@
       },
       {
         "Player": "Louis Varland",
+        "PlayerID": 686973,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -8171,6 +8444,7 @@
       },
       {
         "Player": "Spencer Miles",
+        "PlayerID": 693686,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -8185,6 +8459,7 @@
       },
       {
         "Player": "Braydon Fisher",
+        "PlayerID": 680755,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -8199,6 +8474,7 @@
       },
       {
         "Player": "Tyler Rogers",
+        "PlayerID": 643511,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -8213,6 +8489,7 @@
       },
       {
         "Player": "Mason Fluharty",
+        "PlayerID": 689254,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
@@ -8377,6 +8654,7 @@
     "pitching": [
       {
         "Player": "Cade Cavalli",
+        "PlayerID": 676917,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -8391,6 +8669,7 @@
       },
       {
         "Player": "Andrew Alvarez",
+        "PlayerID": 674841,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -8405,6 +8684,7 @@
       },
       {
         "Player": "Jake Irvin",
+        "PlayerID": 663623,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
@@ -8419,6 +8699,7 @@
       },
       {
         "Player": "Jackson Kent",
+        "PlayerID": 800600,
         "Pos": "P",
         "Role": "SP",
         "Throws": "L",
@@ -8433,6 +8714,7 @@
       },
       {
         "Player": "Clayton Beeter",
+        "PlayerID": 690925,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
@@ -8447,6 +8729,7 @@
       },
       {
         "Player": "Brad Lord",
+        "PlayerID": 695418,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -8461,6 +8744,7 @@
       },
       {
         "Player": "Orlando Ribalta",
+        "PlayerID": 687377,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -8475,6 +8759,7 @@
       },
       {
         "Player": "Jake Bird",
+        "PlayerID": 656234,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
@@ -8489,6 +8774,7 @@
       },
       {
         "Player": "Will Dion",
+        "PlayerID": 702021,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
