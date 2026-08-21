@@ -2234,7 +2234,7 @@ else:
     elif not PITCHER_CONTACT_QUALITY:
         st.caption("Real Statcast contact-quality-allowed isn't loaded yet -- showing the four roster-derived axes only until refresh_pitcher_contact_quality.py has run.")
     else:
-        st.caption("One or both of tonight's starters isn't in the Statcast contact-quality file (usually too few PA to be meaningful) -- showing the four roster-derived axes only.") )
+        st.caption("One or both of tonight's starters isn't in the Statcast contact-quality file (usually too few PA to be meaningful) -- showing the four roster-derived axes only.") 
 
     t_prop_away, t_prop_home, t_pitch_away, t_pitch_home, t_hr_board = st.tabs([
         f"📊 {away_selection} Hitting Props", f"📊 {home_selection} Hitting Props",
