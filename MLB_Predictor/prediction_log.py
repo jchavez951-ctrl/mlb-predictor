@@ -108,6 +108,7 @@ def log_predictions(rows, game_date=None, iterations=None, source="slate"):
             "team": r.get("Team"),
             "market": "HR_over_0.5",
             "pred_prob": round(float(pred), 5),
+            "pred_prob_raw": r.get("HR Raw%"),
             "comb": r.get("COMB"),
             "barrel_pct": r.get("Barrel%"),
             "hardhit_pct": r.get("HardHit%"),
