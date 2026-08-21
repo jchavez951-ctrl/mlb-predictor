@@ -2139,8 +2139,7 @@ else:
 
         st.caption("COMB = an original composite score built from this app's own data: simulated HR probability, adjusted up or down by real Barrel%/HardHit% relative to league average (when loaded). Not a copy of any other tool's formula. BRL=Barrel%, HH%=HardHit%, EV=Exit Velo (mph), HR%=share of 1,000 simulated games with a home run.")
 
-    
-          def build_pitcher_radar_data(pitcher, include_contact_quality=False):
+    def build_pitcher_radar_data(pitcher, include_contact_quality=False):
         # Normalized vs. league average (100 = average), every axis oriented so
         # BIGGER = more hittable. K rate is inverted into "Contact Allowed"
         # since it's the one stat where low is bad for the pitcher.
