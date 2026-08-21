@@ -5,29 +5,23 @@ Pitcher-side companion to refresh_contact_quality.py. Pulls contact quality
 ALLOWED (Barrel%, Hard-Hit%, xwOBA, avg exit velo) for MLB pitchers from
 Baseball Savant's custom leaderboard CSV export.
 
-Same structure, same URL pattern, same BOM/column-shift handling as the
-hitter script -- the only real differences are type=pitcher, two extra
-selections (batted-ball count + batted-ball mix), and the output filename.
+Writes MLB_Predictor/pitcher_contact_quality.json, keyed by MLB PlayerID.
 
-WHAT THIS DOES
----------------
-1. Downloads the Statcast custom PITCHER leaderboard CSV for the current season.
-2. Writes MLB_Predictor/pitcher_contact_quality.json, keyed by MLB PlayerID
-   (same keying as contact_quality.json -- names differ in formatting between
-   the MLB Stats API and Savant, IDs don't).
-3. Also stores a "_league_avg" entry (BBE-weighted). Player IDs are all
-   digits so this reserved key can never collide with one, and any lookup
-   doing data.get(str(pid)) will simply never see it.
+SAMPLE SIZE -- read this before changing the filter
+----------------------------------------------------
+Confirmed from a live run: Savant ACCEPTS `bbe` as a pitcher selection but
+returns an empty column for it. `pa` comes back populated, so PA is used as
+the sample-size measure for both the minimum-workload filter and the
+weighting of league averages. `attempts` is also requested in case that's
+the real column id for batted-ball events on the pitcher leaderboard -- if
+it populates, it's preferred automatically and PA becomes the fallback.
 
-WHY BBE IS PULLED
------------------
-Pitcher contact quality allowed is far noisier than the hitter version --
-hitters largely own their contact, pitchers only partly do. Barrel%-allowed
-doesn't stabilize until well north of 200 batted-ball events, so an August
-starter sitting at 150 BBE is still mostly noise. Storing BBE per pitcher
-plus the league average lets the app regress small samples toward league
-average later, instead of treating a 40-BBE swingman's 12% barrel rate as
-if it meant something.
+This matters because pitcher contact quality allowed is far noisier than
+the hitter version. Hitters largely own their contact; pitchers only partly
+do. Barrel%-allowed doesn't stabilize until well north of 200 batted-ball
+events, so a reliever with 40 PA has numbers that look like signal and
+aren't. Without a working filter every one of those pitchers lands in the
+file at equal weight.
 
 RUN FROM THE REPO ROOT:  python refresh_pitcher_contact_quality.py
 """
@@ -48,18 +42,8 @@ except ImportError:
 CURRENT_SEASON = datetime.now().year
 OUTPUT_PATH = os.path.join("MLB_Predictor", "pitcher_contact_quality.json")
 
-# Core selections -- these four are the exact ones already proven to work on
-# the batter leaderboard, and Savant uses the same column ids on the pitcher
-# side (they describe the batted ball, not who produced it).
 CORE_SELECTIONS = "barrel_batted_rate,hard_hit_percent,xwoba,exit_velocity_avg"
-
-# Extra selections that are NOT proven yet. Batted-ball mix is the single
-# biggest pitcher-specific HR lever -- a 55% groundball starter suppresses
-# home runs through pure batted-ball profile regardless of how hard he's hit
-# -- so it's worth pulling, but the exact column ids are a guess. If they
-# come back missing, the script warns and carries on with the core four
-# rather than dying; nothing downstream depends on them yet.
-EXTRA_SELECTIONS = "bbe,pa,groundballs_percent,flyballs_percent"
+EXTRA_SELECTIONS = "bbe,attempts,pa,groundballs_percent,flyballs_percent"
 
 SAVANT_URL = (
     "https://baseballsavant.mlb.com/leaderboard/custom"
@@ -68,31 +52,26 @@ SAVANT_URL = (
     "&csv=true"
 )
 
-# Same defensive candidate-list pattern as the hitter script: the printed
-# column dump at runtime is the fast way to fix any mismatch in one pass.
 NAME_COLUMN_CANDIDATES = ["player_name", "name"]
 LAST_NAME_COLUMN_CANDIDATES = ["last_name"]
 FIRST_NAME_COLUMN_CANDIDATES = ["first_name"]
 PLAYER_ID_COLUMN_CANDIDATES = ["player_id", "playerid", "mlbid", "mlb_id", "pitcher"]
-BARREL_COLUMN_CANDIDATES = ["barrel_batted_rate", "brl_percent", "barrel_pct",
-                            "barrels_per_bbe_percent"]
+BARREL_COLUMN_CANDIDATES = ["barrel_batted_rate", "brl_percent", "barrel_pct"]
 HARDHIT_COLUMN_CANDIDATES = ["hard_hit_percent", "hardhit_percent"]
 XWOBA_COLUMN_CANDIDATES = ["xwoba", "est_woba"]
 EXIT_VELO_COLUMN_CANDIDATES = ["exit_velocity_avg", "avg_hit_speed"]
-BBE_COLUMN_CANDIDATES = ["bbe", "batted_balls", "attempts"]
+BBE_COLUMN_CANDIDATES = ["attempts", "bbe", "batted_balls"]
 PA_COLUMN_CANDIDATES = ["pa", "plate_appearances"]
-GB_COLUMN_CANDIDATES = ["groundballs_percent", "gb_percent", "ground_balls_percent"]
-FB_COLUMN_CANDIDATES = ["flyballs_percent", "fb_percent", "fly_balls_percent"]
+GB_COLUMN_CANDIDATES = ["groundballs_percent", "gb_percent"]
+FB_COLUMN_CANDIDATES = ["flyballs_percent", "fb_percent"]
 
-# Pitchers below this many batted-ball events are dropped entirely. Long
-# relievers and September call-ups produce numbers that look like signal and
-# aren't. Starters clear this comfortably by midseason.
-MIN_BBE = 50
+# Minimum workload to be included at all, measured in whichever sample
+# column actually populates. Roughly a month of starts, or most of a
+# season for a reliever. Everything below this is noise dressed as data.
+MIN_SAMPLE = 100
 
 
 def clean_column_name(name):
-    """Strips the UTF-8 BOM and stray quote marks Savant sticks onto some
-    header names (e.g. '\\ufeff"last_name"'), same as the hitter script."""
     return name.replace("\ufeff", "").replace('"', "").strip()
 
 
@@ -139,14 +118,12 @@ def main():
 
     rows, fieldnames = fetch_csv_rows(SAVANT_URL)
     print(f"Columns found in the raw CSV: {fieldnames}")
-    print(f"Total rows returned: {len(rows)}  (should be several hundred, one per pitcher)")
+    print(f"Total rows returned: {len(rows)}")
     if rows:
         print(f"First row (for inspection): {rows[0]}\n")
-    print("^ If fields show as 'None' or the row count looks wrong, send this block back.\n")
 
     if not rows:
-        print("[ERROR] No rows returned -- check the URL/params against")
-        print("        https://baseballsavant.mlb.com/leaderboard/custom")
+        print("[ERROR] No rows returned -- check the URL/params.")
         sys.exit(1)
 
     id_col = find_column(fieldnames, PLAYER_ID_COLUMN_CANDIDATES)
@@ -162,32 +139,19 @@ def main():
     gb_col = find_column(fieldnames, GB_COLUMN_CANDIDATES)
     fb_col = find_column(fieldnames, FB_COLUMN_CANDIDATES)
 
-    print(f"Using columns -> id: {id_col}, name: {name_col}, last/first: {last_name_col}/{first_name_col}")
-    print(f"                 barrel: {barrel_col}, hardhit: {hardhit_col}, xwoba: {xwoba_col}, "
-          f"exit velo: {velo_col}")
+    print(f"Using columns -> id: {id_col}, last/first: {last_name_col}/{first_name_col}")
+    print(f"                 barrel: {barrel_col}, hardhit: {hardhit_col}, "
+          f"xwoba: {xwoba_col}, exit velo: {velo_col}")
     print(f"                 bbe: {bbe_col}, pa: {pa_col}, gb: {gb_col}, fb: {fb_col}\n")
 
     if not id_col:
-        print("[ERROR] Could not find a player ID column -- can't key the output reliably.")
+        print("[ERROR] Could not find a player ID column.")
         sys.exit(1)
-
-    for label, col in (("BBE", bbe_col), ("GB%", gb_col), ("FB%", fb_col)):
-        if not col:
-            print(f"[WARN] {label} column not found. Those selection ids were a guess -- "
-                  f"check the column dump above for the real")
-            print(f"       name and update the candidate list + EXTRA_SELECTIONS. "
-                  f"Continuing without it.")
-
-    if not bbe_col:
-        print("[WARN] Without BBE there's no sample size to regress on, so every pitcher's")
-        print("       numbers get treated as equally trustworthy. Worth fixing before this")
-        print("       feeds the simulation.\n")
 
     def get_shifted_value(row, col_name, shift=-1):
         """Savant's data rows merge last_name and first_name into one field
-        (e.g. "Skubal, Tarik") even though the header lists them separately,
-        pushing every later value one position earlier than the header
-        implies. Reads from the adjusted position when that's detected."""
+        even though the header lists them separately, pushing every later
+        value one position earlier than the header implies."""
         if col_name not in fieldnames:
             return None
         idx = fieldnames.index(col_name) + shift
@@ -195,9 +159,10 @@ def main():
             return row.get(fieldnames[idx])
         return None
 
-    pitcher_quality = {}
+    # First pass: parse everything, no filtering yet, so we can see which
+    # sample column actually has data before deciding what to filter on.
+    parsed = []
     shift_detected_count = 0
-    dropped_low_bbe = 0
 
     for row in rows:
         last_name_raw = row.get(last_name_col, "").strip() if last_name_col else ""
@@ -224,12 +189,7 @@ def main():
         if not player_id:
             continue
 
-        bbe_val = to_float(get(bbe_col))
-        if bbe_col and bbe_val is not None and bbe_val < MIN_BBE:
-            dropped_low_bbe += 1
-            continue
-
-        pitcher_quality[player_id] = {
+        parsed.append((player_id, {
             "name": name,
             "barrel_pct_allowed": to_float(get(barrel_col)),
             "hardhit_pct_allowed": to_float(get(hardhit_col)),
@@ -237,43 +197,73 @@ def main():
             "avg_exit_velo_allowed": to_float(get(velo_col)),
             "gb_pct": to_float(get(gb_col)),
             "fb_pct": to_float(get(fb_col)),
-            "bbe": bbe_val,
+            "bbe": to_float(get(bbe_col)),
             "pa": to_float(get(pa_col)),
-        }
+        }))
 
     print(f"Rows where the name/column shift was detected and corrected: "
           f"{shift_detected_count} of {len(rows)}")
-    print(f"Dropped for BBE < {MIN_BBE}: {dropped_low_bbe}")
+
+    # Pick whichever sample column actually populated. Confirmed live:
+    # `bbe` comes back empty on the pitcher leaderboard, `pa` does not.
+    bbe_populated = sum(1 for _, e in parsed if e["bbe"] is not None)
+    pa_populated = sum(1 for _, e in parsed if e["pa"] is not None)
+    print(f"Sample columns populated -> bbe: {bbe_populated}, pa: {pa_populated}")
+
+    if bbe_populated > len(parsed) * 0.5:
+        sample_field = "bbe"
+    elif pa_populated > len(parsed) * 0.5:
+        sample_field = "pa"
+    else:
+        print("\n[ERROR] Neither bbe nor pa populated. Without a sample-size column")
+        print("        there's no way to filter noise or weight the league average,")
+        print("        and every pitcher would be treated as equally trustworthy.")
+        print("        Check the column dump above for the real name and stop here.")
+        sys.exit(1)
+
+    print(f"Using '{sample_field}' as the sample-size measure "
+          f"(minimum {MIN_SAMPLE} to be included).\n")
+
+    pitcher_quality = {}
+    dropped_low_sample = 0
+    for player_id, entry in parsed:
+        sample = entry.get(sample_field)
+        if sample is None or sample < MIN_SAMPLE:
+            dropped_low_sample += 1
+            continue
+        entry["sample_field"] = sample_field
+        pitcher_quality[player_id] = entry
+
+    print(f"Dropped for {sample_field} < {MIN_SAMPLE}: {dropped_low_sample}")
     print(f"Built contact-quality-allowed data for {len(pitcher_quality)} pitchers.")
 
     if len(pitcher_quality) < 100:
-        print("\n[WARN] Fewer than 100 pitchers survived. Expected roughly 300-450 with")
-        print("       any real workload. Don't wire this into the app yet -- a partial")
-        print("       pull means starters silently fall back to placeholder values.")
+        print("\n[WARN] Fewer than 100 pitchers survived -- that may be too aggressive")
+        print("       a threshold to cover every day's probable starters. Check that")
+        print("       your usual starters are present before wiring this in.")
 
-    # BBE-weighted league averages, stored so the app can regress small
-    # samples toward the mean without recomputing on every page load.
     league_avg = {}
     for field in ("barrel_pct_allowed", "hardhit_pct_allowed", "xwoba_allowed",
                   "avg_exit_velo_allowed", "gb_pct", "fb_pct"):
         num = den = 0.0
         for entry in pitcher_quality.values():
-            v, w = entry.get(field), entry.get("bbe")
+            v, w = entry.get(field), entry.get(sample_field)
             if v is not None and w:
                 num += v * w
                 den += w
         league_avg[field] = round(num / den, 4) if den else None
 
-    print(f"\nLeague averages (BBE-weighted): {json.dumps(league_avg, indent=2)}")
+    print(f"\nLeague averages ({sample_field}-weighted): {json.dumps(league_avg, indent=2)}")
 
-    print("\nSample rows -- look these three up on baseballsavant.mlb.com before")
-    print("wiring this in. If they're plausible but wrong, the values shifted a column:")
+    print("\nSample rows -- look these three up on baseballsavant.mlb.com:")
     for pid, e in list(pitcher_quality.items())[:3]:
-        print(f"  {pid} {e['name']}: bbe={e['bbe']} barrel={e['barrel_pct_allowed']} "
-              f"hardhit={e['hardhit_pct_allowed']} xwoba={e['xwoba_allowed']} "
+        print(f"  {pid} {e['name']}: {sample_field}={e[sample_field]} "
+              f"barrel={e['barrel_pct_allowed']} hardhit={e['hardhit_pct_allowed']} "
+              f"xwoba={e['xwoba_allowed']} velo={e['avg_exit_velo_allowed']} "
               f"gb={e['gb_pct']} fb={e['fb_pct']}")
 
     pitcher_quality["_league_avg"] = league_avg
+    pitcher_quality["_sample_field"] = sample_field
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w") as f:
