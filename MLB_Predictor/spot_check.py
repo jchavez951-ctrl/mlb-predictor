@@ -1812,7 +1812,7 @@ else:
                         for name, hr_exp in hr_means.items():
                             values = hr_dist[name]
                             hr_p = (sum(1 for v in values if v > 0.5) / len(values)) if values else 0.0
-                                                        hr_p_raw = hr_p
+                            hr_p_raw = hr_p
                             hr_p = recalibrate.calibrate(hr_p)
                             player_id = name_to_id.get(name)
                             cq = CONTACT_QUALITY.get(player_id, {}) if player_id else {}
