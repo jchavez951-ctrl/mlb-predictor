@@ -2216,7 +2216,7 @@ else:
         )
         return fig, both_have_cq     
 
-       st.markdown("### 🌗 Starter Matchup Profile")
+    st.markdown("### 🌗 Starter Matchup Profile")
     st.caption("Every axis is normalized to 100 = league average, and oriented so a bigger shape means more hittable -- the two pitchers' shapes overlay directly for an at-a-glance read on who's more exposed tonight.")
     _radar_fig, _radar_has_cq = render_pitcher_matchup_radar(
         st.session_state["locked_away_sp"], st.session_state["locked_home_sp"], away_selection, home_selection
