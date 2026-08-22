@@ -1982,7 +1982,7 @@ else:
             r_exp = stats.get("R", 0)
             sb_exp = stats.get("SB", 0)
             tb_exp = stats.get("1B", 0) + (stats.get("2B", 0) * 2) + (stats.get("3B", 0) * 3) + (stats.get("HR", 0) * 4)
-            dk_exp = (hits_exp * 3) + (stats.get("2B", 0) * 2) + (stats.get("HR", 0) * 7) + (stats.get("RBI", 0) * 2) + (stats.get("BB", 0) * 2) + (r_exp * 2) + (sb_exp * 5)
+            dk_exp = (hits_exp * 3) + (stats.get("2B", 0) * 2) + (stats.get("3B", 0) * 5) + (stats.get("HR", 0) * 7) + (stats.get("RBI", 0) * 2) + (stats.get("BB", 0) * 2) + (r_exp * 2) + (sb_exp * 5)
             d = dist_data.get(name, {})
             h_p = prob_over(d.get("H", []), H_LINE)
             hr_p = prob_over(d.get("HR", []), HR_LINE)
