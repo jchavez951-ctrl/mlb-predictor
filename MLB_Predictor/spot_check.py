@@ -2076,7 +2076,7 @@ else:
             rows = []
             for name, stats in means_data.items():
                 hr_exp = stats.get("HR", 0)
-                hr_p = prob_over(dist_data.get(name, {}).get("HR", []), 0.5)
+                hr_p = recalibrate.calibrate(prob_over(dist_data.get(name, {}).get("HR", []), 0.5))
                 player_id = name_to_id.get(name)
                 cq = CONTACT_QUALITY.get(player_id, {}) if player_id else {}
                 rows.append({
