@@ -35,7 +35,7 @@ LOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "predictions
 # prediction_log.py, which may normalize the display names used in the app, so
 # several spellings are tried and the full key list is printed at startup to
 # make any mismatch a one-pass fix.
-CALIBRATED_KEYS = ["hr_prob", "hr_over_05", "hr_over_0.5", "HR Over 0.5%",
+
 CALIBRATED_KEYS = ["hr_prob", "hr_over_05", "hr_over_0.5", "HR Over 0.5%",
                    "hr_p", "calibrated_prob", "prob", "predicted"]
 RAW_KEYS = ["hr_raw", "hr_raw_pct", "HR Raw%", "hr_p_raw", "raw_prob"]
