@@ -1,0 +1,23 @@
+name: Calibration Report
+
+# Manual only -- this is a read-only report you run when you want to look at it,
+# not something that needs to fire nightly. It writes nothing and commits
+# nothing, so there's no commit-and-push step here unlike the refresh jobs.
+on:
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run calibration report
+        run: python MLB_Predictor/calibration_report.py
