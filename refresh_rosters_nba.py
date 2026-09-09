@@ -2,18 +2,28 @@
 """
 refresh_rosters_nba.py
 
-Pulls active NBA rosters from stats.nba.com and writes NBA_Predictor/nba_roster_data.json,
-keyed by team abbreviation, with PERSON_ID attached to every player.
+Pulls active NBA rosters from ESPN's public JSON API and writes
+NBA_Predictor/nba_roster_data.json, keyed by team abbreviation.
 
 Lives at the REPO ROOT. Workflow runs it as: python refresh_rosters_nba.py
 
-Doubles as the datacenter-IP test: stats.nba.com throttles/blocks non-browser and
-datacenter traffic aggressively. This script fails LOUDLY and does NOT overwrite a
-good existing JSON with a partial pull.
+Replaces the stats.nba.com version, which tarpits GitHub Actions runner IPs
+(every request timed out, no response at all). ESPN's site.api endpoints are
+the same ones its own scoreboard pages call and do not appear to discriminate
+by IP.
+
+FAILS FAST by design: short timeouts, two attempts, and an early abort if the
+first few teams all fail. The previous version would have ground for 45 minutes
+before giving up. This one quits in about one.
+
+IMPORTANT: the IDs here are ESPN athlete IDs, NOT NBA PERSON_IDs. If a later
+data source keys on NBA IDs you will need a name-based crosswalk built once and
+cached - the same matching problem you solved on the Savant side by keying on
+PlayerID.
 
 Exit codes:
   0  success, JSON written
-  1  hard failure (blocked, timed out, or too few teams returned) - nothing written
+  1  hard failure - nothing written, existing JSON untouched
 """
 
 import json
@@ -31,50 +41,32 @@ import requests
 
 OUT_PATH = os.path.join("NBA_Predictor", "nba_roster_data.json")
 
-# Minimum bars for a pull to be considered trustworthy.
+BASE = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
+
 MIN_TEAMS = 28          # of 30
 MIN_PLAYERS = 400       # 30 teams x ~15
 
-REQUEST_TIMEOUT = 30
-MAX_RETRIES = 3
-BASE_SLEEP = 1.2        # polite pause between team calls
-BACKOFF = 4.0           # extra seconds added per retry
+REQUEST_TIMEOUT = 15    # short on purpose - a hang is a failure, not a wait
+MAX_RETRIES = 2
+BASE_SLEEP = 0.6
+BACKOFF = 3.0
 
-# stats.nba.com rejects anything that does not look like a browser XHR.
-# These headers are the whole ballgame - do not trim them.
+# Abort the whole run if the first N teams all fail. No point burning 30
+# timeouts to learn what the first three already told us.
+EARLY_ABORT_AFTER = 3
+
 HEADERS = {
-    "Host": "stats.nba.com",
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
         "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     ),
     "Accept": "application/json, text/plain, */*",
     "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Connection": "keep-alive",
-    "Referer": "https://www.nba.com/",
-    "Origin": "https://www.nba.com",
-    "x-nba-stats-origin": "stats",
-    "x-nba-stats-token": "true",
-    "Sec-Fetch-Dest": "empty",
-    "Sec-Fetch-Mode": "cors",
-    "Sec-Fetch-Site": "same-site",
-}
-
-TEAMS = {
-    1610612737: "ATL", 1610612738: "BOS", 1610612739: "CLE", 1610612740: "NOP",
-    1610612741: "CHI", 1610612742: "DAL", 1610612743: "DEN", 1610612744: "GSW",
-    1610612745: "HOU", 1610612746: "LAC", 1610612747: "LAL", 1610612748: "MIA",
-    1610612749: "MIL", 1610612750: "MIN", 1610612751: "BKN", 1610612752: "NYK",
-    1610612753: "ORL", 1610612754: "IND", 1610612755: "PHI", 1610612756: "PHX",
-    1610612757: "POR", 1610612758: "SAC", 1610612759: "SAS", 1610612760: "OKC",
-    1610612761: "TOR", 1610612762: "UTA", 1610612763: "MEM", 1610612764: "WAS",
-    1610612765: "DET", 1610612766: "CHA",
 }
 
 
 def current_season() -> str:
-    """NBA season string, e.g. '2026-27'. Season flips over in October."""
+    """NBA season label, e.g. '2026-27'. Flips over in October."""
     override = os.environ.get("NBA_SEASON")
     if override:
         return override
@@ -90,120 +82,158 @@ SEASON = current_season()
 # HTTP
 # --------------------------------------------------------------------------
 
-def fetch(endpoint: str, params: dict) -> dict:
-    """GET a stats.nba.com endpoint with retries. Raises on total failure."""
-    url = f"https://stats.nba.com/stats/{endpoint}"
+def fetch(url: str, label: str) -> dict:
+    """GET JSON with retries. Raises RuntimeError on total failure."""
     last_err = None
 
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            resp = requests.get(
-                url, headers=HEADERS, params=params, timeout=REQUEST_TIMEOUT
-            )
+            resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
             if resp.status_code == 200:
                 return resp.json()
 
             last_err = f"HTTP {resp.status_code}"
-            # 403 = blocked outright. 429 = throttled. Both worth naming.
-            if resp.status_code in (403, 429):
-                print(
-                    f"    [{endpoint}] {resp.status_code} on attempt {attempt} "
-                    f"- this is the datacenter-IP signature",
-                    flush=True,
-                )
+            print(f"    [{label}] {resp.status_code} on attempt {attempt}", flush=True)
+
         except requests.exceptions.Timeout:
             last_err = "timeout"
-            print(f"    [{endpoint}] timeout on attempt {attempt}", flush=True)
+            print(f"    [{label}] timeout on attempt {attempt}", flush=True)
         except requests.exceptions.RequestException as exc:
             last_err = str(exc)
-            print(f"    [{endpoint}] error on attempt {attempt}: {exc}", flush=True)
+            print(f"    [{label}] error on attempt {attempt}: {exc}", flush=True)
+        except ValueError as exc:
+            last_err = f"bad JSON: {exc}"
+            print(f"    [{label}] response was not JSON on attempt {attempt}", flush=True)
 
         if attempt < MAX_RETRIES:
-            wait = BACKOFF * attempt + random.uniform(0, 1.5)
-            time.sleep(wait)
+            time.sleep(BACKOFF + random.uniform(0, 1.0))
 
-    raise RuntimeError(f"{endpoint} failed after {MAX_RETRIES} attempts: {last_err}")
-
-
-def result_set_to_dicts(payload: dict, index: int = 0) -> list:
-    """stats.nba.com returns parallel headers/rowSet arrays. Zip them up."""
-    rs = payload["resultSets"][index]
-    cols = rs["headers"]
-    return [dict(zip(cols, row)) for row in rs["rowSet"]]
+    raise RuntimeError(f"{label} failed after {MAX_RETRIES} attempts: {last_err}")
 
 
 # --------------------------------------------------------------------------
-# Build
+# Parsing
 # --------------------------------------------------------------------------
 
-def build_player_entry(row: dict) -> dict:
-    """One roster row -> the shape the simulator consumes."""
-    person_id = row.get("PLAYER_ID")
-    if person_id is None:
+def get_team_list() -> list:
+    """[(espn_team_id, abbrev, display_name)] for all 30 teams."""
+    payload = fetch(f"{BASE}/teams", "teams")
+
+    teams = []
+    groups = payload.get("sports", [])[0].get("leagues", [])[0].get("teams", [])
+    for wrapper in groups:
+        team = wrapper.get("team", {})
+        team_id = team.get("id")
+        abbrev = team.get("abbreviation")
+        if team_id and abbrev:
+            teams.append((str(team_id), abbrev, team.get("displayName", abbrev)))
+    return teams
+
+
+def iter_athletes(payload: dict):
+    """
+    ESPN returns 'athletes' either as a flat list (NBA) or grouped by position
+    with an 'items' key (NFL-style). Handle both so this does not silently
+    return zero players if the shape changes.
+    """
+    athletes = payload.get("athletes", [])
+    for entry in athletes:
+        if isinstance(entry, dict) and "items" in entry:
+            for item in entry.get("items", []):
+                yield item
+        else:
+            yield entry
+
+
+def build_player_entry(athlete: dict) -> dict:
+    espn_id = athlete.get("id")
+    if not espn_id:
         return None
 
-    exp_raw = row.get("EXP")
-    if exp_raw in ("R", None, ""):
-        exp = 0
-    else:
-        try:
-            exp = int(exp_raw)
-        except (TypeError, ValueError):
-            exp = 0
+    position = athlete.get("position") or {}
+    experience = athlete.get("experience") or {}
+    injuries = athlete.get("injuries") or []
+
+    status = "active"
+    if injuries:
+        first = injuries[0] or {}
+        status = (first.get("status") or "injured").lower()
 
     return {
-        "person_id": int(person_id),
-        "name": row.get("PLAYER"),
-        "position": row.get("POSITION") or "",
-        "jersey": str(row.get("NUM") or ""),
-        "height": row.get("HEIGHT") or "",
-        "weight": row.get("WEIGHT") or "",
-        "experience": exp,
-        "age": row.get("AGE"),
+        "espn_id": str(espn_id),
+        "name": athlete.get("fullName") or athlete.get("displayName"),
+        "short_name": athlete.get("shortName"),
+        "position": position.get("abbreviation") or "",
+        "jersey": str(athlete.get("jersey") or ""),
+        "height_in": athlete.get("height"),
+        "weight_lb": athlete.get("weight"),
+        "age": athlete.get("age"),
+        "experience": experience.get("years", 0),
+        "status": status,
     }
 
 
-def pull_team(team_id: int, abbrev: str) -> list:
-    payload = fetch(
-        "commonteamroster",
-        {"TeamID": team_id, "Season": SEASON, "LeagueID": "00"},
-    )
-    rows = result_set_to_dicts(payload, index=0)
+def pull_team(team_id: str, abbrev: str) -> list:
+    payload = fetch(f"{BASE}/teams/{team_id}/roster", f"roster {abbrev}")
 
     players = []
-    for row in rows:
-        entry = build_player_entry(row)
+    for athlete in iter_athletes(payload):
+        entry = build_player_entry(athlete)
         if entry is not None:
             players.append(entry)
     return players
 
 
+# --------------------------------------------------------------------------
+# Main
+# --------------------------------------------------------------------------
+
 def main() -> int:
-    print(f"refresh_rosters_nba.py | season {SEASON}", flush=True)
+    print(f"refresh_rosters_nba.py | ESPN | season label {SEASON}", flush=True)
     print(f"output -> {OUT_PATH}\n", flush=True)
+
+    # First call doubles as the reachability test. If this fails, nothing else
+    # is worth attempting.
+    try:
+        teams = get_team_list()
+    except RuntimeError as exc:
+        print(f"\nFAILED on the team list: {exc}", flush=True)
+        print("ESPN is unreachable from this runner. Nothing written.", flush=True)
+        return 1
+
+    print(f"team list OK: {len(teams)} teams\n", flush=True)
 
     rosters = {}
     failed = []
 
-    for team_id, abbrev in TEAMS.items():
+    for index, (team_id, abbrev, _name) in enumerate(teams):
         try:
             players = pull_team(team_id, abbrev)
         except RuntimeError as exc:
             print(f"  {abbrev}: FAILED - {exc}", flush=True)
             failed.append(abbrev)
+
+            if index + 1 >= EARLY_ABORT_AFTER and len(rosters) == 0:
+                print(
+                    f"\nABORTING: first {index + 1} teams all failed. "
+                    "Roster endpoint is not reachable from here.",
+                    flush=True,
+                )
+                return 1
+
             time.sleep(BASE_SLEEP)
             continue
 
-        with_id = sum(1 for p in players if p["person_id"])
-        print(f"  {abbrev}: {len(players)} players ({with_id} with PERSON_ID)", flush=True)
+        active = sum(1 for p in players if p["status"] == "active")
+        print(f"  {abbrev}: {len(players)} players ({active} active)", flush=True)
         rosters[abbrev] = players
 
-        time.sleep(BASE_SLEEP + random.uniform(0, 0.6))
+        time.sleep(BASE_SLEEP + random.uniform(0, 0.4))
 
     total_players = sum(len(v) for v in rosters.values())
 
     print("\n" + "=" * 52, flush=True)
-    print(f"teams pulled : {len(rosters)} / 30", flush=True)
+    print(f"teams pulled : {len(rosters)} / {len(teams)}", flush=True)
     print(f"players      : {total_players}", flush=True)
     if failed:
         print(f"failed teams : {', '.join(failed)}", flush=True)
@@ -212,19 +242,20 @@ def main() -> int:
     if len(rosters) < MIN_TEAMS or total_players < MIN_PLAYERS:
         print(
             "REFUSING TO WRITE: pull is incomplete.\n"
-            "If the failures are 403/429, this IP is blocked or throttled and the\n"
-            "refresh needs to run somewhere else. Existing JSON left untouched.",
+            "Existing JSON left untouched.",
             flush=True,
         )
         return 1
 
     out = {
         "meta": {
+            "source": "espn",
             "season": SEASON,
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "team_count": len(rosters),
             "player_count": total_players,
             "failed_teams": failed,
+            "id_namespace": "espn_athlete_id",
         },
         "teams": rosters,
     }
