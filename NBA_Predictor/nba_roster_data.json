@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-01T17:00:45.897050+00:00",
+    "generated_at": "2026-10-02T16:15:24.091740+00:00",
     "team_count": 30,
-    "player_count": 605,
+    "player_count": 603,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -1171,30 +1171,6 @@
         "status": "active"
       },
       {
-        "espn_id": "5106674",
-        "name": "Peter Suder",
-        "short_name": "P. Suder",
-        "position": "G",
-        "jersey": "15",
-        "height_in": 76.0,
-        "weight_lb": 213.0,
-        "age": 23,
-        "experience": 2,
-        "status": "active"
-      },
-      {
-        "espn_id": "5107264",
-        "name": "Marquel Sutton",
-        "short_name": "M. Sutton",
-        "position": "F",
-        "jersey": "0",
-        "height_in": 80.0,
-        "weight_lb": 225.0,
-        "age": 23,
-        "experience": 0,
-        "status": "active"
-      },
-      {
         "espn_id": "4848625",
         "name": "Dailyn Swain",
         "short_name": "D. Swain",
@@ -1921,6 +1897,18 @@
         "status": "active"
       },
       {
+        "espn_id": "4433629",
+        "name": "Ryan Nembhard",
+        "short_name": "R. Nembhard",
+        "position": "G",
+        "jersey": "",
+        "height_in": 71.0,
+        "weight_lb": 180.0,
+        "age": 23,
+        "experience": 2,
+        "status": "active"
+      },
+      {
         "espn_id": "4431690",
         "name": "Zeke Nnaji",
         "short_name": "Z. Nnaji",
@@ -2004,7 +1992,7 @@
         "weight_lb": 250.0,
         "age": 22,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "2596112",
@@ -2488,18 +2476,6 @@
         "weight_lb": 256.0,
         "age": 32,
         "experience": 13,
-        "status": "active"
-      },
-      {
-        "espn_id": "4684443",
-        "name": "Rafael Castro",
-        "short_name": "R. Castro",
-        "position": "C",
-        "jersey": "00",
-        "height_in": 81.0,
-        "weight_lb": 224.0,
-        "age": 23,
-        "experience": 0,
         "status": "active"
       },
       {
@@ -5028,7 +5004,7 @@
         "weight_lb": 190.0,
         "age": 24,
         "experience": 3,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5106270",
@@ -5488,7 +5464,7 @@
         "weight_lb": 299.0,
         "age": 30,
         "experience": 4,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4871141",
@@ -6614,7 +6590,7 @@
         "weight_lb": 230.0,
         "age": 33,
         "experience": 12,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4433134",
@@ -6650,7 +6626,7 @@
         "weight_lb": 220.0,
         "age": 25,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4432586",
@@ -6686,7 +6662,7 @@
         "weight_lb": 225.0,
         "age": 20,
         "experience": 0,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4590360",
@@ -7302,7 +7278,7 @@
         "weight_lb": 220.0,
         "age": 23,
         "experience": 4,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "4606840",
