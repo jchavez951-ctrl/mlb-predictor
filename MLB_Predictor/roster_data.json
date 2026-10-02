@@ -8473,6 +8473,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Spencer Arrighetti",
+        "PlayerID": 681293,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.13,
+        "K_ALLOWED_RATE": 0.215,
+        "HR_PA_ALLOWED_RATE": 0.037,
+        "BABIP_ALLOWED": 0.234,
+        "OAVG": 0.208,
+        "IP": "110.7",
+        "ERA": 4.96,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Trey Yesavage",
         "PlayerID": 702056,
         "Pos": "P",
@@ -8500,21 +8515,6 @@
         "OAVG": 0.251,
         "IP": "86.0",
         "ERA": 5.65,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Max Scherzer",
-        "PlayerID": 453286,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.096,
-        "K_ALLOWED_RATE": 0.187,
-        "HR_PA_ALLOWED_RATE": 0.041,
-        "BABIP_ALLOWED": 0.256,
-        "OAVG": 0.237,
-        "IP": "84.7",
-        "ERA": 5.74,
         "Fatigue": 0.0
       },
       {
