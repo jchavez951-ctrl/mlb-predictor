@@ -1738,21 +1738,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Huascar Brazob\u00e1n",
-        "PlayerID": 623211,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.109,
-        "K_ALLOWED_RATE": 0.21,
-        "HR_PA_ALLOWED_RATE": 0.019,
-        "BABIP_ALLOWED": 0.22,
-        "OAVG": 0.185,
-        "IP": "67.0",
-        "ERA": 2.96,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Jordan Hicks",
         "PlayerID": 663855,
         "Pos": "P",
@@ -1765,6 +1750,21 @@
         "OAVG": 0.224,
         "IP": "48.0",
         "ERA": 3.94,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Tyler Davis",
+        "PlayerID": 699823,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.125,
+        "K_ALLOWED_RATE": 0.211,
+        "HR_PA_ALLOWED_RATE": 0.023,
+        "BABIP_ALLOWED": 0.22,
+        "OAVG": 0.188,
+        "IP": "32.0",
+        "ERA": 3.66,
         "Fatigue": 0.0
       }
     ]
@@ -2200,20 +2200,20 @@
         "PA": 416
       },
       {
-        "Player": "Kyle Manzardo",
-        "PlayerID": 700932,
-        "Pos": "1B",
-        "Bats": "L",
-        "BB_RATE": 0.101,
-        "K_RATE": 0.32,
-        "HR_PA_RATE": 0.037,
-        "BABIP": 0.292,
-        "1B_H_RATE": 0.64,
-        "2B_H_RATE": 0.15,
-        "3B_H_RATE": 0.01,
-        "HR_H_RATE": 0.19,
+        "Player": "Patrick Bailey",
+        "PlayerID": 672275,
+        "Pos": "C",
+        "Bats": "S",
+        "BB_RATE": 0.081,
+        "K_RATE": 0.267,
+        "HR_PA_RATE": 0.029,
+        "BABIP": 0.26,
+        "1B_H_RATE": 0.7,
+        "2B_H_RATE": 0.12,
+        "3B_H_RATE": 0.02,
+        "HR_H_RATE": 0.16,
         "SPD": 55,
-        "PA": 356
+        "PA": 345
       }
     ],
     "pitching": [
@@ -2353,18 +2353,18 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Colin Holderman",
-        "PlayerID": 670059,
+        "Player": "Erik Sabrowski",
+        "PlayerID": 681870,
         "Pos": "P",
         "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.09,
-        "K_ALLOWED_RATE": 0.225,
-        "HR_PA_ALLOWED_RATE": 0.005,
-        "BABIP_ALLOWED": 0.225,
-        "OAVG": 0.173,
-        "IP": "52.7",
-        "ERA": 2.73,
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.153,
+        "K_ALLOWED_RATE": 0.374,
+        "HR_PA_ALLOWED_RATE": 0.015,
+        "BABIP_ALLOWED": 0.247,
+        "OAVG": 0.151,
+        "IP": "48.3",
+        "ERA": 2.61,
         "Fatigue": 0.0
       }
     ]
