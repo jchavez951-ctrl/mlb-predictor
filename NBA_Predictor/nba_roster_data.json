@@ -2,7 +2,7 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-02T16:15:24.091740+00:00",
+    "generated_at": "2026-10-03T14:42:52.483666+00:00",
     "team_count": 30,
     "player_count": 603,
     "failed_teams": [],
@@ -392,7 +392,7 @@
         "jersey": "20",
         "height_in": 80.0,
         "weight_lb": 210.0,
-        "age": 22,
+        "age": 23,
         "experience": 0,
         "status": "active"
       },
@@ -1858,7 +1858,7 @@
         "weight_lb": 225.0,
         "age": 25,
         "experience": 3,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3135046",
@@ -3758,7 +3758,7 @@
         "weight_lb": 230.0,
         "age": 25,
         "experience": 2,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "4997528",
@@ -5050,7 +5050,7 @@
         "jersey": "14",
         "height_in": 76.0,
         "weight_lb": 190.0,
-        "age": 22,
+        "age": 23,
         "experience": 0,
         "status": "active"
       },
@@ -5256,7 +5256,7 @@
         "jersey": "20",
         "height_in": 73.0,
         "weight_lb": 195.0,
-        "age": 23,
+        "age": 24,
         "experience": 5,
         "status": "active"
       },
