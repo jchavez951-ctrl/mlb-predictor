@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-03T14:42:52.483666+00:00",
+    "generated_at": "2026-10-04T15:20:06.328028+00:00",
     "team_count": 30,
-    "player_count": 603,
+    "player_count": 605,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -1992,7 +1992,7 @@
         "weight_lb": 250.0,
         "age": 22,
         "experience": 5,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "2596112",
@@ -3092,7 +3092,7 @@
         "weight_lb": 207.0,
         "age": 24,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4065778",
@@ -3669,7 +3669,7 @@
         "name": "Ryan Conwell",
         "short_name": "R. Conwell",
         "position": "G",
-        "jersey": "",
+        "jersey": "4",
         "height_in": 75.0,
         "weight_lb": 220.0,
         "age": 22,
@@ -3681,7 +3681,7 @@
         "name": "Tre Donaldson",
         "short_name": "T. Donaldson",
         "position": "G",
-        "jersey": "",
+        "jersey": "24",
         "height_in": 74.0,
         "weight_lb": 210.0,
         "age": 22,
@@ -3710,7 +3710,7 @@
         "weight_lb": 225.0,
         "age": 25,
         "experience": 1,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4700818",
@@ -3729,7 +3729,7 @@
         "name": "J'Vonne Hadley",
         "short_name": "J. Hadley",
         "position": "F",
-        "jersey": "",
+        "jersey": "14",
         "height_in": 77.0,
         "weight_lb": 210.0,
         "age": 24,
@@ -3789,7 +3789,7 @@
         "name": "Bez Mbeng",
         "short_name": "B. Mbeng",
         "position": "G",
-        "jersey": "",
+        "jersey": "19",
         "height_in": 76.0,
         "weight_lb": 185.0,
         "age": 23,
@@ -3825,7 +3825,7 @@
         "name": "Lester Quinones",
         "short_name": "L. Quinones",
         "position": "G",
-        "jersey": "",
+        "jersey": "25",
         "height_in": 76.0,
         "weight_lb": 208.0,
         "age": 25,
@@ -3845,6 +3845,18 @@
         "status": "active"
       },
       {
+        "espn_id": "4693954",
+        "name": "Ian Schieffelin",
+        "short_name": "I. Schieffelin",
+        "position": "F",
+        "jersey": "20",
+        "height_in": 80.0,
+        "weight_lb": 240.0,
+        "age": 23,
+        "experience": 0,
+        "status": "active"
+      },
+      {
         "espn_id": "4066993",
         "name": "Dru Smith",
         "short_name": "D. Smith",
@@ -3861,7 +3873,7 @@
         "name": "Klay Thompson",
         "short_name": "K. Thompson",
         "position": "G",
-        "jersey": "",
+        "jersey": "11",
         "height_in": 77.0,
         "weight_lb": 220.0,
         "age": 36,
@@ -4750,7 +4762,7 @@
         "weight_lb": 225.0,
         "age": 21,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "6585",
@@ -5268,7 +5280,7 @@
         "jersey": "1",
         "height_in": 82.0,
         "weight_lb": 230.0,
-        "age": 28,
+        "age": 29,
         "experience": 10,
         "status": "day-to-day"
       },
@@ -5778,7 +5790,7 @@
         "weight_lb": 230.0,
         "age": 24,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4601023",
@@ -5838,7 +5850,7 @@
         "weight_lb": 245.0,
         "age": 30,
         "experience": 4,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4592714",
@@ -6645,10 +6657,22 @@
         "name": "Jaden Bradley",
         "short_name": "J. Bradley",
         "position": "G",
-        "jersey": "",
+        "jersey": "8",
         "height_in": 75.0,
         "weight_lb": 205.0,
         "age": 23,
+        "experience": 0,
+        "status": "active"
+      },
+      {
+        "espn_id": "4433138",
+        "name": "Nimari Burnett",
+        "short_name": "N. Burnett",
+        "position": "G",
+        "jersey": "25",
+        "height_in": 77.0,
+        "weight_lb": 195.0,
+        "age": 24,
         "experience": 0,
         "status": "active"
       },
@@ -6674,7 +6698,7 @@
         "weight_lb": 193.0,
         "age": 23,
         "experience": 1,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4432190",
@@ -6698,7 +6722,7 @@
         "weight_lb": 245.0,
         "age": 26,
         "experience": 3,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4395623",
@@ -6717,7 +6741,7 @@
         "name": "Tyreke Key",
         "short_name": "T. Key",
         "position": "G",
-        "jersey": "",
+        "jersey": "11",
         "height_in": 74.0,
         "weight_lb": 207.0,
         "age": 27,
@@ -6734,7 +6758,7 @@
         "weight_lb": 225.0,
         "age": 35,
         "experience": 15,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4702656",
