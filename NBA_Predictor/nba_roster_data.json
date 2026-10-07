@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-06T16:45:46.621664+00:00",
+    "generated_at": "2026-10-07T17:24:56.372411+00:00",
     "team_count": 30,
-    "player_count": 607,
+    "player_count": 606,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -758,7 +758,7 @@
         "weight_lb": 180.0,
         "age": 20,
         "experience": 0,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4684269",
@@ -890,7 +890,7 @@
         "weight_lb": 200.0,
         "age": 23,
         "experience": 4,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "2583632",
@@ -1894,7 +1894,7 @@
         "weight_lb": 215.0,
         "age": 29,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4433629",
@@ -2234,7 +2234,7 @@
         "weight_lb": 185.0,
         "age": 38,
         "experience": 18,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "6589",
@@ -2246,7 +2246,7 @@
         "weight_lb": 230.0,
         "age": 36,
         "experience": 15,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3213",
@@ -2258,7 +2258,7 @@
         "weight_lb": 240.0,
         "age": 40,
         "experience": 20,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4703396",
@@ -2294,7 +2294,7 @@
         "weight_lb": 241.0,
         "age": 24,
         "experience": 0,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4897449",
@@ -2318,7 +2318,7 @@
         "weight_lb": 200.0,
         "age": 28,
         "experience": 9,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4432171",
@@ -2342,7 +2342,7 @@
         "weight_lb": 230.0,
         "age": 33,
         "experience": 11,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3134903",
@@ -2354,7 +2354,7 @@
         "weight_lb": 195.0,
         "age": 33,
         "experience": 11,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4709138",
@@ -2366,7 +2366,7 @@
         "weight_lb": 205.0,
         "age": 23,
         "experience": 4,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3102531",
@@ -2402,7 +2402,7 @@
         "weight_lb": 185.0,
         "age": 24,
         "experience": 4,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4433159",
@@ -3011,18 +3011,6 @@
         "status": "active"
       },
       {
-        "espn_id": "5105853",
-        "name": "Fletcher Loyer",
-        "short_name": "F. Loyer",
-        "position": "G",
-        "jersey": "26",
-        "height_in": 75.0,
-        "weight_lb": 180.0,
-        "age": 23,
-        "experience": 0,
-        "status": "active"
-      },
-      {
         "espn_id": "5105832",
         "name": "Nick Martinelli",
         "short_name": "N. Martinelli",
@@ -3154,7 +3142,7 @@
         "weight_lb": 230.0,
         "age": 27,
         "experience": 9,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4397014",
@@ -3188,7 +3176,7 @@
         "jersey": "9",
         "height_in": 74.0,
         "weight_lb": 210.0,
-        "age": 21,
+        "age": 22,
         "experience": 3,
         "status": "active"
       },
@@ -3358,7 +3346,7 @@
         "weight_lb": 202.0,
         "age": 29,
         "experience": 8,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4278077",
@@ -3382,7 +3370,7 @@
         "weight_lb": 185.0,
         "age": 25,
         "experience": 6,
-        "status": "active"
+        "status": "day-to-day"
       }
     ],
     "MEM": [
@@ -5019,18 +5007,6 @@
         "status": "active"
       },
       {
-        "espn_id": "4685802",
-        "name": "Robert McCray V",
-        "short_name": "R. McCray V",
-        "position": "G",
-        "jersey": "16",
-        "height_in": 76.0,
-        "weight_lb": 188.0,
-        "age": 24,
-        "experience": 0,
-        "status": "active"
-      },
-      {
         "espn_id": "4900671",
         "name": "Ajay Mitchell",
         "short_name": "A. Mitchell",
@@ -5050,6 +5026,18 @@
         "jersey": "13",
         "height_in": 76.0,
         "weight_lb": 217.0,
+        "age": 23,
+        "experience": 0,
+        "status": "active"
+      },
+      {
+        "espn_id": "4897155",
+        "name": "Anthony Pritchard",
+        "short_name": "A. Pritchard",
+        "position": "G",
+        "jersey": "5",
+        "height_in": 73.0,
+        "weight_lb": 186.0,
         "age": 23,
         "experience": 0,
         "status": "active"
@@ -5148,7 +5136,7 @@
         "weight_lb": 240.0,
         "age": 24,
         "experience": 5,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3133626",
@@ -5512,7 +5500,7 @@
         "weight_lb": 258.0,
         "age": 24,
         "experience": 3,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "1966",
@@ -6919,18 +6907,6 @@
         "status": "active"
       },
       {
-        "espn_id": "4395997",
-        "name": "Terrell Brown Jr.",
-        "short_name": "T. Brown Jr.",
-        "position": "G",
-        "jersey": "16",
-        "height_in": 75.0,
-        "weight_lb": 180.0,
-        "age": 28,
-        "experience": 0,
-        "status": "active"
-      },
-      {
         "espn_id": "4683766",
         "name": "Isaiah Collier",
         "short_name": "I. Collier",
@@ -6955,6 +6931,18 @@
         "status": "day-to-day"
       },
       {
+        "espn_id": "4278395",
+        "name": "Taylor Funk",
+        "short_name": "T. Funk",
+        "position": "F",
+        "jersey": "",
+        "height_in": 80.0,
+        "weight_lb": 230.0,
+        "age": 28,
+        "experience": 0,
+        "status": "active"
+      },
+      {
         "espn_id": "4433627",
         "name": "Keyonte George",
         "short_name": "K. George",
@@ -6976,7 +6964,7 @@
         "weight_lb": 200.0,
         "age": 25,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4397077",
@@ -7036,7 +7024,7 @@
         "weight_lb": 240.0,
         "age": 29,
         "experience": 10,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3133602",
