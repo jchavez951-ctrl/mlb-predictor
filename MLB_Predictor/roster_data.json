@@ -6718,18 +6718,18 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Randy V\u00e1squez",
-        "PlayerID": 681190,
+        "Player": "Walker Buehler",
+        "PlayerID": 621111,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.063,
-        "K_ALLOWED_RATE": 0.148,
-        "HR_PA_ALLOWED_RATE": 0.027,
-        "BABIP_ALLOWED": 0.28,
-        "OAVG": 0.256,
-        "IP": "140.7",
-        "ERA": 3.9,
+        "BB_ALLOWED_RATE": 0.088,
+        "K_ALLOWED_RATE": 0.201,
+        "HR_PA_ALLOWED_RATE": 0.034,
+        "BABIP_ALLOWED": 0.29,
+        "OAVG": 0.253,
+        "IP": "153.7",
+        "ERA": 4.63,
         "Fatigue": 0.0
       },
       {
@@ -6748,21 +6748,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Mason Miller",
-        "PlayerID": 695243,
-        "Pos": "P",
-        "Role": "Closer",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.096,
-        "K_ALLOWED_RATE": 0.474,
-        "HR_PA_ALLOWED_RATE": 0.011,
-        "BABIP_ALLOWED": 0.298,
-        "OAVG": 0.15,
-        "IP": "70.0",
-        "ERA": 1.67,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Adrian Morejon",
         "PlayerID": 670970,
         "Pos": "P",
@@ -6775,6 +6760,21 @@
         "OAVG": 0.201,
         "IP": "86.0",
         "ERA": 2.83,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Wandy Peralta",
+        "PlayerID": 593974,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.072,
+        "K_ALLOWED_RATE": 0.156,
+        "HR_PA_ALLOWED_RATE": 0.022,
+        "BABIP_ALLOWED": 0.299,
+        "OAVG": 0.265,
+        "IP": "77.3",
+        "ERA": 3.61,
         "Fatigue": 0.0
       },
       {
