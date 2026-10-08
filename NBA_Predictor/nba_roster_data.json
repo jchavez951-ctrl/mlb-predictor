@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-07T17:24:56.372411+00:00",
+    "generated_at": "2026-10-08T17:23:25.590550+00:00",
     "team_count": 30,
-    "player_count": 606,
+    "player_count": 609,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -648,7 +648,7 @@
         "weight_lb": 218.0,
         "age": 28,
         "experience": 8,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5037873",
@@ -696,7 +696,7 @@
         "weight_lb": 265.0,
         "age": 24,
         "experience": 6,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5279130",
@@ -744,7 +744,7 @@
         "jersey": "8",
         "height_in": 75.0,
         "weight_lb": 198.0,
-        "age": 30,
+        "age": 31,
         "experience": 9,
         "status": "active"
       },
@@ -1003,6 +1003,18 @@
         "status": "active"
       },
       {
+        "espn_id": "4432946",
+        "name": "Jalen Bridges",
+        "short_name": "J. Bridges",
+        "position": "F",
+        "jersey": "",
+        "height_in": 79.0,
+        "weight_lb": 225.0,
+        "age": 25,
+        "experience": 2,
+        "status": "active"
+      },
+      {
         "espn_id": "4711294",
         "name": "Matas Buzelis",
         "short_name": "M. Buzelis",
@@ -1063,6 +1075,18 @@
         "status": "active"
       },
       {
+        "espn_id": "4683750",
+        "name": "Jordan Hawkins",
+        "short_name": "J. Hawkins",
+        "position": "G",
+        "jersey": "",
+        "height_in": 77.0,
+        "weight_lb": 190.0,
+        "age": 24,
+        "experience": 4,
+        "status": "active"
+      },
+      {
         "espn_id": "2990984",
         "name": "Buddy Hield",
         "short_name": "B. Hield",
@@ -1084,7 +1108,7 @@
         "weight_lb": 185.0,
         "age": 26,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5044385",
@@ -1156,7 +1180,7 @@
         "weight_lb": 205.0,
         "age": 23,
         "experience": 0,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4397189",
@@ -1168,6 +1192,18 @@
         "weight_lb": 215.0,
         "age": 26,
         "experience": 7,
+        "status": "active"
+      },
+      {
+        "espn_id": "4432117",
+        "name": "Isaiah Stevens",
+        "short_name": "I. Stevens",
+        "position": "G",
+        "jersey": "",
+        "height_in": 71.0,
+        "weight_lb": 185.0,
+        "age": 25,
+        "experience": 3,
         "status": "active"
       },
       {
@@ -2718,7 +2754,7 @@
         "weight_lb": 173.0,
         "age": 28,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "3999",
@@ -3432,7 +3468,7 @@
         "weight_lb": 305.0,
         "age": 24,
         "experience": 3,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "2991070",
@@ -3444,18 +3480,6 @@
         "weight_lb": 213.0,
         "age": 32,
         "experience": 13,
-        "status": "active"
-      },
-      {
-        "espn_id": "4683750",
-        "name": "Jordan Hawkins",
-        "short_name": "J. Hawkins",
-        "position": "G",
-        "jersey": "19",
-        "height_in": 77.0,
-        "weight_lb": 190.0,
-        "age": 24,
-        "experience": 4,
         "status": "active"
       },
       {
@@ -3770,7 +3794,7 @@
         "weight_lb": 215.0,
         "age": 25,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4898237",
@@ -3878,7 +3902,7 @@
         "weight_lb": 210.0,
         "age": 31,
         "experience": 12,
-        "status": "active"
+        "status": "day-to-day"
       }
     ],
     "MIL": [
@@ -3892,6 +3916,18 @@
         "weight_lb": 211.0,
         "age": 19,
         "experience": 0,
+        "status": "day-to-day"
+      },
+      {
+        "espn_id": "4433569",
+        "name": "Johni Broome",
+        "short_name": "J. Broome",
+        "position": "F",
+        "jersey": "",
+        "height_in": 82.0,
+        "weight_lb": 235.0,
+        "age": 24,
+        "experience": 2,
         "status": "active"
       },
       {
@@ -3904,18 +3940,6 @@
         "weight_lb": 215.0,
         "age": 21,
         "experience": 0,
-        "status": "active"
-      },
-      {
-        "espn_id": "4432588",
-        "name": "John Butler Jr.",
-        "short_name": "J. Butler Jr.",
-        "position": "F",
-        "jersey": "27",
-        "height_in": 84.0,
-        "weight_lb": 212.0,
-        "age": 23,
-        "experience": 2,
         "status": "active"
       },
       {
@@ -4920,7 +4944,7 @@
         "weight_lb": 186.0,
         "age": 32,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5105800",
@@ -4944,7 +4968,7 @@
         "weight_lb": 195.0,
         "age": 28,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4222252",
@@ -5112,7 +5136,7 @@
         "weight_lb": 195.0,
         "age": 22,
         "experience": 4,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4593803",
@@ -5124,7 +5148,7 @@
         "weight_lb": 211.0,
         "age": 25,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4432823",
@@ -5694,7 +5718,7 @@
         "weight_lb": 225.0,
         "age": 28,
         "experience": 8,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3155526",
@@ -6032,6 +6056,18 @@
         "weight_lb": 200.0,
         "age": 36,
         "experience": 15,
+        "status": "active"
+      },
+      {
+        "espn_id": "4684737",
+        "name": "Jaylen Martin",
+        "short_name": "J. Martin",
+        "position": "G",
+        "jersey": "",
+        "height_in": 78.0,
+        "weight_lb": 216.0,
+        "age": 22,
+        "experience": 3,
         "status": "active"
       },
       {
@@ -7048,7 +7084,7 @@
         "weight_lb": 290.0,
         "age": 32,
         "experience": 13,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4065663",
