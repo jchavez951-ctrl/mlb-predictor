@@ -478,6 +478,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Bryce Elder",
+        "PlayerID": 693821,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.077,
+        "K_ALLOWED_RATE": 0.191,
+        "HR_PA_ALLOWED_RATE": 0.038,
+        "BABIP_ALLOWED": 0.264,
+        "OAVG": 0.24,
+        "IP": "149.0",
+        "ERA": 4.11,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Tyler Mahle",
         "PlayerID": 641816,
         "Pos": "P",
@@ -493,33 +508,18 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "JR Ritchie",
-        "PlayerID": 702275,
+        "Player": "Mart\u00edn P\u00e9rez",
+        "PlayerID": 527048,
         "Pos": "P",
         "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.132,
-        "K_ALLOWED_RATE": 0.209,
-        "HR_PA_ALLOWED_RATE": 0.04,
-        "BABIP_ALLOWED": 0.257,
-        "OAVG": 0.23,
-        "IP": "73.3",
-        "ERA": 4.91,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "AJ Smith-Shawver",
-        "PlayerID": 700363,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.111,
-        "K_ALLOWED_RATE": 0.188,
-        "HR_PA_ALLOWED_RATE": 0.049,
-        "BABIP_ALLOWED": 0.266,
-        "OAVG": 0.25,
-        "IP": "31.3",
-        "ERA": 6.61,
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.104,
+        "K_ALLOWED_RATE": 0.171,
+        "HR_PA_ALLOWED_RATE": 0.023,
+        "BABIP_ALLOWED": 0.251,
+        "OAVG": 0.223,
+        "IP": "142.0",
+        "ERA": 3.04,
         "Fatigue": 0.0
       },
       {
@@ -553,6 +553,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Reynaldo L\u00f3pez",
+        "PlayerID": 625643,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.098,
+        "K_ALLOWED_RATE": 0.211,
+        "HR_PA_ALLOWED_RATE": 0.032,
+        "BABIP_ALLOWED": 0.303,
+        "OAVG": 0.256,
+        "IP": "79.3",
+        "ERA": 4.54,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Didier Fuentes",
         "PlayerID": 800311,
         "Pos": "P",
@@ -580,21 +595,6 @@
         "OAVG": 0.196,
         "IP": "67.0",
         "ERA": 3.09,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Dylan Dodd",
-        "PlayerID": 689266,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.072,
-        "K_ALLOWED_RATE": 0.273,
-        "HR_PA_ALLOWED_RATE": 0.036,
-        "BABIP_ALLOWED": 0.2,
-        "OAVG": 0.172,
-        "IP": "49.7",
-        "ERA": 2.54,
         "Fatigue": 0.0
       }
     ]
@@ -6733,18 +6733,33 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Nick Pivetta",
-        "PlayerID": 601713,
+        "Player": "Randy V\u00e1squez",
+        "PlayerID": 681190,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.057,
-        "K_ALLOWED_RATE": 0.3,
-        "HR_PA_ALLOWED_RATE": 0.014,
-        "BABIP_ALLOWED": 0.284,
-        "OAVG": 0.205,
-        "IP": "34.7",
-        "ERA": 2.86,
+        "BB_ALLOWED_RATE": 0.063,
+        "K_ALLOWED_RATE": 0.148,
+        "HR_PA_ALLOWED_RATE": 0.027,
+        "BABIP_ALLOWED": 0.28,
+        "OAVG": 0.256,
+        "IP": "140.7",
+        "ERA": 3.9,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Casey Mize",
+        "PlayerID": 663554,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.069,
+        "K_ALLOWED_RATE": 0.2,
+        "HR_PA_ALLOWED_RATE": 0.033,
+        "BABIP_ALLOWED": 0.274,
+        "OAVG": 0.241,
+        "IP": "131.3",
+        "ERA": 4.32,
         "Fatigue": 0.0
       },
       {
@@ -6763,6 +6778,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Griffin Canning",
+        "PlayerID": 656288,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.105,
+        "K_ALLOWED_RATE": 0.223,
+        "HR_PA_ALLOWED_RATE": 0.036,
+        "BABIP_ALLOWED": 0.321,
+        "OAVG": 0.269,
+        "IP": "88.7",
+        "ERA": 5.68,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Adrian Morejon",
         "PlayerID": 670970,
         "Pos": "P",
@@ -6778,6 +6808,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Wandy Peralta",
+        "PlayerID": 593974,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.072,
+        "K_ALLOWED_RATE": 0.156,
+        "HR_PA_ALLOWED_RATE": 0.022,
+        "BABIP_ALLOWED": 0.299,
+        "OAVG": 0.265,
+        "IP": "77.3",
+        "ERA": 3.61,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Bradgley Rodriguez",
         "PlayerID": 699134,
         "Pos": "P",
@@ -6790,36 +6835,6 @@
         "OAVG": 0.21,
         "IP": "74.0",
         "ERA": 2.19,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Yuki Matsui",
-        "PlayerID": 673513,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.138,
-        "K_ALLOWED_RATE": 0.262,
-        "HR_PA_ALLOWED_RATE": 0.027,
-        "BABIP_ALLOWED": 0.201,
-        "OAVG": 0.165,
-        "IP": "64.0",
-        "ERA": 1.83,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Jason Adam",
-        "PlayerID": 592094,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.07,
-        "K_ALLOWED_RATE": 0.155,
-        "HR_PA_ALLOWED_RATE": 0.035,
-        "BABIP_ALLOWED": 0.238,
-        "OAVG": 0.227,
-        "IP": "34.3",
-        "ERA": 2.62,
         "Fatigue": 0.0
       }
     ]
