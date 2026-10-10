@@ -2,7 +2,7 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-09T16:58:42.138166+00:00",
+    "generated_at": "2026-10-10T15:51:49.148828+00:00",
     "team_count": 30,
     "player_count": 610,
     "failed_teams": [],
@@ -1007,7 +1007,7 @@
         "name": "Jalen Bridges",
         "short_name": "J. Bridges",
         "position": "F",
-        "jersey": "",
+        "jersey": "20",
         "height_in": 79.0,
         "weight_lb": 225.0,
         "age": 25,
@@ -1024,7 +1024,7 @@
         "weight_lb": 209.0,
         "age": 21,
         "experience": 3,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4278067",
@@ -1070,7 +1070,7 @@
         "jersey": "3",
         "height_in": 79.0,
         "weight_lb": 216.0,
-        "age": 23,
+        "age": 24,
         "experience": 6,
         "status": "active"
       },
@@ -1079,7 +1079,7 @@
         "name": "Jordan Hawkins",
         "short_name": "J. Hawkins",
         "position": "G",
-        "jersey": "",
+        "jersey": "15",
         "height_in": 77.0,
         "weight_lb": 190.0,
         "age": 24,
@@ -1091,7 +1091,7 @@
         "name": "Buddy Hield",
         "short_name": "B. Hield",
         "position": "G",
-        "jersey": "",
+        "jersey": "7",
         "height_in": 76.0,
         "weight_lb": 220.0,
         "age": 33,
@@ -1192,7 +1192,7 @@
         "weight_lb": 215.0,
         "age": 26,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4432117",
@@ -2256,7 +2256,7 @@
         "jersey": "18",
         "height_in": 72.0,
         "weight_lb": 200.0,
-        "age": 24,
+        "age": 25,
         "experience": 2,
         "status": "active"
       },
@@ -2570,7 +2570,7 @@
         "jersey": "0",
         "height_in": 73.0,
         "weight_lb": 195.0,
-        "age": 23,
+        "age": 24,
         "experience": 2,
         "status": "active"
       },
@@ -3169,6 +3169,18 @@
         "status": "day-to-day"
       },
       {
+        "espn_id": "4684443",
+        "name": "Rafael Castro",
+        "short_name": "R. Castro",
+        "position": "F",
+        "jersey": "",
+        "height_in": 81.0,
+        "weight_lb": 224.0,
+        "age": 23,
+        "experience": 0,
+        "status": "active"
+      },
+      {
         "espn_id": "3945274",
         "name": "Luka Doncic",
         "short_name": "L. Doncic",
@@ -3251,18 +3263,6 @@
         "age": 25,
         "experience": 3,
         "status": "day-to-day"
-      },
-      {
-        "espn_id": "5107258",
-        "name": "William Kyle III",
-        "short_name": "W. Kyle III",
-        "position": "F",
-        "jersey": "45",
-        "height_in": 81.0,
-        "weight_lb": 230.0,
-        "age": 22,
-        "experience": 0,
-        "status": "active"
       },
       {
         "espn_id": "4592691",
@@ -3636,7 +3636,7 @@
         "weight_lb": 250.0,
         "age": 25,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "5112087",
