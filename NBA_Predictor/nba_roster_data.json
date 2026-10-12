@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-11T16:18:42.973461+00:00",
+    "generated_at": "2026-10-12T19:47:22.734938+00:00",
     "team_count": 30,
-    "player_count": 618,
+    "player_count": 622,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -648,7 +648,7 @@
         "weight_lb": 218.0,
         "age": 28,
         "experience": 8,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5037873",
@@ -696,7 +696,7 @@
         "weight_lb": 265.0,
         "age": 24,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5279130",
@@ -746,7 +746,7 @@
         "weight_lb": 198.0,
         "age": 31,
         "experience": 9,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5060701",
@@ -890,7 +890,7 @@
         "weight_lb": 200.0,
         "age": 23,
         "experience": 4,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "2583632",
@@ -1024,7 +1024,7 @@
         "weight_lb": 209.0,
         "age": 21,
         "experience": 3,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4278067",
@@ -1108,7 +1108,7 @@
         "weight_lb": 185.0,
         "age": 26,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5044385",
@@ -1192,14 +1192,14 @@
         "weight_lb": 215.0,
         "age": 26,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4432117",
         "name": "Isaiah Stevens",
         "short_name": "I. Stevens",
         "position": "G",
-        "jersey": "",
+        "jersey": "99",
         "height_in": 71.0,
         "weight_lb": 185.0,
         "age": 25,
@@ -1326,7 +1326,7 @@
         "weight_lb": 220.0,
         "age": 37,
         "experience": 18,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "2995706",
@@ -1437,6 +1437,18 @@
         "status": "active"
       },
       {
+        "espn_id": "4702528",
+        "name": "Jaxson Robinson",
+        "short_name": "J. Robinson",
+        "position": "F",
+        "jersey": "2",
+        "height_in": 78.0,
+        "weight_lb": 192.0,
+        "age": 23,
+        "experience": 0,
+        "status": "active"
+      },
+      {
         "espn_id": "5041951",
         "name": "Meleek Thomas",
         "short_name": "M. Thomas",
@@ -1494,6 +1506,18 @@
         "weight_lb": 200.0,
         "age": 24,
         "experience": 5,
+        "status": "active"
+      },
+      {
+        "espn_id": "5457832",
+        "name": "Noam Yaacov",
+        "short_name": "N. Yaacov",
+        "position": "G",
+        "jersey": "30",
+        "height_in": 73.0,
+        "weight_lb": null,
+        "age": 21,
+        "experience": 0,
         "status": "active"
       }
     ],
@@ -1937,7 +1961,7 @@
         "name": "Ryan Nembhard",
         "short_name": "R. Nembhard",
         "position": "G",
-        "jersey": "",
+        "jersey": "9",
         "height_in": 71.0,
         "weight_lb": 180.0,
         "age": 23,
@@ -2294,7 +2318,7 @@
         "weight_lb": 240.0,
         "age": 40,
         "experience": 20,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4703396",
@@ -3983,7 +4007,7 @@
         "name": "Johni Broome",
         "short_name": "J. Broome",
         "position": "F",
-        "jersey": "",
+        "jersey": "22",
         "height_in": 82.0,
         "weight_lb": 235.0,
         "age": 24,
@@ -3999,6 +4023,18 @@
         "height_in": 76.0,
         "weight_lb": 215.0,
         "age": 21,
+        "experience": 0,
+        "status": "day-to-day"
+      },
+      {
+        "espn_id": "4432588",
+        "name": "John Butler Jr.",
+        "short_name": "J. Butler Jr.",
+        "position": "F",
+        "jersey": "27",
+        "height_in": 84.0,
+        "weight_lb": 212.0,
+        "age": 23,
         "experience": 0,
         "status": "active"
       },
@@ -4048,7 +4084,7 @@
         "weight_lb": 205.0,
         "age": 20,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4432848",
@@ -4738,7 +4774,7 @@
         "weight_lb": 215.0,
         "age": 26,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4683730",
@@ -4786,7 +4822,7 @@
         "weight_lb": 248.0,
         "age": 28,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "3147657",
@@ -4882,7 +4918,7 @@
         "weight_lb": 245.0,
         "age": 29,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "3062679",
@@ -4930,7 +4966,7 @@
         "weight_lb": 210.0,
         "age": 25,
         "experience": 3,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4838721",
@@ -5258,7 +5294,7 @@
         "weight_lb": 215.0,
         "age": 28,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4348700",
@@ -5426,7 +5462,7 @@
         "weight_lb": 215.0,
         "age": 21,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5239561",
@@ -5438,6 +5474,18 @@
         "weight_lb": 180.0,
         "age": 20,
         "experience": 2,
+        "status": "active"
+      },
+      {
+        "espn_id": "5105875",
+        "name": "Mike Sharavjamts",
+        "short_name": "M. Sharavjamts",
+        "position": "G",
+        "jersey": "",
+        "height_in": 81.0,
+        "weight_lb": 195.0,
+        "age": 24,
+        "experience": 0,
         "status": "active"
       },
       {
@@ -6116,7 +6164,7 @@
         "weight_lb": 200.0,
         "age": 36,
         "experience": 15,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4684737",
@@ -6200,7 +6248,7 @@
         "weight_lb": 249.0,
         "age": 28,
         "experience": 9,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4706557",
@@ -6212,7 +6260,7 @@
         "weight_lb": 221.0,
         "age": 24,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       }
     ],
     "SAC": [
@@ -6406,7 +6454,7 @@
         "weight_lb": 250.0,
         "age": 23,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "3155942",
@@ -6480,7 +6528,7 @@
         "weight_lb": 220.0,
         "age": 20,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4845367",
@@ -6492,7 +6540,7 @@
         "weight_lb": 215.0,
         "age": 21,
         "experience": 3,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4592479",
@@ -6564,7 +6612,7 @@
         "weight_lb": 215.0,
         "age": 20,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "6440",
@@ -6672,7 +6720,7 @@
         "weight_lb": 200.0,
         "age": 26,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5104157",
@@ -6684,7 +6732,7 @@
         "weight_lb": 235.0,
         "age": 22,
         "experience": 4,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4277880",
@@ -6878,7 +6926,7 @@
         "weight_lb": 225.0,
         "age": 35,
         "experience": 15,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4702656",
