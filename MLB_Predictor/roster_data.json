@@ -4063,6 +4063,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Justin Wrobleski",
+        "PlayerID": 680736,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.054,
+        "K_ALLOWED_RATE": 0.204,
+        "HR_PA_ALLOWED_RATE": 0.036,
+        "BABIP_ALLOWED": 0.265,
+        "OAVG": 0.236,
+        "IP": "140.0",
+        "ERA": 3.66,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Roki Sasaki",
         "PlayerID": 808963,
         "Pos": "P",
@@ -4090,21 +4105,6 @@
         "OAVG": 0.171,
         "IP": "74.0",
         "ERA": 3.53,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Kris Bubic",
-        "PlayerID": 663460,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.115,
-        "K_ALLOWED_RATE": 0.248,
-        "HR_PA_ALLOWED_RATE": 0.018,
-        "BABIP_ALLOWED": 0.257,
-        "OAVG": 0.2,
-        "IP": "55.0",
-        "ERA": 3.76,
         "Fatigue": 0.0
       },
       {
