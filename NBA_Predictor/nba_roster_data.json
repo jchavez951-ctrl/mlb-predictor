@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-12T19:47:22.734938+00:00",
+    "generated_at": "2026-10-13T17:34:24.413220+00:00",
     "team_count": 30,
-    "player_count": 622,
+    "player_count": 625,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -20,7 +20,7 @@
         "weight_lb": 205.0,
         "age": 28,
         "experience": 8,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4712902",
@@ -44,7 +44,7 @@
         "weight_lb": 199.0,
         "age": 23,
         "experience": 5,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4431941",
@@ -68,7 +68,7 @@
         "weight_lb": 220.0,
         "age": 27,
         "experience": 8,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5106262",
@@ -92,7 +92,7 @@
         "weight_lb": 220.0,
         "age": 33,
         "experience": 11,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5149077",
@@ -140,7 +140,7 @@
         "weight_lb": 219.0,
         "age": 24,
         "experience": 6,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4683857",
@@ -188,6 +188,18 @@
         "weight_lb": 190.0,
         "age": 35,
         "experience": 14,
+        "status": "day-to-day"
+      },
+      {
+        "espn_id": "4712845",
+        "name": "Isaac McKneely",
+        "short_name": "I. McKneely",
+        "position": "G",
+        "jersey": "15",
+        "height_in": 76.0,
+        "weight_lb": 195.0,
+        "age": 22,
+        "experience": 0,
         "status": "active"
       },
       {
@@ -212,7 +224,7 @@
         "weight_lb": 240.0,
         "age": 25,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5105571",
@@ -236,7 +248,7 @@
         "weight_lb": 190.0,
         "age": 27,
         "experience": 6,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4431714",
@@ -515,6 +527,18 @@
         "height_in": 80.0,
         "weight_lb": 228.0,
         "age": 22,
+        "experience": 0,
+        "status": "active"
+      },
+      {
+        "espn_id": "5107242",
+        "name": "Dion Brown",
+        "short_name": "D. Brown",
+        "position": "G",
+        "jersey": "",
+        "height_in": 75.0,
+        "weight_lb": 180.0,
+        "age": 23,
         "experience": 0,
         "status": "active"
       },
@@ -1990,18 +2014,6 @@
         "weight_lb": 205.0,
         "age": 24,
         "experience": 4,
-        "status": "active"
-      },
-      {
-        "espn_id": "4277890",
-        "name": "Lonnie Walker IV",
-        "short_name": "L. Walker IV",
-        "position": "G",
-        "jersey": "4",
-        "height_in": 76.0,
-        "weight_lb": 205.0,
-        "age": 27,
-        "experience": 8,
         "status": "active"
       },
       {
@@ -3885,7 +3897,7 @@
         "name": "Davion Mitchell",
         "short_name": "D. Mitchell",
         "position": "G",
-        "jersey": "45",
+        "jersey": "2",
         "height_in": 72.0,
         "weight_lb": 210.0,
         "age": 28,
@@ -4266,7 +4278,7 @@
         "weight_lb": 180.0,
         "age": 25,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5279133",
@@ -4314,7 +4326,7 @@
         "weight_lb": 200.0,
         "age": 26,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4594268",
@@ -4326,7 +4338,7 @@
         "weight_lb": 225.0,
         "age": 25,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5061585",
@@ -4350,7 +4362,7 @@
         "weight_lb": 220.0,
         "age": 26,
         "experience": 3,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3032976",
@@ -4362,7 +4374,7 @@
         "weight_lb": 258.0,
         "age": 34,
         "experience": 14,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4592492",
@@ -4422,14 +4434,14 @@
         "weight_lb": 185.0,
         "age": 26,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4702134",
         "name": "Norchad Omier",
         "short_name": "N. Omier",
         "position": "F",
-        "jersey": "",
+        "jersey": "23",
         "height_in": 77.0,
         "weight_lb": 248.0,
         "age": 25,
@@ -4470,7 +4482,7 @@
         "weight_lb": 215.0,
         "age": 26,
         "experience": 3,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4431695",
@@ -4506,7 +4518,7 @@
         "weight_lb": 254.0,
         "age": 20,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       }
     ],
     "NO": [
@@ -4556,18 +4568,6 @@
         "weight_lb": 190.0,
         "age": 19,
         "experience": 2,
-        "status": "active"
-      },
-      {
-        "espn_id": "4433623",
-        "name": "Caleb Houstan",
-        "short_name": "C. Houstan",
-        "position": "F",
-        "jersey": "33",
-        "height_in": 80.0,
-        "weight_lb": 205.0,
-        "age": 23,
-        "experience": 5,
         "status": "active"
       },
       {
@@ -4810,7 +4810,7 @@
         "weight_lb": 240.0,
         "age": 29,
         "experience": 10,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4065673",
@@ -4834,7 +4834,7 @@
         "weight_lb": 209.0,
         "age": 30,
         "experience": 9,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4065670",
@@ -4858,7 +4858,7 @@
         "weight_lb": 190.0,
         "age": 30,
         "experience": 9,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "2528426",
@@ -4930,7 +4930,7 @@
         "weight_lb": 215.0,
         "age": 31,
         "experience": 10,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4433225",
@@ -5002,7 +5002,7 @@
         "weight_lb": 248.0,
         "age": 30,
         "experience": 12,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4432808",
@@ -5125,6 +5125,18 @@
         "age": 22,
         "experience": 3,
         "status": "day-to-day"
+      },
+      {
+        "espn_id": "4685802",
+        "name": "Robert McCray V",
+        "short_name": "R. McCray V",
+        "position": "G",
+        "jersey": "16",
+        "height_in": 76.0,
+        "weight_lb": 188.0,
+        "age": 24,
+        "experience": 0,
+        "status": "active"
       },
       {
         "espn_id": "4900671",
@@ -6840,7 +6852,7 @@
         "jersey": "",
         "height_in": 79.0,
         "weight_lb": 232.0,
-        "age": 23,
+        "age": 24,
         "experience": 0,
         "status": "active"
       },
@@ -6854,18 +6866,6 @@
         "weight_lb": 225.0,
         "age": 20,
         "experience": 0,
-        "status": "day-to-day"
-      },
-      {
-        "espn_id": "4590360",
-        "name": "Chucky Hepburn",
-        "short_name": "C. Hepburn",
-        "position": "G",
-        "jersey": "24",
-        "height_in": 72.0,
-        "weight_lb": 193.0,
-        "age": 23,
-        "experience": 1,
         "status": "day-to-day"
       },
       {
@@ -7075,6 +7075,18 @@
         "status": "active"
       },
       {
+        "espn_id": "4395997",
+        "name": "Terrell Brown Jr.",
+        "short_name": "T. Brown Jr.",
+        "position": "G",
+        "jersey": "16",
+        "height_in": 75.0,
+        "weight_lb": 180.0,
+        "age": 28,
+        "experience": 0,
+        "status": "active"
+      },
+      {
         "espn_id": "4683766",
         "name": "Isaiah Collier",
         "short_name": "I. Collier",
@@ -7103,7 +7115,7 @@
         "name": "Taylor Funk",
         "short_name": "T. Funk",
         "position": "F",
-        "jersey": "",
+        "jersey": "33",
         "height_in": 80.0,
         "weight_lb": 230.0,
         "age": 28,
@@ -7156,7 +7168,7 @@
         "weight_lb": 230.0,
         "age": 26,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4433618",
@@ -7192,7 +7204,7 @@
         "weight_lb": 240.0,
         "age": 29,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "3133602",
@@ -7252,7 +7264,19 @@
         "weight_lb": 235.0,
         "age": 22,
         "experience": 4,
-        "status": "day-to-day"
+        "status": "active"
+      },
+      {
+        "espn_id": "5106293",
+        "name": "Mohamed Wague",
+        "short_name": "M. Wague",
+        "position": "F",
+        "jersey": "17",
+        "height_in": 82.0,
+        "weight_lb": 225.0,
+        "age": 26,
+        "experience": 0,
+        "status": "active"
       }
     ],
     "WSH": [
@@ -7326,7 +7350,7 @@
         "weight_lb": 253.0,
         "age": 33,
         "experience": 15,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5142718",
@@ -7434,7 +7458,7 @@
         "weight_lb": 178.0,
         "age": 25,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "6609",
@@ -7519,6 +7543,18 @@
         "age": 25,
         "experience": 2,
         "status": "out"
+      },
+      {
+        "espn_id": "4592216",
+        "name": "Alondes Williams",
+        "short_name": "A. Williams",
+        "position": "G",
+        "jersey": "31",
+        "height_in": 76.0,
+        "weight_lb": 210.0,
+        "age": 27,
+        "experience": 5,
+        "status": "active"
       },
       {
         "espn_id": "4277905",
