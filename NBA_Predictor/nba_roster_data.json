@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-15T14:58:20.376476+00:00",
+    "generated_at": "2026-10-16T14:48:34.108121+00:00",
     "team_count": 30,
-    "player_count": 627,
+    "player_count": 630,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -2450,7 +2450,7 @@
         "weight_lb": 240.0,
         "age": 31,
         "experience": 12,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4897262",
@@ -2584,7 +2584,7 @@
         "weight_lb": 240.0,
         "age": 38,
         "experience": 20,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4433192",
@@ -2596,6 +2596,18 @@
         "weight_lb": 215.0,
         "age": 25,
         "experience": 5,
+        "status": "active"
+      },
+      {
+        "espn_id": "4432394",
+        "name": "Cameron Matthews",
+        "short_name": "C. Matthews",
+        "position": "F",
+        "jersey": "",
+        "height_in": 79.0,
+        "weight_lb": 235.0,
+        "age": 24,
+        "experience": 0,
         "status": "active"
       },
       {
@@ -2632,7 +2644,7 @@
         "weight_lb": 243.0,
         "age": 24,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4711272",
@@ -2728,7 +2740,7 @@
         "weight_lb": 197.0,
         "age": 32,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       }
     ],
     "IND": [
@@ -2848,7 +2860,7 @@
         "jersey": "23",
         "height_in": 77.0,
         "weight_lb": 215.0,
-        "age": 26,
+        "age": 27,
         "experience": 7,
         "status": "day-to-day"
       },
@@ -4338,7 +4350,7 @@
         "weight_lb": 200.0,
         "age": 26,
         "experience": 6,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4594268",
@@ -4846,7 +4858,7 @@
         "weight_lb": 240.0,
         "age": 29,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4065673",
@@ -4870,7 +4882,7 @@
         "weight_lb": 209.0,
         "age": 30,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4065670",
@@ -4894,7 +4906,7 @@
         "weight_lb": 190.0,
         "age": 30,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "2528426",
@@ -5038,7 +5050,7 @@
         "weight_lb": 248.0,
         "age": 30,
         "experience": 12,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4432808",
@@ -5184,7 +5196,7 @@
         "weight_lb": 190.0,
         "age": 24,
         "experience": 3,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5106270",
@@ -5280,7 +5292,7 @@
         "weight_lb": 195.0,
         "age": 22,
         "experience": 4,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4593803",
@@ -6006,7 +6018,7 @@
         "weight_lb": 206.0,
         "age": 30,
         "experience": 10,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5203685",
@@ -6905,6 +6917,18 @@
         "status": "active"
       },
       {
+        "espn_id": "4590360",
+        "name": "Chucky Hepburn",
+        "short_name": "C. Hepburn",
+        "position": "G",
+        "jersey": "24",
+        "height_in": 72.0,
+        "weight_lb": 193.0,
+        "age": 23,
+        "experience": 1,
+        "status": "day-to-day"
+      },
+      {
         "espn_id": "4432190",
         "name": "Andre Jackson Jr.",
         "short_name": "A. Jackson Jr.",
@@ -6924,6 +6948,18 @@
         "jersey": "32",
         "height_in": 81.0,
         "weight_lb": 245.0,
+        "age": 26,
+        "experience": 3,
+        "status": "active"
+      },
+      {
+        "espn_id": "4395623",
+        "name": "Trey Jemison III",
+        "short_name": "T. Jemison III",
+        "position": "C",
+        "jersey": "50",
+        "height_in": 82.0,
+        "weight_lb": 270.0,
         "age": 26,
         "experience": 3,
         "status": "active"
