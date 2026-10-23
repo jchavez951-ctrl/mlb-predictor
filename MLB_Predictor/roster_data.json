@@ -3508,18 +3508,18 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Alex Lange",
-        "PlayerID": 656638,
+        "Player": "Lucas Erceg",
+        "PlayerID": 668674,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.12,
-        "K_ALLOWED_RATE": 0.218,
-        "HR_PA_ALLOWED_RATE": 0.047,
-        "BABIP_ALLOWED": 0.308,
-        "OAVG": 0.269,
-        "IP": "60.0",
-        "ERA": 6.75,
+        "BB_ALLOWED_RATE": 0.14,
+        "K_ALLOWED_RATE": 0.149,
+        "HR_PA_ALLOWED_RATE": 0.022,
+        "BABIP_ALLOWED": 0.318,
+        "OAVG": 0.281,
+        "IP": "48.3",
+        "ERA": 5.59,
         "Fatigue": 0.0
       },
       {
@@ -3568,18 +3568,18 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Mason Black",
-        "PlayerID": 696131,
+        "Player": "Connor Thomas",
+        "PlayerID": 671162,
         "Pos": "P",
         "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.141,
-        "K_ALLOWED_RATE": 0.134,
-        "HR_PA_ALLOWED_RATE": 0.042,
-        "BABIP_ALLOWED": 0.247,
-        "OAVG": 0.246,
-        "IP": "31.3",
-        "ERA": 4.31,
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.076,
+        "K_ALLOWED_RATE": 0.153,
+        "HR_PA_ALLOWED_RATE": 0.034,
+        "BABIP_ALLOWED": 0.322,
+        "OAVG": 0.294,
+        "IP": "25.7",
+        "ERA": 7.01,
         "Fatigue": 0.0
       }
     ]
