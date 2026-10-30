@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-29T16:53:58.352383+00:00",
+    "generated_at": "2026-10-30T16:41:08.979463+00:00",
     "team_count": 30,
-    "player_count": 519,
+    "player_count": 521,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -468,7 +468,7 @@
         "weight_lb": 210.0,
         "age": 22,
         "experience": 4,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5175643",
@@ -818,7 +818,7 @@
         "weight_lb": 175.0,
         "age": 33,
         "experience": 14,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5281370",
@@ -1024,7 +1024,7 @@
         "weight_lb": 215.0,
         "age": 26,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4848625",
@@ -1048,7 +1048,7 @@
         "weight_lb": 215.0,
         "age": 25,
         "experience": 7,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "5095151",
@@ -1206,7 +1206,7 @@
         "weight_lb": 190.0,
         "age": 20,
         "experience": 0,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4683747",
@@ -1218,6 +1218,18 @@
         "weight_lb": 215.0,
         "age": 23,
         "experience": 3,
+        "status": "active"
+      },
+      {
+        "espn_id": "5106261",
+        "name": "Ernest Udeh Jr.",
+        "short_name": "E. Udeh Jr.",
+        "position": "C",
+        "jersey": "88",
+        "height_in": 81.0,
+        "weight_lb": 266.0,
+        "age": 22,
+        "experience": 0,
         "status": "active"
       },
       {
@@ -1304,7 +1316,7 @@
         "weight_lb": 202.0,
         "age": 20,
         "experience": 0,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "5041939",
@@ -2212,7 +2224,7 @@
         "weight_lb": 185.0,
         "age": 22,
         "experience": 3,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "2990992",
@@ -2394,7 +2406,7 @@
         "weight_lb": 191.0,
         "age": 26,
         "experience": 5,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4396909",
@@ -2406,7 +2418,7 @@
         "weight_lb": 215.0,
         "age": 27,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3133603",
@@ -2502,7 +2514,7 @@
         "weight_lb": 240.0,
         "age": 29,
         "experience": 11,
-        "status": "day-to-day"
+        "status": "out"
       }
     ],
     "LAC": [
@@ -2721,6 +2733,18 @@
         "age": 19,
         "experience": 0,
         "status": "active"
+      },
+      {
+        "espn_id": "4683935",
+        "name": "Blake Wesley",
+        "short_name": "B. Wesley",
+        "position": "G",
+        "jersey": "20",
+        "height_in": 76.0,
+        "weight_lb": 190.0,
+        "age": 23,
+        "experience": 5,
+        "status": "active"
       }
     ],
     "LAL": [
@@ -2746,7 +2770,7 @@
         "weight_lb": 230.0,
         "age": 27,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4397014",
@@ -3108,7 +3132,7 @@
         "weight_lb": 238.0,
         "age": 26,
         "experience": 3,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4595400",
@@ -3944,7 +3968,7 @@
         "weight_lb": 180.0,
         "age": 30,
         "experience": 10,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4703115",
@@ -4672,7 +4696,7 @@
         "weight_lb": 223.0,
         "age": 30,
         "experience": 11,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "2581018",
@@ -4840,7 +4864,7 @@
         "weight_lb": 240.0,
         "age": 24,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "out"
       }
     ],
     "PHX": [
@@ -5192,7 +5216,7 @@
         "weight_lb": 174.0,
         "age": 27,
         "experience": 8,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4066399",
@@ -5240,7 +5264,7 @@
         "weight_lb": 249.0,
         "age": 29,
         "experience": 9,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4706557",
@@ -5360,7 +5384,7 @@
         "jersey": "22",
         "height_in": 81.0,
         "weight_lb": 225.0,
-        "age": 24,
+        "age": 25,
         "experience": 3,
         "status": "active"
       },
@@ -6074,7 +6098,7 @@
         "jersey": "28",
         "height_in": 78.0,
         "weight_lb": 235.0,
-        "age": 22,
+        "age": 23,
         "experience": 4,
         "status": "active"
       }
