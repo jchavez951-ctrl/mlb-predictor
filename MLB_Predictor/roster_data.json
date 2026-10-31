@@ -1033,21 +1033,6 @@
     ],
     "pitching": [
       {
-        "Player": "Sonny Gray",
-        "PlayerID": 543243,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.067,
-        "K_ALLOWED_RATE": 0.218,
-        "HR_PA_ALLOWED_RATE": 0.023,
-        "BABIP_ALLOWED": 0.28,
-        "OAVG": 0.232,
-        "IP": "169.0",
-        "ERA": 2.72,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Payton Tolle",
         "PlayerID": 801139,
         "Pos": "P",
@@ -1267,22 +1252,6 @@
         "PA": 486
       },
       {
-        "Player": "Carson Kelly",
-        "PlayerID": 608348,
-        "Pos": "C",
-        "Bats": "R",
-        "BB_RATE": 0.094,
-        "K_RATE": 0.165,
-        "HR_PA_RATE": 0.024,
-        "BABIP": 0.293,
-        "1B_H_RATE": 0.74,
-        "2B_H_RATE": 0.15,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.1,
-        "SPD": 55,
-        "PA": 425
-      },
-      {
         "Player": "Pedro Ram\u00edrez",
         "PlayerID": 699393,
         "Pos": "2B",
@@ -1329,6 +1298,22 @@
         "HR_H_RATE": 0.12,
         "SPD": 55,
         "PA": 202
+      },
+      {
+        "Player": "Gabriel Arias",
+        "PlayerID": 672356,
+        "Pos": "3B",
+        "Bats": "R",
+        "BB_RATE": 0.054,
+        "K_RATE": 0.403,
+        "HR_PA_RATE": 0.034,
+        "BABIP": 0.387,
+        "1B_H_RATE": 0.76,
+        "2B_H_RATE": 0.09,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.15,
+        "SPD": 55,
+        "PA": 149
       }
     ],
     "pitching": [
@@ -1345,21 +1330,6 @@
         "OAVG": 0.25,
         "IP": "137.0",
         "ERA": 4.34,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Matthew Boyd",
-        "PlayerID": 571510,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.075,
-        "K_ALLOWED_RATE": 0.185,
-        "HR_PA_ALLOWED_RATE": 0.029,
-        "BABIP_ALLOWED": 0.268,
-        "OAVG": 0.237,
-        "IP": "126.7",
-        "ERA": 3.91,
         "Fatigue": 0.0
       },
       {
@@ -4618,21 +4588,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Dustin May",
-        "PlayerID": 669160,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.081,
-        "K_ALLOWED_RATE": 0.232,
-        "HR_PA_ALLOWED_RATE": 0.023,
-        "BABIP_ALLOWED": 0.31,
-        "OAVG": 0.249,
-        "IP": "145.7",
-        "ERA": 4.7,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Shane Drohan",
         "PlayerID": 675660,
         "Pos": "P",
@@ -4675,6 +4630,21 @@
         "OAVG": 0.222,
         "IP": "109.3",
         "ERA": 3.87,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Logan Henderson",
+        "PlayerID": 701656,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.051,
+        "K_ALLOWED_RATE": 0.296,
+        "HR_PA_ALLOWED_RATE": 0.038,
+        "BABIP_ALLOWED": 0.219,
+        "OAVG": 0.182,
+        "IP": "98.3",
+        "ERA": 2.47,
         "Fatigue": 0.0
       },
       {
@@ -4754,22 +4724,6 @@
         "2B_H_RATE": 0.17,
         "3B_H_RATE": 0.02,
         "HR_H_RATE": 0.16,
-        "SPD": 55,
-        "PA": 631
-      },
-      {
-        "Player": "Josh Bell",
-        "PlayerID": 605137,
-        "Pos": "DH",
-        "Bats": "S",
-        "BB_RATE": 0.082,
-        "K_RATE": 0.197,
-        "HR_PA_RATE": 0.033,
-        "BABIP": 0.293,
-        "1B_H_RATE": 0.66,
-        "2B_H_RATE": 0.19,
-        "3B_H_RATE": 0.01,
-        "HR_H_RATE": 0.14,
         "SPD": 55,
         "PA": 631
       },
@@ -4884,6 +4838,22 @@
         "HR_H_RATE": 0.04,
         "SPD": 55,
         "PA": 358
+      },
+      {
+        "Player": "Ryan Kreidler",
+        "PlayerID": 668952,
+        "Pos": "SS",
+        "Bats": "R",
+        "BB_RATE": 0.079,
+        "K_RATE": 0.228,
+        "HR_PA_RATE": 0.03,
+        "BABIP": 0.259,
+        "1B_H_RATE": 0.62,
+        "2B_H_RATE": 0.17,
+        "3B_H_RATE": 0.06,
+        "HR_H_RATE": 0.15,
+        "SPD": 55,
+        "PA": 267
       }
     ],
     "pitching": [
@@ -6642,21 +6612,6 @@
       }
     ],
     "pitching": [
-      {
-        "Player": "Michael King",
-        "PlayerID": 650633,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.092,
-        "K_ALLOWED_RATE": 0.21,
-        "HR_PA_ALLOWED_RATE": 0.026,
-        "BABIP_ALLOWED": 0.252,
-        "OAVG": 0.215,
-        "IP": "185.0",
-        "ERA": 3.21,
-        "Fatigue": 0.0
-      },
       {
         "Player": "Randy V\u00e1squez",
         "PlayerID": 681190,
