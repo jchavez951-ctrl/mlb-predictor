@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-10-31T15:43:09.783304+00:00",
+    "generated_at": "2026-11-01T16:48:23.079016+00:00",
     "team_count": 30,
-    "player_count": 522,
+    "player_count": 521,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -128,7 +128,7 @@
         "weight_lb": 219.0,
         "age": 24,
         "experience": 6,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4280151",
@@ -152,7 +152,7 @@
         "weight_lb": 255.0,
         "age": 31,
         "experience": 6,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "2490149",
@@ -370,7 +370,7 @@
         "weight_lb": 240.0,
         "age": 28,
         "experience": 9,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "4593841",
@@ -456,7 +456,7 @@
         "weight_lb": 180.0,
         "age": 20,
         "experience": 0,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "4712896",
@@ -1206,7 +1206,7 @@
         "weight_lb": 190.0,
         "age": 20,
         "experience": 0,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4683747",
@@ -1218,7 +1218,7 @@
         "weight_lb": 215.0,
         "age": 23,
         "experience": 3,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5106261",
@@ -1934,7 +1934,7 @@
         "weight_lb": 185.0,
         "age": 38,
         "experience": 18,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "6589",
@@ -1946,7 +1946,7 @@
         "weight_lb": 230.0,
         "age": 36,
         "experience": 15,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "3213",
@@ -2090,7 +2090,7 @@
         "weight_lb": 185.0,
         "age": 24,
         "experience": 4,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4397040",
@@ -2212,7 +2212,7 @@
         "weight_lb": 243.0,
         "age": 24,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4711272",
@@ -2308,7 +2308,7 @@
         "weight_lb": 197.0,
         "age": 32,
         "experience": 11,
-        "status": "active"
+        "status": "day-to-day"
       }
     ],
     "IND": [
@@ -2418,7 +2418,7 @@
         "weight_lb": 215.0,
         "age": 27,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3133603",
@@ -2600,7 +2600,7 @@
         "weight_lb": 190.0,
         "age": 29,
         "experience": 11,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "4432170",
@@ -2684,7 +2684,7 @@
         "weight_lb": 242.0,
         "age": 23,
         "experience": 2,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "4398390",
@@ -3726,7 +3726,7 @@
         "weight_lb": 258.0,
         "age": 34,
         "experience": 14,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4592492",
@@ -3830,7 +3830,7 @@
         "espn_id": "4397136",
         "name": "Saddiq Bey",
         "short_name": "S. Bey",
-        "position": "G",
+        "position": "F",
         "jersey": "41",
         "height_in": 80.0,
         "weight_lb": 215.0,
@@ -3968,7 +3968,7 @@
         "weight_lb": 180.0,
         "age": 30,
         "experience": 10,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4703115",
@@ -3992,7 +3992,7 @@
         "weight_lb": 194.0,
         "age": 27,
         "experience": 8,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4869780",
@@ -4250,18 +4250,6 @@
       }
     ],
     "OKC": [
-      {
-        "espn_id": "4397018",
-        "name": "Ochai Agbaji",
-        "short_name": "O. Agbaji",
-        "position": "G",
-        "jersey": "30",
-        "height_in": 77.0,
-        "weight_lb": 215.0,
-        "age": 26,
-        "experience": 5,
-        "status": "active"
-      },
       {
         "espn_id": "4684208",
         "name": "Brooks Barnhizer",
@@ -4708,7 +4696,7 @@
         "weight_lb": 223.0,
         "age": 30,
         "experience": 11,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "2581018",
@@ -4768,7 +4756,7 @@
         "weight_lb": 299.0,
         "age": 30,
         "experience": 4,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "4871141",
@@ -4876,7 +4864,7 @@
         "weight_lb": 240.0,
         "age": 24,
         "experience": 5,
-        "status": "out"
+        "status": "active"
       }
     ],
     "PHX": [
@@ -5276,7 +5264,7 @@
         "weight_lb": 249.0,
         "age": 29,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4706557",
@@ -5288,7 +5276,7 @@
         "weight_lb": 221.0,
         "age": 24,
         "experience": 2,
-        "status": "out"
+        "status": "active"
       }
     ],
     "SAC": [
@@ -5947,6 +5935,18 @@
         "status": "active"
       },
       {
+        "espn_id": "4683736",
+        "name": "Kobe Bufkin",
+        "short_name": "K. Bufkin",
+        "position": "G",
+        "jersey": "4",
+        "height_in": 76.0,
+        "weight_lb": 195.0,
+        "age": 23,
+        "experience": 4,
+        "status": "active"
+      },
+      {
         "espn_id": "4683766",
         "name": "Isaiah Collier",
         "short_name": "I. Collier",
@@ -6007,18 +6007,6 @@
         "status": "active"
       },
       {
-        "espn_id": "4396963",
-        "name": "Blake Hinson",
-        "short_name": "B. Hinson",
-        "position": "F",
-        "jersey": "25",
-        "height_in": 80.0,
-        "weight_lb": 230.0,
-        "age": 26,
-        "experience": 2,
-        "status": "out"
-      },
-      {
         "espn_id": "4433618",
         "name": "Harrison Ingram",
         "short_name": "H. Ingram",
@@ -6052,7 +6040,7 @@
         "weight_lb": 240.0,
         "age": 29,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "3133602",
