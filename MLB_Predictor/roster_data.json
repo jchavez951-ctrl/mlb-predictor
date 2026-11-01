@@ -823,21 +823,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Albert Su\u00e1rez",
-        "PlayerID": 544150,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.076,
-        "K_ALLOWED_RATE": 0.176,
-        "HR_PA_ALLOWED_RATE": 0.031,
-        "BABIP_ALLOWED": 0.261,
-        "OAVG": 0.236,
-        "IP": "63.0",
-        "ERA": 3.86,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Anthony Nunez",
         "PlayerID": 689296,
         "Pos": "P",
@@ -880,6 +865,21 @@
         "OAVG": 0.209,
         "IP": "49.7",
         "ERA": 2.9,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Alex Hoppe",
+        "PlayerID": 695380,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.104,
+        "K_ALLOWED_RATE": 0.245,
+        "HR_PA_ALLOWED_RATE": 0.016,
+        "BABIP_ALLOWED": 0.311,
+        "OAVG": 0.238,
+        "IP": "42.7",
+        "ERA": 4.43,
         "Fatigue": 0.0
       }
     ]
@@ -1805,22 +1805,6 @@
         "PA": 545
       },
       {
-        "Player": "Eugenio Su\u00e1rez",
-        "PlayerID": 553993,
-        "Pos": "DH",
-        "Bats": "R",
-        "BB_RATE": 0.104,
-        "K_RATE": 0.339,
-        "HR_PA_RATE": 0.052,
-        "BABIP": 0.276,
-        "1B_H_RATE": 0.52,
-        "2B_H_RATE": 0.2,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.28,
-        "SPD": 55,
-        "PA": 498
-      },
-      {
         "Player": "Matt McLain",
         "PlayerID": 680574,
         "Pos": "2B",
@@ -1899,6 +1883,22 @@
         "HR_H_RATE": 0.17,
         "SPD": 55,
         "PA": 201
+      },
+      {
+        "Player": "Edwin Arroyo",
+        "PlayerID": 695490,
+        "Pos": "2B",
+        "Bats": "S",
+        "BB_RATE": 0.037,
+        "K_RATE": 0.237,
+        "HR_PA_RATE": 0.0,
+        "BABIP": 0.3,
+        "1B_H_RATE": 0.85,
+        "2B_H_RATE": 0.12,
+        "3B_H_RATE": 0.03,
+        "HR_H_RATE": 0.0,
+        "SPD": 55,
+        "PA": 160
       }
     ],
     "pitching": [
@@ -1978,18 +1978,18 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Emilio Pag\u00e1n",
-        "PlayerID": 641941,
+        "Player": "Tony Santillan",
+        "PlayerID": 663574,
         "Pos": "P",
         "Role": "Closer",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.063,
-        "K_ALLOWED_RATE": 0.259,
-        "HR_PA_ALLOWED_RATE": 0.04,
-        "BABIP_ALLOWED": 0.234,
-        "OAVG": 0.202,
-        "IP": "42.7",
-        "ERA": 3.38,
+        "BB_ALLOWED_RATE": 0.147,
+        "K_ALLOWED_RATE": 0.188,
+        "HR_PA_ALLOWED_RATE": 0.058,
+        "BABIP_ALLOWED": 0.25,
+        "OAVG": 0.245,
+        "IP": "40.7",
+        "ERA": 6.42,
         "Fatigue": 0.0
       },
       {
@@ -2005,21 +2005,6 @@
         "OAVG": 0.198,
         "IP": "55.0",
         "ERA": 3.11,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Pierce Johnson",
-        "PlayerID": 572955,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.09,
-        "K_ALLOWED_RATE": 0.199,
-        "HR_PA_ALLOWED_RATE": 0.038,
-        "BABIP_ALLOWED": 0.275,
-        "OAVG": 0.245,
-        "IP": "48.7",
-        "ERA": 4.62,
         "Fatigue": 0.0
       },
       {
@@ -2050,6 +2035,21 @@
         "OAVG": 0.213,
         "IP": "35.3",
         "ERA": 4.08,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Luis Mey",
+        "PlayerID": 682825,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.133,
+        "K_ALLOWED_RATE": 0.303,
+        "HR_PA_ALLOWED_RATE": 0.018,
+        "BABIP_ALLOWED": 0.356,
+        "OAVG": 0.245,
+        "IP": "34.7",
+        "ERA": 6.23,
         "Fatigue": 0.0
       }
     ]
