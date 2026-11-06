@@ -2,7 +2,7 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-11-05T17:59:13.369439+00:00",
+    "generated_at": "2026-11-06T17:27:46.504533+00:00",
     "team_count": 30,
     "player_count": 521,
     "failed_teams": [],
@@ -104,7 +104,7 @@
         "weight_lb": 200.0,
         "age": 23,
         "experience": 2,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "4712863",
@@ -152,7 +152,7 @@
         "weight_lb": 255.0,
         "age": 31,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "2490149",
@@ -176,7 +176,7 @@
         "weight_lb": 224.0,
         "age": 21,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4431680",
@@ -239,18 +239,6 @@
         "age": 24,
         "experience": 3,
         "status": "out"
-      },
-      {
-        "espn_id": "5142621",
-        "name": "Chris Cenac Jr.",
-        "short_name": "C. Cenac Jr.",
-        "position": "F",
-        "jersey": "12",
-        "height_in": 83.0,
-        "weight_lb": 240.0,
-        "age": 19,
-        "experience": 0,
-        "status": "active"
       },
       {
         "espn_id": "3195",
@@ -394,7 +382,7 @@
         "weight_lb": 224.0,
         "age": 28,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4683689",
@@ -653,6 +641,18 @@
     ],
     "CHA": [
       {
+        "espn_id": "5176517",
+        "name": "Michael Ajayi",
+        "short_name": "M. Ajayi",
+        "position": "F",
+        "jersey": "10",
+        "height_in": 79.0,
+        "weight_lb": 228.0,
+        "age": 23,
+        "experience": 0,
+        "status": "active"
+      },
+      {
         "espn_id": "3135045",
         "name": "Grayson Allen",
         "short_name": "G. Allen",
@@ -698,7 +698,7 @@
         "weight_lb": 210.0,
         "age": 24,
         "experience": 5,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4701225",
@@ -746,7 +746,7 @@
         "weight_lb": 215.0,
         "age": 21,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "5239590",
@@ -818,7 +818,7 @@
         "weight_lb": 175.0,
         "age": 33,
         "experience": 14,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5281370",
@@ -1137,18 +1137,6 @@
         "status": "active"
       },
       {
-        "espn_id": "5177362",
-        "name": "Riley Minix",
-        "short_name": "R. Minix",
-        "position": "F",
-        "jersey": "12",
-        "height_in": 79.0,
-        "weight_lb": 230.0,
-        "age": 26,
-        "experience": 3,
-        "status": "active"
-      },
-      {
         "espn_id": "3908809",
         "name": "Donovan Mitchell",
         "short_name": "D. Mitchell",
@@ -1170,6 +1158,18 @@
         "weight_lb": 215.0,
         "age": 25,
         "experience": 6,
+        "status": "active"
+      },
+      {
+        "espn_id": "4702134",
+        "name": "Norchad Omier",
+        "short_name": "N. Omier",
+        "position": "C",
+        "jersey": "15",
+        "height_in": 79.0,
+        "weight_lb": 248.0,
+        "age": 25,
+        "experience": 0,
         "status": "active"
       },
       {
@@ -1965,7 +1965,7 @@
         "name": "Graham Ike",
         "short_name": "G. Ike",
         "position": "F",
-        "jersey": "",
+        "jersey": "45",
         "height_in": 81.0,
         "weight_lb": 250.0,
         "age": 24,
@@ -2090,7 +2090,7 @@
         "weight_lb": 185.0,
         "age": 24,
         "experience": 4,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4397040",
@@ -2272,18 +2272,6 @@
         "weight_lb": 200.0,
         "age": 23,
         "experience": 4,
-        "status": "active"
-      },
-      {
-        "espn_id": "5105837",
-        "name": "Bruce Thornton",
-        "short_name": "B. Thornton",
-        "position": "G",
-        "jersey": "2",
-        "height_in": 72.0,
-        "weight_lb": 223.0,
-        "age": 23,
-        "experience": 0,
         "status": "active"
       },
       {
@@ -2878,7 +2866,7 @@
         "weight_lb": 240.0,
         "age": 27,
         "experience": 6,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4702972",
@@ -2938,7 +2926,7 @@
         "weight_lb": 220.0,
         "age": 22,
         "experience": 2,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "3907498",
@@ -3180,7 +3168,7 @@
         "weight_lb": 250.0,
         "age": 25,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "5112087",
@@ -4440,7 +4428,7 @@
         "weight_lb": 240.0,
         "age": 24,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "3133626",
@@ -5053,7 +5041,7 @@
         "name": "Drew Timme",
         "short_name": "D. Timme",
         "position": "F",
-        "jersey": "",
+        "jersey": "2",
         "height_in": 82.0,
         "weight_lb": 235.0,
         "age": 26,
@@ -5434,7 +5422,7 @@
         "weight_lb": 216.0,
         "age": 28,
         "experience": 3,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4898371",
@@ -5702,7 +5690,7 @@
         "weight_lb": 230.0,
         "age": 33,
         "experience": 13,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4433134",
@@ -5714,7 +5702,7 @@
         "weight_lb": 237.0,
         "age": 25,
         "experience": 6,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4395625",
@@ -5745,7 +5733,7 @@
         "name": "Nate Bittle",
         "short_name": "N. Bittle",
         "position": "C",
-        "jersey": "",
+        "jersey": "12",
         "height_in": 84.0,
         "weight_lb": 250.0,
         "age": 23,
@@ -5809,6 +5797,18 @@
         "height_in": 74.0,
         "weight_lb": 212.0,
         "age": 24,
+        "experience": 2,
+        "status": "active"
+      },
+      {
+        "espn_id": "4411057",
+        "name": "Kevin McCullar Jr.",
+        "short_name": "K. McCullar Jr.",
+        "position": "G",
+        "jersey": "9",
+        "height_in": 78.0,
+        "weight_lb": 210.0,
+        "age": 25,
         "experience": 2,
         "status": "active"
       },
@@ -6174,7 +6174,7 @@
         "weight_lb": 253.0,
         "age": 33,
         "experience": 15,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5142718",
@@ -6254,7 +6254,7 @@
         "short_name": "F. Okpara",
         "position": "F",
         "jersey": "34",
-        "height_in": 82.0,
+        "height_in": 83.0,
         "weight_lb": 237.0,
         "age": 22,
         "experience": 0,
