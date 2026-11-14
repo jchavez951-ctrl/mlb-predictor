@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-11-13T17:41:55.269890+00:00",
+    "generated_at": "2026-11-14T16:35:25.280144+00:00",
     "team_count": 30,
-    "player_count": 522,
+    "player_count": 526,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -880,7 +880,7 @@
         "weight_lb": 255.0,
         "age": 22,
         "experience": 0,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4711294",
@@ -1012,7 +1012,19 @@
         "weight_lb": 215.0,
         "age": 33,
         "experience": 12,
-        "status": "day-to-day"
+        "status": "active"
+      },
+      {
+        "espn_id": "4593049",
+        "name": "Orlando Robinson",
+        "short_name": "O. Robinson",
+        "position": "C",
+        "jersey": "00",
+        "height_in": 82.0,
+        "weight_lb": 235.0,
+        "age": 26,
+        "experience": 3,
+        "status": "active"
       },
       {
         "espn_id": "4898010",
@@ -1036,7 +1048,7 @@
         "weight_lb": 215.0,
         "age": 26,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4848625",
@@ -1098,6 +1110,18 @@
         "weight_lb": 248.0,
         "age": 29,
         "experience": 10,
+        "status": "active"
+      },
+      {
+        "espn_id": "4997530",
+        "name": "Khalifa Diop",
+        "short_name": "K. Diop",
+        "position": "C",
+        "jersey": "18",
+        "height_in": 83.0,
+        "weight_lb": 231.0,
+        "age": 24,
+        "experience": 0,
         "status": "active"
       },
       {
@@ -1170,14 +1194,14 @@
         "weight_lb": 215.0,
         "age": 25,
         "experience": 6,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4702134",
         "name": "Norchad Omier",
         "short_name": "N. Omier",
         "position": "C",
-        "jersey": "15",
+        "jersey": "77",
         "height_in": 79.0,
         "weight_lb": 248.0,
         "age": 25,
@@ -1219,6 +1243,18 @@
         "age": 20,
         "experience": 0,
         "status": "active"
+      },
+      {
+        "espn_id": "5106268",
+        "name": "Nae'Qwan Tomlin",
+        "short_name": "N. Tomlin",
+        "position": "F",
+        "jersey": "35",
+        "height_in": 80.0,
+        "weight_lb": 210.0,
+        "age": 25,
+        "experience": 3,
+        "status": "out"
       },
       {
         "espn_id": "4683747",
@@ -1292,7 +1328,7 @@
         "weight_lb": 190.0,
         "age": 23,
         "experience": 5,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4701208",
@@ -1388,7 +1424,7 @@
         "weight_lb": 250.0,
         "age": 20,
         "experience": 0,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5106040",
@@ -1898,7 +1934,7 @@
         "weight_lb": 230.0,
         "age": 26,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "6430",
@@ -2382,7 +2418,7 @@
         "weight_lb": 190.0,
         "age": 34,
         "experience": 12,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "2580365",
@@ -3012,7 +3048,7 @@
         "weight_lb": 305.0,
         "age": 24,
         "experience": 3,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "2991070",
@@ -3120,7 +3156,7 @@
         "weight_lb": 238.0,
         "age": 26,
         "experience": 3,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4595400",
@@ -3218,7 +3254,7 @@
         "weight_lb": 243.0,
         "age": 31,
         "experience": 14,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5107157",
@@ -3645,6 +3681,18 @@
         "status": "active"
       },
       {
+        "espn_id": "4433569",
+        "name": "Johni Broome",
+        "short_name": "J. Broome",
+        "position": "F",
+        "jersey": "22",
+        "height_in": 82.0,
+        "weight_lb": 235.0,
+        "age": 24,
+        "experience": 0,
+        "status": "active"
+      },
+      {
         "espn_id": "4432247",
         "name": "Jaylen Clark",
         "short_name": "J. Clark",
@@ -3896,7 +3944,7 @@
         "weight_lb": 210.0,
         "age": 24,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4997538",
@@ -3944,7 +3992,7 @@
         "weight_lb": 206.0,
         "age": 26,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "3907497",
@@ -3956,7 +4004,7 @@
         "weight_lb": 180.0,
         "age": 30,
         "experience": 10,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "4703115",
@@ -4157,7 +4205,7 @@
         "name": "Dalton Knecht",
         "short_name": "D. Knecht",
         "position": "F",
-        "jersey": "99",
+        "jersey": "1",
         "height_in": 78.0,
         "weight_lb": 215.0,
         "age": 25,
@@ -4514,7 +4562,7 @@
         "weight_lb": 191.0,
         "age": 27,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "3133635",
@@ -4562,7 +4610,7 @@
         "weight_lb": 217.0,
         "age": 25,
         "experience": 3,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4065654",
@@ -4634,7 +4682,7 @@
         "weight_lb": 205.0,
         "age": 25,
         "experience": 6,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "6478",
@@ -5276,7 +5324,7 @@
         "weight_lb": 221.0,
         "age": 24,
         "experience": 2,
-        "status": "out"
+        "status": "day-to-day"
       }
     ],
     "SAC": [
@@ -5556,7 +5604,7 @@
         "weight_lb": 190.0,
         "age": 28,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5107968",
@@ -5676,7 +5724,7 @@
         "weight_lb": 205.0,
         "age": 26,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5104157",
@@ -5951,7 +5999,7 @@
         "name": "Kobe Bufkin",
         "short_name": "K. Bufkin",
         "position": "G",
-        "jersey": "4",
+        "jersey": "0",
         "height_in": 76.0,
         "weight_lb": 195.0,
         "age": 23,
@@ -6016,7 +6064,7 @@
         "weight_lb": 220.0,
         "age": 26,
         "experience": 8,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4433618",
