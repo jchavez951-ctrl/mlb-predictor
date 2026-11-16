@@ -4691,6 +4691,21 @@
         "IP": "61.3",
         "ERA": 1.91,
         "Fatigue": 0.0
+      },
+      {
+        "Player": "Ryan Walker",
+        "PlayerID": 676254,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.123,
+        "K_ALLOWED_RATE": 0.148,
+        "HR_PA_ALLOWED_RATE": 0.032,
+        "BABIP_ALLOWED": 0.324,
+        "OAVG": 0.294,
+        "IP": "32.7",
+        "ERA": 7.16,
+        "Fatigue": 0.0
       }
     ]
   },
@@ -7018,18 +7033,18 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Ryan Walker",
-        "PlayerID": 676254,
+        "Player": "Carson Seymour",
+        "PlayerID": 693313,
         "Pos": "P",
         "Role": "RP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.123,
-        "K_ALLOWED_RATE": 0.148,
-        "HR_PA_ALLOWED_RATE": 0.032,
-        "BABIP_ALLOWED": 0.324,
-        "OAVG": 0.294,
-        "IP": "32.7",
-        "ERA": 7.16,
+        "BB_ALLOWED_RATE": 0.114,
+        "K_ALLOWED_RATE": 0.164,
+        "HR_PA_ALLOWED_RATE": 0.043,
+        "BABIP_ALLOWED": 0.263,
+        "OAVG": 0.25,
+        "IP": "31.7",
+        "ERA": 4.55,
         "Fatigue": 0.0
       }
     ]
