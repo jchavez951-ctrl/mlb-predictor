@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-11-17T19:09:28.547503+00:00",
+    "generated_at": "2026-11-18T18:50:05.870834+00:00",
     "team_count": 30,
-    "player_count": 525,
+    "player_count": 528,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -104,7 +104,7 @@
         "weight_lb": 183.0,
         "age": 19,
         "experience": 0,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4712863",
@@ -152,7 +152,7 @@
         "weight_lb": 255.0,
         "age": 31,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "2490149",
@@ -164,7 +164,7 @@
         "weight_lb": 190.0,
         "age": 35,
         "experience": 14,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "4873201",
@@ -358,7 +358,7 @@
         "weight_lb": 260.0,
         "age": 27,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4351852",
@@ -674,7 +674,7 @@
         "weight_lb": 198.0,
         "age": 31,
         "experience": 9,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5060701",
@@ -1048,7 +1048,7 @@
         "weight_lb": 215.0,
         "age": 26,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4848625",
@@ -1098,6 +1098,18 @@
         "weight_lb": 243.0,
         "age": 28,
         "experience": 10,
+        "status": "active"
+      },
+      {
+        "espn_id": "4702099",
+        "name": "Zack Austin",
+        "short_name": "Z. Austin",
+        "position": "G",
+        "jersey": "55",
+        "height_in": 77.0,
+        "weight_lb": 216.0,
+        "age": 25,
+        "experience": 1,
         "status": "active"
       },
       {
@@ -1266,7 +1278,7 @@
         "weight_lb": 215.0,
         "age": 23,
         "experience": 3,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "5106261",
@@ -1352,7 +1364,7 @@
         "weight_lb": 195.0,
         "age": 23,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5279129",
@@ -1412,7 +1424,7 @@
         "weight_lb": 195.0,
         "age": 34,
         "experience": 15,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4873153",
@@ -1436,7 +1448,7 @@
         "weight_lb": 215.0,
         "age": 23,
         "experience": 0,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4683688",
@@ -1750,7 +1762,7 @@
         "jersey": "0",
         "height_in": 82.0,
         "weight_lb": 250.0,
-        "age": 22,
+        "age": 23,
         "experience": 5,
         "status": "out"
       },
@@ -1788,7 +1800,7 @@
         "weight_lb": 206.0,
         "age": 21,
         "experience": 3,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4066372",
@@ -1839,6 +1851,18 @@
         "status": "active"
       },
       {
+        "espn_id": "4700852",
+        "name": "Chaz Lanier",
+        "short_name": "C. Lanier",
+        "position": "G",
+        "jersey": "8",
+        "height_in": 75.0,
+        "weight_lb": 206.0,
+        "age": 24,
+        "experience": 2,
+        "status": "active"
+      },
+      {
         "espn_id": "5258459",
         "name": "Ebuka Okorie",
         "short_name": "E. Okorie",
@@ -1872,7 +1896,7 @@
         "weight_lb": 218.0,
         "age": 32,
         "experience": 11,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4278562",
@@ -1982,7 +2006,7 @@
         "weight_lb": 230.0,
         "age": 36,
         "experience": 15,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3213",
@@ -1994,7 +2018,7 @@
         "weight_lb": 240.0,
         "age": 40,
         "experience": 20,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4703396",
@@ -2152,7 +2176,7 @@
         "weight_lb": 265.0,
         "age": 33,
         "experience": 14,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "3037789",
@@ -2236,7 +2260,7 @@
         "weight_lb": 198.0,
         "age": 23,
         "experience": 4,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4871144",
@@ -2272,7 +2296,7 @@
         "weight_lb": 220.0,
         "age": 32,
         "experience": 13,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4432639",
@@ -2418,7 +2442,7 @@
         "weight_lb": 190.0,
         "age": 34,
         "experience": 12,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "2580365",
@@ -2878,7 +2902,7 @@
         "weight_lb": 245.0,
         "age": 25,
         "experience": 5,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4592691",
@@ -2950,7 +2974,7 @@
         "weight_lb": 197.0,
         "age": 28,
         "experience": 6,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4277811",
@@ -3096,7 +3120,7 @@
         "weight_lb": 195.0,
         "age": 29,
         "experience": 8,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "5231919",
@@ -3216,7 +3240,7 @@
         "weight_lb": 250.0,
         "age": 25,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "5112087",
@@ -3242,7 +3266,7 @@
         "weight_lb": 260.0,
         "age": 29,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "3032977",
@@ -3302,7 +3326,7 @@
         "weight_lb": 225.0,
         "age": 25,
         "experience": 2,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "4700818",
@@ -3350,7 +3374,7 @@
         "weight_lb": 240.0,
         "age": 23,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4601025",
@@ -3362,7 +3386,7 @@
         "weight_lb": 215.0,
         "age": 25,
         "experience": 3,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "4278053",
@@ -3592,7 +3616,7 @@
         "weight_lb": 180.0,
         "age": 24,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4397114",
@@ -3786,7 +3810,7 @@
         "weight_lb": 225.0,
         "age": 24,
         "experience": 6,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3136196",
@@ -3822,7 +3846,7 @@
         "weight_lb": 206.0,
         "age": 25,
         "experience": 3,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4432847",
@@ -3944,7 +3968,7 @@
         "weight_lb": 210.0,
         "age": 24,
         "experience": 5,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4997538",
@@ -4744,7 +4768,7 @@
         "weight_lb": 223.0,
         "age": 30,
         "experience": 11,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "2581018",
@@ -4828,7 +4852,7 @@
         "weight_lb": 250.0,
         "age": 41,
         "experience": 24,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4433144",
@@ -4900,7 +4924,7 @@
         "weight_lb": 223.0,
         "age": 29,
         "experience": 8,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4432446",
@@ -5132,7 +5156,7 @@
         "weight_lb": 228.0,
         "age": 25,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4431736",
@@ -5410,7 +5434,7 @@
         "weight_lb": 200.0,
         "age": 31,
         "experience": 13,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5107897",
@@ -5628,7 +5652,7 @@
         "weight_lb": 220.0,
         "age": 20,
         "experience": 2,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "6440",
@@ -5762,7 +5786,7 @@
         "weight_lb": 237.0,
         "age": 25,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4395625",
@@ -5774,7 +5798,7 @@
         "weight_lb": 214.0,
         "age": 26,
         "experience": 8,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4431893",
@@ -5947,6 +5971,18 @@
     ],
     "UTAH": [
       {
+        "espn_id": "4684682",
+        "name": "Jonas Aidoo",
+        "short_name": "J. Aidoo",
+        "position": "C",
+        "jersey": "13",
+        "height_in": 83.0,
+        "weight_lb": 240.0,
+        "age": 23,
+        "experience": 0,
+        "status": "active"
+      },
+      {
         "espn_id": "4873138",
         "name": "Ace Bailey",
         "short_name": "A. Bailey",
@@ -6052,7 +6088,7 @@
         "weight_lb": 220.0,
         "age": 26,
         "experience": 8,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4433618",
