@@ -1648,6 +1648,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Dustin May",
+        "PlayerID": 669160,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.081,
+        "K_ALLOWED_RATE": 0.232,
+        "HR_PA_ALLOWED_RATE": 0.023,
+        "BABIP_ALLOWED": 0.31,
+        "OAVG": 0.249,
+        "IP": "145.7",
+        "ERA": 4.7,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Luis Castillo",
         "PlayerID": 622491,
         "Pos": "P",
@@ -1660,21 +1675,6 @@
         "OAVG": 0.276,
         "IP": "130.7",
         "ERA": 5.85,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Noah Schultz",
-        "PlayerID": 702273,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.096,
-        "K_ALLOWED_RATE": 0.207,
-        "HR_PA_ALLOWED_RATE": 0.034,
-        "BABIP_ALLOWED": 0.265,
-        "OAVG": 0.232,
-        "IP": "74.3",
-        "ERA": 5.57,
         "Fatigue": 0.0
       },
       {
@@ -3370,20 +3370,20 @@
         "PA": 426
       },
       {
-        "Player": "Kyle Isbel",
-        "PlayerID": 664728,
-        "Pos": "CF",
+        "Player": "John Rave",
+        "PlayerID": 670231,
+        "Pos": "RF",
         "Bats": "L",
-        "BB_RATE": 0.046,
-        "K_RATE": 0.229,
-        "HR_PA_RATE": 0.019,
-        "BABIP": 0.28,
-        "1B_H_RATE": 0.76,
-        "2B_H_RATE": 0.14,
-        "3B_H_RATE": 0.02,
-        "HR_H_RATE": 0.09,
+        "BB_RATE": 0.106,
+        "K_RATE": 0.236,
+        "HR_PA_RATE": 0.037,
+        "BABIP": 0.276,
+        "1B_H_RATE": 0.55,
+        "2B_H_RATE": 0.24,
+        "3B_H_RATE": 0.03,
+        "HR_H_RATE": 0.18,
         "SPD": 55,
-        "PA": 323
+        "PA": 161
       }
     ],
     "pitching": [
@@ -4888,6 +4888,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Sonny Gray",
+        "PlayerID": 543243,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.067,
+        "K_ALLOWED_RATE": 0.218,
+        "HR_PA_ALLOWED_RATE": 0.023,
+        "BABIP_ALLOWED": 0.28,
+        "OAVG": 0.232,
+        "IP": "169.0",
+        "ERA": 2.72,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Joe Ryan",
         "PlayerID": 657746,
         "Pos": "P",
@@ -4930,21 +4945,6 @@
         "OAVG": 0.247,
         "IP": "130.3",
         "ERA": 4.9,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Connor Prielipp",
-        "PlayerID": 687570,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.082,
-        "K_ALLOWED_RATE": 0.239,
-        "HR_PA_ALLOWED_RATE": 0.026,
-        "BABIP_ALLOWED": 0.298,
-        "OAVG": 0.24,
-        "IP": "125.7",
-        "ERA": 4.87,
         "Fatigue": 0.0
       },
       {
@@ -7795,20 +7795,20 @@
         "PA": 370
       },
       {
-        "Player": "Nick Fortes",
-        "PlayerID": 663743,
-        "Pos": "C",
+        "Player": "Ben Williamson",
+        "PlayerID": 810938,
+        "Pos": "2B",
         "Bats": "R",
-        "BB_RATE": 0.037,
-        "K_RATE": 0.139,
-        "HR_PA_RATE": 0.019,
-        "BABIP": 0.287,
-        "1B_H_RATE": 0.7,
-        "2B_H_RATE": 0.22,
-        "3B_H_RATE": 0.0,
-        "HR_H_RATE": 0.08,
+        "BB_RATE": 0.077,
+        "K_RATE": 0.189,
+        "HR_PA_RATE": 0.01,
+        "BABIP": 0.289,
+        "1B_H_RATE": 0.77,
+        "2B_H_RATE": 0.16,
+        "3B_H_RATE": 0.02,
+        "HR_H_RATE": 0.05,
         "SPD": 55,
-        "PA": 323
+        "PA": 286
       }
     ],
     "pitching": [
