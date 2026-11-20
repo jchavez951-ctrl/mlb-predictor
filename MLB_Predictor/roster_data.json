@@ -1633,21 +1633,6 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Davis Martin",
-        "PlayerID": 663436,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.075,
-        "K_ALLOWED_RATE": 0.198,
-        "HR_PA_ALLOWED_RATE": 0.023,
-        "BABIP_ALLOWED": 0.303,
-        "OAVG": 0.256,
-        "IP": "146.0",
-        "ERA": 3.95,
-        "Fatigue": 0.0
-      },
-      {
         "Player": "Dustin May",
         "PlayerID": 669160,
         "Pos": "P",
@@ -1663,18 +1648,33 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Luis Castillo",
-        "PlayerID": 622491,
+        "Player": "Noah Schultz",
+        "PlayerID": 702273,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.096,
+        "K_ALLOWED_RATE": 0.207,
+        "HR_PA_ALLOWED_RATE": 0.034,
+        "BABIP_ALLOWED": 0.265,
+        "OAVG": 0.232,
+        "IP": "74.3",
+        "ERA": 5.57,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "David Sandlin",
+        "PlayerID": 689818,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.074,
-        "K_ALLOWED_RATE": 0.189,
+        "BB_ALLOWED_RATE": 0.078,
+        "K_ALLOWED_RATE": 0.24,
         "HR_PA_ALLOWED_RATE": 0.042,
-        "BABIP_ALLOWED": 0.307,
-        "OAVG": 0.276,
-        "IP": "130.7",
-        "ERA": 5.85,
+        "BABIP_ALLOWED": 0.271,
+        "OAVG": 0.234,
+        "IP": "40.3",
+        "ERA": 5.58,
         "Fatigue": 0.0
       },
       {
@@ -2503,6 +2503,36 @@
     ],
     "pitching": [
       {
+        "Player": "Davis Martin",
+        "PlayerID": 663436,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.075,
+        "K_ALLOWED_RATE": 0.198,
+        "HR_PA_ALLOWED_RATE": 0.023,
+        "BABIP_ALLOWED": 0.303,
+        "OAVG": 0.256,
+        "IP": "146.0",
+        "ERA": 3.95,
+        "Fatigue": 0.0
+      },
+      {
+        "Player": "Luis Castillo",
+        "PlayerID": 622491,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.074,
+        "K_ALLOWED_RATE": 0.189,
+        "HR_PA_ALLOWED_RATE": 0.042,
+        "BABIP_ALLOWED": 0.307,
+        "OAVG": 0.276,
+        "IP": "130.7",
+        "ERA": 5.85,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Ryan Feltner",
         "PlayerID": 663372,
         "Pos": "P",
@@ -2545,21 +2575,6 @@
         "OAVG": 0.277,
         "IP": "29.0",
         "ERA": 4.03,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Sean Sullivan",
-        "PlayerID": 807743,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.096,
-        "K_ALLOWED_RATE": 0.14,
-        "HR_PA_ALLOWED_RATE": 0.044,
-        "BABIP_ALLOWED": 0.354,
-        "OAVG": 0.33,
-        "IP": "22.3",
-        "ERA": 8.87,
         "Fatigue": 0.0
       },
       {
@@ -4708,6 +4723,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Grant Anderson",
+        "PlayerID": 681982,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.098,
+        "K_ALLOWED_RATE": 0.221,
+        "HR_PA_ALLOWED_RATE": 0.034,
+        "BABIP_ALLOWED": 0.23,
+        "OAVG": 0.203,
+        "IP": "59.0",
+        "ERA": 3.36,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Ryan Walker",
         "PlayerID": 676254,
         "Pos": "P",
@@ -5008,18 +5038,18 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "Anthony Banda",
-        "PlayerID": 607455,
+        "Player": "Kendry Rojas",
+        "PlayerID": 696070,
         "Pos": "P",
         "Role": "RP",
         "Throws": "L",
-        "BB_ALLOWED_RATE": 0.096,
-        "K_ALLOWED_RATE": 0.212,
-        "HR_PA_ALLOWED_RATE": 0.019,
-        "BABIP_ALLOWED": 0.267,
-        "OAVG": 0.22,
-        "IP": "34.3",
-        "ERA": 4.46,
+        "BB_ALLOWED_RATE": 0.169,
+        "K_ALLOWED_RATE": 0.262,
+        "HR_PA_ALLOWED_RATE": 0.015,
+        "BABIP_ALLOWED": 0.292,
+        "OAVG": 0.213,
+        "IP": "29.7",
+        "ERA": 3.34,
         "Fatigue": 0.0
       }
     ]
