@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-11-22T17:47:33.187970+00:00",
+    "generated_at": "2026-11-23T22:01:30.903584+00:00",
     "team_count": 30,
-    "player_count": 528,
+    "player_count": 529,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -104,7 +104,7 @@
         "weight_lb": 183.0,
         "age": 19,
         "experience": 0,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "4712863",
@@ -370,7 +370,7 @@
         "weight_lb": 240.0,
         "age": 28,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4593841",
@@ -394,7 +394,7 @@
         "weight_lb": 224.0,
         "age": 28,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4683689",
@@ -418,7 +418,7 @@
         "weight_lb": 200.0,
         "age": 32,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4702745",
@@ -552,7 +552,7 @@
         "weight_lb": 230.0,
         "age": 24,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4278104",
@@ -624,7 +624,7 @@
         "weight_lb": 185.0,
         "age": 20,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "3150844",
@@ -674,7 +674,7 @@
         "weight_lb": 198.0,
         "age": 31,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "5060701",
@@ -782,7 +782,7 @@
         "weight_lb": 200.0,
         "age": 24,
         "experience": 4,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "2583632",
@@ -866,7 +866,7 @@
         "weight_lb": 236.0,
         "age": 27,
         "experience": 8,
-        "status": "day-to-day"
+        "status": "out"
       }
     ],
     "CHI": [
@@ -1072,7 +1072,7 @@
         "weight_lb": 215.0,
         "age": 25,
         "experience": 7,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5095151",
@@ -1448,7 +1448,7 @@
         "weight_lb": 215.0,
         "age": 23,
         "experience": 0,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4683688",
@@ -1752,7 +1752,7 @@
         "weight_lb": 220.0,
         "age": 25,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4433621",
@@ -1800,7 +1800,7 @@
         "weight_lb": 206.0,
         "age": 21,
         "experience": 3,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "4066372",
@@ -1872,7 +1872,7 @@
         "weight_lb": 186.0,
         "age": 19,
         "experience": 0,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5037878",
@@ -2200,7 +2200,7 @@
         "weight_lb": 256.0,
         "age": 32,
         "experience": 13,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "4683860",
@@ -2478,7 +2478,7 @@
         "weight_lb": 215.0,
         "age": 27,
         "experience": 7,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "3133603",
@@ -2660,7 +2660,7 @@
         "weight_lb": 190.0,
         "age": 29,
         "experience": 11,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "4432170",
@@ -3048,7 +3048,7 @@
         "weight_lb": 253.0,
         "age": 19,
         "experience": 0,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4903027",
@@ -3084,7 +3084,7 @@
         "weight_lb": 213.0,
         "age": 32,
         "experience": 13,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "4684806",
@@ -3216,7 +3216,7 @@
         "weight_lb": 190.0,
         "age": 23,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4433083",
@@ -3326,7 +3326,7 @@
         "weight_lb": 225.0,
         "age": 25,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4700818",
@@ -3496,7 +3496,7 @@
         "weight_lb": 185.0,
         "age": 23,
         "experience": 5,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "4397475",
@@ -3992,7 +3992,7 @@
         "weight_lb": 190.0,
         "age": 24,
         "experience": 5,
-        "status": "out"
+        "status": "active"
       },
       {
         "espn_id": "5061589",
@@ -4016,7 +4016,7 @@
         "weight_lb": 206.0,
         "age": 26,
         "experience": 6,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "3907497",
@@ -4174,7 +4174,7 @@
         "weight_lb": 194.0,
         "age": 34,
         "experience": 13,
-        "status": "day-to-day"
+        "status": "out"
       },
       {
         "espn_id": "5211983",
@@ -4258,7 +4258,7 @@
         "weight_lb": 195.0,
         "age": 26,
         "experience": 6,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4838721",
@@ -4294,7 +4294,7 @@
         "weight_lb": 248.0,
         "age": 31,
         "experience": 12,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4432808",
@@ -4368,7 +4368,7 @@
         "weight_lb": 195.0,
         "age": 28,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4222252",
@@ -4404,7 +4404,7 @@
         "weight_lb": 262.0,
         "age": 21,
         "experience": 0,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "4683778",
@@ -4816,7 +4816,7 @@
         "weight_lb": 270.0,
         "age": 32,
         "experience": 11,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3904625",
@@ -4998,7 +4998,7 @@
         "weight_lb": 216.0,
         "age": 23,
         "experience": 3,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5105977",
@@ -5555,6 +5555,18 @@
         "age": 30,
         "experience": 10,
         "status": "out"
+      },
+      {
+        "espn_id": "3137259",
+        "name": "Gabe Vincent",
+        "short_name": "G. Vincent",
+        "position": "G",
+        "jersey": "",
+        "height_in": 74.0,
+        "weight_lb": 200.0,
+        "age": 30,
+        "experience": 7,
+        "status": "active"
       }
     ],
     "SA": [
@@ -5628,7 +5640,7 @@
         "weight_lb": 190.0,
         "age": 28,
         "experience": 10,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5107968",
@@ -5712,7 +5724,7 @@
         "weight_lb": 180.0,
         "age": 30,
         "experience": 8,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5101845",
@@ -5760,7 +5772,7 @@
         "weight_lb": 240.0,
         "age": 22,
         "experience": 4,
-        "status": "active"
+        "status": "day-to-day"
       }
     ],
     "TOR": [
@@ -5834,7 +5846,7 @@
         "weight_lb": 205.0,
         "age": 23,
         "experience": 0,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5149115",
@@ -6088,7 +6100,7 @@
         "weight_lb": 220.0,
         "age": 26,
         "experience": 8,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "4433618",
@@ -6198,7 +6210,7 @@
         "weight_lb": 252.0,
         "age": 28,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4432187",
