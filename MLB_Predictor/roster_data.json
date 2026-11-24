@@ -3523,6 +3523,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Caleb Thielbar",
+        "PlayerID": 573204,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.085,
+        "K_ALLOWED_RATE": 0.283,
+        "HR_PA_ALLOWED_RATE": 0.052,
+        "BABIP_ALLOWED": 0.293,
+        "OAVG": 0.242,
+        "IP": "50.0",
+        "ERA": 4.86,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Nate Pearson",
         "PlayerID": 663878,
         "Pos": "P",
@@ -3535,21 +3550,6 @@
         "OAVG": 0.213,
         "IP": "46.0",
         "ERA": 4.11,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Connor Thomas",
-        "PlayerID": 671162,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.076,
-        "K_ALLOWED_RATE": 0.153,
-        "HR_PA_ALLOWED_RATE": 0.034,
-        "BABIP_ALLOWED": 0.322,
-        "OAVG": 0.294,
-        "IP": "25.7",
-        "ERA": 7.01,
         "Fatigue": 0.0
       }
     ]
@@ -5593,6 +5593,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Brent Suter",
+        "PlayerID": 608718,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.066,
+        "K_ALLOWED_RATE": 0.207,
+        "HR_PA_ALLOWED_RATE": 0.024,
+        "BABIP_ALLOWED": 0.292,
+        "OAVG": 0.245,
+        "IP": "91.0",
+        "ERA": 3.36,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Brent Headrick",
         "PlayerID": 687396,
         "Pos": "P",
@@ -5608,6 +5623,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Tim Hill",
+        "PlayerID": 657612,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.054,
+        "K_ALLOWED_RATE": 0.104,
+        "HR_PA_ALLOWED_RATE": 0.05,
+        "BABIP_ALLOWED": 0.22,
+        "OAVG": 0.237,
+        "IP": "58.7",
+        "ERA": 4.6,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Yerry De los Santos",
         "PlayerID": 660787,
         "Pos": "P",
@@ -5620,36 +5650,6 @@
         "OAVG": 0.233,
         "IP": "22.0",
         "ERA": 2.05,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Angel Chivilli",
-        "PlayerID": 683409,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.096,
-        "K_ALLOWED_RATE": 0.219,
-        "HR_PA_ALLOWED_RATE": 0.055,
-        "BABIP_ALLOWED": 0.217,
-        "OAVG": 0.212,
-        "IP": "16.7",
-        "ERA": 3.78,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Brendan Beck",
-        "PlayerID": 694341,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.138,
-        "K_ALLOWED_RATE": 0.224,
-        "HR_PA_ALLOWED_RATE": 0.103,
-        "BABIP_ALLOWED": 0.226,
-        "OAVG": 0.26,
-        "IP": "12.7",
-        "ERA": 9.95,
         "Fatigue": 0.0
       }
     ]
