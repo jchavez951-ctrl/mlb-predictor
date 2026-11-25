@@ -763,6 +763,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Freddy Peralta",
+        "PlayerID": 642547,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.086,
+        "K_ALLOWED_RATE": 0.214,
+        "HR_PA_ALLOWED_RATE": 0.032,
+        "BABIP_ALLOWED": 0.283,
+        "OAVG": 0.241,
+        "IP": "169.0",
+        "ERA": 4.42,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Brandon Young",
         "PlayerID": 687064,
         "Pos": "P",
@@ -805,21 +820,6 @@
         "OAVG": 0.259,
         "IP": "39.7",
         "ERA": 6.13,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Cade Povich",
-        "PlayerID": 700249,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "L",
-        "BB_ALLOWED_RATE": 0.094,
-        "K_ALLOWED_RATE": 0.175,
-        "HR_PA_ALLOWED_RATE": 0.037,
-        "BABIP_ALLOWED": 0.306,
-        "OAVG": 0.276,
-        "IP": "37.0",
-        "ERA": 4.38,
         "Fatigue": 0.0
       },
       {
@@ -5185,20 +5185,20 @@
         "PA": 420
       },
       {
-        "Player": "Jared Young",
-        "PlayerID": 676724,
+        "Player": "Paul Goldschmidt",
+        "PlayerID": 502671,
         "Pos": "1B",
-        "Bats": "L",
-        "BB_RATE": 0.073,
-        "K_RATE": 0.184,
-        "HR_PA_RATE": 0.026,
-        "BABIP": 0.309,
-        "1B_H_RATE": 0.65,
-        "2B_H_RATE": 0.21,
-        "3B_H_RATE": 0.04,
-        "HR_H_RATE": 0.11,
+        "Bats": "R",
+        "BB_RATE": 0.076,
+        "K_RATE": 0.226,
+        "HR_PA_RATE": 0.047,
+        "BABIP": 0.286,
+        "1B_H_RATE": 0.63,
+        "2B_H_RATE": 0.15,
+        "3B_H_RATE": 0.01,
+        "HR_H_RATE": 0.21,
         "SPD": 55,
-        "PA": 342
+        "PA": 380
       }
     ],
     "pitching": [
