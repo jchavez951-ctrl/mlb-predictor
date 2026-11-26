@@ -2,9 +2,9 @@
   "meta": {
     "source": "espn",
     "season": "2026-27",
-    "generated_at": "2026-11-25T19:53:55.830312+00:00",
+    "generated_at": "2026-11-26T19:35:23.762288+00:00",
     "team_count": 30,
-    "player_count": 529,
+    "player_count": 530,
     "failed_teams": [],
     "id_namespace": "espn_athlete_id"
   },
@@ -636,7 +636,7 @@
         "weight_lb": 245.0,
         "age": 29,
         "experience": 9,
-        "status": "active"
+        "status": "out"
       },
       {
         "espn_id": "5107173",
@@ -734,7 +734,7 @@
         "weight_lb": 220.0,
         "age": 23,
         "experience": 2,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4576060",
@@ -746,7 +746,7 @@
         "weight_lb": 256.0,
         "age": 24,
         "experience": 2,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5061575",
@@ -986,7 +986,7 @@
         "jersey": "11",
         "height_in": 82.0,
         "weight_lb": 220.0,
-        "age": 22,
+        "age": 23,
         "experience": 4,
         "status": "active"
       },
@@ -2042,7 +2042,7 @@
         "weight_lb": 241.0,
         "age": 24,
         "experience": 0,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4897449",
@@ -2162,7 +2162,7 @@
         "weight_lb": 190.0,
         "age": 27,
         "experience": 5,
-        "status": "out"
+        "status": "active"
       }
     ],
     "HOU": [
@@ -3072,7 +3072,7 @@
         "weight_lb": 305.0,
         "age": 24,
         "experience": 3,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "2991070",
@@ -3278,7 +3278,7 @@
         "weight_lb": 243.0,
         "age": 31,
         "experience": 14,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "5107157",
@@ -3690,7 +3690,7 @@
         "weight_lb": 180.0,
         "age": 25,
         "experience": 7,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5279133",
@@ -4162,7 +4162,7 @@
         "weight_lb": 190.0,
         "age": 30,
         "experience": 9,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "2528426",
@@ -4210,7 +4210,7 @@
         "weight_lb": 279.0,
         "age": 33,
         "experience": 15,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "3062679",
@@ -4222,7 +4222,7 @@
         "weight_lb": 215.0,
         "age": 31,
         "experience": 10,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4897943",
@@ -4258,7 +4258,7 @@
         "weight_lb": 195.0,
         "age": 26,
         "experience": 6,
-        "status": "out"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4838721",
@@ -4294,7 +4294,7 @@
         "weight_lb": 248.0,
         "age": 31,
         "experience": 12,
-        "status": "day-to-day"
+        "status": "active"
       },
       {
         "espn_id": "4432808",
@@ -4622,7 +4622,7 @@
         "weight_lb": 250.0,
         "age": 26,
         "experience": 4,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "4702382",
@@ -4683,6 +4683,18 @@
         "age": 21,
         "experience": 2,
         "status": "out"
+      },
+      {
+        "espn_id": "4397140",
+        "name": "Kevin Porter Jr.",
+        "short_name": "K. Porter Jr.",
+        "position": "G",
+        "jersey": "7",
+        "height_in": 77.0,
+        "weight_lb": 203.0,
+        "age": 26,
+        "experience": 7,
+        "status": "active"
       },
       {
         "espn_id": "5239561",
@@ -4768,7 +4780,7 @@
         "weight_lb": 223.0,
         "age": 30,
         "experience": 11,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "2581018",
@@ -5434,7 +5446,7 @@
         "weight_lb": 200.0,
         "age": 31,
         "experience": 13,
-        "status": "active"
+        "status": "day-to-day"
       },
       {
         "espn_id": "5107897",
@@ -5772,7 +5784,7 @@
         "weight_lb": 240.0,
         "age": 22,
         "experience": 4,
-        "status": "day-to-day"
+        "status": "active"
       }
     ],
     "TOR": [
