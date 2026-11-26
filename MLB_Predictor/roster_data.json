@@ -1333,6 +1333,21 @@
     ],
     "pitching": [
       {
+        "Player": "Trevor Rogers",
+        "PlayerID": 669432,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.056,
+        "K_ALLOWED_RATE": 0.225,
+        "HR_PA_ALLOWED_RATE": 0.027,
+        "BABIP_ALLOWED": 0.295,
+        "OAVG": 0.245,
+        "IP": "169.7",
+        "ERA": 4.03,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Edward Cabrera",
         "PlayerID": 665795,
         "Pos": "P",
@@ -1821,6 +1836,22 @@
         "PA": 496
       },
       {
+        "Player": "Tyler Stephenson",
+        "PlayerID": 663886,
+        "Pos": "C",
+        "Bats": "R",
+        "BB_RATE": 0.105,
+        "K_RATE": 0.274,
+        "HR_PA_RATE": 0.032,
+        "BABIP": 0.313,
+        "1B_H_RATE": 0.63,
+        "2B_H_RATE": 0.22,
+        "3B_H_RATE": 0.0,
+        "HR_H_RATE": 0.15,
+        "SPD": 55,
+        "PA": 468
+      },
+      {
         "Player": "Spencer Steer",
         "PlayerID": 668715,
         "Pos": "1B",
@@ -1883,22 +1914,6 @@
         "HR_H_RATE": 0.17,
         "SPD": 55,
         "PA": 201
-      },
-      {
-        "Player": "Edwin Arroyo",
-        "PlayerID": 695490,
-        "Pos": "2B",
-        "Bats": "S",
-        "BB_RATE": 0.037,
-        "K_RATE": 0.237,
-        "HR_PA_RATE": 0.0,
-        "BABIP": 0.3,
-        "1B_H_RATE": 0.85,
-        "2B_H_RATE": 0.12,
-        "3B_H_RATE": 0.03,
-        "HR_H_RATE": 0.0,
-        "SPD": 55,
-        "PA": 160
       }
     ],
     "pitching": [
@@ -4708,6 +4723,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Antonio Senzatela",
+        "PlayerID": 622608,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.084,
+        "K_ALLOWED_RATE": 0.193,
+        "HR_PA_ALLOWED_RATE": 0.019,
+        "BABIP_ALLOWED": 0.306,
+        "OAVG": 0.256,
+        "IP": "73.3",
+        "ERA": 4.05,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "DL Hall",
         "PlayerID": 669084,
         "Pos": "P",
@@ -4735,21 +4765,6 @@
         "OAVG": 0.203,
         "IP": "59.0",
         "ERA": 3.36,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Ryan Walker",
-        "PlayerID": 676254,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.123,
-        "K_ALLOWED_RATE": 0.148,
-        "HR_PA_ALLOWED_RATE": 0.032,
-        "BABIP_ALLOWED": 0.324,
-        "OAVG": 0.294,
-        "IP": "32.7",
-        "ERA": 7.16,
         "Fatigue": 0.0
       }
     ]
@@ -5218,6 +5233,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Tarik Skubal",
+        "PlayerID": 669373,
+        "Pos": "P",
+        "Role": "SP",
+        "Throws": "L",
+        "BB_ALLOWED_RATE": 0.044,
+        "K_ALLOWED_RATE": 0.3,
+        "HR_PA_ALLOWED_RATE": 0.023,
+        "BABIP_ALLOWED": 0.285,
+        "OAVG": 0.212,
+        "IP": "158.7",
+        "ERA": 2.72,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Sean Manaea",
         "PlayerID": 640455,
         "Pos": "P",
@@ -5260,21 +5290,6 @@
         "OAVG": 0.245,
         "IP": "84.3",
         "ERA": 3.42,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Jonah Tong",
-        "PlayerID": 804636,
-        "Pos": "P",
-        "Role": "SP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.104,
-        "K_ALLOWED_RATE": 0.254,
-        "HR_PA_ALLOWED_RATE": 0.015,
-        "BABIP_ALLOWED": 0.262,
-        "OAVG": 0.2,
-        "IP": "30.7",
-        "ERA": 3.82,
         "Fatigue": 0.0
       },
       {
@@ -5623,6 +5638,21 @@
         "Fatigue": 0.0
       },
       {
+        "Player": "Jonathan Lo\u00e1isiga",
+        "PlayerID": 642528,
+        "Pos": "P",
+        "Role": "RP",
+        "Throws": "R",
+        "BB_ALLOWED_RATE": 0.05,
+        "K_ALLOWED_RATE": 0.184,
+        "HR_PA_ALLOWED_RATE": 0.011,
+        "BABIP_ALLOWED": 0.269,
+        "OAVG": 0.226,
+        "IP": "67.0",
+        "ERA": 2.42,
+        "Fatigue": 0.0
+      },
+      {
         "Player": "Tim Hill",
         "PlayerID": 657612,
         "Pos": "P",
@@ -5635,21 +5665,6 @@
         "OAVG": 0.237,
         "IP": "58.7",
         "ERA": 4.6,
-        "Fatigue": 0.0
-      },
-      {
-        "Player": "Yerry De los Santos",
-        "PlayerID": 660787,
-        "Pos": "P",
-        "Role": "RP",
-        "Throws": "R",
-        "BB_ALLOWED_RATE": 0.085,
-        "K_ALLOWED_RATE": 0.181,
-        "HR_PA_ALLOWED_RATE": 0.043,
-        "BABIP_ALLOWED": 0.246,
-        "OAVG": 0.233,
-        "IP": "22.0",
-        "ERA": 2.05,
         "Fatigue": 0.0
       }
     ]
