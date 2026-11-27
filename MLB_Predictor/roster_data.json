@@ -508,18 +508,18 @@
         "Fatigue": 0.0
       },
       {
-        "Player": "AJ Smith-Shawver",
-        "PlayerID": 700363,
+        "Player": "Spencer Strider",
+        "PlayerID": 675911,
         "Pos": "P",
         "Role": "SP",
         "Throws": "R",
-        "BB_ALLOWED_RATE": 0.111,
-        "K_ALLOWED_RATE": 0.188,
-        "HR_PA_ALLOWED_RATE": 0.049,
-        "BABIP_ALLOWED": 0.266,
-        "OAVG": 0.25,
-        "IP": "31.3",
-        "ERA": 6.61,
+        "BB_ALLOWED_RATE": 0.121,
+        "K_ALLOWED_RATE": 0.279,
+        "HR_PA_ALLOWED_RATE": 0.055,
+        "BABIP_ALLOWED": 0.267,
+        "OAVG": 0.228,
+        "IP": "39.0",
+        "ERA": 5.31,
         "Fatigue": 0.0
       },
       {
@@ -3288,6 +3288,22 @@
         "PA": 632
       },
       {
+        "Player": "Alec Bohm",
+        "PlayerID": 664761,
+        "Pos": "3B",
+        "Bats": "R",
+        "BB_RATE": 0.076,
+        "K_RATE": 0.14,
+        "HR_PA_RATE": 0.024,
+        "BABIP": 0.272,
+        "1B_H_RATE": 0.68,
+        "2B_H_RATE": 0.21,
+        "3B_H_RATE": 0.01,
+        "HR_H_RATE": 0.11,
+        "SPD": 55,
+        "PA": 629
+      },
+      {
         "Player": "Salvador Perez",
         "PlayerID": 521692,
         "Pos": "C",
@@ -3398,22 +3414,6 @@
         "HR_H_RATE": 0.09,
         "SPD": 55,
         "PA": 426
-      },
-      {
-        "Player": "John Rave",
-        "PlayerID": 670231,
-        "Pos": "RF",
-        "Bats": "L",
-        "BB_RATE": 0.106,
-        "K_RATE": 0.236,
-        "HR_PA_RATE": 0.037,
-        "BABIP": 0.276,
-        "1B_H_RATE": 0.55,
-        "2B_H_RATE": 0.24,
-        "3B_H_RATE": 0.03,
-        "HR_H_RATE": 0.18,
-        "SPD": 55,
-        "PA": 161
       }
     ],
     "pitching": [
